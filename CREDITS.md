@@ -1,6 +1,16 @@
 # Image Credits
 
-All images sourced from Wikimedia Commons via Wikipedia's public API / Commons search, manually reviewed for visual quality. Most require attribution under their license (CC BY-SA / CC BY) even though free to use commercially. Keep this file if you redistribute the site.
+All images sourced from Wikimedia Commons via Wikipedia's public API / Commons search, manually reviewed for visual quality, except the home page hero (see below). Most require attribution under their license (CC BY-SA / CC BY) even though free to use commercially. Keep this file if you redistribute the site.
+
+## Home page hero — AI-generated stock photo
+
+`assets/images/home-hero.jpg` ("Assortment of delicious Indian curries and dishes") is sourced from Vecteezy and is **AI-generated** (listed by Vecteezy as "AI Generated: True"), not a photograph. It's used under Vecteezy's free license, which requires the following attribution to remain on the site:
+
+<a href="https://www.vecteezy.com/free-photos/indian-food">Indian Food Stock photos by Vecteezy</a>
+
+Creator: Ambara Studio. Source: [vecteezy.com/photo/53731014](https://www.vecteezy.com/photo/53731014-assortment-of-delicious-indian-curries-and-dishes)
+
+## Regional cuisine photos (Wikimedia Commons)
 
 | File | Dish / Article | License | Artist | Source |
 |---|---|---|---|---|
@@ -13,7 +23,6 @@ All images sourced from Wikimedia Commons via Wikipedia's public API / Commons s
 | `assets/images/gujarati-g1.jpg` | Dhokla | CC BY-SA 4.0 | Samirluhar99 | [link](https://upload.wikimedia.org/wikipedia/commons/6/65/Dhokla_on_Gujrart.jpg) |
 | `assets/images/gujarati-g2.jpg` | Undhiyu | CC BY-SA 4.0 | Jatan1992 | [link](https://upload.wikimedia.org/wikipedia/commons/5/5e/Undhiyu.jpg) |
 | `assets/images/gujarati-hero.jpg` | Gujarati thali | CC BY-SA 4.0 | Amol Sinha | [link](https://upload.wikimedia.org/wikipedia/commons/8/84/Gujarati_Thali_1.jpg) |
-| `assets/images/home-hero.jpg` | Thali | CC BY 2.0 | GracinhaMarco Abundo | [link](https://upload.wikimedia.org/wikipedia/commons/4/49/Vegetarian_Curry.jpeg) |
 | `assets/images/hyderabadi-g1.jpg` | Haleem | CC BY-SA 4.0 | Chandu7299 | [link](https://upload.wikimedia.org/wikipedia/commons/3/31/Haleem_hyderabadi.jpg) |
 | `assets/images/hyderabadi-g2.jpg` | Qubani ka meetha | CC0 | Miansari66 | [link](https://upload.wikimedia.org/wikipedia/commons/3/3c/Khobani_Ka_Meetha.JPG) |
 | `assets/images/hyderabadi-hero.jpg` | Hyderabadi biryani | CC BY-SA 4.0 | Mahi Tatavarty | [link](https://upload.wikimedia.org/wikipedia/commons/5/5a/%22Hyderabadi_Dum_Biryani%22.jpg) |

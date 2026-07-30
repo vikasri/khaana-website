@@ -1,18 +1,5 @@
 [
   {
-    "file": "home-hero.jpg",
-    "region": "home",
-    "slot": "hero",
-    "wiki_title": "Thali",
-    "width": 800,
-    "height": 450,
-    "size_bytes": 422436,
-    "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Vegetarian_Curry.jpeg",
-    "license": "CC BY 2.0",
-    "artist": "GracinhaMarco Abundo",
-    "note": "resized for web"
-  },
-  {
     "file": "punjabi-hero.jpg",
     "region": "punjabi",
     "slot": "hero",
@@ -321,5 +308,18 @@
     "license": "CC BY-SA 4.0",
     "artist": "Amol Sinha",
     "note": "aesthetic replacement"
+  },
+  {
+    "file": "home-hero.jpg",
+    "region": "home",
+    "slot": "hero",
+    "wiki_title": "Assortment of delicious Indian curries and dishes",
+    "width": 3840,
+    "height": 2194,
+    "size_bytes": 342457,
+    "source_url": "https://www.vecteezy.com/photo/53731014-assortment-of-delicious-indian-curries-and-dishes",
+    "license": "Vecteezy Free License (attribution required)",
+    "artist": "Ambara Studio",
+    "note": "AI-GENERATED IMAGE (Vecteezy lists this as AI Generated: True, not a photograph). Required attribution HTML: <a href=\"https://www.vecteezy.com/free-photos/indian-food\">Indian Food Stock photos by Vecteezy</a>"
   }
 ]
