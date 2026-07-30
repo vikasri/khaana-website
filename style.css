@@ -167,31 +167,66 @@ p { margin: 0 0 1.1em; }
 
 .word-mark {
   text-align: center;
-  max-width: 420px;
+  max-width: 480px;
   margin: 0 auto;
 }
 
-.word-mark-devanagari {
-  font-family: 'Kohinoor Devanagari', 'Noto Sans Devanagari', 'Mangal', var(--serif);
-  font-size: clamp(2.6rem, 8vw, 3.6rem);
-  font-weight: 700;
-  color: var(--terracotta);
-  line-height: 1.1;
-  margin-bottom: 10px;
+.word-mark-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
 }
 
-.word-mark-pron {
+.word-mark-title-hi {
+  font-family: 'Kohinoor Devanagari', 'Noto Sans Devanagari', 'Mangal', var(--serif);
+  font-size: clamp(1.9rem, 6vw, 2.5rem);
+  font-weight: 700;
+  color: var(--terracotta);
+}
+
+.word-mark-title-sep { color: var(--gold); font-size: 1rem; }
+
+.word-mark-title-en {
+  font-family: var(--serif);
+  font-size: clamp(1.9rem, 6vw, 2.5rem);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.word-mark-syllables {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  font-family: var(--sans);
-  font-size: 0.95rem;
+  gap: 16px;
+}
+
+.syllable-dev {
+  font-family: 'Kohinoor Devanagari', 'Noto Sans Devanagari', 'Mangal', var(--serif);
+  font-size: clamp(1.8rem, 5.5vw, 2.4rem);
   font-weight: 700;
-  letter-spacing: 0.22em;
+  color: var(--terracotta);
+  line-height: 1.1;
+}
+
+.syllable-rom {
+  margin-top: 6px;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
   color: var(--ink-soft);
 }
-.word-mark-dot { color: var(--gold); font-size: 1.2rem; }
+
+.syllable-sep {
+  font-family: var(--sans);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gold);
+  transform: translateY(-10px);
+}
 
 .word-mark-caption {
   margin: 10px 0 0;
