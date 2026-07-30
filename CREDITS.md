@@ -1,19 +1,12 @@
 # Image Credits
 
-All images sourced from Wikimedia Commons via Wikipedia's public API / Commons search, manually reviewed for visual quality, except the home page hero (see below). Most require attribution under their license (CC BY-SA / CC BY) even though free to use commercially. Keep this file if you redistribute the site.
-
-## Home page hero — AI-generated stock photo
-
-`assets/images/home-hero.jpg` ("Assortment of delicious Indian curries and dishes") is sourced from Vecteezy and is **AI-generated** (listed by Vecteezy as "AI Generated: True"), not a photograph. It's used under Vecteezy's free license, which requires the following attribution to remain on the site:
-
-<a href="https://www.vecteezy.com/free-photos/indian-food">Indian Food Stock photos by Vecteezy</a>
-
-Creator: Ambara Studio. Source: [vecteezy.com/photo/53731014](https://www.vecteezy.com/photo/53731014-assortment-of-delicious-indian-curries-and-dishes)
+All images, including the home page hero, are sourced from Wikimedia Commons via Wikipedia's public API / Commons search, manually reviewed for visual quality. Most require attribution under their license (CC BY-SA / CC BY) even though free to use commercially. Keep this file if you redistribute the site.
 
 ## Regional cuisine photos (Wikimedia Commons)
 
 | File | Dish / Article | License | Artist | Source |
 |---|---|---|---|---|
+| `assets/images/home-hero.jpg` | Assorted Indian spices | CC BY-SA 4.0 | Joe mon bkk | [link](https://commons.wikimedia.org/wiki/File:Indian_Spices.jpg) |
 | `assets/images/bengali-g1.jpg` | Rasgulla | CC BY-SA 4.0 | Mdsmds0 | [link](https://upload.wikimedia.org/wikipedia/commons/a/af/Rasgulla_Sweet.JPG) |
 | `assets/images/bengali-g2.jpg` | Shorshe ilish | Unknown | Unknown | [link](https://upload.wikimedia.org/wikipedia/commons/9/9a/%E0%A6%90%E0%A6%A4%E0%A6%BF%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%BE%E0%A6%B9%E0%A7%80_%E0%A6%B8%E0%A6%B0%E0%A7%8D%E0%A6%B7%E0%A7%87_%E0%A6%87%E0%A6%B2%E0%A6%BF%E0%A6%B6.jpg) |
 | `assets/images/bengali-hero.jpg` | Kosha mangsho | Unknown | Unknown | [link](https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Bengali_Mutton_Curry.JPG/3840px-Bengali_Mutton_Curry.JPG) |
