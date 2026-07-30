@@ -91,32 +91,6 @@
     "note": "resized for web"
   },
   {
-    "file": "bengali-g1.jpg",
-    "region": "bengali",
-    "slot": "g1",
-    "wiki_title": "Rasgulla",
-    "width": 2828,
-    "height": 2294,
-    "size_bytes": 557183,
-    "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Rasgulla.jpg",
-    "license": "CC BY-SA 4.0",
-    "artist": "HrichikHv",
-    "note": "resized for web"
-  },
-  {
-    "file": "gujarati-hero.jpg",
-    "region": "gujarati",
-    "slot": "hero",
-    "wiki_title": "Gujarati cuisine",
-    "width": 2048,
-    "height": 1148,
-    "size_bytes": 227423,
-    "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Gujrati_Thali.jpg",
-    "license": "CC BY-SA 4.0",
-    "artist": "Bheem3",
-    "note": "resized for web"
-  },
-  {
     "file": "gujarati-g1.jpg",
     "region": "gujarati",
     "slot": "g1",
@@ -179,45 +153,6 @@
     "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Ukadiche_Modak_%28Rice%29.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "imutkarshpatil",
-    "note": "resized for web"
-  },
-  {
-    "file": "hyderabadi-hero.jpg",
-    "region": "hyderabadi",
-    "slot": "hero",
-    "wiki_title": "Hyderabadi biryani",
-    "width": 3888,
-    "height": 2592,
-    "size_bytes": 1826394,
-    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hyderabadi_Chicken_Biryani.jpg/3840px-Hyderabadi_Chicken_Biryani.jpg",
-    "license": "Unknown",
-    "artist": "Unknown",
-    "note": "resized for web"
-  },
-  {
-    "file": "hyderabadi-g1.jpg",
-    "region": "hyderabadi",
-    "slot": "g1",
-    "wiki_title": "Haleem",
-    "width": 4368,
-    "height": 2912,
-    "size_bytes": 1033537,
-    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pakistani_Haleem_served_with_garnish.jpg/3840px-Pakistani_Haleem_served_with_garnish.jpg",
-    "license": "Unknown",
-    "artist": "Unknown",
-    "note": "resized for web"
-  },
-  {
-    "file": "hyderabadi-g2.jpg",
-    "region": "hyderabadi",
-    "slot": "g2",
-    "wiki_title": "Mirchi ka salan",
-    "width": 4896,
-    "height": 3672,
-    "size_bytes": 4950134,
-    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Hyderabadi_Hari_Mirchi_Ka_Salan.JPG/3840px-Hyderabadi_Hari_Mirchi_Ka_Salan.JPG",
-    "license": "Unknown",
-    "artist": "Unknown",
     "note": "resized for web"
   },
   {
@@ -321,5 +256,70 @@
     "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Undhiyu.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Jatan1992"
+  },
+  {
+    "file": "bengali-g1.jpg",
+    "region": "bengali",
+    "slot": "g1",
+    "wiki_title": "Rasgulla",
+    "width": 4896,
+    "height": 3672,
+    "size_bytes": 4988900,
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Rasgulla_Sweet.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Mdsmds0",
+    "note": "aesthetic replacement"
+  },
+  {
+    "file": "hyderabadi-hero.jpg",
+    "region": "hyderabadi",
+    "slot": "hero",
+    "wiki_title": "Hyderabadi biryani",
+    "width": 4032,
+    "height": 2592,
+    "size_bytes": 3524837,
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/%22Hyderabadi_Dum_Biryani%22.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Mahi Tatavarty",
+    "note": "aesthetic replacement"
+  },
+  {
+    "file": "hyderabadi-g1.jpg",
+    "region": "hyderabadi",
+    "slot": "g1",
+    "wiki_title": "Haleem",
+    "width": 5184,
+    "height": 3456,
+    "size_bytes": 5654888,
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Haleem_hyderabadi.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Chandu7299",
+    "note": "aesthetic replacement"
+  },
+  {
+    "file": "hyderabadi-g2.jpg",
+    "region": "hyderabadi",
+    "slot": "g2",
+    "wiki_title": "Qubani ka meetha",
+    "width": 2816,
+    "height": 2112,
+    "size_bytes": 4488146,
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Khobani_Ka_Meetha.JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "aesthetic replacement"
+  },
+  {
+    "file": "gujarati-hero.jpg",
+    "region": "gujarati",
+    "slot": "hero",
+    "wiki_title": "Gujarati thali",
+    "width": 4032,
+    "height": 3024,
+    "size_bytes": 2264832,
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Gujarati_Thali_1.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Amol Sinha",
+    "note": "aesthetic replacement"
   }
 ]
