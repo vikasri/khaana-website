@@ -320,5 +320,95 @@
     "license": "CC BY-SA 4.0",
     "artist": "Joe mon bkk",
     "note": "Overhead grid of assorted Indian spices in ceramic bowls."
+  },
+  {
+    "file": "kashmiri-hero.jpg",
+    "region": "kashmiri",
+    "slot": "hero",
+    "wiki_title": "Kashmiri Wazwan.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kashmiri_Wazwan.jpg",
+    "license": "CC0",
+    "artist": "Draabidwani1",
+    "note": ""
+  },
+  {
+    "file": "kashmiri-g1.jpg",
+    "region": "kashmiri",
+    "slot": "gallery1",
+    "wiki_title": "Kashmiri Pulav.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kashmiri_Pulav.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Renupradhul",
+    "note": ""
+  },
+  {
+    "file": "kashmiri-g2.jpg",
+    "region": "kashmiri",
+    "slot": "gallery2",
+    "wiki_title": "Dum Aloo Kashmiri India.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dum_Aloo_Kashmiri_India.jpg",
+    "license": "CC BY 2.0",
+    "artist": "Divya Kudua",
+    "note": ""
+  },
+  {
+    "file": "northeast-hero.jpg",
+    "region": "northeast-indian",
+    "slot": "hero",
+    "wiki_title": "Assamese Thali at Guwahati.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Assamese_Thali_at_Guwahati.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Deepak G Goswami",
+    "note": ""
+  },
+  {
+    "file": "northeast-g1.jpg",
+    "region": "northeast-indian",
+    "slot": "gallery1",
+    "wiki_title": "Naga style smoked Pork ribs with bamboo shoots and rice.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Naga_style_smoked_Pork_ribs_with_bamboo_shoots_and_rice.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Satdeep Gill",
+    "note": ""
+  },
+  {
+    "file": "northeast-g2.jpg",
+    "region": "northeast-indian",
+    "slot": "gallery2",
+    "wiki_title": "North Eastern Momos (Macro).JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:North_Eastern_Momos_(Macro).JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "efk.apple",
+    "note": ""
+  },
+  {
+    "file": "awadhi-hero.jpg",
+    "region": "awadhi-lucknowi",
+    "slot": "hero",
+    "wiki_title": "Lucknowi Mutton Matka Dum Biriyani.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lucknowi_Mutton_Matka_Dum_Biriyani.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Kalesh",
+    "note": ""
+  },
+  {
+    "file": "awadhi-g1.jpg",
+    "region": "awadhi-lucknowi",
+    "slot": "gallery1",
+    "wiki_title": "Mouth Watering Gauloti Kababs.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mouth_Watering_Gauloti_Kababs.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Fatimahope",
+    "note": ""
+  },
+  {
+    "file": "awadhi-g2.jpg",
+    "region": "awadhi-lucknowi",
+    "slot": "gallery2",
+    "wiki_title": "Nalli Nihari India.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Nalli_Nihari_India.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Nilanjan Sasmal",
+    "note": ""
   }
 ]
