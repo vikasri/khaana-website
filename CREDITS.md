@@ -25,6 +25,9 @@ All images, including the home page hero, are sourced from Wikimedia Commons via
 | `assets/images/kashmiri-g1.jpg` | Kashmiri pulav | CC BY-SA 4.0 | Renupradhul | [link](https://commons.wikimedia.org/wiki/File:Kashmiri_Pulav.JPG) |
 | `assets/images/kashmiri-g2.jpg` | Dum aloo (Kashmiri) | CC BY 2.0 | Divya Kudua | [link](https://commons.wikimedia.org/wiki/File:Dum_Aloo_Kashmiri_India.jpg) |
 | `assets/images/kashmiri-hero.jpg` | Kashmiri wazwan | CC0 | Draabidwani1 | [link](https://commons.wikimedia.org/wiki/File:Kashmiri_Wazwan.jpg) |
+| `assets/images/kerala-g1.jpg` | Meen curry (fish curry) | CC BY-SA 2.5 | Kalakki at Malayalam Wikipedia | [link](https://commons.wikimedia.org/wiki/File:Meen_curry_2.JPG) |
+| `assets/images/kerala-g2.jpg` | Appam with duck curry | CC BY-SA 4.0 | Aiwin Soji | [link](https://commons.wikimedia.org/wiki/File:Topdown_shot_of_Palappam_with_duck_curry.jpg) |
+| `assets/images/kerala-hero.jpg` | Onam sadya | CC BY 4.0 | Bhuvana Meenakshi | [link](https://commons.wikimedia.org/wiki/File:Traditional_Onam_Sadya_2024.jpg) |
 | `assets/images/maharashtrian-g1.jpg` | Misal pav | Unknown | Unknown | [link](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Kolhapuri_Misal_Pav.jpg/3840px-Kolhapuri_Misal_Pav.jpg) |
 | `assets/images/maharashtrian-g2.jpg` | Modak | CC BY-SA 4.0 | imutkarshpatil | [link](https://upload.wikimedia.org/wikipedia/commons/f/f7/Ukadiche_Modak_%28Rice%29.jpg) |
 | `assets/images/maharashtrian-hero.jpg` | Vada pav | Unknown | Unknown | [link](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Vada_Pav-Indian_street_food.JPG/3840px-Vada_Pav-Indian_street_food.JPG) |

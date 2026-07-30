@@ -410,5 +410,35 @@
     "license": "CC BY-SA 4.0",
     "artist": "Nilanjan Sasmal",
     "note": ""
+  },
+  {
+    "file": "kerala-hero.jpg",
+    "region": "kerala",
+    "slot": "hero",
+    "wiki_title": "Traditional Onam Sadya 2024.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Traditional_Onam_Sadya_2024.jpg",
+    "license": "CC BY 4.0",
+    "artist": "Bhuvana Meenakshi",
+    "note": ""
+  },
+  {
+    "file": "kerala-g1.jpg",
+    "region": "kerala",
+    "slot": "gallery1",
+    "wiki_title": "Meen curry 2.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Meen_curry_2.JPG",
+    "license": "CC BY-SA 2.5",
+    "artist": "Kalakki at Malayalam Wikipedia",
+    "note": ""
+  },
+  {
+    "file": "kerala-g2.jpg",
+    "region": "kerala",
+    "slot": "gallery2",
+    "wiki_title": "Topdown shot of Palappam with duck curry.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Topdown_shot_of_Palappam_with_duck_curry.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Aiwin Soji",
+    "note": ""
   }
 ]
