@@ -162,6 +162,43 @@ p { margin: 0 0 1.1em; }
 
 .hero.small { height: 42vh; min-height: 280px; }
 
+/* ---------- Word mark (khaana pronunciation) ---------- */
+.word-mark-section { padding-top: 48px; padding-bottom: 8px; }
+
+.word-mark {
+  text-align: center;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.word-mark-devanagari {
+  font-family: 'Kohinoor Devanagari', 'Noto Sans Devanagari', 'Mangal', var(--serif);
+  font-size: clamp(2.6rem, 8vw, 3.6rem);
+  font-weight: 700;
+  color: var(--terracotta);
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.word-mark-pron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--ink-soft);
+}
+.word-mark-dot { color: var(--gold); font-size: 1.2rem; }
+
+.word-mark-caption {
+  margin: 10px 0 0;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
 /* ---------- Sections ---------- */
 section { padding: 64px 0; }
 section.tight { padding: 40px 0; }
