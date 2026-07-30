@@ -22,6 +22,7 @@ All images, including the home page hero, are sourced from Wikimedia Commons via
 | `assets/images/hyderabadi-g1.jpg` | Haleem | CC BY-SA 4.0 | Chandu7299 | [link](https://upload.wikimedia.org/wikipedia/commons/3/31/Haleem_hyderabadi.jpg) |
 | `assets/images/hyderabadi-g2.jpg` | Qubani ka meetha | CC0 | Miansari66 | [link](https://upload.wikimedia.org/wikipedia/commons/3/3c/Khobani_Ka_Meetha.JPG) |
 | `assets/images/hyderabadi-hero.jpg` | Hyderabadi biryani | CC BY-SA 4.0 | Mahi Tatavarty | [link](https://upload.wikimedia.org/wikipedia/commons/5/5a/%22Hyderabadi_Dum_Biryani%22.jpg) |
+| `assets/images/india-cuisine-zones.svg` | Base map: India dark grey (state outlines, recolored; cuisine zone overlays are original) | CC BY-SA 4.0 | Filpro | [link](https://commons.wikimedia.org/wiki/File:India_dark_grey.svg) |
 | `assets/images/kashmiri-g1.jpg` | Kashmiri pulav | CC BY-SA 4.0 | Renupradhul | [link](https://commons.wikimedia.org/wiki/File:Kashmiri_Pulav.JPG) |
 | `assets/images/kashmiri-g2.jpg` | Dum aloo (Kashmiri) | CC BY 2.0 | Divya Kudua | [link](https://commons.wikimedia.org/wiki/File:Dum_Aloo_Kashmiri_India.jpg) |
 | `assets/images/kashmiri-hero.jpg` | Kashmiri wazwan | CC0 | Draabidwani1 | [link](https://commons.wikimedia.org/wiki/File:Kashmiri_Wazwan.jpg) |
