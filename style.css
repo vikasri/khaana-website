@@ -83,7 +83,9 @@ p { margin: 0 0 1.1em; }
   color: var(--terracotta);
   letter-spacing: 0.01em;
 }
-.brand span { color: var(--ink); }
+/* "भारत के स्वाद" is one phrase and must not break across lines. The brand as a
+   whole may still wrap between the English and the Hindi on a narrow header. */
+.brand span { color: var(--ink); white-space: nowrap; }
 
 .nav-toggle {
   display: none;
@@ -268,10 +270,15 @@ section.word-mark-section.tight { padding-top: 18px; padding-bottom: 0; }
   transform: translateY(-10px);
 }
 
+/* Sits as the third item in the lockup row, to the right of the syllables,
+   rather than on its own line underneath. */
 .word-mark-caption {
-  margin: 10px 0 0;
+  margin: 0;
   font-size: 0.98rem;
   color: var(--ink-soft);
+  text-align: left;
+  max-width: 12ch;
+  line-height: 1.35;
 }
 
 /* ---------- Sections ---------- */
@@ -994,6 +1001,11 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 .find-cta-label { font-weight: 800; letter-spacing: 0.01em; }
 .find-cta-arrow { font-size: 1.15em; transition: transform 0.16s ease; }
 .find-cta:hover .find-cta-arrow { transform: translateX(3px); }
+
+/* Closing call to action on every region page: same button as the homepage,
+   centred above the footer. */
+.cook-cta-band { text-align: center; }
+.cook-cta-band .find-cta-note { margin-left: auto; margin-right: auto; }
 
 .find-cta-note {
   font-size: 0.88rem;
