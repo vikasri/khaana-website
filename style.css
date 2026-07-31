@@ -115,9 +115,11 @@ p { margin: 0 0 1.1em; }
 
 /* Cook is the site's one interactive tool, so it carries the blue accent in the
    nav too. Matched on href so all sixteen pages pick it up without edits. */
-.nav-links a[href="cook.html"] { color: var(--azure); font-weight: 700; }
+/* Brighter than the body azure so Cook stands out in the nav. Measured 5.84:1
+   on white — a more vivid blue like #0a84ff drops to 3.65:1 and fails AA. */
+.nav-links a[href="cook.html"] { color: #0b5ed7; font-weight: 700; }
 .nav-links a[href="cook.html"]:hover,
-.nav-links a[href="cook.html"].active { color: var(--azure-dark); }
+.nav-links a[href="cook.html"].active { color: #0a4bb0; }
 
 @media (max-width: 820px) {
   .nav-toggle { display: block; }
@@ -998,7 +1000,10 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
   outline: 3px solid rgba(26, 95, 138, 0.45);
   outline-offset: 3px;
 }
-.find-cta-label { font-weight: 800; letter-spacing: 0.01em; }
+/* "Recipes Based on Ingredients" is long enough to wrap inside the button and
+   push the arrow onto a second line, which made the pill 120px tall. It fits
+   the column on one line; mobile re-allows wrapping below. */
+.find-cta-label { font-weight: 800; letter-spacing: 0.01em; white-space: nowrap; }
 .find-cta-arrow { font-size: 1.15em; transition: transform 0.16s ease; }
 .find-cta:hover .find-cta-arrow { transform: translateX(3px); }
 
@@ -1022,6 +1027,9 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
   /* The label is long, so the enlarged padding has to give way on narrow
      screens or the pill overflows its column. */
   .find-cta { padding: 22px 30px; font-size: 1.22rem; max-width: 100%; }
+  /* Narrow screens have no room for the label on one line — let it wrap here
+     rather than overflow the viewport. */
+  .find-cta-label { white-space: normal; }
 }
 
 /* Recipes without a photograph get a lettered tile rather than a broken image
