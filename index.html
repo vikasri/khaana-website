@@ -77,6 +77,32 @@
   </div>
 </section>
 
+<section class="tight home-find">
+  <div class="container">
+    <div class="find-wrap">
+
+      <div class="find-search">
+        <label for="site-search" class="find-label">Search the site</label>
+        <input type="search" id="site-search" class="find-input" autocomplete="off"
+               role="combobox" aria-expanded="false" aria-autocomplete="list"
+               aria-controls="site-search-results" aria-describedby="site-search-hint"
+               placeholder="Try &ldquo;dosa&rdquo;, &ldquo;mustard oil&rdquo; or &ldquo;Kerala&rdquo;&hellip;" />
+        <p id="site-search-hint" class="find-hint">Searches every page &mdash; recipes, regional guides and their ingredients.</p>
+        <div id="site-search-results" class="find-results" role="listbox" aria-label="Search results" hidden></div>
+      </div>
+
+      <div class="find-divider"><span>or</span></div>
+
+      <a href="cook.html" class="find-cta">
+        <span class="find-cta-title">Cook Based on Ingredients</span>
+        <span class="find-cta-sub">Tell Khaana what is in your kitchen and it will rank the dishes you can actually make tonight.</span>
+        <span class="find-cta-go">Open the pantry matcher &rarr;</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="container">
     <div class="regional-grid">
@@ -290,5 +316,6 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="assets/js/site-search.js"></script>
 </body>
 </html>
