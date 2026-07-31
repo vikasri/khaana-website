@@ -397,7 +397,12 @@ section.tight { padding: 28px 0; }
   align-items: center;
 }
 .region-map-wrap { text-align: center; }
-.region-map-wrap img { width: 100%; max-width: 460px; height: auto; margin: 0 auto; }
+/* The map is an <object> rather than an <img> because links inside an SVG are
+   inert when it is loaded as an image. The <img> rule stays for the fallback. */
+.region-map-wrap object,
+.region-map-wrap img { width: 100%; max-width: 460px; height: auto; margin: 0 auto; display: block; }
+/* Matches the SVG viewBox, so the slot is reserved before the file arrives. */
+.region-map-wrap object { aspect-ratio: 1599 / 2600; }
 .region-map-caption { font-size: 0.85rem; color: var(--ink-soft); margin: 10px auto 0; text-align: center; max-width: 520px; }
 .region-map-legend {
   display: grid;
