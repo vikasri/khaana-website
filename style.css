@@ -1,5 +1,5 @@
 :root {
-  --cream: #f2faf9;
+  --cream: #fdf8f1;
   --paper: #ffffff;
   --ink: #1b2422;
   --ink-soft: #526460;
@@ -8,7 +8,7 @@
   --terracotta: #e8590c;
   --deep-red: #b8380a;
   --gold: #ffa94d;
-  --line: #d8ece8;
+  --line: #efe3d6;
   --shadow: 0 10px 30px rgba(232, 89, 12, 0.16);
   --radius: 14px;
   --serif: 'Georgia', 'Iowan Old Style', 'Palatino Linotype', serif;
@@ -163,7 +163,7 @@ p { margin: 0 0 1.1em; }
   margin-bottom: 10px;
 }
 .hero-content h1 { color: #fff; margin-bottom: 10px; }
-.hero-content p { color: #ddf2ee; max-width: 560px; font-size: 1.1rem; }
+.hero-content p { color: #f2e7db; max-width: 560px; font-size: 1.1rem; }
 
 .hero.small { height: 42vh; min-height: 280px; }
 
