@@ -964,13 +964,13 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 .find-cta {
   display: inline-flex;
   align-items: center;
-  gap: 13px;
-  padding: 22px 44px;
+  gap: 16px;
+  padding: 30px 60px;
   border-radius: 999px;
   background: linear-gradient(135deg, var(--azure), var(--azure-dark));
   color: #fff;
   font-family: var(--sans);
-  font-size: 1.25rem;
+  font-size: 1.55rem;
   font-weight: 700;
   line-height: 1.2;
   text-decoration: none;
@@ -1009,7 +1009,7 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
   .find-divider { display: none; }
   /* The label is long, so the enlarged padding has to give way on narrow
      screens or the pill overflows its column. */
-  .find-cta { padding: 18px 26px; font-size: 1.08rem; max-width: 100%; }
+  .find-cta { padding: 22px 30px; font-size: 1.22rem; max-width: 100%; }
 }
 
 /* Recipes without a photograph get a lettered tile rather than a broken image
