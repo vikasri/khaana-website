@@ -9,126 +9,397 @@
       "subtitle": "Odia lentils simmered with vegetables, finished with roasted cumin and coconut",
       "region": "Odia",
       "regionPage": "odia.html",
-      "image": { "src": "assets/images/odia-hero.jpg", "alt": "A bowl of Odia dalma, lentils cooked with vegetables", "credit": "Raseswari", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dalma_(Odia_vegetables_and_pulses_curry).jpg" },
+      "image": {
+        "src": "assets/images/odia-hero.jpg",
+        "alt": "A bowl of Odia dalma, lentils cooked with vegetables",
+        "credit": "Raseswari",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dalma_(Odia_vegetables_and_pulses_curry).jpg"
+      },
       "servings": 4,
       "prepMinutes": 15,
       "cookMinutes": 30,
       "difficulty": "easy",
-      "equipment": ["stovetop", "pressure-cooker"],
-      "tags": ["vegetarian", "vegan", "gluten-free", "nut-free", "dairy-free"],
+      "equipment": [
+        "stovetop",
+        "pressure-cooker"
+      ],
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "nut-free",
+        "dairy-free"
+      ],
       "allergens": [],
       "ingredients": [
-        { "id": "toor-dal", "qty": "1 cup", "note": "rinsed until the water runs clear", "essential": true },
-        { "id": "raw-banana", "qty": "1, in 2cm chunks", "essential": false },
-        { "id": "pumpkin", "qty": "200g, in 2cm cubes", "essential": false },
-        { "id": "potato", "qty": "1 large, in chunks", "essential": true },
-        { "id": "drumstick", "qty": "1, in 5cm pieces", "essential": false },
-        { "id": "tomato", "qty": "1, quartered", "essential": false },
-        { "id": "turmeric", "qty": "1/2 tsp", "essential": true },
-        { "id": "cumin-seeds", "qty": "1 tsp", "essential": true },
-        { "id": "dried-red-chilli", "qty": "2", "essential": true },
-        { "id": "ginger", "qty": "1 tbsp, grated", "essential": true },
-        { "id": "coconut", "qty": "3 tbsp, grated", "essential": false },
-        { "id": "bay-leaf", "qty": "1", "essential": false },
-        { "id": "ghee", "qty": "1 tbsp", "note": "use oil to keep it vegan", "essential": true },
-        { "id": "salt", "qty": "to taste", "essential": true }
+        {
+          "id": "toor-dal",
+          "qty": "1 cup",
+          "note": "rinsed until the water runs clear",
+          "essential": true
+        },
+        {
+          "id": "raw-banana",
+          "qty": "1, in 2cm chunks",
+          "essential": false
+        },
+        {
+          "id": "pumpkin",
+          "qty": "200g, in 2cm cubes",
+          "essential": false
+        },
+        {
+          "id": "potato",
+          "qty": "1 large, in chunks",
+          "essential": true
+        },
+        {
+          "id": "drumstick",
+          "qty": "1, in 5cm pieces",
+          "essential": false
+        },
+        {
+          "id": "tomato",
+          "qty": "1, quartered",
+          "essential": false
+        },
+        {
+          "id": "turmeric",
+          "qty": "1/2 tsp",
+          "essential": true
+        },
+        {
+          "id": "cumin-seeds",
+          "qty": "1 tsp",
+          "essential": true
+        },
+        {
+          "id": "dried-red-chilli",
+          "qty": "2",
+          "essential": true
+        },
+        {
+          "id": "ginger",
+          "qty": "1 tbsp, grated",
+          "essential": true
+        },
+        {
+          "id": "coconut",
+          "qty": "3 tbsp, grated",
+          "essential": false
+        },
+        {
+          "id": "bay-leaf",
+          "qty": "1",
+          "essential": false
+        },
+        {
+          "id": "ghee",
+          "qty": "1 tbsp",
+          "note": "use oil to keep it vegan",
+          "essential": true
+        },
+        {
+          "id": "salt",
+          "qty": "to taste",
+          "essential": true
+        }
       ],
       "prepNotes": [
         "Dalma has no onion or garlic at all. The flavour comes from the roasted cumin-chilli powder added at the end, so do not skip that step.",
         "Cut the vegetables large. They should hold their shape in the finished dish rather than dissolve into the dal."
       ],
       "steps": [
-        { "text": "Pressure cook the toor dal with turmeric, the ginger and 3 cups of water for 3 whistles, or simmer covered in a pot for about 35 minutes until completely soft." },
-        { "text": "Add the potato, raw banana, pumpkin and drumstick with a little more hot water and salt. Cook a further 2 whistles, or 12-15 minutes in a pot, until the vegetables are tender but not collapsing.", "tip": "Add the tomato in the last five minutes so it keeps some shape." },
-        { "text": "Meanwhile, dry roast half the cumin seeds and one dried chilli in a small pan over medium heat until the cumin darkens a shade and smells toasty, about 90 seconds. Cool, then grind to a coarse powder." },
-        { "text": "Heat the ghee in a small pan. Add the bay leaf, the remaining cumin seeds and the remaining dried chilli. When the cumin sizzles and turns fragrant, pour the whole tempering into the dal.", "glossary": "tadka" },
-        { "text": "Stir in the grated coconut and the roasted cumin powder. Simmer 2 minutes so the flavours settle, then taste and adjust salt." }
+        {
+          "text": "Pressure cook the toor dal with turmeric, the ginger and 3 cups of water for 3 whistles, or simmer covered in a pot for about 35 minutes until completely soft."
+        },
+        {
+          "text": "Add the potato, raw banana, pumpkin and drumstick with a little more hot water and salt. Cook a further 2 whistles, or 12-15 minutes in a pot, until the vegetables are tender but not collapsing.",
+          "tip": "Add the tomato in the last five minutes so it keeps some shape."
+        },
+        {
+          "text": "Meanwhile, dry roast half the cumin seeds and one dried chilli in a small pan over medium heat until the cumin darkens a shade and smells toasty, about 90 seconds. Cool, then grind to a coarse powder."
+        },
+        {
+          "text": "Heat the ghee in a small pan. Add the bay leaf, the remaining cumin seeds and the remaining dried chilli. When the cumin sizzles and turns fragrant, pour the whole tempering into the dal.",
+          "glossary": "tadka"
+        },
+        {
+          "text": "Stir in the grated coconut and the roasted cumin powder. Simmer 2 minutes so the flavours settle, then taste and adjust salt."
+        }
       ],
       "storage": "Keeps 3 days refrigerated. It thickens considerably as it sits; loosen with hot water when reheating. Freezes well for a month, though the vegetables soften.",
-      "glossary": ["tadka"],
-      "provenance": { "recipeVersion": "1.0.0", "updated": "2026-07-31", "source": "Khaana editorial" }
+      "glossary": [
+        "tadka"
+      ],
+      "provenance": {
+        "recipeVersion": "1.0.0",
+        "updated": "2026-07-31",
+        "source": "Khaana editorial"
+      }
     },
-
     {
       "id": "chole",
       "name": "Chole",
       "subtitle": "Punjabi chickpea curry, dark and tangy with pomegranate and dried mango",
       "region": "Punjabi",
       "regionPage": "punjabi.html",
-      "image": { "src": "assets/images/punjabi-g2.jpg", "alt": "Chole served with bhature", "credit": "Unknown", "license": "See CREDITS.md", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chole_Bhature_from_Nagpur.JPG" },
+      "image": {
+        "src": "assets/images/punjabi-g2.jpg",
+        "alt": "Chole served with bhature",
+        "credit": "Unknown",
+        "license": "See CREDITS.md",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chole_Bhature_from_Nagpur.JPG"
+      },
       "servings": 4,
       "prepMinutes": 15,
       "cookMinutes": 40,
       "difficulty": "easy",
-      "equipment": ["stovetop", "pressure-cooker"],
-      "tags": ["vegetarian", "vegan", "gluten-free", "nut-free", "dairy-free"],
+      "equipment": [
+        "stovetop",
+        "pressure-cooker"
+      ],
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "nut-free",
+        "dairy-free"
+      ],
       "allergens": [],
       "ingredients": [
-        { "id": "chickpeas", "qty": "1.5 cups dried, soaked overnight", "note": "or 3 tins, drained", "essential": true },
-        { "id": "onion", "qty": "2 large, finely chopped", "essential": true },
-        { "id": "tomato", "qty": "3, pureed", "essential": true },
-        { "id": "ginger", "qty": "2 tbsp, grated", "essential": true },
-        { "id": "garlic", "qty": "6 cloves, crushed", "essential": true },
-        { "id": "green-chilli", "qty": "2, slit", "essential": false },
-        { "id": "turmeric", "qty": "1/2 tsp", "essential": true },
-        { "id": "chilli-powder", "qty": "1 tsp", "essential": true },
-        { "id": "coriander-powder", "qty": "2 tsp", "essential": true },
-        { "id": "garam-masala", "qty": "1 tsp", "essential": true },
-        { "id": "cumin-seeds", "qty": "1 tsp", "essential": true },
-        { "id": "bay-leaf", "qty": "1", "essential": false },
-        { "id": "black-cardamom", "qty": "1", "note": "the smoky note that makes chole taste like chole", "essential": false },
-        { "id": "lemon", "qty": "1", "essential": true },
-        { "id": "coriander-leaves", "qty": "a handful", "essential": false },
-        { "id": "neutral-oil", "qty": "3 tbsp", "essential": true },
-        { "id": "salt", "qty": "to taste", "essential": true }
+        {
+          "id": "chickpeas",
+          "qty": "1.5 cups dried, soaked overnight",
+          "note": "or 3 tins, drained",
+          "essential": true
+        },
+        {
+          "id": "onion",
+          "qty": "2 large, finely chopped",
+          "essential": true
+        },
+        {
+          "id": "tomato",
+          "qty": "3, pureed",
+          "essential": true
+        },
+        {
+          "id": "ginger",
+          "qty": "2 tbsp, grated",
+          "essential": true
+        },
+        {
+          "id": "garlic",
+          "qty": "6 cloves, crushed",
+          "essential": true
+        },
+        {
+          "id": "green-chilli",
+          "qty": "2, slit",
+          "essential": false
+        },
+        {
+          "id": "turmeric",
+          "qty": "1/2 tsp",
+          "essential": true
+        },
+        {
+          "id": "chilli-powder",
+          "qty": "1 tsp",
+          "essential": true
+        },
+        {
+          "id": "coriander-powder",
+          "qty": "2 tsp",
+          "essential": true
+        },
+        {
+          "id": "garam-masala",
+          "qty": "1 tsp",
+          "essential": true
+        },
+        {
+          "id": "cumin-seeds",
+          "qty": "1 tsp",
+          "essential": true
+        },
+        {
+          "id": "bay-leaf",
+          "qty": "1",
+          "essential": false
+        },
+        {
+          "id": "black-cardamom",
+          "qty": "1",
+          "note": "the smoky note that makes chole taste like chole",
+          "essential": false
+        },
+        {
+          "id": "lemon",
+          "qty": "1",
+          "essential": true
+        },
+        {
+          "id": "coriander-leaves",
+          "qty": "a handful",
+          "essential": false
+        },
+        {
+          "id": "neutral-oil",
+          "qty": "3 tbsp",
+          "essential": true
+        },
+        {
+          "id": "salt",
+          "qty": "to taste",
+          "essential": true
+        }
       ],
       "prepNotes": [
         "The dark colour of restaurant chole comes from cooking the chickpeas with a black tea bag or a piece of dried amla. Neither is required, but if you want the colour, add a tea bag to the cooking water and remove it before draining.",
         "If using tinned chickpeas, simmer them in the finished gravy for 15 minutes so they absorb it; they will otherwise taste separate from the sauce."
       ],
       "steps": [
-        { "text": "Pressure cook the soaked chickpeas with salt and the black cardamom in fresh water for 5-6 whistles, until a chickpea crushes easily between finger and thumb. Reserve the cooking liquid." },
-        { "text": "Heat the oil in a heavy pan. Add the cumin seeds and bay leaf, and when the cumin sizzles, add the onion. Fry patiently over medium heat until genuinely brown, 10-12 minutes; this is most of the flavour." },
-        { "text": "Add the ginger and garlic and cook for a minute until the raw smell goes, then add the tomato puree, turmeric, chilli powder and coriander powder." },
-        { "text": "Cook the masala down until the oil separates and pools at the edges of the pan, 8-10 minutes. Do not rush this.", "glossary": "bhuna" },
-        { "text": "Add the drained chickpeas with a cup of the reserved cooking liquid. Simmer uncovered 15 minutes, mashing a few chickpeas against the side of the pan to thicken the gravy." },
-        { "text": "Stir in the garam masala, a good squeeze of lemon and the coriander leaves. Rest 10 minutes off the heat before serving; chole improves noticeably in that time." }
+        {
+          "text": "Pressure cook the soaked chickpeas with salt and the black cardamom in fresh water for 5-6 whistles, until a chickpea crushes easily between finger and thumb. Reserve the cooking liquid."
+        },
+        {
+          "text": "Heat the oil in a heavy pan. Add the cumin seeds and bay leaf, and when the cumin sizzles, add the onion. Fry patiently over medium heat until genuinely brown, 10-12 minutes; this is most of the flavour."
+        },
+        {
+          "text": "Add the ginger and garlic and cook for a minute until the raw smell goes, then add the tomato puree, turmeric, chilli powder and coriander powder."
+        },
+        {
+          "text": "Cook the masala down until the oil separates and pools at the edges of the pan, 8-10 minutes. Do not rush this.",
+          "glossary": "bhuna"
+        },
+        {
+          "text": "Add the drained chickpeas with a cup of the reserved cooking liquid. Simmer uncovered 15 minutes, mashing a few chickpeas against the side of the pan to thicken the gravy."
+        },
+        {
+          "text": "Stir in the garam masala, a good squeeze of lemon and the coriander leaves. Rest 10 minutes off the heat before serving; chole improves noticeably in that time."
+        }
       ],
       "storage": "Better on the second day. Keeps 4 days refrigerated, freezes 2 months. Reheat gently with a splash of water.",
-      "glossary": ["bhuna"],
-      "provenance": { "recipeVersion": "1.0.0", "updated": "2026-07-31", "source": "Khaana editorial" }
+      "glossary": [
+        "bhuna"
+      ],
+      "provenance": {
+        "recipeVersion": "1.0.0",
+        "updated": "2026-07-31",
+        "source": "Khaana editorial"
+      }
     },
-
     {
       "id": "butter-chicken",
       "name": "Butter Chicken",
       "subtitle": "Murgh makhani: charred chicken in a tomato and cream gravy, mild and fenugreek-scented",
       "region": "Punjabi",
       "regionPage": "punjabi.html",
-      "image": { "src": "assets/images/punjabi-g1.jpg", "alt": "Butter chicken served with butter naan", "credit": "Yuvraj Singh 97", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Butter_Chicken_%26_Butter_Naan_-_Home_-_Chandigarh_-_India_-_0006.jpg" },
+      "image": {
+        "src": "assets/images/punjabi-g1.jpg",
+        "alt": "Butter chicken served with butter naan",
+        "credit": "Yuvraj Singh 97",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Butter_Chicken_%26_Butter_Naan_-_Home_-_Chandigarh_-_India_-_0006.jpg"
+      },
       "servings": 4,
       "prepMinutes": 25,
       "cookMinutes": 35,
       "difficulty": "moderate",
-      "equipment": ["stovetop", "blender", "oven"],
-      "tags": ["gluten-free", "nut-free"],
-      "allergens": ["dairy"],
+      "equipment": [
+        "stovetop",
+        "blender",
+        "oven"
+      ],
+      "tags": [
+        "gluten-free",
+        "nut-free"
+      ],
+      "allergens": [
+        "dairy"
+      ],
       "ingredients": [
-        { "id": "chicken", "qty": "800g thigh, boneless, in large pieces", "essential": true },
-        { "id": "yogurt", "qty": "1/2 cup, thick", "essential": true },
-        { "id": "ginger", "qty": "2 tbsp, grated", "essential": true },
-        { "id": "garlic", "qty": "8 cloves, crushed", "essential": true },
-        { "id": "kashmiri-chilli", "qty": "2 tsp", "note": "for colour without heat", "essential": true },
-        { "id": "garam-masala", "qty": "1.5 tsp", "essential": true },
-        { "id": "tomato", "qty": "800g, roughly chopped", "essential": true },
-        { "id": "butter", "qty": "80g", "essential": true },
-        { "id": "cream", "qty": "1/2 cup", "essential": true },
-        { "id": "fenugreek-seeds", "qty": "1 tsp dried leaves (kasuri methi) if you have them", "essential": false },
-        { "id": "cardamom", "qty": "4 pods", "essential": false },
-        { "id": "cashew", "qty": "10, soaked", "note": "optional, for a thicker gravy", "essential": false },
-        { "id": "sugar", "qty": "1 tsp", "essential": false },
-        { "id": "lemon", "qty": "1/2", "essential": true },
-        { "id": "salt", "qty": "to taste", "essential": true }
+        {
+          "id": "chicken",
+          "qty": "800g thigh, boneless, in large pieces",
+          "essential": true
+        },
+        {
+          "id": "yogurt",
+          "qty": "1/2 cup, thick",
+          "essential": true
+        },
+        {
+          "id": "ginger",
+          "qty": "2 tbsp, grated",
+          "essential": true
+        },
+        {
+          "id": "garlic",
+          "qty": "8 cloves, crushed",
+          "essential": true
+        },
+        {
+          "id": "kashmiri-chilli",
+          "qty": "2 tsp",
+          "note": "for colour without heat",
+          "essential": true
+        },
+        {
+          "id": "garam-masala",
+          "qty": "1.5 tsp",
+          "essential": true
+        },
+        {
+          "id": "tomato",
+          "qty": "800g, roughly chopped",
+          "essential": true
+        },
+        {
+          "id": "butter",
+          "qty": "80g",
+          "essential": true
+        },
+        {
+          "id": "cream",
+          "qty": "1/2 cup",
+          "essential": true
+        },
+        {
+          "id": "kasuri-methi",
+          "qty": "1 tsp, crushed",
+          "essential": false,
+          "note": "dried fenugreek leaves — not the seeds; this is the flavour most people cannot place"
+        },
+        {
+          "id": "cardamom",
+          "qty": "4 pods",
+          "essential": false
+        },
+        {
+          "id": "cashew",
+          "qty": "10, soaked",
+          "note": "optional, for a thicker gravy",
+          "essential": false
+        },
+        {
+          "id": "sugar",
+          "qty": "1 tsp",
+          "essential": false
+        },
+        {
+          "id": "lemon",
+          "qty": "1/2",
+          "essential": true
+        },
+        {
+          "id": "salt",
+          "qty": "to taste",
+          "essential": true
+        }
       ],
       "prepNotes": [
         "The dish depends on two things: char on the chicken, and a gravy cooked long enough to lose its raw tomato edge. Neither is optional.",
@@ -136,47 +407,139 @@
         "Kasuri methi (dried fenugreek leaves) crushed in at the end is the flavour most people cannot place. If you have it, use it."
       ],
       "steps": [
-        { "text": "Marinate the chicken with the yogurt, half the ginger and garlic, the Kashmiri chilli, 1 tsp garam masala, lemon juice and salt. Leave at least 30 minutes, ideally 4 hours refrigerated." },
-        { "text": "Grill, broil or pan-sear the chicken in a very hot pan until the edges char in places and it is just cooked. Do not cook it through to dryness; it finishes in the sauce. Set aside with any resting juices." },
-        { "text": "Simmer the tomatoes with the remaining ginger and garlic, the cardamom and a splash of water, covered, for 20 minutes until completely collapsed." },
-        { "text": "Blend the tomato mixture smooth with the soaked cashews if using, then pass it through a sieve. The sieve is what separates a silky makhani from a rustic curry.", "tip": "Discard the skins and seeds left in the sieve." },
-        { "text": "Return the puree to the pan with the butter and cook 10 minutes over medium-low heat, stirring, until it darkens and thickens and the butter shows at the edges." },
-        { "text": "Add the chicken with its juices, the cream, the sugar and the remaining garam masala. Simmer 5 minutes. Crush the kasuri methi between your palms and stir it through. Taste for salt and lemon." }
+        {
+          "text": "Marinate the chicken with the yogurt, half the ginger and garlic, the Kashmiri chilli, 1 tsp garam masala, lemon juice and salt. Leave at least 30 minutes, ideally 4 hours refrigerated."
+        },
+        {
+          "text": "Grill, broil or pan-sear the chicken in a very hot pan until the edges char in places and it is just cooked. Do not cook it through to dryness; it finishes in the sauce. Set aside with any resting juices."
+        },
+        {
+          "text": "Simmer the tomatoes with the remaining ginger and garlic, the cardamom and a splash of water, covered, for 20 minutes until completely collapsed."
+        },
+        {
+          "text": "Blend the tomato mixture smooth with the soaked cashews if using, then pass it through a sieve. The sieve is what separates a silky makhani from a rustic curry.",
+          "tip": "Discard the skins and seeds left in the sieve."
+        },
+        {
+          "text": "Return the puree to the pan with the butter and cook 10 minutes over medium-low heat, stirring, until it darkens and thickens and the butter shows at the edges."
+        },
+        {
+          "text": "Add the chicken with its juices, the cream, the sugar and the remaining garam masala. Simmer 5 minutes. Crush the kasuri methi between your palms and stir it through. Taste for salt and lemon."
+        }
       ],
       "storage": "Keeps 3 days refrigerated. Freeze the gravy without the cream for up to 2 months and add cream on reheating; frozen cream sauces can split.",
-      "glossary": ["ginger-garlic-paste"],
-      "provenance": { "recipeVersion": "1.0.0", "updated": "2026-07-31", "source": "Khaana editorial" }
+      "glossary": [
+        "ginger-garlic-paste"
+      ],
+      "provenance": {
+        "recipeVersion": "1.0.0",
+        "updated": "2026-07-31",
+        "source": "Khaana editorial"
+      }
     },
-
     {
       "id": "meen-curry",
       "name": "Kerala Meen Curry",
       "subtitle": "Fish simmered in coconut milk and kokum, tempered with curry leaves and coconut oil",
       "region": "Kerala",
       "regionPage": "kerala.html",
-      "image": { "src": "assets/images/kerala-g1.jpg", "alt": "Kerala style fish curry", "credit": "Kalakki at Malayalam Wikipedia", "license": "CC BY-SA 2.5", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Meen_curry_2.JPG" },
+      "image": {
+        "src": "assets/images/kerala-g1.jpg",
+        "alt": "Kerala style fish curry",
+        "credit": "Kalakki at Malayalam Wikipedia",
+        "license": "CC BY-SA 2.5",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Meen_curry_2.JPG"
+      },
       "servings": 4,
       "prepMinutes": 15,
       "cookMinutes": 25,
       "difficulty": "moderate",
-      "equipment": ["stovetop"],
-      "tags": ["gluten-free", "dairy-free", "nut-free", "pescatarian"],
-      "allergens": ["fish"],
+      "equipment": [
+        "stovetop"
+      ],
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "nut-free",
+        "pescatarian"
+      ],
+      "allergens": [
+        "fish"
+      ],
       "ingredients": [
-        { "id": "fish", "qty": "600g firm steaks or fillets", "note": "kingfish, seer, pomfret or any firm white fish", "essential": true },
-        { "id": "coconut-milk", "qty": "400ml", "essential": true },
-        { "id": "kokum", "qty": "4 pieces", "note": "kudampuli / gambooge; soak in warm water 10 min", "essential": true },
-        { "id": "shallot", "qty": "8, sliced", "note": "or 1 small onion", "essential": true },
-        { "id": "ginger", "qty": "1 tbsp, julienned", "essential": true },
-        { "id": "garlic", "qty": "6 cloves, sliced", "essential": true },
-        { "id": "green-chilli", "qty": "3, slit", "essential": true },
-        { "id": "curry-leaves", "qty": "2 sprigs", "essential": true },
-        { "id": "turmeric", "qty": "1/2 tsp", "essential": true },
-        { "id": "kashmiri-chilli", "qty": "2 tsp", "essential": true },
-        { "id": "fenugreek-seeds", "qty": "1/4 tsp", "essential": false },
-        { "id": "mustard-seeds", "qty": "1 tsp", "essential": true },
-        { "id": "coconut-oil", "qty": "3 tbsp", "essential": true },
-        { "id": "salt", "qty": "to taste", "essential": true }
+        {
+          "id": "fish",
+          "qty": "600g firm steaks or fillets",
+          "note": "kingfish, seer, pomfret or any firm white fish",
+          "essential": true
+        },
+        {
+          "id": "coconut-milk",
+          "qty": "400ml",
+          "essential": true
+        },
+        {
+          "id": "kokum",
+          "qty": "4 pieces",
+          "note": "kudampuli / gambooge; soak in warm water 10 min",
+          "essential": true
+        },
+        {
+          "id": "shallot",
+          "qty": "8, sliced",
+          "note": "or 1 small onion",
+          "essential": true
+        },
+        {
+          "id": "ginger",
+          "qty": "1 tbsp, julienned",
+          "essential": true
+        },
+        {
+          "id": "garlic",
+          "qty": "6 cloves, sliced",
+          "essential": true
+        },
+        {
+          "id": "green-chilli",
+          "qty": "3, slit",
+          "essential": true
+        },
+        {
+          "id": "curry-leaves",
+          "qty": "2 sprigs",
+          "essential": true
+        },
+        {
+          "id": "turmeric",
+          "qty": "1/2 tsp",
+          "essential": true
+        },
+        {
+          "id": "kashmiri-chilli",
+          "qty": "2 tsp",
+          "essential": true
+        },
+        {
+          "id": "fenugreek-seeds",
+          "qty": "1/4 tsp",
+          "essential": false
+        },
+        {
+          "id": "mustard-seeds",
+          "qty": "1 tsp",
+          "essential": true
+        },
+        {
+          "id": "coconut-oil",
+          "qty": "3 tbsp",
+          "essential": true
+        },
+        {
+          "id": "salt",
+          "qty": "to taste",
+          "essential": true
+        }
       ],
       "prepNotes": [
         "Kokum (locally kudampuli) is the defining sour note. Tamarind will work but gives a rounder, sweeter sourness and a different colour.",
@@ -184,49 +547,151 @@
         "Traditionally cooked in a clay meen chatti, which holds heat gently. A heavy pan is fine."
       ],
       "steps": [
-        { "text": "Heat the coconut oil. Splutter the mustard seeds and fenugreek, then add the curry leaves, shallots, ginger, garlic and green chillies. Fry until the shallots soften and turn pale gold.", "glossary": "curry-leaves" },
-        { "text": "Lower the heat, add the turmeric and Kashmiri chilli and stir for 30 seconds only. Powdered chilli scorches fast and turns bitter." },
-        { "text": "Add the soaked kokum with its water, the thin part of the coconut milk and salt. Simmer 8 minutes to build the base." },
-        { "text": "Slide in the fish in a single layer. Do not stir; shake the pan instead so the pieces stay whole. Simmer 6-8 minutes until just opaque." },
-        { "text": "Pour in the thick coconut milk, swirl the pan and heat through without letting it boil. Take it off the heat as soon as it steams.", "tip": "Finish with a teaspoon of raw coconut oil and a fresh sprig of curry leaves." },
-        { "text": "Rest at least an hour before eating. This curry is markedly better after resting, and better still the next day." }
+        {
+          "text": "Heat the coconut oil. Splutter the mustard seeds and fenugreek, then add the curry leaves, shallots, ginger, garlic and green chillies. Fry until the shallots soften and turn pale gold.",
+          "glossary": "curry-leaves"
+        },
+        {
+          "text": "Lower the heat, add the turmeric and Kashmiri chilli and stir for 30 seconds only. Powdered chilli scorches fast and turns bitter."
+        },
+        {
+          "text": "Add the soaked kokum with its water, the thin part of the coconut milk and salt. Simmer 8 minutes to build the base."
+        },
+        {
+          "text": "Slide in the fish in a single layer. Do not stir; shake the pan instead so the pieces stay whole. Simmer 6-8 minutes until just opaque."
+        },
+        {
+          "text": "Pour in the thick coconut milk, swirl the pan and heat through without letting it boil. Take it off the heat as soon as it steams.",
+          "tip": "Finish with a teaspoon of raw coconut oil and a fresh sprig of curry leaves."
+        },
+        {
+          "text": "Rest at least an hour before eating. This curry is markedly better after resting, and better still the next day."
+        }
       ],
       "storage": "Keeps 2 days refrigerated and genuinely improves overnight. Do not freeze; the fish turns woolly and the coconut milk separates. Reheat gently without boiling.",
-      "glossary": ["kokum", "curry-leaves"],
-      "provenance": { "recipeVersion": "1.0.0", "updated": "2026-07-31", "source": "Khaana editorial" }
+      "glossary": [
+        "kokum",
+        "curry-leaves"
+      ],
+      "provenance": {
+        "recipeVersion": "1.0.0",
+        "updated": "2026-07-31",
+        "source": "Khaana editorial"
+      }
     },
-
     {
       "id": "dhokla",
       "name": "Khaman Dhokla",
       "subtitle": "Steamed, aerated gram flour squares with a sweet-sour mustard tempering",
       "region": "Gujarati",
       "regionPage": "gujarati.html",
-      "image": { "src": "assets/images/gujarati-g1.jpg", "alt": "Squares of Gujarati dhokla", "credit": "Samirluhar99", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dhokla_on_Gujrart.jpg" },
+      "image": {
+        "src": "assets/images/gujarati-g1.jpg",
+        "alt": "Squares of Gujarati dhokla",
+        "credit": "Samirluhar99",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dhokla_on_Gujrart.jpg"
+      },
       "servings": 4,
       "prepMinutes": 15,
       "cookMinutes": 25,
       "difficulty": "moderate",
-      "equipment": ["stovetop", "steamer"],
-      "tags": ["vegetarian", "vegan", "gluten-free", "nut-free", "dairy-free"],
+      "equipment": [
+        "stovetop",
+        "steamer"
+      ],
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "nut-free",
+        "dairy-free"
+      ],
       "allergens": [],
       "ingredients": [
-        { "id": "besan", "qty": "1.5 cups", "essential": true },
-        { "id": "rava", "qty": "2 tbsp", "note": "optional, for structure; omit to keep it gluten-free", "essential": false },
-        { "id": "yogurt", "qty": "1/4 cup", "note": "use lemon juice and water for a vegan version", "essential": false },
-        { "id": "eno", "qty": "1.5 tsp", "note": "added last, off the heat", "essential": true },
-        { "id": "ginger", "qty": "1 tbsp, grated", "essential": true },
-        { "id": "green-chilli", "qty": "2, minced", "essential": true },
-        { "id": "turmeric", "qty": "1/4 tsp", "essential": true },
-        { "id": "lemon", "qty": "1", "essential": true },
-        { "id": "sugar", "qty": "3 tbsp", "essential": true },
-        { "id": "mustard-seeds", "qty": "1 tsp", "essential": true },
-        { "id": "sesame", "qty": "1 tsp", "essential": false },
-        { "id": "curry-leaves", "qty": "1 sprig", "essential": false },
-        { "id": "asafoetida", "qty": "a pinch", "essential": false },
-        { "id": "coriander-leaves", "qty": "to finish", "essential": false },
-        { "id": "neutral-oil", "qty": "3 tbsp", "essential": true },
-        { "id": "salt", "qty": "1 tsp", "essential": true }
+        {
+          "id": "besan",
+          "qty": "1.5 cups",
+          "essential": true
+        },
+        {
+          "id": "rava",
+          "qty": "2 tbsp",
+          "note": "optional, for structure; omit to keep it gluten-free",
+          "essential": false
+        },
+        {
+          "id": "yogurt",
+          "qty": "1/4 cup",
+          "note": "use lemon juice and water for a vegan version",
+          "essential": false
+        },
+        {
+          "id": "eno",
+          "qty": "1.5 tsp",
+          "note": "added last, off the heat",
+          "essential": true
+        },
+        {
+          "id": "ginger",
+          "qty": "1 tbsp, grated",
+          "essential": true
+        },
+        {
+          "id": "green-chilli",
+          "qty": "2, minced",
+          "essential": true
+        },
+        {
+          "id": "turmeric",
+          "qty": "1/4 tsp",
+          "essential": true
+        },
+        {
+          "id": "lemon",
+          "qty": "1",
+          "essential": true
+        },
+        {
+          "id": "sugar",
+          "qty": "3 tbsp",
+          "essential": true
+        },
+        {
+          "id": "mustard-seeds",
+          "qty": "1 tsp",
+          "essential": true
+        },
+        {
+          "id": "sesame",
+          "qty": "1 tsp",
+          "essential": false
+        },
+        {
+          "id": "curry-leaves",
+          "qty": "1 sprig",
+          "essential": false
+        },
+        {
+          "id": "asafoetida",
+          "qty": "a pinch",
+          "essential": false
+        },
+        {
+          "id": "coriander-leaves",
+          "qty": "to finish",
+          "essential": false
+        },
+        {
+          "id": "neutral-oil",
+          "qty": "3 tbsp",
+          "essential": true
+        },
+        {
+          "id": "salt",
+          "qty": "1 tsp",
+          "essential": true
+        }
       ],
       "prepNotes": [
         "Everything must be ready before the Eno goes in. It starts releasing gas immediately and the batter has to reach the steam within about thirty seconds or the dhokla will be dense.",
@@ -234,46 +699,136 @@
         "The tempering is poured over the cooked dhokla with a little water in it. That water is what keeps the squares moist."
       ],
       "steps": [
-        { "text": "Set a steamer to boil and grease a shallow tin. Whisk the besan, rava, yogurt, turmeric, ginger, chilli, salt, 1 tbsp oil and about 3/4 cup water into a smooth, thick-but-pourable batter. Rest 10 minutes." },
-        { "text": "Stir in the juice of half a lemon. Add the Eno, whisk briskly for 20 seconds as it foams and visibly lightens, and pour immediately into the tin.", "tip": "Do not beat it after this point; you will knock the air back out." },
-        { "text": "Steam covered on high for 15-18 minutes, until a skewer comes out clean and the surface springs back. Cool 10 minutes, then cut into squares." },
-        { "text": "For the tempering, heat the remaining oil, splutter the mustard seeds, add the sesame, curry leaves, asafoetida and any remaining slit chillies.", "glossary": "tadka" },
-        { "text": "Take the pan off the heat and carefully add 1/3 cup water, the sugar and the remaining lemon juice. Return to the heat and simmer just until the sugar dissolves." },
-        { "text": "Spoon the warm tempering evenly over the dhokla and leave it 15 minutes to soak in fully. Scatter with coriander before serving." }
+        {
+          "text": "Set a steamer to boil and grease a shallow tin. Whisk the besan, rava, yogurt, turmeric, ginger, chilli, salt, 1 tbsp oil and about 3/4 cup water into a smooth, thick-but-pourable batter. Rest 10 minutes."
+        },
+        {
+          "text": "Stir in the juice of half a lemon. Add the Eno, whisk briskly for 20 seconds as it foams and visibly lightens, and pour immediately into the tin.",
+          "tip": "Do not beat it after this point; you will knock the air back out."
+        },
+        {
+          "text": "Steam covered on high for 15-18 minutes, until a skewer comes out clean and the surface springs back. Cool 10 minutes, then cut into squares."
+        },
+        {
+          "text": "For the tempering, heat the remaining oil, splutter the mustard seeds, add the sesame, curry leaves, asafoetida and any remaining slit chillies.",
+          "glossary": "tadka"
+        },
+        {
+          "text": "Take the pan off the heat and carefully add 1/3 cup water, the sugar and the remaining lemon juice. Return to the heat and simmer just until the sugar dissolves."
+        },
+        {
+          "text": "Spoon the warm tempering evenly over the dhokla and leave it 15 minutes to soak in fully. Scatter with coriander before serving."
+        }
       ],
       "storage": "Best the day it is made. Keeps 2 days refrigerated in a sealed box; revive by steaming 3-4 minutes, which restores the softness. Do not microwave uncovered, it goes rubbery.",
-      "glossary": ["tadka", "hing"],
-      "provenance": { "recipeVersion": "1.0.0", "updated": "2026-07-31", "source": "Khaana editorial" }
+      "glossary": [
+        "tadka",
+        "hing"
+      ],
+      "provenance": {
+        "recipeVersion": "1.0.0",
+        "updated": "2026-07-31",
+        "source": "Khaana editorial"
+      }
     },
-
     {
       "id": "kashmiri-dum-aloo",
       "name": "Kashmiri Dum Aloo",
       "subtitle": "Fried baby potatoes finished in a yogurt gravy with fennel and dry ginger, no onion or garlic",
       "region": "Kashmiri",
       "regionPage": "kashmiri.html",
-      "image": { "src": "assets/images/kashmiri-g2.jpg", "alt": "Kashmiri dum aloo", "credit": "Divya Kudua", "license": "CC BY 2.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dum_Aloo_Kashmiri_India.jpg" },
+      "image": {
+        "src": "assets/images/kashmiri-g2.jpg",
+        "alt": "Kashmiri dum aloo",
+        "credit": "Divya Kudua",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dum_Aloo_Kashmiri_India.jpg"
+      },
       "servings": 4,
       "prepMinutes": 20,
       "cookMinutes": 35,
       "difficulty": "moderate",
-      "equipment": ["stovetop", "kadhai"],
-      "tags": ["vegetarian", "gluten-free", "nut-free", "no-onion-garlic"],
-      "allergens": ["dairy"],
+      "equipment": [
+        "stovetop",
+        "kadhai"
+      ],
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "nut-free",
+        "no-onion-garlic"
+      ],
+      "allergens": [
+        "dairy"
+      ],
       "ingredients": [
-        { "id": "potato", "qty": "600g baby potatoes", "note": "peeled, pricked all over", "essential": true },
-        { "id": "yogurt", "qty": "1 cup, whisked smooth", "essential": true },
-        { "id": "kashmiri-chilli", "qty": "2 tbsp", "note": "the colour of the dish depends on this", "essential": true },
-        { "id": "fennel-powder", "qty": "2 tsp", "essential": true },
-        { "id": "dry-ginger-powder", "qty": "1 tsp", "essential": true },
-        { "id": "cardamom", "qty": "3 pods, crushed", "essential": true },
-        { "id": "black-cardamom", "qty": "1", "essential": false },
-        { "id": "cinnamon", "qty": "1 small piece", "essential": false },
-        { "id": "cloves", "qty": "3", "essential": false },
-        { "id": "asafoetida", "qty": "a good pinch", "essential": true },
-        { "id": "ghee", "qty": "2 tbsp", "essential": true },
-        { "id": "neutral-oil", "qty": "for frying", "essential": true },
-        { "id": "salt", "qty": "to taste", "essential": true }
+        {
+          "id": "potato",
+          "qty": "600g baby potatoes",
+          "note": "peeled, pricked all over",
+          "essential": true
+        },
+        {
+          "id": "yogurt",
+          "qty": "1 cup, whisked smooth",
+          "essential": true
+        },
+        {
+          "id": "kashmiri-chilli",
+          "qty": "2 tbsp",
+          "note": "the colour of the dish depends on this",
+          "essential": true
+        },
+        {
+          "id": "fennel-powder",
+          "qty": "2 tsp",
+          "essential": true
+        },
+        {
+          "id": "dry-ginger-powder",
+          "qty": "1 tsp",
+          "essential": true
+        },
+        {
+          "id": "cardamom",
+          "qty": "3 pods, crushed",
+          "essential": true
+        },
+        {
+          "id": "black-cardamom",
+          "qty": "1",
+          "essential": false
+        },
+        {
+          "id": "cinnamon",
+          "qty": "1 small piece",
+          "essential": false
+        },
+        {
+          "id": "cloves",
+          "qty": "3",
+          "essential": false
+        },
+        {
+          "id": "asafoetida",
+          "qty": "a good pinch",
+          "essential": true
+        },
+        {
+          "id": "ghee",
+          "qty": "2 tbsp",
+          "essential": true
+        },
+        {
+          "id": "neutral-oil",
+          "qty": "for frying",
+          "essential": true
+        },
+        {
+          "id": "salt",
+          "qty": "to taste",
+          "essential": true
+        }
       ],
       "prepNotes": [
         "Kashmiri Pandit cooking uses no onion or garlic. Fennel and dry ginger carry the dish instead, which is why both are essential here.",
@@ -281,50 +836,156 @@
         "Whisk the yogurt completely smooth and add it off the heat, stirring constantly, or it will split."
       ],
       "steps": [
-        { "text": "Fry the pricked potatoes in hot oil until deep golden and crusted all over, 8-10 minutes. Drain. They should be cooked through but firm." },
-        { "text": "Whisk the yogurt with the Kashmiri chilli, fennel powder and dry ginger until there are no lumps. Keep it beside the stove." },
-        { "text": "Heat the ghee in a heavy pan, add the asafoetida, cardamom, cinnamon and cloves, and let them bloom for 20 seconds." },
-        { "text": "Take the pan off the heat. Pour in the yogurt mixture, stirring without stopping. Return to low heat and keep stirring until it comes to a bare simmer and thickens slightly, about 5 minutes.", "tip": "Constant motion and low heat are what stop yogurt splitting." },
-        { "text": "Add the potatoes and salt with about half a cup of hot water. Cover tightly and cook on the lowest possible heat for 15-20 minutes, shaking the pan occasionally.", "glossary": "dum" },
-        { "text": "Uncover; the gravy should cling to the potatoes and the fat should show at the edges. Rest 10 minutes before serving." }
+        {
+          "text": "Fry the pricked potatoes in hot oil until deep golden and crusted all over, 8-10 minutes. Drain. They should be cooked through but firm."
+        },
+        {
+          "text": "Whisk the yogurt with the Kashmiri chilli, fennel powder and dry ginger until there are no lumps. Keep it beside the stove."
+        },
+        {
+          "text": "Heat the ghee in a heavy pan, add the asafoetida, cardamom, cinnamon and cloves, and let them bloom for 20 seconds."
+        },
+        {
+          "text": "Take the pan off the heat. Pour in the yogurt mixture, stirring without stopping. Return to low heat and keep stirring until it comes to a bare simmer and thickens slightly, about 5 minutes.",
+          "tip": "Constant motion and low heat are what stop yogurt splitting."
+        },
+        {
+          "text": "Add the potatoes and salt with about half a cup of hot water. Cover tightly and cook on the lowest possible heat for 15-20 minutes, shaking the pan occasionally.",
+          "glossary": "dum"
+        },
+        {
+          "text": "Uncover; the gravy should cling to the potatoes and the fat should show at the edges. Rest 10 minutes before serving."
+        }
       ],
       "storage": "Keeps 3 days refrigerated and the flavour deepens. Do not freeze; the potatoes turn grainy and the yogurt separates. Reheat over low heat with a splash of water.",
-      "glossary": ["dum", "hing"],
-      "provenance": { "recipeVersion": "1.0.0", "updated": "2026-07-31", "source": "Khaana editorial" }
+      "glossary": [
+        "dum",
+        "hing"
+      ],
+      "provenance": {
+        "recipeVersion": "1.0.0",
+        "updated": "2026-07-31",
+        "source": "Khaana editorial"
+      }
     },
-
     {
       "id": "vada-pav",
       "name": "Vada Pav",
       "subtitle": "Mumbai's potato fritter in a bun, with garlic chutney and fried chillies",
       "region": "Maharashtrian",
       "regionPage": "maharashtrian.html",
-      "image": { "src": "assets/images/maharashtrian-hero.jpg", "alt": "Vada pav, Indian street food", "credit": "Unknown", "license": "See CREDITS.md", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vada_Pav-Indian_street_food.JPG" },
+      "image": {
+        "src": "assets/images/maharashtrian-hero.jpg",
+        "alt": "Vada pav, Indian street food",
+        "credit": "Unknown",
+        "license": "See CREDITS.md",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vada_Pav-Indian_street_food.JPG"
+      },
       "servings": 4,
       "prepMinutes": 25,
       "cookMinutes": 20,
       "difficulty": "moderate",
-      "equipment": ["stovetop", "kadhai"],
-      "tags": ["vegetarian", "nut-free"],
-      "allergens": ["gluten"],
+      "equipment": [
+        "stovetop",
+        "kadhai"
+      ],
+      "tags": [
+        "vegetarian",
+        "nut-free"
+      ],
+      "allergens": [
+        "gluten"
+      ],
       "ingredients": [
-        { "id": "potato", "qty": "600g, boiled and roughly mashed", "essential": true },
-        { "id": "besan", "qty": "1.5 cups", "note": "for the batter", "essential": true },
-        { "id": "pav", "qty": "8 rolls", "essential": true },
-        { "id": "garlic", "qty": "10 cloves", "essential": true },
-        { "id": "green-chilli", "qty": "4", "essential": true },
-        { "id": "ginger", "qty": "1 tbsp, grated", "essential": true },
-        { "id": "mustard-seeds", "qty": "1 tsp", "essential": true },
-        { "id": "turmeric", "qty": "1/2 tsp", "essential": true },
-        { "id": "asafoetida", "qty": "a pinch", "essential": true },
-        { "id": "curry-leaves", "qty": "1 sprig", "essential": true },
-        { "id": "coriander-leaves", "qty": "a handful", "essential": false },
-        { "id": "peanut", "qty": "2 tbsp", "note": "for the dry garlic chutney", "essential": false },
-        { "id": "chilli-powder", "qty": "1 tbsp", "note": "for the chutney", "essential": false },
-        { "id": "coconut", "qty": "3 tbsp desiccated", "note": "for the chutney", "essential": false },
-        { "id": "lemon", "qty": "1/2", "essential": false },
-        { "id": "neutral-oil", "qty": "for deep frying", "essential": true },
-        { "id": "salt", "qty": "to taste", "essential": true }
+        {
+          "id": "potato",
+          "qty": "600g, boiled and roughly mashed",
+          "essential": true
+        },
+        {
+          "id": "besan",
+          "qty": "1.5 cups",
+          "note": "for the batter",
+          "essential": true
+        },
+        {
+          "id": "pav",
+          "qty": "8 rolls",
+          "essential": true
+        },
+        {
+          "id": "garlic",
+          "qty": "10 cloves",
+          "essential": true
+        },
+        {
+          "id": "green-chilli",
+          "qty": "4",
+          "essential": true
+        },
+        {
+          "id": "ginger",
+          "qty": "1 tbsp, grated",
+          "essential": true
+        },
+        {
+          "id": "mustard-seeds",
+          "qty": "1 tsp",
+          "essential": true
+        },
+        {
+          "id": "turmeric",
+          "qty": "1/2 tsp",
+          "essential": true
+        },
+        {
+          "id": "asafoetida",
+          "qty": "a pinch",
+          "essential": true
+        },
+        {
+          "id": "curry-leaves",
+          "qty": "1 sprig",
+          "essential": true
+        },
+        {
+          "id": "coriander-leaves",
+          "qty": "a handful",
+          "essential": false
+        },
+        {
+          "id": "peanut",
+          "qty": "2 tbsp",
+          "note": "for the dry garlic chutney",
+          "essential": false
+        },
+        {
+          "id": "chilli-powder",
+          "qty": "1 tbsp",
+          "note": "for the chutney",
+          "essential": false
+        },
+        {
+          "id": "coconut",
+          "qty": "3 tbsp desiccated",
+          "note": "for the chutney",
+          "essential": false
+        },
+        {
+          "id": "lemon",
+          "qty": "1/2",
+          "essential": false
+        },
+        {
+          "id": "neutral-oil",
+          "qty": "for deep frying",
+          "essential": true
+        },
+        {
+          "id": "salt",
+          "qty": "to taste",
+          "essential": true
+        }
       ],
       "prepNotes": [
         "Mash the potato coarsely, leaving some lumps. A smooth mash makes a pasty vada.",
@@ -332,46 +993,133 @@
         "The dry garlic chutney is not optional in Mumbai. It is what makes the sandwich taste like vada pav rather than a potato bun."
       ],
       "steps": [
-        { "text": "For the dry chutney, dry roast the peanuts, coconut and 6 garlic cloves separately until fragrant, then grind coarsely with the chilli powder and salt. Set aside." },
-        { "text": "Crush the remaining garlic, the green chillies and ginger to a coarse paste." },
-        { "text": "Heat 2 tbsp oil, splutter the mustard seeds, add the asafoetida and curry leaves, then the garlic-chilli paste. Fry 1 minute, add the turmeric, then fold through the mashed potato, coriander, lemon and salt. Cool and shape into 8 balls." },
-        { "text": "Whisk the besan with a pinch of turmeric, salt and enough water to make a thick, smooth coating batter. Rest it 10 minutes." },
-        { "text": "Heat the frying oil to 180C. Dip each ball in batter, let the excess drip off and lower it in. Fry 4-5 minutes until pale gold and crisp, turning once. Drain on a rack, not paper.", "tip": "Fry a few whole green chillies alongside; slit them first so they do not burst." },
-        { "text": "Split the pav without cutting all the way through, spread the dry chutney generously inside, press in a hot vada and serve at once with the fried chillies." }
+        {
+          "text": "For the dry chutney, dry roast the peanuts, coconut and 6 garlic cloves separately until fragrant, then grind coarsely with the chilli powder and salt. Set aside."
+        },
+        {
+          "text": "Crush the remaining garlic, the green chillies and ginger to a coarse paste."
+        },
+        {
+          "text": "Heat 2 tbsp oil, splutter the mustard seeds, add the asafoetida and curry leaves, then the garlic-chilli paste. Fry 1 minute, add the turmeric, then fold through the mashed potato, coriander, lemon and salt. Cool and shape into 8 balls."
+        },
+        {
+          "text": "Whisk the besan with a pinch of turmeric, salt and enough water to make a thick, smooth coating batter. Rest it 10 minutes."
+        },
+        {
+          "text": "Heat the frying oil to 180C. Dip each ball in batter, let the excess drip off and lower it in. Fry 4-5 minutes until pale gold and crisp, turning once. Drain on a rack, not paper.",
+          "tip": "Fry a few whole green chillies alongside; slit them first so they do not burst."
+        },
+        {
+          "text": "Split the pav without cutting all the way through, spread the dry chutney generously inside, press in a hot vada and serve at once with the fried chillies."
+        }
       ],
       "storage": "Eat immediately; this does not keep well assembled. The potato mixture can be made a day ahead and refrigerated, and fried vadas reheat acceptably in a hot oven for 6-8 minutes.",
-      "glossary": ["tadka", "hing", "kadhai"],
-      "provenance": { "recipeVersion": "1.0.0", "updated": "2026-07-31", "source": "Khaana editorial" }
+      "glossary": [
+        "tadka",
+        "hing",
+        "kadhai"
+      ],
+      "provenance": {
+        "recipeVersion": "1.0.0",
+        "updated": "2026-07-31",
+        "source": "Khaana editorial"
+      }
     },
-
     {
       "id": "dahi-pakhala",
       "name": "Dahi Pakhala",
       "subtitle": "Odia fermented rice in water with yogurt, eaten cold in the hot months",
       "region": "Odia",
       "regionPage": "odia.html",
-      "image": { "src": "assets/images/odia-g2.jpg", "alt": "Dahi pakhala, Odia fermented rice with yogurt", "credit": "Sangram Keshari Senapati", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dahi_Pakhala_for_Pakhala_Dibasa.jpg" },
+      "image": {
+        "src": "assets/images/odia-g2.jpg",
+        "alt": "Dahi pakhala, Odia fermented rice with yogurt",
+        "credit": "Sangram Keshari Senapati",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dahi_Pakhala_for_Pakhala_Dibasa.jpg"
+      },
       "servings": 2,
       "prepMinutes": 10,
       "cookMinutes": 5,
       "difficulty": "easy",
-      "equipment": ["stovetop"],
-      "tags": ["vegetarian", "gluten-free", "nut-free"],
-      "allergens": ["dairy"],
+      "equipment": [
+        "stovetop"
+      ],
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "nut-free"
+      ],
+      "allergens": [
+        "dairy"
+      ],
       "ingredients": [
-        { "id": "rice", "qty": "2 cups cooked, cooled", "note": "day-old rice is traditional and better", "essential": true },
-        { "id": "yogurt", "qty": "1 cup, whisked", "essential": true },
-        { "id": "water", "qty": "2 cups", "essential": true },
-        { "id": "ginger", "qty": "1 tsp, grated", "essential": false },
-        { "id": "green-chilli", "qty": "1, minced", "essential": false },
-        { "id": "curry-leaves", "qty": "1 sprig", "essential": true },
-        { "id": "mustard-seeds", "qty": "1 tsp", "essential": true },
-        { "id": "dried-red-chilli", "qty": "1", "essential": false },
-        { "id": "asafoetida", "qty": "a pinch", "essential": false },
-        { "id": "lemon", "qty": "1/2", "essential": false },
-        { "id": "coriander-leaves", "qty": "to finish", "essential": false },
-        { "id": "neutral-oil", "qty": "1 tbsp", "essential": true },
-        { "id": "salt", "qty": "to taste", "essential": true }
+        {
+          "id": "rice",
+          "qty": "2 cups cooked, cooled",
+          "note": "day-old rice is traditional and better",
+          "essential": true
+        },
+        {
+          "id": "yogurt",
+          "qty": "1 cup, whisked",
+          "essential": true
+        },
+        {
+          "id": "water",
+          "qty": "2 cups",
+          "essential": true
+        },
+        {
+          "id": "ginger",
+          "qty": "1 tsp, grated",
+          "essential": false
+        },
+        {
+          "id": "green-chilli",
+          "qty": "1, minced",
+          "essential": false
+        },
+        {
+          "id": "curry-leaves",
+          "qty": "1 sprig",
+          "essential": true
+        },
+        {
+          "id": "mustard-seeds",
+          "qty": "1 tsp",
+          "essential": true
+        },
+        {
+          "id": "dried-red-chilli",
+          "qty": "1",
+          "essential": false
+        },
+        {
+          "id": "asafoetida",
+          "qty": "a pinch",
+          "essential": false
+        },
+        {
+          "id": "lemon",
+          "qty": "1/2",
+          "essential": false
+        },
+        {
+          "id": "coriander-leaves",
+          "qty": "to finish",
+          "essential": false
+        },
+        {
+          "id": "neutral-oil",
+          "qty": "1 tbsp",
+          "essential": true
+        },
+        {
+          "id": "salt",
+          "qty": "to taste",
+          "essential": true
+        }
       ],
       "prepNotes": [
         "Real pakhala is rice left in water overnight to ferment lightly, which gives it a faint sourness and, in the Odia summer, a cooling effect. The quick version below skips the overnight step.",
@@ -379,50 +1127,154 @@
         "Serve cold. This is a hot-weather dish and warm pakhala misses the point."
       ],
       "steps": [
-        { "text": "Put the cooled rice in a bowl, add the water and lightly crush some of the grains with your fingers to cloud the liquid. For the traditional version, this is where you leave it overnight." },
-        { "text": "Whisk the yogurt smooth and stir it through with salt, the ginger and green chilli. It should be soupy, not thick; add more water if needed." },
-        { "text": "Heat the oil in a small pan. Splutter the mustard seeds, then add the dried chilli, curry leaves and asafoetida.", "glossary": "tadka" },
-        { "text": "Pour the tempering over the pakhala, add a squeeze of lemon and scatter with coriander." },
-        { "text": "Chill at least 30 minutes before eating. Serve with something fried and salty alongside; fried fish, badi chura or a simple potato bharta are the usual partners." }
+        {
+          "text": "Put the cooled rice in a bowl, add the water and lightly crush some of the grains with your fingers to cloud the liquid. For the traditional version, this is where you leave it overnight."
+        },
+        {
+          "text": "Whisk the yogurt smooth and stir it through with salt, the ginger and green chilli. It should be soupy, not thick; add more water if needed."
+        },
+        {
+          "text": "Heat the oil in a small pan. Splutter the mustard seeds, then add the dried chilli, curry leaves and asafoetida.",
+          "glossary": "tadka"
+        },
+        {
+          "text": "Pour the tempering over the pakhala, add a squeeze of lemon and scatter with coriander."
+        },
+        {
+          "text": "Chill at least 30 minutes before eating. Serve with something fried and salty alongside; fried fish, badi chura or a simple potato bharta are the usual partners."
+        }
       ],
       "storage": "Eat the same day. The fermentation continues in the fridge and it turns increasingly sour after about 24 hours. Do not freeze.",
-      "glossary": ["tadka", "curry-leaves"],
-      "provenance": { "recipeVersion": "1.0.0", "updated": "2026-07-31", "source": "Khaana editorial" }
+      "glossary": [
+        "tadka",
+        "curry-leaves"
+      ],
+      "provenance": {
+        "recipeVersion": "1.0.0",
+        "updated": "2026-07-31",
+        "source": "Khaana editorial"
+      }
     },
-
     {
       "id": "xacuti",
       "name": "Goan Xacuti",
       "subtitle": "Chicken in a dark roasted-coconut masala with poppy seeds and star anise",
       "region": "Goan",
       "regionPage": "goan.html",
-      "image": { "src": "assets/images/goan-g1.jpg", "alt": "Goan xacuti curry", "credit": "Kugelblintz", "license": "CC BY-SA 4.0", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Xacuti-2.jpg" },
+      "image": {
+        "src": "assets/images/goan-g1.jpg",
+        "alt": "Goan xacuti curry",
+        "credit": "Kugelblintz",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Xacuti-2.jpg"
+      },
       "servings": 4,
       "prepMinutes": 30,
       "cookMinutes": 45,
       "difficulty": "advanced",
-      "equipment": ["stovetop", "blender"],
-      "tags": ["gluten-free", "dairy-free"],
-      "allergens": ["nuts"],
+      "equipment": [
+        "stovetop",
+        "blender"
+      ],
+      "tags": [
+        "gluten-free",
+        "dairy-free"
+      ],
+      "allergens": [
+        "nuts"
+      ],
       "ingredients": [
-        { "id": "chicken", "qty": "1kg, bone-in, in curry pieces", "essential": true },
-        { "id": "coconut", "qty": "1.5 cups freshly grated", "note": "the roast on this is the whole dish", "essential": true },
-        { "id": "onion", "qty": "2, sliced", "essential": true },
-        { "id": "dried-red-chilli", "qty": "8 Kashmiri", "essential": true },
-        { "id": "coriander-powder", "qty": "2 tbsp seeds", "essential": true },
-        { "id": "cumin-seeds", "qty": "1 tsp", "essential": true },
-        { "id": "poppy-seeds", "qty": "1 tbsp", "essential": true },
-        { "id": "star-anise", "qty": "1", "essential": true },
-        { "id": "cinnamon", "qty": "2cm piece", "essential": true },
-        { "id": "cloves", "qty": "6", "essential": true },
-        { "id": "black-pepper", "qty": "1 tsp", "essential": true },
-        { "id": "nutmeg", "qty": "a scraping", "essential": false },
-        { "id": "turmeric", "qty": "1/2 tsp", "essential": true },
-        { "id": "ginger", "qty": "2 tbsp", "essential": true },
-        { "id": "garlic", "qty": "10 cloves", "essential": true },
-        { "id": "tamarind", "qty": "walnut-sized ball, soaked", "essential": true },
-        { "id": "neutral-oil", "qty": "3 tbsp", "essential": true },
-        { "id": "salt", "qty": "to taste", "essential": true }
+        {
+          "id": "chicken",
+          "qty": "1kg, bone-in, in curry pieces",
+          "essential": true
+        },
+        {
+          "id": "coconut",
+          "qty": "1.5 cups freshly grated",
+          "note": "the roast on this is the whole dish",
+          "essential": true
+        },
+        {
+          "id": "onion",
+          "qty": "2, sliced",
+          "essential": true
+        },
+        {
+          "id": "dried-red-chilli",
+          "qty": "8 Kashmiri",
+          "essential": true
+        },
+        {
+          "id": "coriander-powder",
+          "qty": "2 tbsp seeds",
+          "essential": true
+        },
+        {
+          "id": "cumin-seeds",
+          "qty": "1 tsp",
+          "essential": true
+        },
+        {
+          "id": "poppy-seeds",
+          "qty": "1 tbsp",
+          "essential": true
+        },
+        {
+          "id": "star-anise",
+          "qty": "1",
+          "essential": true
+        },
+        {
+          "id": "cinnamon",
+          "qty": "2cm piece",
+          "essential": true
+        },
+        {
+          "id": "cloves",
+          "qty": "6",
+          "essential": true
+        },
+        {
+          "id": "black-pepper",
+          "qty": "1 tsp",
+          "essential": true
+        },
+        {
+          "id": "nutmeg",
+          "qty": "a scraping",
+          "essential": false
+        },
+        {
+          "id": "turmeric",
+          "qty": "1/2 tsp",
+          "essential": true
+        },
+        {
+          "id": "ginger",
+          "qty": "2 tbsp",
+          "essential": true
+        },
+        {
+          "id": "garlic",
+          "qty": "10 cloves",
+          "essential": true
+        },
+        {
+          "id": "tamarind",
+          "qty": "walnut-sized ball, soaked",
+          "essential": true
+        },
+        {
+          "id": "neutral-oil",
+          "qty": "3 tbsp",
+          "essential": true
+        },
+        {
+          "id": "salt",
+          "qty": "to taste",
+          "essential": true
+        }
       ],
       "prepNotes": [
         "Xacuti is defined by how far you take the coconut. It must go past golden to a genuine deep brown, which is where the colour and the smoky depth come from. Stop early and the curry is pale and flat.",
@@ -430,48 +1282,145 @@
         "Star anise and poppy seeds are unusual in Indian coastal cooking and are what mark this out as Goan."
       ],
       "steps": [
-        { "text": "Dry roast the grated coconut over medium-low heat, stirring constantly, until deep brown and nutty, 10-15 minutes. Be patient and do not walk away; it turns from brown to burnt in seconds. Tip onto a plate to stop the cooking." },
-        { "text": "In the same pan, roast the dried chillies, coriander seeds, cumin, poppy seeds, star anise, cinnamon, cloves and pepper separately until fragrant, about 2 minutes. Cool." },
-        { "text": "Blend the roasted coconut and spices with the ginger, garlic, turmeric and enough water to make a very smooth, thick paste. Take your time here; grittiness will not cook out.", "glossary": "bhuna" },
-        { "text": "Heat the oil and fry the sliced onion until well browned, 10 minutes. Add the masala paste and cook, stirring, until it darkens and the oil separates, 8-10 minutes." },
-        { "text": "Add the chicken and salt and turn it in the masala over high heat until sealed all over. Add about 2 cups of hot water, bring to a simmer, cover and cook 25-30 minutes until the chicken is tender." },
-        { "text": "Stir in the tamarind pulp and the nutmeg. Simmer uncovered 5 minutes to balance the sourness. Rest before serving; xacuti is better after an hour." }
+        {
+          "text": "Dry roast the grated coconut over medium-low heat, stirring constantly, until deep brown and nutty, 10-15 minutes. Be patient and do not walk away; it turns from brown to burnt in seconds. Tip onto a plate to stop the cooking."
+        },
+        {
+          "text": "In the same pan, roast the dried chillies, coriander seeds, cumin, poppy seeds, star anise, cinnamon, cloves and pepper separately until fragrant, about 2 minutes. Cool."
+        },
+        {
+          "text": "Blend the roasted coconut and spices with the ginger, garlic, turmeric and enough water to make a very smooth, thick paste. Take your time here; grittiness will not cook out.",
+          "glossary": "bhuna"
+        },
+        {
+          "text": "Heat the oil and fry the sliced onion until well browned, 10 minutes. Add the masala paste and cook, stirring, until it darkens and the oil separates, 8-10 minutes."
+        },
+        {
+          "text": "Add the chicken and salt and turn it in the masala over high heat until sealed all over. Add about 2 cups of hot water, bring to a simmer, cover and cook 25-30 minutes until the chicken is tender."
+        },
+        {
+          "text": "Stir in the tamarind pulp and the nutmeg. Simmer uncovered 5 minutes to balance the sourness. Rest before serving; xacuti is better after an hour."
+        }
       ],
       "storage": "Keeps 3 days refrigerated and improves markedly overnight. Freezes 2 months. Reheat gently, adding water as the coconut masala thickens on standing.",
-      "glossary": ["bhuna"],
-      "provenance": { "recipeVersion": "1.0.0", "updated": "2026-07-31", "source": "Khaana editorial" }
+      "glossary": [
+        "bhuna"
+      ],
+      "provenance": {
+        "recipeVersion": "1.0.0",
+        "updated": "2026-07-31",
+        "source": "Khaana editorial"
+      }
     },
-
     {
       "id": "masala-dosa",
       "name": "Masala Dosa",
       "subtitle": "Fermented rice and lentil crepe with a spiced potato filling",
       "region": "South Indian",
       "regionPage": "south-indian.html",
-      "image": { "src": "assets/images/south-indian-hero.jpg", "alt": "Masala dosa", "credit": "See CREDITS.md", "license": "See CREDITS.md", "sourceUrl": "https://commons.wikimedia.org/" },
+      "image": {
+        "src": "assets/images/south-indian-hero.jpg",
+        "alt": "Masala dosa",
+        "credit": "See CREDITS.md",
+        "license": "See CREDITS.md",
+        "sourceUrl": "https://commons.wikimedia.org/"
+      },
       "servings": 4,
       "prepMinutes": 30,
       "cookMinutes": 30,
       "difficulty": "advanced",
-      "equipment": ["stovetop", "blender", "tawa"],
-      "tags": ["vegetarian", "vegan", "gluten-free", "nut-free", "dairy-free"],
+      "equipment": [
+        "stovetop",
+        "blender",
+        "tawa"
+      ],
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "nut-free",
+        "dairy-free"
+      ],
       "allergens": [],
       "ingredients": [
-        { "id": "rice", "qty": "3 cups", "note": "par-boiled/idli rice if you can get it", "essential": true },
-        { "id": "urad-dal", "qty": "3/4 cup", "essential": true },
-        { "id": "fenugreek-seeds", "qty": "1 tsp", "note": "helps fermentation and browning", "essential": true },
-        { "id": "potato", "qty": "500g, boiled and crumbled", "essential": true },
-        { "id": "onion", "qty": "2, sliced", "essential": true },
-        { "id": "green-chilli", "qty": "3, slit", "essential": true },
-        { "id": "ginger", "qty": "1 tbsp", "essential": true },
-        { "id": "turmeric", "qty": "1/2 tsp", "essential": true },
-        { "id": "mustard-seeds", "qty": "1 tsp", "essential": true },
-        { "id": "chana-dal", "qty": "1 tsp", "note": "for the tempering", "essential": false },
-        { "id": "curry-leaves", "qty": "1 sprig", "essential": true },
-        { "id": "asafoetida", "qty": "a pinch", "essential": false },
-        { "id": "coriander-leaves", "qty": "a handful", "essential": false },
-        { "id": "neutral-oil", "qty": "as needed", "essential": true },
-        { "id": "salt", "qty": "to taste", "essential": true }
+        {
+          "id": "rice",
+          "qty": "3 cups",
+          "note": "par-boiled/idli rice if you can get it",
+          "essential": true
+        },
+        {
+          "id": "urad-dal",
+          "qty": "3/4 cup",
+          "essential": true
+        },
+        {
+          "id": "fenugreek-seeds",
+          "qty": "1 tsp",
+          "note": "helps fermentation and browning",
+          "essential": true
+        },
+        {
+          "id": "potato",
+          "qty": "500g, boiled and crumbled",
+          "essential": true
+        },
+        {
+          "id": "onion",
+          "qty": "2, sliced",
+          "essential": true
+        },
+        {
+          "id": "green-chilli",
+          "qty": "3, slit",
+          "essential": true
+        },
+        {
+          "id": "ginger",
+          "qty": "1 tbsp",
+          "essential": true
+        },
+        {
+          "id": "turmeric",
+          "qty": "1/2 tsp",
+          "essential": true
+        },
+        {
+          "id": "mustard-seeds",
+          "qty": "1 tsp",
+          "essential": true
+        },
+        {
+          "id": "chana-dal",
+          "qty": "1 tsp",
+          "note": "for the tempering",
+          "essential": false
+        },
+        {
+          "id": "curry-leaves",
+          "qty": "1 sprig",
+          "essential": true
+        },
+        {
+          "id": "asafoetida",
+          "qty": "a pinch",
+          "essential": false
+        },
+        {
+          "id": "coriander-leaves",
+          "qty": "a handful",
+          "essential": false
+        },
+        {
+          "id": "neutral-oil",
+          "qty": "as needed",
+          "essential": true
+        },
+        {
+          "id": "salt",
+          "qty": "to taste",
+          "essential": true
+        }
       ],
       "prepNotes": [
         "Plan two days ahead. Soaking is 6 hours and fermentation is 8-14 hours depending on how warm your kitchen is.",
@@ -479,16 +1428,37 @@
         "You will know it is ready when the batter has roughly doubled, smells pleasantly sour, and is full of bubbles."
       ],
       "steps": [
-        { "text": "Soak the rice in one bowl, and the urad dal with the fenugreek in another, for 6 hours." },
-        { "text": "Grind the urad dal first with a little cold water until very light and fluffy, then the rice to a slightly grainy paste. Combine, add salt and mix with your hand for a minute; the warmth helps it start." },
-        { "text": "Cover loosely and leave in a warm place 8-14 hours until doubled, bubbly and faintly sour. Stir gently before use and thin with water to a pouring consistency." },
-        { "text": "For the filling, heat oil, splutter the mustard seeds with the chana dal, curry leaves and asafoetida, add the onion, chilli and ginger and cook until soft. Add turmeric, then the crumbled potato, salt and coriander. Keep warm.", "glossary": "tadka" },
-        { "text": "Heat a flat tawa until a drop of water skitters across it. Rub with a halved onion dipped in oil, pour a ladle of batter in the centre and spread outwards in a quick spiral.", "tip": "If the batter will not spread, the pan is too hot; cool it briefly with a wipe of a damp cloth." },
-        { "text": "Drizzle oil around the edge and cook until the underside is crisp and deep gold, 2-3 minutes. Do not flip. Place a scoop of potato in the centre, fold and serve straight away with coconut chutney and sambar." }
+        {
+          "text": "Soak the rice in one bowl, and the urad dal with the fenugreek in another, for 6 hours."
+        },
+        {
+          "text": "Grind the urad dal first with a little cold water until very light and fluffy, then the rice to a slightly grainy paste. Combine, add salt and mix with your hand for a minute; the warmth helps it start."
+        },
+        {
+          "text": "Cover loosely and leave in a warm place 8-14 hours until doubled, bubbly and faintly sour. Stir gently before use and thin with water to a pouring consistency."
+        },
+        {
+          "text": "For the filling, heat oil, splutter the mustard seeds with the chana dal, curry leaves and asafoetida, add the onion, chilli and ginger and cook until soft. Add turmeric, then the crumbled potato, salt and coriander. Keep warm.",
+          "glossary": "tadka"
+        },
+        {
+          "text": "Heat a flat tawa until a drop of water skitters across it. Rub with a halved onion dipped in oil, pour a ladle of batter in the centre and spread outwards in a quick spiral.",
+          "tip": "If the batter will not spread, the pan is too hot; cool it briefly with a wipe of a damp cloth."
+        },
+        {
+          "text": "Drizzle oil around the edge and cook until the underside is crisp and deep gold, 2-3 minutes. Do not flip. Place a scoop of potato in the centre, fold and serve straight away with coconut chutney and sambar."
+        }
       ],
       "storage": "Fermented batter keeps 4-5 days refrigerated and gets more sour each day; older batter suits dosa better than idli. Cooked dosas do not keep. The potato filling keeps 3 days.",
-      "glossary": ["tadka", "hing"],
-      "provenance": { "recipeVersion": "1.0.0", "updated": "2026-07-31", "source": "Khaana editorial" }
+      "glossary": [
+        "tadka",
+        "hing"
+      ],
+      "provenance": {
+        "recipeVersion": "1.0.0",
+        "updated": "2026-07-31",
+        "source": "Khaana editorial"
+      }
     }
   ]
 }

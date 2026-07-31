@@ -1,175 +1,1095 @@
 {
   "_comment": "Canonical pantry catalogue for the Cook page. Ingredient ids are the join key used by data/recipes.json. Edit here, not in the page markup.",
-  "version": "1.0.0",
-  "staples": ["salt", "water", "sugar", "neutral-oil"],
+  "version": "1.1.0",
+  "staples": [
+    "salt",
+    "water",
+    "sugar",
+    "neutral-oil"
+  ],
   "categories": [
     {
       "id": "grains",
       "label": "Grains & flours",
       "items": [
-        { "id": "rice", "name": "Rice (short/medium grain)" },
-        { "id": "basmati-rice", "name": "Basmati rice" },
-        { "id": "atta", "name": "Atta (wholewheat flour)" },
-        { "id": "maida", "name": "Plain flour (maida)" },
-        { "id": "besan", "name": "Besan (gram flour)" },
-        { "id": "rava", "name": "Rava / sooji (semolina)" },
-        { "id": "poha", "name": "Poha (flattened rice)" },
-        { "id": "pav", "name": "Pav / soft bread rolls" }
+        {
+          "id": "atta",
+          "name": "Atta (wholewheat flour)"
+        },
+        {
+          "id": "bajra-flour",
+          "name": "Bajra (pearl millet) flour"
+        },
+        {
+          "id": "basmati-rice",
+          "name": "Basmati rice"
+        },
+        {
+          "id": "besan",
+          "name": "Besan (gram flour)"
+        },
+        {
+          "id": "dalia",
+          "name": "Dalia (broken wheat)"
+        },
+        {
+          "id": "jowar-flour",
+          "name": "Jowar (sorghum) flour"
+        },
+        {
+          "id": "murmura",
+          "name": "Murmura (puffed rice)"
+        },
+        {
+          "id": "pav",
+          "name": "Pav / soft bread rolls"
+        },
+        {
+          "id": "maida",
+          "name": "Plain flour (maida)"
+        },
+        {
+          "id": "poha",
+          "name": "Poha (flattened rice)"
+        },
+        {
+          "id": "ragi-flour",
+          "name": "Ragi (finger millet) flour"
+        },
+        {
+          "id": "rava",
+          "name": "Rava / sooji (semolina)"
+        },
+        {
+          "id": "rice",
+          "name": "Rice (short/medium grain)"
+        },
+        {
+          "id": "rice-flour",
+          "name": "Rice flour"
+        },
+        {
+          "id": "sabudana",
+          "name": "Sabudana (tapioca pearls)"
+        },
+        {
+          "id": "bread",
+          "name": "Sliced bread"
+        },
+        {
+          "id": "vermicelli",
+          "name": "Vermicelli (semiya)"
+        }
       ]
     },
     {
       "id": "pulses",
       "label": "Lentils & legumes",
       "items": [
-        { "id": "toor-dal", "name": "Toor dal (pigeon pea)" },
-        { "id": "moong-dal", "name": "Moong dal" },
-        { "id": "chana-dal", "name": "Chana dal" },
-        { "id": "masoor-dal", "name": "Masoor dal (red lentil)" },
-        { "id": "urad-dal", "name": "Urad dal (black gram)" },
-        { "id": "chickpeas", "name": "Chickpeas (kabuli chana)" },
-        { "id": "rajma", "name": "Rajma (kidney beans)" },
-        { "id": "sprouted-moth", "name": "Sprouted moth/matki beans" }
+        {
+          "id": "chana-dal",
+          "name": "Chana dal"
+        },
+        {
+          "id": "chickpeas",
+          "name": "Chickpeas (kabuli chana)"
+        },
+        {
+          "id": "dried-peas",
+          "name": "Dried white peas (safed matar)"
+        },
+        {
+          "id": "horse-gram",
+          "name": "Horse gram (kulith)"
+        },
+        {
+          "id": "kala-chana",
+          "name": "Kala chana (brown chickpeas)"
+        },
+        {
+          "id": "lobia",
+          "name": "Lobia (black-eyed peas)"
+        },
+        {
+          "id": "masoor-dal",
+          "name": "Masoor dal (red lentil)"
+        },
+        {
+          "id": "moong-dal",
+          "name": "Moong dal"
+        },
+        {
+          "id": "rajma",
+          "name": "Rajma (kidney beans)"
+        },
+        {
+          "id": "sprouted-moth",
+          "name": "Sprouted moth/matki beans"
+        },
+        {
+          "id": "toor-dal",
+          "name": "Toor dal (pigeon pea)"
+        },
+        {
+          "id": "urad-dal",
+          "name": "Urad dal (black gram)"
+        },
+        {
+          "id": "whole-moong",
+          "name": "Whole moong (sabut moong)"
+        },
+        {
+          "id": "whole-urad",
+          "name": "Whole urad (sabut urad)"
+        }
       ]
     },
     {
       "id": "veg",
       "label": "Vegetables",
       "items": [
-        { "id": "onion", "name": "Onion" },
-        { "id": "shallot", "name": "Shallots (small red onions)" },
-        { "id": "tomato", "name": "Tomato" },
-        { "id": "potato", "name": "Potato" },
-        { "id": "cauliflower", "name": "Cauliflower" },
-        { "id": "peas", "name": "Peas" },
-        { "id": "spinach", "name": "Spinach" },
-        { "id": "eggplant", "name": "Eggplant / brinjal" },
-        { "id": "okra", "name": "Okra / bhindi" },
-        { "id": "carrot", "name": "Carrot" },
-        { "id": "pumpkin", "name": "Pumpkin" },
-        { "id": "raw-banana", "name": "Raw banana / plantain" },
-        { "id": "drumstick", "name": "Drumstick (moringa pod)" },
-        { "id": "capsicum", "name": "Capsicum / bell pepper" },
-        { "id": "green-chilli", "name": "Green chilli" }
+        {
+          "id": "amaranth-greens",
+          "name": "Amaranth greens (chaulai)"
+        },
+        {
+          "id": "ash-gourd",
+          "name": "Ash gourd (petha)"
+        },
+        {
+          "id": "beetroot",
+          "name": "Beetroot"
+        },
+        {
+          "id": "bitter-gourd",
+          "name": "Bitter gourd (karela)"
+        },
+        {
+          "id": "bottle-gourd",
+          "name": "Bottle gourd (lauki)"
+        },
+        {
+          "id": "cabbage",
+          "name": "Cabbage"
+        },
+        {
+          "id": "capsicum",
+          "name": "Capsicum / bell pepper"
+        },
+        {
+          "id": "carrot",
+          "name": "Carrot"
+        },
+        {
+          "id": "cauliflower",
+          "name": "Cauliflower"
+        },
+        {
+          "id": "cluster-beans",
+          "name": "Cluster beans (guar)"
+        },
+        {
+          "id": "colocasia",
+          "name": "Colocasia (arbi)"
+        },
+        {
+          "id": "cucumber",
+          "name": "Cucumber"
+        },
+        {
+          "id": "drumstick",
+          "name": "Drumstick (moringa pod)"
+        },
+        {
+          "id": "eggplant",
+          "name": "Eggplant / brinjal"
+        },
+        {
+          "id": "methi-leaves",
+          "name": "Fenugreek leaves (methi)"
+        },
+        {
+          "id": "french-beans",
+          "name": "French beans"
+        },
+        {
+          "id": "green-chilli",
+          "name": "Green chilli"
+        },
+        {
+          "id": "mushroom",
+          "name": "Mushrooms"
+        },
+        {
+          "id": "mustard-greens",
+          "name": "Mustard greens (sarson)"
+        },
+        {
+          "id": "okra",
+          "name": "Okra / bhindi"
+        },
+        {
+          "id": "onion",
+          "name": "Onion"
+        },
+        {
+          "id": "peas",
+          "name": "Peas"
+        },
+        {
+          "id": "pointed-gourd",
+          "name": "Pointed gourd (parwal)"
+        },
+        {
+          "id": "potato",
+          "name": "Potato"
+        },
+        {
+          "id": "pumpkin",
+          "name": "Pumpkin"
+        },
+        {
+          "id": "radish",
+          "name": "Radish (mooli)"
+        },
+        {
+          "id": "raw-banana",
+          "name": "Raw banana / plantain"
+        },
+        {
+          "id": "raw-mango",
+          "name": "Raw green mango"
+        },
+        {
+          "id": "raw-jackfruit",
+          "name": "Raw jackfruit (kathal)"
+        },
+        {
+          "id": "ridge-gourd",
+          "name": "Ridge gourd (turai)"
+        },
+        {
+          "id": "shallot",
+          "name": "Shallots (small red onions)"
+        },
+        {
+          "id": "spinach",
+          "name": "Spinach"
+        },
+        {
+          "id": "spring-onion",
+          "name": "Spring onion"
+        },
+        {
+          "id": "sweet-potato",
+          "name": "Sweet potato"
+        },
+        {
+          "id": "corn",
+          "name": "Sweetcorn"
+        },
+        {
+          "id": "tomato",
+          "name": "Tomato"
+        },
+        {
+          "id": "yam",
+          "name": "Yam (suran)"
+        }
       ]
     },
     {
       "id": "aromatics",
       "label": "Aromatics & herbs",
       "items": [
-        { "id": "ginger", "name": "Ginger" },
-        { "id": "garlic", "name": "Garlic" },
-        { "id": "curry-leaves", "name": "Curry leaves" },
-        { "id": "coriander-leaves", "name": "Coriander leaves (cilantro)" },
-        { "id": "mint", "name": "Mint" }
+        {
+          "id": "coriander-leaves",
+          "name": "Coriander leaves (cilantro)"
+        },
+        {
+          "id": "curry-leaves",
+          "name": "Curry leaves"
+        },
+        {
+          "id": "dill",
+          "name": "Dill (suva)"
+        },
+        {
+          "id": "garlic",
+          "name": "Garlic"
+        },
+        {
+          "id": "ginger",
+          "name": "Ginger"
+        },
+        {
+          "id": "mint",
+          "name": "Mint"
+        }
       ]
     },
     {
       "id": "dairy",
       "label": "Dairy & fats",
       "items": [
-        { "id": "yogurt", "name": "Yogurt / dahi" },
-        { "id": "milk", "name": "Milk" },
-        { "id": "cream", "name": "Cream" },
-        { "id": "butter", "name": "Butter" },
-        { "id": "ghee", "name": "Ghee" },
-        { "id": "paneer", "name": "Paneer" },
-        { "id": "mustard-oil", "name": "Mustard oil" },
-        { "id": "coconut-oil", "name": "Coconut oil" }
+        {
+          "id": "butter",
+          "name": "Butter"
+        },
+        {
+          "id": "buttermilk",
+          "name": "Buttermilk (chaas)"
+        },
+        {
+          "id": "coconut-oil",
+          "name": "Coconut oil"
+        },
+        {
+          "id": "condensed-milk",
+          "name": "Condensed milk"
+        },
+        {
+          "id": "cream",
+          "name": "Cream"
+        },
+        {
+          "id": "ghee",
+          "name": "Ghee"
+        },
+        {
+          "id": "groundnut-oil",
+          "name": "Groundnut oil"
+        },
+        {
+          "id": "khoya",
+          "name": "Khoya / mawa"
+        },
+        {
+          "id": "milk",
+          "name": "Milk"
+        },
+        {
+          "id": "mustard-oil",
+          "name": "Mustard oil"
+        },
+        {
+          "id": "paneer",
+          "name": "Paneer"
+        },
+        {
+          "id": "sesame-oil",
+          "name": "Sesame oil (gingelly / til)"
+        },
+        {
+          "id": "yogurt",
+          "name": "Yogurt / dahi"
+        }
       ]
     },
     {
       "id": "protein",
       "label": "Meat, fish & eggs",
       "items": [
-        { "id": "chicken", "name": "Chicken" },
-        { "id": "mutton", "name": "Mutton / lamb" },
-        { "id": "pork", "name": "Pork" },
-        { "id": "fish", "name": "Fish (firm fillets or steaks)" },
-        { "id": "prawns", "name": "Prawns" },
-        { "id": "eggs", "name": "Eggs" }
+        {
+          "id": "beef",
+          "name": "Beef"
+        },
+        {
+          "id": "chicken",
+          "name": "Chicken"
+        },
+        {
+          "id": "crab",
+          "name": "Crab"
+        },
+        {
+          "id": "dried-fish",
+          "name": "Dried fish"
+        },
+        {
+          "id": "duck",
+          "name": "Duck"
+        },
+        {
+          "id": "eggs",
+          "name": "Eggs"
+        },
+        {
+          "id": "fish",
+          "name": "Fish (firm fillets or steaks)"
+        },
+        {
+          "id": "mutton",
+          "name": "Mutton / lamb"
+        },
+        {
+          "id": "pork",
+          "name": "Pork"
+        },
+        {
+          "id": "prawns",
+          "name": "Prawns"
+        },
+        {
+          "id": "squid",
+          "name": "Squid"
+        }
       ]
     },
     {
       "id": "spices",
       "label": "Spices",
       "items": [
-        { "id": "turmeric", "name": "Turmeric powder" },
-        { "id": "chilli-powder", "name": "Red chilli powder" },
-        { "id": "kashmiri-chilli", "name": "Kashmiri chilli powder" },
-        { "id": "paprika", "name": "Paprika" },
-        { "id": "coriander-powder", "name": "Coriander powder" },
-        { "id": "cumin-seeds", "name": "Cumin seeds" },
-        { "id": "mustard-seeds", "name": "Mustard seeds" },
-        { "id": "fenugreek-seeds", "name": "Fenugreek seeds (methi)" },
-        { "id": "fennel-seeds", "name": "Fennel seeds (saunf)" },
-        { "id": "nigella", "name": "Nigella seeds (kalonji)" },
-        { "id": "asafoetida", "name": "Asafoetida (hing)" },
-        { "id": "garam-masala", "name": "Garam masala" },
-        { "id": "bay-leaf", "name": "Bay leaf" },
-        { "id": "cardamom", "name": "Green cardamom" },
-        { "id": "black-cardamom", "name": "Black cardamom" },
-        { "id": "cinnamon", "name": "Cinnamon" },
-        { "id": "cloves", "name": "Cloves" },
-        { "id": "black-pepper", "name": "Black pepper" },
-        { "id": "dried-red-chilli", "name": "Dried red chillies" },
-        { "id": "star-anise", "name": "Star anise" },
-        { "id": "nutmeg", "name": "Nutmeg" },
-        { "id": "saffron", "name": "Saffron" },
-        { "id": "fennel-powder", "name": "Fennel powder" },
-        { "id": "dry-ginger-powder", "name": "Dry ginger powder (saunth)" }
+        {
+          "id": "amchur",
+          "name": "Amchur (dry mango powder)"
+        },
+        {
+          "id": "anardana",
+          "name": "Anardana (dried pomegranate seeds)"
+        },
+        {
+          "id": "asafoetida",
+          "name": "Asafoetida (hing)"
+        },
+        {
+          "id": "bay-leaf",
+          "name": "Bay leaf"
+        },
+        {
+          "id": "black-cardamom",
+          "name": "Black cardamom"
+        },
+        {
+          "id": "black-pepper",
+          "name": "Black pepper"
+        },
+        {
+          "id": "black-salt",
+          "name": "Black salt (kala namak)"
+        },
+        {
+          "id": "ajwain",
+          "name": "Carom seeds (ajwain)"
+        },
+        {
+          "id": "chaat-masala",
+          "name": "Chaat masala"
+        },
+        {
+          "id": "cinnamon",
+          "name": "Cinnamon"
+        },
+        {
+          "id": "cloves",
+          "name": "Cloves"
+        },
+        {
+          "id": "coriander-powder",
+          "name": "Coriander powder"
+        },
+        {
+          "id": "cumin-powder",
+          "name": "Cumin powder (jeera)"
+        },
+        {
+          "id": "cumin-seeds",
+          "name": "Cumin seeds"
+        },
+        {
+          "id": "dried-red-chilli",
+          "name": "Dried red chillies"
+        },
+        {
+          "id": "dry-ginger-powder",
+          "name": "Dry ginger powder (saunth)"
+        },
+        {
+          "id": "fennel-powder",
+          "name": "Fennel powder"
+        },
+        {
+          "id": "fennel-seeds",
+          "name": "Fennel seeds (saunf)"
+        },
+        {
+          "id": "fenugreek-seeds",
+          "name": "Fenugreek seeds (methi)"
+        },
+        {
+          "id": "garam-masala",
+          "name": "Garam masala"
+        },
+        {
+          "id": "cardamom",
+          "name": "Green cardamom"
+        },
+        {
+          "id": "kashmiri-chilli",
+          "name": "Kashmiri chilli powder"
+        },
+        {
+          "id": "kasuri-methi",
+          "name": "Kasuri methi (dried fenugreek leaves)"
+        },
+        {
+          "id": "mace",
+          "name": "Mace (javitri)"
+        },
+        {
+          "id": "mustard-seeds",
+          "name": "Mustard seeds"
+        },
+        {
+          "id": "nigella",
+          "name": "Nigella seeds (kalonji)"
+        },
+        {
+          "id": "nutmeg",
+          "name": "Nutmeg"
+        },
+        {
+          "id": "panch-phoron",
+          "name": "Panch phoron"
+        },
+        {
+          "id": "paprika",
+          "name": "Paprika"
+        },
+        {
+          "id": "rasam-powder",
+          "name": "Rasam powder"
+        },
+        {
+          "id": "chilli-powder",
+          "name": "Red chilli powder"
+        },
+        {
+          "id": "saffron",
+          "name": "Saffron"
+        },
+        {
+          "id": "sambar-powder",
+          "name": "Sambar powder"
+        },
+        {
+          "id": "star-anise",
+          "name": "Star anise"
+        },
+        {
+          "id": "stone-flower",
+          "name": "Stone flower (dagad phool)"
+        },
+        {
+          "id": "turmeric",
+          "name": "Turmeric powder"
+        },
+        {
+          "id": "white-pepper",
+          "name": "White pepper"
+        }
       ]
     },
     {
       "id": "pantry",
       "label": "Sour, sweet & nuts",
       "items": [
-        { "id": "tamarind", "name": "Tamarind" },
-        { "id": "kokum", "name": "Kokum" },
-        { "id": "lemon", "name": "Lemon / lime" },
-        { "id": "vinegar", "name": "Vinegar" },
-        { "id": "jaggery", "name": "Jaggery" },
-        { "id": "coconut", "name": "Coconut (fresh or desiccated)" },
-        { "id": "coconut-milk", "name": "Coconut milk" },
-        { "id": "cashew", "name": "Cashews" },
-        { "id": "peanut", "name": "Peanuts" },
-        { "id": "poppy-seeds", "name": "Poppy seeds (khus khus)" },
-        { "id": "sesame", "name": "Sesame seeds" },
-        { "id": "eno", "name": "Eno / fruit salt" },
-        { "id": "baking-soda", "name": "Baking soda" }
+        {
+          "id": "almonds",
+          "name": "Almonds"
+        },
+        {
+          "id": "baking-soda",
+          "name": "Baking soda"
+        },
+        {
+          "id": "cashew",
+          "name": "Cashews"
+        },
+        {
+          "id": "coconut",
+          "name": "Coconut (fresh or desiccated)"
+        },
+        {
+          "id": "coconut-milk",
+          "name": "Coconut milk"
+        },
+        {
+          "id": "dates",
+          "name": "Dates"
+        },
+        {
+          "id": "dried-coconut",
+          "name": "Dried coconut (copra)"
+        },
+        {
+          "id": "eno",
+          "name": "Eno / fruit salt"
+        },
+        {
+          "id": "honey",
+          "name": "Honey"
+        },
+        {
+          "id": "jaggery",
+          "name": "Jaggery"
+        },
+        {
+          "id": "kewra-water",
+          "name": "Kewra water"
+        },
+        {
+          "id": "kokum",
+          "name": "Kokum"
+        },
+        {
+          "id": "lemon",
+          "name": "Lemon / lime"
+        },
+        {
+          "id": "melon-seeds",
+          "name": "Melon seeds (magaz)"
+        },
+        {
+          "id": "peanut",
+          "name": "Peanuts"
+        },
+        {
+          "id": "pistachios",
+          "name": "Pistachios"
+        },
+        {
+          "id": "poppy-seeds",
+          "name": "Poppy seeds (khus khus)"
+        },
+        {
+          "id": "raisins",
+          "name": "Raisins (kishmish)"
+        },
+        {
+          "id": "rose-water",
+          "name": "Rose water"
+        },
+        {
+          "id": "sesame",
+          "name": "Sesame seeds"
+        },
+        {
+          "id": "tamarind",
+          "name": "Tamarind"
+        },
+        {
+          "id": "vinegar",
+          "name": "Vinegar"
+        },
+        {
+          "id": "walnuts",
+          "name": "Walnuts"
+        }
       ]
     }
   ],
-
   "_substitutions_comment": "Directional: if the recipe wants KEY and the cook lacks it, any listed option is an acceptable stand-in. 'penalty' (0-1) is how much match score is lost versus having the real thing.",
   "substitutions": {
-    "toor-dal": [{ "id": "masoor-dal", "note": "cooks faster, softer texture", "penalty": 0.15 }, { "id": "moong-dal", "note": "lighter, less body", "penalty": 0.2 }],
-    "masoor-dal": [{ "id": "toor-dal", "note": "needs longer cooking", "penalty": 0.15 }, { "id": "moong-dal", "note": "milder", "penalty": 0.2 }],
-    "moong-dal": [{ "id": "masoor-dal", "note": "similar cook time", "penalty": 0.15 }],
-    "ghee": [{ "id": "butter", "note": "slightly lower smoke point", "penalty": 0.1 }, { "id": "neutral-oil", "note": "loses the nutty aroma", "penalty": 0.25 }, { "id": "coconut-oil", "note": "adds coconut note; fine in southern dishes", "penalty": 0.2 }],
-    "butter": [{ "id": "ghee", "note": "richer, nuttier", "penalty": 0.1 }],
-    "cream": [{ "id": "yogurt", "note": "whisk well and add off heat or it splits", "penalty": 0.25 }, { "id": "cashew", "note": "soak and blend into a paste", "penalty": 0.2 }, { "id": "coconut-milk", "note": "changes the flavour profile", "penalty": 0.3 }],
-    "yogurt": [{ "id": "cream", "note": "less tang; add a squeeze of lemon", "penalty": 0.25 }, { "id": "coconut-milk", "note": "dairy-free; less tang", "penalty": 0.3 }],
-    "kashmiri-chilli": [{ "id": "chilli-powder", "note": "much hotter, use about a third", "penalty": 0.2 }, { "id": "paprika", "note": "colour without heat", "penalty": 0.2 }],
-    "chilli-powder": [{ "id": "kashmiri-chilli", "note": "milder, use more for heat", "penalty": 0.15 }, { "id": "green-chilli", "note": "fresher, sharper heat", "penalty": 0.25 }],
-    "tamarind": [{ "id": "lemon", "note": "brighter, less deep; add at the end", "penalty": 0.2 }, { "id": "kokum", "note": "more astringent", "penalty": 0.15 }, { "id": "vinegar", "note": "sharper; use sparingly", "penalty": 0.3 }],
-    "kokum": [{ "id": "tamarind", "note": "sweeter, less astringent", "penalty": 0.15 }],
-    "coconut-milk": [{ "id": "coconut", "note": "blend fresh/desiccated coconut with warm water and strain", "penalty": 0.15 }, { "id": "cream", "note": "richer, not dairy-free", "penalty": 0.3 }],
-    "coconut": [{ "id": "coconut-milk", "note": "adjust the liquid in the recipe", "penalty": 0.2 }],
-    "curry-leaves": [{ "id": "bay-leaf", "note": "different aroma; a poor but workable stand-in", "penalty": 0.4 }],
-    "jaggery": [{ "id": "sugar", "note": "cleaner sweetness, no molasses depth", "penalty": 0.15 }],
-    "mustard-oil": [{ "id": "neutral-oil", "note": "loses the signature pungency", "penalty": 0.25 }],
-    "coconut-oil": [{ "id": "neutral-oil", "note": "loses the coconut aroma", "penalty": 0.2 }],
-    "basmati-rice": [{ "id": "rice", "note": "grains will be shorter and stickier", "penalty": 0.2 }],
-    "rice": [{ "id": "basmati-rice", "note": "longer, more separate grains", "penalty": 0.2 }],
-    "paneer": [{ "id": "potato", "note": "changes the dish but works in the same gravy", "penalty": 0.4 }],
-    "garam-masala": [{ "id": "cinnamon", "note": "with cloves and cardamom, ground together", "penalty": 0.25 }],
-    "eno": [{ "id": "baking-soda", "note": "use about half; add a little lemon juice", "penalty": 0.2 }],
-    "cashew": [{ "id": "peanut", "note": "earthier; blanch and skin first", "penalty": 0.25 }, { "id": "poppy-seeds", "note": "traditional thickener in eastern India", "penalty": 0.2 }],
-    "chickpeas": [{ "id": "rajma", "note": "different bean, same method", "penalty": 0.35 }],
-    "fish": [{ "id": "prawns", "note": "reduce cooking time sharply", "penalty": 0.2 }],
-    "chicken": [{ "id": "paneer", "note": "vegetarian; add near the end", "penalty": 0.4 }]
+    "toor-dal": [
+      {
+        "id": "masoor-dal",
+        "note": "cooks faster, softer texture",
+        "penalty": 0.15
+      },
+      {
+        "id": "moong-dal",
+        "note": "lighter, less body",
+        "penalty": 0.2
+      }
+    ],
+    "masoor-dal": [
+      {
+        "id": "toor-dal",
+        "note": "needs longer cooking",
+        "penalty": 0.15
+      },
+      {
+        "id": "moong-dal",
+        "note": "milder",
+        "penalty": 0.2
+      }
+    ],
+    "moong-dal": [
+      {
+        "id": "masoor-dal",
+        "note": "similar cook time",
+        "penalty": 0.15
+      }
+    ],
+    "ghee": [
+      {
+        "id": "butter",
+        "note": "slightly lower smoke point",
+        "penalty": 0.1
+      },
+      {
+        "id": "neutral-oil",
+        "note": "loses the nutty aroma",
+        "penalty": 0.25
+      },
+      {
+        "id": "coconut-oil",
+        "note": "adds coconut note; fine in southern dishes",
+        "penalty": 0.2
+      }
+    ],
+    "butter": [
+      {
+        "id": "ghee",
+        "note": "richer, nuttier",
+        "penalty": 0.1
+      }
+    ],
+    "cream": [
+      {
+        "id": "yogurt",
+        "note": "whisk well and add off heat or it splits",
+        "penalty": 0.25
+      },
+      {
+        "id": "cashew",
+        "note": "soak and blend into a paste",
+        "penalty": 0.2
+      },
+      {
+        "id": "coconut-milk",
+        "note": "changes the flavour profile",
+        "penalty": 0.3
+      }
+    ],
+    "yogurt": [
+      {
+        "id": "cream",
+        "note": "less tang; add a squeeze of lemon",
+        "penalty": 0.25
+      },
+      {
+        "id": "coconut-milk",
+        "note": "dairy-free; less tang",
+        "penalty": 0.3
+      }
+    ],
+    "kashmiri-chilli": [
+      {
+        "id": "chilli-powder",
+        "note": "much hotter, use about a third",
+        "penalty": 0.2
+      },
+      {
+        "id": "paprika",
+        "note": "colour without heat",
+        "penalty": 0.2
+      }
+    ],
+    "chilli-powder": [
+      {
+        "id": "kashmiri-chilli",
+        "note": "milder, use more for heat",
+        "penalty": 0.15
+      },
+      {
+        "id": "green-chilli",
+        "note": "fresher, sharper heat",
+        "penalty": 0.25
+      }
+    ],
+    "tamarind": [
+      {
+        "id": "lemon",
+        "note": "brighter, less deep; add at the end",
+        "penalty": 0.2
+      },
+      {
+        "id": "kokum",
+        "note": "more astringent",
+        "penalty": 0.15
+      },
+      {
+        "id": "vinegar",
+        "note": "sharper; use sparingly",
+        "penalty": 0.3
+      }
+    ],
+    "kokum": [
+      {
+        "id": "tamarind",
+        "note": "sweeter, less astringent",
+        "penalty": 0.15
+      }
+    ],
+    "coconut-milk": [
+      {
+        "id": "coconut",
+        "note": "blend fresh/desiccated coconut with warm water and strain",
+        "penalty": 0.15
+      },
+      {
+        "id": "cream",
+        "note": "richer, not dairy-free",
+        "penalty": 0.3
+      }
+    ],
+    "coconut": [
+      {
+        "id": "coconut-milk",
+        "note": "adjust the liquid in the recipe",
+        "penalty": 0.2
+      }
+    ],
+    "curry-leaves": [
+      {
+        "id": "bay-leaf",
+        "note": "different aroma; a poor but workable stand-in",
+        "penalty": 0.4
+      }
+    ],
+    "jaggery": [
+      {
+        "id": "sugar",
+        "note": "cleaner sweetness, no molasses depth",
+        "penalty": 0.15
+      }
+    ],
+    "mustard-oil": [
+      {
+        "id": "neutral-oil",
+        "note": "loses the signature pungency",
+        "penalty": 0.25
+      }
+    ],
+    "coconut-oil": [
+      {
+        "id": "neutral-oil",
+        "note": "loses the coconut aroma",
+        "penalty": 0.2
+      }
+    ],
+    "basmati-rice": [
+      {
+        "id": "rice",
+        "note": "grains will be shorter and stickier",
+        "penalty": 0.2
+      }
+    ],
+    "rice": [
+      {
+        "id": "basmati-rice",
+        "note": "longer, more separate grains",
+        "penalty": 0.2
+      }
+    ],
+    "paneer": [
+      {
+        "id": "potato",
+        "note": "changes the dish but works in the same gravy",
+        "penalty": 0.4
+      }
+    ],
+    "garam-masala": [
+      {
+        "id": "cinnamon",
+        "note": "with cloves and cardamom, ground together",
+        "penalty": 0.25
+      }
+    ],
+    "eno": [
+      {
+        "id": "baking-soda",
+        "note": "use about half; add a little lemon juice",
+        "penalty": 0.2
+      }
+    ],
+    "cashew": [
+      {
+        "id": "peanut",
+        "note": "earthier; blanch and skin first",
+        "penalty": 0.25
+      },
+      {
+        "id": "poppy-seeds",
+        "note": "traditional thickener in eastern India",
+        "penalty": 0.2
+      }
+    ],
+    "chickpeas": [
+      {
+        "id": "rajma",
+        "note": "different bean, same method",
+        "penalty": 0.35
+      }
+    ],
+    "fish": [
+      {
+        "id": "prawns",
+        "note": "reduce cooking time sharply",
+        "penalty": 0.2
+      }
+    ],
+    "chicken": [
+      {
+        "id": "paneer",
+        "note": "vegetarian; add near the end",
+        "penalty": 0.4
+      }
+    ],
+    "kasuri-methi": [
+      {
+        "id": "methi-leaves",
+        "note": "fresh leaves; use about four times as much",
+        "penalty": 0.25
+      }
+    ],
+    "methi-leaves": [
+      {
+        "id": "kasuri-methi",
+        "note": "dried; use far less",
+        "penalty": 0.25
+      },
+      {
+        "id": "spinach",
+        "note": "loses the bitterness that defines the dish",
+        "penalty": 0.45
+      }
+    ],
+    "amchur": [
+      {
+        "id": "lemon",
+        "note": "add at the end rather than with the spices",
+        "penalty": 0.2
+      },
+      {
+        "id": "tamarind",
+        "note": "deeper and sweeter",
+        "penalty": 0.3
+      }
+    ],
+    "cumin-powder": [
+      {
+        "id": "cumin-seeds",
+        "note": "dry roast and grind",
+        "penalty": 0.05
+      }
+    ],
+    "sesame-oil": [
+      {
+        "id": "groundnut-oil",
+        "note": "milder",
+        "penalty": 0.2
+      },
+      {
+        "id": "neutral-oil",
+        "note": "loses the nutty aroma",
+        "penalty": 0.3
+      }
+    ],
+    "groundnut-oil": [
+      {
+        "id": "neutral-oil",
+        "note": "close enough for most dishes",
+        "penalty": 0.1
+      }
+    ],
+    "buttermilk": [
+      {
+        "id": "yogurt",
+        "note": "whisk with an equal volume of water",
+        "penalty": 0.1
+      }
+    ],
+    "khoya": [
+      {
+        "id": "condensed-milk",
+        "note": "much sweeter; cut other sugar right back",
+        "penalty": 0.35
+      },
+      {
+        "id": "cream",
+        "note": "reduce it down first",
+        "penalty": 0.3
+      }
+    ],
+    "whole-moong": [
+      {
+        "id": "moong-dal",
+        "note": "cooks faster, no skins",
+        "penalty": 0.25
+      }
+    ],
+    "kala-chana": [
+      {
+        "id": "chickpeas",
+        "note": "softer and larger",
+        "penalty": 0.25
+      }
+    ],
+    "lobia": [
+      {
+        "id": "rajma",
+        "note": "needs longer cooking",
+        "penalty": 0.3
+      }
+    ],
+    "bottle-gourd": [
+      {
+        "id": "ridge-gourd",
+        "note": "similar mild gourd",
+        "penalty": 0.15
+      },
+      {
+        "id": "ash-gourd",
+        "note": "similar texture",
+        "penalty": 0.2
+      }
+    ],
+    "ridge-gourd": [
+      {
+        "id": "bottle-gourd",
+        "note": "milder",
+        "penalty": 0.15
+      }
+    ],
+    "rice-flour": [
+      {
+        "id": "besan",
+        "note": "different binding; batters will be softer",
+        "penalty": 0.4
+      }
+    ],
+    "black-salt": [
+      {
+        "id": "salt",
+        "note": "loses the sulphurous note that makes chaat taste like chaat",
+        "penalty": 0.3
+      }
+    ],
+    "almonds": [
+      {
+        "id": "cashew",
+        "note": "creamier when blended",
+        "penalty": 0.15
+      }
+    ],
+    "dried-coconut": [
+      {
+        "id": "coconut",
+        "note": "fresh; wetter, so dry roast a little longer",
+        "penalty": 0.15
+      }
+    ],
+    "spring-onion": [
+      {
+        "id": "onion",
+        "note": "stronger; use less",
+        "penalty": 0.25
+      }
+    ]
   },
-
   "_glossary_comment": "Shown inline on recipe pages wherever a term is referenced, so unfamiliar ingredients and techniques are explained in place.",
   "glossary": {
     "tadka": {
