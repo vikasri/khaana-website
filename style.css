@@ -121,6 +121,15 @@ p { margin: 0 0 1.1em; }
 .nav-links a[href="cook.html"]:hover,
 .nav-links a[href="cook.html"].active { color: #0a4bb0; }
 
+/* Home and Cook/Recipe are the two destinations that are not a single cuisine,
+   so they sit larger and heavier than the region list beside them. Declared
+   after the rule above so the size wins on Cook without touching its colour. */
+.nav-links a[href="index.html"],
+.nav-links a[href="cook.html"] {
+  font-size: 1.18rem;
+  font-weight: 800;
+}
+
 @media (max-width: 820px) {
   .nav-toggle { display: block; }
   .nav-wrap { flex-wrap: wrap; align-items: center; }
@@ -502,6 +511,10 @@ section.tight { padding: 28px 0; }
   .nav-wrap { padding: 12px 18px; }
   .nav-links { gap: 2px; }
   .nav-links a { display: block; padding: 11px 4px; font-size: 1.05rem; }
+  /* This block sets a size for every nav link, so the two prominent ones need
+     restating here or they would flatten back to the region size on mobile. */
+  .nav-links a[href="index.html"],
+  .nav-links a[href="cook.html"] { font-size: 1.22rem; }
 
   /* Hero: a touch shorter, tighter text block */
   .hero { height: 40vh; min-height: 250px; }
