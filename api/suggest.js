@@ -129,21 +129,9 @@ export default async function handler(req, res) {
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
-    // Misconfiguration, not a user error — say so plainly rather than failing
-    // opaquely. Report the NAMES of any Anthropic-ish variables this function
-    // can see (never values) so a typo or wrong-project mistake is obvious
-    // instead of silent. Safe to expose: names are not secrets.
-    const seen = Object.keys(process.env)
-      .filter((k) => /ANTHROPIC|CLAUDE|API_KEY/i.test(k))
-      .sort();
+    // Misconfiguration, not a user error — say so plainly rather than failing opaquely.
     return res.status(503).json({
       error: 'AI suggestions are not configured on this deployment.',
-      diagnostic: {
-        expected: 'ANTHROPIC_API_KEY',
-        matchingNamesVisible: seen,
-        deployment: process.env.VERCEL_ENV || 'unknown',
-        commit: (process.env.VERCEL_GIT_COMMIT_SHA || '').slice(0, 7) || 'unknown',
-      },
     });
   }
 

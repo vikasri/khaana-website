@@ -110,12 +110,15 @@
         <div id="results" class="results-grid"></div>
         <div id="blocked" class="blocked-list"></div>
 
+        <!-- AI suggestion tier is built but parked: it needs a serverless
+             function to hold the API key, which GitHub Pages cannot run. The
+             code lives in api/suggest.js and assets/js/ai-suggest.js; re-add
+             the button markup below to switch it back on once the site is on a
+             host with functions. -->
         <div class="ai-note">
           <h3>Beyond these recipes</h3>
-          <p>The suggestions above are Khaana's own recipes, written to a standard format and kept under version control. Indian home cooking is far bigger than that set, so you can also ask for ideas beyond it.</p>
-          <button type="button" id="ai-ask" class="ai-ask">Suggest more dishes I could make</button>
-          <p id="ai-status" class="ai-status" hidden></p>
-          <div id="ai-results" class="ai-results"></div>
+          <p>The suggestions above are Khaana's own recipes, written to a standard format and kept under version control. Matching against your pantry is automatic; the recipes themselves are not improvised on the spot.</p>
+          <p class="ai-note-sub">More of these are being added over time. If a dish you were hoping for is missing, <a href="mailto:strategychoice1@gmail.com">tell us</a> and it may become the next recipe.</p>
         </div>
       </div>
 
@@ -164,6 +167,5 @@
 
 <script src="script.js"></script>
 <script src="assets/js/cook.js"></script>
-<script src="assets/js/ai-suggest.js"></script>
 </body>
 </html>
