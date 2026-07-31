@@ -134,10 +134,13 @@ p { margin: 0 0 1.1em; }
 }
 
 /* ---------- Hero ---------- */
+/* Homepage only — region pages use .hero.small, which sets its own height.
+   The image is object-fit: cover, so reducing this crops the photo rather than
+   squashing it, and pulls the content below up towards the top of the page. */
 .hero {
   position: relative;
-  height: 62vh;
-  min-height: 380px;
+  height: 44vh;
+  min-height: 300px;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -153,7 +156,13 @@ p { margin: 0 0 1.1em; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(8,24,22,0.08) 0%, rgba(6,20,18,0.8) 100%);
+  /* A shorter hero puts the text higher up, where the old two-stop gradient was
+     still nearly transparent and the eyebrow washed out against pale spices.
+     The mid stop darkens the band the text actually occupies. */
+  background: linear-gradient(180deg,
+    rgba(8,24,22,0.10) 0%,
+    rgba(6,20,18,0.52) 45%,
+    rgba(6,20,18,0.86) 100%);
 }
 .hero-content {
   position: relative;
@@ -282,19 +291,21 @@ section.tight { padding: 28px 0; }
 }
 
 /* ---------- Cuisine grid (home page) ---------- */
+/* Flex rather than grid specifically so a partial last row centres itself.
+   CSS grid always starts a short final row at column 1, which stranded the
+   leftover cards on the left; this works for any card count, so adding a
+   cuisine will not need the rule rewritten again. */
 .cuisine-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 22px;
 }
-/* 13 cards leave a lone card on the last row: give it its own full-width
-   row and centre it so the grid stays symmetric. */
-.cuisine-grid > .cuisine-card:last-child {
-  grid-column: 1 / -1;
-  width: 100%;
-  max-width: 252px;
-  margin-left: auto;
-  margin-right: auto;
+.cuisine-grid > .cuisine-card {
+  /* Grows to fill a full row like the old 1fr tracks, but capped so two
+     leftover cards stay card-sized instead of stretching across the row. */
+  flex: 1 1 230px;
+  max-width: 288px;
 }
 
 .cuisine-card {
@@ -365,6 +376,19 @@ section.tight { padding: 28px 0; }
 }
 .dish-list li:last-child { border-bottom: none; }
 .dish-list strong { color: var(--terracotta); }
+/* Only dishes with a recipe carry this, so it has to read as an offer rather
+   than as part of the sentence. Kept on one line so it never breaks mid-arrow. */
+.dish-recipe {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--azure);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.dish-recipe:hover,
+.dish-recipe:focus-visible { text-decoration: underline; }
 
 /* ---------- Gallery ---------- */
 .gallery {
@@ -471,7 +495,7 @@ section.tight { padding: 28px 0; }
   .nav-links a { display: block; padding: 11px 4px; font-size: 1.05rem; }
 
   /* Hero: a touch shorter, tighter text block */
-  .hero { height: 56vh; min-height: 320px; }
+  .hero { height: 40vh; min-height: 250px; }
   .hero.small { height: 40vh; min-height: 240px; }
   .hero-content { padding: 26px 18px; }
   .hero-content p { font-size: 1.02rem; }
@@ -486,8 +510,9 @@ section.tight { padding: 28px 0; }
   .gallery { gap: 14px; margin: 22px 0; }
   .gallery img { height: 210px; }
 
-  /* Single-column on phones: last card should be full-width like the rest */
-  .cuisine-grid > .cuisine-card:last-child { max-width: none; }
+  /* Single-column on phones: cards run the full width rather than sitting in
+     a narrow centred strip. */
+  .cuisine-grid > .cuisine-card { max-width: none; }
 
   /* Footer stacks into a comfortable two-column list */
   .site-footer { padding: 36px 0 24px; }
