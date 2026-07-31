@@ -112,8 +112,10 @@
 
         <div class="ai-note">
           <h3>Beyond these recipes</h3>
-          <p>The suggestions above come from Khaana's own curated recipes, each one written to a standard format and kept under version control. Matching against your pantry is automatic; the recipes themselves are not improvised on the spot.</p>
-          <p class="ai-note-sub">A broader AI-assisted search over the long tail of Indian home cooking is planned as a clearly-labelled second tier, kept visually distinct from the curated recipes so you always know which is which.</p>
+          <p>The suggestions above are Khaana's own recipes, written to a standard format and kept under version control. Indian home cooking is far bigger than that set, so you can also ask for ideas beyond it.</p>
+          <button type="button" id="ai-ask" class="ai-ask">Suggest more dishes I could make</button>
+          <p id="ai-status" class="ai-status" hidden></p>
+          <div id="ai-results" class="ai-results"></div>
         </div>
       </div>
 
@@ -162,5 +164,6 @@
 
 <script src="script.js"></script>
 <script src="assets/js/cook.js"></script>
+<script src="assets/js/ai-suggest.js"></script>
 </body>
 </html>

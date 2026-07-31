@@ -680,3 +680,97 @@ section.tight { padding: 40px 0; }
   .match-card { grid-template-columns: 1fr; }
   .match-thumb { min-height: 170px; }
 }
+
+/* ---------- AI suggestion tier (Cook page) ----------
+   Deliberately unlike .match-card: dashed border, no photo, muted panel.
+   A reader should never mistake one of these for a Khaana recipe. */
+.ai-ask {
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--terracotta);
+  border: none;
+  border-radius: 999px;
+  padding: 9px 18px;
+  cursor: pointer;
+  transition: background 0.18s ease;
+}
+.ai-ask:hover { background: var(--deep-red); }
+.ai-ask:disabled { background: #c9b7a6; cursor: default; }
+
+.ai-status { font-size: 0.88rem; color: var(--ink-soft); margin: 12px 0 0; }
+.ai-status.warn { color: var(--saffron-dark); }
+.ai-status.busy::after {
+  content: '';
+  display: inline-block;
+  width: 0.9em;
+  animation: ai-dots 1.2s steps(4, end) infinite;
+}
+@keyframes ai-dots { 0% { content: ''; } 25% { content: '.'; } 50% { content: '..'; } 75% { content: '...'; } }
+
+.ai-results { display: grid; gap: 12px; margin-top: 16px; }
+
+.ai-disclaimer {
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  background: #fdf1e6;
+  border-left: 3px solid var(--gold);
+  padding: 10px 12px;
+  margin: 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.ai-card {
+  border: 1px dashed #d9c4ac;
+  border-radius: var(--radius);
+  background: #fffaf3;
+  padding: 14px 16px;
+}
+.ai-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.ai-card h4 {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin: 0 0 2px;
+  color: var(--ink);
+}
+.ai-badge {
+  flex: 0 0 auto;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7a5c2e;
+  background: #f6e7cf;
+  border: 1px solid #e6d2b2;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+.ai-meta {
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+.ai-summary { font-size: 0.93rem; margin: 0 0 8px; }
+.ai-line { font-size: 0.87rem; color: var(--ink-soft); margin: 0 0 3px; }
+.ai-line strong { color: var(--ink); }
+.ai-line-ok { color: #2e7d4f; }
+.ai-note-line {
+  font-size: 0.86rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 8px 0 0;
+  padding-left: 10px;
+  border-left: 2px solid var(--gold);
+}
