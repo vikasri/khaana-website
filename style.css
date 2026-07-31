@@ -175,7 +175,7 @@ p { margin: 0 0 1.1em; }
 /* Both classes are needed to outrank `section.tight` further down the file,
    which would otherwise keep its 40px bottom padding (same specificity, and it
    comes later). */
-section.word-mark-section.tight { padding-top: 48px; padding-bottom: 0; }
+section.word-mark-section.tight { padding-top: 18px; padding-bottom: 0; }
 /* The word mark reads as one unit with the section that follows, so cut the
    usual 64px gap right down — but leave enough to separate them. */
 .word-mark-section + section { padding-top: 26px; }
@@ -904,41 +904,50 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 30px; }
 .find-divider::before,
 .find-divider::after { content: none; }
 
+.find-cta-wrap { text-align: center; }
+
+/* Reads as a button, not a panel: compact, pill-shaped, sized to its label. */
 .find-cta {
-  display: block;
-  padding: 16px 20px;
-  border-radius: var(--radius);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 999px;
   background: linear-gradient(135deg, var(--azure), var(--azure-dark));
   color: #fff;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
   text-decoration: none;
-  box-shadow: 0 10px 26px rgba(18, 63, 93, 0.30);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  box-shadow: 0 6px 16px rgba(18, 63, 93, 0.30);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
 }
 .find-cta:hover {
   text-decoration: none;
   transform: translateY(-2px);
-  box-shadow: 0 16px 34px rgba(18, 63, 93, 0.38);
+  filter: brightness(1.08);
+  box-shadow: 0 11px 24px rgba(18, 63, 93, 0.38);
 }
-.find-cta-title {
-  display: block;
-  font-family: var(--serif);
-  font-size: 1.24rem;
-  font-weight: 700;
-  margin-bottom: 4px;
+.find-cta:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 9px rgba(18, 63, 93, 0.34);
 }
-.find-cta-sub {
-  display: block;
-  font-size: 0.88rem;
+.find-cta:focus-visible {
+  outline: 3px solid rgba(26, 95, 138, 0.45);
+  outline-offset: 3px;
+}
+.find-cta-label { font-weight: 800; letter-spacing: 0.01em; }
+.find-cta-arrow { transition: transform 0.16s ease; }
+.find-cta:hover .find-cta-arrow { transform: translateX(3px); }
+
+.find-cta-note {
+  font-size: 0.84rem;
   line-height: 1.5;
-  color: #cfe3f0;
-  margin-bottom: 8px;
-}
-.find-cta-go {
-  display: block;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: #fff;
+  font-weight: 600;
+  color: var(--azure);
+  margin: 11px auto 0;
+  max-width: 34ch;
 }
 
 @media (max-width: 760px) {
