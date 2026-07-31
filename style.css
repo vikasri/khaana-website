@@ -259,6 +259,15 @@ section.tight { padding: 40px 0; }
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 22px;
 }
+/* 13 cards leave a lone card on the last row: give it its own full-width
+   row and centre it so the grid stays symmetric. */
+.cuisine-grid > .cuisine-card:last-child {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: 252px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .cuisine-card {
   background: var(--paper);
@@ -443,6 +452,9 @@ section.tight { padding: 40px 0; }
   /* Feast/gallery images shorter so they don't dominate the screen */
   .gallery { gap: 14px; margin: 22px 0; }
   .gallery img { height: 210px; }
+
+  /* Single-column on phones: last card should be full-width like the rest */
+  .cuisine-grid > .cuisine-card:last-child { max-width: none; }
 
   /* Footer stacks into a comfortable two-column list */
   .site-footer { padding: 36px 0 24px; }
