@@ -54,6 +54,8 @@ REGION_PAGE = {
  # Cuisines without a region page of their own. recipe.js renders the region
  # as plain text rather than a dead link when this is None.
  "Sindhi": None, "Parsi": None, "Chettinad": None, "Himachali": None,
+ "Andhra": None, "Karnataka": None, "Mangalorean": None, "Kodava": None,
+ "Uttarakhandi": None, "Anglo-Indian": None,
 }
 
 

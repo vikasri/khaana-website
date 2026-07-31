@@ -35,7 +35,7 @@ def main():
         open(os.path.join(ROOT, "data", "recipes.json"), encoding="utf-8"))["recipes"]}
 
     total, failed, seen = 0, 0, {}
-    for path in sorted(glob.glob(os.path.join(HERE, "_batch_*.py"))):
+    for path in sorted(glob.glob(os.path.join(HERE, "_batch*.py"))):
         mod = os.path.basename(path)[:-3]
         try:
             batch = importlib.import_module(mod).BATCH
