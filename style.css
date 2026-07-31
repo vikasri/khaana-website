@@ -168,12 +168,28 @@ p { margin: 0 0 1.1em; }
 .hero.small { height: 42vh; min-height: 280px; }
 
 /* ---------- Word mark (khaana pronunciation) ---------- */
-.word-mark-section { padding-top: 48px; padding-bottom: 8px; }
+/* Both classes are needed to outrank `section.tight` further down the file,
+   which would otherwise keep its 40px bottom padding (same specificity, and it
+   comes later). */
+section.word-mark-section.tight { padding-top: 48px; padding-bottom: 0; }
+/* The word mark reads as one unit with the section that follows, so drop the
+   usual 64px gap between them. */
+.word-mark-section + section { padding-top: 0; }
 
 .word-mark {
   text-align: center;
-  max-width: 480px;
+  max-width: 860px;
   margin: 0 auto;
+}
+
+/* Title and syllable breakdown sit side by side, wrapping to two lines only
+   when there genuinely isn't room. */
+.word-mark-lockup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+  flex-wrap: wrap;
 }
 
 .word-mark-title {
@@ -182,7 +198,7 @@ p { margin: 0 0 1.1em; }
   justify-content: center;
   gap: 14px;
   flex-wrap: wrap;
-  margin-bottom: 26px;
+  margin-bottom: 0;
 }
 
 .word-mark-title-hi {
