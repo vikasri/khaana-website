@@ -1,6 +1,6 @@
 {
   "_comment": "Canonical pantry catalogue for the Cook page. Ingredient ids are the join key used by data/recipes.json. Edit here, not in the page markup.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "staples": [
     "salt",
     "water",
@@ -29,6 +29,10 @@
           "name": "Besan (gram flour)"
         },
         {
+          "id": "bread",
+          "name": "Sliced bread"
+        },
+        {
           "id": "dalia",
           "name": "Dalia (broken wheat)"
         },
@@ -37,16 +41,20 @@
           "name": "Jowar (sorghum) flour"
         },
         {
+          "id": "maida",
+          "name": "Plain flour (maida)"
+        },
+        {
+          "id": "maize-flour",
+          "name": "Maize flour (makki ka atta)"
+        },
+        {
           "id": "murmura",
           "name": "Murmura (puffed rice)"
         },
         {
           "id": "pav",
           "name": "Pav / soft bread rolls"
-        },
-        {
-          "id": "maida",
-          "name": "Plain flour (maida)"
         },
         {
           "id": "poha",
@@ -73,8 +81,8 @@
           "name": "Sabudana (tapioca pearls)"
         },
         {
-          "id": "bread",
-          "name": "Sliced bread"
+          "id": "sattu",
+          "name": "Sattu (roasted gram flour)"
         },
         {
           "id": "vermicelli",
@@ -197,6 +205,10 @@
           "name": "Colocasia (arbi)"
         },
         {
+          "id": "corn",
+          "name": "Sweetcorn"
+        },
+        {
           "id": "cucumber",
           "name": "Cucumber"
         },
@@ -209,16 +221,20 @@
           "name": "Eggplant / brinjal"
         },
         {
-          "id": "methi-leaves",
-          "name": "Fenugreek leaves (methi)"
-        },
-        {
           "id": "french-beans",
           "name": "French beans"
         },
         {
           "id": "green-chilli",
           "name": "Green chilli"
+        },
+        {
+          "id": "lotus-stem",
+          "name": "Lotus stem (nadru/bhee)"
+        },
+        {
+          "id": "methi-leaves",
+          "name": "Fenugreek leaves (methi)"
         },
         {
           "id": "mushroom",
@@ -261,16 +277,16 @@
           "name": "Raw banana / plantain"
         },
         {
+          "id": "raw-jackfruit",
+          "name": "Raw jackfruit (kathal)"
+        },
+        {
           "id": "raw-mango",
           "name": "Raw green mango"
         },
         {
           "id": "raw-papaya",
           "name": "Raw green papaya"
-        },
-        {
-          "id": "raw-jackfruit",
-          "name": "Raw jackfruit (kathal)"
         },
         {
           "id": "ridge-gourd",
@@ -291,10 +307,6 @@
         {
           "id": "sweet-potato",
           "name": "Sweet potato"
-        },
-        {
-          "id": "corn",
-          "name": "Sweetcorn"
         },
         {
           "id": "tomato",
@@ -449,6 +461,10 @@
       "label": "Spices",
       "items": [
         {
+          "id": "ajwain",
+          "name": "Carom seeds (ajwain)"
+        },
+        {
           "id": "amchur",
           "name": "Amchur (dry mango powder)"
         },
@@ -477,12 +493,16 @@
           "name": "Black salt (kala namak)"
         },
         {
-          "id": "ajwain",
-          "name": "Carom seeds (ajwain)"
+          "id": "cardamom",
+          "name": "Green cardamom"
         },
         {
           "id": "chaat-masala",
           "name": "Chaat masala"
+        },
+        {
+          "id": "chilli-powder",
+          "name": "Red chilli powder"
         },
         {
           "id": "cinnamon",
@@ -529,10 +549,6 @@
           "name": "Garam masala"
         },
         {
-          "id": "cardamom",
-          "name": "Green cardamom"
-        },
-        {
           "id": "kashmiri-chilli",
           "name": "Kashmiri chilli powder"
         },
@@ -567,10 +583,6 @@
         {
           "id": "rasam-powder",
           "name": "Rasam powder"
-        },
-        {
-          "id": "chilli-powder",
-          "name": "Red chilli powder"
         },
         {
           "id": "saffron",
@@ -1117,6 +1129,37 @@
         "id": "raw-mango",
         "note": "provides sourness but none of the funk",
         "penalty": 0.5
+      }
+    ],
+    "maize-flour": [
+      {
+        "id": "jowar-flour",
+        "note": "coarser and less sweet, but binds the same",
+        "penalty": 0.2
+      },
+      {
+        "id": "atta",
+        "note": "softer dough, loses the maize flavour",
+        "penalty": 0.35
+      }
+    ],
+    "sattu": [
+      {
+        "id": "besan",
+        "note": "dry-roast it in a pan until nutty or the filling tastes raw",
+        "penalty": 0.2
+      }
+    ],
+    "lotus-stem": [
+      {
+        "id": "yam",
+        "note": "similar starchy bite, none of the lacy texture",
+        "penalty": 0.3
+      },
+      {
+        "id": "colocasia",
+        "note": "softer, needs less cooking",
+        "penalty": 0.35
       }
     ]
   },

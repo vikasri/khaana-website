@@ -50,6 +50,10 @@ REGION_PAGE = {
  "Goan": "goan.html", "Kerala": "kerala.html", "South Indian": "south-indian.html",
  "Hyderabadi": "hyderabadi.html", "Odia": "odia.html", "Bengali": "bengali.html",
  "Northeast Indian": "northeast-indian.html",
+ # Cuisines without a region page of their own yet. recipe.js renders the
+ # region as plain text rather than a dead link when this is None.
+ "Bihari": None, "Sindhi": None, "Parsi": None, "Chettinad": None,
+ "Himachali": None,
 }
 
 

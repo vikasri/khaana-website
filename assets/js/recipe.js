@@ -81,17 +81,25 @@
       '<nav class="crumbs"><a href="cook.html">&larr; Back to suggestions</a></nav>' +
       '<div class="recipe-head">' +
         '<div class="recipe-headline">' +
-          '<div class="eyebrow"><a href="' + esc(r.regionPage) + '">' + esc(r.region) + '</a></div>' +
+          // Not every cuisine has a region page of its own; those show as plain text.
+          '<div class="eyebrow">' + (r.regionPage
+            ? '<a href="' + esc(r.regionPage) + '">' + esc(r.region) + '</a>'
+            : esc(r.region)) + '</div>' +
           '<h1>' + esc(r.name) + '</h1>' +
           '<p class="lede">' + esc(r.subtitle) + '</p>' +
           '<div class="diet-tags">' + r.tags.map(function (t) {
               return '<span class="diet-tag">' + esc(t.replace(/-/g, ' ')) + '</span>';
             }).join('') + '</div>' +
         '</div>' +
-        '<figure class="recipe-photo">' +
-          '<img src="' + esc(r.image.src) + '" alt="' + esc(r.image.alt) + '" />' +
-          '<figcaption>Photo: ' + esc(r.image.credit) + ' &middot; ' + esc(r.image.license) + '</figcaption>' +
-        '</figure>' +
+        (r.image
+          ? '<figure class="recipe-photo">' +
+              '<img src="' + esc(r.image.src) + '" alt="' + esc(r.image.alt) + '" />' +
+              '<figcaption>Photo: ' + esc(r.image.credit) + ' &middot; ' +
+                esc(r.image.license) + '</figcaption>' +
+            '</figure>'
+          : '<figure class="recipe-photo recipe-photo-none" aria-hidden="true">' +
+              '<span>' + esc(r.name.charAt(0)) + '</span>' +
+            '</figure>') +
       '</div>' +
 
       '<div class="recipe-stats">' +
@@ -156,14 +164,17 @@
     if (raw) JSON.parse(raw).forEach(function (i) { have.add(i); });
   } catch (e) { /* ignore */ }
 
+  var wanted = param('id');
+  // One detail file per recipe, so opening a page never downloads the others.
+  // An unknown id 404s, which is the not-found path rather than an error.
   Promise.all([
     fetch('data/pantry.json').then(function (r) { return r.json(); }),
-    fetch('data/recipes.json').then(function (r) { return r.json(); })
+    fetch('data/recipes/' + encodeURIComponent(wanted || '') + '.json')
+      .then(function (r) { return r.ok ? r.json() : null; })
   ]).then(function (res) {
     pantry = res[0];
-    var id = param('id');
-    recipe = res[1].recipes.filter(function (r) { return r.id === id; })[0];
-    if (!recipe) return notFound(id);
+    recipe = res[1];
+    if (!recipe) return notFound(wanted);
     render();
   }).catch(function (e) {
     document.getElementById('recipe').innerHTML =

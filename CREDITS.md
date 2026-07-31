@@ -47,3 +47,14 @@ All images, including the home page hero, are sourced from Wikimedia Commons via
 | `assets/images/south-indian-g1.jpg` | Idli | CC BY-SA 3.0 | Soumya dey at English Wikipedia | [link](https://upload.wikimedia.org/wikipedia/commons/1/11/Idli_Sambar.JPG) |
 | `assets/images/south-indian-g2.jpg` | Sambar (dish) | CC BY-SA 4.0 | Kalaiselvi Murugesan | [link](https://upload.wikimedia.org/wikipedia/commons/b/bb/Pumpkin_sambar.JPG) |
 | `assets/images/south-indian-hero.jpg` | Masala dosa | Unknown | Unknown | [link](https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Masala_Dosa_2023.jpg/3840px-Masala_Dosa_2023.jpg) |
+
+| `assets/images/recipes/aloo-gobi.jpg` | Aloo gobi | CC BY-SA 2.0 | Unknown | [link](https://commons.wikimedia.org/wiki/File:Aloo_gobi.jpg) |
+| `assets/images/recipes/baingan-bharta.jpg` | Baingan bharta | CC BY-SA 4.0 | Zeel Patel | [link](https://commons.wikimedia.org/wiki/File:Baingan_Ka_Bharta.JPG) |
+| `assets/images/recipes/bisi-bele-bath.jpg` | Bisi bele bath | CC BY-SA 3.0 | Food and Remedy, LLC | [link](https://commons.wikimedia.org/wiki/File:Bisi_Bele_Bath_(Bisibelebath).JPG) |
+| `assets/images/recipes/chana-masala.jpg` | Chana masala | CC0 | Andy Li | [link](https://commons.wikimedia.org/wiki/File:Chana_Masala_-_Mohammed_-_Spice_Of_Life_2024-05-27.jpg) |
+| `assets/images/recipes/dal-tadka.jpg` | Dal tadka | CC BY-SA 4.0 | Wind Hashira | [link](https://commons.wikimedia.org/wiki/File:Dal_tadka_and_naan.jpg) |
+| `assets/images/recipes/palak-paneer.jpg` | Palak paneer | CC BY-SA 4.0 | Lopanayak | [link](https://commons.wikimedia.org/wiki/File:Palakpaneer_Rayagada_Odisha_0009.jpg) |
+| `assets/images/recipes/pav-bhaji.jpg` | Pav bhaji | CC BY-SA 4.0 | BHAAGIi | [link](https://commons.wikimedia.org/wiki/File:Bhaji_pav_2.jpg) |
+| `assets/images/recipes/rajma-chawal.jpg` | Rajma chawal | CC BY-SA 4.0 | Medhi jyoti | [link](https://commons.wikimedia.org/wiki/File:Rajma_Chawal_Thali.jpg) |
+| `assets/images/recipes/rasam.jpg` | Rasam soup | Public domain | Miansari66 | [link](https://commons.wikimedia.org/wiki/File:Rasam.JPG) |
+| `assets/images/recipes/upma.jpg` | Upma | CC BY-SA 4.0 | Intodustin | [link](https://commons.wikimedia.org/wiki/File:Upma_South_India.JPG) |
