@@ -35,6 +35,9 @@ All images, including the home page hero, are sourced from Wikimedia Commons via
 | `assets/images/northeast-g1.jpg` | Naga smoked pork with bamboo shoot | CC BY-SA 4.0 | Satdeep Gill | [link](https://commons.wikimedia.org/wiki/File:Naga_style_smoked_Pork_ribs_with_bamboo_shoots_and_rice.jpg) |
 | `assets/images/northeast-g2.jpg` | Momos | CC BY-SA 4.0 | efk.apple | [link](https://commons.wikimedia.org/wiki/File:North_Eastern_Momos_(Macro).JPG) |
 | `assets/images/northeast-hero.jpg` | Assamese thali | CC BY-SA 3.0 | Deepak G Goswami | [link](https://commons.wikimedia.org/wiki/File:Assamese_Thali_at_Guwahati.jpg) |
+| `assets/images/odia-hero.jpg` | Dalma (Odia vegetables and pulses curry) | CC BY-SA 4.0 | Raseswari | [link](https://commons.wikimedia.org/wiki/File:Dalma_(Odia_vegetables_and_pulses_curry).jpg) |
+| `assets/images/odia-g1.jpg` | Chhena poda (Puri) | CC BY-SA 4.0 | Subhransuphotography | [link](https://commons.wikimedia.org/wiki/File:Chhena_Poda-Puri-Odisha-IMG_1323.jpg) |
+| `assets/images/odia-g2.jpg` | Dahi pakhala | CC BY-SA 4.0 | Sangram Keshari Senapati | [link](https://commons.wikimedia.org/wiki/File:Dahi_Pakhala_for_Pakhala_Dibasa.jpg) |
 | `assets/images/punjabi-g1.jpg` | Butter chicken | CC BY-SA 4.0 | Yuvraj Singh 97 | [link](https://upload.wikimedia.org/wikipedia/commons/4/41/Butter_Chicken_%26_Butter_Naan_-_Home_-_Chandigarh_-_India_-_0006.jpg) |
 | `assets/images/punjabi-g2.jpg` | Chole bhature | Unknown | Unknown | [link](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Chole_Bhature_from_Nagpur.JPG/3840px-Chole_Bhature_from_Nagpur.JPG) |
 | `assets/images/punjabi-hero.jpg` | Punjabi cuisine | Unknown | Unknown | [link](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Pakistani_Food_Karahi_Beef.jpg/3840px-Pakistani_Food_Karahi_Beef.jpg) |

@@ -440,5 +440,44 @@
     "license": "CC BY-SA 4.0",
     "artist": "Aiwin Soji",
     "note": ""
+  },
+  {
+    "file": "odia-hero.jpg",
+    "region": "odia",
+    "slot": "hero",
+    "wiki_title": "Dalma (Odia vegetables and pulses curry)",
+    "width": 1677,
+    "height": 1800,
+    "size_bytes": 520842,
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Dalma_%28Odia_vegetables_and_pulses_curry%29.jpg/1920px-Dalma_%28Odia_vegetables_and_pulses_curry%29.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Raseswari",
+    "note": "resized for web"
+  },
+  {
+    "file": "odia-g1.jpg",
+    "region": "odia",
+    "slot": "g1",
+    "wiki_title": "Chhena poda",
+    "width": 1200,
+    "height": 768,
+    "size_bytes": 232134,
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Chhena_Poda-Puri-Odisha-IMG_1323.jpg/1920px-Chhena_Poda-Puri-Odisha-IMG_1323.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Subhransuphotography",
+    "note": "resized for web"
+  },
+  {
+    "file": "odia-g2.jpg",
+    "region": "odia",
+    "slot": "g2",
+    "wiki_title": "Dahi pakhala",
+    "width": 1200,
+    "height": 800,
+    "size_bytes": 160651,
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Dahi_Pakhala_for_Pakhala_Dibasa.jpg/1920px-Dahi_Pakhala_for_Pakhala_Dibasa.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sangram Keshari Senapati",
+    "note": "resized for web"
   }
 ]
