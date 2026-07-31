@@ -320,10 +320,11 @@ section.tight { padding: 28px 0; }
   gap: 22px;
 }
 .cuisine-grid > .cuisine-card {
-  /* Grows to fill a full row like the old 1fr tracks, but capped so two
-     leftover cards stay card-sized instead of stretching across the row. */
-  flex: 1 1 230px;
-  max-width: 288px;
+  /* Fixed basis with no grow, so a card is the same width in a row of four as
+     in a row of two. Letting them grow made the last row 288px against 247px
+     elsewhere, because two cards have room to reach the cap and four do not.
+     justify-content on the container absorbs the leftover space instead. */
+  flex: 0 1 240px;
 }
 
 .cuisine-card {
@@ -533,8 +534,8 @@ section.tight { padding: 28px 0; }
   .gallery img { height: 210px; }
 
   /* Single-column on phones: cards run the full width rather than sitting in
-     a narrow centred strip. */
-  .cuisine-grid > .cuisine-card { max-width: none; }
+     a narrow centred strip at the fixed basis above. */
+  .cuisine-grid > .cuisine-card { flex-basis: 100%; max-width: none; }
 
   /* Footer stacks into a comfortable two-column list */
   .site-footer { padding: 36px 0 24px; }
