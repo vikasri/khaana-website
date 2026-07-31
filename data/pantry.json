@@ -157,6 +157,10 @@
           "name": "Ash gourd (petha)"
         },
         {
+          "id": "bamboo-shoot",
+          "name": "Bamboo shoot (fermented or fresh)"
+        },
+        {
           "id": "beetroot",
           "name": "Beetroot"
         },
@@ -259,6 +263,10 @@
         {
           "id": "raw-mango",
           "name": "Raw green mango"
+        },
+        {
+          "id": "raw-papaya",
+          "name": "Raw green papaya"
         },
         {
           "id": "raw-jackfruit",
@@ -619,6 +627,10 @@
           "name": "Dates"
         },
         {
+          "id": "dried-apricot",
+          "name": "Dried apricots (khubani)"
+        },
+        {
           "id": "dried-coconut",
           "name": "Dried coconut (copra)"
         },
@@ -657,6 +669,10 @@
         {
           "id": "pistachios",
           "name": "Pistachios"
+        },
+        {
+          "id": "pomegranate",
+          "name": "Pomegranate"
         },
         {
           "id": "poppy-seeds",
@@ -1087,6 +1103,20 @@
         "id": "onion",
         "note": "stronger; use less",
         "penalty": 0.25
+      }
+    ],
+    "raw-papaya": [
+      {
+        "id": "yogurt",
+        "note": "a weaker tenderiser; marinate longer",
+        "penalty": 0.4
+      }
+    ],
+    "bamboo-shoot": [
+      {
+        "id": "raw-mango",
+        "note": "provides sourness but none of the funk",
+        "penalty": 0.5
       }
     ]
   },
