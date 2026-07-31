@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cook With What You Have | Khaana</title>
+<meta name="description" content="Tell Khaana what is in your kitchen and it will suggest Indian dishes you can actually cook tonight, ranked by how much of each recipe you already have." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">Khaana <span>| भारत के स्वाद</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cook.html" class="active">Cook</a></li>
+        <li><a href="awadhi-lucknowi.html">Awadhi/Lucknowi</a></li>
+        <li><a href="kashmiri.html">Kashmiri</a></li>
+        <li><a href="punjabi.html">Punjabi</a></li>
+        <li><a href="rajasthani.html">Rajasthani</a></li>
+        <li><a href="gujarati.html">Gujarati</a></li>
+        <li><a href="maharashtrian.html">Maharashtrian</a></li>
+        <li><a href="goan.html">Goan</a></li>
+        <li><a href="kerala.html">Kerala</a></li>
+        <li><a href="south-indian.html">South Indian</a></li>
+        <li><a href="hyderabadi.html">Hyderabadi</a></li>
+        <li><a href="odia.html">Odia</a></li>
+        <li><a href="bengali.html">Bengali</a></li>
+        <li><a href="northeast-indian.html">Northeast Indian</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="tight">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Cook tonight</div>
+      <h2>What can I make with what I have?</h2>
+      <p>Tick what is in your kitchen. Khaana ranks its recipes by how much of each one you can already make, tells you exactly what is missing, and suggests substitutions where a swap genuinely works.</p>
+    </div>
+
+    <div class="cook-layout">
+
+      <aside class="cook-panel">
+        <div class="panel-block">
+          <div class="panel-head">
+            <h3>Your pantry <span class="chip" id="pantry-count">0</span></h3>
+            <button type="button" id="clear-pantry" class="link-btn">Clear</button>
+          </div>
+          <input type="search" id="pantry-search" class="pantry-search" placeholder="Search ingredients&hellip;" aria-label="Search ingredients" />
+          <div id="pantry-groups"></div>
+        </div>
+
+        <div class="panel-block">
+          <h3>Dietary</h3>
+          <div class="filter-set">
+            <label><input type="checkbox" name="diet" value="vegetarian" /> Vegetarian</label>
+            <label><input type="checkbox" name="diet" value="vegan" /> Vegan</label>
+            <label><input type="checkbox" name="diet" value="gluten-free" /> Gluten-free</label>
+            <label><input type="checkbox" name="diet" value="dairy-free" /> Dairy-free</label>
+            <label><input type="checkbox" name="diet" value="nut-free" /> Nut-free</label>
+            <label><input type="checkbox" name="diet" value="no-onion-garlic" /> No onion or garlic</label>
+          </div>
+        </div>
+
+        <div class="panel-block">
+          <h3>Time &amp; skill</h3>
+          <label class="field">
+            <span>I have about</span>
+            <select id="f-time">
+              <option value="">any amount of time</option>
+              <option value="30">30 minutes</option>
+              <option value="45">45 minutes</option>
+              <option value="60">1 hour</option>
+              <option value="90">1.5 hours</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>My cooking is</span>
+            <select id="f-skill">
+              <option value="">any level</option>
+              <option value="easy">beginner</option>
+              <option value="moderate">comfortable</option>
+              <option value="advanced">confident</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="panel-block">
+          <h3>Equipment</h3>
+          <p class="panel-hint">Leave blank if you are not fussy. Tick what you own to hide recipes you cannot make.</p>
+          <div class="filter-set">
+            <label><input type="checkbox" name="equip" value="stovetop" /> Stovetop</label>
+            <label><input type="checkbox" name="equip" value="pressure-cooker" /> Pressure cooker</label>
+            <label><input type="checkbox" name="equip" value="steamer" /> Steamer</label>
+            <label><input type="checkbox" name="equip" value="blender" /> Blender</label>
+            <label><input type="checkbox" name="equip" value="oven" /> Oven or grill</label>
+            <label><input type="checkbox" name="equip" value="kadhai" /> Deep pan for frying</label>
+            <label><input type="checkbox" name="equip" value="tawa" /> Flat griddle (tawa)</label>
+          </div>
+        </div>
+      </aside>
+
+      <div class="cook-results">
+        <p id="results-summary" class="results-summary">Loading the recipe database&hellip;</p>
+        <div id="results" class="results-grid"></div>
+        <div id="blocked" class="blocked-list"></div>
+
+        <div class="ai-note">
+          <h3>Beyond these recipes</h3>
+          <p>The suggestions above come from Khaana's own curated recipes, each one written to a standard format and kept under version control. Matching against your pantry is automatic; the recipes themselves are not improvised on the spot.</p>
+          <p class="ai-note-sub">A broader AI-assisted search over the long tail of Indian home cooking is planned as a clearly-labelled second tier, kept visually distinct from the curated recipes so you always know which is which.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <h4>Khaana</h4>
+      <p style="max-width:280px; font-size:0.97rem;">A site about the history and tradition behind India's regional cuisines.</p>
+      <p style="max-width:280px; font-size:0.9rem; margin-top:12px;">Questions or suggestions? <a href="mailto:strategychoice1@gmail.com">Email us</a>.</p>
+    </div>
+    <div>
+      <h4>Cuisines</h4>
+      <ul class="foot-links">
+        <li><a href="awadhi-lucknowi.html">Awadhi/Lucknowi</a></li>
+        <li><a href="kashmiri.html">Kashmiri</a></li>
+        <li><a href="punjabi.html">Punjabi</a></li>
+        <li><a href="rajasthani.html">Rajasthani</a></li>
+        <li><a href="gujarati.html">Gujarati</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>More</h4>
+      <ul class="foot-links">
+        <li><a href="maharashtrian.html">Maharashtrian</a></li>
+        <li><a href="goan.html">Goan</a></li>
+        <li><a href="kerala.html">Kerala</a></li>
+        <li><a href="south-indian.html">South Indian</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Also</h4>
+      <ul class="foot-links">
+        <li><a href="hyderabadi.html">Hyderabadi</a></li>
+        <li><a href="odia.html">Odia</a></li>
+        <li><a href="bengali.html">Bengali</a></li>
+        <li><a href="northeast-indian.html">Northeast Indian</a></li>
+      </ul>
+    </div>
+    <div class="credit-line">Image credits: see <a href="CREDITS.md">CREDITS.md</a>.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="assets/js/cook.js"></script>
+</body>
+</html>

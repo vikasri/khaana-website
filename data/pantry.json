@@ -1,0 +1,216 @@
+{
+  "_comment": "Canonical pantry catalogue for the Cook page. Ingredient ids are the join key used by data/recipes.json. Edit here, not in the page markup.",
+  "version": "1.0.0",
+  "staples": ["salt", "water", "sugar", "neutral-oil"],
+  "categories": [
+    {
+      "id": "grains",
+      "label": "Grains & flours",
+      "items": [
+        { "id": "rice", "name": "Rice (short/medium grain)" },
+        { "id": "basmati-rice", "name": "Basmati rice" },
+        { "id": "atta", "name": "Atta (wholewheat flour)" },
+        { "id": "maida", "name": "Plain flour (maida)" },
+        { "id": "besan", "name": "Besan (gram flour)" },
+        { "id": "rava", "name": "Rava / sooji (semolina)" },
+        { "id": "poha", "name": "Poha (flattened rice)" },
+        { "id": "pav", "name": "Pav / soft bread rolls" }
+      ]
+    },
+    {
+      "id": "pulses",
+      "label": "Lentils & legumes",
+      "items": [
+        { "id": "toor-dal", "name": "Toor dal (pigeon pea)" },
+        { "id": "moong-dal", "name": "Moong dal" },
+        { "id": "chana-dal", "name": "Chana dal" },
+        { "id": "masoor-dal", "name": "Masoor dal (red lentil)" },
+        { "id": "urad-dal", "name": "Urad dal (black gram)" },
+        { "id": "chickpeas", "name": "Chickpeas (kabuli chana)" },
+        { "id": "rajma", "name": "Rajma (kidney beans)" },
+        { "id": "sprouted-moth", "name": "Sprouted moth/matki beans" }
+      ]
+    },
+    {
+      "id": "veg",
+      "label": "Vegetables",
+      "items": [
+        { "id": "onion", "name": "Onion" },
+        { "id": "shallot", "name": "Shallots (small red onions)" },
+        { "id": "tomato", "name": "Tomato" },
+        { "id": "potato", "name": "Potato" },
+        { "id": "cauliflower", "name": "Cauliflower" },
+        { "id": "peas", "name": "Peas" },
+        { "id": "spinach", "name": "Spinach" },
+        { "id": "eggplant", "name": "Eggplant / brinjal" },
+        { "id": "okra", "name": "Okra / bhindi" },
+        { "id": "carrot", "name": "Carrot" },
+        { "id": "pumpkin", "name": "Pumpkin" },
+        { "id": "raw-banana", "name": "Raw banana / plantain" },
+        { "id": "drumstick", "name": "Drumstick (moringa pod)" },
+        { "id": "capsicum", "name": "Capsicum / bell pepper" },
+        { "id": "green-chilli", "name": "Green chilli" }
+      ]
+    },
+    {
+      "id": "aromatics",
+      "label": "Aromatics & herbs",
+      "items": [
+        { "id": "ginger", "name": "Ginger" },
+        { "id": "garlic", "name": "Garlic" },
+        { "id": "curry-leaves", "name": "Curry leaves" },
+        { "id": "coriander-leaves", "name": "Coriander leaves (cilantro)" },
+        { "id": "mint", "name": "Mint" }
+      ]
+    },
+    {
+      "id": "dairy",
+      "label": "Dairy & fats",
+      "items": [
+        { "id": "yogurt", "name": "Yogurt / dahi" },
+        { "id": "milk", "name": "Milk" },
+        { "id": "cream", "name": "Cream" },
+        { "id": "butter", "name": "Butter" },
+        { "id": "ghee", "name": "Ghee" },
+        { "id": "paneer", "name": "Paneer" },
+        { "id": "mustard-oil", "name": "Mustard oil" },
+        { "id": "coconut-oil", "name": "Coconut oil" }
+      ]
+    },
+    {
+      "id": "protein",
+      "label": "Meat, fish & eggs",
+      "items": [
+        { "id": "chicken", "name": "Chicken" },
+        { "id": "mutton", "name": "Mutton / lamb" },
+        { "id": "pork", "name": "Pork" },
+        { "id": "fish", "name": "Fish (firm fillets or steaks)" },
+        { "id": "prawns", "name": "Prawns" },
+        { "id": "eggs", "name": "Eggs" }
+      ]
+    },
+    {
+      "id": "spices",
+      "label": "Spices",
+      "items": [
+        { "id": "turmeric", "name": "Turmeric powder" },
+        { "id": "chilli-powder", "name": "Red chilli powder" },
+        { "id": "kashmiri-chilli", "name": "Kashmiri chilli powder" },
+        { "id": "paprika", "name": "Paprika" },
+        { "id": "coriander-powder", "name": "Coriander powder" },
+        { "id": "cumin-seeds", "name": "Cumin seeds" },
+        { "id": "mustard-seeds", "name": "Mustard seeds" },
+        { "id": "fenugreek-seeds", "name": "Fenugreek seeds (methi)" },
+        { "id": "fennel-seeds", "name": "Fennel seeds (saunf)" },
+        { "id": "nigella", "name": "Nigella seeds (kalonji)" },
+        { "id": "asafoetida", "name": "Asafoetida (hing)" },
+        { "id": "garam-masala", "name": "Garam masala" },
+        { "id": "bay-leaf", "name": "Bay leaf" },
+        { "id": "cardamom", "name": "Green cardamom" },
+        { "id": "black-cardamom", "name": "Black cardamom" },
+        { "id": "cinnamon", "name": "Cinnamon" },
+        { "id": "cloves", "name": "Cloves" },
+        { "id": "black-pepper", "name": "Black pepper" },
+        { "id": "dried-red-chilli", "name": "Dried red chillies" },
+        { "id": "star-anise", "name": "Star anise" },
+        { "id": "nutmeg", "name": "Nutmeg" },
+        { "id": "saffron", "name": "Saffron" },
+        { "id": "fennel-powder", "name": "Fennel powder" },
+        { "id": "dry-ginger-powder", "name": "Dry ginger powder (saunth)" }
+      ]
+    },
+    {
+      "id": "pantry",
+      "label": "Sour, sweet & nuts",
+      "items": [
+        { "id": "tamarind", "name": "Tamarind" },
+        { "id": "kokum", "name": "Kokum" },
+        { "id": "lemon", "name": "Lemon / lime" },
+        { "id": "vinegar", "name": "Vinegar" },
+        { "id": "jaggery", "name": "Jaggery" },
+        { "id": "coconut", "name": "Coconut (fresh or desiccated)" },
+        { "id": "coconut-milk", "name": "Coconut milk" },
+        { "id": "cashew", "name": "Cashews" },
+        { "id": "peanut", "name": "Peanuts" },
+        { "id": "poppy-seeds", "name": "Poppy seeds (khus khus)" },
+        { "id": "sesame", "name": "Sesame seeds" },
+        { "id": "eno", "name": "Eno / fruit salt" },
+        { "id": "baking-soda", "name": "Baking soda" }
+      ]
+    }
+  ],
+
+  "_substitutions_comment": "Directional: if the recipe wants KEY and the cook lacks it, any listed option is an acceptable stand-in. 'penalty' (0-1) is how much match score is lost versus having the real thing.",
+  "substitutions": {
+    "toor-dal": [{ "id": "masoor-dal", "note": "cooks faster, softer texture", "penalty": 0.15 }, { "id": "moong-dal", "note": "lighter, less body", "penalty": 0.2 }],
+    "masoor-dal": [{ "id": "toor-dal", "note": "needs longer cooking", "penalty": 0.15 }, { "id": "moong-dal", "note": "milder", "penalty": 0.2 }],
+    "moong-dal": [{ "id": "masoor-dal", "note": "similar cook time", "penalty": 0.15 }],
+    "ghee": [{ "id": "butter", "note": "slightly lower smoke point", "penalty": 0.1 }, { "id": "neutral-oil", "note": "loses the nutty aroma", "penalty": 0.25 }, { "id": "coconut-oil", "note": "adds coconut note; fine in southern dishes", "penalty": 0.2 }],
+    "butter": [{ "id": "ghee", "note": "richer, nuttier", "penalty": 0.1 }],
+    "cream": [{ "id": "yogurt", "note": "whisk well and add off heat or it splits", "penalty": 0.25 }, { "id": "cashew", "note": "soak and blend into a paste", "penalty": 0.2 }, { "id": "coconut-milk", "note": "changes the flavour profile", "penalty": 0.3 }],
+    "yogurt": [{ "id": "cream", "note": "less tang; add a squeeze of lemon", "penalty": 0.25 }, { "id": "coconut-milk", "note": "dairy-free; less tang", "penalty": 0.3 }],
+    "kashmiri-chilli": [{ "id": "chilli-powder", "note": "much hotter, use about a third", "penalty": 0.2 }, { "id": "paprika", "note": "colour without heat", "penalty": 0.2 }],
+    "chilli-powder": [{ "id": "kashmiri-chilli", "note": "milder, use more for heat", "penalty": 0.15 }, { "id": "green-chilli", "note": "fresher, sharper heat", "penalty": 0.25 }],
+    "tamarind": [{ "id": "lemon", "note": "brighter, less deep; add at the end", "penalty": 0.2 }, { "id": "kokum", "note": "more astringent", "penalty": 0.15 }, { "id": "vinegar", "note": "sharper; use sparingly", "penalty": 0.3 }],
+    "kokum": [{ "id": "tamarind", "note": "sweeter, less astringent", "penalty": 0.15 }],
+    "coconut-milk": [{ "id": "coconut", "note": "blend fresh/desiccated coconut with warm water and strain", "penalty": 0.15 }, { "id": "cream", "note": "richer, not dairy-free", "penalty": 0.3 }],
+    "coconut": [{ "id": "coconut-milk", "note": "adjust the liquid in the recipe", "penalty": 0.2 }],
+    "curry-leaves": [{ "id": "bay-leaf", "note": "different aroma; a poor but workable stand-in", "penalty": 0.4 }],
+    "jaggery": [{ "id": "sugar", "note": "cleaner sweetness, no molasses depth", "penalty": 0.15 }],
+    "mustard-oil": [{ "id": "neutral-oil", "note": "loses the signature pungency", "penalty": 0.25 }],
+    "coconut-oil": [{ "id": "neutral-oil", "note": "loses the coconut aroma", "penalty": 0.2 }],
+    "basmati-rice": [{ "id": "rice", "note": "grains will be shorter and stickier", "penalty": 0.2 }],
+    "rice": [{ "id": "basmati-rice", "note": "longer, more separate grains", "penalty": 0.2 }],
+    "paneer": [{ "id": "potato", "note": "changes the dish but works in the same gravy", "penalty": 0.4 }],
+    "garam-masala": [{ "id": "cinnamon", "note": "with cloves and cardamom, ground together", "penalty": 0.25 }],
+    "eno": [{ "id": "baking-soda", "note": "use about half; add a little lemon juice", "penalty": 0.2 }],
+    "cashew": [{ "id": "peanut", "note": "earthier; blanch and skin first", "penalty": 0.25 }, { "id": "poppy-seeds", "note": "traditional thickener in eastern India", "penalty": 0.2 }],
+    "chickpeas": [{ "id": "rajma", "note": "different bean, same method", "penalty": 0.35 }],
+    "fish": [{ "id": "prawns", "note": "reduce cooking time sharply", "penalty": 0.2 }],
+    "chicken": [{ "id": "paneer", "note": "vegetarian; add near the end", "penalty": 0.4 }]
+  },
+
+  "_glossary_comment": "Shown inline on recipe pages wherever a term is referenced, so unfamiliar ingredients and techniques are explained in place.",
+  "glossary": {
+    "tadka": {
+      "term": "Tadka (tempering)",
+      "text": "Whole spices bloomed in hot fat, then poured over a finished dish. The fat carries the aromatic compounds that water cannot extract, which is why the same spices taste different raw. Listen for the seeds popping; that is the cue they are done."
+    },
+    "hing": {
+      "term": "Asafoetida (hing)",
+      "text": "A dried resin with a pungent raw smell that turns savoury and onion-like when it hits hot fat. Used in tiny pinches, often in cooking that avoids onion and garlic. Most supermarket hing is cut with flour and is not gluten-free."
+    },
+    "bhuna": {
+      "term": "Bhuna",
+      "text": "Frying the masala base until the fat visibly separates from the paste at the edges of the pan. This is the doneness signal for a curry base: before it, the spices taste raw; after it, they taste round."
+    },
+    "dum": {
+      "term": "Dum",
+      "text": "Sealing a pot and cooking on very low heat so the food finishes in its own trapped steam. Traditionally the lid is sealed with dough."
+    },
+    "kokum": {
+      "term": "Kokum",
+      "text": "A dark, dried coastal fruit rind used as a souring agent along the Konkan coast. Tastes cleaner and more astringent than tamarind and lends a purple tinge."
+    },
+    "panch-phoron": {
+      "term": "Panch phoron",
+      "text": "The eastern Indian five-seed blend: fenugreek, nigella, cumin, black mustard and fennel, used whole and never ground."
+    },
+    "ginger-garlic-paste": {
+      "term": "Ginger-garlic paste",
+      "text": "Equal parts ginger and garlic blended smooth. Make it fresh where you can; the jarred version is usually preserved with acid that reads sour in delicate dishes."
+    },
+    "curry-leaves": {
+      "term": "Curry leaves",
+      "text": "Fresh leaves of Murraya koenigii, unrelated to curry powder. They lose almost everything when dried, so use fresh or frozen. Added to hot oil early so the aroma infuses the fat."
+    },
+    "kadhai": {
+      "term": "Kadhai",
+      "text": "A deep, round-bottomed Indian pan. A wok is the closest substitute; a deep saucepan works but the higher sides slow evaporation."
+    },
+    "resting-dough": {
+      "term": "Resting dough",
+      "text": "Letting kneaded dough sit lets the gluten relax so it rolls out without springing back."
+    }
+  }
+}

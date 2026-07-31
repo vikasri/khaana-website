@@ -1,0 +1,363 @@
+/* Khaana - "Cook with what you have"
+   Loads the curated recipe database, scores each recipe against the cook's
+   pantry and constraints, and renders ranked suggestions.
+   Everything here is client-side; the data files are the source of truth. */
+(function () {
+  'use strict';
+
+  var PANTRY_URL = 'data/pantry.json';
+  var RECIPES_URL = 'data/recipes.json';
+  var STORAGE_KEY = 'khaana.pantry.v1';
+
+  var pantry = null;
+  var recipes = [];
+  var selected = new Set();
+
+  var el = function (id) { return document.getElementById(id); };
+
+  /* ---------- scoring ---------- */
+
+  // A recipe ingredient is one of: have | substitute | missing.
+  // Staples (salt, oil, water, sugar) are assumed present in every kitchen.
+  function classify(ingId, has, staples, subs) {
+    if (staples.indexOf(ingId) !== -1) return { state: 'have', staple: true };
+    if (has.has(ingId)) return { state: 'have' };
+    var options = subs[ingId] || [];
+    for (var i = 0; i < options.length; i++) {
+      if (has.has(options[i].id)) {
+        return { state: 'substitute', via: options[i] };
+      }
+    }
+    return { state: 'missing' };
+  }
+
+  function scoreRecipe(recipe, has, filters) {
+    var staples = pantry.staples;
+    var subs = pantry.substitutions;
+
+    var lines = recipe.ingredients.map(function (ing) {
+      var c = classify(ing.id, has, staples, subs);
+      return {
+        id: ing.id,
+        name: nameFor(ing.id),
+        qty: ing.qty,
+        note: ing.note,
+        essential: ing.essential !== false,
+        state: c.state,
+        staple: !!c.staple,
+        via: c.via || null
+      };
+    });
+
+    // Only non-staple lines count toward the match figure, otherwise every
+    // recipe would score a free 15% for having salt.
+    var counted = lines.filter(function (l) { return !l.staple; });
+    var essentials = counted.filter(function (l) { return l.essential; });
+
+    var earned = 0, possible = 0;
+    counted.forEach(function (l) {
+      // Essentials are weighted 1.0, optional extras 0.35: not having a
+      // garnish should barely dent the score, missing the main pulse should.
+      var w = l.essential ? 1 : 0.35;
+      possible += w;
+      if (l.state === 'have') earned += w;
+      else if (l.state === 'substitute') earned += w * (1 - (l.via.penalty || 0.2));
+    });
+
+    var pct = possible > 0 ? Math.round((earned / possible) * 100) : 0;
+
+    var missingEssential = essentials.filter(function (l) { return l.state === 'missing'; });
+    var subbedEssential = essentials.filter(function (l) { return l.state === 'substitute'; });
+    var missingAny = counted.filter(function (l) { return l.state === 'missing'; });
+
+    return {
+      recipe: recipe,
+      lines: lines,
+      pct: pct,
+      missingEssential: missingEssential,
+      subbedEssential: subbedEssential,
+      missingAll: missingAny,
+      excluded: excludedBy(recipe, filters)
+    };
+  }
+
+  // Hard constraints. These remove a recipe rather than lowering its score,
+  // because "vegan" and "I have 20 minutes" are not preferences you rank by.
+  function excludedBy(recipe, f) {
+    var reasons = [];
+    var total = recipe.prepMinutes + recipe.cookMinutes;
+
+    f.diets.forEach(function (d) {
+      if (recipe.tags.indexOf(d) === -1) reasons.push(labelForTag(d));
+    });
+    if (f.maxTime && total > f.maxTime) reasons.push('over ' + f.maxTime + ' min');
+    if (f.skill && !skillAllows(f.skill, recipe.difficulty)) reasons.push(recipe.difficulty);
+
+    var missingKit = (recipe.equipment || []).filter(function (e) {
+      return f.equipment.length > 0 && f.equipment.indexOf(e) === -1;
+    });
+    if (missingKit.length) reasons.push('needs ' + missingKit.map(labelForEquip).join(', '));
+
+    return reasons;
+  }
+
+  var SKILL_RANK = { easy: 1, moderate: 2, advanced: 3 };
+  function skillAllows(cookSkill, recipeDifficulty) {
+    return SKILL_RANK[recipeDifficulty] <= SKILL_RANK[cookSkill];
+  }
+
+  /* ---------- lookups ---------- */
+
+  var NAME_CACHE = {};
+  function nameFor(id) {
+    if (NAME_CACHE[id]) return NAME_CACHE[id];
+    var found = id;
+    pantry.categories.forEach(function (c) {
+      c.items.forEach(function (i) { if (i.id === id) found = i.name; });
+    });
+    if (found === id) {
+      // staples and anything not in the selectable catalogue
+      found = id.replace(/-/g, ' ').replace(/\b\w/g, function (m) { return m.toUpperCase(); });
+    }
+    NAME_CACHE[id] = found;
+    return found;
+  }
+
+  var TAG_LABELS = {
+    vegetarian: 'vegetarian', vegan: 'vegan', 'gluten-free': 'gluten-free',
+    'dairy-free': 'dairy-free', 'nut-free': 'nut-free',
+    'no-onion-garlic': 'no onion/garlic', pescatarian: 'pescatarian'
+  };
+  function labelForTag(t) { return TAG_LABELS[t] || t; }
+
+  var EQUIP_LABELS = {
+    stovetop: 'a stovetop', 'pressure-cooker': 'a pressure cooker', steamer: 'a steamer',
+    blender: 'a blender', oven: 'an oven or grill', kadhai: 'a deep pan for frying',
+    tawa: 'a flat griddle'
+  };
+  function labelForEquip(e) { return EQUIP_LABELS[e] || e; }
+
+  /* ---------- rendering ---------- */
+
+  function renderPantry() {
+    var wrap = el('pantry-groups');
+    wrap.innerHTML = '';
+    pantry.categories.forEach(function (cat) {
+      var group = document.createElement('div');
+      group.className = 'pantry-group';
+      var h = document.createElement('h3');
+      h.textContent = cat.label;
+      group.appendChild(h);
+
+      var list = document.createElement('div');
+      list.className = 'pantry-items';
+      cat.items.forEach(function (item) {
+        var id = 'ing-' + item.id;
+        var lab = document.createElement('label');
+        lab.className = 'ing';
+        lab.setAttribute('for', id);
+        var cb = document.createElement('input');
+        cb.type = 'checkbox';
+        cb.id = id;
+        cb.value = item.id;
+        cb.checked = selected.has(item.id);
+        cb.addEventListener('change', function () {
+          if (cb.checked) selected.add(item.id); else selected.delete(item.id);
+          persist();
+          update();
+        });
+        lab.appendChild(cb);
+        lab.appendChild(document.createTextNode(item.name));
+        list.appendChild(lab);
+      });
+      group.appendChild(list);
+      wrap.appendChild(group);
+    });
+  }
+
+  function readFilters() {
+    var diets = Array.prototype.slice
+      .call(document.querySelectorAll('input[name="diet"]:checked'))
+      .map(function (i) { return i.value; });
+    var equipment = Array.prototype.slice
+      .call(document.querySelectorAll('input[name="equip"]:checked'))
+      .map(function (i) { return i.value; });
+    var t = el('f-time').value;
+    return {
+      diets: diets,
+      equipment: equipment,
+      maxTime: t ? parseInt(t, 10) : null,
+      skill: el('f-skill').value || null
+    };
+  }
+
+  function update() {
+    var filters = readFilters();
+    var has = selected;
+
+    el('pantry-count').textContent = selected.size;
+
+    var scored = recipes.map(function (r) { return scoreRecipe(r, has, filters); });
+
+    var eligible = scored.filter(function (s) { return s.excluded.length === 0; });
+    var blocked = scored.filter(function (s) { return s.excluded.length > 0; });
+
+    eligible.sort(function (a, b) {
+      if (b.pct !== a.pct) return b.pct - a.pct;
+      if (a.missingEssential.length !== b.missingEssential.length) {
+        return a.missingEssential.length - b.missingEssential.length;
+      }
+      return (a.recipe.prepMinutes + a.recipe.cookMinutes) -
+             (b.recipe.prepMinutes + b.recipe.cookMinutes);
+    });
+
+    renderResults(eligible, blocked, filters);
+  }
+
+  function renderResults(eligible, blocked, filters) {
+    var out = el('results');
+    out.innerHTML = '';
+
+    var summary = el('results-summary');
+    if (selected.size === 0) {
+      summary.textContent = 'Showing all ' + eligible.length +
+        ' recipes that fit your filters. Tick what you have to rank them by your pantry.';
+    } else {
+      summary.textContent = eligible.length + ' recipe' + (eligible.length === 1 ? '' : 's') +
+        ' match your filters, ranked by how much of each you can already make.';
+    }
+
+    if (eligible.length === 0) {
+      var none = document.createElement('p');
+      none.className = 'no-results';
+      none.textContent = 'Nothing fits those constraints yet. Try loosening the time limit or the equipment list.';
+      out.appendChild(none);
+    }
+
+    eligible.forEach(function (s) { out.appendChild(card(s)); });
+
+    var bwrap = el('blocked');
+    bwrap.innerHTML = '';
+    if (blocked.length) {
+      var h = document.createElement('h3');
+      h.className = 'blocked-head';
+      h.textContent = 'Ruled out by your filters (' + blocked.length + ')';
+      bwrap.appendChild(h);
+      blocked.forEach(function (s) {
+        var p = document.createElement('p');
+        p.className = 'blocked-row';
+        p.innerHTML = '<a href="recipe.html?id=' + s.recipe.id + '">' + esc(s.recipe.name) +
+          '</a> <span>' + esc(s.excluded.join(' / ')) + '</span>';
+        bwrap.appendChild(p);
+      });
+    }
+  }
+
+  function card(s) {
+    var r = s.recipe;
+    var a = document.createElement('a');
+    a.className = 'match-card';
+    a.href = 'recipe.html?id=' + r.id;
+
+    var have = s.lines.filter(function (l) { return !l.staple && l.state === 'have'; }).length;
+    var countable = s.lines.filter(function (l) { return !l.staple; }).length;
+
+    var missBits = s.missingAll.slice(0, 4).map(function (l) { return esc(l.name); }).join(', ');
+    var extraMiss = s.missingAll.length > 4 ? ' +' + (s.missingAll.length - 4) + ' more' : '';
+
+    var subLines = s.lines.filter(function (l) { return l.state === 'substitute'; });
+
+    a.innerHTML =
+      '<div class="match-thumb"><img src="' + esc(r.image.src) + '" alt="' + esc(r.image.alt) + '" loading="lazy" />' +
+        '<span class="match-pct" data-tier="' + tier(s.pct) + '">' + s.pct + '%</span>' +
+      '</div>' +
+      '<div class="match-body">' +
+        '<div class="match-meta">' + esc(r.region) + ' &middot; ' + esc(r.difficulty) +
+          ' &middot; ' + (r.prepMinutes + r.cookMinutes) + ' min &middot; serves ' + r.servings + '</div>' +
+        '<h3>' + esc(r.name) + '</h3>' +
+        '<p class="match-sub">' + esc(r.subtitle) + '</p>' +
+        '<div class="diet-tags">' + r.tags.map(function (t) {
+            return '<span class="diet-tag">' + esc(labelForTag(t)) + '</span>';
+          }).join('') + '</div>' +
+        '<div class="match-lines">' +
+          '<div class="ml have"><strong>' + have + '/' + countable + '</strong> ingredients on hand</div>' +
+          (subLines.length ? '<div class="ml sub"><strong>' + subLines.length +
+             '</strong> can be substituted: ' + subLines.map(function (l) {
+               return esc(l.name) + ' &rarr; ' + esc(nameFor(l.via.id));
+             }).join('; ') + '</div>' : '') +
+          (s.missingAll.length ? '<div class="ml miss"><strong>Missing:</strong> ' + missBits + extraMiss + '</div>'
+                               : '<div class="ml none">Nothing missing</div>') +
+        '</div>' +
+      '</div>';
+    return a;
+  }
+
+  function tier(p) { return p >= 90 ? 'high' : p >= 65 ? 'mid' : 'low'; }
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  /* ---------- persistence ---------- */
+
+  function persist() {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(selected))); }
+    catch (e) { /* private mode; not worth surfacing */ }
+  }
+  function restore() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) JSON.parse(raw).forEach(function (id) { selected.add(id); });
+    } catch (e) { /* ignore */ }
+  }
+
+  /* ---------- boot ---------- */
+
+  function wire() {
+    document.querySelectorAll('input[name="diet"], input[name="equip"]').forEach(function (i) {
+      i.addEventListener('change', update);
+    });
+    el('f-time').addEventListener('change', update);
+    el('f-skill').addEventListener('change', update);
+    el('clear-pantry').addEventListener('click', function () {
+      selected.clear();
+      persist();
+      renderPantry();
+      update();
+    });
+    var search = el('pantry-search');
+    search.addEventListener('input', function () {
+      var q = search.value.trim().toLowerCase();
+      document.querySelectorAll('.pantry-group').forEach(function (g) {
+        var any = false;
+        g.querySelectorAll('.ing').forEach(function (l) {
+          var hit = !q || l.textContent.toLowerCase().indexOf(q) !== -1;
+          l.style.display = hit ? '' : 'none';
+          if (hit) any = true;
+        });
+        g.style.display = any ? '' : 'none';
+      });
+    });
+  }
+
+  function fail(msg) {
+    el('results-summary').textContent = msg;
+  }
+
+  Promise.all([
+    fetch(PANTRY_URL).then(function (r) { return r.json(); }),
+    fetch(RECIPES_URL).then(function (r) { return r.json(); })
+  ]).then(function (res) {
+    pantry = res[0];
+    recipes = res[1].recipes;
+    restore();
+    renderPantry();
+    wire();
+    update();
+  }).catch(function (e) {
+    fail('Could not load the recipe database. If you are opening this file directly, run it through a web server instead: browsers block fetch() on file:// URLs.');
+    if (window.console) console.error(e);
+  });
+})();
