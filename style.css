@@ -172,9 +172,9 @@ p { margin: 0 0 1.1em; }
    which would otherwise keep its 40px bottom padding (same specificity, and it
    comes later). */
 section.word-mark-section.tight { padding-top: 48px; padding-bottom: 0; }
-/* The word mark reads as one unit with the section that follows, so drop the
-   usual 64px gap between them. */
-.word-mark-section + section { padding-top: 0; }
+/* The word mark reads as one unit with the section that follows, so cut the
+   usual 64px gap right down — but leave enough to separate them. */
+.word-mark-section + section { padding-top: 26px; }
 
 .word-mark {
   text-align: center;
