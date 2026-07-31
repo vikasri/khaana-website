@@ -58,3 +58,6 @@ All images, including the home page hero, are sourced from Wikimedia Commons via
 | `assets/images/recipes/rajma-chawal.jpg` | Rajma chawal | CC BY-SA 4.0 | Medhi jyoti | [link](https://commons.wikimedia.org/wiki/File:Rajma_Chawal_Thali.jpg) |
 | `assets/images/recipes/rasam.jpg` | Rasam soup | Public domain | Miansari66 | [link](https://commons.wikimedia.org/wiki/File:Rasam.JPG) |
 | `assets/images/recipes/upma.jpg` | Upma | CC BY-SA 4.0 | Intodustin | [link](https://commons.wikimedia.org/wiki/File:Upma_South_India.JPG) |
+| `assets/images/bihari-hero.jpg` | Litti chokha | CC BY-SA 4.0 | Eddie Stann | [link](https://commons.wikimedia.org/wiki/File:Litti_Chokha_2.jpg) |
+| `assets/images/bihari-g1.jpg` | Champaran ahuna mutton | CC BY 3.0 | YN Food Affair | [link](https://commons.wikimedia.org/wiki/File:Champaran_meat.jpg) |
+| `assets/images/bihari-g2.jpg` | Tilkut being pounded in Gaya | CC BY-SA 4.0 | Goutam1962 | [link](https://commons.wikimedia.org/wiki/File:Tilkut_preparation_during_Sankranti_37.jpg) |
