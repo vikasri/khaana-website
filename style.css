@@ -934,28 +934,29 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 
 .find-cta-wrap { text-align: center; }
 
-/* Reads as a button, not a panel: compact, pill-shaped, sized to its label. */
+/* Reads as a button, not a panel: pill-shaped and sized to its label. It is the
+   primary action on the page, so it outweighs the search box beside it. */
 .find-cta {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 14px 28px;
+  gap: 13px;
+  padding: 22px 44px;
   border-radius: 999px;
   background: linear-gradient(135deg, var(--azure), var(--azure-dark));
   color: #fff;
   font-family: var(--sans);
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.2;
   text-decoration: none;
-  box-shadow: 0 6px 16px rgba(18, 63, 93, 0.30);
+  box-shadow: 0 8px 20px rgba(18, 63, 93, 0.32);
   transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
 }
 .find-cta:hover {
   text-decoration: none;
   transform: translateY(-2px);
   filter: brightness(1.08);
-  box-shadow: 0 11px 24px rgba(18, 63, 93, 0.38);
+  box-shadow: 0 14px 30px rgba(18, 63, 93, 0.40);
 }
 .find-cta:active {
   transform: translateY(0);
@@ -966,21 +967,24 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
   outline-offset: 3px;
 }
 .find-cta-label { font-weight: 800; letter-spacing: 0.01em; }
-.find-cta-arrow { transition: transform 0.16s ease; }
+.find-cta-arrow { font-size: 1.15em; transition: transform 0.16s ease; }
 .find-cta:hover .find-cta-arrow { transform: translateX(3px); }
 
 .find-cta-note {
-  font-size: 0.84rem;
+  font-size: 0.88rem;
   line-height: 1.5;
   font-weight: 600;
   color: var(--azure);
-  margin: 11px auto 0;
-  max-width: 34ch;
+  margin: 13px auto 0;
+  max-width: 36ch;
 }
 
 @media (max-width: 760px) {
   .find-wrap { grid-template-columns: 1fr; gap: 16px; }
   .find-divider { display: none; }
+  /* The label is long, so the enlarged padding has to give way on narrow
+     screens or the pill overflows its column. */
+  .find-cta { padding: 18px 26px; font-size: 1.08rem; max-width: 100%; }
 }
 
 /* Recipes without a photograph get a lettered tile rather than a broken image
