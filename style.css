@@ -369,8 +369,8 @@ section.tight { padding: 40px 0; }
   align-items: center;
 }
 .region-map-wrap { text-align: center; }
-.region-map-wrap img { width: 100%; max-width: 340px; height: auto; }
-.region-map-caption { font-size: 0.85rem; color: var(--ink-soft); margin: 10px 0 0; }
+.region-map-wrap img { width: 100%; max-width: 460px; height: auto; margin: 0 auto; }
+.region-map-caption { font-size: 0.85rem; color: var(--ink-soft); margin: 10px auto 0; text-align: center; max-width: 520px; }
 .region-map-legend {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
