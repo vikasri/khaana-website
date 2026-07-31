@@ -91,7 +91,6 @@
       if (recipe.tags.indexOf(d) === -1) reasons.push(labelForTag(d));
     });
     if (f.maxTime && total > f.maxTime) reasons.push('over ' + f.maxTime + ' min');
-    if (f.skill && !skillAllows(f.skill, recipe.difficulty)) reasons.push(recipe.difficulty);
 
     var missingKit = (recipe.equipment || []).filter(function (e) {
       return f.equipment.length > 0 && f.equipment.indexOf(e) === -1;
@@ -99,11 +98,6 @@
     if (missingKit.length) reasons.push('needs ' + missingKit.map(labelForEquip).join(', '));
 
     return reasons;
-  }
-
-  var SKILL_RANK = { easy: 1, moderate: 2, advanced: 3 };
-  function skillAllows(cookSkill, recipeDifficulty) {
-    return SKILL_RANK[recipeDifficulty] <= SKILL_RANK[cookSkill];
   }
 
   /* ---------- lookups ---------- */
@@ -186,8 +180,7 @@
     return {
       diets: diets,
       equipment: equipment,
-      maxTime: t ? parseInt(t, 10) : null,
-      skill: el('f-skill').value || null
+      maxTime: t ? parseInt(t, 10) : null
     };
   }
 
@@ -320,7 +313,6 @@
       i.addEventListener('change', update);
     });
     el('f-time').addEventListener('change', update);
-    el('f-skill').addEventListener('change', update);
     el('clear-pantry').addEventListener('click', function () {
       selected.clear();
       persist();
