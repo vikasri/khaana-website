@@ -79,7 +79,7 @@
   function render(list, q) {
     if (!list.length) {
       panel.innerHTML = '<p class="find-empty">Nothing matches &ldquo;' + esc(q) +
-        '&rdquo;. Try a dish, an ingredient or a region &mdash; or ' +
+        '&rdquo;. Try a dish, an ingredient or a region, or ' +
         '<a href="cook.html">cook from what you have</a>.</p>';
       panel.hidden = false;
       return;

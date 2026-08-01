@@ -126,8 +126,10 @@ def nutrition_panel(r):
                    esc(label),
                    ("%d%s kcal" % (ps[key], plus)) if key == "kcal"
                    else ("%.1f%s %s" % (ps[key], plus, unit)),
+                   # Per 100 g carries no decimals: it is a comparison figure,
+                   # and a tenth of a gram per 100 g is noise on an estimate.
                    ("%d%s kcal" % (pc[key], plus)) if key == "kcal"
-                   else ("%.1f%s %s" % (pc[key], plus, unit))))
+                   else ("%.0f%s %s" % (pc[key], plus, unit))))
 
     rows = [
         row("Calories", "kcal", cls="nut-major"),
@@ -141,7 +143,7 @@ def nutrition_panel(r):
     unsat_s = ps["monoFat"] + ps["polyFat"]
     unsat_c = pc["monoFat"] + pc["polyFat"]
     rows.append('<tr class="nut-sub"><th>of which unsaturated</th><td>%.1f%s g</td>'
-                '<td>%.1f%s g</td></tr>' % (unsat_s, plus, unsat_c, plus))
+                '<td>%.0f%s g</td></tr>' % (unsat_s, plus, unsat_c, plus))
 
     notes = []
     if plus:
@@ -225,12 +227,12 @@ def render(r, nav, foot):
 
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Khaana" />
-<meta property="og:title" content="{esc(r['name'])} — {esc(r['region'])} recipe" />
+<meta property="og:title" content="{esc(r['name'])}, {esc(r['region'])} recipe" />
 <meta property="og:description" content="{esc(desc)}" />
 <meta property="og:url" content="{url}" />
 <meta property="og:image" content="{img_abs}" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="{esc(r['name'])} — {esc(r['region'])} recipe" />
+<meta name="twitter:title" content="{esc(r['name'])}, {esc(r['region'])} recipe" />
 <meta name="twitter:description" content="{esc(desc)}" />
 <meta name="twitter:image" content="{img_abs}" />
 

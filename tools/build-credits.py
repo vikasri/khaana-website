@@ -22,7 +22,7 @@ HEADER = """# Image Credits
 
 Every photograph on khaana.com comes from Wikimedia Commons under a licence
 that permits reuse: CC0, public domain, CC BY, or CC BY-SA. Non-commercial (NC)
-and no-derivatives (ND) licences are rejected — ND would forbid the resizing a
+and no-derivatives (ND) licences are rejected, because ND would forbid the resizing a
 responsive layout does.
 
 CC BY and CC BY-SA require attribution, so this file is part of meeting the
@@ -43,9 +43,9 @@ def rows_for(rows, title, keep):
     for r in sel:
         artist = (r.get("artist") or "Unknown").strip() or "Unknown"
         src = r.get("source_url") or ""
-        link = "[link](%s)" % src if src else "—"
+        link = "[link](%s)" % src if src else ", "
         out.append("| `%s` | %s | %s | %s | %s |" % (
-            r["file"], (r.get("wiki_title") or "").strip() or "—",
+            r["file"], (r.get("wiki_title") or "").strip() or ", ",
             r.get("license") or "Unknown", artist[:60], link))
     return "\n".join(out) + "\n\n"
 
@@ -78,9 +78,9 @@ def write_html_page(rows, n_files):
         for r in sel:
             src_url = r.get("source_url") or ""
             link = ('<a href="%s" rel="noopener nofollow">Commons</a>' % esc(src_url)
-                    if src_url else "&mdash;")
+                    if src_url else ", ")
             out.append("<tr><td><code>%s</code></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>"
-                       % (esc(r["file"]), esc((r.get("wiki_title") or "").strip() or "—"),
+                       % (esc(r["file"]), esc((r.get("wiki_title") or "").strip() or ", "),
                           esc(r.get("license") or "Unknown"),
                           esc((r.get("artist") or "Unknown").strip() or "Unknown"), link))
         out.append("</tbody></table></div>")
@@ -108,7 +108,7 @@ def write_html_page(rows, n_files):
     <p class="credits-intro">Every photograph on Khaana comes from
       <a href="https://commons.wikimedia.org/" rel="noopener">Wikimedia Commons</a> under a licence
       that permits reuse: CC0, public domain, CC BY or CC BY-SA. Non-commercial (NC) and
-      no-derivatives (ND) licences are not used &mdash; ND would forbid the resizing a responsive
+      no-derivatives (ND) licences are not used, because ND would forbid the resizing a responsive
       layout does.</p>
     <p class="credits-intro">CC BY and CC BY-SA require attribution, so this page is part of
       meeting the licence terms rather than a courtesy. It lists all %d images on the site.
@@ -163,7 +163,7 @@ def main():
                  "These predate the current pipeline. They came from Commons, but the "
                  "specific licence was not captured at download time, so they are listed "
                  "here rather than claimed to be something they may not be.\n\n")
-        body += "\n".join("- `%s` — %s" % (r["file"], r.get("wiki_title") or "")
+        body += "\n".join("- `%s`, %s" % (r["file"], r.get("wiki_title") or "")
                           for r in sorted(unknown, key=lambda r: r["file"])) + "\n\n"
 
     open(OUT, "w", encoding="utf-8").write(body)

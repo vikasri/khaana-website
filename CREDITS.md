@@ -2,7 +2,7 @@
 
 Every photograph on khaana.com comes from Wikimedia Commons under a licence
 that permits reuse: CC0, public domain, CC BY, or CC BY-SA. Non-commercial (NC)
-and no-derivatives (ND) licences are rejected — ND would forbid the resizing a
+and no-derivatives (ND) licences are rejected, because ND would forbid the resizing a
 responsive layout does.
 
 CC BY and CC BY-SA require attribution, so this file is part of meeting the

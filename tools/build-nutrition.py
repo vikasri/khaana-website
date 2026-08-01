@@ -29,7 +29,7 @@ Method, stated here because the site states it to readers too:
 Anything that cannot be quantified is counted as zero and recorded in
 "unquantified", so a recipe's coverage is visible instead of implied.
 """
-import json, os, re, sys, importlib.util
+import json, math, os, re, sys, importlib.util
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RECIPES = os.path.join(ROOT, "data", "recipes.json")
@@ -225,7 +225,9 @@ def main(usda_path):
                        "so sodium is not given."),
         }
         n["perServing"]["kcal"] = round(tot["kcal"] / servings)
-        n["per100g"]["kcal"] = round(tot["kcal"] / grams * 100)
+        # Rounded up, not to nearest: these figures already run low because
+        # anything added to taste counts as zero.
+        n["per100g"]["kcal"] = math.ceil(tot["kcal"] / grams * 100)
 
         # Not every figure deserves equal trust. Two things degrade it: a large
         # share of the ingredient list that could not be turned into grams, and
@@ -244,8 +246,8 @@ def main(usda_path):
         # what is actually eaten, so a + there would be a lie.
         if soaky:
             n["direction"] = "overstated"
-            n["caveat"] = ("Much of the weighed input may not be eaten — syrup left in the "
-                           "bowl, or batter that yields more than the stated servings — so "
+            n["caveat"] = ("Much of the weighed input may not be eaten. Syrup left in the "
+                           "bowl, or batter that yields more than the stated servings, means "
                            "the real figure is likely lower than this.")
         elif share > 0.10:
             n["direction"] = "understated"

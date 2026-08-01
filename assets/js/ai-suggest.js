@@ -81,13 +81,13 @@
     var out = el('ai-results');
     if (!list.length) {
       out.innerHTML = '';
-      setStatus('No further ideas for this pantry — the recipes above are your best options.', '');
+      setStatus('No further ideas for this pantry. The recipes above are your best options.', '');
       return;
     }
     out.innerHTML =
       '<p class="ai-disclaimer">These are model-generated ideas, not Khaana recipes. ' +
       'They have not been written to the same standard as the recipes above and have no ' +
-      'tested quantities &mdash; treat them as starting points.</p>' +
+      'tested quantities. Treat them as starting points.</p>' +
       list.map(card).join('');
   }
 

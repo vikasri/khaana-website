@@ -52,6 +52,7 @@ def main():
             ps = n["perServing"]
             entry["nutrition"] = {
                 "kcal": ps["kcal"],
+                "kcal100": n["per100g"]["kcal"],
                 "servingGrams": n["servingGrams"],
                 "protein": ps["protein"],
                 "carbs": ps["carbs"],

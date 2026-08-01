@@ -580,7 +580,9 @@
         : 'Worked out from the listed quantities.';
     return '<div class="kcal-row">' +
              '<span class="kcal-main"><strong>' + n.kcal + plus + ' kcal</strong> a serving' +
-               ' <span class="kcal-weight">(' + n.servingGrams + ' g)</span></span>' +
+               ' <span class="kcal-weight">(' + n.servingGrams + ' g' +
+               (n.kcal100 ? ' &middot; ' + n.kcal100 + ' kcal/100 g' : '') +
+               ')</span></span>' +
              '<button type="button" class="kcal-toggle" aria-expanded="false" ' +
                'aria-controls="' + id + '">Nutrition</button>' +
            '</div>' +
