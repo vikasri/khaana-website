@@ -729,6 +729,14 @@ section.tight { padding: 22px 0; }
 
 @media (max-width: 760px) {
   .cook-entry { grid-template-columns: 1fr; gap: 18px; }
+  /* Stacked, search comes first: Search recipes, OR, Cook with what you have.
+     Side by side the columns stay as they are, with search to the right of OR.
+     `order` is safe here only because the "Cook with what you have" block is
+     plain text — nothing in it can be tabbed to, so visual order and keyboard
+     order cannot disagree. */
+  .cook-entry > :nth-child(3) { order: 1; }
+  .cook-entry > .cook-entry-or { order: 2; }
+  .cook-entry > :nth-child(1) { order: 3; }
   .cook-entry-or { justify-self: start; }
 }
 }

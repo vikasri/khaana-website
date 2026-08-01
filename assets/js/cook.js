@@ -13,14 +13,15 @@
   // Below this share of a recipe's ingredients the suggestion stops being
   // useful — it is a shopping list with a photo attached.
   var MIN_PCT = 20;
-  // Ticked on a first visit: the handful almost every Indian kitchen has, so
-  // the page shows real suggestions before the reader touches anything. A saved
-  // pantry always wins over this, including one deliberately emptied.
+  // Nothing is ticked on a first visit.
   //
-  // Salt is deliberately absent. It is a staple in data/pantry.json, which is a
-  // stronger claim than a tick: scoring skips staples outright, so every recipe
-  // already assumes salt. Listing it here would add a row that changes nothing.
-  var DEFAULT_PANTRY = ['black-pepper', 'tomato', 'garam-masala', 'garlic'];
+  // A four-item starter pantry was tried and removed. It made the page look
+  // busy before the reader had done anything, and worse, it scored every
+  // search result against ingredients they had never chosen: searching
+  // "biryani" returned dishes labelled 13% with a long Missing list, which
+  // reads as though the search had been filtered by the pantry. An empty
+  // pantry means the two routes stay visibly independent.
+  var DEFAULT_PANTRY = [];
   // The size of the database is not something the page advertises. Any count
   // above this is reported as "100+" rather than exactly.
   var COUNT_CAP = 100;
@@ -308,7 +309,9 @@
     var line = el('selected-line');
     if (!line) return;
 
-    var chosen = selected.size
+    // While searching, the pantry is not narrowing anything, so listing it
+    // above the results would claim otherwise.
+    var chosen = (selected.size && !searchQuery())
       ? Array.from(selected).map(nameFor).sort().join(', ')
       : '';
 
@@ -399,7 +402,7 @@
 
     function draw() {
       eligible.slice(drawn, drawn + PAGE).forEach(function (s) {
-        out.insertBefore(card(s), more);
+        out.insertBefore(card(s, !!q || selected.size === 0), more);
       });
       drawn = Math.min(drawn + PAGE, eligible.length);
       var left = eligible.length - drawn;
@@ -432,7 +435,14 @@
     }
   }
 
-  function card(s) {
+  /* `searching` strips the pantry read-out. Also passed when the pantry is
+     empty: "0%" and "0/12 ingredients on hand" on every card is noise, and it
+     reads as a verdict on the recipe rather than on an untouched pantry. Search and the pantry are two
+     independent ways in, so a searched result should not be scored against a
+     pantry the reader may not have been using: with the four-item starter
+     pantry every hit otherwise showed "13%" and a long Missing list, which
+     reads as though the search had been filtered by it. */
+  function card(s, searching) {
     var r = s.recipe;
     var a = document.createElement('a');
     a.className = 'match-card';
@@ -452,7 +462,8 @@
 
     a.innerHTML =
       '<div class="match-thumb">' + thumb +
-        '<span class="match-pct" data-tier="' + tier(s.pct) + '">' + s.pct + '%</span>' +
+        (searching ? '' :
+          '<span class="match-pct" data-tier="' + tier(s.pct) + '">' + s.pct + '%</span>') +
       '</div>' +
       '<div class="match-body">' +
         '<div class="match-meta">' + esc(r.region) + ' &middot; ' + esc(r.difficulty) +
@@ -462,6 +473,7 @@
         '<div class="diet-tags">' + r.tags.map(function (t) {
             return '<span class="diet-tag">' + esc(labelForTag(t)) + '</span>';
           }).join('') + '</div>' +
+        (searching ? '' :
         '<div class="match-lines">' +
           '<div class="ml have"><strong>' + have + '/' + countable + '</strong> ingredients on hand</div>' +
           (subLines.length ? '<div class="ml sub"><strong>' + subLines.length +
@@ -470,7 +482,7 @@
              }).join('; ') + '</div>' : '') +
           (s.missingAll.length ? '<div class="ml miss"><strong>Missing:</strong> ' + missBits + extraMiss + '</div>'
                                : '<div class="ml none">Nothing missing</div>') +
-        '</div>' +
+        '</div>') +
       '</div>';
     return a;
   }
