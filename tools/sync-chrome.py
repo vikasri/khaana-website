@@ -47,7 +47,7 @@ SKIP = {"south-indian.html", "himachali.html"}   # redirect stubs
 def nav_html(current):
     rows = ['        <li><a href="index.html"%s>Home</a></li>'
             % (' class="active"' if current == "index.html" else ""),
-            '        <li><a href="cook.html"%s>Cook</a></li>'
+            '        <li><a href="cook.html"%s>Recipes</a></li>'
             % (' class="active"' if current == "cook.html" else "")]
     for href, label in CUISINES:
         cls = ' class="active"' if href == current else ""
