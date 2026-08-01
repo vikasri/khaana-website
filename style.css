@@ -396,6 +396,63 @@ section.tight { padding: 22px 0; }
 .article-grid .prose h2 { margin-top: 1.4em; }
 .article-grid .prose h2:first-child { margin-top: 0; }
 
+/* Footnotes on the checkable claims. The marker has to be findable without
+   being noticed, so it is small, muted and unstyled until hovered, and
+   line-height stays 0 so a marked sentence does not sit lower than the
+   others. The list at the foot is deliberately the smallest type on the
+   page: it is there to be checked, not read. */
+.src-ref {
+  font-family: var(--sans);
+  font-size: 0.62em;
+  font-weight: 700;
+  line-height: 0;
+  vertical-align: super;
+  margin-left: 1px;
+}
+/* No opacity fade here. Muting ink-soft to 0.55 measured 2.33:1 against the
+   cream, and this is a link with real text at 10px. Full ink-soft is 5.93:1
+   and the marker is still quiet, because what makes it unobtrusive is the
+   size and the superscript, not the fade. */
+.src-ref a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding: 0 1px;
+}
+.src-ref a:hover,
+.src-ref a:focus { color: var(--saffron-dark); text-decoration: underline; }
+
+.page-sources {
+  margin-top: 2.6em;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.article-grid .prose .page-sources h2 {
+  margin: 0 0 8px;
+  font-size: 0.74rem;
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  opacity: 0.75;
+}
+.page-sources ol { margin: 0; padding-left: 1.4em; }
+.page-sources li { margin: 0 0 5px; }
+.page-sources li::marker { font-variant-numeric: tabular-nums; }
+.page-sources a { color: var(--ink-soft); text-decoration: underline; text-underline-offset: 2px; }
+.page-sources a:hover { color: var(--saffron-dark); }
+.src-back { text-decoration: none; margin-left: 2px; }
+.src-back:hover { color: var(--saffron-dark); }
+
+/* The anchor jump should not tuck the target under the sticky header. */
+.page-sources li:target { background: #fff6e9; }
+.prose [id^="src-"],
+.prose [id^="ref-"] { scroll-margin-top: calc(var(--header-h, 69px) + 16px); }
+
 .fact-panel {
   background: var(--paper);
   border: 1px solid var(--line);
