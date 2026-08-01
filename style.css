@@ -785,6 +785,16 @@ section.tight { padding: 22px 0; }
   color: #0b5ed7;
   margin-right: 8px;
 }
+/* Ingredients and filters sit on their own rows. Run together in one comma
+   list, "vegetarian" reads as another ingredient rather than a filter. The
+   rule only appears when both rows do, so a bare pantry costs no extra height. */
+.selected-row { display: block; }
+.selected-row + .selected-row {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+.selected-label.alt { color: var(--terracotta); }
 
 .results-summary { font-size: 0.95rem; color: var(--ink-soft); margin-bottom: 18px; }
 .results-grid { display: grid; gap: 16px; }

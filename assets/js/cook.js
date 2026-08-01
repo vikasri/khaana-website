@@ -264,21 +264,44 @@
   }
 
   // A plain restatement of what the results are filtered by, so the reader can
-  // see it without scrolling back up to the panel.
+  // see it without scrolling back up to the panel. Ingredients and filters take
+  // separate labelled rows: run together in one comma list, a filter such as
+  // "vegetarian" just reads as one more thing in the pantry.
   function renderSelectedLine(filters) {
     var line = el('selected-line');
     if (!line) return;
-    var bits = [];
-    if (selected.size) {
-      bits.push(Array.from(selected).map(nameFor).sort().join(', '));
+
+    var chosen = selected.size
+      ? Array.from(selected).map(nameFor).sort().join(', ')
+      : '';
+
+    var applied = [];
+    if (filters.diets.length) applied.push(filters.diets.map(labelForTag).join(', '));
+    if (filters.maxTime) applied.push('under ' + filters.maxTime + ' minutes');
+    // EQUIP_LABELS carry an article because they are read in a sentence
+    // ("needs a pressure cooker"). In a filter list the article is wrong.
+    if (filters.equipment.length) {
+      applied.push(filters.equipment
+        .map(function (e) { return labelForEquip(e).replace(/^an? /, ''); })
+        .join(', '));
     }
-    if (filters.diets.length) bits.push(filters.diets.map(labelForTag).join(', '));
-    if (filters.maxTime) bits.push('under ' + filters.maxTime + ' minutes');
-    if (filters.equipment.length) bits.push(filters.equipment.map(labelForEquip).join(', '));
-    if (!bits.length) { line.hidden = true; line.textContent = ''; return; }
+
+    if (!chosen && !applied.length) { line.hidden = true; line.innerHTML = ''; return; }
+
+    function row(label, text, alt) {
+      return '<span class="selected-row">' +
+               '<span class="selected-label' + (alt ? ' alt' : '') + '">' + label + '</span> ' +
+               esc(text) +
+             '</span>';
+    }
+
+    var html = '';
+    if (chosen) html += row('Selected', chosen, false);
+    // · passes through esc() untouched, so no entity round-trip needed.
+    if (applied.length) html += row('Filters', applied.join(' · '), true);
+
     line.hidden = false;
-    line.innerHTML = '<span class="selected-label">Selected</span> ' + esc(bits.join(' &middot; '))
-      .replace(/&amp;middot;/g, '&middot;');
+    line.innerHTML = html;
   }
 
   function renderResults(eligible, blocked, filters, sparse) {
