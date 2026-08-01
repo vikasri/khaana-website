@@ -1117,10 +1117,15 @@ section.tight { padding: 22px 0; }
 }
 .gloss strong { display: block; color: var(--ink); margin-bottom: 3px; }
 
+/* Was a version stamp. It is now the note telling the reader these are not
+   kitchen-tested, so it needs to stay quiet but be readable rather than
+   skimmed past: same small size, a little more line height and a measure. */
 .provenance {
   margin-top: 34px; padding-top: 14px; border-top: 1px solid var(--line);
-  font-size: 0.82rem; color: var(--ink-soft);
+  font-size: 0.82rem; line-height: 1.6; color: var(--ink-soft); max-width: 68ch;
 }
+.provenance a { color: var(--ink-soft); text-decoration: underline; text-underline-offset: 2px; }
+.provenance a:hover { color: var(--saffron-dark); }
 
 @media (max-width: 900px) {
   .cook-layout { grid-template-columns: 1fr; }

@@ -316,9 +316,11 @@ def render(r, nav, foot):
 
       {nutrition_html}
 
-      <p class="provenance">Recipe v{esc(r.get('provenance',{}).get('recipeVersion','1.0.0'))},
-        last updated {esc(r.get('provenance',{}).get('updated',''))}.
-        Curated for Khaana and kept under version control.</p>
+      <p class="provenance">Written and checked against sources, not cooked in a test
+        kitchen. Times, yields and keeping times are guides, and the allergen and
+        nutrition figures are worked out from the ingredient list rather than measured.
+        Use your own judgement, particularly on doneness and on anything you are
+        storing or reheating. <a href="../about.html">More in About</a>.</p>
     </article>
   </div>
 </section>
