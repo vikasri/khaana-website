@@ -597,7 +597,21 @@ section.tight { padding: 22px 0; }
   align-items: start;
 }
 
-.cook-panel { position: sticky; top: 92px; display: grid; gap: 16px; }
+/* On a wide screen the ingredient panel scrolls independently of the results,
+   so a long pantry does not drag the recipe list up and down with it. The
+   offset is the measured header height, published by script.js, because the
+   nav wraps to two or three lines depending on width. Below 900px the layout
+   is one column and the page scrolls normally, which is already right. */
+.cook-panel {
+  position: sticky;
+  top: calc(var(--header-h, 92px) + 12px);
+  max-height: calc(100vh - var(--header-h, 92px) - 28px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: grid;
+  gap: 16px;
+  padding-right: 6px;
+}
 
 .panel-block {
   background: var(--paper);
@@ -646,7 +660,7 @@ section.tight { padding: 22px 0; }
   border: 1px solid var(--line); border-radius: 8px;
   font: inherit; font-size: 0.9rem; background: var(--cream); color: var(--ink);
 }
-#pantry-groups { max-height: 340px; overflow-y: auto; padding-right: 4px; }
+#pantry-groups { padding-right: 2px; }
 .pantry-group { margin-bottom: 14px; }
 .pantry-group h3 {
   font-family: var(--sans); font-size: 0.72rem; font-weight: 700;
@@ -1019,7 +1033,7 @@ section.tight { padding: 22px 0; }
 
 @media (max-width: 900px) {
   .cook-layout { grid-template-columns: 1fr; }
-  .cook-panel { position: static; }
+  .cook-panel { position: static; max-height: none; overflow: visible; padding-right: 0; }
   #pantry-groups { max-height: 260px; }
   .recipe-head { grid-template-columns: 1fr; }
   .recipe-cols { grid-template-columns: 1fr; gap: 24px; }
