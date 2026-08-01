@@ -130,7 +130,22 @@
             <h3>Your pantry <span class="chip" id="pantry-count">0</span></h3>
             <button type="button" id="clear-pantry" class="link-btn">Clear</button>
           </div>
-          <input type="search" id="pantry-search" class="pantry-search" placeholder="Search ingredients&hellip;" aria-label="Search ingredients" />
+
+          <!-- What you have picked, kept at the top so it does not scroll away
+               behind a long list. -->
+          <div id="pantry-picked" class="pantry-picked" hidden></div>
+
+          <!-- Spices are 39% of every ingredient in the database and nobody
+               decides about them nightly: you keep a spice shelf or you do not.
+               This one control ticks the eighteen that matter, which alone
+               brings 481 of 536 recipes above the display floor. -->
+          <button type="button" id="add-shelf" class="shelf-btn"></button>
+          <p class="shelf-note" id="shelf-note"></p>
+
+          <input type="search" id="pantry-search" class="pantry-search" placeholder="Search all ingredients&hellip;" aria-label="Search ingredients" />
+
+          <!-- The things that actually change from one night to the next. -->
+          <div id="pantry-common"></div>
           <div id="pantry-groups"></div>
         </div>
       </aside>

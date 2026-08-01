@@ -38,7 +38,8 @@
         },
         {
           "id": "dalia",
-          "name": "Dalia (broken wheat)"
+          "name": "Dalia (broken wheat)",
+          "selectable": false
         },
         {
           "id": "jowar-flour",
@@ -50,11 +51,13 @@
         },
         {
           "id": "maize-flour",
-          "name": "Maize flour (makki ka atta)"
+          "name": "Maize flour (makki ka atta)",
+          "selectable": false
         },
         {
           "id": "murmura",
-          "name": "Murmura (puffed rice)"
+          "name": "Murmura (puffed rice)",
+          "selectable": false
         },
         {
           "id": "noodles",
@@ -116,11 +119,13 @@
         },
         {
           "id": "horse-gram",
-          "name": "Horse gram (kulith)"
+          "name": "Horse gram (kulith)",
+          "selectable": false
         },
         {
           "id": "kala-chana",
-          "name": "Kala chana (brown chickpeas)"
+          "name": "Kala chana (brown chickpeas)",
+          "selectable": false
         },
         {
           "id": "lobia",
@@ -140,7 +145,8 @@
         },
         {
           "id": "sprouted-moth",
-          "name": "Sprouted moth/matki beans"
+          "name": "Sprouted moth/matki beans",
+          "selectable": false
         },
         {
           "id": "toor-dal",
@@ -152,7 +158,8 @@
         },
         {
           "id": "whole-moong",
-          "name": "Whole moong (sabut moong)"
+          "name": "Whole moong (sabut moong)",
+          "selectable": false
         },
         {
           "id": "whole-urad",
@@ -178,11 +185,13 @@
         },
         {
           "id": "beetroot",
-          "name": "Beetroot"
+          "name": "Beetroot",
+          "selectable": false
         },
         {
           "id": "bitter-gourd",
-          "name": "Bitter gourd (karela)"
+          "name": "Bitter gourd (karela)",
+          "selectable": false
         },
         {
           "id": "bottle-gourd",
@@ -214,7 +223,8 @@
         },
         {
           "id": "corn",
-          "name": "Sweetcorn"
+          "name": "Sweetcorn",
+          "selectable": false
         },
         {
           "id": "cucumber",
@@ -290,7 +300,8 @@
         },
         {
           "id": "raw-mango",
-          "name": "Raw green mango"
+          "name": "Raw green mango",
+          "selectable": false
         },
         {
           "id": "raw-papaya",
@@ -298,7 +309,8 @@
         },
         {
           "id": "ridge-gourd",
-          "name": "Ridge gourd (turai)"
+          "name": "Ridge gourd (turai)",
+          "selectable": false
         },
         {
           "id": "shallot",
@@ -340,7 +352,8 @@
         },
         {
           "id": "dill",
-          "name": "Dill (suva)"
+          "name": "Dill (suva)",
+          "selectable": false
         },
         {
           "id": "garlic",
@@ -410,7 +423,8 @@
         },
         {
           "id": "tofu",
-          "name": "Tofu"
+          "name": "Tofu",
+          "selectable": false
         },
         {
           "id": "yogurt",
@@ -424,7 +438,8 @@
       "items": [
         {
           "id": "beef",
-          "name": "Beef"
+          "name": "Beef",
+          "selectable": false
         },
         {
           "id": "chicken",
@@ -432,7 +447,8 @@
         },
         {
           "id": "crab",
-          "name": "Crab"
+          "name": "Crab",
+          "selectable": false
         },
         {
           "id": "dried-fish",
@@ -440,7 +456,8 @@
         },
         {
           "id": "duck",
-          "name": "Duck"
+          "name": "Duck",
+          "selectable": false
         },
         {
           "id": "eggs",
@@ -464,7 +481,8 @@
         },
         {
           "id": "squid",
-          "name": "Squid"
+          "name": "Squid",
+          "selectable": false
         }
       ]
     },
@@ -590,11 +608,13 @@
         },
         {
           "id": "paprika",
-          "name": "Paprika"
+          "name": "Paprika",
+          "selectable": false
         },
         {
           "id": "rasam-powder",
-          "name": "Rasam powder"
+          "name": "Rasam powder",
+          "selectable": false
         },
         {
           "id": "saffron",
@@ -606,7 +626,8 @@
         },
         {
           "id": "schezwan-pepper",
-          "name": "Schezwan pepper"
+          "name": "Schezwan pepper",
+          "selectable": false
         },
         {
           "id": "star-anise",
@@ -668,7 +689,8 @@
         },
         {
           "id": "honey",
-          "name": "Honey"
+          "name": "Honey",
+          "selectable": false
         },
         {
           "id": "jaggery",
@@ -1265,5 +1287,6 @@
       "term": "Resting dough",
       "text": "Letting kneaded dough sit lets the gluten relax so it rolls out without springing back."
     }
-  }
+  },
+  "_selectable_comment": "Items used in fewer than three recipes are kept here but marked selectable:false. They stay out of the pantry UI, which is the point, while their proper names and their recipes' ingredient ids remain valid. Deleting them instead broke validation and downgraded 'Bitter gourd (karela)' to 'Bitter Gourd' on the match cards."
 }

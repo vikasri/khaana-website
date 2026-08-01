@@ -1353,3 +1353,47 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 }
 .credits-table tr:last-child td { border-bottom: 0; }
 .credits-table code { font-size: 0.82rem; color: var(--ink-soft); word-break: break-all; }
+
+/* ---------- Pantry picker ---------- */
+/* Picked items pinned above the list: with 148 ingredients below, a selection
+   made at the bottom used to scroll out of sight entirely. */
+.pantry-picked {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  margin: 0 0 12px; padding: 10px;
+  background: var(--cream); border: 1px solid var(--line); border-radius: 10px;
+}
+.picked-chip {
+  font: inherit; font-size: 0.8rem; font-weight: 600;
+  padding: 4px 8px 4px 10px; border-radius: 999px; cursor: pointer;
+  background: var(--paper); color: var(--ink); border: 1px solid var(--line);
+}
+.picked-chip:hover { border-color: var(--saffron-dark); color: var(--saffron-dark); }
+.picked-chip span { color: var(--ink-soft); margin-left: 2px; }
+
+/* One tap for the standing spice shelf. */
+.shelf-btn {
+  width: 100%; text-align: left; font: inherit; font-weight: 700; font-size: 0.92rem;
+  padding: 11px 14px; margin-bottom: 6px; cursor: pointer;
+  border: 1px solid #cfe0f5; border-radius: 10px;
+  background: #eef4fd; color: #0b5ed7;
+}
+.shelf-btn:hover { border-color: #0b5ed7; }
+.shelf-btn.is-on { background: #eaf6ee; border-color: #c3e2cd; color: #1d7a3d; }
+.shelf-note { font-size: 0.8rem; color: var(--ink-soft); margin: 0 0 12px; line-height: 1.45; }
+
+.pantry-common-group h4 {
+  font-family: var(--sans); font-size: 0.72rem; font-weight: 800;
+  letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-soft);
+  margin: 4px 0 8px;
+}
+/* The tail: one row per category, closed until wanted. */
+.pantry-cat { border-top: 1px solid var(--line); }
+.pantry-cat summary {
+  cursor: pointer; list-style: none; padding: 9px 2px;
+  font-family: var(--sans); font-size: 0.88rem; font-weight: 700; color: var(--ink);
+}
+.pantry-cat summary::-webkit-details-marker { display: none; }
+.pantry-cat summary::before { content: '\25B8\00a0'; color: var(--ink-soft); }
+.pantry-cat[open] summary::before { content: '\25BE\00a0'; }
+.pantry-cat .cat-n { color: var(--ink-soft); font-weight: 600; font-size: 0.8rem; }
+.pantry-cat .pantry-items { padding-bottom: 10px; }

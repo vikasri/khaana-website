@@ -146,40 +146,149 @@
 
   /* ---------- rendering ---------- */
 
-  function renderPantry() {
+  /* ---------- the pantry picker ----------
+
+     170 checkboxes in one flat list asked the cook to make 170 decisions of
+     equal weight, and the data says they are nothing like equal. Spices are
+     39% of every ingredient slot in the database, and nobody decides about
+     turmeric on a Tuesday — you keep an Indian spice shelf or you do not.
+     Ticking just these eighteen puts 481 of 536 recipes above the display
+     floor; adding six fresh things takes 367 of them past half.
+
+     So the picker asks three questions instead of one long one: do you keep a
+     spice shelf, what fresh things do you have tonight, and (folded away) is
+     there anything unusual in the cupboard. */
+  var SHELF = ['turmeric', 'cumin-seeds', 'coriander-powder', 'chilli-powder', 'ghee',
+               'asafoetida', 'dried-red-chilli', 'black-pepper', 'cardamom',
+               'mustard-seeds', 'garam-masala', 'cloves', 'cinnamon', 'mustard-oil',
+               'bay-leaf', 'kashmiri-chilli', 'coconut-oil', 'cumin-powder'];
+
+  // The twenty most-used things that are not shelf stock: what actually varies.
+  var COMMON = ['onion', 'tomato', 'potato', 'ginger', 'garlic', 'green-chilli',
+                'coriander-leaves', 'curry-leaves', 'shallot', 'chicken', 'mutton',
+                'fish', 'chana-dal', 'toor-dal', 'urad-dal', 'rice', 'atta',
+                'besan', 'maida', 'rice-flour'];
+
+  function catalogue() {
+    var out = [];
+    pantry.categories.forEach(function (c) {
+      c.items.forEach(function (i) {
+        if (i.selectable !== false) out.push({ item: i, cat: c.label });
+      });
+    });
+    return out;
+  }
+
+  function itemName(id) {
+    var hit = catalogue().filter(function (e) { return e.item.id === id; })[0];
+    return hit ? hit.item.name : nameFor(id);
+  }
+
+  // One ingredient can appear twice — once in the common grid, once in its
+  // category — so every checkbox for an id has to move together.
+  function syncChecks(id, on) {
+    document.querySelectorAll('.cook-panel input[type="checkbox"][value="' + id + '"]')
+      .forEach(function (b) { b.checked = on; });
+  }
+
+  function toggle(id, on) {
+    if (on) selected.add(id); else selected.delete(id);
+    syncChecks(id, on);
+    persist();
+    renderPicked();
+    shelfButton();
+    update();
+  }
+
+  function ingLabel(item) {
+    var lab = document.createElement('label');
+    lab.className = 'ing';
+    var cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.value = item.id;
+    cb.checked = selected.has(item.id);
+    cb.addEventListener('change', function () { toggle(item.id, cb.checked); });
+    lab.appendChild(cb);
+    lab.appendChild(document.createTextNode(item.name));
+    return lab;
+  }
+
+  /* What is ticked, pinned above the list so it does not scroll out of sight. */
+  function renderPicked() {
+    var box = el('pantry-picked');
+    if (!box) return;
+    if (!selected.size) { box.hidden = true; box.innerHTML = ''; return; }
+    box.hidden = false;
+    box.innerHTML = Array.from(selected).map(itemName).sort().map(function (n, i) {
+      var id = Array.from(selected).filter(function (x) { return itemName(x) === n; })[0];
+      return '<button type="button" class="picked-chip" data-id="' + esc(id) +
+             '" aria-label="Remove ' + esc(n) + '">' + esc(n) + ' <span aria-hidden="true">&times;</span></button>';
+    }).join('');
+    box.querySelectorAll('.picked-chip').forEach(function (b) {
+      b.addEventListener('click', function () { toggle(b.getAttribute('data-id'), false); });
+    });
+  }
+
+  function shelfHeld() {
+    return SHELF.filter(function (id) { return selected.has(id); }).length;
+  }
+
+  function shelfButton() {
+    var b = el('add-shelf'), note = el('shelf-note');
+    if (!b) return;
+    var held = shelfHeld(), all = held === SHELF.length;
+    b.textContent = all ? '\u2713 Spice shelf added \u2014 remove it'
+                        : '+ I keep a standard Indian spice shelf';
+    b.classList.toggle('is-on', all);
+    note.textContent = all
+      ? 'The eighteen spices and cooking fats most of these recipes assume.'
+      : (held ? held + ' of the 18 already ticked. Add the rest in one go.'
+              : 'Ticks the eighteen spices and cooking fats most of these recipes assume.');
+  }
+
+  function renderCommon() {
+    var wrap = el('pantry-common');
+    if (!wrap) return;
+    wrap.innerHTML = '';
+    var known = {};
+    catalogue().forEach(function (e) { known[e.item.id] = e.item; });
+    var group = document.createElement('div');
+    group.className = 'pantry-group pantry-common-group';
+    var h = document.createElement('h4');
+    h.textContent = 'Fresh things you have tonight';
+    group.appendChild(h);
+    var list = document.createElement('div');
+    list.className = 'pantry-items';
+    COMMON.forEach(function (id) { if (known[id]) list.appendChild(ingLabel(known[id])); });
+    group.appendChild(list);
+    wrap.appendChild(group);
+  }
+
+  /* The long tail, folded away. Open on demand or by searching. */
+  function renderGroups() {
     var wrap = el('pantry-groups');
     wrap.innerHTML = '';
     pantry.categories.forEach(function (cat) {
-      var group = document.createElement('div');
-      group.className = 'pantry-group';
-      var h = document.createElement('h3');
-      h.textContent = cat.label;
-      group.appendChild(h);
-
+      var items = cat.items.filter(function (i) { return i.selectable !== false; });
+      if (!items.length) return;
+      var d = document.createElement('details');
+      d.className = 'pantry-group pantry-cat';
+      var sum = document.createElement('summary');
+      sum.innerHTML = esc(cat.label) + ' <span class="cat-n">' + items.length + '</span>';
+      d.appendChild(sum);
       var list = document.createElement('div');
       list.className = 'pantry-items';
-      cat.items.forEach(function (item) {
-        var id = 'ing-' + item.id;
-        var lab = document.createElement('label');
-        lab.className = 'ing';
-        lab.setAttribute('for', id);
-        var cb = document.createElement('input');
-        cb.type = 'checkbox';
-        cb.id = id;
-        cb.value = item.id;
-        cb.checked = selected.has(item.id);
-        cb.addEventListener('change', function () {
-          if (cb.checked) selected.add(item.id); else selected.delete(item.id);
-          persist();
-          update();
-        });
-        lab.appendChild(cb);
-        lab.appendChild(document.createTextNode(item.name));
-        list.appendChild(lab);
-      });
-      group.appendChild(list);
-      wrap.appendChild(group);
+      items.forEach(function (i) { list.appendChild(ingLabel(i)); });
+      d.appendChild(list);
+      wrap.appendChild(d);
     });
+  }
+
+  function renderPantry() {
+    renderPicked();
+    shelfButton();
+    renderCommon();
+    renderGroups();
   }
 
   function readFilters() {
@@ -536,7 +645,21 @@
           if (hit) any = true;
         });
         g.style.display = any ? '' : 'none';
+        // A match inside a folded category is no use folded away.
+        if (g.tagName === 'DETAILS') g.open = !!q && any;
       });
+    });
+
+    el('add-shelf').addEventListener('click', function () {
+      var on = shelfHeld() !== SHELF.length;
+      SHELF.forEach(function (id) {
+        if (on) selected.add(id); else selected.delete(id);
+        syncChecks(id, on);
+      });
+      persist();
+      renderPicked();
+      shelfButton();
+      update();
     });
   }
 
