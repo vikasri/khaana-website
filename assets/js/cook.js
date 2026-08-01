@@ -253,22 +253,32 @@
     var hidden = (sparse || []).length;
     var summary = el('results-summary');
     var q = searchQuery();
-    var PAGE_SIZE = 20;
-    var showing = Math.min(PAGE_SIZE, eligible.length);
-    if (q) {
-      summary.textContent = eligible.length === 0
-        ? 'No recipe matches \u201c' + q + '\u201d within your filters.'
-        : 'Showing ' + showing + ' of ' + eligible.length + ' recipe' +
-          (eligible.length === 1 ? '' : 's') + ' matching \u201c' + q + '\u201d.';
-    } else if (selected.size === 0) {
-      summary.textContent = 'Showing ' + showing + ' of ' + eligible.length +
-        ' recipes. Tick what is in your kitchen to rank them by your pantry.';
-    } else {
-      // Say what was withheld. A bare count would read as "that is everything".
-      summary.textContent = 'Showing ' + showing + ' of ' + eligible.length + ' recipe' +
-        (eligible.length === 1 ? '' : 's') + ' you can mostly make, ranked by how much of each you already have.' +
-        (hidden ? ' ' + hidden + ' more need over ' + (100 - MIN_PCT) +
-                  '% of their ingredients bought in, so they are not shown.' : '');
+    var PAGE = 20;
+
+    // "Showing 20 of 20" is noise, and so is a running total once the reader
+    // has everything. Only mention the total while some of it is still hidden.
+    function countPhrase(drawn, total) {
+      var noun = ' recipe' + (total === 1 ? '' : 's');
+      return drawn < total ? 'Showing ' + drawn + ' of ' + total + noun
+                           : total + noun;
+    }
+
+    function setSummary(drawn) {
+      var total = eligible.length;
+      if (q) {
+        summary.textContent = total === 0
+          ? 'No recipe matches \u201c' + q + '\u201d within your filters.'
+          : countPhrase(drawn, total) + ' matching \u201c' + q + '\u201d.';
+      } else if (selected.size === 0) {
+        summary.textContent = countPhrase(drawn, total) +
+          '. Tick what is in your kitchen to rank them by your pantry.';
+      } else {
+        // Say what was withheld. A bare count would read as "that is everything".
+        summary.textContent = countPhrase(drawn, total) +
+          ' you can mostly make, ranked by how much of each you already have.' +
+          (hidden ? ' ' + hidden + ' more need over ' + (100 - MIN_PCT) +
+                    '% of their ingredients bought in, so they are not shown.' : '');
+      }
     }
 
     if (eligible.length === 0) {
@@ -283,9 +293,8 @@
 
     // The list is ranked, so the tail is the part the cook can least make.
     // Twenty is about a screen and a half; revealing the rest a page at a time
-    // keeps the DOM small without ever hiding the true count, which is stated
-    // on the button itself.
-    var PAGE = 20;
+    // keeps the DOM small. The summary is rewritten on each page so it never
+    // goes stale against what is actually on screen.
     var drawn = 0;
 
     var more = document.createElement('button');
@@ -303,6 +312,7 @@
       } else {
         more.textContent = 'Show ' + Math.min(PAGE, left) + ' more (' + left + ' left)';
       }
+      setSummary(drawn);
     }
 
     out.appendChild(more);
