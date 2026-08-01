@@ -106,18 +106,27 @@ p { margin: 0 0 1.1em; }
 .nav-links {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 4px 18px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
-.nav-links a {
-  color: var(--ink-soft);
-  font-size: 1rem;
-  font-weight: 600;
+/* The Cuisines control is a <button> and the rest are <a>. Browsers give those
+   different default font, line-height and box, which is what put About on a
+   different baseline. Declared together so all four match. */
+.nav-links > li > a,
+.nav-cuisines-toggle {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 1.34rem;
+  font-weight: 800;
+  line-height: 1.2;
   padding: 6px 4px;
+  vertical-align: middle;
 }
+
+.nav-links a { color: var(--ink-soft); }
 .nav-links a:hover, .nav-links a.active { color: var(--terracotta); text-decoration: none; }
 
 /* Home and Recipes are the two destinations that are not a single cuisine, so
@@ -133,11 +142,7 @@ p { margin: 0 0 1.1em; }
 .nav-links a[href="cook.html"]:hover,
 .nav-links a[href="cook.html"].active { color: #0a4bb0; }
 
-.nav-links a[href="index.html"],
-.nav-links a[href="cook.html"] {
-  font-size: 1.34rem;
-  font-weight: 800;
-}
+
 
 @media (max-width: 820px) {
   .nav-toggle { display: block; }
@@ -1577,10 +1582,7 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
    crawlable; the menu only hides them from the bar, which was wrapping to
    three lines and colliding with the brand. */
 .nav-cuisines { position: relative; }
-.nav-cuisines-toggle {
-  font: inherit; font-size: 1rem; font-weight: 600; cursor: pointer;
-  padding: 6px 4px; border: 0; background: none; color: var(--ink-soft);
-}
+.nav-cuisines-toggle { cursor: pointer; border: 0; background: none; color: var(--ink-soft); }
 .nav-cuisines-toggle::after { content: ' \25BE'; font-size: 0.8em; }
 .nav-cuisines-toggle:hover,
 .nav-cuisines-toggle.active { color: var(--terracotta); }
@@ -1599,7 +1601,7 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 .nav-dropdown li { break-inside: avoid; }
 .nav-dropdown a {
   display: block; padding: 5px 8px; border-radius: 7px;
-  font-size: 0.95rem; color: var(--ink-soft); font-weight: 600;
+  font-size: 0.95rem; line-height: 1.4; color: var(--ink-soft); font-weight: 600;
 }
 .nav-dropdown a:hover { background: var(--cream); color: var(--terracotta); text-decoration: none; }
 
