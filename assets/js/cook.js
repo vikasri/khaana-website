@@ -110,6 +110,13 @@
     });
     if (f.maxTime && total > f.maxTime) reasons.push('over ' + f.maxTime + ' min');
 
+    // Calories per serving. A hard filter on an estimate, so the panel says so:
+    // figures marked + are floors, and a dish can scrape in that should not.
+    var kc = recipe.nutrition && recipe.nutrition.kcal;
+    if (f.maxKcal && typeof kc === 'number' && kc > f.maxKcal) {
+      reasons.push('over ' + f.maxKcal + ' kcal');
+    }
+
     return reasons;
   }
 
@@ -299,8 +306,11 @@
       .call(document.querySelectorAll('input[name="diet"]:checked'))
       .map(function (i) { return i.value; });
     var t = el('f-time').value;
+    var kcalEl = document.querySelector('input[name="kcal"]:checked');
+    var maxKcal = kcalEl && kcalEl.value ? parseInt(kcalEl.value, 10) : 0;
     return {
       diets: diets,
+      maxKcal: maxKcal,
       maxTime: t ? parseInt(t, 10) : null
     };
   }
@@ -421,6 +431,7 @@
     var applied = [];
     if (filters.diets.length) applied.push(filters.diets.map(labelForTag).join(', '));
     if (filters.maxTime) applied.push('under ' + filters.maxTime + ' minutes');
+    if (filters.maxKcal) applied.push('under ' + filters.maxKcal + ' kcal a serving');
 
     if (!chosen && !applied.length) { line.hidden = true; line.innerHTML = ''; return; }
 
@@ -662,7 +673,7 @@
   /* ---------- boot ---------- */
 
   function wire() {
-    document.querySelectorAll('input[name="diet"]').forEach(function (i) {
+    document.querySelectorAll('input[name="diet"], input[name="kcal"]').forEach(function (i) {
       i.addEventListener('change', update);
     });
     el('f-time').addEventListener('change', update);
