@@ -214,21 +214,46 @@
   // it says it is, what goes in it, the diet tags, how hard it is and what it
   // needs to cook in. Tags are matched on their readable label as well as their
   // id, so "no onion" and "gluten free" both work.
-  function haystack(s) {
-    if (s._hay) return s._hay;
+  /* Three tiers, because where a word lands changes what it means: the dish
+     name is what someone is usually typing, region and diet are how they
+     narrow it, and the ingredient list is the long tail. */
+  function doc(s) {
+    if (s._doc) return s._doc;
     var r = s.recipe;
-    var bits = [r.name, r.region, r.subtitle || '', r.difficulty || ''];
-    (r.tags || []).forEach(function (t) { bits.push(t, labelForTag(t), t.replace(/-/g, ' ')); });
-    (r.equipment || []).forEach(function (e) { bits.push(e, labelForEquip(e), e.replace(/-/g, ' ')); });
-    (r.allergens || []).forEach(function (a) { bits.push(a); });
-    s.lines.forEach(function (l) { bits.push(l.name, l.id.replace(/-/g, ' ')); });
-    s._hay = bits.join(' \u2022 ').toLowerCase();
-    return s._hay;
+    var strong = [r.region, r.subtitle || '', r.difficulty || ''];
+    (r.tags || []).forEach(function (t) { strong.push(t, labelForTag(t), t.replace(/-/g, ' ')); });
+    (r.equipment || []).forEach(function (e) { strong.push(e, labelForEquip(e), e.replace(/-/g, ' ')); });
+    (r.allergens || []).forEach(function (a) { strong.push(a); });
+    var body = [];
+    s.lines.forEach(function (l) { body.push(l.name, l.id.replace(/-/g, ' ')); });
+    s._doc = window.KhaanaMatch.prepare({
+      title: r.name, strong: strong.join(' '), body: body.join(' ')
+    });
+    return s._doc;
+  }
+
+  // Tokenising is the same work for every recipe in a pass, so it is done once
+  // per distinct query rather than 536 times.
+  var qParts = { q: null };
+  function queryParts(q) {
+    if (qParts.q !== q) {
+      qParts = { q: q, toks: window.KhaanaMatch.tokens(q), phrase: window.KhaanaMatch.norm(q) };
+    }
+    return qParts;
+  }
+
+  function queryScore(s, q) {
+    if (!q) return 0;
+    var p = queryParts(q);
+    if (!p.toks.length) return 0;
+    return window.KhaanaMatch.score(doc(s), p.toks, p.phrase);
   }
 
   function matchesQuery(s, q) {
     if (!q) return true;
-    return haystack(s).indexOf(q) !== -1;
+    var p = queryParts(q);
+    if (!p.toks.length) return true;
+    return queryScore(s, q) > 0;
   }
 
   function update() {
@@ -257,7 +282,13 @@
       blocked = blocked.filter(function (s) { return matchesQuery(s, q); });
     }
 
+    // Someone who typed a dish name wants that dish, whatever their pantry
+    // says. Scored once per recipe here rather than inside the comparator,
+    // which would recompute it on every comparison.
+    if (q) eligible.forEach(function (s) { s._qs = queryScore(s, q); });
+
     eligible.sort(function (a, b) {
+      if (q && b._qs !== a._qs) return b._qs - a._qs;
       if (b.pct !== a.pct) return b.pct - a.pct;
       if (a.missingEssential.length !== b.missingEssential.length) {
         return a.missingEssential.length - b.missingEssential.length;

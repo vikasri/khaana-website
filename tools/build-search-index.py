@@ -94,7 +94,9 @@ def build():
         steps = " ".join(s["text"] for s in r["steps"])
         entries.append({
             "title": r["name"],
-            "url": "recipe.html?id=" + r["id"],
+            # The static page, not the old recipe.html?id= view, which only
+            # forwards here anyway — a redirect the reader does not need.
+            "url": "recipes/%s.html" % r["id"],
             "kind": "recipe",
             "region": r["region"],
             "snippet": r["subtitle"],

@@ -23,43 +23,53 @@
     loading = true;
     return fetch(INDEX_URL)
       .then(function (r) { return r.json(); })
-      .then(function (d) { entries = d.entries || []; })
+      .then(function (d) { entries = d.entries || []; prepare(); })
       .catch(function () { entries = []; })
       .then(function () { loading = false; });
   }
 
-  /* Rank by where the match lands: a title hit is worth far more than a
-     passing mention in body copy, so "goan" surfaces the Goan page rather
-     than every recipe that happens to name it in a step. */
-  function score(entry, q) {
-    var title = entry.title.toLowerCase();
-    var s = 0;
-    if (title === q) s += 200;
-    else if (title.indexOf(q) === 0) s += 120;
-    else if (title.indexOf(q) !== -1) s += 90;
-
-    if (entry.region && entry.region.toLowerCase().indexOf(q) !== -1) s += 60;
-    if (entry.snippet && entry.snippet.toLowerCase().indexOf(q) !== -1) s += 25;
-
-    var at = entry.text.indexOf(q);
-    if (at !== -1) {
-      s += 12;
-      // Earlier mentions usually mean the page is more about the term.
-      if (at < 400) s += 8;
-    }
-    // Nudge recipes above prose pages when scores are otherwise close —
-    // someone typing an ingredient usually wants something to cook.
-    if (s > 0 && entry.kind === 'recipe') s += 5;
-    return s;
+  /* Normalising 560 entries costs one pass over the whole index, so it happens
+     here — load() runs on focus, before the first keystroke — rather than
+     inside the matcher where every keystroke would pay for it again. */
+  function prepare() {
+    entries.forEach(function (e) {
+      e._doc = window.KhaanaMatch.prepare({
+        title: e.title,
+        // The snippet is the entry's own summary, so a hit here means far more
+        // than one somewhere in the body.
+        strong: [e.snippet || '', e.region || ''].join(' '),
+        body: e.text || ''
+      });
+    });
   }
 
+  /* Ranking still favours where the match lands — a title hit beats a passing
+     mention in body copy, so "goan" surfaces the Goan page rather than every
+     recipe naming it in a step. What changed is that each word of the query is
+     matched on its own, so order, partial words and alternative spellings all
+     work. See assets/js/search-match.js. */
   function search(q) {
-    q = q.trim().toLowerCase();
-    if (q.length < 2) return [];
+    var M = window.KhaanaMatch;
+    var toks = M.tokens(q);
+    var phrase = M.norm(q);
+    if (!toks.length || phrase.length < 2) return [];
+
     return entries
-      .map(function (e) { return { e: e, s: score(e, q) }; })
+      .map(function (e) {
+        var s = M.score(e._doc, toks, phrase);
+        // Nudge recipes above prose pages when scores are otherwise close —
+        // someone typing an ingredient usually wants something to cook.
+        if (s > 0 && e.kind === 'recipe') s += 5;
+        // One bare word that names a region is the exception: "goan" wants the
+        // Goan page, which leads on to its dishes. "goan fish" wants a recipe,
+        // and two words no longer trigger this.
+        if (s > 0 && e.kind === 'cuisine' && toks.length === 1 &&
+            e._doc.title.indexOf(phrase) === 0) s += 30;
+        return { e: e, s: s };
+      })
       .filter(function (r) { return r.s > 0; })
-      .sort(function (a, b) { return b.s - a.s; })
+      // Equal scores: the shorter title is the more specific page.
+      .sort(function (a, b) { return b.s - a.s || a.e.title.length - b.e.title.length; })
       .slice(0, MAX_RESULTS)
       .map(function (r) { return r.e; });
   }
