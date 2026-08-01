@@ -660,7 +660,14 @@ section.tight { padding: 22px 0; }
   letter-spacing: 0.01em;
 }
 .cook-entry-note { margin: 0; font-size: 0.95rem; line-height: 1.55; color: var(--ink-soft); }
-.cook-entry-or { align-self: center; color: var(--ink-soft); font-size: 0.85rem; }
+.cook-entry-or {
+  align-self: center;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
 
 .recipe-search-row { display: flex; gap: 10px; align-items: stretch; }
 .recipe-search {

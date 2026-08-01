@@ -204,12 +204,25 @@
     return box ? box.value.trim().toLowerCase() : '';
   }
 
+  // Everything a cook might reasonably type: the dish, where it is from, what
+  // it says it is, what goes in it, the diet tags, how hard it is and what it
+  // needs to cook in. Tags are matched on their readable label as well as their
+  // id, so "no onion" and "gluten free" both work.
+  function haystack(s) {
+    if (s._hay) return s._hay;
+    var r = s.recipe;
+    var bits = [r.name, r.region, r.subtitle || '', r.difficulty || ''];
+    (r.tags || []).forEach(function (t) { bits.push(t, labelForTag(t), t.replace(/-/g, ' ')); });
+    (r.equipment || []).forEach(function (e) { bits.push(e, labelForEquip(e), e.replace(/-/g, ' ')); });
+    (r.allergens || []).forEach(function (a) { bits.push(a); });
+    s.lines.forEach(function (l) { bits.push(l.name, l.id.replace(/-/g, ' ')); });
+    s._hay = bits.join(' \u2022 ').toLowerCase();
+    return s._hay;
+  }
+
   function matchesQuery(s, q) {
     if (!q) return true;
-    var r = s.recipe;
-    var hay = (r.name + ' ' + r.region + ' ' + (r.subtitle || '')).toLowerCase();
-    if (hay.indexOf(q) !== -1) return true;
-    return s.lines.some(function (l) { return l.name.toLowerCase().indexOf(q) !== -1; });
+    return haystack(s).indexOf(q) !== -1;
   }
 
   function update() {
