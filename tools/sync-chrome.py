@@ -16,13 +16,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Ordered roughly north -> west -> south -> east, which is how the nav reads.
 CUISINES = [
     ("awadhi-lucknowi.html", "Awadhi/Lucknowi"),
-    ("kashmiri.html",        "Kashmiri"),
     ("pahari.html",          "Pahari"),
+    ("kashmiri.html",        "Kashmiri"),
     ("punjabi.html",         "Punjabi"),
     ("rajasthani.html",      "Rajasthani"),
     ("gujarati.html",        "Gujarati"),
-    ("sindhi.html",          "Sindhi"),
-    ("parsi.html",           "Parsi"),
     ("maharashtrian.html",   "Maharashtrian"),
     ("goan.html",            "Goan"),
     ("karnataka.html",       "Karnataka"),
@@ -30,10 +28,13 @@ CUISINES = [
     ("tamil-nadu.html",      "Tamil Nadu"),
     ("andhra.html",          "Andhra"),
     ("hyderabadi.html",      "Hyderabadi"),
-    ("bihari.html",          "Bihari"),
     ("odia.html",            "Odia"),
+    ("bihari.html",          "Bihari"),
     ("bengali.html",         "Bengali"),
     ("northeast-indian.html", "Northeast Indian"),
+    # No map zone: community cuisines without territory, so they come last.
+    ("sindhi.html",          "Sindhi"),
+    ("parsi.html",           "Parsi"),
     ("anglo-indian.html",    "Anglo-Indian"),
 ]
 FOOTER_HEADS = ["Cuisines", "More", "Also", "And"]
