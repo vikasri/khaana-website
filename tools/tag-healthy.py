@@ -14,8 +14,12 @@ A dish earns the tag only if ALL of these hold:
     1.5 tbsp per serving
   * added sugar, jaggery, honey or condensed milk is at most 1 tsp per serving
   * it is not a dessert
-  * it has a real vegetable, pulse or lean-protein backbone — at least two
-    vegetables, or a pulse, or fish/chicken/eggs
+  * it has a real vegetable, pulse or protein backbone — at least two
+    vegetables, or a pulse, or any meat, fish or egg
+  * the meat portion is at most 250g raw bone-in per serving
+
+Red meat is not excluded. What decides a meat dish is the portion and how it is
+cooked — the frying, added-fat and portion rules above — not the animal.
 
 These thresholds are deliberately conservative. The label is comparative on purpose: it means "lighter than the rest of
 this database", not a nutritional or medical claim, and the
@@ -32,6 +36,15 @@ PULSES = {"chana-dal", "chickpeas", "dried-peas", "horse-gram", "kala-chana", "l
           "masoor-dal", "moong-dal", "rajma", "sprouted-moth", "toor-dal", "urad-dal",
           "whole-moong", "whole-urad"}
 LEAN = {"fish", "prawns", "crab", "squid", "chicken", "eggs", "paneer"}
+# Red meat counts as a protein backbone like any other. What matters is the
+# portion and how it is cooked, not the animal — a slow-braised mutton curry in
+# a sensible serving is not worse than the paneer dishes already allowed. The
+# per-serving cap below is what does the work.
+RED = {"mutton", "beef", "pork", "duck"}
+MEAT = (LEAN | RED) - {"paneer", "eggs"}   # parens matter: | binds looser than -
+# Raw, bone-in weight. Set deliberately high: a normal Indian curry portion
+# passes, and this only catches genuinely outsized ones.
+MAX_MEAT_G_PER_SERVING = 250
 VEG = {"amaranth-greens", "ash-gourd", "bamboo-shoot", "beetroot", "bitter-gourd",
        "bottle-gourd", "cabbage", "capsicum", "carrot", "cauliflower", "cluster-beans",
        "colocasia", "cucumber", "drumstick", "eggplant", "french-beans", "lotus-stem",
@@ -75,6 +88,21 @@ def tbsp_of(qty):
     return 0.0
 
 
+def grams_of(qty):
+    """Grams from a free-text quantity. Unparseable or unitless reads as 0, so a
+    missing weight never fails a recipe on portion grounds."""
+    if not qty:
+        return 0.0
+    q = qty.lower().replace(",", "")
+    m = re.search(r"(\d+(?:\.\d+)?)\s*kg\b", q)
+    if m:
+        return float(m.group(1)) * 1000
+    m = re.search(r"(\d+(?:\.\d+)?)\s*g\b", q)
+    if m:
+        return float(m.group(1))
+    return 0.0
+
+
 def assess(r):
     """Return (is_healthy, reason_it_failed_or_None)."""
     serves = max(1, r.get("servings") or 4)
@@ -102,8 +130,12 @@ def assess(r):
     if sweet / serves > 1 / 3.0:          # 1 tsp per serving
         return False, "sugar %.1f tsp/serving" % (sweet / serves * 3)
 
-    if not (ids & PULSES or ids & LEAN or len(ids & VEG) >= 2):
-        return False, "no vegetable, pulse or lean protein backbone"
+    meat_g = sum(grams_of(i["qty"]) for i in ess if i["id"] in MEAT)
+    if meat_g / serves > MAX_MEAT_G_PER_SERVING:
+        return False, "portion %.0fg meat/serving" % (meat_g / serves)
+
+    if not (ids & PULSES or ids & LEAN or ids & RED or len(ids & VEG) >= 2):
+        return False, "no vegetable, pulse or protein backbone"
     return True, None
 
 
