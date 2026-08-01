@@ -295,10 +295,10 @@ section.word-mark-section.tight { padding-top: 18px; padding-bottom: 0; }
 /* ---------- Sections ---------- */
 /* Trimmed from 64/40: the old values stacked into ~104px between sections,
    which read as dead space rather than rhythm. */
-section { padding: 42px 0; }
-section.tight { padding: 28px 0; }
+section { padding: 30px 0; }
+section.tight { padding: 22px 0; }
 
-.section-head { max-width: 720px; margin: 0 0 36px; }
+.section-head { max-width: 720px; margin: 0 0 26px; }
 .section-head .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -483,8 +483,8 @@ section.tight { padding: 28px 0; }
 .site-footer {
   background: #0e2724;
   color: #e8ddd3;
-  padding: 44px 0 28px;
-  margin-top: 40px;
+  padding: 34px 0 28px;
+  margin-top: 0;
 }
 .site-footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; }
 .site-footer h4 { color: #fff; font-family: var(--serif); margin-bottom: 10px; }
