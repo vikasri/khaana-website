@@ -610,8 +610,26 @@ section.tight { padding: 22px 0; }
   overscroll-behavior: contain;
   display: grid;
   gap: 16px;
-  padding-right: 6px;
+  padding-right: 10px;
+  /* Styled rather than left to the browser. macOS hides overlay scrollbars
+     until something scrolls, so the default one was invisible sitting in the
+     cream gap between the columns, and the panel looked like it simply ended.
+     Declaring ::-webkit-scrollbar forces a persistent bar in Chrome and
+     Safari; scrollbar-color does the same job in Firefox. */
+  scrollbar-width: thin;
+  scrollbar-color: #c9b7a4 #f3e9dd;
 }
+.cook-panel::-webkit-scrollbar { width: 10px; }
+.cook-panel::-webkit-scrollbar-track {
+  background: #f3e9dd;
+  border-radius: 999px;
+}
+.cook-panel::-webkit-scrollbar-thumb {
+  background: #c9b7a4;
+  border-radius: 999px;
+  border: 2px solid #f3e9dd;
+}
+.cook-panel::-webkit-scrollbar-thumb:hover { background: var(--terracotta); }
 
 .panel-block {
   background: var(--paper);
