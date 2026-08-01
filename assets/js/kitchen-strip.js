@@ -60,8 +60,11 @@
     var n = scored.length;
     document.getElementById('kitchen-count').textContent =
       'You can make ' + (n > 100 ? '100+' : n) + (n === 1 ? ' dish' : ' dishes') + ' right now';
+    // "starter": the saved pantry is a partial picture, so the count should not
+    // sound like a complete inventory of what the reader owns.
     document.getElementById('kitchen-note').textContent =
-      'Based on the ' + have.size + (have.size === 1 ? ' ingredient' : ' ingredients') +
+      'Based on the ' + have.size +
+      (have.size === 1 ? ' starter ingredient' : ' starter ingredients') +
       ' saved in your kitchen.';
 
     document.getElementById('kitchen-cards').innerHTML =

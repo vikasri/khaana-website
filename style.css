@@ -1100,14 +1100,17 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 }
 
 .find-search { position: relative; }
+/* Enlarged and switched to the brighter blue the Cook page uses for its two
+   route headings, so this label carries the same weight as the CTA beside it
+   instead of reading as a caption above the box. */
 .find-label {
   display: block;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.11em;
+  font-size: 1.12rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--azure);
-  margin-bottom: 7px;
+  color: #0b5ed7;
+  margin-bottom: 9px;
 }
 .find-input {
   width: 100%;
@@ -1180,13 +1183,18 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 }
 .find-empty { font-size: 0.9rem; color: var(--ink-soft); margin: 0; padding: 12px 10px; }
 
+/* Sized to match the OR on the Cook page: at 0.82rem it read as a stray word
+   between two large controls rather than the choice it marks. */
 .find-divider {
   display: flex;
   align-items: center;
   justify-content: center;
   align-self: stretch;
   color: var(--ink-soft);
-  font-size: 0.82rem;
+  font-family: var(--sans);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
 }
 .find-divider span {
   position: relative;
