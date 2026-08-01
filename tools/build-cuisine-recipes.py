@@ -60,9 +60,29 @@ def block(region, recipes):
     <div class="recipe-tiles">
       %s
     </div>%s
+
+    <!-- Eating out instead. A plain link to Maps: no API key, no backend, and
+         nothing leaves the page until the reader clicks. The postcode box is
+         optional because Maps already uses the device location without it;
+         it exists for people who will not grant location permission, or who
+         are looking somewhere other than where they are standing. -->
+    <div class="eat-out">
+      <p class="eat-out-lead">Not cooking tonight?</p>
+      <div class="eat-out-row">
+        <label class="sr-only" for="eat-out-where">Postcode or town, optional</label>
+        <input type="text" id="eat-out-where" class="eat-out-where"
+               placeholder="Postcode or town (optional)" autocomplete="postal-code" />
+        <a class="eat-out-btn" data-cuisine="%s"
+           href="https://www.google.com/maps/search/?api=1&amp;query=%s+restaurant"
+           target="_blank" rel="noopener noreferrer">Find %s restaurants</a>
+      </div>
+      <p class="eat-out-note">Opens Google Maps. Leave the box empty and it uses your
+        device location. Nothing is stored here.</p>
+    </div>
   </div>
 </section>
-%s""" % (BEGIN, esc(region), tiles, more, END)
+%s""" % (BEGIN, esc(region), tiles, more,
+         esc(region), esc(region.replace(" ", "+").replace("/", "+")), esc(region), END)
 
 
 def main():

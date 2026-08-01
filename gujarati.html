@@ -162,6 +162,25 @@
       <a class="recipe-tile is-extra" href="recipes/vagharelo-bhaat.html" hidden><span class="tile-thumb"><img src="assets/images/recipes/vagharelo-bhaat.jpg" alt="Vagharelo Bhaat" loading="lazy" /></span><span class="tile-body"><span class="tile-name">Vagharelo Bhaat</span><span class="tile-meta">25 min &middot; easy</span></span></a>
     </div>
     <button type="button" class="show-more-recipes" aria-expanded="false">Show more Gujarati recipes</button>
+
+    <!-- Eating out instead. A plain link to Maps: no API key, no backend, and
+         nothing leaves the page until the reader clicks. The postcode box is
+         optional because Maps already uses the device location without it;
+         it exists for people who will not grant location permission, or who
+         are looking somewhere other than where they are standing. -->
+    <div class="eat-out">
+      <p class="eat-out-lead">Not cooking tonight?</p>
+      <div class="eat-out-row">
+        <label class="sr-only" for="eat-out-where">Postcode or town, optional</label>
+        <input type="text" id="eat-out-where" class="eat-out-where"
+               placeholder="Postcode or town (optional)" autocomplete="postal-code" />
+        <a class="eat-out-btn" data-cuisine="Gujarati"
+           href="https://www.google.com/maps/search/?api=1&amp;query=Gujarati+restaurant"
+           target="_blank" rel="noopener noreferrer">Find Gujarati restaurants</a>
+      </div>
+      <p class="eat-out-note">Opens Google Maps. Leave the box empty and it uses your
+        device location. Nothing is stored here.</p>
+    </div>
   </div>
 </section>
 <!-- END generated cuisine recipe list -->

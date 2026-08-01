@@ -165,6 +165,25 @@
       <a class="recipe-tile is-extra" href="recipes/zarda.html" hidden><span class="tile-thumb"><img src="assets/images/recipes/zarda.jpg" alt="Zarda" loading="lazy" /></span><span class="tile-body"><span class="tile-name">Zarda</span><span class="tile-meta">60 min &middot; moderate</span></span></a>
     </div>
     <button type="button" class="show-more-recipes" aria-expanded="false">Show more Awadhi/Lucknowi recipes</button>
+
+    <!-- Eating out instead. A plain link to Maps: no API key, no backend, and
+         nothing leaves the page until the reader clicks. The postcode box is
+         optional because Maps already uses the device location without it;
+         it exists for people who will not grant location permission, or who
+         are looking somewhere other than where they are standing. -->
+    <div class="eat-out">
+      <p class="eat-out-lead">Not cooking tonight?</p>
+      <div class="eat-out-row">
+        <label class="sr-only" for="eat-out-where">Postcode or town, optional</label>
+        <input type="text" id="eat-out-where" class="eat-out-where"
+               placeholder="Postcode or town (optional)" autocomplete="postal-code" />
+        <a class="eat-out-btn" data-cuisine="Awadhi/Lucknowi"
+           href="https://www.google.com/maps/search/?api=1&amp;query=Awadhi+Lucknowi+restaurant"
+           target="_blank" rel="noopener noreferrer">Find Awadhi/Lucknowi restaurants</a>
+      </div>
+      <p class="eat-out-note">Opens Google Maps. Leave the box empty and it uses your
+        device location. Nothing is stored here.</p>
+    </div>
   </div>
 </section>
 <!-- END generated cuisine recipe list -->

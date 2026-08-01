@@ -38,3 +38,20 @@ document.addEventListener('DOMContentLoaded', function () {
     b.remove();
   });
 })();
+
+
+/* Fold an optional postcode into the Maps search. The link already works
+   without it, using whatever location the device reports, so this only
+   rewrites the href at the moment of clicking. Nothing is stored or sent
+   anywhere else. */
+(function () {
+  document.addEventListener('click', function (ev) {
+    var a = ev.target.closest && ev.target.closest('.eat-out-btn');
+    if (!a) return;
+    var box = document.getElementById('eat-out-where');
+    var where = box ? box.value.trim() : '';
+    var cuisine = a.getAttribute('data-cuisine') || '';
+    var q = cuisine + ' restaurant' + (where ? ' ' + where : '');
+    a.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
+  });
+})();
