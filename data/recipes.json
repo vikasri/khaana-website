@@ -1521,7 +1521,13 @@
       "subtitle": "the dark, smoky horse gram broth of the coast, sour and deeply savoury",
       "region": "Andhra",
       "regionPage": "andhra.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/ulavacharu.jpg",
+        "alt": "Ulavacharu",
+        "credit": "PriyaBooks",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vegetarian_Andhra_Meal.jpg"
+      },
       "servings": 6,
       "prepMinutes": 15,
       "cookMinutes": 75,
@@ -12412,7 +12418,13 @@
       "subtitle": "ghee-fried discs of soaked ground rice and jaggery, crusted with sesame",
       "region": "Bihari",
       "regionPage": "bihari.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/anarsa.jpg",
+        "alt": "Anarsa",
+        "credit": "Raj.Ranveer",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anarasa.jpg"
+      },
       "servings": 6,
       "prepMinutes": 40,
       "cookMinutes": 30,
@@ -30435,7 +30447,13 @@
       "subtitle": "small eggplants stuffed with a dark peanut-sesame masala and stewed in tamarind",
       "region": "Karnataka",
       "regionPage": "karnataka.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/badanekayi-ennegayi.jpg",
+        "alt": "Badanekayi Ennegayi",
+        "credit": "Dheerajk88",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Baigan_Bharta_from_Nagpur.JPG"
+      },
       "servings": 4,
       "prepMinutes": 25,
       "cookMinutes": 35,
@@ -31705,7 +31723,13 @@
       "subtitle": "ladyfish rubbed in red chilli paste and shallow fried in a sandy semolina crust",
       "region": "Karnataka",
       "regionPage": "karnataka.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/kane-rava-fry.jpg",
+        "alt": "Kane Rava Fry",
+        "credit": "Pranab saikia2010",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fish_fried_in_Rava_(Semolina)_01.jpg"
+      },
       "servings": 4,
       "prepMinutes": 20,
       "cookMinutes": 20,
@@ -32679,6 +32703,13 @@
         "recipeVersion": "1.0.0",
         "updated": "2026-07-31",
         "source": "Khaana editorial"
+      },
+      "image": {
+        "src": "assets/images/recipes/kumm-curry.jpg",
+        "alt": "Kumm Curry",
+        "credit": "Andy Li",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lunch_at_Curry_Leaf_Cafe_2024-01-20.jpg"
       }
     },
     {
@@ -35979,7 +36010,13 @@
       "subtitle": "sweet saffron rice with milk, ghee and dried fruit, made for pandit feast days",
       "region": "Kashmiri",
       "regionPage": "kashmiri.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/modur-pulav.jpg",
+        "alt": "Modur Pulav",
+        "credit": "Manjeshwari poet mysore",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saffron_Rice_or_Basmati_Rice_Kesari_Bath.png"
+      },
       "servings": 4,
       "prepMinutes": 15,
       "cookMinutes": 30,
@@ -37235,7 +37272,13 @@
       "subtitle": "thick sweet fried bread studded with poppy seeds, made for pann",
       "region": "Kashmiri",
       "regionPage": "kashmiri.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/roth.jpg",
+        "alt": "Roth",
+        "credit": "Sangram Keshari Senapati",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Coconut_and_Banana_Malpua.jpg"
+      },
       "servings": 6,
       "prepMinutes": 25,
       "cookMinutes": 25,
@@ -38011,7 +38054,13 @@
       "subtitle": "turmeric-yellow rice scented with hing and whole spices, the pandit festival plate",
       "region": "Kashmiri",
       "regionPage": "kashmiri.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/tehar.jpg",
+        "alt": "Tehar",
+        "credit": "Miansari66",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tehri_With_Kachumbar_Salad.JPG"
+      },
       "servings": 4,
       "prepMinutes": 10,
       "cookMinutes": 25,
@@ -44573,7 +44622,13 @@
       "subtitle": "steamed coriander and gram flour squares, fried crisp and tempered with sesame",
       "region": "Maharashtrian",
       "regionPage": "maharashtrian.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/kothimbir-vadi.jpg",
+        "alt": "Kothimbir Vadi",
+        "credit": "Master Sahil Gaikwad",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nevaidya-_food_offered_to_good.png"
+      },
       "servings": 4,
       "prepMinutes": 25,
       "cookMinutes": 35,
@@ -47160,7 +47215,13 @@
       "subtitle": "dry crumbled gram flour cooked with onion and garlic, sharp with green chilli",
       "region": "Maharashtrian",
       "regionPage": "maharashtrian.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/zunka.jpg",
+        "alt": "Zunka",
+        "credit": "Dr. Raju Kasambe",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jhunka_Bhakri_Marathi_Food_by_Dr._Raju_Kasambe_DSCN0221_(8).jpg"
+      },
       "servings": 4,
       "prepMinutes": 10,
       "cookMinutes": 15,
@@ -48592,7 +48653,13 @@
       "subtitle": "sour Sikkimese greens broth, thin and hot, drunk alongside a plate of rice",
       "region": "Northeast Indian",
       "regionPage": "northeast-indian.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/gundruk-ko-jhol.jpg",
+        "alt": "Gundruk ko Jhol",
+        "credit": "Subhashish Panigrahi",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nepali_dal-bhat-tarkari.jpg"
+      },
       "servings": 4,
       "prepMinutes": 10,
       "cookMinutes": 25,
@@ -49827,7 +49894,13 @@
       "subtitle": "the alkaline assamese opener — raw papaya simmered soft, plain and cleansing",
       "region": "Northeast Indian",
       "regionPage": "northeast-indian.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/omita-khar.jpg",
+        "alt": "Omita Khar",
+        "credit": "Suditree",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Khar_of_Assam.jpg"
+      },
       "servings": 4,
       "prepMinutes": 15,
       "cookMinutes": 25,
@@ -49936,7 +50009,13 @@
       "subtitle": "Manipuri dried peas simmered soft with bamboo shoot and finished with burnt chilli oil",
       "region": "Northeast Indian",
       "regionPage": "northeast-indian.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/ooti.jpg",
+        "alt": "Ooti",
+        "credit": "Sherin",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cabbage_and_chana_Singju.jpg"
+      },
       "servings": 4,
       "prepMinutes": 15,
       "cookMinutes": 50,
@@ -50058,7 +50137,13 @@
       "subtitle": "Apatani bamboo shoot pickle, fiercely sour and hot, eaten a spoonful at a time",
       "region": "Northeast Indian",
       "regionPage": "northeast-indian.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/pika-pila.jpg",
+        "alt": "Pika Pila",
+        "credit": "Ganesh Mohan T",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arunachal_Pradesh_thali.jpg"
+      },
       "servings": 8,
       "prepMinutes": 20,
       "cookMinutes": 25,
@@ -50289,7 +50374,13 @@
       "subtitle": "Mizo rice porridge under a drift of toasted rice powder, coriander and black pepper",
       "region": "Northeast Indian",
       "regionPage": "northeast-indian.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/sanpiau.jpg",
+        "alt": "Sanpiau",
+        "credit": "t-mizo",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pork_and_vegetables_dish_from_Nagareyama,_Chiba_Prefecture;_December_2012.jpg"
+      },
       "servings": 4,
       "prepMinutes": 10,
       "cookMinutes": 30,
@@ -51652,6 +51743,13 @@
         "recipeVersion": "1.0.0",
         "updated": "2026-07-31",
         "source": "Khaana editorial"
+      },
+      "image": {
+        "src": "assets/images/recipes/chhatu-rai.jpg",
+        "alt": "Chhatu Rai",
+        "credit": "Swetapadma07",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Traditional_Odial_Lunch_Thali.jpg"
       }
     },
     {
@@ -54097,7 +54195,13 @@
       "subtitle": "same-day watered rice with lemon, ginger and a mustard tempering, eaten cool on the hottest afternoons",
       "region": "Odia",
       "regionPage": "odia.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/saja-pakhala.jpg",
+        "alt": "Saja Pakhala",
+        "credit": "Subhashish Panigrahi",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pakhala_01.jpg"
+      },
       "servings": 4,
       "prepMinutes": 10,
       "cookMinutes": 20,
@@ -54807,7 +54911,13 @@
       "subtitle": "deep-fried rice flour and jaggery cakes, crisp at the rim and chewy in the middle",
       "region": "Pahari",
       "regionPage": "pahari.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/arsa.jpg",
+        "alt": "Arsa",
+        "credit": "Navdeep Gusain",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Home_made_Arsa.jpg"
+      },
       "servings": 6,
       "prepMinutes": 25,
       "cookMinutes": 35,
@@ -56914,7 +57024,13 @@
       "subtitle": "whole river trout crisped in mustard oil with ajwain and a hard squeeze of lemon",
       "region": "Pahari",
       "regionPage": "pahari.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/kullu-trout.jpg",
+        "alt": "Kullu Trout",
+        "credit": "Gerda Arendt",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Trout_dish,_Rauenthal.jpg"
+      },
       "servings": 2,
       "prepMinutes": 15,
       "cookMinutes": 15,
@@ -59204,7 +59320,6 @@
       "subtitle": "flaky ghee pastry packed with sweet lentil paste, made for Navroze and weddings",
       "region": "Parsi",
       "regionPage": "parsi.html",
-      "image": null,
       "servings": 8,
       "prepMinutes": 45,
       "cookMinutes": 40,
@@ -59339,6 +59454,13 @@
         "recipeVersion": "1.0.0",
         "updated": "2026-07-31",
         "source": "Khaana editorial"
+      },
+      "image": {
+        "src": "assets/images/recipes/parsi-dar-ni-pori.jpg",
+        "alt": "Dar Ni Pori",
+        "credit": "GaneshDatta (talk) (Uploads)",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Obbattu.jpg"
       }
     },
     {
@@ -60113,7 +60235,6 @@
       "subtitle": "the dense baked wedding custard, caramel-topped and heavy with nutmeg and cardamom",
       "region": "Parsi",
       "regionPage": "parsi.html",
-      "image": null,
       "servings": 8,
       "prepMinutes": 20,
       "cookMinutes": 55,
@@ -60229,6 +60350,13 @@
         "recipeVersion": "1.0.0",
         "updated": "2026-07-31",
         "source": "Khaana editorial"
+      },
+      "image": {
+        "src": "assets/images/recipes/parsi-lagan-nu-custard.jpg",
+        "alt": "Lagan nu Custard",
+        "credit": "Cary Bass",
+        "license": "CC BY-SA 2.5",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Homemade_Flan.jpg"
       }
     },
     {
@@ -61202,7 +61330,6 @@
       "subtitle": "birthday-morning semolina pudding, soft and milky with cardamom and fried raisins",
       "region": "Parsi",
       "regionPage": "parsi.html",
-      "image": null,
       "servings": 4,
       "prepMinutes": 10,
       "cookMinutes": 25,
@@ -61319,6 +61446,13 @@
         "recipeVersion": "1.0.0",
         "updated": "2026-07-31",
         "source": "Khaana editorial"
+      },
+      "image": {
+        "src": "assets/images/recipes/parsi-ravo.jpg",
+        "alt": "Ravo",
+        "credit": "Pooja Kabirdas",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rava_Kesari_garnished_with_roasted_dry_fruits.jpg"
       }
     },
     {
@@ -63216,6 +63350,13 @@
         "recipeVersion": "1.0.0",
         "updated": "2026-07-31",
         "source": "Khaana editorial"
+      },
+      "image": {
+        "src": "assets/images/recipes/bharwa-karela.jpg",
+        "alt": "Bharwa Karela",
+        "credit": "KoyeliC",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pur_Vara_Karola.jpg"
       }
     },
     {
@@ -71804,7 +71945,13 @@
       "subtitle": "rhizome and potato braised down in a dry onion-tomato masala until the edges catch",
       "region": "Sindhi",
       "regionPage": "sindhi.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/bhee-patata.jpg",
+        "alt": "Bhee Patata",
+        "credit": "AntanO",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Curry_(lotus_roots).JPG"
+      },
       "servings": 4,
       "prepMinutes": 20,
       "cookMinutes": 35,
@@ -72135,7 +72282,13 @@
       "subtitle": "brown onion rice, sweet and savoury at once, the plate that sindhi kadhi is poured over",
       "region": "Sindhi",
       "regionPage": "sindhi.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/bhuga-chawal.jpg",
+        "alt": "Bhuga Chawal",
+        "credit": "Daderot",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Baked_saury_and_wild_onions_(lampascioni)_on_brown_rice,_black_beans,_and_tomato_-_Massachusetts.jpg"
+      },
       "servings": 4,
       "prepMinutes": 15,
       "cookMinutes": 35,
@@ -73027,7 +73180,13 @@
       "subtitle": "potato and cauliflower smothered in a wet green coriander masala, quick and everyday",
       "region": "Sindhi",
       "regionPage": "sindhi.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/seyal-bhaji.jpg",
+        "alt": "Seyal Bhaji",
+        "credit": "PratishthaSharma1991",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Potato-Tomato_Curry.jpeg"
+      },
       "servings": 4,
       "prepMinutes": 20,
       "cookMinutes": 30,
@@ -75633,6 +75792,13 @@
         "recipeVersion": "1.0.0",
         "updated": "2026-07-31",
         "source": "Khaana editorial"
+      },
+      "image": {
+        "src": "assets/images/recipes/kootu.jpg",
+        "alt": "Bottle Gourd Kootu",
+        "credit": "Sanjay Acharya",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cabbage_kootu.jpg"
       }
     },
     {

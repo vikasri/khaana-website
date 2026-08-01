@@ -5260,5 +5260,275 @@
     "license": "CC BY-SA 4.0",
     "artist": "Thamizhpparithi Maari",
     "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/ulavacharu.jpg",
+    "region": "Andhra",
+    "slot": "recipe",
+    "wiki_title": "Vegetarian Andhra Meal.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Vegetarian_Andhra_Meal.jpg",
+    "license": "CC BY 2.0",
+    "artist": "PriyaBooks",
+    "note": "third pass via wikipedia:Andhra cuisine"
+  },
+  {
+    "file": "recipes/anarsa.jpg",
+    "region": "Bihari",
+    "slot": "recipe",
+    "wiki_title": "Anarasa.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Anarasa.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Raj.Ranveer",
+    "note": "third pass via alias:Anarsa sweet"
+  },
+  {
+    "file": "recipes/badanekayi-ennegayi.jpg",
+    "region": "Karnataka",
+    "slot": "recipe",
+    "wiki_title": "Baigan Bharta from Nagpur.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Baigan_Bharta_from_Nagpur.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Dheerajk88",
+    "note": "third pass via wikipedia:Baingan bharta"
+  },
+  {
+    "file": "recipes/kane-rava-fry.jpg",
+    "region": "Karnataka",
+    "slot": "recipe",
+    "wiki_title": "Fish fried in Rava (Semolina) 01.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fish_fried_in_Rava_(Semolina)_01.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Pranab saikia2010",
+    "note": "third pass via alias:rava fried fish"
+  },
+  {
+    "file": "recipes/kumm-curry.jpg",
+    "region": "Karnataka",
+    "slot": "recipe",
+    "wiki_title": "Lunch at Curry Leaf Cafe 2024-01-20.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lunch_at_Curry_Leaf_Cafe_2024-01-20.jpg",
+    "license": "CC0",
+    "artist": "Andy Li",
+    "note": "third pass via alias:mushroom curry dish"
+  },
+  {
+    "file": "recipes/modur-pulav.jpg",
+    "region": "Kashmiri",
+    "slot": "recipe",
+    "wiki_title": "Saffron Rice or Basmati Rice Kesari Bath.png",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Saffron_Rice_or_Basmati_Rice_Kesari_Bath.png",
+    "license": "CC BY-SA 4.0",
+    "artist": "Manjeshwari poet mysore",
+    "note": "third pass via alias:sweet saffron rice"
+  },
+  {
+    "file": "recipes/tehar.jpg",
+    "region": "Kashmiri",
+    "slot": "recipe",
+    "wiki_title": "Tehri With Kachumbar Salad.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Tehri_With_Kachumbar_Salad.JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "third pass via wikipedia:Tehri (dish)"
+  },
+  {
+    "file": "recipes/kothimbir-vadi.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Nevaidya- food offered to good.png",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Nevaidya-_food_offered_to_good.png",
+    "license": "CC BY-SA 4.0",
+    "artist": "Master Sahil Gaikwad",
+    "note": "third pass via alias:Kothimbir vadi"
+  },
+  {
+    "file": "recipes/zunka.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Jhunka Bhakri Marathi Food by Dr. Raju Kasambe DSCN0221 (8).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Jhunka_Bhakri_Marathi_Food_by_Dr._Raju_Kasambe_DSCN0221_(8).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Dr. Raju Kasambe",
+    "note": "third pass via wikipedia:Jhunka"
+  },
+  {
+    "file": "recipes/gundruk-ko-jhol.jpg",
+    "region": "Northeast Indian",
+    "slot": "recipe",
+    "wiki_title": "Nepali dal-bhat-tarkari.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Nepali_dal-bhat-tarkari.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Subhashish Panigrahi",
+    "note": "third pass via wikipedia:Nepalese cuisine"
+  },
+  {
+    "file": "recipes/omita-khar.jpg",
+    "region": "Northeast Indian",
+    "slot": "recipe",
+    "wiki_title": "Khar of Assam.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Khar_of_Assam.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Suditree",
+    "note": "third pass via alias:Assamese khar"
+  },
+  {
+    "file": "recipes/ooti.jpg",
+    "region": "Northeast Indian",
+    "slot": "recipe",
+    "wiki_title": "Cabbage and chana Singju.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cabbage_and_chana_Singju.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sherin",
+    "note": "third pass via alias:Manipuri peas dish"
+  },
+  {
+    "file": "recipes/pika-pila.jpg",
+    "region": "Northeast Indian",
+    "slot": "recipe",
+    "wiki_title": "Arunachal Pradesh thali.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Arunachal_Pradesh_thali.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ganesh Mohan T",
+    "note": "third pass via alias:Apatani cuisine"
+  },
+  {
+    "file": "recipes/sanpiau.jpg",
+    "region": "Northeast Indian",
+    "slot": "recipe",
+    "wiki_title": "Pork and vegetables dish from Nagareyama, Chiba Prefecture; December 2012.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pork_and_vegetables_dish_from_Nagareyama,_Chiba_Prefecture;_December_2012.jpg",
+    "license": "CC BY 2.0",
+    "artist": "t-mizo",
+    "note": "third pass via alias:Mizo cuisine dish"
+  },
+  {
+    "file": "recipes/chhatu-rai.jpg",
+    "region": "Odia",
+    "slot": "recipe",
+    "wiki_title": "Traditional Odial Lunch Thali.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Traditional_Odial_Lunch_Thali.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Swetapadma07",
+    "note": "third pass via wikipedia:Cuisine of Odisha"
+  },
+  {
+    "file": "recipes/saja-pakhala.jpg",
+    "region": "Odia",
+    "slot": "recipe",
+    "wiki_title": "Pakhala 01.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pakhala_01.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Subhashish Panigrahi",
+    "note": "third pass via wikipedia:Pakhala"
+  },
+  {
+    "file": "recipes/arsa.jpg",
+    "region": "Pahari",
+    "slot": "recipe",
+    "wiki_title": "Home made Arsa.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Home_made_Arsa.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Navdeep Gusain",
+    "note": "third pass via alias:Arsa sweet"
+  },
+  {
+    "file": "recipes/kullu-trout.jpg",
+    "region": "Pahari",
+    "slot": "recipe",
+    "wiki_title": "Trout dish, Rauenthal.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Trout_dish,_Rauenthal.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Gerda Arendt",
+    "note": "third pass via alias:fried trout dish"
+  },
+  {
+    "file": "recipes/bharwa-karela.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Pur Vara Karola.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pur_Vara_Karola.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "KoyeliC",
+    "note": "third pass via alias:stuffed bitter gourd dish"
+  },
+  {
+    "file": "recipes/bhee-patata.jpg",
+    "region": "Sindhi",
+    "slot": "recipe",
+    "wiki_title": "Curry (lotus roots).JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Curry_(lotus_roots).JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "AntanO",
+    "note": "third pass via alias:lotus root curry"
+  },
+  {
+    "file": "recipes/bhuga-chawal.jpg",
+    "region": "Sindhi",
+    "slot": "recipe",
+    "wiki_title": "Baked saury and wild onions (lampascioni) on brown rice, black beans, and tomato - Massachusetts.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Baked_saury_and_wild_onions_(lampascioni)_on_brown_rice,_black_beans,_and_tomato_-_Massachusetts.jpg",
+    "license": "CC0",
+    "artist": "Daderot",
+    "note": "third pass via alias:brown onion rice"
+  },
+  {
+    "file": "recipes/seyal-bhaji.jpg",
+    "region": "Sindhi",
+    "slot": "recipe",
+    "wiki_title": "Potato-Tomato Curry.jpeg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Potato-Tomato_Curry.jpeg",
+    "license": "CC BY-SA 4.0",
+    "artist": "PratishthaSharma1991",
+    "note": "third pass via alias:coriander potato curry"
+  },
+  {
+    "file": "recipes/kootu.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Cabbage kootu.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cabbage_kootu.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Sanjay Acharya",
+    "note": "third pass via alias:Kootu"
+  },
+  {
+    "file": "recipes/parsi-dar-ni-pori.jpg",
+    "region": "Parsi",
+    "slot": "recipe",
+    "wiki_title": "Obbattu.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Obbattu.jpg",
+    "license": "CC BY 3.0",
+    "artist": "GaneshDatta (talk) (Uploads)",
+    "note": "fourth pass, alias 'puran poli'"
+  },
+  {
+    "file": "recipes/parsi-lagan-nu-custard.jpg",
+    "region": "Parsi",
+    "slot": "recipe",
+    "wiki_title": "Homemade Flan.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Homemade_Flan.jpg",
+    "license": "CC BY-SA 2.5",
+    "artist": "Cary Bass",
+    "note": "fourth pass, alias 'caramel custard'"
+  },
+  {
+    "file": "recipes/parsi-ravo.jpg",
+    "region": "Parsi",
+    "slot": "recipe",
+    "wiki_title": "Rava Kesari garnished with roasted dry fruits.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rava_Kesari_garnished_with_roasted_dry_fruits.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Pooja Kabirdas",
+    "note": "fourth pass, alias 'rava kesari'"
+  },
+  {
+    "file": "recipes/roth.jpg",
+    "region": "Kashmiri",
+    "slot": "recipe",
+    "wiki_title": "Coconut and Banana Malpua.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Coconut_and_Banana_Malpua.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sangram Keshari Senapati",
+    "note": "nearest relative: malpua, a sweet fried dough of the same family"
   }
 ]
