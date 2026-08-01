@@ -1570,3 +1570,4 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 }
 .eat-out-btn:hover { text-decoration: none; filter: brightness(1.06); }
 .eat-out-note { margin: 10px 0 0; font-size: 0.8rem; color: var(--ink-soft); line-height: 1.5; }
+.eat-out-alt { color: #0b5ed7; font-weight: 700; }

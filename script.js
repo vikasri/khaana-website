@@ -46,12 +46,16 @@ document.addEventListener('DOMContentLoaded', function () {
    anywhere else. */
 (function () {
   document.addEventListener('click', function (ev) {
-    var a = ev.target.closest && ev.target.closest('.eat-out-btn');
+    var a = ev.target.closest && ev.target.closest('.eat-out-btn, .eat-out-alt');
     if (!a) return;
     var box = document.getElementById('eat-out-where');
     var where = box ? box.value.trim() : '';
     var cuisine = a.getAttribute('data-cuisine') || '';
     var q = cuisine + ' restaurant' + (where ? ' ' + where : '');
-    a.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
+    // Apple Maps takes a plain q; Google wants its api=1 search form. Both
+    // open in a browser when the app is absent, so neither is a dead end.
+    a.href = a.classList.contains('eat-out-alt')
+      ? 'https://maps.apple.com/?q=' + encodeURIComponent(q)
+      : 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
   });
 })();

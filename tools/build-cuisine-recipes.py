@@ -76,13 +76,17 @@ def block(region, recipes):
            href="https://www.google.com/maps/search/?api=1&amp;query=%s+restaurant"
            target="_blank" rel="noopener noreferrer">Find %s restaurants</a>
       </div>
-      <p class="eat-out-note">Opens Google Maps. Leave the box empty and it uses your
-        device location. Nothing is stored here.</p>
+      <p class="eat-out-note">Leave the box empty and it uses your device location.
+        Nothing is stored here. Prefer
+        <a class="eat-out-alt" data-cuisine="%s"
+           href="https://maps.apple.com/?q=%s+restaurant"
+           target="_blank" rel="noopener noreferrer">Apple&nbsp;Maps</a>?</p>
     </div>
   </div>
 </section>
 %s""" % (BEGIN, esc(region), tiles, more,
-         esc(region), esc(region.replace(" ", "+").replace("/", "+")), esc(region), END)
+         esc(region), esc(region.replace(" ", "+").replace("/", "+")), esc(region),
+         esc(region), esc(region.replace(" ", "+").replace("/", "+")), END)
 
 
 def main():
