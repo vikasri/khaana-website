@@ -13,10 +13,8 @@
   // Below this share of a recipe's ingredients the suggestion stops being
   // useful — it is a shopping list with a photo attached.
   var MIN_PCT = 20;
-  // What a first-time visitor starts with. Rice is in practically every Indian
-  // kitchen, so ticking it by default costs nothing and the page opens with
-  // real suggestions instead of an empty pantry.
-  var DEFAULT_PANTRY = ['basmati-rice'];
+  // The pantry starts empty; nothing is ticked on a first visit.
+  var DEFAULT_PANTRY = [];
 
   var pantry = null;
   var recipes = [];
@@ -255,18 +253,20 @@
     var hidden = (sparse || []).length;
     var summary = el('results-summary');
     var q = searchQuery();
+    var PAGE_SIZE = 20;
+    var showing = Math.min(PAGE_SIZE, eligible.length);
     if (q) {
       summary.textContent = eligible.length === 0
         ? 'No recipe matches \u201c' + q + '\u201d within your filters.'
-        : eligible.length + ' recipe' + (eligible.length === 1 ? '' : 's') +
-          ' match \u201c' + q + '\u201d, ranked by how much of each you already have.';
+        : 'Showing ' + showing + ' of ' + eligible.length + ' recipe' +
+          (eligible.length === 1 ? '' : 's') + ' matching \u201c' + q + '\u201d.';
     } else if (selected.size === 0) {
-      summary.textContent = 'Showing all ' + eligible.length +
-        ' recipes that fit your filters. Tick what you have to rank them by your pantry.';
+      summary.textContent = 'Showing ' + showing + ' of ' + eligible.length +
+        ' recipes. Tick what is in your kitchen to rank them by your pantry.';
     } else {
       // Say what was withheld. A bare count would read as "that is everything".
-      summary.textContent = eligible.length + ' recipe' + (eligible.length === 1 ? '' : 's') +
-        ' you can mostly make, ranked by how much of each you already have.' +
+      summary.textContent = 'Showing ' + showing + ' of ' + eligible.length + ' recipe' +
+        (eligible.length === 1 ? '' : 's') + ' you can mostly make, ranked by how much of each you already have.' +
         (hidden ? ' ' + hidden + ' more need over ' + (100 - MIN_PCT) +
                   '% of their ingredients bought in, so they are not shown.' : '');
     }
@@ -413,6 +413,14 @@
     if (recipeSearch) {
       recipeSearch.addEventListener('input', update);
       recipeSearch.addEventListener('search', update);   // the native clear button
+    }
+    var clearSearch = el('clear-search');
+    if (clearSearch) {
+      clearSearch.addEventListener('click', function () {
+        recipeSearch.value = '';
+        recipeSearch.focus();
+        update();
+      });
     }
 
     var search = el('pantry-search');
