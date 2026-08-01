@@ -267,7 +267,9 @@ section.word-mark-section.tight { padding-top: 18px; padding-bottom: 0; }
 .syllable-rom {
   margin-top: 6px;
   font-family: var(--sans);
-  font-size: 0.92rem;
+  /* Large enough to read as a pronunciation guide rather than a footnote,
+     while staying clearly secondary to the Devanagari above it. */
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   color: var(--ink-soft);
