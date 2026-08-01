@@ -275,7 +275,7 @@ def render(r, nav, foot):
           <ul class="ing-list">
 {ing}
           </ul>
-          <h3>Equipment</h3>
+          <h3>Cookware</h3>
           <p class="equip-line">{esc(', '.join(e.replace('-', ' ') for e in r.get('equipment', [])))}</p>
         </div>
         <div class="recipe-method">

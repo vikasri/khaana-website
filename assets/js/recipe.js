@@ -119,7 +119,7 @@
           '<h2>Ingredients</h2>' +
           '<p class="serves-note">Quantities for ' + r.servings + '.</p>' +
           '<ul class="ing-list">' + ingHtml + '</ul>' +
-          '<h3>Equipment</h3>' +
+          '<h3>Cookware</h3>' +
           '<p class="equip-line">' + r.equipment.map(function (e) {
               return esc(e.replace(/-/g, ' '));
             }).join(', ') + '</p>' +
