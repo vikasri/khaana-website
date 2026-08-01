@@ -69,6 +69,23 @@ def schema(r, url, img):
         ],
         "keywords": ", ".join([r["region"]] + list(r.get("tags", []))),
     }
+    n = r.get("nutrition")
+    if n:
+        ps = n["perServing"]
+        # Google reads these. Values are per serving, which is what the property
+        # means; servingSize states the weight so the figures are interpretable.
+        d["nutrition"] = {
+            "@type": "NutritionInformation",
+            "servingSize": "%d g" % n["servingGrams"],
+            "calories": "%d kcal" % ps["kcal"],
+            "proteinContent": "%.1f g" % ps["protein"],
+            "carbohydrateContent": "%.1f g" % ps["carbs"],
+            "fiberContent": "%.1f g" % ps["fibre"],
+            "sugarContent": "%.1f g" % ps["sugars"],
+            "fatContent": "%.1f g" % ps["fat"],
+            "saturatedFatContent": "%.1f g" % ps["satFat"],
+            "unsaturatedFatContent": "%.1f g" % (ps["monoFat"] + ps["polyFat"]),
+        }
     if img:
         d["image"] = [img]
     if r.get("tags"):
@@ -83,6 +100,67 @@ def schema(r, url, img):
         if diets:
             d["suitableForDiet"] = diets
     return json.dumps(d, ensure_ascii=False, indent=2)
+
+
+CONFIDENCE_NOTE = {
+    "good": "Worked out from the listed quantities; most of the ingredient list could be weighed.",
+    "medium": "Worked out from the listed quantities. Some of the ingredient list is given "
+              "to taste rather than by weight, so treat these as a guide.",
+    "low": "A rough guide only. A large part of this ingredient list is given to taste rather "
+           "than by weight, or much of what is weighed is not eaten.",
+}
+
+
+def nutrition_panel(r):
+    """Calories and macros, most important first, per serving and per 100 g."""
+    n = r.get("nutrition")
+    if not n:
+        return ""
+    ps, pc = n["perServing"], n["per100g"]
+
+    def row(label, key, unit="g", cls=""):
+        return ('<tr class="%s"><th>%s</th><td>%s</td><td>%s</td></tr>'
+                % (cls,
+                   esc(label),
+                   ("%d kcal" % ps[key]) if key == "kcal" else ("%.1f %s" % (ps[key], unit)),
+                   ("%d kcal" % pc[key]) if key == "kcal" else ("%.1f %s" % (pc[key], unit))))
+
+    rows = [
+        row("Calories", "kcal", cls="nut-major"),
+        row("Protein", "protein", cls="nut-major"),
+        row("Carbohydrate", "carbs", cls="nut-major"),
+        row("of which sugars", "sugars", cls="nut-sub"),
+        row("Fibre", "fibre", cls="nut-sub"),
+        row("Fat", "fat", cls="nut-major"),
+        row("of which saturated", "satFat", cls="nut-sub"),
+    ]
+    unsat_s = ps["monoFat"] + ps["polyFat"]
+    unsat_c = pc["monoFat"] + pc["polyFat"]
+    rows.append('<tr class="nut-sub"><th>of which unsaturated</th><td>%.1f g</td><td>%.1f g</td></tr>'
+                % (unsat_s, unsat_c))
+
+    notes = [CONFIDENCE_NOTE.get(n.get("confidence", "medium"))]
+    if n.get("caveat"):
+        notes.append(n["caveat"])
+    if n.get("approximated"):
+        notes.append("Some ingredients have no exact match in the nutrient database and use "
+                     "the nearest equivalent: " +
+                     ", ".join(a.replace("-", " ") for a in n["approximated"][:6]) +
+                     ("." if len(n["approximated"]) <= 6 else ", and others."))
+    notes.append("Estimated from raw ingredients using "
+                 "<a href=\"https://fdc.nal.usda.gov/\" rel=\"noopener\">USDA FoodData "
+                 "Central</a>. Cooking changes are not modelled, and added salt is excluded, "
+                 "so sodium is not given.")
+
+    return ("""<section class="nutrition" aria-labelledby="nutrition-h">
+        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="%s">%s estimate</span></h2>
+        <table class="nut-table">
+          <thead><tr><th></th><th>Per serving<span>%d g</span></th><th>Per 100 g</th></tr></thead>
+          <tbody>%s</tbody>
+        </table>
+        <p class="nut-note">%s</p>
+      </section>""" % (n.get("confidence", "medium"), n.get("confidence", "medium").title(),
+                       n["servingGrams"], "".join(rows), " ".join(notes)))
 
 
 def render(r, nav, foot):
@@ -124,6 +202,8 @@ def render(r, nav, foot):
              if r.get("image") else
              '<figure class="recipe-photo recipe-photo-none" aria-hidden="true"><span>%s</span></figure>'
              % esc(r["name"][:1]))
+
+    nutrition_html = nutrition_panel(r)
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -199,6 +279,8 @@ def render(r, nav, foot):
           <p>{esc(r.get('storage',''))}</p>
         </div>
       </div>
+
+      {nutrition_html}
 
       <p class="provenance">Recipe v{esc(r.get('provenance',{}).get('recipeVersion','1.0.0'))},
         last updated {esc(r.get('provenance',{}).get('updated',''))}.

@@ -1397,3 +1397,31 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 .pantry-cat[open] summary::before { content: '\25BE\00a0'; }
 .pantry-cat .cat-n { color: var(--ink-soft); font-weight: 600; font-size: 0.8rem; }
 .pantry-cat .pantry-items { padding-bottom: 10px; }
+
+/* ---------- Nutrition panel ---------- */
+/* Ordered by what people look for: calories, protein, carbohydrate, fat, with
+   the breakdowns indented under their parent. */
+.nutrition { margin: 30px 0 6px; }
+.nutrition h2 { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.nut-conf {
+  font-family: var(--sans); font-size: 0.68rem; font-weight: 800;
+  letter-spacing: 0.09em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 999px;
+  background: #eaf6ee; color: #1d7a3d; border: 1px solid #c3e2cd;
+}
+.nut-conf[data-c="medium"] { background: #fdf4e6; color: #9a5b12; border-color: #f0dcbe; }
+.nut-conf[data-c="low"]    { background: #fdecec; color: #a33; border-color: #f2cccc; }
+.nut-table { width: 100%; max-width: 460px; border-collapse: collapse; font-size: 0.95rem; }
+.nut-table th, .nut-table td { padding: 7px 10px; border-bottom: 1px solid var(--line); }
+.nut-table thead th {
+  font-family: var(--sans); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--ink-soft); text-align: right; vertical-align: bottom;
+}
+.nut-table thead th:first-child { text-align: left; }
+.nut-table thead th span { display: block; font-weight: 600; letter-spacing: 0; text-transform: none; }
+.nut-table tbody th { text-align: left; font-weight: 600; }
+.nut-table td { text-align: right; font-variant-numeric: tabular-nums; }
+.nut-table .nut-major th { font-weight: 800; }
+.nut-table .nut-sub th { padding-left: 24px; font-weight: 400; color: var(--ink-soft); }
+.nut-table .nut-sub td { color: var(--ink-soft); }
+.nut-note { margin-top: 10px; font-size: 0.84rem; line-height: 1.55; color: var(--ink-soft); max-width: 62ch; }

@@ -1,0 +1,3361 @@
+{
+ "_method": "Estimated from raw ingredients using USDA FoodData Central. Cooking losses are not modelled and added salt is excluded, so sodium is not given.",
+ "ingredients": {
+  "water": {
+   "usda": null,
+   "per100": {
+    "kcal": 0,
+    "protein": 0,
+    "fat": 0,
+    "satFat": 0,
+    "monoFat": 0,
+    "polyFat": 0,
+    "carbs": 0,
+    "fibre": 0,
+    "sugars": 0
+   },
+   "portions": {},
+   "note": "contributes no energy in the amounts used"
+  },
+  "salt": {
+   "usda": "Salt, table",
+   "fdcId": 173468,
+   "per100": {
+    "fibre": 0,
+    "satFat": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "kcal": 0,
+    "monoFat": 0,
+    "polyFat": 0,
+    "sugars": 0
+   },
+   "portions": {
+    "cup": 292.0,
+    "tsp": 6.0,
+    "tbsp": 18.0,
+    "dash": 0.4
+   }
+  },
+  "sugar": {
+   "usda": "Sugars, granulated",
+   "fdcId": 169655,
+   "per100": {
+    "protein": 0,
+    "fat": 0,
+    "kcal": 387,
+    "satFat": 0,
+    "monoFat": 0,
+    "polyFat": 0,
+    "sugars": 99.8,
+    "carbs": 100,
+    "fibre": 0
+   },
+   "portions": {
+    "cup": 200.0,
+    "serving 1 cube": 2.3,
+    "tsp": 4.2,
+    "serving packet": 2.8
+   }
+  },
+  "neutral-oil": {
+   "usda": "Oil, sunflower, linoleic, (approx. 65%)",
+   "fdcId": 171025,
+   "per100": {
+    "satFat": 10.3,
+    "fibre": 0,
+    "protein": 0,
+    "fat": 100,
+    "carbs": 0,
+    "kcal": 884,
+    "monoFat": 19.5,
+    "polyFat": 65.7,
+    "sugars": 0
+   },
+   "portions": {
+    "tbsp": 13.6,
+    "cup": 218.0,
+    "tsp": 4.5
+   }
+  },
+  "atta": {
+   "usda": "Wheat flour, whole-grain, soft wheat",
+   "fdcId": 168944,
+   "per100": {
+    "satFat": 0.43,
+    "protein": 9.61,
+    "fibre": 13.1,
+    "monoFat": 0.28,
+    "polyFat": 1.17,
+    "fat": 1.95,
+    "carbs": 74.5,
+    "kcal": 332,
+    "sugars": 1.02
+   },
+   "portions": {}
+  },
+  "maida": {
+   "usda": "Wheat flour, white, all-purpose, unenriched",
+   "fdcId": 169761,
+   "per100": {
+    "fat": 0.98,
+    "carbs": 76.3,
+    "kcal": 364,
+    "monoFat": 0.09,
+    "polyFat": 0.41,
+    "fibre": 2.7,
+    "protein": 10.3,
+    "satFat": 0.15,
+    "sugars": 0.27
+   },
+   "portions": {
+    "cup": 125.0
+   }
+  },
+  "basmati-rice": {
+   "usda": "Rice, white, long-grain, regular, raw, unenriched",
+   "fdcId": 169756,
+   "per100": {
+    "sugars": 0.12,
+    "satFat": 0.18,
+    "protein": 7.13,
+    "fibre": 1.3,
+    "fat": 0.66,
+    "carbs": 80.0,
+    "kcal": 365,
+    "monoFat": 0.21,
+    "polyFat": 0.18
+   },
+   "portions": {
+    "cup": 185.0
+   }
+  },
+  "rice": {
+   "usda": "Rice, white, medium-grain, raw, unenriched",
+   "fdcId": 169760,
+   "per100": {
+    "protein": 6.61,
+    "satFat": 0.16,
+    "fat": 0.58,
+    "carbs": 79.3,
+    "kcal": 360,
+    "monoFat": 0.18,
+    "polyFat": 0.15
+   },
+   "portions": {
+    "cup": 195.0
+   }
+  },
+  "rice-flour": {
+   "usda": "Rice flour, white, unenriched",
+   "fdcId": 169714,
+   "per100": {
+    "sugars": 0.12,
+    "monoFat": 0.44,
+    "polyFat": 0.38,
+    "fat": 1.42,
+    "carbs": 80.1,
+    "kcal": 366,
+    "protein": 5.95,
+    "fibre": 2.4,
+    "satFat": 0.39
+   },
+   "portions": {
+    "cup": 158.0
+   }
+  },
+  "besan": {
+   "usda": "Chickpea flour (besan)",
+   "fdcId": 174288,
+   "per100": {
+    "sugars": 10.8,
+    "carbs": 57.8,
+    "kcal": 387,
+    "protein": 22.4,
+    "satFat": 0.69,
+    "fibre": 10.8,
+    "fat": 6.69,
+    "monoFat": 1.5,
+    "polyFat": 2.98
+   },
+   "portions": {
+    "cup": 92.0
+   }
+  },
+  "sattu": {
+   "usda": "Chickpea flour (besan)",
+   "fdcId": 174288,
+   "per100": {
+    "sugars": 10.8,
+    "carbs": 57.8,
+    "kcal": 387,
+    "protein": 22.4,
+    "satFat": 0.69,
+    "fibre": 10.8,
+    "fat": 6.69,
+    "monoFat": 1.5,
+    "polyFat": 2.98
+   },
+   "portions": {
+    "cup": 92.0
+   },
+   "approx": "roasted gram flour approximated by chickpea flour"
+  },
+  "rava": {
+   "usda": "Semolina, unenriched",
+   "fdcId": 168933,
+   "per100": {
+    "protein": 12.7,
+    "fibre": 3.9,
+    "satFat": 0.15,
+    "fat": 1.05,
+    "carbs": 72.8,
+    "kcal": 360,
+    "monoFat": 0.12,
+    "polyFat": 0.43
+   },
+   "portions": {
+    "cup": 167.0
+   }
+  },
+  "dalia": {
+   "usda": "Wheat, durum",
+   "fdcId": 169721,
+   "per100": {
+    "protein": 13.7,
+    "satFat": 0.45,
+    "fat": 2.47,
+    "carbs": 71.1,
+    "kcal": 339,
+    "monoFat": 0.34,
+    "polyFat": 0.98
+   },
+   "portions": {
+    "cup": 192.0
+   },
+   "approx": "broken wheat approximated by durum wheat"
+  },
+  "cornflour": {
+   "usda": "Cornstarch",
+   "fdcId": 169698,
+   "per100": {
+    "sugars": 0,
+    "fat": 0.05,
+    "carbs": 91.3,
+    "kcal": 381,
+    "monoFat": 0.02,
+    "polyFat": 0.03,
+    "protein": 0.26,
+    "fibre": 0.9,
+    "satFat": 0.01
+   },
+   "portions": {
+    "cup": 128.0
+   }
+  },
+  "maize-flour": {
+   "usda": "Corn flour, whole-grain, yellow",
+   "fdcId": 170290,
+   "per100": {
+    "fibre": 7.3,
+    "fat": 3.86,
+    "carbs": 76.8,
+    "kcal": 361,
+    "monoFat": 1.02,
+    "polyFat": 1.76,
+    "protein": 6.93,
+    "satFat": 0.54,
+    "sugars": 0.64
+   },
+   "portions": {
+    "cup": 117.0
+   }
+  },
+  "jowar-flour": {
+   "usda": "Sorghum flour, whole-grain",
+   "fdcId": 168943,
+   "per100": {
+    "monoFat": 0.94,
+    "polyFat": 1.4,
+    "fat": 3.34,
+    "carbs": 76.6,
+    "kcal": 359,
+    "sugars": 1.94,
+    "protein": 8.43,
+    "satFat": 0.53,
+    "fibre": 6.6
+   },
+   "portions": {
+    "cup": 121.0
+   }
+  },
+  "bajra-flour": {
+   "usda": "Millet flour",
+   "fdcId": 172023,
+   "per100": {
+    "protein": 10.8,
+    "fibre": 3.5,
+    "satFat": 0.54,
+    "fat": 4.25,
+    "sugars": 1.66,
+    "monoFat": 0.92,
+    "polyFat": 2.62,
+    "carbs": 75.1,
+    "kcal": 382
+   },
+   "portions": {
+    "cup": 119.0
+   },
+   "approx": "pearl millet flour approximated by generic millet flour"
+  },
+  "ragi-flour": {
+   "usda": "Millet flour",
+   "fdcId": 172023,
+   "per100": {
+    "protein": 10.8,
+    "fibre": 3.5,
+    "satFat": 0.54,
+    "fat": 4.25,
+    "sugars": 1.66,
+    "monoFat": 0.92,
+    "polyFat": 2.62,
+    "carbs": 75.1,
+    "kcal": 382
+   },
+   "portions": {
+    "cup": 119.0
+   },
+   "approx": "finger millet flour approximated by generic millet flour"
+  },
+  "poha": {
+   "usda": "Rice, white, long-grain, regular, raw, unenriched",
+   "fdcId": 169756,
+   "per100": {
+    "sugars": 0.12,
+    "satFat": 0.18,
+    "protein": 7.13,
+    "fibre": 1.3,
+    "fat": 0.66,
+    "carbs": 80.0,
+    "kcal": 365,
+    "monoFat": 0.21,
+    "polyFat": 0.18
+   },
+   "portions": {
+    "cup": 185.0
+   },
+   "approx": "flattened rice approximated by raw white rice"
+  },
+  "murmura": {
+   "usda": "Cereals ready-to-eat, rice, puffed, fortified",
+   "fdcId": 173912,
+   "per100": {
+    "fibre": 1.7,
+    "satFat": 0.13,
+    "protein": 6.3,
+    "fat": 0.5,
+    "carbs": 89.8,
+    "kcal": 402
+   },
+   "portions": {
+    "oz": 14.2,
+    "cup": 14.0
+   },
+   "approx": "puffed rice approximated by a puffed-rice cereal"
+  },
+  "sabudana": {
+   "usda": "Tapioca, pearl, dry",
+   "fdcId": 169717,
+   "per100": {
+    "monoFat": 0.01,
+    "polyFat": 0.0,
+    "satFat": 0.01,
+    "protein": 0.19,
+    "fibre": 0.9,
+    "fat": 0.02,
+    "carbs": 88.7,
+    "kcal": 358,
+    "sugars": 3.35
+   },
+   "portions": {
+    "cup": 152.0
+   }
+  },
+  "vermicelli": {
+   "usda": "Pasta, dry, unenriched",
+   "fdcId": 168927,
+   "per100": {
+    "protein": 13.0,
+    "fibre": 3.2,
+    "fat": 1.51,
+    "satFat": 0.28,
+    "carbs": 74.7,
+    "kcal": 371,
+    "sugars": 2.67,
+    "monoFat": 0.17,
+    "polyFat": 0.56
+   },
+   "portions": {
+    "cup rotini": 96.0,
+    "oz": 57.0,
+    "cup lasagna": 90.0,
+    "cup farfalle": 81.0,
+    "cup shells": 64.0,
+    "cup elbows": 122.0,
+    "cup spaghetti": 91.0,
+    "cup penne": 95.0
+   },
+   "approx": "approximated by dry wheat pasta"
+  },
+  "noodles": {
+   "usda": "Noodles, egg, dry, unenriched",
+   "fdcId": 169755,
+   "per100": {
+    "polyFat": 1.33,
+    "carbs": 71.3,
+    "kcal": 384,
+    "monoFat": 1.25,
+    "sugars": 1.88,
+    "fat": 4.44,
+    "satFat": 1.18,
+    "fibre": 3.3,
+    "protein": 14.2
+   },
+   "portions": {
+    "cup": 38.0
+   }
+  },
+  "bread": {
+   "usda": "Bread, white, commercially prepared (includes soft bread crumbs)",
+   "fdcId": 174924,
+   "per100": {
+    "monoFat": 0.6,
+    "polyFat": 1.6,
+    "satFat": 0.7,
+    "fibre": 2.7,
+    "fat": 3.33,
+    "carbs": 49.4,
+    "kcal": 266,
+    "sugars": 5.67,
+    "protein": 8.85
+   },
+   "portions": {
+    "slice": 29.0,
+    "slice crust not eaten": 12.0,
+    "cup, cubes": 35.0,
+    "cup, crumbs": 45.0,
+    "slice, thin": 20.0,
+    "slice, very thin": 15.0,
+    "slice, large": 30.0,
+    "slice thin, crust not eaten": 9.0,
+    "oz": 28.35
+   }
+  },
+  "pav": {
+   "usda": "Rolls, dinner, plain, commercially prepared (includes brown-and-serve)",
+   "fdcId": 172793,
+   "per100": {
+    "sugars": 5.55,
+    "monoFat": 1.88,
+    "polyFat": 2.51,
+    "fat": 6.47,
+    "carbs": 52.0,
+    "kcal": 310,
+    "satFat": 1.38,
+    "protein": 10.9,
+    "fibre": 2.0
+   },
+   "portions": {
+    "each (pan, dinner, or small roll) (2\" square, 2\" high)": 25.0,
+    "roll (foot long frankfurter roll)": 86.0,
+    "roll (hamburger, frankfurter, onion roll, bun, large roll)": 43.0,
+    "roll (1 oz)": 28.0
+   }
+  },
+  "toor-dal": {
+   "usda": "Pigeon peas (red gram), mature seeds, raw",
+   "fdcId": 172436,
+   "per100": {
+    "fibre": 15.0,
+    "protein": 21.7,
+    "satFat": 0.33,
+    "monoFat": 0.01,
+    "polyFat": 0.81,
+    "fat": 1.49,
+    "carbs": 62.8,
+    "kcal": 343
+   },
+   "portions": {
+    "cup": 205.0
+   }
+  },
+  "chana-dal": {
+   "usda": "Chickpeas (garbanzo beans, bengal gram), mature seeds, raw",
+   "fdcId": 173756,
+   "per100": {
+    "sugars": 10.7,
+    "monoFat": 1.38,
+    "polyFat": 2.73,
+    "carbs": 63.0,
+    "kcal": 378,
+    "fibre": 12.2,
+    "protein": 20.5,
+    "satFat": 0.6,
+    "fat": 6.04
+   },
+   "portions": {
+    "tbsp": 12.5,
+    "cup": 200.0
+   }
+  },
+  "kala-chana": {
+   "usda": "Chickpeas (garbanzo beans, bengal gram), mature seeds, raw",
+   "fdcId": 173756,
+   "per100": {
+    "sugars": 10.7,
+    "monoFat": 1.38,
+    "polyFat": 2.73,
+    "carbs": 63.0,
+    "kcal": 378,
+    "fibre": 12.2,
+    "protein": 20.5,
+    "satFat": 0.6,
+    "fat": 6.04
+   },
+   "portions": {
+    "tbsp": 12.5,
+    "cup": 200.0
+   },
+   "approx": "brown chickpea approximated by kabuli chickpea"
+  },
+  "chickpeas": {
+   "usda": "Chickpeas (garbanzo beans, bengal gram), mature seeds, raw",
+   "fdcId": 173756,
+   "per100": {
+    "sugars": 10.7,
+    "monoFat": 1.38,
+    "polyFat": 2.73,
+    "carbs": 63.0,
+    "kcal": 378,
+    "fibre": 12.2,
+    "protein": 20.5,
+    "satFat": 0.6,
+    "fat": 6.04
+   },
+   "portions": {
+    "tbsp": 12.5,
+    "cup": 200.0
+   }
+  },
+  "masoor-dal": {
+   "usda": "Lentils, raw",
+   "fdcId": 172420,
+   "per100": {
+    "sugars": 2.03,
+    "fat": 1.06,
+    "fibre": 10.7,
+    "protein": 24.6,
+    "satFat": 0.15,
+    "monoFat": 0.19,
+    "polyFat": 0.53,
+    "carbs": 63.4,
+    "kcal": 352
+   },
+   "portions": {
+    "tablespoon": 12.0,
+    "cup": 192.0
+   }
+  },
+  "moong-dal": {
+   "usda": "Mung beans, mature seeds, raw",
+   "fdcId": 174256,
+   "per100": {
+    "sugars": 6.6,
+    "carbs": 62.6,
+    "kcal": 347,
+    "protein": 23.9,
+    "fibre": 16.3,
+    "satFat": 0.35,
+    "fat": 1.15,
+    "monoFat": 0.16,
+    "polyFat": 0.38
+   },
+   "portions": {
+    "tbsp": 13.0,
+    "cup": 207.0
+   }
+  },
+  "whole-moong": {
+   "usda": "Mung beans, mature seeds, raw",
+   "fdcId": 174256,
+   "per100": {
+    "sugars": 6.6,
+    "carbs": 62.6,
+    "kcal": 347,
+    "protein": 23.9,
+    "fibre": 16.3,
+    "satFat": 0.35,
+    "fat": 1.15,
+    "monoFat": 0.16,
+    "polyFat": 0.38
+   },
+   "portions": {
+    "tbsp": 13.0,
+    "cup": 207.0
+   }
+  },
+  "urad-dal": {
+   "usda": "Beans, black, mature seeds, raw",
+   "fdcId": 173734,
+   "per100": {
+    "fibre": 15.5,
+    "carbs": 62.4,
+    "kcal": 341,
+    "sugars": 2.12,
+    "protein": 21.6,
+    "satFat": 0.37,
+    "fat": 1.42,
+    "monoFat": 0.12,
+    "polyFat": 0.61
+   },
+   "portions": {
+    "cup": 194.0,
+    "tbsp": 12.1
+   },
+   "approx": "black gram approximated by black bean"
+  },
+  "whole-urad": {
+   "usda": "Beans, black, mature seeds, raw",
+   "fdcId": 173734,
+   "per100": {
+    "fibre": 15.5,
+    "carbs": 62.4,
+    "kcal": 341,
+    "sugars": 2.12,
+    "protein": 21.6,
+    "satFat": 0.37,
+    "fat": 1.42,
+    "monoFat": 0.12,
+    "polyFat": 0.61
+   },
+   "portions": {
+    "cup": 194.0,
+    "tbsp": 12.1
+   },
+   "approx": "black gram approximated by black bean"
+  },
+  "rajma": {
+   "usda": "Beans, kidney, red, mature seeds, raw",
+   "fdcId": 173744,
+   "per100": {
+    "sugars": 2.1,
+    "carbs": 61.3,
+    "kcal": 337,
+    "protein": 22.5,
+    "fibre": 15.2,
+    "satFat": 0.15,
+    "fat": 1.06,
+    "monoFat": 0.08,
+    "polyFat": 0.59
+   },
+   "portions": {
+    "cup": 184.0,
+    "tbsp": 12.2
+   }
+  },
+  "lobia": {
+   "usda": "Cowpeas, common (blackeyes, crowder, southern), mature seeds, raw",
+   "fdcId": 173758,
+   "per100": {
+    "carbs": 60.0,
+    "sugars": 6.9,
+    "kcal": 336,
+    "protein": 23.5,
+    "satFat": 0.33,
+    "fibre": 10.6,
+    "fat": 1.26,
+    "monoFat": 0.11,
+    "polyFat": 0.54
+   },
+   "portions": {
+    "tbsp": 10.5,
+    "cup": 167.0
+   }
+  },
+  "dried-peas": {
+   "usda": "Peas, green, split, mature seeds, raw",
+   "fdcId": 172428,
+   "per100": {
+    "protein": 23.1,
+    "satFat": 0.41,
+    "fibre": 22.2,
+    "monoFat": 0.61,
+    "polyFat": 1.02,
+    "fat": 3.89,
+    "carbs": 61.6,
+    "kcal": 364,
+    "sugars": 3.14
+   },
+   "portions": {
+    "cup": 196.0
+   }
+  },
+  "horse-gram": {
+   "usda": "Beans, pinto, mature seeds, raw (Includes foods for USDA's Food Distribution Program)",
+   "fdcId": 175199,
+   "per100": {
+    "fibre": 15.5,
+    "protein": 21.4,
+    "fat": 1.23,
+    "sugars": 2.11,
+    "carbs": 62.6,
+    "kcal": 347,
+    "monoFat": 0.23,
+    "polyFat": 0.41,
+    "satFat": 0.23
+   },
+   "portions": {
+    "tbsp": 12.0,
+    "cup": 193.0
+   },
+   "approx": "no USDA entry; pinto bean used as a comparable dry pulse"
+  },
+  "sprouted-moth": {
+   "usda": "Mung beans, mature seeds, sprouted, raw",
+   "fdcId": 169957,
+   "per100": {
+    "sugars": 4.13,
+    "carbs": 5.94,
+    "kcal": 30.0,
+    "protein": 3.04,
+    "fibre": 1.8,
+    "satFat": 0.05,
+    "fat": 0.18,
+    "monoFat": 0.02,
+    "polyFat": 0.06
+   },
+   "portions": {
+    "cup": 104.0,
+    "package (12 oz)": 340.0
+   },
+   "approx": "moth bean approximated by sprouted mung"
+  },
+  "onion": {
+   "usda": "Onions, raw",
+   "fdcId": 170000,
+   "per100": {
+    "monoFat": 0.01,
+    "polyFat": 0.02,
+    "sugars": 4.24,
+    "fat": 0.1,
+    "carbs": 9.34,
+    "kcal": 40.0,
+    "satFat": 0.04,
+    "protein": 1.1,
+    "fibre": 1.7
+   },
+   "portions": {
+    "cup, chopped": 160.0,
+    "slice, medium (1/8\" thick)": 14.0,
+    "medium (2-1/2\" dia)": 110.0,
+    "large": 150.0,
+    "rings": 60.0,
+    "tbsp chopped": 10.0,
+    "cup, sliced": 115.0,
+    "slice, thin": 9.0,
+    "small": 70.0,
+    "slice, large (1/4\" thick)": 38.0
+   }
+  },
+  "shallot": {
+   "usda": "Shallots, raw",
+   "fdcId": 170499,
+   "per100": {
+    "carbs": 16.8,
+    "kcal": 72.0,
+    "fat": 0.1,
+    "monoFat": 0.01,
+    "polyFat": 0.04,
+    "protein": 2.5,
+    "satFat": 0.02,
+    "sugars": 7.87,
+    "fibre": 3.2
+   },
+   "portions": {
+    "tbsp chopped": 10.0
+   }
+  },
+  "tomato": {
+   "usda": "Tomatoes, red, ripe, raw, year round average",
+   "fdcId": 170457,
+   "per100": {
+    "monoFat": 0.03,
+    "polyFat": 0.08,
+    "sugars": 2.63,
+    "carbs": 3.89,
+    "kcal": 18.0,
+    "satFat": 0.03,
+    "fat": 0.2,
+    "fibre": 1.2,
+    "protein": 0.88
+   },
+   "portions": {
+    "medium whole (2-3/5\" dia)": 123.0,
+    "slice, medium (1/4\" thick)": 20.0,
+    "large whole (3\" dia)": 182.0,
+    "cherry": 17.0,
+    "italian tomato": 62.0,
+    "slice, thin/small": 15.0,
+    "cup, chopped or sliced": 180.0,
+    "small whole (2-2/5\" dia)": 91.0,
+    "slice, thick/large (1/2\" thick)": 27.0,
+    "cup cherry tomatoes": 149.0,
+    "wedge (1/4 of medium tomato)": 31.0,
+    "nlea serving": 148.0,
+    "plum tomato": 62.0
+   }
+  },
+  "potato": {
+   "usda": "Potatoes, flesh and skin, raw",
+   "fdcId": 170026,
+   "per100": {
+    "fat": 0.09,
+    "kcal": 77.0,
+    "satFat": 0.03,
+    "protein": 2.05,
+    "fibre": 2.1,
+    "monoFat": 0.0,
+    "polyFat": 0.04,
+    "carbs": 17.5,
+    "sugars": 0.82
+   },
+   "portions": {
+    "potato small (1-3/4\" to 2-1/2\" dia)": 170.0,
+    "cup, diced": 75.0,
+    "potato large (3\" to 4-1/4\" dia)": 369.0,
+    "potato medium (2-1/4\" to 3-1/4\" dia)": 213.0
+   }
+  },
+  "sweet-potato": {
+   "usda": "Sweet potato, raw, unprepared (Includes foods for USDA's Food Distribution Program)",
+   "fdcId": 168482,
+   "per100": {
+    "fibre": 3.0,
+    "satFat": 0.02,
+    "sugars": 4.18,
+    "carbs": 20.1,
+    "kcal": 86.0,
+    "monoFat": 0.0,
+    "polyFat": 0.01,
+    "fat": 0.05,
+    "protein": 1.57
+   },
+   "portions": {
+    "cup, cubes": 133.0,
+    "sweetpotato, 5\" long": 130.0
+   }
+  },
+  "cauliflower": {
+   "usda": "Cauliflower, raw",
+   "fdcId": 169986,
+   "per100": {
+    "carbs": 4.97,
+    "kcal": 25.0,
+    "monoFat": 0.03,
+    "polyFat": 0.03,
+    "satFat": 0.13,
+    "protein": 1.92,
+    "fibre": 2.0,
+    "sugars": 1.91,
+    "fat": 0.28
+   },
+   "portions": {
+    "floweret": 13.0,
+    "head medium (5-6\" dia.)": 588.0,
+    "head small (4\" dia.)": 265.0,
+    "head large (6-7\" dia.)": 840.0,
+    "cup chopped (1/2\" pieces)": 107.0
+   }
+  },
+  "cabbage": {
+   "usda": "Cabbage, raw",
+   "fdcId": 169975,
+   "per100": {
+    "fat": 0.1,
+    "carbs": 5.8,
+    "kcal": 25.0,
+    "sugars": 3.2,
+    "monoFat": 0.02,
+    "polyFat": 0.02,
+    "protein": 1.28,
+    "fibre": 2.5,
+    "satFat": 0.03
+   },
+   "portions": {
+    "leaf, large": 33.0,
+    "head, medium (about 5-3/4\" dia)": 908.0,
+    "cup, chopped": 89.0,
+    "cup, shredded": 70.0,
+    "leaf, medium": 23.0,
+    "leaf": 15.0,
+    "head, large (about 7\" dia)": 1248.0,
+    "head, small (about 4-1/2\" dia)": 714.0
+   }
+  },
+  "carrot": {
+   "usda": "Carrots, raw",
+   "fdcId": 170393,
+   "per100": {
+    "satFat": 0.03,
+    "polyFat": 0.1,
+    "monoFat": 0.01,
+    "protein": 0.93,
+    "fat": 0.24,
+    "sugars": 4.74,
+    "carbs": 9.58,
+    "kcal": 41.0,
+    "fibre": 2.8
+   },
+   "portions": {
+    "cup grated": 110.0,
+    "slice": 3.0,
+    "strip large (3\" long)": 7.0,
+    "small (5-1/2\" long)": 50.0,
+    "medium": 61.0,
+    "large (7-1/4\" to 8-/1/2\" long)": 72.0,
+    "cup chopped": 128.0,
+    "strip medium": 4.0,
+    "cup strips or slices": 122.0
+   }
+  },
+  "peas": {
+   "usda": "Peas, green, raw",
+   "fdcId": 170419,
+   "per100": {
+    "carbs": 14.4,
+    "kcal": 81.0,
+    "sugars": 5.67,
+    "protein": 5.42,
+    "satFat": 0.07,
+    "monoFat": 0.04,
+    "polyFat": 0.19,
+    "fat": 0.4,
+    "fibre": 5.7
+   },
+   "portions": {
+    "cup": 145.0
+   }
+  },
+  "spinach": {
+   "usda": "Spinach, raw",
+   "fdcId": 168462,
+   "per100": {
+    "protein": 2.86,
+    "fibre": 2.2,
+    "monoFat": 0.01,
+    "polyFat": 0.17,
+    "sugars": 0.42,
+    "fat": 0.39,
+    "carbs": 3.63,
+    "kcal": 23.0,
+    "satFat": 0.06
+   },
+   "portions": {
+    "bunch": 340.0,
+    "leaf": 10.0,
+    "cup": 30.0,
+    "package (10 oz)": 284.0
+   }
+  },
+  "amaranth-greens": {
+   "usda": "Amaranth leaves, raw",
+   "fdcId": 168385,
+   "per100": {
+    "carbs": 4.02,
+    "kcal": 23.0,
+    "fat": 0.33,
+    "monoFat": 0.08,
+    "polyFat": 0.15,
+    "protein": 2.46,
+    "satFat": 0.09
+   },
+   "portions": {
+    "leaf": 14.0,
+    "cup": 28.0
+   }
+  },
+  "mustard-greens": {
+   "usda": "Mustard greens, raw",
+   "fdcId": 169256,
+   "per100": {
+    "satFat": 0.01,
+    "monoFat": 0.09,
+    "polyFat": 0.04,
+    "protein": 2.86,
+    "fibre": 3.2,
+    "sugars": 1.32,
+    "fat": 0.42,
+    "carbs": 4.67,
+    "kcal": 27.0
+   },
+   "portions": {
+    "cup, chopped": 56.0
+   }
+  },
+  "methi-leaves": {
+   "usda": "Spices, fenugreek seed",
+   "fdcId": 171324,
+   "per100": {
+    "fat": 6.41,
+    "carbs": 58.4,
+    "kcal": 323,
+    "protein": 23.0,
+    "fibre": 24.6,
+    "satFat": 1.46
+   },
+   "portions": {
+    "tsp": 3.7,
+    "tbsp": 11.1
+   },
+   "approx": "fresh fenugreek leaf is not in USDA; the seed is used, which is denser. Treated as approximate"
+  },
+  "eggplant": {
+   "usda": "Eggplant, raw",
+   "fdcId": 169228,
+   "per100": {
+    "monoFat": 0.02,
+    "polyFat": 0.08,
+    "satFat": 0.03,
+    "sugars": 3.53,
+    "fat": 0.18,
+    "carbs": 5.88,
+    "kcal": 25.0,
+    "fibre": 3.0,
+    "protein": 0.98
+   },
+   "portions": {
+    "eggplant, unpeeled (approx 1-1/4 lb)": 548.0,
+    "eggplant, peeled (yield from 1-1/4 lb)": 458.0,
+    "cup, cubes": 82.0
+   }
+  },
+  "okra": {
+   "usda": "Okra, raw",
+   "fdcId": 169260,
+   "per100": {
+    "fibre": 3.2,
+    "satFat": 0.03,
+    "monoFat": 0.02,
+    "polyFat": 0.03,
+    "protein": 1.93,
+    "sugars": 1.48,
+    "fat": 0.19,
+    "carbs": 7.45,
+    "kcal": 33.0
+   },
+   "portions": {
+    "pods (3\" long)": 95.0,
+    "cup": 100.0
+   }
+  },
+  "capsicum": {
+   "usda": "Peppers, sweet, green, raw",
+   "fdcId": 170427,
+   "per100": {
+    "fat": 0.17,
+    "protein": 0.86,
+    "fibre": 1.7,
+    "satFat": 0.06,
+    "carbs": 4.64,
+    "kcal": 20.0,
+    "sugars": 2.4,
+    "monoFat": 0.01,
+    "polyFat": 0.06
+   },
+   "portions": {
+    "cup, chopped": 149.0,
+    "cup, sliced": 92.0,
+    "ring (3\" dia, 1/4\" thick)": 10.0,
+    "strips": 27.0,
+    "large (2-1/4 per lb, approx 3-3/4\" long, 3\" dia)": 164.0,
+    "medium (approx 2-3/4\" long, 2-1/2\" dia)": 119.0,
+    "small": 74.0,
+    "tbsp": 9.3
+   }
+  },
+  "green-chilli": {
+   "usda": "Peppers, hot chili, green, raw",
+   "fdcId": 170497,
+   "per100": {
+    "fat": 0.2,
+    "carbs": 9.46,
+    "kcal": 40.0,
+    "monoFat": 0.01,
+    "polyFat": 0.11,
+    "satFat": 0.02,
+    "fibre": 1.5,
+    "protein": 2.0,
+    "sugars": 5.1
+   },
+   "portions": {
+    "pepper": 45.0,
+    "cup, chopped or diced": 75.0
+   }
+  },
+  "cucumber": {
+   "usda": "Cucumber, with peel, raw",
+   "fdcId": 168409,
+   "per100": {
+    "carbs": 3.63,
+    "kcal": 15.0,
+    "sugars": 1.67,
+    "monoFat": 0.01,
+    "polyFat": 0.03,
+    "satFat": 0.04,
+    "fat": 0.11,
+    "fibre": 0.5,
+    "protein": 0.65
+   },
+   "portions": {
+    "cucumber (8-1/4\")": 301.0,
+    "cup slices": 52.0
+   }
+  },
+  "radish": {
+   "usda": "Radishes, raw",
+   "fdcId": 169276,
+   "per100": {
+    "monoFat": 0.02,
+    "polyFat": 0.05,
+    "carbs": 3.4,
+    "kcal": 16.0,
+    "satFat": 0.03,
+    "sugars": 1.86,
+    "protein": 0.68,
+    "fibre": 1.6,
+    "fat": 0.1
+   },
+   "portions": {
+    "medium (3/4\" to 1\" dia)": 4.5,
+    "small": 2.0,
+    "cup slices": 116.0,
+    "slice": 1.0,
+    "large (1\" to 1-1/4\" dia)": 9.0
+   }
+  },
+  "pumpkin": {
+   "usda": "Pumpkin, raw",
+   "fdcId": 168448,
+   "per100": {
+    "carbs": 6.5,
+    "fibre": 0.5,
+    "kcal": 26.0,
+    "sugars": 2.76,
+    "fat": 0.1,
+    "monoFat": 0.01,
+    "polyFat": 0.01,
+    "protein": 1.0,
+    "satFat": 0.05
+   },
+   "portions": {
+    "cup (1\" cubes)": 116.0
+   }
+  },
+  "bottle-gourd": {
+   "usda": "Gourd, white-flowered (calabash), raw",
+   "fdcId": 169232,
+   "per100": {
+    "protein": 0.62,
+    "satFat": 0.0,
+    "fat": 0.02,
+    "carbs": 3.39,
+    "kcal": 14.0,
+    "monoFat": 0.0,
+    "polyFat": 0.01,
+    "fibre": 0.5
+   },
+   "portions": {
+    "gourd": 771.0,
+    "cup (1\" pieces)": 58.0
+   }
+  },
+  "ash-gourd": {
+   "usda": "Gourd, white-flowered (calabash), raw",
+   "fdcId": 169232,
+   "per100": {
+    "protein": 0.62,
+    "satFat": 0.0,
+    "fat": 0.02,
+    "carbs": 3.39,
+    "kcal": 14.0,
+    "monoFat": 0.0,
+    "polyFat": 0.01,
+    "fibre": 0.5
+   },
+   "portions": {
+    "gourd": 771.0,
+    "cup (1\" pieces)": 58.0
+   },
+   "approx": "approximated by bottle gourd"
+  },
+  "ridge-gourd": {
+   "usda": "Gourd, white-flowered (calabash), raw",
+   "fdcId": 169232,
+   "per100": {
+    "protein": 0.62,
+    "satFat": 0.0,
+    "fat": 0.02,
+    "carbs": 3.39,
+    "kcal": 14.0,
+    "monoFat": 0.0,
+    "polyFat": 0.01,
+    "fibre": 0.5
+   },
+   "portions": {
+    "gourd": 771.0,
+    "cup (1\" pieces)": 58.0
+   },
+   "approx": "approximated by bottle gourd"
+  },
+  "pointed-gourd": {
+   "usda": "Gourd, white-flowered (calabash), raw",
+   "fdcId": 169232,
+   "per100": {
+    "protein": 0.62,
+    "satFat": 0.0,
+    "fat": 0.02,
+    "carbs": 3.39,
+    "kcal": 14.0,
+    "monoFat": 0.0,
+    "polyFat": 0.01,
+    "fibre": 0.5
+   },
+   "portions": {
+    "gourd": 771.0,
+    "cup (1\" pieces)": 58.0
+   },
+   "approx": "approximated by bottle gourd"
+  },
+  "bitter-gourd": {
+   "usda": "Balsam-pear (bitter gourd), pods, raw",
+   "fdcId": 168393,
+   "per100": {
+    "carbs": 3.7,
+    "kcal": 17.0,
+    "protein": 1.0,
+    "fibre": 2.8,
+    "fat": 0.17
+   },
+   "portions": {
+    "cup (1/2\" pieces)": 93.0,
+    "balsam-pear": 124.0
+   }
+  },
+  "cluster-beans": {
+   "usda": "Beans, snap, green, raw",
+   "fdcId": 169961,
+   "per100": {
+    "fat": 0.22,
+    "sugars": 3.26,
+    "protein": 1.83,
+    "fibre": 2.7,
+    "carbs": 6.97,
+    "kcal": 31.0,
+    "monoFat": 0.01,
+    "polyFat": 0.11,
+    "satFat": 0.05
+   },
+   "portions": {
+    "beans (4\" long)": 55.0,
+    "cup 1/2\" pieces": 100.0
+   }
+  },
+  "french-beans": {
+   "usda": "Beans, snap, green, raw",
+   "fdcId": 169961,
+   "per100": {
+    "fat": 0.22,
+    "sugars": 3.26,
+    "protein": 1.83,
+    "fibre": 2.7,
+    "carbs": 6.97,
+    "kcal": 31.0,
+    "monoFat": 0.01,
+    "polyFat": 0.11,
+    "satFat": 0.05
+   },
+   "portions": {
+    "beans (4\" long)": 55.0,
+    "cup 1/2\" pieces": 100.0
+   }
+  },
+  "drumstick": {
+   "usda": "Drumstick pods, raw",
+   "fdcId": 170483,
+   "per100": {
+    "fat": 0.2,
+    "carbs": 8.53,
+    "kcal": 37.0,
+    "protein": 2.1,
+    "fibre": 3.2,
+    "satFat": 0.03,
+    "monoFat": 0.1,
+    "polyFat": 0.0
+   },
+   "portions": {
+    "cup slices": 100.0,
+    "pod (15-1/3\" long)": 11.0
+   }
+  },
+  "mushroom": {
+   "usda": "Mushrooms, white, raw",
+   "fdcId": 169251,
+   "per100": {
+    "sugars": 1.98,
+    "monoFat": 0,
+    "polyFat": 0.16,
+    "satFat": 0.05,
+    "fibre": 1.0,
+    "fat": 0.34,
+    "protein": 3.09,
+    "carbs": 3.26,
+    "kcal": 22.0
+   },
+   "portions": {
+    "small": 10.0,
+    "cup, pieces or slices": 70.0,
+    "slice": 6.0,
+    "cup, whole": 96.0,
+    "medium": 18.0,
+    "large": 23.0,
+    "cup pieces": 35.0
+   }
+  },
+  "colocasia": {
+   "usda": "Taro, raw",
+   "fdcId": 169308,
+   "per100": {
+    "sugars": 0.4,
+    "kcal": 112,
+    "satFat": 0.04,
+    "fibre": 4.1,
+    "protein": 1.5,
+    "monoFat": 0.02,
+    "polyFat": 0.08,
+    "fat": 0.2,
+    "carbs": 26.5
+   },
+   "portions": {
+    "cup, sliced": 104.0
+   }
+  },
+  "yam": {
+   "usda": "Yam, raw",
+   "fdcId": 170071,
+   "per100": {
+    "sugars": 0.5,
+    "carbs": 27.9,
+    "kcal": 118,
+    "fat": 0.17,
+    "monoFat": 0.01,
+    "polyFat": 0.08,
+    "protein": 1.53,
+    "fibre": 4.1,
+    "satFat": 0.04
+   },
+   "portions": {
+    "cup, cubes": 150.0
+   }
+  },
+  "lotus-stem": {
+   "usda": "Lotus root, raw",
+   "fdcId": 169250,
+   "per100": {
+    "fat": 0.1,
+    "monoFat": 0.02,
+    "polyFat": 0.02,
+    "protein": 2.6,
+    "fibre": 4.9,
+    "satFat": 0.03,
+    "carbs": 17.2,
+    "kcal": 74.0
+   },
+   "portions": {
+    "slices (2-1/2\" dia)": 81.0,
+    "root (9-1/2\" long)": 115.0
+   }
+  },
+  "bamboo-shoot": {
+   "usda": "Bamboo shoots, raw",
+   "fdcId": 169210,
+   "per100": {
+    "carbs": 5.2,
+    "kcal": 27.0,
+    "sugars": 3.0,
+    "protein": 2.6,
+    "fibre": 2.2,
+    "satFat": 0.07,
+    "fat": 0.3,
+    "monoFat": 0.01,
+    "polyFat": 0.13
+   },
+   "portions": {
+    "cup (1/2\" slices)": 151.0,
+    "cup (1/2\" pieces)": 76.0
+   }
+  },
+  "raw-banana": {
+   "usda": "Plantains, yellow, raw",
+   "fdcId": 169130,
+   "per100": {
+    "satFat": 0,
+    "fibre": 1.7,
+    "protein": 1.3,
+    "monoFat": 0,
+    "polyFat": 0,
+    "sugars": 17.5,
+    "fat": 0.35,
+    "carbs": 31.9,
+    "kcal": 122
+   },
+   "portions": {
+    "plantain": 270.0,
+    "cup, sliced": 148.0
+   }
+  },
+  "raw-jackfruit": {
+   "usda": "Jackfruit, raw",
+   "fdcId": 174687,
+   "per100": {
+    "fat": 0.64,
+    "sugars": 19.1,
+    "fibre": 1.5,
+    "protein": 1.72,
+    "satFat": 0.2,
+    "carbs": 23.2,
+    "kcal": 95.0,
+    "monoFat": 0.15,
+    "polyFat": 0.09
+   },
+   "portions": {
+    "cup 1\" pieces": 151.0,
+    "cup, sliced": 165.0
+   }
+  },
+  "raw-mango": {
+   "usda": "Mangos, raw",
+   "fdcId": 169910,
+   "per100": {
+    "fat": 0.38,
+    "protein": 0.82,
+    "fibre": 1.6,
+    "monoFat": 0.14,
+    "polyFat": 0.07,
+    "carbs": 15.0,
+    "kcal": 60.0,
+    "sugars": 13.7,
+    "satFat": 0.09
+   },
+   "portions": {
+    "fruit without refuse": 336.0,
+    "cup pieces": 165.0
+   }
+  },
+  "raw-papaya": {
+   "usda": "Papayas, raw",
+   "fdcId": 169926,
+   "per100": {
+    "protein": 0.47,
+    "fibre": 1.7,
+    "fat": 0.26,
+    "sugars": 7.82,
+    "satFat": 0.08,
+    "monoFat": 0.07,
+    "polyFat": 0.06,
+    "carbs": 10.8,
+    "kcal": 43.0
+   },
+   "portions": {
+    "fruit, small": 157.0,
+    "fruit, large": 781.0,
+    "cup, mashed": 230.0,
+    "cup 1\" pieces": 145.0
+   }
+  },
+  "beetroot": {
+   "usda": "Beets, raw",
+   "fdcId": 169145,
+   "per100": {
+    "satFat": 0.03,
+    "fibre": 2.8,
+    "monoFat": 0.03,
+    "polyFat": 0.06,
+    "carbs": 9.56,
+    "kcal": 43.0,
+    "fat": 0.17,
+    "protein": 1.61,
+    "sugars": 6.76
+   },
+   "portions": {
+    "beet (2\" dia)": 82.0,
+    "cup": 136.0
+   }
+  },
+  "corn": {
+   "usda": "Corn, sweet, yellow, raw",
+   "fdcId": 169998,
+   "per100": {
+    "fibre": 2.0,
+    "protein": 3.27,
+    "fat": 1.35,
+    "sugars": 6.26,
+    "satFat": 0.33,
+    "carbs": 18.7,
+    "kcal": 86.0,
+    "monoFat": 0.43,
+    "polyFat": 0.49
+   },
+   "portions": {
+    "ear, medium (6-3/4\" to 7-1/2\" long) yields": 102.0,
+    "cup": 145.0,
+    "ear, small (5-1/2\" to 6-1/2\" long)": 73.0,
+    "ear, large (7-3/4\" to 9\" long) yields": 143.0
+   }
+  },
+  "spring-onion": {
+   "usda": "Onions, spring or scallions (includes tops and bulb), raw",
+   "fdcId": 170005,
+   "per100": {
+    "sugars": 2.33,
+    "kcal": 32.0,
+    "fat": 0.19,
+    "monoFat": 0.03,
+    "polyFat": 0.07,
+    "protein": 1.83,
+    "fibre": 2.6,
+    "satFat": 0.03,
+    "carbs": 7.34
+   },
+   "portions": {
+    "small (3\" long)": 5.0,
+    "tbsp chopped": 6.0,
+    "cup, chopped": 100.0,
+    "medium (4-1/8\" long)": 15.0,
+    "large": 25.0
+   }
+  },
+  "garlic": {
+   "usda": "Garlic, raw",
+   "fdcId": 169230,
+   "per100": {
+    "carbs": 33.1,
+    "kcal": 149,
+    "sugars": 1.0,
+    "satFat": 0.09,
+    "fibre": 2.1,
+    "protein": 6.36,
+    "fat": 0.5,
+    "monoFat": 0.01,
+    "polyFat": 0.25
+   },
+   "portions": {
+    "tsp": 2.8,
+    "clove": 3.0,
+    "cloves": 9.0,
+    "cup": 136.0
+   }
+  },
+  "ginger": {
+   "usda": "Ginger root, raw",
+   "fdcId": 169231,
+   "per100": {
+    "sugars": 1.7,
+    "fat": 0.75,
+    "protein": 1.82,
+    "carbs": 17.8,
+    "kcal": 80.0,
+    "monoFat": 0.15,
+    "polyFat": 0.15,
+    "fibre": 2.0,
+    "satFat": 0.2
+   },
+   "portions": {
+    "slices (1\" dia)": 11.0,
+    "cup slices (1\" dia)": 24.0,
+    "tsp": 2.0
+   }
+  },
+  "coriander-leaves": {
+   "usda": "Coriander (cilantro) leaves, raw",
+   "fdcId": 169997,
+   "per100": {
+    "protein": 2.13,
+    "carbs": 3.67,
+    "kcal": 23.0,
+    "monoFat": 0.28,
+    "polyFat": 0.04,
+    "satFat": 0.01,
+    "fibre": 2.8,
+    "fat": 0.52,
+    "sugars": 0.87
+   },
+   "portions": {
+    "sprigs": 20.0,
+    "cup": 4.0
+   }
+  },
+  "mint": {
+   "usda": "Peppermint, fresh",
+   "fdcId": 173474,
+   "per100": {
+    "satFat": 0.25,
+    "protein": 3.75,
+    "fibre": 8.0,
+    "polyFat": 0.51,
+    "monoFat": 0.03,
+    "fat": 0.94,
+    "carbs": 14.9,
+    "kcal": 70.0
+   },
+   "portions": {
+    "leaves": 0.1,
+    "tbsp": 3.2
+   }
+  },
+  "dill": {
+   "usda": "Dill weed, fresh",
+   "fdcId": 172233,
+   "per100": {
+    "fat": 1.12,
+    "carbs": 7.02,
+    "kcal": 43.0,
+    "monoFat": 0.8,
+    "polyFat": 0.1,
+    "protein": 3.46,
+    "satFat": 0.06,
+    "fibre": 2.1
+   },
+   "portions": {
+    "sprigs": 1.0,
+    "cup sprigs": 8.9
+   }
+  },
+  "curry-leaves": {
+   "usda": "Coriander (cilantro) leaves, raw",
+   "fdcId": 169997,
+   "per100": {
+    "protein": 2.13,
+    "carbs": 3.67,
+    "kcal": 23.0,
+    "monoFat": 0.28,
+    "polyFat": 0.04,
+    "satFat": 0.01,
+    "fibre": 2.8,
+    "fat": 0.52,
+    "sugars": 0.87
+   },
+   "portions": {
+    "sprigs": 20.0,
+    "cup": 4.0
+   },
+   "approx": "no USDA entry; fresh coriander leaf used. Curry leaves are a tempering aromatic used in small amounts"
+  },
+  "ghee": {
+   "usda": "Butter oil, anhydrous",
+   "fdcId": 173412,
+   "per100": {
+    "fibre": 0,
+    "kcal": 876,
+    "carbs": 0,
+    "fat": 99.5,
+    "monoFat": 28.7,
+    "polyFat": 3.69,
+    "satFat": 61.9,
+    "protein": 0.28,
+    "sugars": 0
+   },
+   "portions": {
+    "cup": 205.0,
+    "tbsp": 12.8
+   }
+  },
+  "butter": {
+   "usda": "Butter, salted",
+   "fdcId": 173410,
+   "per100": {
+    "fibre": 0,
+    "kcal": 717,
+    "monoFat": 21.0,
+    "polyFat": 3.04,
+    "satFat": 51.4,
+    "fat": 81.1,
+    "carbs": 0.06,
+    "protein": 0.85,
+    "sugars": 0.06
+   },
+   "portions": {
+    "pat (1\" sq, 1/3\" high)": 5.0,
+    "stick": 113.0,
+    "cup": 227.0,
+    "tbsp": 14.2
+   }
+  },
+  "milk": {
+   "usda": "Milk, whole, 3.25% milkfat, without added vitamin A and vitamin D",
+   "fdcId": 172217,
+   "per100": {
+    "carbs": 4.78,
+    "monoFat": 0.81,
+    "polyFat": 0.2,
+    "sugars": 5.05,
+    "kcal": 61.0,
+    "satFat": 1.86,
+    "fat": 3.27,
+    "fibre": 0,
+    "protein": 3.15
+   },
+   "portions": {
+    "fl oz": 30.5,
+    "tbsp": 15.0,
+    "quart": 976.0,
+    "cup": 244.0
+   }
+  },
+  "yogurt": {
+   "usda": "Yogurt, plain, whole milk",
+   "fdcId": 171284,
+   "per100": {
+    "sugars": 4.66,
+    "kcal": 61.0,
+    "satFat": 2.1,
+    "protein": 3.47,
+    "fibre": 0,
+    "fat": 3.25,
+    "carbs": 4.66,
+    "monoFat": 0.89,
+    "polyFat": 0.09
+   },
+   "portions": {
+    "container (8 oz)": 227.0,
+    "container (6 oz)": 170.0,
+    "container (4 oz)": 113.0,
+    "cup (8 fl oz)": 245.0
+   }
+  },
+  "buttermilk": {
+   "usda": "Milk, buttermilk, fluid, cultured, lowfat",
+   "fdcId": 170874,
+   "per100": {
+    "kcal": 40.0,
+    "satFat": 0.66,
+    "fat": 1.07,
+    "sugars": 5.36,
+    "protein": 3.31,
+    "fibre": 0,
+    "carbs": 4.79,
+    "monoFat": 0.25,
+    "polyFat": 0.03
+   },
+   "portions": {
+    "fl oz": 30.6,
+    "quart": 980.0,
+    "cup": 245.0
+   }
+  },
+  "cream": {
+   "usda": "Cream, fluid, heavy whipping",
+   "fdcId": 170859,
+   "per100": {
+    "fat": 36.1,
+    "kcal": 340,
+    "sugars": 2.92,
+    "monoFat": 9.1,
+    "polyFat": 1.57,
+    "protein": 2.84,
+    "satFat": 23.0,
+    "fibre": 0,
+    "carbs": 2.84
+   },
+   "portions": {
+    "cup, whipped": 120.0,
+    "cup, fluid (yields 2 cups whipped)": 238.0,
+    "tbsp": 15.0,
+    "fl oz": 29.8
+   }
+  },
+  "condensed-milk": {
+   "usda": "Milk, canned, condensed, sweetened",
+   "fdcId": 171275,
+   "per100": {
+    "kcal": 321,
+    "sugars": 54.4,
+    "fat": 8.7,
+    "carbs": 54.4,
+    "monoFat": 2.43,
+    "polyFat": 0.34,
+    "protein": 7.91,
+    "fibre": 0,
+    "satFat": 5.49
+   },
+   "portions": {
+    "fl oz": 38.2,
+    "cup": 306.0
+   }
+  },
+  "khoya": {
+   "usda": "Milk, dry, whole, without added vitamin D",
+   "fdcId": 173454,
+   "per100": {
+    "fat": 26.7,
+    "carbs": 38.4,
+    "kcal": 496,
+    "sugars": 38.4,
+    "monoFat": 7.92,
+    "polyFat": 0.67,
+    "protein": 26.3,
+    "fibre": 0,
+    "satFat": 16.7
+   },
+   "portions": {
+    "cup": 32.0
+   }
+  },
+  "paneer": {
+   "usda": "Cheese, fresh, queso fresco",
+   "fdcId": 172223,
+   "per100": {
+    "fibre": 0,
+    "fat": 23.8,
+    "carbs": 2.98,
+    "kcal": 299,
+    "sugars": 2.32,
+    "monoFat": 5.97,
+    "polyFat": 1.11,
+    "protein": 18.1,
+    "satFat": 12.9
+   },
+   "portions": {
+    "cup, crumbled": 122.0
+   }
+  },
+  "tofu": {
+   "usda": "Tofu, raw, firm, prepared with calcium sulfate",
+   "fdcId": 172475,
+   "per100": {
+    "fibre": 2.3,
+    "carbs": 2.78,
+    "kcal": 144,
+    "protein": 17.3,
+    "satFat": 1.26,
+    "fat": 8.72,
+    "monoFat": 1.92,
+    "polyFat": 4.92
+   },
+   "portions": {
+    "cup": 126.0,
+    "block": 81.0
+   }
+  },
+  "coconut-oil": {
+   "usda": "Oil, coconut",
+   "fdcId": 171412,
+   "per100": {
+    "satFat": 82.5,
+    "protein": 0,
+    "fat": 99.1,
+    "kcal": 892,
+    "monoFat": 6.33,
+    "polyFat": 1.7,
+    "carbs": 0,
+    "fibre": 0,
+    "sugars": 0
+   },
+   "portions": {
+    "cup": 218.0,
+    "tsp": 4.5,
+    "tbsp": 13.6
+   }
+  },
+  "mustard-oil": {
+   "usda": "Oil, mustard",
+   "fdcId": 172337,
+   "per100": {
+    "fibre": 0,
+    "protein": 0,
+    "satFat": 11.6,
+    "fat": 100,
+    "carbs": 0,
+    "kcal": 884,
+    "monoFat": 59.2,
+    "polyFat": 21.2
+   },
+   "portions": {
+    "tsp": 4.5,
+    "tbsp": 14.0,
+    "cup": 218.0
+   }
+  },
+  "sesame-oil": {
+   "usda": "Oil, sesame, salad or cooking",
+   "fdcId": 171016,
+   "per100": {
+    "protein": 0,
+    "fibre": 0,
+    "satFat": 14.2,
+    "fat": 100,
+    "carbs": 0,
+    "kcal": 884,
+    "monoFat": 39.7,
+    "polyFat": 41.7,
+    "sugars": 0
+   },
+   "portions": {
+    "tablespoon": 13.6,
+    "tsp": 4.5,
+    "cup": 218.0
+   }
+  },
+  "groundnut-oil": {
+   "usda": "Oil, peanut, salad or cooking",
+   "fdcId": 171410,
+   "per100": {
+    "fat": 100,
+    "carbs": 0,
+    "kcal": 884,
+    "monoFat": 46.2,
+    "polyFat": 32.0,
+    "protein": 0,
+    "fibre": 0,
+    "satFat": 16.9,
+    "sugars": 0
+   },
+   "portions": {
+    "tsp": 4.5,
+    "cup": 216.0,
+    "tbsp": 13.5
+   }
+  },
+  "chicken": {
+   "usda": "Chicken, broilers or fryers, meat only, raw",
+   "fdcId": 171052,
+   "per100": {
+    "fat": 3.08,
+    "carbs": 0,
+    "kcal": 119,
+    "monoFat": 0.9,
+    "polyFat": 0.75,
+    "protein": 21.4,
+    "fibre": 0,
+    "satFat": 0.79,
+    "sugars": 0
+   },
+   "portions": {
+    "oz": 113.0,
+    "unit (yield from 1 lb ready-to-cook chicken)": 197.0,
+    "chicken, bone and skin removed": 329.0
+   }
+  },
+  "mutton": {
+   "usda": "Game meat, goat, raw",
+   "fdcId": 175303,
+   "per100": {
+    "protein": 20.6,
+    "fibre": 0,
+    "satFat": 0.71,
+    "fat": 2.31,
+    "carbs": 0,
+    "kcal": 109,
+    "monoFat": 1.03,
+    "polyFat": 0.17
+   },
+   "portions": {
+    "lb": 453.6,
+    "oz": 28.35
+   },
+   "approx": "Indian mutton is usually goat, so USDA goat (109 kcal/100g) is used rather than lamb (282 kcal/100g). Lamb would nearly treble the fat on every mutton dish"
+  },
+  "beef": {
+   "usda": "Beef, round, top round, steak, separable lean only, trimmed to 1/8\" fat, all grades, raw",
+   "fdcId": 171816,
+   "per100": {
+    "fat": 4.09,
+    "carbs": 0,
+    "sugars": 0,
+    "protein": 22.9,
+    "fibre": 0,
+    "monoFat": 1.72,
+    "polyFat": 0.17,
+    "kcal": 135,
+    "satFat": 1.4
+   },
+   "portions": {
+    "lb": 453.6,
+    "oz": 113.0
+   }
+  },
+  "pork": {
+   "usda": "Pork, fresh, loin, whole, separable lean only, raw",
+   "fdcId": 168230,
+   "per100": {
+    "sugars": 0,
+    "fat": 5.66,
+    "carbs": 0,
+    "kcal": 143,
+    "monoFat": 2.56,
+    "polyFat": 0.61,
+    "protein": 21.4,
+    "fibre": 0,
+    "satFat": 1.95
+   },
+   "portions": {
+    "chop, excluding refuse (yield from 1 raw chop, with refuse, weighing 151 g)": 106.0,
+    "oz": 113.0
+   }
+  },
+  "duck": {
+   "usda": "Duck, domesticated, meat only, raw",
+   "fdcId": 172410,
+   "per100": {
+    "carbs": 0.94,
+    "kcal": 135,
+    "protein": 18.3,
+    "fibre": 0,
+    "satFat": 2.32,
+    "fat": 5.95,
+    "monoFat": 1.54,
+    "polyFat": 0.75,
+    "sugars": 0
+   },
+   "portions": {
+    "unit (yield from 1 lb ready-to-cook duck)": 137.0,
+    "duck": 303.0
+   }
+  },
+  "eggs": {
+   "usda": "Egg, whole, raw, fresh",
+   "fdcId": 171287,
+   "per100": {
+    "kcal": 143,
+    "satFat": 3.13,
+    "protein": 12.6,
+    "sugars": 0.37,
+    "fat": 9.51,
+    "monoFat": 3.66,
+    "polyFat": 1.91,
+    "carbs": 0.72,
+    "fibre": 0
+   },
+   "portions": {
+    "cup (4.86 large eggs)": 243.0,
+    "medium": 44.0,
+    "extra large": 56.0,
+    "small": 38.0,
+    "jumbo": 63.0,
+    "large": 50.0
+   }
+  },
+  "fish": {
+   "usda": "Fish, mackerel, king, raw",
+   "fdcId": 175122,
+   "per100": {
+    "protein": 20.3,
+    "fibre": 0,
+    "satFat": 0.36,
+    "fat": 2.0,
+    "carbs": 0,
+    "kcal": 105,
+    "monoFat": 0.76,
+    "polyFat": 0.46
+   },
+   "portions": {
+    "oz": 85.0,
+    "fillet": 198.0
+   }
+  },
+  "dried-fish": {
+   "usda": "Fish, cod, Atlantic, dried and salted",
+   "fdcId": 174190,
+   "per100": {
+    "sugars": 0,
+    "kcal": 290,
+    "fat": 2.37,
+    "carbs": 0,
+    "monoFat": 0.34,
+    "polyFat": 0.8,
+    "protein": 62.8,
+    "fibre": 0,
+    "satFat": 0.46
+   },
+   "portions": {
+    "oz": 85.0,
+    "piece (5-1/2\" x 1-1/2\" x 1/2\")": 80.0
+   }
+  },
+  "prawns": {
+   "usda": "Crustaceans, shrimp, raw",
+   "fdcId": 175179,
+   "per100": {
+    "fat": 0.51,
+    "carbs": 0,
+    "kcal": 85.0,
+    "monoFat": 0.09,
+    "polyFat": 0.15,
+    "protein": 20.1,
+    "satFat": 0.1
+   },
+   "portions": {
+    "oz": 85.0
+   }
+  },
+  "crab": {
+   "usda": "Crustaceans, crab, blue, raw",
+   "fdcId": 174204,
+   "per100": {
+    "fat": 1.08,
+    "carbs": 0.04,
+    "kcal": 87.0,
+    "monoFat": 0.19,
+    "polyFat": 0.39,
+    "protein": 18.1,
+    "fibre": 0,
+    "satFat": 0.22
+   },
+   "portions": {
+    "oz": 85.0,
+    "crab": 21.0
+   }
+  },
+  "squid": {
+   "usda": "Mollusks, squid, mixed species, raw",
+   "fdcId": 174223,
+   "per100": {
+    "sugars": 0,
+    "satFat": 0.36,
+    "protein": 15.6,
+    "fibre": 0,
+    "monoFat": 0.11,
+    "polyFat": 0.52,
+    "fat": 1.38,
+    "carbs": 3.08,
+    "kcal": 92.0
+   },
+   "portions": {
+    "oz, boneless": 28.35,
+    "oz": 85.0
+   }
+  },
+  "turmeric": {
+   "usda": "Spices, turmeric, ground",
+   "fdcId": 172231,
+   "per100": {
+    "sugars": 3.21,
+    "monoFat": 0.45,
+    "polyFat": 0.76,
+    "fat": 3.25,
+    "carbs": 67.1,
+    "kcal": 312,
+    "protein": 9.68,
+    "fibre": 22.7,
+    "satFat": 1.84
+   },
+   "portions": {
+    "tsp": 3.0,
+    "tbsp": 9.4
+   }
+  },
+  "cumin-seeds": {
+   "usda": "Spices, cumin seed",
+   "fdcId": 170923,
+   "per100": {
+    "protein": 17.8,
+    "fibre": 10.5,
+    "fat": 22.3,
+    "carbs": 44.2,
+    "kcal": 375,
+    "satFat": 1.54,
+    "polyFat": 3.28,
+    "sugars": 2.25,
+    "monoFat": 14.0
+   },
+   "portions": {
+    "tsp, whole": 2.1,
+    "tbsp, whole": 6.0
+   }
+  },
+  "cumin-powder": {
+   "usda": "Spices, cumin seed",
+   "fdcId": 170923,
+   "per100": {
+    "protein": 17.8,
+    "fibre": 10.5,
+    "fat": 22.3,
+    "carbs": 44.2,
+    "kcal": 375,
+    "satFat": 1.54,
+    "polyFat": 3.28,
+    "sugars": 2.25,
+    "monoFat": 14.0
+   },
+   "portions": {
+    "tsp, whole": 2.1,
+    "tbsp, whole": 6.0
+   }
+  },
+  "coriander-powder": {
+   "usda": "Spices, coriander seed",
+   "fdcId": 170922,
+   "per100": {
+    "fat": 17.8,
+    "carbs": 55.0,
+    "kcal": 298,
+    "monoFat": 13.6,
+    "polyFat": 1.75,
+    "satFat": 0.99,
+    "protein": 12.4,
+    "fibre": 41.9
+   },
+   "portions": {
+    "tbsp": 5.0,
+    "tsp": 1.8
+   }
+  },
+  "chilli-powder": {
+   "usda": "Spices, pepper, red or cayenne",
+   "fdcId": 170932,
+   "per100": {
+    "fat": 17.3,
+    "carbs": 56.6,
+    "kcal": 318,
+    "monoFat": 2.75,
+    "polyFat": 8.37,
+    "protein": 12.0,
+    "satFat": 3.26,
+    "fibre": 27.2,
+    "sugars": 10.3
+   },
+   "portions": {
+    "tbsp": 5.3,
+    "tsp": 1.8
+   }
+  },
+  "kashmiri-chilli": {
+   "usda": "Spices, paprika",
+   "fdcId": 171329,
+   "per100": {
+    "sugars": 10.3,
+    "fibre": 34.9,
+    "protein": 14.1,
+    "fat": 12.9,
+    "monoFat": 1.7,
+    "polyFat": 7.77,
+    "carbs": 54.0,
+    "kcal": 282,
+    "satFat": 2.14
+   },
+   "portions": {
+    "tbsp": 6.8,
+    "tsp": 2.3
+   }
+  },
+  "paprika": {
+   "usda": "Spices, paprika",
+   "fdcId": 171329,
+   "per100": {
+    "sugars": 10.3,
+    "fibre": 34.9,
+    "protein": 14.1,
+    "fat": 12.9,
+    "monoFat": 1.7,
+    "polyFat": 7.77,
+    "carbs": 54.0,
+    "kcal": 282,
+    "satFat": 2.14
+   },
+   "portions": {
+    "tbsp": 6.8,
+    "tsp": 2.3
+   }
+  },
+  "dried-red-chilli": {
+   "usda": "Spices, pepper, red or cayenne",
+   "fdcId": 170932,
+   "per100": {
+    "fat": 17.3,
+    "carbs": 56.6,
+    "kcal": 318,
+    "monoFat": 2.75,
+    "polyFat": 8.37,
+    "protein": 12.0,
+    "satFat": 3.26,
+    "fibre": 27.2,
+    "sugars": 10.3
+   },
+   "portions": {
+    "tbsp": 5.3,
+    "tsp": 1.8
+   }
+  },
+  "black-pepper": {
+   "usda": "Spices, pepper, black",
+   "fdcId": 170931,
+   "per100": {
+    "fat": 3.26,
+    "sugars": 0.64,
+    "carbs": 64.0,
+    "kcal": 251,
+    "monoFat": 0.74,
+    "polyFat": 1.0,
+    "protein": 10.4,
+    "fibre": 25.3,
+    "satFat": 1.39
+   },
+   "portions": {
+    "tbsp, ground": 6.9,
+    "dash": 0.1,
+    "tsp, ground": 2.3,
+    "tsp, whole": 2.9
+   }
+  },
+  "white-pepper": {
+   "usda": "Spices, pepper, white",
+   "fdcId": 170933,
+   "per100": {
+    "protein": 10.4,
+    "fat": 2.12,
+    "carbs": 68.6,
+    "kcal": 296,
+    "fibre": 26.2,
+    "satFat": 0.63,
+    "monoFat": 0.79,
+    "polyFat": 0.62
+   },
+   "portions": {
+    "tbsp, ground": 7.1,
+    "tsp, ground": 2.4
+   }
+  },
+  "schezwan-pepper": {
+   "usda": "Spices, pepper, black",
+   "fdcId": 170931,
+   "per100": {
+    "fat": 3.26,
+    "sugars": 0.64,
+    "carbs": 64.0,
+    "kcal": 251,
+    "monoFat": 0.74,
+    "polyFat": 1.0,
+    "protein": 10.4,
+    "fibre": 25.3,
+    "satFat": 1.39
+   },
+   "portions": {
+    "tbsp, ground": 6.9,
+    "dash": 0.1,
+    "tsp, ground": 2.3,
+    "tsp, whole": 2.9
+   },
+   "approx": "approximated by black pepper"
+  },
+  "mustard-seeds": {
+   "usda": "Spices, mustard seed, ground",
+   "fdcId": 170929,
+   "per100": {
+    "sugars": 6.79,
+    "protein": 26.1,
+    "fibre": 12.2,
+    "satFat": 1.99,
+    "fat": 36.2,
+    "carbs": 28.1,
+    "kcal": 508,
+    "monoFat": 22.5,
+    "polyFat": 10.1
+   },
+   "portions": {
+    "tbsp": 6.3,
+    "tsp": 2.0
+   }
+  },
+  "fenugreek-seeds": {
+   "usda": "Spices, fenugreek seed",
+   "fdcId": 171324,
+   "per100": {
+    "fat": 6.41,
+    "carbs": 58.4,
+    "kcal": 323,
+    "protein": 23.0,
+    "fibre": 24.6,
+    "satFat": 1.46
+   },
+   "portions": {
+    "tsp": 3.7,
+    "tbsp": 11.1
+   }
+  },
+  "kasuri-methi": {
+   "usda": "Spices, fenugreek seed",
+   "fdcId": 171324,
+   "per100": {
+    "fat": 6.41,
+    "carbs": 58.4,
+    "kcal": 323,
+    "protein": 23.0,
+    "fibre": 24.6,
+    "satFat": 1.46
+   },
+   "portions": {
+    "tsp": 3.7,
+    "tbsp": 11.1
+   }
+  },
+  "fennel-seeds": {
+   "usda": "Spices, fennel seed",
+   "fdcId": 171323,
+   "per100": {
+    "satFat": 0.48,
+    "protein": 15.8,
+    "fat": 14.9,
+    "carbs": 52.3,
+    "kcal": 345,
+    "monoFat": 9.91,
+    "polyFat": 1.69,
+    "fibre": 39.8
+   },
+   "portions": {
+    "tbsp, whole": 5.8,
+    "tsp, whole": 2.0
+   }
+  },
+  "fennel-powder": {
+   "usda": "Spices, fennel seed",
+   "fdcId": 171323,
+   "per100": {
+    "satFat": 0.48,
+    "protein": 15.8,
+    "fat": 14.9,
+    "carbs": 52.3,
+    "kcal": 345,
+    "monoFat": 9.91,
+    "polyFat": 1.69,
+    "fibre": 39.8
+   },
+   "portions": {
+    "tbsp, whole": 5.8,
+    "tsp, whole": 2.0
+   }
+  },
+  "cardamom": {
+   "usda": "Spices, cardamom",
+   "fdcId": 170919,
+   "per100": {
+    "protein": 10.8,
+    "satFat": 0.68,
+    "fat": 6.7,
+    "carbs": 68.5,
+    "kcal": 311,
+    "monoFat": 0.87,
+    "polyFat": 0.43,
+    "fibre": 28.0
+   },
+   "portions": {
+    "tsp, ground": 2.0,
+    "tbsp, ground": 5.8
+   }
+  },
+  "black-cardamom": {
+   "usda": "Spices, cardamom",
+   "fdcId": 170919,
+   "per100": {
+    "protein": 10.8,
+    "satFat": 0.68,
+    "fat": 6.7,
+    "carbs": 68.5,
+    "kcal": 311,
+    "monoFat": 0.87,
+    "polyFat": 0.43,
+    "fibre": 28.0
+   },
+   "portions": {
+    "tsp, ground": 2.0,
+    "tbsp, ground": 5.8
+   }
+  },
+  "cloves": {
+   "usda": "Spices, cloves, ground",
+   "fdcId": 171321,
+   "per100": {
+    "sugars": 2.38,
+    "fat": 13.0,
+    "carbs": 65.5,
+    "kcal": 274,
+    "monoFat": 1.39,
+    "fibre": 33.9,
+    "satFat": 3.95,
+    "protein": 5.97,
+    "polyFat": 3.61
+   },
+   "portions": {
+    "tsp": 2.1,
+    "tbsp": 6.5
+   }
+  },
+  "cinnamon": {
+   "usda": "Spices, cinnamon, ground",
+   "fdcId": 171320,
+   "per100": {
+    "sugars": 2.17,
+    "fibre": 53.1,
+    "protein": 3.99,
+    "satFat": 0.34,
+    "fat": 1.24,
+    "carbs": 80.6,
+    "kcal": 247,
+    "monoFat": 0.25,
+    "polyFat": 0.07
+   },
+   "portions": {
+    "tsp": 2.6,
+    "tbsp": 7.8
+   }
+  },
+  "bay-leaf": {
+   "usda": "Spices, bay leaf",
+   "fdcId": 170917,
+   "per100": {
+    "satFat": 2.28,
+    "fibre": 26.3,
+    "protein": 7.61,
+    "fat": 8.36,
+    "carbs": 75.0,
+    "kcal": 313,
+    "monoFat": 1.64,
+    "polyFat": 2.29
+   },
+   "portions": {
+    "tbsp, crumbled": 1.8,
+    "tsp, crumbled": 0.6
+   }
+  },
+  "nutmeg": {
+   "usda": "Spices, nutmeg, ground",
+   "fdcId": 171326,
+   "per100": {
+    "protein": 5.84,
+    "satFat": 25.9,
+    "fat": 36.3,
+    "carbs": 49.3,
+    "kcal": 525,
+    "monoFat": 3.22,
+    "polyFat": 0.35,
+    "sugars": 2.99,
+    "fibre": 20.8
+   },
+   "portions": {
+    "tbsp": 7.0,
+    "tsp": 2.2
+   }
+  },
+  "mace": {
+   "usda": "Spices, mace, ground",
+   "fdcId": 170927,
+   "per100": {
+    "protein": 6.71,
+    "satFat": 9.51,
+    "fat": 32.4,
+    "carbs": 50.5,
+    "kcal": 475,
+    "monoFat": 11.2,
+    "polyFat": 4.39,
+    "fibre": 20.2
+   },
+   "portions": {
+    "tbsp": 5.3,
+    "tsp": 1.7
+   }
+  },
+  "saffron": {
+   "usda": "Spices, saffron",
+   "fdcId": 170934,
+   "per100": {
+    "carbs": 65.4,
+    "kcal": 310,
+    "protein": 11.4,
+    "fibre": 3.9,
+    "satFat": 1.59,
+    "fat": 5.85,
+    "monoFat": 0.43,
+    "polyFat": 2.07
+   },
+   "portions": {
+    "tsp": 0.7,
+    "tbsp": 2.1
+   }
+  },
+  "star-anise": {
+   "usda": "Spices, anise seed",
+   "fdcId": 171316,
+   "per100": {
+    "fat": 15.9,
+    "carbs": 50.0,
+    "kcal": 337,
+    "monoFat": 9.78,
+    "polyFat": 3.15,
+    "protein": 17.6,
+    "fibre": 14.6,
+    "satFat": 0.59
+   },
+   "portions": {
+    "tbsp, whole": 6.7,
+    "tsp, whole": 2.1
+   }
+  },
+  "ajwain": {
+   "usda": "Spices, thyme, dried",
+   "fdcId": 170938,
+   "per100": {
+    "fat": 7.43,
+    "carbs": 63.9,
+    "kcal": 276,
+    "monoFat": 0.47,
+    "polyFat": 1.19,
+    "protein": 9.11,
+    "satFat": 2.73,
+    "fibre": 37.0,
+    "sugars": 1.71
+   },
+   "portions": {
+    "tsp, leaves": 1.0,
+    "tbsp, ground": 4.3,
+    "tbsp, leaves": 2.7,
+    "tsp, ground": 1.4
+   }
+  },
+  "nigella": {
+   "usda": "Spices, caraway seed",
+   "fdcId": 170918,
+   "per100": {
+    "fat": 14.6,
+    "carbs": 49.9,
+    "kcal": 333,
+    "monoFat": 7.12,
+    "polyFat": 3.27,
+    "satFat": 0.62,
+    "protein": 19.8,
+    "fibre": 38.0,
+    "sugars": 0.64
+   },
+   "portions": {
+    "tsp": 2.1,
+    "tbsp": 6.7
+   }
+  },
+  "asafoetida": {
+   "usda": "Spices, turmeric, ground",
+   "fdcId": 172231,
+   "per100": {
+    "sugars": 3.21,
+    "monoFat": 0.45,
+    "polyFat": 0.76,
+    "fat": 3.25,
+    "carbs": 67.1,
+    "kcal": 312,
+    "protein": 9.68,
+    "fibre": 22.7,
+    "satFat": 1.84
+   },
+   "portions": {
+    "tsp": 3.0,
+    "tbsp": 9.4
+   },
+   "approx": "no USDA entry; a spice proxy used. Quantities are tiny (a pinch), so the effect on a serving is negligible"
+  },
+  "dry-ginger-powder": {
+   "usda": "Spices, ginger, ground",
+   "fdcId": 170926,
+   "per100": {
+    "sugars": 3.39,
+    "satFat": 2.6,
+    "protein": 8.98,
+    "fibre": 14.1,
+    "polyFat": 0.93,
+    "monoFat": 0.48,
+    "fat": 4.24,
+    "carbs": 71.6,
+    "kcal": 335
+   },
+   "portions": {
+    "tbsp": 5.2,
+    "tsp": 1.8
+   }
+  },
+  "amchur": {
+   "usda": "Mango, dried, sweetened",
+   "fdcId": 169091,
+   "per100": {
+    "protein": 2.45,
+    "fibre": 2.4,
+    "satFat": 0.29,
+    "fat": 1.18,
+    "carbs": 78.6,
+    "kcal": 319,
+    "sugars": 66.3,
+    "monoFat": 0.44,
+    "polyFat": 0.22
+   },
+   "portions": {},
+   "approx": "dry mango powder approximated by dried mango"
+  },
+  "anardana": {
+   "usda": "Pomegranates, raw",
+   "fdcId": 169134,
+   "per100": {
+    "satFat": 0.12,
+    "protein": 1.67,
+    "fibre": 4.0,
+    "sugars": 13.7,
+    "fat": 1.17,
+    "monoFat": 0.09,
+    "polyFat": 0.08,
+    "carbs": 18.7,
+    "kcal": 83.0
+   },
+   "portions": {
+    "pomegranate (4\" dia)": 282.0,
+    "cup arils (seed/juice sacs)": 87.0
+   }
+  },
+  "black-salt": {
+   "usda": "Salt, table",
+   "fdcId": 173468,
+   "per100": {
+    "fibre": 0,
+    "satFat": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "kcal": 0,
+    "monoFat": 0,
+    "polyFat": 0,
+    "sugars": 0
+   },
+   "portions": {
+    "cup": 292.0,
+    "tsp": 6.0,
+    "tbsp": 18.0,
+    "dash": 0.4
+   },
+   "approx": "kala namak approximated by table salt"
+  },
+  "garam-masala": {
+   "usda": "Spices, curry powder",
+   "fdcId": 170924,
+   "per100": {
+    "kcal": 325,
+    "sugars": 2.76,
+    "satFat": 1.65,
+    "fibre": 53.2,
+    "protein": 14.3,
+    "fat": 14.0,
+    "carbs": 55.8,
+    "monoFat": 8.78,
+    "polyFat": 3.06
+   },
+   "portions": {
+    "tsp": 2.0,
+    "tbsp": 6.3
+   },
+   "approx": "blend, not a single food; USDA curry powder used"
+  },
+  "chaat-masala": {
+   "usda": "Spices, curry powder",
+   "fdcId": 170924,
+   "per100": {
+    "kcal": 325,
+    "sugars": 2.76,
+    "satFat": 1.65,
+    "fibre": 53.2,
+    "protein": 14.3,
+    "fat": 14.0,
+    "carbs": 55.8,
+    "monoFat": 8.78,
+    "polyFat": 3.06
+   },
+   "portions": {
+    "tsp": 2.0,
+    "tbsp": 6.3
+   },
+   "approx": "blend; USDA curry powder used"
+  },
+  "sambar-powder": {
+   "usda": "Spices, curry powder",
+   "fdcId": 170924,
+   "per100": {
+    "kcal": 325,
+    "sugars": 2.76,
+    "satFat": 1.65,
+    "fibre": 53.2,
+    "protein": 14.3,
+    "fat": 14.0,
+    "carbs": 55.8,
+    "monoFat": 8.78,
+    "polyFat": 3.06
+   },
+   "portions": {
+    "tsp": 2.0,
+    "tbsp": 6.3
+   },
+   "approx": "blend; USDA curry powder used"
+  },
+  "rasam-powder": {
+   "usda": "Spices, curry powder",
+   "fdcId": 170924,
+   "per100": {
+    "kcal": 325,
+    "sugars": 2.76,
+    "satFat": 1.65,
+    "fibre": 53.2,
+    "protein": 14.3,
+    "fat": 14.0,
+    "carbs": 55.8,
+    "monoFat": 8.78,
+    "polyFat": 3.06
+   },
+   "portions": {
+    "tsp": 2.0,
+    "tbsp": 6.3
+   },
+   "approx": "blend; USDA curry powder used"
+  },
+  "panch-phoron": {
+   "usda": "Spices, cumin seed",
+   "fdcId": 170923,
+   "per100": {
+    "protein": 17.8,
+    "fibre": 10.5,
+    "fat": 22.3,
+    "carbs": 44.2,
+    "kcal": 375,
+    "satFat": 1.54,
+    "polyFat": 3.28,
+    "sugars": 2.25,
+    "monoFat": 14.0
+   },
+   "portions": {
+    "tsp, whole": 2.1,
+    "tbsp, whole": 6.0
+   },
+   "approx": "five-seed blend; cumin used as the representative seed"
+  },
+  "stone-flower": {
+   "usda": "Spices, bay leaf",
+   "fdcId": 170917,
+   "per100": {
+    "satFat": 2.28,
+    "fibre": 26.3,
+    "protein": 7.61,
+    "fat": 8.36,
+    "carbs": 75.0,
+    "kcal": 313,
+    "monoFat": 1.64,
+    "polyFat": 2.29
+   },
+   "portions": {
+    "tbsp, crumbled": 1.8,
+    "tsp, crumbled": 0.6
+   },
+   "approx": "no USDA entry; a leaf spice proxy used, quantities are tiny"
+  },
+  "lemon": {
+   "usda": "Lemon juice, raw",
+   "fdcId": 167747,
+   "per100": {
+    "protein": 0.35,
+    "satFat": 0.04,
+    "fibre": 0.3,
+    "sugars": 2.52,
+    "fat": 0.24,
+    "carbs": 6.9,
+    "kcal": 22.0,
+    "monoFat": 0.01,
+    "polyFat": 0.02
+   },
+   "portions": {
+    "wedge yields": 5.9,
+    "lemon yields": 48.0,
+    "cup": 244.0,
+    "fl oz": 30.5
+   }
+  },
+  "tamarind": {
+   "usda": "Tamarinds, raw",
+   "fdcId": 167763,
+   "per100": {
+    "sugars": 38.8,
+    "fibre": 5.1,
+    "protein": 2.8,
+    "satFat": 0.27,
+    "fat": 0.6,
+    "carbs": 62.5,
+    "kcal": 239,
+    "monoFat": 0.18,
+    "polyFat": 0.06
+   },
+   "portions": {
+    "cup, pulp": 120.0,
+    "fruit (3\" x 1\")": 2.0
+   }
+  },
+  "kokum": {
+   "usda": "Tamarinds, raw",
+   "fdcId": 167763,
+   "per100": {
+    "sugars": 38.8,
+    "fibre": 5.1,
+    "protein": 2.8,
+    "satFat": 0.27,
+    "fat": 0.6,
+    "carbs": 62.5,
+    "kcal": 239,
+    "monoFat": 0.18,
+    "polyFat": 0.06
+   },
+   "portions": {
+    "cup, pulp": 120.0,
+    "fruit (3\" x 1\")": 2.0
+   },
+   "approx": "no USDA entry; tamarind used as the nearest souring fruit"
+  },
+  "vinegar": {
+   "usda": "Vinegar, distilled",
+   "fdcId": 172237,
+   "per100": {
+    "fat": 0,
+    "sugars": 0.04,
+    "protein": 0,
+    "satFat": 0,
+    "fibre": 0,
+    "carbs": 0.04,
+    "kcal": 18.0,
+    "monoFat": 0,
+    "polyFat": 0
+   },
+   "portions": {
+    "tbsp": 14.9,
+    "tsp": 5.0,
+    "cup": 238.0
+   }
+  },
+  "jaggery": {
+   "usda": "Sugars, granulated",
+   "fdcId": 169655,
+   "per100": {
+    "protein": 0,
+    "fat": 0,
+    "kcal": 387,
+    "satFat": 0,
+    "monoFat": 0,
+    "polyFat": 0,
+    "sugars": 99.8,
+    "carbs": 100,
+    "fibre": 0
+   },
+   "portions": {
+    "cup": 200.0,
+    "serving 1 cube": 2.3,
+    "tsp": 4.2,
+    "serving packet": 2.8
+   },
+   "approx": "jaggery is not in USDA; granulated sugar used, which is close on calories and carbohydrate but ignores jaggery's small mineral content"
+  },
+  "honey": {
+   "usda": "Honey",
+   "fdcId": 169640,
+   "per100": {
+    "monoFat": 0,
+    "polyFat": 0,
+    "satFat": 0,
+    "protein": 0.3,
+    "fibre": 0.2,
+    "fat": 0,
+    "carbs": 82.4,
+    "kcal": 304,
+    "sugars": 82.1
+   },
+   "portions": {
+    "cup": 339.0,
+    "tbsp": 21.0,
+    "packet (0.5 oz)": 14.0
+   }
+  },
+  "dates": {
+   "usda": "Dates, medjool",
+   "fdcId": 168191,
+   "per100": {
+    "fat": 0.15,
+    "sugars": 66.5,
+    "protein": 1.81,
+    "fibre": 6.7,
+    "carbs": 75.0,
+    "kcal": 277
+   },
+   "portions": {
+    "date, pitted": 24.0
+   }
+  },
+  "raisins": {
+   "usda": "Raisins, golden, seedless",
+   "fdcId": 168164,
+   "per100": {
+    "fat": 0.2,
+    "carbs": 80.0,
+    "kcal": 301,
+    "sugars": 65.7,
+    "monoFat": 0.01,
+    "polyFat": 0.06,
+    "protein": 3.28,
+    "fibre": 3.3,
+    "satFat": 0.07
+   },
+   "portions": {
+    "cup (not packed)": 145.0,
+    "cup, packed": 165.0
+   }
+  },
+  "dried-apricot": {
+   "usda": "Apricots, dried, sulfured, uncooked",
+   "fdcId": 173941,
+   "per100": {
+    "carbs": 62.6,
+    "kcal": 241,
+    "monoFat": 0.07,
+    "polyFat": 0.07,
+    "satFat": 0.02,
+    "sugars": 53.4,
+    "fat": 0.51,
+    "protein": 3.39,
+    "fibre": 7.3
+   },
+   "portions": {
+    "cup, halves": 130.0,
+    "half": 3.5
+   }
+  },
+  "coconut": {
+   "usda": "Nuts, coconut meat, raw",
+   "fdcId": 170169,
+   "per100": {
+    "fibre": 9.0,
+    "protein": 3.33,
+    "satFat": 29.7,
+    "fat": 33.5,
+    "carbs": 15.2,
+    "kcal": 354,
+    "monoFat": 1.42,
+    "polyFat": 0.37,
+    "sugars": 6.23
+   },
+   "portions": {
+    "cup, shredded": 80.0,
+    "medium": 397.0,
+    "piece (2\" x 2\" x 1/2\")": 45.0
+   }
+  },
+  "dried-coconut": {
+   "usda": "Nuts, coconut meat, dried (desiccated), not sweetened",
+   "fdcId": 170170,
+   "per100": {
+    "fibre": 16.3,
+    "fat": 64.5,
+    "kcal": 660,
+    "monoFat": 2.74,
+    "polyFat": 0.71,
+    "protein": 6.88,
+    "satFat": 57.2,
+    "sugars": 7.35,
+    "carbs": 23.6
+   },
+   "portions": {
+    "oz": 28.35
+   }
+  },
+  "coconut-milk": {
+   "usda": "Nuts, coconut milk, canned (liquid expressed from grated meat and water)",
+   "fdcId": 170173,
+   "per100": {
+    "monoFat": 0.91,
+    "polyFat": 0.23,
+    "fat": 21.3,
+    "carbs": 2.81,
+    "kcal": 197,
+    "protein": 2.02,
+    "satFat": 18.9
+   },
+   "portions": {
+    "cup": 226.0,
+    "tbsp": 15.0
+   }
+  },
+  "almonds": {
+   "usda": "Nuts, almonds",
+   "fdcId": 170567,
+   "per100": {
+    "protein": 21.2,
+    "fibre": 12.5,
+    "satFat": 3.8,
+    "monoFat": 31.6,
+    "polyFat": 12.3,
+    "fat": 49.9,
+    "carbs": 21.6,
+    "kcal": 579,
+    "sugars": 4.35
+   },
+   "portions": {
+    "oz (23 whole kernels)": 28.35,
+    "almond": 1.2,
+    "cup, whole": 143.0,
+    "cup, slivered": 108.0,
+    "cup, ground": 95.0,
+    "cup, sliced": 92.0
+   }
+  },
+  "cashew": {
+   "usda": "Nuts, cashew nuts, raw",
+   "fdcId": 170162,
+   "per100": {
+    "protein": 18.2,
+    "fat": 43.8,
+    "carbs": 30.2,
+    "kcal": 553,
+    "satFat": 7.78,
+    "monoFat": 23.8,
+    "polyFat": 7.84,
+    "fibre": 3.3,
+    "sugars": 5.91
+   },
+   "portions": {
+    "oz": 28.35
+   }
+  },
+  "pistachios": {
+   "usda": "Nuts, pistachio nuts, raw",
+   "fdcId": 170184,
+   "per100": {
+    "sugars": 7.66,
+    "monoFat": 23.3,
+    "polyFat": 14.4,
+    "fat": 45.3,
+    "carbs": 27.2,
+    "kcal": 560,
+    "satFat": 5.91,
+    "fibre": 10.6,
+    "protein": 20.2
+   },
+   "portions": {
+    "oz (49 kernels)": 28.35,
+    "cup": 123.0,
+    "kernel": 0.7
+   }
+  },
+  "walnuts": {
+   "usda": "Nuts, walnuts, english",
+   "fdcId": 170187,
+   "per100": {
+    "monoFat": 8.93,
+    "polyFat": 47.2,
+    "carbs": 13.7,
+    "kcal": 654,
+    "satFat": 6.13,
+    "sugars": 2.61,
+    "protein": 15.2,
+    "fibre": 6.7,
+    "fat": 65.2
+   },
+   "portions": {
+    "cup, ground": 80.0,
+    "cup, chopped": 117.0,
+    "cup, in shell, edible yield (7 nuts)": 28.0,
+    "cup pieces or chips": 120.0,
+    "cup shelled (50 halves)": 100.0,
+    "oz (14 halves)": 28.35
+   }
+  },
+  "peanut": {
+   "usda": "Peanuts, all types, raw",
+   "fdcId": 172430,
+   "per100": {
+    "fibre": 8.5,
+    "sugars": 4.72,
+    "satFat": 6.28,
+    "protein": 25.8,
+    "monoFat": 24.4,
+    "polyFat": 15.6,
+    "fat": 49.2,
+    "carbs": 16.1,
+    "kcal": 567
+   },
+   "portions": {
+    "oz": 28.35,
+    "cup": 146.0
+   }
+  },
+  "sesame": {
+   "usda": "Seeds, sesame seeds, whole, dried",
+   "fdcId": 170150,
+   "per100": {
+    "sugars": 0.3,
+    "protein": 17.7,
+    "fibre": 11.8,
+    "satFat": 6.96,
+    "fat": 49.7,
+    "carbs": 23.4,
+    "kcal": 573,
+    "monoFat": 18.8,
+    "polyFat": 21.8
+   },
+   "portions": {
+    "cup": 144.0,
+    "tbsp": 9.0
+   }
+  },
+  "poppy-seeds": {
+   "usda": "Spices, poppy seed",
+   "fdcId": 171330,
+   "per100": {
+    "fat": 41.6,
+    "sugars": 2.99,
+    "protein": 18.0,
+    "fibre": 19.5,
+    "satFat": 4.52,
+    "carbs": 28.1,
+    "kcal": 525,
+    "monoFat": 5.98,
+    "polyFat": 28.6
+   },
+   "portions": {
+    "tsp": 2.8,
+    "tbsp": 8.8
+   }
+  },
+  "melon-seeds": {
+   "usda": "Seeds, watermelon seed kernels, dried",
+   "fdcId": 169407,
+   "per100": {
+    "protein": 28.3,
+    "satFat": 9.78,
+    "monoFat": 7.41,
+    "polyFat": 28.1,
+    "fat": 47.4,
+    "carbs": 15.3,
+    "kcal": 557
+   },
+   "portions": {
+    "cup": 108.0,
+    "oz": 28.35
+   }
+  },
+  "pomegranate": {
+   "usda": "Pomegranates, raw",
+   "fdcId": 169134,
+   "per100": {
+    "satFat": 0.12,
+    "protein": 1.67,
+    "fibre": 4.0,
+    "sugars": 13.7,
+    "fat": 1.17,
+    "monoFat": 0.09,
+    "polyFat": 0.08,
+    "carbs": 18.7,
+    "kcal": 83.0
+   },
+   "portions": {
+    "pomegranate (4\" dia)": 282.0,
+    "cup arils (seed/juice sacs)": 87.0
+   }
+  },
+  "soy-sauce": {
+   "usda": "Soy sauce made from soy and wheat (shoyu)",
+   "fdcId": 174277,
+   "per100": {
+    "fat": 0.57,
+    "carbs": 4.93,
+    "sugars": 0.4,
+    "monoFat": 0.09,
+    "polyFat": 0.26,
+    "protein": 8.14,
+    "satFat": 0.07,
+    "kcal": 53.0,
+    "fibre": 0.8
+   },
+   "portions": {
+    "individual packet": 8.9,
+    "tbsp": 16.0,
+    "tsp": 5.3,
+    "cup": 255.0
+   }
+  },
+  "baking-soda": {
+   "usda": null,
+   "per100": {
+    "kcal": 0,
+    "protein": 0,
+    "fat": 0,
+    "satFat": 0,
+    "monoFat": 0,
+    "polyFat": 0,
+    "carbs": 0,
+    "fibre": 0,
+    "sugars": 0
+   },
+   "portions": {},
+   "note": "contributes no energy in the amounts used"
+  },
+  "eno": {
+   "usda": null,
+   "per100": {
+    "kcal": 0,
+    "protein": 0,
+    "fat": 0,
+    "satFat": 0,
+    "monoFat": 0,
+    "polyFat": 0,
+    "carbs": 0,
+    "fibre": 0,
+    "sugars": 0
+   },
+   "portions": {},
+   "note": "contributes no energy in the amounts used"
+  },
+  "kewra-water": {
+   "usda": null,
+   "per100": {
+    "kcal": 0,
+    "protein": 0,
+    "fat": 0,
+    "satFat": 0,
+    "monoFat": 0,
+    "polyFat": 0,
+    "carbs": 0,
+    "fibre": 0,
+    "sugars": 0
+   },
+   "portions": {},
+   "note": "contributes no energy in the amounts used"
+  },
+  "rose-water": {
+   "usda": null,
+   "per100": {
+    "kcal": 0,
+    "protein": 0,
+    "fat": 0,
+    "satFat": 0,
+    "monoFat": 0,
+    "polyFat": 0,
+    "carbs": 0,
+    "fibre": 0,
+    "sugars": 0
+   },
+   "portions": {},
+   "note": "contributes no energy in the amounts used"
+  }
+ }
+}
