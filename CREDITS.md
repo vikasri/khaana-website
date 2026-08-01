@@ -86,6 +86,7 @@ this one.
 | `recipes/adai.jpg` | Adai Dosai with Chutney 01.jpg | CC BY-SA 4.0 | Sudhan Ram | [link](https://commons.wikimedia.org/wiki/File:Adai_Dosai_with_Chutney_01.jpg) |
 | `recipes/akki-rotti.jpg` | Akki Rotti.jpg | CC BY-SA 4.0 | Anand Narayan | [link](https://commons.wikimedia.org/wiki/File:Akki_Rotti.jpg) |
 | `recipes/al-yakhni.jpg` | Bottle Gourd Curry.jpg | CC BY-SA 4.0 | Gaurav Dhwaj Khadka | [link](https://commons.wikimedia.org/wiki/File:Bottle_Gourd_Curry.jpg) |
+| `recipes/aloo-chaat.jpg` | Aloo chaat vendor, Connaught Place, New Delhi.jpg | CC BY-SA 2.0 | ampersandyslexia | [link](https://commons.wikimedia.org/wiki/File:Aloo_chaat_vendor,_Connaught_Place,_New_Delhi.jpg) |
 | `recipes/aloo-gobi.jpg` | Aloo gobi | CC BY-SA 2.0 | Unknown | [link](https://commons.wikimedia.org/wiki/File:Aloo_gobi.jpg) |
 | `recipes/aloo-ke-gutke.jpg` | Aloo Gobi Sabji.jpg | CC BY-SA 4.0 | Monali.mishra | [link](https://commons.wikimedia.org/wiki/File:Aloo_Gobi_Sabji.jpg) |
 | `recipes/aloo-ki-tehri.jpg` | Indian Bengali rice dish, with drumsticks curry and onion vada.jpg | CC BY-SA 4.0 | Billjones94 | [link](https://commons.wikimedia.org/wiki/File:Indian_Bengali_rice_dish,_with_drumsticks_curry_and_onion_vada.jpg) |
@@ -95,6 +96,7 @@ this one.
 | `recipes/aloo-posto.jpg` | Aloo Posto.jpg | CC BY-SA 4.0 | SDBeast | [link](https://commons.wikimedia.org/wiki/File:Aloo_Posto.jpg) |
 | `recipes/aloo-potala-rasa.jpg` | Pointed Gourd Curry.jpg | CC BY-SA 4.0 | Gaurav Dhwaj Khadka | [link](https://commons.wikimedia.org/wiki/File:Pointed_Gourd_Curry.jpg) |
 | `recipes/aloo-pyaaz-ki-sabzi.jpg` | Rice and Daal with Allo-Pyaaz Ki Sabzi.jpg | CC BY-SA 4.0 | Nami Verma | [link](https://commons.wikimedia.org/wiki/File:Rice_and_Daal_with_Allo-Pyaaz_Ki_Sabzi.jpg) |
+| `recipes/aloo-tikki.jpg` | Aloo Tikki - Homemade - Assam - DSC 002.jpg | CC BY-SA 4.0 | Gitika Gayan | [link](https://commons.wikimedia.org/wiki/File:Aloo_Tikki_-_Homemade_-_Assam_-_DSC_002.jpg) |
 | `recipes/aloo-tuk.jpg` | Jeera aloo served with sprouts and dal.jpg | CC BY-SA 4.0 | Kanikatwl | [link](https://commons.wikimedia.org/wiki/File:Jeera_aloo_served_with_sprouts_and_dal.jpg) |
 | `recipes/alsande-tonak.jpg` | Masak lemak lada api selections.jpg | CC BY-SA 4.0 | AyyanD | [link](https://commons.wikimedia.org/wiki/File:Masak_lemak_lada_api_selections.jpg) |
 | `recipes/alu-vadi.jpg` | Crispy Alu Vadi from my Kitchen, Pune, Maharashtra.jpg | CC BY-SA 4.0 | Sharvarism | [link](https://commons.wikimedia.org/wiki/File:Crispy_Alu_Vadi_from_my_Kitchen,_Pune,_Maharashtra.jpg) |
@@ -149,6 +151,7 @@ this one.
 | `recipes/bhatt-ki-churkani.jpg` | Dry Beans Curry-1.jpg | CC BY-SA 3.0 | Getupjawani | [link](https://commons.wikimedia.org/wiki/File:Dry_Beans_Curry-1.jpg) |
 | `recipes/bhee-ji-bhaji.jpg` | Sindhi Bhee Ji Bhaji.JPG | CC0 | Miansari66 | [link](https://commons.wikimedia.org/wiki/File:Sindhi_Bhee_Ji_Bhaji.JPG) |
 | `recipes/bhee-patata.jpg` | Curry (lotus roots).JPG | CC BY-SA 4.0 | AntanO | [link](https://commons.wikimedia.org/wiki/File:Curry_(lotus_roots).JPG) |
+| `recipes/bhel-puri.jpg` | Bhel puri Snack.jpg | CC BY 4.0 | Sandhiya Rangasami | [link](https://commons.wikimedia.org/wiki/File:Bhel_puri_Snack.jpg) |
 | `recipes/bhinda-sambhariya.jpg` | Bhendi besara.jpg | CC BY-SA 4.0 | Subhashish Panigrahi | [link](https://commons.wikimedia.org/wiki/File:Bhendi_besara.jpg) |
 | `recipes/bhindi-do-pyaza.jpg` | Bhindi Do Pyaza.JPG | CC BY-SA 4.0 | Ravi Talwar | [link](https://commons.wikimedia.org/wiki/File:Bhindi_Do_Pyaza.JPG) |
 | `recipes/bhindi-masala.jpg` | Bhindi masala (49657981033).jpg | CC BY-SA 2.0 | やましこ | [link](https://commons.wikimedia.org/wiki/File:Bhindi_masala_(49657981033).jpg) |
@@ -166,7 +169,9 @@ this one.
 | `recipes/bisi-bele-bath.jpg` | Bisi bele bath | CC BY-SA 3.0 | Food and Remedy, LLC | [link](https://commons.wikimedia.org/wiki/File:Bisi_Bele_Bath_(Bisibelebath) |
 | `recipes/bobbatlu.jpg` | Nethi Bobbatlu.jpg | CC BY-SA 4.0 | K.Venkataramana | [link](https://commons.wikimedia.org/wiki/File:Nethi_Bobbatlu.jpg) |
 | `recipes/bombil-fry.jpg` | Bombil Fry (6883605717).jpg | CC BY-SA 2.0 | Joegoaukfishcurry2 | [link](https://commons.wikimedia.org/wiki/File:Bombil_Fry_(6883605717).jpg) |
+| `recipes/boondi-raita.jpg` | Boondi Raita.jpg | CC BY-SA 4.0 | Ravi Dwivedi | [link](https://commons.wikimedia.org/wiki/File:Boondi_Raita.jpg) |
 | `recipes/boti-kebab.jpg` | Boti and shesh kebab.jpg | CC BY 2.0 | raasiel | [link](https://commons.wikimedia.org/wiki/File:Boti_and_shesh_kebab.jpg) |
+| `recipes/bread-pakora.jpg` | Bread Pakora (Stuffed with Mashed-Spicy Potatoes).JPG | CC BY-SA 4.0 | Mdsmds0 | [link](https://commons.wikimedia.org/wiki/File:Bread_Pakora_(Stuffed_with_Mashed-Spicy_Potatoes).JPG) |
 | `recipes/cabbage-poriyal.jpg` | Cabbage and Carrot Poriyal.jpg | CC BY-SA 4.0 | Deviselvam | [link](https://commons.wikimedia.org/wiki/File:Cabbage_and_Carrot_Poriyal.jpg) |
 | `recipes/cabbage-thoran.jpg` | Cabbage thoran.jpg | Public domain | Rameshng at Malayalam Wikipedia | [link](https://commons.wikimedia.org/wiki/File:Cabbage_thoran.jpg) |
 | `recipes/chainsoo.jpg` | Moong Dal Kachori Recipe From Indian Cuisine By Sonia Goyal.jpg | CC BY-SA 2.0 | Sonia Goyal Jaipur | [link](https://commons.wikimedia.org/wiki/File:Moong_Dal_Kachori_Recipe_From_Indian_Cuisine_By_Sonia_Goyal.jpg) |
@@ -178,6 +183,7 @@ this one.
 | `recipes/chana-gashi.jpg` | Potato curry (4356270962).jpg | CC BY-SA 2.0 | pelican from Tokyo, Japan | [link](https://commons.wikimedia.org/wiki/File:Potato_curry_(4356270962).jpg) |
 | `recipes/chana-madra.jpg` | White Chana Madra.jpg | CC BY-SA 4.0 | Niyati Sharma 1505 | [link](https://commons.wikimedia.org/wiki/File:White_Chana_Madra.jpg) |
 | `recipes/chana-masala.jpg` | Chana masala | CC0 | Andy Li | [link](https://commons.wikimedia.org/wiki/File:Chana_Masala_-_Mohammed_-_Spice_Of_Life_2024-05-27.jpg) |
+| `recipes/chapati.jpg` | 2012 'Zürcher Theater Spektakel' - Chapati 2012-08-25 17-46-31 (P7000).JPG | CC BY-SA 3.0 | Roland zh | [link](https://commons.wikimedia.org/wiki/File:2012_%27Z%C3%BCrcher_Theater_Spektakel%27_-_Chapati_2012-08-25_17-46-31_(P7000).JPG) |
 | `recipes/cheera-thoran.jpg` | Cheera Thoran Stage2.JPG | CC BY-SA 3.0 | Ranjithsiji | [link](https://commons.wikimedia.org/wiki/File:Cheera_Thoran_Stage2.JPG) |
 | `recipes/chekke-curry.jpg` | Jackfruit curry with rice.jpg | CC BY-SA 4.0 | Vis M | [link](https://commons.wikimedia.org/wiki/File:Jackfruit_curry_with_rice.jpg) |
 | `recipes/chemmeen-manga-curry.jpg` | King prawn curry - Sunoso (verticle).jpg | CC0 | Andy Li | [link](https://commons.wikimedia.org/wiki/File:King_prawn_curry_-_Sunoso_(verticle).jpg) |
@@ -198,9 +204,13 @@ this one.
 | `recipes/chettinad-urulai-roast.jpg` | Spicy chicken and potato curry (10771218216).jpg | CC BY-SA 2.0 | pelican from Tokyo, Japan | [link](https://commons.wikimedia.org/wiki/File:Spicy_chicken_and_potato_curry_(10771218216).jpg) |
 | `recipes/chhatu-rai.jpg` | Traditional Odial Lunch Thali.jpg | CC BY-SA 3.0 | Swetapadma07 | [link](https://commons.wikimedia.org/wiki/File:Traditional_Odial_Lunch_Thali.jpg) |
 | `recipes/chhena-tarkari.jpg` | Eating a curry pan at Brighton and Hove Japanese Club Open Day 2023.jpg | CC0 | Andy Li | [link](https://commons.wikimedia.org/wiki/File:Eating_a_curry_pan_at_Brighton_and_Hove_Japanese_Club_Open_Day_2023.jpg) |
+| `recipes/chicken-biryani.jpg` | Chicken biriyani- My cafe restaurant - Meghalaya DSC 009.jpg | CC BY-SA 4.0 | Gitika Gayan | [link](https://commons.wikimedia.org/wiki/File:Chicken_biriyani-_My_cafe_restaurant_-_Meghalaya_DSC_009.jpg) |
 | `recipes/chicken-cafreal.jpg` | Chicken Cafreal-panji-goa-003.jpg | CC BY-SA 4.0 | Abhijeet Chandankhede | [link](https://commons.wikimedia.org/wiki/File:Chicken_Cafreal-panji-goa-003.jpg) |
 | `recipes/chicken-ghee-roast.jpg` | Indian chicken dish.jpg | Public domain | Tanner-Christopher at English Wikipedia | [link](https://commons.wikimedia.org/wiki/File:Indian_chicken_dish.jpg) |
+| `recipes/chicken-kathi-roll.jpg` | Chicken-kathi-roll-recipe.jpg | CC BY-SA 4.0 | Vivekpat30 | [link](https://commons.wikimedia.org/wiki/File:Chicken-kathi-roll-recipe.jpg) |
 | `recipes/chicken-lollipop.jpg` | Chicken lollipop in Goa.jpg | CC BY 2.0 | Peiling Tan from Singapore, Singapore | [link](https://commons.wikimedia.org/wiki/File:Chicken_lollipop_in_Goa.jpg) |
+| `recipes/chicken-tikka-masala.jpg` | Chicken tikka masala at Yeti in Glen Ellen 2015 - Sarah Stierch.jpg | CC BY 4.0 | Missvain | [link](https://commons.wikimedia.org/wiki/File:Chicken_tikka_masala_at_Yeti_in_Glen_Ellen_2015_-_Sarah_Stierch.jpg) |
+| `recipes/chicken-tikka.jpg` | Chicken tikka masala.jpg | CC BY 2.0 | Michael Hays | [link](https://commons.wikimedia.org/wiki/File:Chicken_tikka_masala.jpg) |
 | `recipes/chicken-xacuti.jpg` | Chicken Xacuti curry with Biryani rice.png | CC BY-SA 4.0 | Sriyarao22 | [link](https://commons.wikimedia.org/wiki/File:Chicken_Xacuti_curry_with_Biryani_rice.png) |
 | `recipes/chilli-paneer.jpg` | Chilly Paneer 01.jpg | CC BY-SA 4.0 | Marajozkee | [link](https://commons.wikimedia.org/wiki/File:Chilly_Paneer_01.jpg) |
 | `recipes/chilli-tofu.jpg` | Tofu fries with sweet chilli sauce (19172708213).jpg | CC BY-SA 2.0 | sunny mama | [link](https://commons.wikimedia.org/wiki/File:Tofu_fries_with_sweet_chilli_sauce_(19172708213).jpg) |
@@ -209,15 +219,19 @@ this one.
 | `recipes/chingudi-tarkari.jpg` | CHINGUDI TARKARI.jpg | CC BY 3.0 | myself. Sanshlistha m | [link](https://commons.wikimedia.org/wiki/File:CHINGUDI_TARKARI.jpg) |
 | `recipes/choek-wangun.jpg` | Hilsa curry with aubergine and pumpkin.jpg | CC BY-SA 4.0 | Sarkar Sayantan | [link](https://commons.wikimedia.org/wiki/File:Hilsa_curry_with_aubergine_and_pumpkin.jpg) |
 | `recipes/cholar-dal.jpg` | Cholar Dal (Luchi).jpg | CC BY-SA 4.0 | Vis M | [link](https://commons.wikimedia.org/wiki/File:Cholar_Dal_(Luchi).jpg) |
+| `recipes/chole-bhature.jpg` | Chole Bhature 1.jpg | CC BY-SA 4.0 | Gaurav Dhwaj Khadka | [link](https://commons.wikimedia.org/wiki/File:Chole_Bhature_1.jpg) |
 | `recipes/chungdi-malai.jpg` | Prawn curry with rice.JPG | CC BY-SA 4.0 | Drmray | [link](https://commons.wikimedia.org/wiki/File:Prawn_curry_with_rice.JPG) |
 | `recipes/coconut-chutney.jpg` | Butter Dosa served with coconut chutney and sambhar.jpg | CC BY-SA 4.0 | Ravi Dwivedi | [link](https://commons.wikimedia.org/wiki/File:Butter_Dosa_served_with_coconut_chutney_and_sambhar.jpg) |
 | `recipes/country-captain-chicken.jpg` | Country Captain.jpg | CC BY 2.0 | Dan Costin | [link](https://commons.wikimedia.org/wiki/File:Country_Captain.jpg) |
+| `recipes/cucumber-raita.jpg` | Cucumber-raita.jpg | CC BY-SA 2.0 | Sonia Goyal | [link](https://commons.wikimedia.org/wiki/File:Cucumber-raita.jpg) |
 | `recipes/curd-rice.jpg` | Curd rice in ICH Bhopal.jpg | CC BY-SA 4.0 | Suyash Dwivedi | [link](https://commons.wikimedia.org/wiki/File:Curd_rice_in_ICH_Bhopal.jpg) |
+| `recipes/dabeli.jpg` | Dabeli Stuffing (Indian snack).jpg | CC BY-SA 4.0 | SwatiGupta1986 | [link](https://commons.wikimedia.org/wiki/File:Dabeli_Stuffing_(Indian_snack).jpg) |
 | `recipes/dadpe-pohe.jpg` | Rice Puttu with Gram Curry.jpg | CC BY-SA 4.0 | Anto Paul | [link](https://commons.wikimedia.org/wiki/File:Rice_Puttu_with_Gram_Curry.jpg) |
 | `recipes/dahi-baigana.jpg` | Dahi baigana Odia recipe.jpg | CC BY-SA 3.0 | Subhashish Panigrahi | [link](https://commons.wikimedia.org/wiki/File:Dahi_baigana_Odia_recipe.jpg) |
 | `recipes/dahi-bhalla.jpg` | Dahi bhalla with papdi.jpg | CC BY-SA 4.0 | Vipul7229 | [link](https://commons.wikimedia.org/wiki/File:Dahi_bhalla_with_papdi.jpg) |
 | `recipes/dahi-chura-gud.jpg` | Curd Rice.jpg | CC BY-SA 4.0 | Sudharshan Shanmugasundaram | [link](https://commons.wikimedia.org/wiki/File:Curd_Rice.jpg) |
 | `recipes/dahi-ke-kebab.jpg` | Dahi ke Kebabs.JPG | CC BY-SA 4.0 | Mayurbhandari | [link](https://commons.wikimedia.org/wiki/File:Dahi_ke_Kebabs.JPG) |
+| `recipes/dahi-puri.jpg` | Odia Style Dahi bara Puri Odisha-IMG 953.jpg | CC BY-SA 4.0 | Subhransuphotography | [link](https://commons.wikimedia.org/wiki/File:Odia_Style_Dahi_bara_Puri_Odisha-IMG_953.jpg) |
 | `recipes/dahi-wale-aloo.jpg` | Aubergine & Potato curry (506336160).jpg | CC BY 2.0 | rovingI | [link](https://commons.wikimedia.org/wiki/File:Aubergine_%26_Potato_curry_(506336160).jpg) |
 | `recipes/dal-dhokli.jpg` | Dalthokali.jpg | CC BY-SA 4.0 | Heenah | [link](https://commons.wikimedia.org/wiki/File:Dalthokali.jpg) |
 | `recipes/dal-makhani.jpg` | Dal Makhani along with Naan.jpg | CC BY 2.0 | Barry Pousman from New York, NY | [link](https://commons.wikimedia.org/wiki/File:Dal_Makhani_along_with_Naan.jpg) |
@@ -239,14 +253,18 @@ this one.
 | `recipes/dum-aloo-lucknowi.jpg` | Beef curry rice 003.jpg | CC0 | Ocdp | [link](https://commons.wikimedia.org/wiki/File:Beef_curry_rice_003.jpg) |
 | `recipes/dum-ka-murgh.jpg` | Dum ka Murgh.jpg | CC BY-SA 4.0 | Vis M | [link](https://commons.wikimedia.org/wiki/File:Dum_ka_Murgh.jpg) |
 | `recipes/echorer-dalna.jpg` | Jackfruit curry, Kerala.jpg | CC BY-SA 4.0 | Vis M | [link](https://commons.wikimedia.org/wiki/File:Jackfruit_curry,_Kerala.jpg) |
+| `recipes/egg-bhurji.jpg` | Egg bhurji with pav (bread).jpg | CC BY-SA 4.0 | Urniel | [link](https://commons.wikimedia.org/wiki/File:Egg_bhurji_with_pav_(bread).jpg) |
+| `recipes/egg-curry.jpg` | Egg curry pic.jpg | CC BY-SA 4.0 | Ekabhishek | [link](https://commons.wikimedia.org/wiki/File:Egg_curry_pic.jpg) |
 | `recipes/erissery.jpg` | Pumpkin, mushroom, chicken, Indian basmati rice cooked.jpg | CC BY 2.0 | Vernon Chan from Kuala Lumpur, Malaysia | [link](https://commons.wikimedia.org/wiki/File:Pumpkin,_mushroom,_chicken,_Indian_basmati_rice_cooked.jpg) |
 | `recipes/eromba.jpg` | Ingredients for making traditional Meitei food, Eromba (alias Iromba, Eronba, Ironba) - Classical Meitei cuisine of Kangleipak.jpg | CC BY 4.0 | Haoreima | [link](https://commons.wikimedia.org/wiki/File:Ingredients_for_making_traditional_Meitei_food,_Eromba_(alias_Iromba,_Eronba,_Ironba)_-_Classical_Meitei_cuisine_of_Kangleipak.jpg) |
 | `recipes/fafda.jpg` | Fafda.JPG | CC BY-SA 4.0 | Shubhamj29 | [link](https://commons.wikimedia.org/wiki/File:Fafda.JPG) |
 | `recipes/fish-caldine.jpg` | Fish-curry-rice, Goan-style 02.jpg | CC BY-SA 4.0 | Fredericknoronha | [link](https://commons.wikimedia.org/wiki/File:Fish-curry-rice,_Goan-style_02.jpg) |
 | `recipes/fish-molee.jpg` | Fish moilee moily molee.jpg | CC BY-SA 4.0 | CNEcija12345 | [link](https://commons.wikimedia.org/wiki/File:Fish_moilee_moily_molee.jpg) |
+| `recipes/fish-tikka.jpg` | Ajwaini Fish Tikka.jpg | CC BY-SA 4.0 | Msroshni905 | [link](https://commons.wikimedia.org/wiki/File:Ajwaini_Fish_Tikka.jpg) |
 | `recipes/gahat-ki-dal.jpg` | Dal, part of the Indian staple diet.jpg | CC BY-SA 4.0 | Neha Sonal | [link](https://commons.wikimedia.org/wiki/File:Dal,_part_of_the_Indian_staple_diet.jpg) |
 | `recipes/gajar-ka-halwa.jpg` | Gajar Ka Halwa a famous Indian Sweet Dish 01.jpg | CC BY-SA 4.0 | Bugatti Enthusiast Aishwary Raj | [link](https://commons.wikimedia.org/wiki/File:Gajar_Ka_Halwa_a_famous_Indian_Sweet_Dish_01.jpg) |
 | `recipes/galho.jpg` | Mixed Steamed Rice.jpg | CC BY-SA 4.0 | Sumit Surai | [link](https://commons.wikimedia.org/wiki/File:Mixed_Steamed_Rice.jpg) |
+| `recipes/garlic-naan.jpg` | Garlic Butter Naan Food by Ms Ujwala Kasambe DSCN1136 (3).jpg | CC BY-SA 4.0 | Dr. Raju Kasambe | [link](https://commons.wikimedia.org/wiki/File:Garlic_Butter_Naan_Food_by_Ms_Ujwala_Kasambe_DSCN1136_(3).jpg) |
 | `recipes/gatta-pulao.jpg` | Stuffed Chili Recipe A Vegetable Recipe From Indian Cuisine By Sonia Goyal.jpg | CC BY-SA 2.0 | Sonia Goyal Jaipur | [link](https://commons.wikimedia.org/wiki/File:Stuffed_Chili_Recipe_A_Vegetable_Recipe_From_Indian_Cuisine_By_Sonia_Goyal.jpg) |
 | `recipes/gatte-ki-sabzi.jpg` | Gatte ki sabzi served with aamras and garlic chutney.jpg | CC BY-SA 4.0 | Kanikatwl | [link](https://commons.wikimedia.org/wiki/File:Gatte_ki_sabzi_served_with_aamras_and_garlic_chutney.jpg) |
 | `recipes/ghanta-tarkari.jpg` | Coconut oil 2.jpg | CC BY-SA 4.0 | Tiia Monto | [link](https://commons.wikimedia.org/wiki/File:Coconut_oil_2.jpg) |
@@ -261,6 +279,7 @@ this one.
 | `recipes/gujarati-dal.jpg` | Gujarati Dal..JPG | CC0 | Miansari66 | [link](https://commons.wikimedia.org/wiki/File:Gujarati_Dal..JPG) |
 | `recipes/gujarati-kadhi.jpg` | Gujarati Thali with Rotlo, Kadhi, Olo, Gol.jpg | CC0 | Brihaspati | [link](https://commons.wikimedia.org/wiki/File:Gujarati_Thali_with_Rotlo,_Kadhi,_Olo,_Gol.jpg) |
 | `recipes/gujarati-khichdi.jpg` | Gujarati Kathiyawadi Dish.JPG | CC BY-SA 4.0 | Jalpaparakhiya | [link](https://commons.wikimedia.org/wiki/File:Gujarati_Kathiyawadi_Dish.JPG) |
+| `recipes/gulab-jamun.jpg` | Two Gulab Jamun in a plate 01.jpg | CC BY-SA 4.0 | Suyash.dwivedi | [link](https://commons.wikimedia.org/wiki/File:Two_Gulab_Jamun_in_a_plate_01.jpg) |
 | `recipes/gundruk-ko-jhol.jpg` | Nepali dal-bhat-tarkari.jpg | CC BY-SA 4.0 | Subhashish Panigrahi | [link](https://commons.wikimedia.org/wiki/File:Nepali_dal-bhat-tarkari.jpg) |
 | `recipes/gushtaba.jpg` | Gushtaba..JPG | CC0 | Miansari66 | [link](https://commons.wikimedia.org/wiki/File:Gushtaba..JPG) |
 | `recipes/gutti-vankaya-kura.jpg` | Gutti Vankaya Kura.jpg | CC BY-SA 4.0 | Rupak76 | [link](https://commons.wikimedia.org/wiki/File:Gutti_Vankaya_Kura.jpg) |
@@ -280,12 +299,16 @@ this one.
 | `recipes/idiyappam.jpg` | Idiyappam with Egg Masala Curry.jpg | CC BY-SA 4.0 | Viewfinder18 | [link](https://commons.wikimedia.org/wiki/File:Idiyappam_with_Egg_Masala_Curry.jpg) |
 | `recipes/ilish-bhapa.jpg` | Ilish jeere bhapa.jpg | CC BY-SA 4.0 | Atudu | [link](https://commons.wikimedia.org/wiki/File:Ilish_jeere_bhapa.jpg) |
 | `recipes/jadoh.jpg` | Jadoh (Meghalaya.JPG | CC BY-SA 4.0 | Real Sovan | [link](https://commons.wikimedia.org/wiki/File:Jadoh_(Meghalaya.JPG) |
+| `recipes/jalebi.jpg` | Jalebi 6.jpg | CC BY-SA 4.0 | Gannu03 | [link](https://commons.wikimedia.org/wiki/File:Jalebi_6.jpg) |
+| `recipes/jeera-rice.jpg` | Jeera-rice.JPG | CC BY-SA 2.0 | Sonia Goyal | [link](https://commons.wikimedia.org/wiki/File:Jeera-rice.JPG) |
 | `recipes/jhangora-ki-kheer.jpg` | Kheer Rice Pudding Indian Sweet Buffalo New York.jpg | CC BY 2.0 | purdman1 | [link](https://commons.wikimedia.org/wiki/File:Kheer_Rice_Pudding_Indian_Sweet_Buffalo_New_York.jpg) |
 | `recipes/jolada-rotti.jpg` | ಜೋಳದ ರೊಟ್ಟಿ Jōḷada roṭṭi.jpg | CC BY-SA 3.0 | ಪ್ರಶಾಂತ ಸೊರಟೂರ | [link](https://commons.wikimedia.org/wiki/File:%E0%B2%9C%E0%B3%8B%E0%B2%B3%E0%B2%A6_%E0%B2%B0%E0%B3%8A%E0%B2%9F%E0%B3%8D%E0%B2%9F%E0%B2%BF_J%C5%8D%E1%B8%B7ada_ro%E1%B9%AD%E1%B9%ADi.jpg) |
 | `recipes/jowar-bhakri.jpg` | Harbharyachi bhaji with toor dal jowar bhakri bharli mirchi salad dahi.jpg | CC BY-SA 4.0 | Meena Kharatmal | [link](https://commons.wikimedia.org/wiki/File:Harbharyachi_bhaji_with_toor_dal_jowar_bhakri_bharli_mirchi_salad_dahi.jpg) |
 | `recipes/junglee-maas.jpg` | Mutton rogan josh in blue bowl.jpg | CC BY-SA 4.0 | Karan1dhawan | [link](https://commons.wikimedia.org/wiki/File:Mutton_rogan_josh_in_blue_bowl.jpg) |
 | `recipes/kaalan.jpg` | Kaalan curry.jpg | Public domain | Rameshng at Malayalam Wikipedia | [link](https://commons.wikimedia.org/wiki/File:Kaalan_curry.jpg) |
 | `recipes/kaapa.jpg` | Cottage cheese in spinach gravy(palak paneer).jpg | CC BY-SA 4.0 | Radhikamprabhu82 | [link](https://commons.wikimedia.org/wiki/File:Cottage_cheese_in_spinach_gravy(palak_paneer).jpg) |
+| `recipes/kadai-chicken.jpg` | Kadai chicken by usamah.jpg | CC BY-SA 4.0 | Shiek md usamah | [link](https://commons.wikimedia.org/wiki/File:Kadai_chicken_by_usamah.jpg) |
+| `recipes/kadai-paneer.jpg` | Kadai paneer with garlic naan.jpg | CC BY-SA 4.0 | YKanchan07 | [link](https://commons.wikimedia.org/wiki/File:Kadai_paneer_with_garlic_naan.jpg) |
 | `recipes/kadala-curry.jpg` | Kadala Curry (9686012452).jpg | CC BY-SA 2.0 | Devika | [link](https://commons.wikimedia.org/wiki/File:Kadala_Curry_(9686012452).jpg) |
 | `recipes/kadambuttu.jpg` | Egg drop curry - my home Bangalore - Karnataka -pic 11.jpg | CC BY-SA 4.0 | Shruthi Gaurav Alva | [link](https://commons.wikimedia.org/wiki/File:Egg_drop_curry_-_my_home_Bangalore_-_Karnataka_-pic_11.jpg) |
 | `recipes/kaddu-ka-khatta.jpg` | Roti with KadduGhost.jpg | CC BY-SA 4.0 | Rashid Jorvee | [link](https://commons.wikimedia.org/wiki/File:Roti_with_KadduGhost.jpg) |
@@ -301,6 +324,7 @@ this one.
 | `recipes/kashmiri-rajma.jpg` | Kashmiri Pandit vegetarian thali served at Matamaal restaurants with Rajma, Dum aloo, Paneer dishes.png | CC BY-SA 4.0 | Coastalcakes (Matamaal Restaurants) | [link](https://commons.wikimedia.org/wiki/File:Kashmiri_Pandit_vegetarian_thali_served_at_Matamaal_restaurants_with_Rajma,_Dum_aloo,_Paneer_dishes.png) |
 | `recipes/katachi-amti.jpg` | Puran Poli and Katachi Amti by Dr. Raju Kasambe 03.jpg | CC BY-SA 4.0 | Dr. Raju Kasambe | [link](https://commons.wikimedia.org/wiki/File:Puran_Poli_and_Katachi_Amti_by_Dr._Raju_Kasambe_03.jpg) |
 | `recipes/kathal-ki-sabzi.jpg` | Kathal ki sabzi.jpg | CC BY-SA 4.0 | Sapanabehl | [link](https://commons.wikimedia.org/wiki/File:Kathal_ki_sabzi.jpg) |
+| `recipes/kathi-roll.jpg` | Chicken Kathi Roll (5646735923).jpg | CC BY-SA 2.0 | Andy Mitchell from Glasgow, UK | [link](https://commons.wikimedia.org/wiki/File:Chicken_Kathi_Roll_(5646735923).jpg) |
 | `recipes/kathirikai-chettinad.jpg` | Brinjal Bhaji (Eggplant with Indian spices) (475600565).jpg | CC BY 2.0 | rovingI | [link](https://commons.wikimedia.org/wiki/File:Brinjal_Bhaji_(Eggplant_with_Indian_spices)_(475600565).jpg) |
 | `recipes/keema-matar.jpg` | Keema Matar (a dish from India).jpg | CC BY-SA 4.0 | Cabeza2000 | [link](https://commons.wikimedia.org/wiki/File:Keema_Matar_(a_dish_from_India).jpg) |
 | `recipes/keerai-masiyal.jpg` | South Indian famous - Manathakkali Keerai.jpg | CC BY-SA 4.0 | Arul Raj C | [link](https://commons.wikimedia.org/wiki/File:South_Indian_famous_-_Manathakkali_Keerai.jpg) |
@@ -322,6 +346,7 @@ this one.
 | `recipes/kolhapuri-chicken.jpg` | Chicken Curry 8.jpg | CC BY-SA 4.0 | Gaurav Dhwaj Khadka | [link](https://commons.wikimedia.org/wiki/File:Chicken_Curry_8.jpg) |
 | `recipes/koli-curry.jpg` | Koli kolumbu.jpg | CC BY-SA 4.0 | Andrew Jabakumar | [link](https://commons.wikimedia.org/wiki/File:Koli_kolumbu.jpg) |
 | `recipes/koli-saaru.jpg` | Chicken Curry 6.jpg | CC BY-SA 4.0 | Gaurav Dhwaj Khadka | [link](https://commons.wikimedia.org/wiki/File:Chicken_Curry_6.jpg) |
+| `recipes/kolkata-biryani.jpg` | Kolkata mutton biryani.jpg | CC BY-SA 4.0 | DeepanjanGhosh | [link](https://commons.wikimedia.org/wiki/File:Kolkata_mutton_biryani.jpg) |
 | `recipes/koottu-curry.jpg` | Traditional Koottu Curry of Kerala.JPG | CC BY-SA 4.0 | Nairdeepa | [link](https://commons.wikimedia.org/wiki/File:Traditional_Koottu_Curry_of_Kerala.JPG) |
 | `recipes/kootu.jpg` | Cabbage kootu.jpg | CC BY-SA 3.0 | Sanjay Acharya | [link](https://commons.wikimedia.org/wiki/File:Cabbage_kootu.jpg) |
 | `recipes/kori-rotti.jpg` | Kori Rotti.jpg | CC BY-SA 4.0 | DreamyFlutura11 | [link](https://commons.wikimedia.org/wiki/File:Kori_Rotti.jpg) |
@@ -329,6 +354,7 @@ this one.
 | `recipes/kothimbir-vadi.jpg` | Nevaidya- food offered to good.png | CC BY-SA 4.0 | Master Sahil Gaikwad | [link](https://commons.wikimedia.org/wiki/File:Nevaidya-_food_offered_to_good.png) |
 | `recipes/kozhi-porichathu.jpg` | Chicken Curry 4.jpg | CC BY-SA 4.0 | Gaurav Dhwaj Khadka | [link](https://commons.wikimedia.org/wiki/File:Chicken_Curry_4.jpg) |
 | `recipes/kozhukatta.jpg` | Kozhukatta Nasrani food.jpg | CC BY-SA 4.0 | Rahul Payyappilly | [link](https://commons.wikimedia.org/wiki/File:Kozhukatta_Nasrani_food.jpg) |
+| `recipes/kulfi.jpg` | Kulfi 3.jpg | CC BY-SA 4.0 | Gaurav Dhwaj Khadka | [link](https://commons.wikimedia.org/wiki/File:Kulfi_3.jpg) |
 | `recipes/kullu-trout.jpg` | Trout dish, Rauenthal.jpg | CC BY-SA 4.0 | Gerda Arendt | [link](https://commons.wikimedia.org/wiki/File:Trout_dish,_Rauenthal.jpg) |
 | `recipes/kumaoni-raita.jpg` | Raita with cucumber and mint.jpg | CC BY-SA 3.0 | Elisabeth Nara at English Wikipedia | [link](https://commons.wikimedia.org/wiki/File:Raita_with_cucumber_and_mint.jpg) |
 | `recipes/kumm-curry.jpg` | Lunch at Curry Leaf Cafe 2024-01-20.jpg | CC0 | Andy Li | [link](https://commons.wikimedia.org/wiki/File:Lunch_at_Curry_Leaf_Cafe_2024-01-20.jpg) |
@@ -336,6 +362,7 @@ this one.
 | `recipes/laal-maas.jpg` | Laal-Maans.jpg | CC BY-SA 3.0 | Hamzaghanchi | [link](https://commons.wikimedia.org/wiki/File:Laal-Maans.jpg) |
 | `recipes/labra.jpg` | Labra tarkari-MA17.jpg | CC BY-SA 4.0 | Rajeeb Dutta | [link](https://commons.wikimedia.org/wiki/File:Labra_tarkari-MA17.jpg) |
 | `recipes/lasaniya-batata.jpg` | Vegan Aloo Gobi (6971515438).jpg | CC BY 2.0 | Jennifer from Vancouver, Canada | [link](https://commons.wikimedia.org/wiki/File:Vegan_Aloo_Gobi_(6971515438).jpg) |
+| `recipes/lassi.jpg` | Lassi Sweet or Salted.JPG | CC BY-SA 4.0 | HARIOM.AWASTHI | [link](https://commons.wikimedia.org/wiki/File:Lassi_Sweet_or_Salted.JPG) |
 | `recipes/lau-ghonto.jpg` | Chingri diye lau ghonto.jpg | CC BY-SA 4.0 | Atudu | [link](https://commons.wikimedia.org/wiki/File:Chingri_diye_lau_ghonto.jpg) |
 | `recipes/lauki-kofta.jpg` | Lauki Kofta Curry.JPG | CC BY-SA 4.0 | Nithajay | [link](https://commons.wikimedia.org/wiki/File:Lauki_Kofta_Curry.JPG) |
 | `recipes/lehsun-ki-chutney.jpg` | Rajasthani Food.JPG | CC BY-SA 4.0 | Anirudh Chordia | [link](https://commons.wikimedia.org/wiki/File:Rajasthani_Food.JPG) |
@@ -353,11 +380,16 @@ this one.
 | `recipes/mahura.jpg` | Pumpkin curry (1861461547).jpg | CC BY 2.0 | Upendra Kanda | [link](https://commons.wikimedia.org/wiki/File:Pumpkin_curry_(1861461547).jpg) |
 | `recipes/majjige-huli.jpg` | Sorekayi Majjige Huli- my home Bangalore-Karnataka-pic 12.jpg | CC BY-SA 4.0 | Shruthi Gaurav Alva | [link](https://commons.wikimedia.org/wiki/File:Sorekayi_Majjige_Huli-_my_home_Bangalore-Karnataka-pic_12.jpg) |
 | `recipes/makki-di-roti.jpg` | Makki Di Roti.JPG | CC BY-SA 4.0 | Vsigamany | [link](https://commons.wikimedia.org/wiki/File:Makki_Di_Roti.JPG) |
+| `recipes/malabar-parotta.jpg` | Malabar Porotta.jpg | CC BY-SA 4.0 | Praveen | [link](https://commons.wikimedia.org/wiki/File:Malabar_Porotta.jpg) |
+| `recipes/malai-kofta.jpg` | Malai Kofta Curry.jpg | CC BY-SA 4.0 | Mrudit161187 | [link](https://commons.wikimedia.org/wiki/File:Malai_Kofta_Curry.jpg) |
 | `recipes/malpua.jpg` | Rajasthani Malpua.jpg | CC BY-SA 4.0 | Acoomar | [link](https://commons.wikimedia.org/wiki/File:Rajasthani_Malpua.jpg) |
 | `recipes/manchow-soup.jpg` | Manchow soup - Indo-Chinese cuisine.jpg | CC BY-SA 4.0 | Sarkar Sayantan | [link](https://commons.wikimedia.org/wiki/File:Manchow_soup_-_Indo-Chinese_cuisine.jpg) |
 | `recipes/mandua-ki-roti.jpg` | Photograph of Udham Singh rolling dough to make roti (Indian flatbread), London, England, ca.1938.gif | Public domain | Unknown photographer | [link](https://commons.wikimedia.org/wiki/File:Photograph_of_Udham_Singh_rolling_dough_to_make_roti_(Indian_flatbread),_London,_England,_ca.1938.gif) |
+| `recipes/mango-lassi.jpg` | Costco treats - Lassi.jpg | CC BY-SA 4.0 | Infrogmation of New Orleans | [link](https://commons.wikimedia.org/wiki/File:Costco_treats_-_Lassi.jpg) |
+| `recipes/mango-pickle.jpg` | Mango pickle. jpg.jpg | CC BY-SA 4.0 | BHAVAPRIYA J U | [link](https://commons.wikimedia.org/wiki/File:Mango_pickle._jpg.jpg) |
 | `recipes/mangodi-ki-sabzi.jpg` | Delicious tomato dal (1861335231).jpg | CC BY 2.0 | Upendra Kanda | [link](https://commons.wikimedia.org/wiki/File:Delicious_tomato_dal_(1861335231).jpg) |
 | `recipes/marchwangan-korma.jpg` | Mutton rogan Josh (kashmiri cuisine).jpg | CC BY-SA 4.0 | Rajatsingh8808 | [link](https://commons.wikimedia.org/wiki/File:Mutton_rogan_Josh_(kashmiri_cuisine).jpg) |
+| `recipes/masala-chai.jpg` | Masala Chai.JPG | Public domain | Miansari66 | [link](https://commons.wikimedia.org/wiki/File:Masala_Chai.JPG) |
 | `recipes/masale-bhat.jpg` | Masale Bhat -Homemade - Maharashtra.jpg | CC BY-SA 4.0 | Phadke09 | [link](https://commons.wikimedia.org/wiki/File:Masale_Bhat_-Homemade_-_Maharashtra.jpg) |
 | `recipes/masor-jhol.jpg` | Alappy Fish Curry.JPG | CC BY-SA 4.0 | Amalsatheesha | [link](https://commons.wikimedia.org/wiki/File:Alappy_Fish_Curry.JPG) |
 | `recipes/masor-tenga.jpg` | North Indian Fish Curry (Cat Fish).jpg | CC BY-SA 4.0 | Seetrw | [link](https://commons.wikimedia.org/wiki/File:North_Indian_Fish_Curry_(Cat_Fish).jpg) |
@@ -374,6 +406,7 @@ this one.
 | `recipes/methi-muthiya.jpg` | Methi Muthiya ( fried ).jpg | CC BY-SA 4.0 | Sushant savla | [link](https://commons.wikimedia.org/wiki/File:Methi_Muthiya_(_fried_).jpg) |
 | `recipes/methi-thepla.jpg` | Masala thepla with Methi kela.JPG | CC BY-SA 4.0 | Rupasree | [link](https://commons.wikimedia.org/wiki/File:Masala_thepla_with_Methi_kela.JPG) |
 | `recipes/milagu-kuzhambu.jpg` | Tamil Nadu Fish Curry.jpg | CC BY-SA 4.0 | Deviselvam | [link](https://commons.wikimedia.org/wiki/File:Tamil_Nadu_Fish_Curry.jpg) |
+| `recipes/mint-coriander-chutney.jpg` | Vada Pav with Fresh green coriander and mint Chutney and Garlic chutney.jpg | CC BY-SA 4.0 | Rainmaker87 | [link](https://commons.wikimedia.org/wiki/File:Vada_Pav_with_Fresh_green_coriander_and_mint_Chutney_and_Garlic_chutney.jpg) |
 | `recipes/mirchi-ka-salan.jpg` | Mirchi ka salan and Dahi chutney.jpg | CC BY-SA 3.0 | Randhirreddy at English Wikipedia | [link](https://commons.wikimedia.org/wiki/File:Mirchi_ka_salan_and_Dahi_chutney.jpg) |
 | `recipes/mirchi-vada.jpg` | GARLIC MIRCHI VADA.jpg | CC BY-SA 4.0 | SS Khurana | [link](https://commons.wikimedia.org/wiki/File:GARLIC_MIRCHI_VADA.jpg) |
 | `recipes/mishti-doi.jpg` | Mishti Doi.jpg | CC BY 2.0 | Kirti Poddar | [link](https://commons.wikimedia.org/wiki/File:Mishti_Doi.jpg) |
@@ -381,6 +414,7 @@ this one.
 | `recipes/mithila-machh-posto.jpg` | South Indian Fish Curry with Steamed Rice-Chennai-TamilNadu-DSC0001.jpg | CC BY-SA 4.0 | Jen 0309 | [link](https://commons.wikimedia.org/wiki/File:South_Indian_Fish_Curry_with_Steamed_Rice-Chennai-TamilNadu-DSC0001.jpg) |
 | `recipes/mithila-sarson-aloo.jpg` | Broccoli and Potato dish with Indian seasoning in Paulínia, 2023-10-17.jpg | CC BY-SA 4.0 | Parzeus | [link](https://commons.wikimedia.org/wiki/File:Broccoli_and_Potato_dish_with_Indian_seasoning_in_Paul%C3%ADnia,_2023-10-17.jpg) |
 | `recipes/mitho-lolo.jpg` | Yogurt and Rice aka Curd Rice.jpg | CC BY-SA 4.0 | Ananth Pattabiraman | [link](https://commons.wikimedia.org/wiki/File:Yogurt_and_Rice_aka_Curd_Rice.jpg) |
+| `recipes/mixed-vegetable-pakora.jpg` | Mixed Vegetable Pakora.JPG | CC BY-SA 4.0 | Mdsmds0 | [link](https://commons.wikimedia.org/wiki/File:Mixed_Vegetable_Pakora.JPG) |
 | `recipes/mizo-bai.jpg` | Complete traditional Odia vegetarian lunch.jpg | CC BY-SA 4.0 | foodLover-A | [link](https://commons.wikimedia.org/wiki/File:Complete_traditional_Odia_vegetarian_lunch.jpg) |
 | `recipes/modur-pulav.jpg` | Saffron Rice or Basmati Rice Kesari Bath.png | CC BY-SA 4.0 | Manjeshwari poet mysore | [link](https://commons.wikimedia.org/wiki/File:Saffron_Rice_or_Basmati_Rice_Kesari_Bath.png) |
 | `recipes/moong-dal-halwa.jpg` | Moong Dal Halwa and Mysore Pak Sweet Dish Desert.jpg | CC BY-SA 4.0 | Dev Jadiya | [link](https://commons.wikimedia.org/wiki/File:Moong_Dal_Halwa_and_Mysore_Pak_Sweet_Dish_Desert.jpg) |
@@ -399,6 +433,7 @@ this one.
 | `recipes/muya-awandru.jpg` | Awandru.jpg | CC BY-SA 4.0 | Tirengma | [link](https://commons.wikimedia.org/wiki/File:Awandru.jpg) |
 | `recipes/muzaffar.jpg` | Traditional Vermicelli Upma (Semiya Upma) with Fresh Vegetables.jpg | CC BY-SA 4.0 | Srujanabotcha | [link](https://commons.wikimedia.org/wiki/File:Traditional_Vermicelli_Upma_(Semiya_Upma)_with_Fresh_Vegetables.jpg) |
 | `recipes/mysore-pak.jpg` | Mysore pak.jpg | CC BY-SA 2.0 | Charles Haynes | [link](https://commons.wikimedia.org/wiki/File:Mysore_pak.jpg) |
+| `recipes/naan.jpg` | Naan is a flatbread found in mainly of Indian subcontinent.jpg | CC BY-SA 4.0 | Shahzaib Damn Cruze | [link](https://commons.wikimedia.org/wiki/File:Naan_is_a_flatbread_found_in_mainly_of_Indian_subcontinent.jpg) |
 | `recipes/nadan-chicken-stew.jpg` | Chicken Stew (1205814362).jpg | CC BY 2.0 | rovingI | [link](https://commons.wikimedia.org/wiki/File:Chicken_Stew_(1205814362).jpg) |
 | `recipes/nadan-mutton-curry.jpg` | Mutton curry (2).jpg | CC BY-SA 4.0 | Dolon Prova | [link](https://commons.wikimedia.org/wiki/File:Mutton_curry_(2).jpg) |
 | `recipes/nadru-monje.jpg` | Chicken pakora-MB21.jpg | CC BY-SA 4.0 | Rajeeb Dutta | [link](https://commons.wikimedia.org/wiki/File:Chicken_pakora-MB21.jpg) |
@@ -406,10 +441,12 @@ this one.
 | `recipes/namkeen-sattu-sharbat.jpg` | Indian Snacks (Namkeen).jpg | CC BY-SA 4.0 | Prashant Sahu | [link](https://commons.wikimedia.org/wiki/File:Indian_Snacks_(Namkeen).jpg) |
 | `recipes/nandu-rasam.jpg` | Rot dal sabji paneer-Coimbatour-Tamilnadu-4.jpg | CC BY-SA 4.0 | Dr Suryakanta Acharya | [link](https://commons.wikimedia.org/wiki/File:Rot_dal_sabji_paneer-Coimbatour-Tamilnadu-4.jpg) |
 | `recipes/nargisi-kofta.jpg` | Chicken Biryani and Nargisi Kofta with Raita.jpg | CC BY-SA 4.0 | Rashmeet Kaur | [link](https://commons.wikimedia.org/wiki/File:Chicken_Biryani_and_Nargisi_Kofta_with_Raita.jpg) |
+| `recipes/navratan-korma.jpg` | Navratan Korma (Mughal Kitchen).JPG | CC0 | Miansari66 | [link](https://commons.wikimedia.org/wiki/File:Navratan_Korma_(Mughal_Kitchen).JPG) |
 | `recipes/neyyappam.jpg` | Kerala Neyyappam.jpg | CC BY-SA 4.0 | Samphotography | [link](https://commons.wikimedia.org/wiki/File:Kerala_Neyyappam.jpg) |
 | `recipes/nga-thongba.jpg` | 2 types of Nga Thongba (fish curry) - Toithong (Nga Atoiba Thongba) & Taothong (Nga Ataoba Thongba) - Traditional Meitei cuisine - Gastronomic cultural heritage of Manipur & domestic and international Meitei diasporas.jpg | CC BY-SA 4.0 | User:Ishani Nath | [link](https://commons.wikimedia.org/wiki/File:2_types_of_Nga_Thongba_(fish_curry)_-_Toithong_(Nga_Atoiba_Thongba)_%26_Taothong_(Nga_Ataoba_Thongba)_-_Traditional_Meitei_cuisine_-_Gastronomic_cultural_heritage_of_Manipur_%26_domestic_and_international_Meitei_diasporas.jpg) |
 | `recipes/olan.jpg` | Ash Gourd (Kumblanga) "Olan".jpg | CC BY-SA 4.0 | DivergenTribute | [link](https://commons.wikimedia.org/wiki/File:Ash_Gourd_(Kumblanga)_%22Olan%22.jpg) |
 | `recipes/omita-khar.jpg` | Khar of Assam.jpg | CC BY-SA 4.0 | Suditree | [link](https://commons.wikimedia.org/wiki/File:Khar_of_Assam.jpg) |
+| `recipes/onion-pakora.jpg` | Onion Pakora 01.jpg | CC BY-SA 4.0 | Marajozkee | [link](https://commons.wikimedia.org/wiki/File:Onion_Pakora_01.jpg) |
 | `recipes/ooti.jpg` | Cabbage and chana Singju.jpg | CC BY-SA 4.0 | Sherin | [link](https://commons.wikimedia.org/wiki/File:Cabbage_and_chana_Singju.jpg) |
 | `recipes/otti.jpg` | Curd rice with chatni.jpg | CC BY-SA 4.0 | Marajozkee | [link](https://commons.wikimedia.org/wiki/File:Curd_rice_with_chatni.jpg) |
 | `recipes/paal-paniyaram.jpg` | Puttu (പുട്ട്).jpg | CC BY-SA 4.0 | Chiring chandan | [link](https://commons.wikimedia.org/wiki/File:Puttu_(%E0%B4%AA%E0%B5%81%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D).jpg) |
@@ -418,7 +455,11 @@ this one.
 | `recipes/panchmel-dal.jpg` | Dal Panchmel.jpg | CC BY-SA 4.0 | Vis M | [link](https://commons.wikimedia.org/wiki/File:Dal_Panchmel.jpg) |
 | `recipes/pandi-curry.jpg` | Pandi Curry.jpg | CC BY-SA 4.0 | Rupak76 | [link](https://commons.wikimedia.org/wiki/File:Pandi_Curry.jpg) |
 | `recipes/paneer-bhurji.jpg` | Homemade Paneer Bhurji cooked in pan India.jpg | CC BY-SA 4.0 | Status 401 | [link](https://commons.wikimedia.org/wiki/File:Homemade_Paneer_Bhurji_cooked_in_pan_India.jpg) |
+| `recipes/paneer-butter-masala.jpg` | Paneer butter masala 3.jpg | CC BY-SA 4.0 | Gannu03 | [link](https://commons.wikimedia.org/wiki/File:Paneer_butter_masala_3.jpg) |
+| `recipes/paneer-do-pyaza.jpg` | Paneer Do Pyaza.jpg | CC BY-SA 4.0 | AlekhyaDas | [link](https://commons.wikimedia.org/wiki/File:Paneer_Do_Pyaza.jpg) |
 | `recipes/paneer-tikka.jpg` | Panir Tikka Indian cheese grilled.jpg | CC BY 2.0 de | Sonja Pauen -Stanhopea | [link](https://commons.wikimedia.org/wiki/File:Panir_Tikka_Indian_cheese_grilled.jpg) |
+| `recipes/pani-puri.jpg` | Indian cuisine-Panipuri-03.jpg | CC BY-SA 2.0 | Ramakrishna Reddy y | [link](https://commons.wikimedia.org/wiki/File:Indian_cuisine-Panipuri-03.jpg) |
+| `recipes/papdi-chaat.jpg` | Bhalla papdi.JPG | CC BY-SA 4.0 | Nishlovesfod | [link](https://commons.wikimedia.org/wiki/File:Bhalla_papdi.JPG) |
 | `recipes/parippu-curry.jpg` | Padavalam parippu.JPG | CC BY-SA 3.0 | Sivahari | [link](https://commons.wikimedia.org/wiki/File:Padavalam_parippu.JPG) |
 | `recipes/parsi-akuri.jpg` | Paneer Akuri.jpg | CC BY-SA 4.0 | Arzina Hossain | [link](https://commons.wikimedia.org/wiki/File:Paneer_Akuri.jpg) |
 | `recipes/parsi-berry-pulao.jpg` | Parsi Mutton Berry Pulao.jpg | CC BY-SA 4.0 | Sumit Surai | [link](https://commons.wikimedia.org/wiki/File:Parsi_Mutton_Berry_Pulao.jpg) |
@@ -454,6 +495,7 @@ this one.
 | `recipes/pika-pila.jpg` | Arunachal Pradesh thali.jpg | CC BY-SA 4.0 | Ganesh Mohan T | [link](https://commons.wikimedia.org/wiki/File:Arunachal_Pradesh_thali.jpg) |
 | `recipes/pindi-chole.jpg` | Pindi Chole with Poori or Chole Poori 02.jpg | CC BY-SA 4.0 | Best Ever Cooking Show SudShi | [link](https://commons.wikimedia.org/wiki/File:Pindi_Chole_with_Poori_or_Chole_Poori_02.jpg) |
 | `recipes/pithla.jpg` | Pithla NMM Soc Thane Maharashtra 01.jpg | CC BY-SA 4.0 | Om Bankar | [link](https://commons.wikimedia.org/wiki/File:Pithla_NMM_Soc_Thane_Maharashtra_01.jpg) |
+| `recipes/plain-dosa.jpg` | PLAIN DOSA - Mini Madras 2026-03-13.jpg | CC0 | Andy Li | [link](https://commons.wikimedia.org/wiki/File:PLAIN_DOSA_-_Mini_Madras_2026-03-13.jpg) |
 | `recipes/poita-bhat.jpg` | Poita bhat and egg.jpg | CC BY-SA 4.0 | IKHazarika | [link](https://commons.wikimedia.org/wiki/File:Poita_bhat_and_egg.jpg) |
 | `recipes/pork-bafat.jpg` | Pork Bafat.jpg | CC0 | Tyasathi | [link](https://commons.wikimedia.org/wiki/File:Pork_Bafat.jpg) |
 | `recipes/pork-indad.jpg` | Medaillons of pork (Indian style) + wine.jpg | CC BY-SA 3.0 | Manfred&amp;Barbara Aulbach | [link](https://commons.wikimedia.org/wiki/File:Medaillons_of_pork_(Indian_style)_%2B_wine.jpg) |
@@ -469,11 +511,13 @@ this one.
 | `recipes/puran-poli.jpg` | Puran Poli image.jpg | CC BY-SA 4.0 | Had5185 | [link](https://commons.wikimedia.org/wiki/File:Puran_Poli_image.jpg) |
 | `recipes/puttu.jpg` | Puttu (Rice Flour steamed cake).jpg | CC BY-SA 4.0 | Mathew Jibin | [link](https://commons.wikimedia.org/wiki/File:Puttu_(Rice_Flour_steamed_cake).jpg) |
 | `recipes/radhaballavi.jpg` | Pure Bengali dish - rice, veg curry, dal, egg curry etc.jpg | CC BY-SA 4.0 | Billjones94 | [link](https://commons.wikimedia.org/wiki/File:Pure_Bengali_dish_-_rice,_veg_curry,_dal,_egg_curry_etc.jpg) |
+| `recipes/ragda-pattice.jpg` | Ragda pattice.JPG | CC BY-SA 4.0 | AKS.9955 | [link](https://commons.wikimedia.org/wiki/File:Ragda_pattice.JPG) |
 | `recipes/rajasthani-kadhi.jpg` | Rajasthani Kadhi.jpg | CC BY-SA 4.0 | Saurabhshekhar2329 | [link](https://commons.wikimedia.org/wiki/File:Rajasthani_Kadhi.jpg) |
 | `recipes/rajma-chawal.jpg` | Rajma chawal | CC BY-SA 4.0 | Medhi jyoti | [link](https://commons.wikimedia.org/wiki/File:Rajma_Chawal_Thali.jpg) |
 | `recipes/rajma-madra.jpg` | Saury, broiled with soy sauce, black pepper, and curry powder, atop split peas and refried beans - Massachusetts.jpg | CC0 | Daderot | [link](https://commons.wikimedia.org/wiki/File:Saury,_broiled_with_soy_sauce,_black_pepper,_and_curry_powder,_atop_split_peas_and_refried_beans_-_Massachusetts.jpg) |
 | `recipes/rasabali.jpg` | Rasabali, Odisha traditional sweet.jpg | CC BY-SA 4.0 | Prateek Pattanaik | [link](https://commons.wikimedia.org/wiki/File:Rasabali,_Odisha_traditional_sweet.jpg) |
 | `recipes/rasam.jpg` | Rasam soup | Public domain | Miansari66 | [link](https://commons.wikimedia.org/wiki/File:Rasam.JPG) |
+| `recipes/rasmalai.jpg` | Rasmalai with carrot.jpg | CC BY-SA 4.0 | Shreya13jain | [link](https://commons.wikimedia.org/wiki/File:Rasmalai_with_carrot.jpg) |
 | `recipes/rava-dosa.jpg` | Rava Dosa with Coconut Chutney.jpg | CC BY-SA 4.0 | SamarthBhandavale | [link](https://commons.wikimedia.org/wiki/File:Rava_Dosa_with_Coconut_Chutney.jpg) |
 | `recipes/recheado-mackerel.jpg` | Mackerel Recheado.jpg | CC BY-SA 4.0 | Kaushir1711 | [link](https://commons.wikimedia.org/wiki/File:Mackerel_Recheado.jpg) |
 | `recipes/ringan-no-olo.jpg` | Spicy Baked Aubergine (Baingan Bharta) (753279896).jpg | CC BY 2.0 | rovingI | [link](https://commons.wikimedia.org/wiki/File:Spicy_Baked_Aubergine_(Baingan_Bharta)_(753279896).jpg) |
@@ -490,6 +534,7 @@ this one.
 | `recipes/sajana-chhuin-rai.jpg` | Potato cream covered curry udon in Ebisu-Minami.jpg | CC0 | Syced | [link](https://commons.wikimedia.org/wiki/File:Potato_cream_covered_curry_udon_in_Ebisu-Minami.jpg) |
 | `recipes/sakkarai-pongal.jpg` | Sakkarai pongal with milk.jpg | CC BY-SA 4.0 | selvam | [link](https://commons.wikimedia.org/wiki/File:Sakkarai_pongal_with_milk.jpg) |
 | `recipes/sambharam.jpg` | Thakkalikkary.jpg | CC BY-SA 4.0 | Vis M | [link](https://commons.wikimedia.org/wiki/File:Thakkalikkary.jpg) |
+| `recipes/samosa.jpg` | Samosa 4.jpg | CC BY-SA 4.0 | Gaurav Dhwaj Khadka | [link](https://commons.wikimedia.org/wiki/File:Samosa_4.jpg) |
 | `recipes/sandesh.jpg` | Notun Gurer Sandesh.png | CC BY-SA 4.0 | Sucharitabanerji | [link](https://commons.wikimedia.org/wiki/File:Notun_Gurer_Sandesh.png) |
 | `recipes/sanna-pakora.jpg` | Pakora in fry pan.jpg | CC BY-SA 4.0 | JogiAsad | [link](https://commons.wikimedia.org/wiki/File:Pakora_in_fry_pan.jpg) |
 | `recipes/sanna.jpg` | Sanna (Commons).jpg | Public domain | Kensplanet | [link](https://commons.wikimedia.org/wiki/File:Sanna_(Commons).jpg) |
@@ -499,9 +544,11 @@ this one.
 | `recipes/sarson-ka-saag.jpg` | Sarson Ka Saag - Mohali 2016-08-06 8227.JPG | CC BY 3.0 | Biswarup Ganguly | [link](https://commons.wikimedia.org/wiki/File:Sarson_Ka_Saag_-_Mohali_2016-08-06_8227.JPG) |
 | `recipes/sattu-paratha.jpg` | Sattu Ke Parathe.JPG | CC BY-SA 4.0 | Neha Sonal | [link](https://commons.wikimedia.org/wiki/File:Sattu_Ke_Parathe.JPG) |
 | `recipes/schezwan-fried-rice.jpg` | Schezwan Egg Fried Rice with raitha 03.jpg | CC BY-SA 4.0 | Nandhinikandhasamy | [link](https://commons.wikimedia.org/wiki/File:Schezwan_Egg_Fried_Rice_with_raitha_03.jpg) |
+| `recipes/seekh-kebab.jpg` | Seekh Kebab.JPG | CC BY 2.0 | raasiel | [link](https://commons.wikimedia.org/wiki/File:Seekh_Kebab.JPG) |
 | `recipes/sel-roti.jpg` | Chiya Sel Roti.jpg | CC BY-SA 4.0 | Gaurav Dhwaj Khadka | [link](https://commons.wikimedia.org/wiki/File:Chiya_Sel_Roti.jpg) |
 | `recipes/semiya-payasam.jpg` | Semiya Payasam Vermicelli Kheer Indian Sweets Mithai.jpg | CC BY 2.0 | Divya Kudua | [link](https://commons.wikimedia.org/wiki/File:Semiya_Payasam_Vermicelli_Kheer_Indian_Sweets_Mithai.jpg) |
 | `recipes/sepu-vadi.jpg` | Humble wholesome Spinach Dal with rice.JPG | CC BY-SA 4.0 | Likhita Suresh | [link](https://commons.wikimedia.org/wiki/File:Humble_wholesome_Spinach_Dal_with_rice.JPG) |
+| `recipes/sev-puri.jpg` | Sev Puri.jpg | CC BY-SA 2.0 | https://www.flickr.com/photos/feastguru_kirti/ | [link](https://commons.wikimedia.org/wiki/File:Sev_Puri.jpg) |
 | `recipes/sev-tameta-nu-shaak.jpg` | Sev Tameta Nu Shaak.jpg | CC BY-SA 4.0 | UserWiki | [link](https://commons.wikimedia.org/wiki/File:Sev_Tameta_Nu_Shaak.jpg) |
 | `recipes/seyal-bhaji.jpg` | Potato-Tomato Curry.jpeg | CC BY-SA 4.0 | PratishthaSharma1991 | [link](https://commons.wikimedia.org/wiki/File:Potato-Tomato_Curry.jpeg) |
 | `recipes/seyal-gosht.jpg` | Shahi Malai Gosht (Indian mutton dish).jpg | CC BY-SA 4.0 | Sharnab neogi | [link](https://commons.wikimedia.org/wiki/File:Shahi_Malai_Gosht_(Indian_mutton_dish).jpg) |
@@ -530,6 +577,7 @@ this one.
 | `recipes/syun-olav.jpg` | Mutton Curry 2.jpg | CC BY-SA 4.0 | Gaurav Dhwaj Khadka | [link](https://commons.wikimedia.org/wiki/File:Mutton_Curry_2.jpg) |
 | `recipes/tabak-maaz.jpg` | Tabak Maaz.JPG | CC0 | Miansari66 | [link](https://commons.wikimedia.org/wiki/File:Tabak_Maaz.JPG) |
 | `recipes/tala-hua-gosht.jpg` | Mutton Rogan Josh dish.jpg | CC BY-SA 4.0 | CNEcija12345 | [link](https://commons.wikimedia.org/wiki/File:Mutton_Rogan_Josh_dish.jpg) |
+| `recipes/tamarind-date-chutney.jpg` | Jodhpuri Kanda(Pyaaz) Kachori with tamarind chutney.jpg | CC0 | PabIoChocobar | [link](https://commons.wikimedia.org/wiki/File:Jodhpuri_Kanda(Pyaaz)_Kachori_with_tamarind_chutney.jpg) |
 | `recipes/tandoori-chicken.jpg` | Chicken Tandoori prepared in Malvan style.jpg | CC BY-SA 4.0 | Amitkumar Si | [link](https://commons.wikimedia.org/wiki/File:Chicken_Tandoori_prepared_in_Malvan_style.jpg) |
 | `recipes/tehar.jpg` | Tehri With Kachumbar Salad.JPG | CC0 | Miansari66 | [link](https://commons.wikimedia.org/wiki/File:Tehri_With_Kachumbar_Salad.JPG) |
 | `recipes/thalipeeth.jpg` | Thalipeeth (Indian Pancake).jpg | CC BY-SA 4.0 | BhargavVora | [link](https://commons.wikimedia.org/wiki/File:Thalipeeth_(Indian_Pancake).jpg) |
@@ -557,7 +605,9 @@ this one.
 | `recipes/vangi-bath.jpg` | Brinjal rice bath.jpg | CC BY-SA 4.0 | Vidya pmysore | [link](https://commons.wikimedia.org/wiki/File:Brinjal_rice_bath.jpg) |
 | `recipes/varan-bhaat.jpg` | Varan Bhat.jpg | CC BY-SA 4.0 | Kashmira3091 | [link](https://commons.wikimedia.org/wiki/File:Varan_Bhat.jpg) |
 | `recipes/vatha-kuzhambu.jpg` | Kalaki (An Omelette half cooked with chicken curry on it) as served in Chennai,Tamil Nadu..jpg | CC BY-SA 4.0 | KARTY JazZ | [link](https://commons.wikimedia.org/wiki/File:Kalaki_(An_Omelette_half_cooked_with_chicken_curry_on_it)_as_served_in_Chennai,Tamil_Nadu..jpg) |
+| `recipes/veg-biryani.jpg` | Vegetable Biryani IMG 001.jpg | CC BY-SA 4.0 | Phadke09 | [link](https://commons.wikimedia.org/wiki/File:Vegetable_Biryani_IMG_001.jpg) |
 | `recipes/veg-manchurian-gravy.jpg` | Hakka Noodles, Veg Manchurian PK009.jpg | CC BY-SA 4.0 | PallaviKhale | [link](https://commons.wikimedia.org/wiki/File:Hakka_Noodles,_Veg_Manchurian_PK009.jpg) |
+| `recipes/vegetable-korma.jpg` | Vegetable Korma 03.jpg | CC BY-SA 4.0 | Vis M | [link](https://commons.wikimedia.org/wiki/File:Vegetable_Korma_03.jpg) |
 | `recipes/vellai-paniyaram.jpg` | Pakora of Kallakurichi.jpg | CC BY-SA 4.0 | Thamizhpparithi Maari | [link](https://commons.wikimedia.org/wiki/File:Pakora_of_Kallakurichi.jpg) |
 | `recipes/ven-pongal.jpg` | Ven Pongal & sakkarai pongal with vada & bonda.jpg | CC BY-SA 4.0 | Raamsanjay | [link](https://commons.wikimedia.org/wiki/File:Ven_Pongal_%26_sakkarai_pongal_with_vada_%26_bonda.jpg) |
 | `recipes/warqi-paratha.jpg` | Awadhi breakfast tea with paratha.jpg | CC BY 2.0 | Asim Bijarani | [link](https://commons.wikimedia.org/wiki/File:Awadhi_breakfast_tea_with_paratha.jpg) |

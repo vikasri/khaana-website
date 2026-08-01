@@ -5530,5 +5530,505 @@
     "license": "CC BY-SA 4.0",
     "artist": "Sangram Keshari Senapati",
     "note": "nearest relative: malpua, a sweet fried dough of the same family"
+  },
+  {
+    "file": "recipes/gulab-jamun.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Two Gulab Jamun in a plate 01.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Two_Gulab_Jamun_in_a_plate_01.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Suyash.dwivedi",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kulfi.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Kulfi 3.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kulfi_3.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Gaurav Dhwaj Khadka",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/navratan-korma.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Navratan Korma (Mughal Kitchen).JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Navratan_Korma_(Mughal_Kitchen).JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/paneer-do-pyaza.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Paneer Do Pyaza.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Paneer_Do_Pyaza.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "AlekhyaDas",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chicken-kathi-roll.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Chicken-kathi-roll-recipe.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chicken-kathi-roll-recipe.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Vivekpat30",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kolkata-biryani.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Kolkata mutton biryani.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kolkata_mutton_biryani.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "DeepanjanGhosh",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/rasmalai.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Rasmalai with carrot.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rasmalai_with_carrot.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Shreya13jain",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/dabeli.jpg",
+    "region": "Gujarati",
+    "slot": "recipe",
+    "wiki_title": "Dabeli Stuffing (Indian snack).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dabeli_Stuffing_(Indian_snack).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "SwatiGupta1986",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/veg-biryani.jpg",
+    "region": "Hyderabadi",
+    "slot": "recipe",
+    "wiki_title": "Vegetable Biryani IMG 001.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Vegetable_Biryani_IMG_001.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Phadke09",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/malabar-parotta.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Malabar Porotta.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Malabar_Porotta.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Praveen",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/vegetable-korma.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Vegetable Korma 03.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Vegetable_Korma_03.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Vis M",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/bhel-puri.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Bhel puri Snack.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bhel_puri_Snack.jpg",
+    "license": "CC BY 4.0",
+    "artist": "Sandhiya Rangasami",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/dahi-puri.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Odia Style Dahi bara Puri Odisha-IMG 953.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Odia_Style_Dahi_bara_Puri_Odisha-IMG_953.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Subhransuphotography",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/pani-puri.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Indian cuisine-Panipuri-03.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Indian_cuisine-Panipuri-03.jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "Ramakrishna Reddy y",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/ragda-pattice.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Ragda pattice.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ragda_pattice.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "AKS.9955",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/sev-puri.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Sev Puri.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sev_Puri.jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "https://www.flickr.com/photos/feastguru_kirti/",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/aloo-tikki.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Aloo Tikki - Homemade - Assam - DSC 002.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Aloo_Tikki_-_Homemade_-_Assam_-_DSC_002.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Gitika Gayan",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/boondi-raita.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Boondi Raita.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Boondi_Raita.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ravi Dwivedi",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/bread-pakora.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Bread Pakora (Stuffed with Mashed-Spicy Potatoes).JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bread_Pakora_(Stuffed_with_Mashed-Spicy_Potatoes).JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Mdsmds0",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chapati.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "2012 'Zürcher Theater Spektakel' - Chapati 2012-08-25 17-46-31 (P7000).JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:2012_%27Z%C3%BCrcher_Theater_Spektakel%27_-_Chapati_2012-08-25_17-46-31_(P7000).JPG",
+    "license": "CC BY-SA 3.0",
+    "artist": "Roland zh",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chicken-tikka-masala.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Chicken tikka masala at Yeti in Glen Ellen 2015 - Sarah Stierch.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_tikka_masala_at_Yeti_in_Glen_Ellen_2015_-_Sarah_Stierch.jpg",
+    "license": "CC BY 4.0",
+    "artist": "Missvain",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chole-bhature.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Chole Bhature 1.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chole_Bhature_1.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Gaurav Dhwaj Khadka",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/cucumber-raita.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Cucumber-raita.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cucumber-raita.jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "Sonia Goyal",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/egg-bhurji.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Egg bhurji with pav (bread).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Egg_bhurji_with_pav_(bread).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Urniel",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/egg-curry.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Egg curry pic.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Egg_curry_pic.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ekabhishek",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/fish-tikka.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Ajwaini Fish Tikka.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ajwaini_Fish_Tikka.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Msroshni905",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/garlic-naan.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Garlic Butter Naan Food by Ms Ujwala Kasambe DSCN1136 (3).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Garlic_Butter_Naan_Food_by_Ms_Ujwala_Kasambe_DSCN1136_(3).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Dr. Raju Kasambe",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/jalebi.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Jalebi 6.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Jalebi_6.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Gannu03",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/jeera-rice.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Jeera-rice.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Jeera-rice.JPG",
+    "license": "CC BY-SA 2.0",
+    "artist": "Sonia Goyal",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kadai-chicken.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Kadai chicken by usamah.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kadai_chicken_by_usamah.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Shiek md usamah",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kadai-paneer.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Kadai paneer with garlic naan.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kadai_paneer_with_garlic_naan.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "YKanchan07",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/malai-kofta.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Malai Kofta Curry.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Malai_Kofta_Curry.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Mrudit161187",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/mango-pickle.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Mango pickle. jpg.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mango_pickle._jpg.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "BHAVAPRIYA J U",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/masala-chai.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Masala Chai.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Masala_Chai.JPG",
+    "license": "Public domain",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/mint-coriander-chutney.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Vada Pav with Fresh green coriander and mint Chutney and Garlic chutney.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Vada_Pav_with_Fresh_green_coriander_and_mint_Chutney_and_Garlic_chutney.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Rainmaker87",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/mixed-vegetable-pakora.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Mixed Vegetable Pakora.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mixed_Vegetable_Pakora.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Mdsmds0",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/naan.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Naan is a flatbread found in mainly of Indian subcontinent.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Naan_is_a_flatbread_found_in_mainly_of_Indian_subcontinent.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Shahzaib Damn Cruze",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/onion-pakora.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Onion Pakora 01.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Onion_Pakora_01.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Marajozkee",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/paneer-butter-masala.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Paneer butter masala 3.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Paneer_butter_masala_3.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Gannu03",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/samosa.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Samosa 4.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Samosa_4.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Gaurav Dhwaj Khadka",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/seekh-kebab.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Seekh Kebab.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Seekh_Kebab.JPG",
+    "license": "CC BY 2.0",
+    "artist": "raasiel",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/lassi.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Lassi Sweet or Salted.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lassi_Sweet_or_Salted.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "HARIOM.AWASTHI",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/tamarind-date-chutney.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Jodhpuri Kanda(Pyaaz) Kachori with tamarind chutney.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Jodhpuri_Kanda(Pyaaz)_Kachori_with_tamarind_chutney.jpg",
+    "license": "CC0",
+    "artist": "PabIoChocobar",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/plain-dosa.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "PLAIN DOSA - Mini Madras 2026-03-13.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:PLAIN_DOSA_-_Mini_Madras_2026-03-13.jpg",
+    "license": "CC0",
+    "artist": "Andy Li",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kathi-roll.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Chicken Kathi Roll (5646735923).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Kathi_Roll_(5646735923).jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "Andy Mitchell from Glasgow, UK",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chicken-biryani.jpg",
+    "region": "Hyderabadi",
+    "slot": "recipe",
+    "wiki_title": "Chicken biriyani- My cafe restaurant - Meghalaya DSC 009.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_biriyani-_My_cafe_restaurant_-_Meghalaya_DSC_009.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Gitika Gayan",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/aloo-chaat.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Aloo chaat vendor, Connaught Place, New Delhi.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Aloo_chaat_vendor,_Connaught_Place,_New_Delhi.jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "ampersandyslexia",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chicken-tikka.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Chicken tikka masala.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_tikka_masala.jpg",
+    "license": "CC BY 2.0",
+    "artist": "Michael Hays",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/mango-lassi.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Costco treats - Lassi.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Costco_treats_-_Lassi.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Infrogmation of New Orleans",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/papdi-chaat.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Bhalla papdi.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bhalla_papdi.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Nishlovesfod",
+    "note": "fetched via 'dahi papdi chaat'"
   }
 ]

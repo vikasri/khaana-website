@@ -176,6 +176,12 @@ def main():
     have_cred = {c["file"] for c in creds}
     failures = json.load(open(FAILED, encoding="utf-8")) if os.path.exists(FAILED) else {}
 
+    # No two recipes should carry the same photograph. This lived only in the
+    # second-pass script, so a plain run could and did hand one file to two
+    # dishes: both kathi rolls got the same picture, and chicken biryani took
+    # the Chettinad biryani's.
+    taken = {c.get("source_url") for c in creds if c.get("source_url")}
+
     todo = [r for r in doc["recipes"] if not r.get("image")]
     if args.region:
         todo = [r for r in todo if r["region"] == args.region]
@@ -196,6 +202,9 @@ def main():
             try:
                 for page in search(term):
                     hit = candidate(page, term)
+                    if hit and hit["source_url"] in taken:
+                        hit = None
+                        continue
                     if hit:
                         break
             except Exception as e:
@@ -216,6 +225,7 @@ def main():
             print("  !  %-34s %s" % (r["name"][:34], e))
             continue
 
+        taken.add(hit["source_url"])
         rel = "assets/images/recipes/%s.jpg" % r["id"]
         r["image"] = {"src": rel, "alt": r["name"], "credit": hit["artist"][:80],
                       "license": hit["license"], "sourceUrl": hit["source_url"]}

@@ -131,5 +131,18 @@ def install(new_recipes):
 
 
 if __name__ == "__main__":
-    from recipes_batch import BATCH
-    sys.exit(install(BATCH))
+    # Install every tools/_batch*.py, the same set tools/check-batches.py gates.
+    # This used to import recipes_batch directly, which is the original batch
+    # from before the cuisine restructure: it still names "South Indian", a
+    # region that no longer exists, so importing it now raises.
+    import glob, importlib
+    here = os.path.dirname(os.path.abspath(__file__))
+    sys.path.insert(0, here)
+    batch = []
+    for path in sorted(glob.glob(os.path.join(here, "_batch*.py"))):
+        mod = os.path.basename(path)[:-3]
+        batch.extend(importlib.import_module(mod).BATCH)
+    if not batch:
+        print("no tools/_batch*.py files found")
+        sys.exit(1)
+    sys.exit(install(batch))

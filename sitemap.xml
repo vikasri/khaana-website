@@ -31,9 +31,11 @@
   <url><loc>https://khaana.com/recipes/dosakaya-pappu.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/gongura-pachadi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/gutti-vankaya-kura.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/pesarattu.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/pulihora.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/punugulu.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/royyala-iguru.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/tomato-pappu.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/ulavacharu.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/anglo-indian-ball-curry.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/country-captain-chicken.html</loc><priority>0.6</priority></url>
@@ -53,9 +55,11 @@
   <url><loc>https://khaana.com/recipes/dahi-ke-kebab.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/dum-aloo-lucknowi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/galouti-kebab.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/gulab-jamun.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kakori-kebab.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kali-mirch-ka-murgh.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kathal-ki-sabzi.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/kulfi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/lucknowi-biryani.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/murgh-korma.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/murgh-musallam.html</loc><priority>0.6</priority></url>
@@ -63,7 +67,9 @@
   <url><loc>https://khaana.com/recipes/mutton-korma.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/muzaffar.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/nargisi-kofta.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/navratan-korma.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/nihari.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/paneer-do-pyaza.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/shahi-tukda.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/shami-kebab.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/sheermal.html</loc><priority>0.6</priority></url>
@@ -75,6 +81,7 @@
   <url><loc>https://khaana.com/recipes/begun-bhaja.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/bengali-alur-dom.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/bengali-ghugni.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/chicken-kathi-roll.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/chingri-bhapa.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/chingri-malai-curry.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/cholar-dal.html</loc><priority>0.6</priority></url>
@@ -83,6 +90,8 @@
   <url><loc>https://khaana.com/recipes/doi-maach.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/echorer-dalna.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/ilish-bhapa.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/kathi-roll.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/kolkata-biryani.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kosha-mangsho.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kumror-chokka.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/labra.html</loc><priority>0.6</priority></url>
@@ -97,6 +106,7 @@
   <url><loc>https://khaana.com/recipes/potoler-dorma.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/radhaballavi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/rasgulla.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/rasmalai.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/rui-macher-kalia.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/sandesh.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/shorshe-ilish.html</loc><priority>0.6</priority></url>
@@ -106,6 +116,7 @@
   <url><loc>https://khaana.com/recipes/anarsa.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/baingan-chokha.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/bihari-khichdi.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/bihari-malpua.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/bihari-murgh-jhor.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/champaran-ahuna-mutton.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/dahi-chura-gud.html</loc><priority>0.6</priority></url>
@@ -115,7 +126,6 @@
   <url><loc>https://khaana.com/recipes/bihari-kadhi-bari.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/litti-chokha.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/bihari-machhli-jhor.html</loc><priority>0.6</priority></url>
-  <url><loc>https://khaana.com/recipes/bihari-malpua.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/mithila-machh-posto.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/namkeen-sattu-sharbat.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/mithila-sarson-aloo.html</loc><priority>0.6</priority></url>
@@ -150,14 +160,15 @@
   <url><loc>https://khaana.com/recipes/sungtachi-kodi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/tondak.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/bajra-no-rotlo.html</loc><priority>0.6</priority></url>
-  <url><loc>https://khaana.com/recipes/basundi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/bataka-poha.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/batata-nu-shaak.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/bhinda-sambhariya.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/dabeli.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/dal-dhokli.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/doodhpak.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/dudhi-na-muthiya.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/fafda.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/basundi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/gujarati-dal.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/gujarati-kadhi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/gujarati-khichdi.html</loc><priority>0.6</priority></url>
@@ -181,6 +192,7 @@
   <url><loc>https://khaana.com/recipes/bagara-baingan.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/bagara-rice.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/baghara-tamatar.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/chicken-biryani.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/dalcha.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/double-ka-meetha.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/dum-ka-murgh.html</loc><priority>0.6</priority></url>
@@ -205,6 +217,7 @@
   <url><loc>https://khaana.com/recipes/tala-hua-gosht.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/til-ki-chutney.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/tomato-kut.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/veg-biryani.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/american-chopsuey.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/chicken-lollipop.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/chilli-chicken.html</loc><priority>0.6</priority></url>
@@ -220,6 +233,7 @@
   <url><loc>https://khaana.com/recipes/akki-rotti.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/badanekayi-ennegayi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/baimbale-curry.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/bisi-bele-bath.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/chana-gashi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/chekke-curry.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/dali-thoy.html</loc><priority>0.6</priority></url>
@@ -228,6 +242,7 @@
   <url><loc>https://khaana.com/recipes/jolada-rotti.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kadambuttu.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kane-rava-fry.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/kesari-bath.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/koli-curry.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/koli-saaru.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kori-rotti.html</loc><priority>0.6</priority></url>
@@ -237,6 +252,8 @@
   <url><loc>https://khaana.com/recipes/maddur-vada.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/majjige-huli.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/meen-gassi.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/mysore-pak.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/neer-dosa.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/otti.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/pandi-curry.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/pork-bafat.html</loc><priority>0.6</priority></url>
@@ -279,13 +296,14 @@
   <url><loc>https://khaana.com/recipes/chemmeen-manga-curry.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/duck-mappas.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/fish-molee.html</loc><priority>0.6</priority></url>
-  <url><loc>https://khaana.com/recipes/idiyappam.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kaalan.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kadala-curry.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/idiyappam.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/meen-curry.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/koottu-curry.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kozhi-porichathu.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kozhukatta.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/malabar-parotta.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/meen-varuthathu.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/mutta-roast.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/nadan-chicken-stew.html</loc><priority>0.6</priority></url>
@@ -300,13 +318,15 @@
   <url><loc>https://khaana.com/recipes/sambharam.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/semiya-payasam.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/ulli-theeyal.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/vegetable-korma.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/alu-vadi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/amti.html</loc><priority>0.6</priority></url>
-  <url><loc>https://khaana.com/recipes/maharashtrian-basundi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/batata-bhaji.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/bharli-vangi.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/bhel-puri.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/bombil-fry.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/dadpe-pohe.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/dahi-puri.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/thecha.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/jowar-bhakri.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kanda-poha.html</loc><priority>0.6</priority></url>
@@ -314,16 +334,20 @@
   <url><loc>https://khaana.com/recipes/kolambi-bhaat.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kolhapuri-chicken.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kothimbir-vadi.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/maharashtrian-basundi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/masale-bhat.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/matki-usal.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/misal-pav.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/pani-puri.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/patodi-rassa.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/pav-bhaji.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/pithla.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/puran-poli.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/ragda-pattice.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/sabudana-khichdi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/sabudana-vada.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/saoji-mutton.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/sev-puri.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/sol-kadhi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/thalipeeth.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/modak.html</loc><priority>0.6</priority></url>
@@ -428,39 +452,70 @@
   <url><loc>https://khaana.com/recipes/parsi-salli-marghi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/parsi-sev.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/parsi-tamota-par-eeda.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/aloo-chaat.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/aloo-gobi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/aloo-methi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/aloo-paratha.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/aloo-tikki.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/amritsari-fish.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/amritsari-kulcha.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/atte-ka-halwa.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/baingan-bharta.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/bharwa-karela.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/bhindi-masala.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/boondi-raita.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/bread-pakora.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/butter-chicken.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/chana-masala.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/chapati.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/chicken-tikka.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/chicken-tikka-masala.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/chole.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/chole-bhature.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/cucumber-raita.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/dahi-bhalla.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/dal-makhani.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/dal-tadka.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/egg-bhurji.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/egg-curry.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/fish-tikka.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/gajar-ka-halwa.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/garlic-naan.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/ghar-da-chicken-curry.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/jalebi.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/jeera-rice.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/kadai-chicken.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/kadai-paneer.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/keema-matar.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/lauki-kofta.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/mah-di-dal.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/makki-di-roti.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/malai-kofta.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/mango-lassi.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/mango-pickle.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/masala-chai.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/matar-paneer.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/methi-malai-matar.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/mint-coriander-chutney.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/missi-roti.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/mixed-vegetable-pakora.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/naan.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/onion-pakora.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/palak-paneer.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/paneer-bhurji.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/paneer-butter-masala.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/paneer-tikka.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/papdi-chaat.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/pindi-chole.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/punjabi-chana-dal.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kadhi-pakora.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/rajma-chawal.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/samosa.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/sarson-ka-saag.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/seekh-kebab.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/shahi-paneer.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/lassi.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/tamarind-date-chutney.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/tandoori-chicken.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/aam-ki-launji.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/aloo-pyaaz-ki-sabzi.html</loc><priority>0.6</priority></url>
@@ -478,7 +533,6 @@
   <url><loc>https://khaana.com/recipes/khoba-roti.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/laal-maas.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/lehsun-ki-chutney.html</loc><priority>0.6</priority></url>
-  <url><loc>https://khaana.com/recipes/malpua.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/mangodi-ki-sabzi.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/mawa-kachori.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/methi-bajra-puri.html</loc><priority>0.6</priority></url>
@@ -487,6 +541,7 @@
   <url><loc>https://khaana.com/recipes/panchmel-dal.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/pyaaz-kachori.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/rajasthani-kadhi.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/malpua.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/safed-maas.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/aloo-tuk.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/bhee-patata.html</loc><priority>0.6</priority></url>
@@ -511,11 +566,11 @@
   <url><loc>https://khaana.com/recipes/adai.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/beans-poriyal.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/beetroot-poriyal.html</loc><priority>0.6</priority></url>
-  <url><loc>https://khaana.com/recipes/bisi-bele-bath.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kootu.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/cabbage-poriyal.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/chettinad-chicken-curry.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/chettinad-eral-masala.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/chettinad-idiyappam.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/chettinad-kara-kuzhambu.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/chettinad-kozhi-biryani.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/chettinad-meen-kuzhambu.html</loc><priority>0.6</priority></url>
@@ -527,12 +582,10 @@
   <url><loc>https://khaana.com/recipes/chettinad-urulai-roast.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/coconut-chutney.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/curd-rice.html</loc><priority>0.6</priority></url>
-  <url><loc>https://khaana.com/recipes/chettinad-idiyappam.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/idli.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kandarappam.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/kathirikai-chettinad.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/keerai-masiyal.html</loc><priority>0.6</priority></url>
-  <url><loc>https://khaana.com/recipes/kesari-bath.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/chettinad-kuzhi-paniyaram.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/lemon-rice.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/masala-dosa.html</loc><priority>0.6</priority></url>
@@ -541,12 +594,10 @@
   <url><loc>https://khaana.com/recipes/more-kuzhambu.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/chettinad-mutton-chukka.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/mutton-kola-urundai.html</loc><priority>0.6</priority></url>
-  <url><loc>https://khaana.com/recipes/mysore-pak.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/nandu-rasam.html</loc><priority>0.6</priority></url>
-  <url><loc>https://khaana.com/recipes/neer-dosa.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/paal-paniyaram.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/paruppu-payasam.html</loc><priority>0.6</priority></url>
-  <url><loc>https://khaana.com/recipes/pesarattu.html</loc><priority>0.6</priority></url>
+  <url><loc>https://khaana.com/recipes/plain-dosa.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/puliyodarai.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/rasam.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/rava-dosa.html</loc><priority>0.6</priority></url>
@@ -555,7 +606,6 @@
   <url><loc>https://khaana.com/recipes/thayir-vadai.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/thengai-sadam.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/tomato-chutney.html</loc><priority>0.6</priority></url>
-  <url><loc>https://khaana.com/recipes/tomato-pappu.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/upma.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/uttapam.html</loc><priority>0.6</priority></url>
   <url><loc>https://khaana.com/recipes/vatha-kuzhambu.html</loc><priority>0.6</priority></url>
