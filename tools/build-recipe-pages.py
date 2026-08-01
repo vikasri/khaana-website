@@ -187,10 +187,18 @@ def render(r, nav, foot):
     img_abs = "%s/%s" % (SITE, img_rel)
     total = (r.get("prepMinutes") or 0) + (r.get("cookMinutes") or 0)
 
-    desc = "%s. %s A %s recipe: %d minutes, serves %s, with measured ingredients, " \
+    # "A Andhra recipe" was going out in 89 descriptions. The article follows
+    # the sound, not the letter, so this is a first-letter test plus the
+    # regions that break it. None currently do (no "European", no "Uttar"),
+    # but the list is where a future one goes.
+    CONSONANT_SOUND = ()
+    region = r["region"]
+    article = "An" if (region[0].upper() in "AEIOU"
+                       and not region.startswith(CONSONANT_SOUND)) else "A"
+    desc = "%s. %s %s %s recipe: %d minutes, serves %s, with measured ingredients, " \
            "substitutions and storage notes." % (
                r["name"], (r.get("subtitle") or "").capitalize().rstrip(".") + ".",
-               r["region"], total, r.get("servings", 4))
+               article, region, total, r.get("servings", 4))
     desc = re.sub(r"\s+", " ", desc)[:300]
 
     ing = "\n".join(
@@ -207,7 +215,12 @@ def render(r, nav, foot):
 
     notes = "".join('<li>%s</li>' % esc(n) for n in r.get("prepNotes", []))
     tags = "".join('<span class="diet-tag">%s</span>' % esc(t.replace("-", " ")) for t in r.get("tags", []))
-    allerg = (", ".join(r["allergens"]) if r.get("allergens") else None)
+    # "crustacean" is the regulatory word; "crustacean shellfish" is what a
+    # reader scanning the line actually recognises.
+    ALLERGEN_LABEL = {"crustacean": "crustacean shellfish", "nuts": "tree nuts",
+                      "peanut": "peanuts", "dairy": "milk"}
+    allerg = (", ".join(ALLERGEN_LABEL.get(a, a) for a in r["allergens"])
+              if r.get("allergens") else None)
 
     region_link = ('<a href="../%s">%s</a>' % (esc(r["regionPage"]), esc(r["region"]))
                    if r.get("regionPage") else esc(r["region"]))
@@ -274,7 +287,11 @@ def render(r, nav, foot):
       </div>
 
       {'<p class="allergen"><strong>Contains:</strong> %s</p>' % esc(allerg) if allerg
-       else '<p class="allergen none"><strong>Allergens:</strong> none of the common ones</p>'}
+       else '<p class="allergen none"><strong>Allergens:</strong> none of the ten listed below</p>'}
+      <p class="allergen-scope">Checked against the ingredient list for milk, egg,
+        fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and gluten.
+        Nothing else is checked, and brands vary, so read the label on anything
+        you have not bought before.</p>
 
       <div class="recipe-cols">
         <div class="recipe-ing">

@@ -139,7 +139,7 @@
 
   var TAG_LABELS = {
     vegetarian: 'vegetarian', vegan: 'vegan', 'gluten-free': 'gluten-free',
-    'dairy-free': 'dairy-free', 'nut-free': 'nut-free',
+    'dairy-free': 'dairy-free', 'nut-free': 'nut-free', 'egg-free': 'egg-free',
     'no-onion-garlic': 'no onion/garlic', pescatarian: 'pescatarian'
   };
   function labelForTag(t) { return TAG_LABELS[t] || t; }

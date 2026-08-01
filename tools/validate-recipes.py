@@ -20,34 +20,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIFFICULTY = {"easy", "moderate", "advanced"}
 EQUIPMENT = {"stovetop", "kadhai", "tawa", "oven", "steamer", "blender",
              "pressure-cooker"}
-TAGS = {"vegetarian", "vegan", "gluten-free", "dairy-free", "nut-free",
-        "no-onion-garlic", "pescatarian",
-        # Derived by tools/tag-healthy.py from explicit thresholds, not authored.
-        "healthier"}
-ALLERGENS = {"dairy", "gluten", "nuts", "fish", "soy"}
 
-# Ingredient groups that decide a tag. Kept here rather than in pantry.json
-# because they encode dietary rules, not pantry structure.
-DAIRY = {"butter", "buttermilk", "condensed-milk", "cream", "ghee", "khoya",
-         "milk", "paneer", "yogurt"}
-MEAT = {"beef", "chicken", "duck", "mutton", "pork"}
-SEAFOOD = {"crab", "dried-fish", "fish", "prawns", "squid"}
-# rava (semolina) and dalia (broken wheat) are wheat despite not being called
-# flour; leaving them out would let a gluten-free tag through on an upma.
-GLUTEN = {"atta", "maida", "bread", "pav", "vermicelli", "dalia", "rava",
-          # Soy sauce is brewed with wheat and egg noodles are wheat.
-          "noodles", "soy-sauce"}
-# Soy arrived with the Indo-Chinese recipes and is a major allergen in its own
-# right, so it is declared rather than folded in with something else.
-SOY = {"soy-sauce", "tofu"}
-NUTS = {"almonds", "cashew", "peanut", "pistachios", "walnuts", "melon-seeds"}
-# US labelling counts coconut as a tree nut; Indian cooking never does, and
-# treating it as one would put a nuts warning on most of Kerala and Goa. So
-# coconut does not force a declaration or block `nut-free` — but a recipe that
-# declares nuts because of it is not flagged as over-declaring.
-NUT_ADJACENT = NUTS | {"coconut", "dried-coconut", "coconut-milk"}
-ALLIUM = {"onion", "garlic", "shallot", "spring-onion"}
-NON_VEGAN = DAIRY | MEAT | SEAFOOD | {"eggs", "honey"}
+# The groups that decide an allergen or a tag live in tools/diet_rules.py, so
+# the tool that writes them and this tool that checks them cannot disagree.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from diet_rules import (ALLERGEN_GROUPS, ALLERGENS, JUSTIFIES, TAGS,
+                        TAG_BLOCKERS, NUT_ADJACENT)
 
 
 def main():
@@ -103,7 +81,7 @@ def main():
                      if any(w in (i.get("note") or "").lower()
                             for w in ("omit", "leave out", "discard"))}
 
-        def check(group, tag, label):
+        def check(group, tag):
             if tag not in tags:
                 return
             hard = essential & group
@@ -114,29 +92,23 @@ def main():
                 warnings.append("%-28s tagged %s; optional %s has no note saying to omit it"
                                 % (rid, tag, ", ".join(sorted(soft))))
 
-        check(NON_VEGAN, "vegan", "non-vegan")
-        check(MEAT | SEAFOOD, "vegetarian", "meat")
-        check(DAIRY, "dairy-free", "dairy")
-        check(GLUTEN, "gluten-free", "gluten")
-        check(NUTS, "nut-free", "nuts")
-        check(ALLIUM, "no-onion-garlic", "allium")
-        check(MEAT, "pescatarian", "meat")
+        for tag, blockers in TAG_BLOCKERS.items():
+            check(blockers, tag)
         if "vegan" in tags and "vegetarian" not in tags:
             err(rid, "tagged vegan but not vegetarian")
+        # egg-free is derived for the whole catalogue, so its absence is an
+        # error rather than an authoring choice.
+        if "egg-free" not in tags and not (ing_ids & TAG_BLOCKERS["egg-free"]):
+            err(rid, "has no egg but is not tagged egg-free; run derive-allergens.py")
 
-        # Allergens follow the same essential/optional split.
-        for group, name in ((DAIRY, "dairy"), (GLUTEN, "gluten"),
-                            (NUTS, "nuts"), (SEAFOOD, "fish"), (SOY, "soy")):
-            if essential & group and name not in allerg:
-                err(rid, "essential %s (%s) but does not declare the allergen"
-                    % (name, ", ".join(sorted(essential & group))))
-            soft = (optional & group) - explained
-            if soft and name not in allerg:
-                warnings.append("%-28s optional %s (%s) not declared and not explained"
-                                % (rid, name, ", ".join(sorted(soft))))
-            justifies = NUT_ADJACENT if name == "nuts" else group
-            if name in allerg and not ing_ids & justifies:
-                warnings.append("%-28s declares %s allergen with no matching ingredient"
+        # Allergens are declared for every ingredient present, including
+        # optional ones a note excuses for tagging. See tools/diet_rules.py.
+        for name, group in ALLERGEN_GROUPS:
+            if ing_ids & group and name not in allerg:
+                err(rid, "contains %s (%s) but does not declare it"
+                    % (name, ", ".join(sorted(ing_ids & group))))
+            if name in allerg and not ing_ids & JUSTIFIES.get(name, group):
+                warnings.append("%-28s declares %s with no matching ingredient"
                                 % (rid, name))
 
         # Editorial floor. Not fatal, but a recipe under it is not usable.

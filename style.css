@@ -1062,8 +1062,19 @@ section.tight { padding: 22px 0; }
 }
 .stat-value { display: block; font-family: var(--serif); font-size: 1.16rem; text-transform: capitalize; }
 
-.allergen { font-size: 0.9rem; color: var(--ink-soft); }
+.allergen { font-size: 0.9rem; color: var(--ink-soft); margin-bottom: 4px; }
 .allergen strong { color: var(--ink); }
+/* What the allergen line does and does not cover. The page used to say
+   "none of the common ones" without saying which ones it had looked at,
+   which reads as a guarantee. Small, but not hidden: someone deciding
+   whether a dish is safe should be able to see the limits of the check. */
+.allergen-scope {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 62ch;
+  margin: 0 0 18px;
+}
 
 .recipe-cols { display: grid; grid-template-columns: 340px 1fr; gap: 38px; align-items: start; margin-top: 12px; }
 .recipe-ing { position: sticky; top: 92px; }

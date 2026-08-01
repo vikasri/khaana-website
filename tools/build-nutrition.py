@@ -61,7 +61,66 @@ FRACTIONS = {"1/2": 0.5, "1/4": 0.25, "3/4": 0.75, "1/3": 1/3, "2/3": 2/3,
              "1/8": 0.125, "1 1/2": 1.5, "2 1/2": 2.5}
 VAGUE = re.compile(r"to taste|as needed|as required|to finish|to serve|for garnish|"
                    r"a few|handful|pinch|sprig|to drizzle|for dusting", re.I)
-FRYING = re.compile(r"for (deep[- ]?)?fry|for frying", re.I)
+FRYING = re.compile(r"for (deep[- |]?)?fry|for frying|for (shallow|pan|deep)[- ]?fry|"
+                    r"to (shallow|pan|deep)[- ]?fry", re.I)
+# Absorption only applies to a bath the food sits in and most of which goes
+# back in the bottle. "400ml, for shallow frying" is a bath; "4 tbsp, for
+# shallow frying" is a measured amount that mostly ends up in the food, and
+# discounting it by 85% would understate a fried dish rather than overstate it.
+FRY_BATH_GRAMS = 100
+
+# Rice quantities are sometimes given already cooked ("2 cups cooked", "600g
+# cooked and cooled"), but the USDA entry behind `rice` is raw. Pricing 600 g
+# of cooked rice as 600 g of raw rice overstated it nearly threefold, which is
+# where Dahi Pakhala's 854 kcal came from.
+#
+# Cooked rice is raw rice plus water and water has no energy, so the fix is to
+# convert the quantity rather than swap in another food. Dividing the raw USDA
+# values by 2.77 reproduces USDA's published cooked figures on energy (130),
+# protein (2.38), carbohydrate (29) and fat (0.2) simultaneously, which is what
+# says the factor is right rather than merely plausible.
+HYDRATION = 2.77
+COOKED_CUP_G = 180.0        # 195 g raw per cup, hydrated, over the ~3 cups it yields
+RICE_IDS = {"rice", "basmati-rice"}
+# "1 cup raw, cooked and cooled" is already a raw measure and must not be
+# converted again.
+COOKED_QTY = re.compile(r"\bcooked|\bleftover|\bday[- ]old", re.I)
+RAW_QTY = re.compile(r"\braw\b", re.I)
+
+# Counts whose USDA portion list has no single-item weight that means anything
+# in an Indian kitchen. These are ordinary kitchen weights, not USDA figures,
+# and they are here because the alternative is worse than an approximation:
+#
+#   green chilli   USDA's only count portion is "pepper", a bell pepper at 45 g.
+#                  An Indian green chilli is about 5 g, so every one of the 304
+#                  places a chilli is counted was nine times too heavy.
+#   curry leaves   priced at 20 g a sprig across 141 recipes. A sprig carries
+#                  ten or twelve leaves and weighs a gram or two.
+#   eggplant       "6 small, slit" was matching a portion meaning one whole
+#                  1-1/4 lb aubergine, so six small brinjals came to 2.7 kg and
+#                  undhiyu to 945 g a serving.
+#   chicken pieces 12 winglets came out at 200 g each, a whole quarter bird,
+#                  and put Chicken Lollipop at 754 g a serving.
+#
+# Keyed by (ingredient, word in the quantity); "" matches a bare count.
+PIECE_GRAMS = {
+    ("chicken", "winglet"): 45.0, ("chicken", "wing"): 45.0,
+    ("chicken", "drumstick"): 90.0, ("chicken", "thigh"): 115.0,
+    ("green-chilli", ""): 5.0,
+    ("curry-leaves", "sprig"): 2.5, ("curry-leaves", ""): 0.3,
+    ("coriander-leaves", "sprig"): 3.0,
+    ("eggplant", "small"): 60.0, ("eggplant", "brinjal"): 60.0,
+}
+
+# A quantity can name a liquid that is not the ingredient: "lime-sized ball,
+# soaked in 500ml water" was reading as 500 g of tamarind. The ml belongs to
+# the soaking water, which is already weightless in this model.
+SOAKING = re.compile(r"soaked in|dissolved in|with \d+\s*ml|in \d+\s*ml (?:of )?(?:warm |hot )?water", re.I)
+
+# Cup weights for ingredients where USDA gives neither a cup nor a tablespoon.
+# Ordinary kitchen figures; the alternative is a cup of water at 240 g. Besan
+# (92) and maida (125) come from USDA and are left alone.
+CUP_GRAMS = {"atta": 120.0, "cashew": 137.0, "dried-coconut": 80.0}
 
 
 def num(tok):
@@ -81,10 +140,26 @@ def num(tok):
 
 
 def to_grams(qty, ing_id, portions, note=""):
-    """Return (grams, how) or (None, reason)."""
+    """Return (grams, how) or (None, reason).
+
+    Grams are always the *raw* weight of the ingredient, because that is what
+    the USDA entries behind them describe.
+    """
     q = (qty or "").strip()
     if not q:
         return None, "no quantity"
+
+    # Rice given in a cooked measure, converted to its raw equivalent first.
+    if ing_id in RICE_IDS and COOKED_QTY.search(q) and not RAW_QTY.search(q):
+        m = re.search(r"(\d+(?:\.\d+)?)\s*(g|kg)\b", q, re.I)
+        if m:
+            cooked = float(m.group(1)) * (1000 if m.group(2).lower() == "kg" else 1)
+            return cooked / HYDRATION, "cooked grams, raw equivalent"
+        head = re.match(r"^\s*(\d+\s+\d/\d|\d+/\d+|\d+(?:\.\d+)?)\s*(.*)$", q)
+        if head and head.group(2).lower().startswith("cup"):
+            n = num(head.group(1))
+            if n is not None:
+                return n * COOKED_CUP_G / HYDRATION, "cooked cups, raw equivalent"
 
     # An explicit gram figure anywhere wins: "4 large (about 500g)" is 500 g.
     m = re.search(r"(\d+(?:\.\d+)?)\s*(g|kg)\b", q, re.I)
@@ -93,7 +168,7 @@ def to_grams(qty, ing_id, portions, note=""):
         return g, "stated grams"
 
     m = re.search(r"(\d+(?:\.\d+)?)\s*(ml|l)\b", q, re.I)
-    if m:
+    if m and not SOAKING.search(q):
         ml = float(m.group(1)) * (1000 if m.group(2).lower() == "l" else 1)
         d = DENSITY["oil"] if "oil" in ing_id else DENSITY.get(ing_id, DENSITY["default"])
         return ml * d, "volume"
@@ -116,13 +191,28 @@ def to_grams(qty, ing_id, portions, note=""):
         return (n * g, "tsp") if g else (n * 5 * DENSITY["default"], "tsp (generic 5 ml)")
     if rest.startswith("cup"):
         g = next((v for k, v in portions.items() if k.startswith("cup")), None)
-        return (n * g, "cup") if g else (n * 240 * DENSITY["default"], "cup (generic 240 ml)")
+        if g:
+            return n * g, "cup"
+        if ing_id in CUP_GRAMS:
+            return n * CUP_GRAMS[ing_id], "cup (kitchen weight)"
+        # USDA often gives a tablespoon but no cup. Sixteen of its own
+        # tablespoons beats falling back to a cup of water, which is what put
+        # 3 cups of atta at 720 g and dal baati churma at 1514 kcal.
+        tbsp = portions.get("tbsp")
+        if tbsp:
+            return n * tbsp * 16, "cup (16 x USDA tbsp)"
+        return n * 240 * DENSITY["default"], "cup (generic 240 ml)"
 
     # A count: "2 medium", "15", "4 cloves". USDA portion keys are messy, and a
     # naive substring test picks disastrous ones: eggs have "cup (4.86 large
     # eggs)" at 243 g, which matched on "large" and turned 4 eggs into 972 g;
     # almonds have "oz (23 whole kernels)" at 28 g, which matched on "whole" and
     # turned 15 almonds into 425 g. Volume and weight units are excluded first.
+    # Longest word first, so ("curry-leaves", "sprig") is tried before the
+    # bare-count fallback ("curry-leaves", "").
+    for (iid, word), g in sorted(PIECE_GRAMS.items(), key=lambda kv: -len(kv[0][1])):
+        if ing_id == iid and (word in rest if word else True):
+            return n * g, "count (%s, kitchen weight)" % (word or "each")
     UNIT_KEYS = ("cup", "oz", "tbsp", "tsp", "slice", "ring", "ground", "slivered",
                  "sliced", "chopped", "diced", "gram", "ml", "fl ")
     singles = {k: v for k, v in portions.items() if not any(u in k for u in UNIT_KEYS)}
@@ -144,7 +234,26 @@ def to_grams(qty, ing_id, portions, note=""):
     return None, "count, no unit weight"
 
 
-def main(usda_path):
+def cached_table():
+    """The per-ingredient figures already pulled out of the USDA download.
+
+    data/nutrition.json holds the per-100 g values and portion weights for all
+    174 mapped ingredients, which is everything the recipe arithmetic needs.
+    The 13 MB source archive is not kept in the repository, so a rerun that
+    only changes how quantities are interpreted can work from this instead of
+    requiring the download again. Pass the archive path to rebuild the table
+    itself, which is needed only when an ingredient is added or remapped.
+    """
+    return json.load(open(OUT, encoding="utf-8"))["ingredients"]
+
+
+def main(usda_path=None):
+    if not usda_path:
+        table = cached_table()
+        print("using the cached ingredient table (%d entries); pass the USDA "
+              "archive path to rebuild it" % len(table))
+        return compute(table)
+
     usda = json.load(open(usda_path, encoding="utf-8"))
     foods = usda.get("SRLegacyFoods") or list(usda.values())[0]
     by_desc = {f["description"]: f for f in foods}
@@ -176,6 +285,10 @@ def main(usda_path):
             entry["approx"] = NM.APPROX[iid]
         table[iid] = entry
 
+    return compute(table)
+
+
+def compute(table):
     doc = json.load(open(RECIPES, encoding="utf-8"))
     keys = ["kcal", "protein", "fat", "satFat", "monoFat", "polyFat", "carbs", "fibre", "sugars"]
     done = 0
@@ -199,9 +312,12 @@ def main(usda_path):
                     how = "frying oil at %d%% absorption" % (ABSORB_FRACTION * 100)
                 else:
                     unquant.append(ing["id"]); continue
-            elif FRYING.search((ing.get("qty") or "") + " " + (ing.get("note") or "")):
+            elif (FRYING.search((ing.get("qty") or "") + " " + (ing.get("note") or ""))
+                  and g >= FRY_BATH_GRAMS):
                 # "500ml" with a note of "for deep frying" is a panful, not an
-                # ingredient. Only the absorbed share reaches the plate.
+                # ingredient. Only the absorbed share reaches the plate. A few
+                # spoonfuls for shallow frying is not a panful and is counted
+                # whole; see FRY_BATH_GRAMS.
                 g *= ABSORB_FRACTION
                 how += " (frying, %d%% absorbed)" % (ABSORB_FRACTION * 100)
             if "approx" in info:
@@ -262,6 +378,7 @@ def main(usda_path):
 
     json.dump({"_method": n["method"], "ingredients": table},
               open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
     json.dump(doc, open(RECIPES, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
     print("ingredient table: %d entries (%d approximate)"
@@ -273,4 +390,4 @@ def main(usda_path):
 
 
 if __name__ == "__main__":
-    sys.exit(main(sys.argv[1]))
+    sys.exit(main(sys.argv[1] if len(sys.argv) > 1 else None))
