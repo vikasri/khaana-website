@@ -1459,3 +1459,11 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 }
 .kcal-detail b { color: var(--ink); font-weight: 700; }
 .kcal-note { flex: 1 1 100%; margin: 4px 0 0; font-size: 0.79rem; line-height: 1.45; }
+
+/* ---------- About page ---------- */
+.about-page { max-width: 760px; }
+.about-page .lede { font-size: 1.1rem; color: var(--ink-soft); margin-bottom: 26px; }
+.about-page h2 { margin-top: 32px; font-size: 1.3rem; }
+.about-page p, .about-page li { line-height: 1.65; }
+.about-page ul { padding-left: 20px; color: var(--ink-soft); }
+.about-page li { margin-bottom: 8px; }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://khaana.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://khaana.com/about.html</loc><priority>0.8</priority></url>
   <url><loc>https://khaana.com/andhra.html</loc><priority>0.8</priority></url>
   <url><loc>https://khaana.com/anglo-indian.html</loc><priority>0.8</priority></url>
   <url><loc>https://khaana.com/awadhi-lucknowi.html</loc><priority>0.8</priority></url>
