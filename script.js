@@ -23,3 +23,18 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('resize', publish);
   window.addEventListener('load', publish);
 })();
+
+
+/* Reveal the rest of a cuisine's recipes. The tiles are already in the page,
+   so this only drops the hidden attribute; nothing is fetched. */
+(function () {
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest && ev.target.closest('.show-more-recipes');
+    if (!b) return;
+    var wrap = b.parentNode.querySelector('.recipe-tiles');
+    if (!wrap) return;
+    wrap.querySelectorAll('.recipe-tile.is-extra').forEach(function (t) { t.hidden = false; });
+    b.setAttribute('aria-expanded', 'true');
+    b.remove();
+  });
+})();
