@@ -158,14 +158,15 @@
      170 checkboxes in one flat list asked the cook to make 170 decisions of
      equal weight, and the data says they are nothing like equal. Spices are
      39% of every ingredient slot in the database, and nobody decides about
-     turmeric on a Tuesday — you keep an Indian spice shelf or you do not.
-     Ticking just these six puts 257 of 536 recipes above the display floor.
+     turmeric on a Tuesday, you keep an Indian spice shelf or you do not.
+     Ticking just these seven puts 226 of 586 recipes above the display floor
+     on their own, up from 177 before mustard seeds joined them.
 
      So the picker asks three questions instead of one long one: do you keep a
      spice shelf, what fresh things do you have tonight, and (folded away) is
      there anything unusual in the cupboard. */
   var SHELF = ['turmeric', 'cumin-seeds', 'coriander-powder', 'chilli-powder',
-               'black-pepper', 'garam-masala'];
+               'black-pepper', 'garam-masala', 'mustard-seeds'];
 
   // The most-used things that are not shelf stock. Both rices are here: they
   // substitute for each other at a 0.20 penalty, so the matcher barely cares
