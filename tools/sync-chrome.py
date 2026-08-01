@@ -17,7 +17,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CUISINES = [
     ("awadhi-lucknowi.html", "Awadhi/Lucknowi"),
     ("kashmiri.html",        "Kashmiri"),
-    ("himachali.html",       "Himachali/Pahari"),
+    ("pahari.html",          "Pahari"),
     ("punjabi.html",         "Punjabi"),
     ("rajasthani.html",      "Rajasthani"),
     ("gujarati.html",        "Gujarati"),
@@ -39,7 +39,7 @@ CUISINES = [
 FOOTER_HEADS = ["Cuisines", "More", "Also", "And"]
 
 # Pages that are not part of the site chrome.
-SKIP = {"south-indian.html"}   # redirect stub
+SKIP = {"south-indian.html", "himachali.html"}   # redirect stubs
 
 
 def nav_html(current):

@@ -54,7 +54,7 @@ REGION_PAGE = {
  # With those separate it means Tamil by elimination, so it is named that.
  "Tamil Nadu": "tamil-nadu.html",
  "Andhra": "andhra.html", "Karnataka": "karnataka.html",
- "Himachali/Pahari": "himachali.html",
+ "Pahari": "pahari.html",
  # Community cuisines with no territory in modern India: they get a page but
  # no zone on the map, because a zone would be a false claim.
  "Parsi": "parsi.html", "Sindhi": "sindhi.html",
