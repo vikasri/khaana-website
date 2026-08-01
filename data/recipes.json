@@ -21,7 +21,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -339,7 +340,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -527,7 +529,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -834,7 +837,8 @@
         "vegetarian",
         "vegan",
         "gluten-free",
-        "dairy-free"
+        "dairy-free",
+        "healthier"
       ],
       "allergens": [
         "nuts"
@@ -1012,7 +1016,8 @@
         "vegetarian",
         "vegan",
         "gluten-free",
-        "dairy-free"
+        "dairy-free",
+        "healthier"
       ],
       "allergens": [
         "nuts"
@@ -1183,7 +1188,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -1323,7 +1329,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -1475,7 +1482,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -1638,7 +1646,8 @@
         "stovetop"
       ],
       "tags": [
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "gluten",
@@ -2096,7 +2105,8 @@
       ],
       "tags": [
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -2581,7 +2591,8 @@
       ],
       "tags": [
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -2901,7 +2912,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -3067,7 +3079,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -3328,7 +3341,8 @@
         "blender"
       ],
       "tags": [
-        "gluten-free"
+        "gluten-free",
+        "healthier"
       ],
       "allergens": [
         "dairy",
@@ -3515,7 +3529,8 @@
       ],
       "tags": [
         "vegetarian",
-        "gluten-free"
+        "gluten-free",
+        "healthier"
       ],
       "allergens": [
         "dairy",
@@ -3965,7 +3980,8 @@
       ],
       "tags": [
         "vegetarian",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy",
@@ -4286,7 +4302,8 @@
         "blender"
       ],
       "tags": [
-        "gluten-free"
+        "gluten-free",
+        "healthier"
       ],
       "allergens": [
         "dairy",
@@ -4580,7 +4597,8 @@
         "blender"
       ],
       "tags": [
-        "gluten-free"
+        "gluten-free",
+        "healthier"
       ],
       "allergens": [
         "dairy",
@@ -4733,7 +4751,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -5049,7 +5068,8 @@
         "blender"
       ],
       "tags": [
-        "gluten-free"
+        "gluten-free",
+        "healthier"
       ],
       "allergens": [
         "dairy",
@@ -5233,7 +5253,8 @@
         "blender"
       ],
       "tags": [
-        "gluten-free"
+        "gluten-free",
+        "healthier"
       ],
       "allergens": [
         "dairy",
@@ -6433,7 +6454,8 @@
       ],
       "tags": [
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -7472,7 +7494,8 @@
         "vegetarian",
         "gluten-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -7852,7 +7875,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -7976,7 +8000,8 @@
       "tags": [
         "pescatarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish",
@@ -8637,7 +8662,8 @@
       "tags": [
         "pescatarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish",
@@ -8798,7 +8824,8 @@
         "vegetarian",
         "gluten-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -8979,7 +9006,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -9253,7 +9281,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -9422,7 +9451,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -9595,7 +9625,8 @@
         "vegetarian",
         "gluten-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -10096,7 +10127,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -10635,7 +10667,8 @@
         "vegetarian",
         "gluten-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -11414,7 +11447,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -11511,7 +11545,8 @@
         "vegetarian",
         "gluten-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -11681,7 +11716,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -12075,7 +12111,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -12188,7 +12225,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -12336,7 +12374,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -12779,7 +12818,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -13064,7 +13104,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -13888,7 +13929,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -14398,7 +14440,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -14726,7 +14769,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -14932,7 +14976,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -15140,7 +15185,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -15336,7 +15382,8 @@
       ],
       "tags": [
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -15563,7 +15610,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -15885,7 +15933,8 @@
         "vegetarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -16283,7 +16332,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -16487,7 +16537,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -17065,7 +17116,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -17272,7 +17324,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -17787,7 +17840,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -18084,7 +18138,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -18204,7 +18259,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -18357,7 +18413,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -18507,7 +18564,8 @@
       ],
       "tags": [
         "vegetarian",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy",
@@ -18644,7 +18702,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -19018,7 +19077,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -19204,7 +19264,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "pescatarian"
+        "pescatarian",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -19460,7 +19521,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -19624,7 +19686,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -19775,7 +19838,8 @@
       ],
       "tags": [
         "gluten-free",
-        "dairy-free"
+        "dairy-free",
+        "healthier"
       ],
       "allergens": [
         "nuts"
@@ -19930,7 +19994,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -20213,7 +20278,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "pescatarian"
+        "pescatarian",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -20756,7 +20822,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -21616,7 +21683,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "pescatarian"
+        "pescatarian",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -21756,7 +21824,8 @@
         "vegetarian",
         "vegan",
         "gluten-free",
-        "dairy-free"
+        "dairy-free",
+        "healthier"
       ],
       "allergens": [
         "nuts"
@@ -22128,7 +22197,8 @@
         "vegetarian",
         "vegan",
         "gluten-free",
-        "dairy-free"
+        "dairy-free",
+        "healthier"
       ],
       "allergens": [
         "nuts"
@@ -22282,7 +22352,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -23558,7 +23629,8 @@
         "vegetarian",
         "gluten-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -23845,7 +23917,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -24769,7 +24842,8 @@
         "vegetarian",
         "gluten-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -25419,7 +25493,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -25937,7 +26012,8 @@
         "vegetarian",
         "vegan",
         "gluten-free",
-        "dairy-free"
+        "dairy-free",
+        "healthier"
       ],
       "allergens": [
         "nuts"
@@ -26696,7 +26772,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -27006,7 +27083,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "dairy",
@@ -27818,7 +27896,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -28302,7 +28381,8 @@
         "vegetarian",
         "gluten-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -28808,7 +28888,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -29010,7 +29091,8 @@
         "vegetarian",
         "vegan",
         "gluten-free",
-        "dairy-free"
+        "dairy-free",
+        "healthier"
       ],
       "allergens": [
         "nuts"
@@ -29367,7 +29449,8 @@
         "vegetarian",
         "vegan",
         "gluten-free",
-        "dairy-free"
+        "dairy-free",
+        "healthier"
       ],
       "allergens": [
         "nuts"
@@ -29552,7 +29635,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -30180,7 +30264,8 @@
         "pressure-cooker"
       ],
       "tags": [
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "gluten",
@@ -30653,7 +30738,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -30832,7 +30918,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -30979,7 +31066,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -31660,7 +31748,8 @@
       ],
       "tags": [
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -32026,7 +32115,8 @@
       ],
       "tags": [
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -32213,7 +32303,8 @@
       ],
       "tags": [
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -32779,7 +32870,8 @@
       ],
       "tags": [
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -33256,7 +33348,8 @@
         "vegetarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -33560,7 +33653,8 @@
         "vegetarian",
         "vegan",
         "gluten-free",
-        "dairy-free"
+        "dairy-free",
+        "healthier"
       ],
       "allergens": [
         "nuts"
@@ -33956,7 +34050,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -34137,7 +34232,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -34405,7 +34501,8 @@
         "vegetarian",
         "gluten-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -34639,7 +34736,8 @@
       ],
       "tags": [
         "vegetarian",
-        "gluten-free"
+        "gluten-free",
+        "healthier"
       ],
       "allergens": [
         "dairy",
@@ -35957,7 +36055,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -36670,7 +36769,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -38071,7 +38171,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -38759,7 +38860,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -39339,7 +39441,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -39485,7 +39588,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -39681,7 +39785,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -39946,7 +40051,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -40103,7 +40209,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -40265,7 +40372,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "pescatarian"
+        "pescatarian",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -40404,7 +40512,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -41135,7 +41244,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -41280,7 +41390,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -41618,7 +41729,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -41724,7 +41836,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -42115,7 +42228,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -42761,7 +42875,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -42922,7 +43037,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -43181,7 +43297,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -43355,7 +43472,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -44310,7 +44428,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -44446,7 +44565,8 @@
         "vegetarian",
         "vegan",
         "gluten-free",
-        "dairy-free"
+        "dairy-free",
+        "healthier"
       ],
       "allergens": [
         "nuts"
@@ -45423,7 +45543,8 @@
         "pescatarian",
         "dairy-free",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -45611,7 +45732,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -45984,7 +46106,8 @@
       ],
       "tags": [
         "vegetarian",
-        "gluten-free"
+        "gluten-free",
+        "healthier"
       ],
       "allergens": [
         "dairy",
@@ -46205,7 +46328,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -46387,7 +46511,8 @@
       "tags": [
         "vegetarian",
         "vegan",
-        "dairy-free"
+        "dairy-free",
+        "healthier"
       ],
       "allergens": [
         "gluten",
@@ -46740,7 +46865,8 @@
       ],
       "tags": [
         "vegetarian",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "gluten",
@@ -48203,7 +48329,8 @@
         "vegetarian",
         "gluten-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -48471,7 +48598,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -48617,7 +48745,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -49014,7 +49143,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -49361,7 +49491,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -49692,7 +49823,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -49817,7 +49949,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -50052,7 +50185,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -50168,7 +50302,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -50268,7 +50403,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -50408,7 +50544,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -50798,7 +50935,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -50913,7 +51051,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -51037,7 +51176,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -51169,7 +51309,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -51455,7 +51596,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -51601,7 +51743,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -52092,7 +52235,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -52339,7 +52483,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -52921,7 +53066,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -53203,7 +53349,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -53586,7 +53733,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -53740,7 +53888,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -53849,7 +53998,8 @@
         "vegetarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -54112,7 +54262,8 @@
         "vegetarian",
         "gluten-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -54269,7 +54420,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -54439,7 +54591,8 @@
       "tags": [
         "pescatarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish",
@@ -54887,7 +55040,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -55018,7 +55172,8 @@
         "vegetarian",
         "gluten-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -55465,7 +55620,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -55604,7 +55760,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -55780,7 +55937,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -55932,7 +56090,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -56482,7 +56641,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -56621,7 +56781,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -56890,7 +57051,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -57019,7 +57181,8 @@
         "oven"
       ],
       "tags": [
-        "gluten-free"
+        "gluten-free",
+        "healthier"
       ],
       "allergens": [
         "dairy",
@@ -57506,7 +57669,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -57914,7 +58078,8 @@
       ],
       "tags": [
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -58676,7 +58841,8 @@
         "blender"
       ],
       "tags": [
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -58873,7 +59039,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -59028,7 +59195,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -59163,7 +59331,8 @@
         "pescatarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "fish"
@@ -59599,7 +59768,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -59911,7 +60081,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -60056,7 +60227,8 @@
         "vegetarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -60960,7 +61132,8 @@
         "vegetarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -61110,7 +61283,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -61572,7 +61746,8 @@
         "vegetarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -61771,7 +61946,8 @@
         "vegan",
         "gluten-free",
         "nut-free",
-        "dairy-free"
+        "dairy-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -62105,7 +62281,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -62268,7 +62445,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -62567,7 +62745,8 @@
       ],
       "tags": [
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -62760,7 +62939,8 @@
       ],
       "tags": [
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -63149,7 +63329,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -63414,7 +63595,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -63589,7 +63771,8 @@
       ],
       "tags": [
         "vegetarian",
-        "gluten-free"
+        "gluten-free",
+        "healthier"
       ],
       "allergens": [
         "dairy",
@@ -63899,7 +64082,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -64062,7 +64246,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -64218,7 +64403,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -64367,7 +64553,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -64578,7 +64765,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -64935,7 +65123,8 @@
         "vegetarian",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -65108,7 +65297,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -65245,7 +65435,8 @@
       ],
       "tags": [
         "vegetarian",
-        "gluten-free"
+        "gluten-free",
+        "healthier"
       ],
       "allergens": [
         "dairy",
@@ -65433,7 +65624,8 @@
       ],
       "tags": [
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -65730,7 +65922,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -68745,7 +68938,8 @@
         "vegetarian",
         "gluten-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -69685,7 +69879,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -69842,7 +70037,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -70556,7 +70752,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -70869,7 +71066,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -71026,7 +71224,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -71181,7 +71380,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -71336,7 +71536,8 @@
       ],
       "tags": [
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -71561,7 +71762,8 @@
       ],
       "tags": [
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -71840,7 +72042,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -72151,7 +72354,8 @@
       "tags": [
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -72461,7 +72665,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -72628,7 +72833,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -72912,7 +73118,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -73058,7 +73265,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -73187,7 +73395,8 @@
       ],
       "tags": [
         "vegetarian",
-        "gluten-free"
+        "gluten-free",
+        "healthier"
       ],
       "allergens": [
         "dairy",
@@ -73377,7 +73586,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -73530,7 +73740,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -73668,7 +73879,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -73805,7 +74017,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -73957,7 +74170,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -74043,7 +74257,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -74303,7 +74518,8 @@
         "vegetarian",
         "vegan",
         "gluten-free",
-        "dairy-free"
+        "dairy-free",
+        "healthier"
       ],
       "allergens": [
         "nuts"
@@ -74461,7 +74677,8 @@
         "vegan",
         "gluten-free",
         "nut-free",
-        "dairy-free"
+        "dairy-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -74603,7 +74820,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -74737,7 +74955,8 @@
         "gluten-free",
         "dairy-free",
         "nut-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -75379,7 +75598,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -75498,7 +75718,8 @@
         "vegetarian",
         "vegan",
         "gluten-free",
-        "dairy-free"
+        "dairy-free",
+        "healthier"
       ],
       "allergens": [
         "nuts"
@@ -75663,7 +75884,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -76099,7 +76321,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -76412,7 +76635,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "healthier"
       ],
       "allergens": [
         "nuts"
@@ -76553,7 +76777,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -76688,7 +76913,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -76855,7 +77081,8 @@
       "tags": [
         "vegetarian",
         "vegan",
-        "dairy-free"
+        "dairy-free",
+        "healthier"
       ],
       "allergens": [
         "gluten",
@@ -77005,7 +77232,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -77292,7 +77520,8 @@
       ],
       "tags": [
         "vegetarian",
-        "gluten-free"
+        "gluten-free",
+        "healthier"
       ],
       "allergens": [
         "dairy",
@@ -77573,7 +77802,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -77738,7 +77968,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [
@@ -78010,7 +78241,8 @@
       "tags": [
         "vegetarian",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [
         "dairy"
@@ -78418,7 +78650,8 @@
         "vegan",
         "gluten-free",
         "dairy-free",
-        "nut-free"
+        "nut-free",
+        "healthier"
       ],
       "allergens": [],
       "ingredients": [

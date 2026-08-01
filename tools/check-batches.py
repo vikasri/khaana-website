@@ -21,7 +21,7 @@ DIFFICULTY = {"easy", "moderate", "advanced"}
 EQUIPMENT = {"stovetop", "kadhai", "tawa", "oven", "steamer", "blender",
              "pressure-cooker"}
 TAGS = {"vegetarian", "vegan", "gluten-free", "dairy-free", "nut-free",
-        "no-onion-garlic", "pescatarian"}
+        "no-onion-garlic", "pescatarian", "healthier"}
 ALLERGENS = {"dairy", "gluten", "nuts", "fish"}
 
 

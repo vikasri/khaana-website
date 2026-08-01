@@ -21,7 +21,9 @@ DIFFICULTY = {"easy", "moderate", "advanced"}
 EQUIPMENT = {"stovetop", "kadhai", "tawa", "oven", "steamer", "blender",
              "pressure-cooker"}
 TAGS = {"vegetarian", "vegan", "gluten-free", "dairy-free", "nut-free",
-        "no-onion-garlic", "pescatarian"}
+        "no-onion-garlic", "pescatarian",
+        # Derived by tools/tag-healthy.py from explicit thresholds, not authored.
+        "healthier"}
 ALLERGENS = {"dairy", "gluten", "nuts", "fish"}
 
 # Ingredient groups that decide a tag. Kept here rather than in pantry.json
