@@ -450,9 +450,11 @@ section.tight { padding: 22px 0; }
 /* ---------- Regional map (home page) ---------- */
 .regional-grid {
   display: grid;
-  /* The map went landscape when its legend moved to a vertical column, so it
-     takes the larger share now and the prose the smaller. */
-  grid-template-columns: 2fr 3fr;
+  /* Map first, prose second. The map went landscape when its legend moved to a
+     vertical column, so it keeps the larger share. Ordering comes from the DOM
+     rather than grid `order`, which means the single-column mobile layout also
+     leads with the map instead of burying it under two paragraphs. */
+  grid-template-columns: 3fr 2fr;
   gap: 40px;
   align-items: center;
 }
