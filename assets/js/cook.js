@@ -15,6 +15,10 @@
   var MIN_PCT = 20;
   // The pantry starts empty; nothing is ticked on a first visit.
   var DEFAULT_PANTRY = [];
+  // The size of the database is not something the page advertises. Any count
+  // above this is reported as "100+" rather than exactly.
+  var COUNT_CAP = 100;
+  function shown(n) { return n > COUNT_CAP ? COUNT_CAP + '+' : String(n); }
 
   var pantry = null;
   var recipes = [];
@@ -259,8 +263,8 @@
     // has everything. Only mention the total while some of it is still hidden.
     function countPhrase(drawn, total) {
       var noun = ' recipe' + (total === 1 ? '' : 's');
-      return drawn < total ? 'Showing ' + drawn + ' of ' + total + noun
-                           : total + noun;
+      return drawn < total ? 'Showing ' + drawn + ' of ' + shown(total) + noun
+                           : shown(total) + noun;
     }
 
     function setSummary(drawn) {
@@ -276,7 +280,7 @@
         // Say what was withheld. A bare count would read as "that is everything".
         summary.textContent = countPhrase(drawn, total) +
           ' you can mostly make, ranked by how much of each you already have.' +
-          (hidden ? ' ' + hidden + ' more need over ' + (100 - MIN_PCT) +
+          (hidden ? ' ' + shown(hidden) + ' more need over ' + (100 - MIN_PCT) +
                     '% of their ingredients bought in, so they are not shown.' : '');
       }
     }
@@ -310,7 +314,7 @@
       if (left <= 0) {
         more.remove();
       } else {
-        more.textContent = 'Show ' + Math.min(PAGE, left) + ' more (' + left + ' left)';
+        more.textContent = 'Show ' + Math.min(PAGE, left) + ' more (' + shown(left) + ' left)';
       }
       setSummary(drawn);
     }
@@ -324,7 +328,7 @@
     if (blocked.length) {
       var h = document.createElement('h3');
       h.className = 'blocked-head';
-      h.textContent = 'Ruled out by your filters (' + blocked.length + ')';
+      h.textContent = 'Ruled out by your filters (' + shown(blocked.length) + ')';
       bwrap.appendChild(h);
       blocked.forEach(function (s) {
         var p = document.createElement('p');
