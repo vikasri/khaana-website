@@ -52,6 +52,10 @@ def nav_html(current):
     for href, label in CUISINES:
         cls = ' class="active"' if href == current else ""
         rows.append('        <li><a href="%s"%s>%s</a></li>' % (href, cls, label))
+    # About closes the list: it is the one item that is neither a cuisine nor a
+    # way into the recipes, and it says what the site has and has not checked.
+    rows.append('        <li><a href="about.html"%s>About</a></li>'
+                % (' class="active"' if current == "about.html" else ""))
     return '      <ul class="nav-links">\n' + "\n".join(rows) + "\n      </ul>"
 
 
