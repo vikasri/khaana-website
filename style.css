@@ -21,6 +21,13 @@
 
 * { box-sizing: border-box; }
 
+/* The browser hides [hidden] with `display: none`, but that comes from the user
+   agent sheet and any class rule setting `display` beats it. Two panels toggled
+   from JS did exactly that, so the nutrition detail on a result card was never
+   actually hidden: the button flipped the attribute and nothing moved. Declared
+   here once so a `display` rule added later cannot quietly break it again. */
+[hidden] { display: none !important; }
+
 html { scroll-behavior: smooth; }
 
 body {
