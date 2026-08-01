@@ -159,16 +159,13 @@
      equal weight, and the data says they are nothing like equal. Spices are
      39% of every ingredient slot in the database, and nobody decides about
      turmeric on a Tuesday — you keep an Indian spice shelf or you do not.
-     Ticking just these eighteen puts 481 of 536 recipes above the display
-     floor; adding six fresh things takes 367 of them past half.
+     Ticking just these six puts 257 of 536 recipes above the display floor.
 
      So the picker asks three questions instead of one long one: do you keep a
      spice shelf, what fresh things do you have tonight, and (folded away) is
      there anything unusual in the cupboard. */
-  var SHELF = ['turmeric', 'cumin-seeds', 'coriander-powder', 'chilli-powder', 'ghee',
-               'asafoetida', 'dried-red-chilli', 'black-pepper', 'cardamom',
-               'mustard-seeds', 'garam-masala', 'cloves', 'cinnamon', 'mustard-oil',
-               'bay-leaf', 'kashmiri-chilli', 'coconut-oil', 'cumin-powder'];
+  var SHELF = ['turmeric', 'cumin-seeds', 'coriander-powder', 'chilli-powder',
+               'black-pepper', 'garam-masala'];
 
   // The most-used things that are not shelf stock. Both rices are here: they
   // substitute for each other at a 0.20 penalty, so the matcher barely cares
@@ -247,13 +244,13 @@
     var b = el('add-shelf'), note = el('shelf-note');
     if (!b) return;
     var held = shelfHeld(), all = held === SHELF.length;
-    b.textContent = all ? '\u2713 Spice shelf added \u2014 remove it'
+    b.textContent = all ? '\u2713 Spice shelf added. Remove it'
                         : '+ I keep a standard Indian spice shelf';
     b.classList.toggle('is-on', all);
     note.textContent = all
-      ? 'The eighteen spices and cooking fats most of these recipes assume.'
-      : (held ? held + ' of the 18 already ticked. Add the rest in one go.'
-              : 'Ticks the eighteen spices and cooking fats most of these recipes assume.');
+      ? 'The six spices almost every one of these recipes assumes.'
+      : (held ? held + ' of the 6 already ticked. Add the rest in one go.'
+              : 'Ticks the six spices almost every one of these recipes assumes.');
   }
 
   function renderCommon() {
