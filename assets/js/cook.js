@@ -469,9 +469,12 @@
     var hidden = (sparse || []).length;
     var summary = el('results-summary');
     var q = searchQuery();
-    var PAGE = 20;
+    // A screenful at a time. Fifteen rather than twenty: the reader is
+    // choosing what to cook tonight, and past a certain point a longer list
+    // makes that harder rather than easier.
+    var PAGE = 15;
 
-    // "Showing 20 of 20" is noise, and so is a running total once the reader
+    // "Showing 15 of 15" is noise, and so is a running total once the reader
     // has everything. Only mention the total while some of it is still hidden.
     function countPhrase(drawn, total) {
       var noun = ' recipe' + (total === 1 ? '' : 's');
