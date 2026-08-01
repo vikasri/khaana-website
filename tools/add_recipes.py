@@ -39,8 +39,8 @@ PHOTO = {
  "odia-g1.jpg":     ("Chhena poda", "Subhransuphotography", "CC BY-SA 4.0"),
  "rajasthani-g2.jpg":("Raj kachori", "Jaipuriamanasi", "CC BY-SA 4.0"),
  "rajasthani-hero.jpg":("Dal baati", "Unknown", "See CREDITS.md"),
- "south-indian-g1.jpg":("Idli", "Unknown", "See CREDITS.md"),
- "south-indian-g2.jpg":("Sambar", "Unknown", "See CREDITS.md"),
+ "tamil-nadu-g1.jpg":("Idli", "Unknown", "See CREDITS.md"),
+ "tamil-nadu-g2.jpg":("Sambar", "Unknown", "See CREDITS.md"),
 }
 
 REGION_PAGE = {

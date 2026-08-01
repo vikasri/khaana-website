@@ -45,10 +45,30 @@
 
 <section class="tight">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head" style="margin-bottom:22px;">
       <div class="eyebrow">Cook tonight</div>
-      <h2>Cook With What You Have</h2>
-      <p>Select what is in your kitchen. Khaana will suggest most suitable recipes and if needed, tell you exactly what is missing, and will also suggest substitutions where a swap genuinely works.</p>
+      <h2>Two ways to find a recipe</h2>
+    </div>
+
+    <div class="cook-entry">
+      <div class="cook-entry-option">
+        <p class="cook-entry-head"><span class="cook-entry-num">1</span> Search recipes</p>
+        <label for="recipe-search" class="sr-only">Search recipes by name, region or ingredient</label>
+        <input type="search" id="recipe-search" class="recipe-search"
+               autocomplete="off"
+               placeholder="Try &ldquo;dosa&rdquo;, &ldquo;chettinad&rdquo; or &ldquo;paneer&rdquo;&hellip;" />
+        <p class="cook-entry-note">Looks through every recipe that fits your filters,
+          including ones you have little of, so you can find a dish and see what it needs.</p>
+      </div>
+
+      <div class="cook-entry-or"><span>or</span></div>
+
+      <div class="cook-entry-option">
+        <p class="cook-entry-head"><span class="cook-entry-num">2</span> Cook with what you have</p>
+        <p class="cook-entry-note">Tick what is in your kitchen below. Khaana ranks the
+          recipes by how much of each you can already make, tells you exactly what is
+          missing, and suggests substitutions where a swap genuinely works.</p>
+      </div>
     </div>
 
     <div class="cook-layout">

@@ -44,9 +44,9 @@ All images, including the home page hero, are sourced from Wikimedia Commons via
 | `assets/images/rajasthani-g1.jpg` | Rajasthani thali | CC BY-SA 4.0 | Master Sahil Gaikwad | [link](https://upload.wikimedia.org/wikipedia/commons/5/51/The_delicious_Rajasthani_food.png) |
 | `assets/images/rajasthani-g2.jpg` | Kachori | CC BY-SA 4.0 | Jaipuriamanasi | [link](https://upload.wikimedia.org/wikipedia/commons/8/8f/Rajasthani_Raj_Kachori.jpg) |
 | `assets/images/rajasthani-hero.jpg` | Dal baati | CC BY-SA 4.0 | Niranjan.gohane | [link](https://upload.wikimedia.org/wikipedia/commons/0/0b/DalBati.jpg) |
-| `assets/images/south-indian-g1.jpg` | Idli | CC BY-SA 3.0 | Soumya dey at English Wikipedia | [link](https://upload.wikimedia.org/wikipedia/commons/1/11/Idli_Sambar.JPG) |
-| `assets/images/south-indian-g2.jpg` | Sambar (dish) | CC BY-SA 4.0 | Kalaiselvi Murugesan | [link](https://upload.wikimedia.org/wikipedia/commons/b/bb/Pumpkin_sambar.JPG) |
-| `assets/images/south-indian-hero.jpg` | Masala dosa | Unknown | Unknown | [link](https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Masala_Dosa_2023.jpg/3840px-Masala_Dosa_2023.jpg) |
+| `assets/images/tamil-nadu-g1.jpg` | Idli | CC BY-SA 3.0 | Soumya dey at English Wikipedia | [link](https://upload.wikimedia.org/wikipedia/commons/1/11/Idli_Sambar.JPG) |
+| `assets/images/tamil-nadu-g2.jpg` | Sambar (dish) | CC BY-SA 4.0 | Kalaiselvi Murugesan | [link](https://upload.wikimedia.org/wikipedia/commons/b/bb/Pumpkin_sambar.JPG) |
+| `assets/images/tamil-nadu-hero.jpg` | Masala dosa | Unknown | Unknown | [link](https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Masala_Dosa_2023.jpg/3840px-Masala_Dosa_2023.jpg) |
 
 | `assets/images/recipes/aloo-gobi.jpg` | Aloo gobi | CC BY-SA 2.0 | Unknown | [link](https://commons.wikimedia.org/wiki/File:Aloo_gobi.jpg) |
 | `assets/images/recipes/baingan-bharta.jpg` | Baingan bharta | CC BY-SA 4.0 | Zeel Patel | [link](https://commons.wikimedia.org/wiki/File:Baingan_Ka_Bharta.JPG) |

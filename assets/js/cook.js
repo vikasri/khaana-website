@@ -193,9 +193,27 @@
     };
   }
 
+  // Text search over name, region and ingredient names. Matching is on the
+  // recipe rather than the pantry, so it deliberately ignores the MIN_PCT floor
+  // — someone looking up a dish by name wants to find it and see what it needs,
+  // not be told they are short of it.
+  function searchQuery() {
+    var box = el('recipe-search');
+    return box ? box.value.trim().toLowerCase() : '';
+  }
+
+  function matchesQuery(s, q) {
+    if (!q) return true;
+    var r = s.recipe;
+    var hay = (r.name + ' ' + r.region + ' ' + (r.subtitle || '')).toLowerCase();
+    if (hay.indexOf(q) !== -1) return true;
+    return s.lines.some(function (l) { return l.name.toLowerCase().indexOf(q) !== -1; });
+  }
+
   function update() {
     var filters = readFilters();
     var has = selected;
+    var q = searchQuery();
 
     el('pantry-count').textContent = selected.size;
 
@@ -208,9 +226,14 @@
     // Only applied once the cook has ticked something — before that every score
     // is 0 and this would empty the page.
     var sparse = [];
-    if (selected.size > 0) {
+    if (selected.size > 0 && !q) {
       sparse = eligible.filter(function (s) { return s.pct < MIN_PCT; });
       eligible = eligible.filter(function (s) { return s.pct >= MIN_PCT; });
+    }
+
+    if (q) {
+      eligible = eligible.filter(function (s) { return matchesQuery(s, q); });
+      blocked = blocked.filter(function (s) { return matchesQuery(s, q); });
     }
 
     eligible.sort(function (a, b) {
@@ -231,7 +254,13 @@
 
     var hidden = (sparse || []).length;
     var summary = el('results-summary');
-    if (selected.size === 0) {
+    var q = searchQuery();
+    if (q) {
+      summary.textContent = eligible.length === 0
+        ? 'No recipe matches \u201c' + q + '\u201d within your filters.'
+        : eligible.length + ' recipe' + (eligible.length === 1 ? '' : 's') +
+          ' match \u201c' + q + '\u201d, ranked by how much of each you already have.';
+    } else if (selected.size === 0) {
       summary.textContent = 'Showing all ' + eligible.length +
         ' recipes that fit your filters. Tick what you have to rank them by your pantry.';
     } else {
@@ -253,24 +282,32 @@
     }
 
     // The list is ranked, so the tail is the part the cook can least make.
-    // Drawing all of it costs a lot of DOM for results nobody reads — but a
-    // silent cut would read as "that's everything", so the count is shown and
-    // the rest is one click away.
-    var SHOWN = 60;
-    eligible.slice(0, SHOWN).forEach(function (s) { out.appendChild(card(s)); });
+    // Twenty is about a screen and a half; revealing the rest a page at a time
+    // keeps the DOM small without ever hiding the true count, which is stated
+    // on the button itself.
+    var PAGE = 20;
+    var drawn = 0;
 
-    if (eligible.length > SHOWN) {
-      var rest = eligible.slice(SHOWN);
-      var more = document.createElement('button');
-      more.type = 'button';
-      more.className = 'show-more';
-      more.textContent = 'Show the other ' + rest.length + ' recipes';
-      more.addEventListener('click', function () {
-        more.remove();
-        rest.forEach(function (s) { out.appendChild(card(s)); });
+    var more = document.createElement('button');
+    more.type = 'button';
+    more.className = 'show-more';
+
+    function draw() {
+      eligible.slice(drawn, drawn + PAGE).forEach(function (s) {
+        out.insertBefore(card(s), more);
       });
-      out.appendChild(more);
+      drawn = Math.min(drawn + PAGE, eligible.length);
+      var left = eligible.length - drawn;
+      if (left <= 0) {
+        more.remove();
+      } else {
+        more.textContent = 'Show ' + Math.min(PAGE, left) + ' more (' + left + ' left)';
+      }
     }
+
+    out.appendChild(more);
+    more.addEventListener('click', draw);
+    draw();
 
     var bwrap = el('blocked');
     bwrap.innerHTML = '';
@@ -372,6 +409,12 @@
       renderPantry();
       update();
     });
+    var recipeSearch = el('recipe-search');
+    if (recipeSearch) {
+      recipeSearch.addEventListener('input', update);
+      recipeSearch.addEventListener('search', update);   // the native clear button
+    }
+
     var search = el('pantry-search');
     search.addEventListener('input', function () {
       var q = search.value.trim().toLowerCase();
