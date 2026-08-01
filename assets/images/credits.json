@@ -7,10 +7,10 @@
     "width": 3872,
     "height": 2592,
     "size_bytes": 1557790,
-    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Pakistani_Food_Karahi_Beef.jpg/3840px-Pakistani_Food_Karahi_Beef.jpg",
-    "license": "Unknown",
-    "artist": "Unknown",
-    "note": "resized for web"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pakistani_Food_Karahi_Beef.jpg",
+    "license": "CC BY 2.0",
+    "artist": "Jess Lander from Culver City, CA, USA",
+    "note": "resized for web; licence looked up on Commons"
   },
   {
     "file": "bengali-g2.jpg",
@@ -20,10 +20,10 @@
     "width": 1710,
     "height": 2048,
     "size_bytes": 1056471,
-    "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/%E0%A6%90%E0%A6%A4%E0%A6%BF%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%BE%E0%A6%B9%E0%A7%80_%E0%A6%B8%E0%A6%B0%E0%A7%8D%E0%A6%B7%E0%A7%87_%E0%A6%87%E0%A6%B2%E0%A6%BF%E0%A6%B6.jpg",
-    "license": "Unknown",
-    "artist": "Unknown",
-    "note": "resized for web"
+    "source_url": "https://commons.wikimedia.org/wiki/File:%E0%A6%90%E0%A6%A4%E0%A6%BF%E0%A6%B9%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%BE%E0%A6%B9%E0%A7%80_%E0%A6%B8%E0%A6%B0%E0%A7%8D%E0%A6%B7%E0%A7%87_%E0%A6%87%E0%A6%B2%E0%A6%BF%E0%A6%B6.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "রিজওয়ান আহমেদ",
+    "note": "resized for web; licence looked up on Commons"
   },
   {
     "file": "tamil-nadu-g1.jpg",
@@ -72,10 +72,10 @@
     "width": 4288,
     "height": 2419,
     "size_bytes": 1010358,
-    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Chole_Bhature_from_Nagpur.JPG/3840px-Chole_Bhature_from_Nagpur.JPG",
-    "license": "Unknown",
-    "artist": "Unknown",
-    "note": "resized for web"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chole_Bhature_from_Nagpur.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Dheerajk88",
+    "note": "resized for web; licence looked up on Commons"
   },
   {
     "file": "gujarati-g1.jpg",
@@ -111,10 +111,10 @@
     "width": 5184,
     "height": 3456,
     "size_bytes": 1237441,
-    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Vada_Pav-Indian_street_food.JPG/3840px-Vada_Pav-Indian_street_food.JPG",
-    "license": "Unknown",
-    "artist": "Unknown",
-    "note": "resized for web"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Vada_Pav-Indian_street_food.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Rutvi Mistry",
+    "note": "resized for web; licence looked up on Commons"
   },
   {
     "file": "maharashtrian-g1.jpg",
@@ -124,10 +124,10 @@
     "width": 5184,
     "height": 3456,
     "size_bytes": 1651048,
-    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Kolhapuri_Misal_Pav.jpg/3840px-Kolhapuri_Misal_Pav.jpg",
-    "license": "Unknown",
-    "artist": "Unknown",
-    "note": "resized for web"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kolhapuri_Misal_Pav.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ankushkr2020",
+    "note": "resized for web; licence looked up on Commons"
   },
   {
     "file": "maharashtrian-g2.jpg",
@@ -176,10 +176,10 @@
     "width": 4080,
     "height": 3060,
     "size_bytes": 1918103,
-    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Masala_Dosa_2023.jpg/3840px-Masala_Dosa_2023.jpg",
-    "license": "Unknown",
-    "artist": "Unknown",
-    "note": "resized for web"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Masala_Dosa_2023.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Yakshitha",
+    "note": "resized for web; licence looked up on Commons"
   },
   {
     "file": "goan-g1.jpg",
@@ -228,9 +228,10 @@
     "width": 0,
     "height": 0,
     "size_bytes": 1276506,
-    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Bengali_Mutton_Curry.JPG/3840px-Bengali_Mutton_Curry.JPG",
-    "license": "Unknown",
-    "artist": "Unknown"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bengali_Mutton_Curry.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Kajori.p",
+    "note": "licence looked up on Commons"
   },
   {
     "file": "gujarati-g2.jpg",
@@ -479,5 +480,315 @@
     "license": "CC BY-SA 4.0",
     "artist": "Sangram Keshari Senapati",
     "note": "resized for web"
+  },
+  {
+    "file": "andhra-g1.jpg",
+    "region": "andhra",
+    "slot": "gallery",
+    "wiki_title": "Pesarattu, the green gram crepe of coastal Andhra",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pesarattu.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Ryallabandi at en.wikipedia",
+    "note": "identified by perceptual hash (distance 0)"
+  },
+  {
+    "file": "andhra-hero.jpg",
+    "region": "andhra",
+    "slot": "hero",
+    "wiki_title": "Gongura pachadi, the sour-leaf chutney of Andhra",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gongura_recipe.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Lathajan25",
+    "note": "identified by perceptual hash (distance 0)"
+  },
+  {
+    "file": "anglo-indian-g1.jpg",
+    "region": "anglo",
+    "slot": "gallery",
+    "wiki_title": "Mulligatawny soup",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mulligatawny-Soup_Mumbai.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "GeoTrinity",
+    "note": "recovered from deleted git manifest"
+  },
+  {
+    "file": "anglo-indian-g2.jpg",
+    "region": "anglo",
+    "slot": "gallery",
+    "wiki_title": "Kedgeree, rice with flaked fish and egg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kedgeree.jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "User:Justinc",
+    "note": "recovered from deleted git manifest"
+  },
+  {
+    "file": "anglo-indian-hero.jpg",
+    "region": "anglo",
+    "slot": "hero",
+    "wiki_title": "Railway mutton curry",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Odia_Mutton_Curry_(Mansha_Tarkari).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Satwik Cuttack",
+    "note": "recovered from deleted git manifest"
+  },
+  {
+    "file": "himachali-hero.jpg",
+    "region": "himachali",
+    "slot": "hero",
+    "wiki_title": "Siddu, steamed stuffed bread",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Siddu_(73518).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Gannu03",
+    "note": "identified by perceptual hash (distance 0)"
+  },
+  {
+    "file": "indo-chinese-g1.jpg",
+    "region": "indo",
+    "slot": "gallery",
+    "wiki_title": "Hakka noodles",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Tasty_hakka_noodles_image.jpg",
+    "license": "CC BY 4.0",
+    "artist": "SGUae",
+    "note": "identified by perceptual hash (distance 0)"
+  },
+  {
+    "file": "indo-chinese-g2.jpg",
+    "region": "indo",
+    "slot": "gallery",
+    "wiki_title": "Gobi manchurian",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gobi_manchurian.jpg",
+    "license": "CC BY 2.5",
+    "artist": "scaredy_kat",
+    "note": "identified by perceptual hash (distance 0)"
+  },
+  {
+    "file": "indo-chinese-hero.jpg",
+    "region": "indo",
+    "slot": "hero",
+    "wiki_title": "Chilli chicken",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Chilli_1.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Gaurav Dhwaj Khadka",
+    "note": "identified by perceptual hash (distance 0)"
+  },
+  {
+    "file": "karnataka-g1.jpg",
+    "region": "karnataka",
+    "slot": "gallery",
+    "wiki_title": "Ragi mudde, finger millet balls, with chicken curry",
+    "source_url": "https://commons.wikimedia.org/wiki/File:RAGI_MUDDE.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Vsigamany",
+    "note": "identified by perceptual hash (distance 0)"
+  },
+  {
+    "file": "karnataka-g2.jpg",
+    "region": "karnataka",
+    "slot": "gallery",
+    "wiki_title": "Neer dosa, the thin rice crepe of coastal Karnataka",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Neer_Dosa(_Neer_Tellavu).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Yakshitha",
+    "note": "identified by perceptual hash (distance 0)"
+  },
+  {
+    "file": "karnataka-hero.jpg",
+    "region": "karnataka",
+    "slot": "hero",
+    "wiki_title": "Mysore masala dosa",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mysore_masala_dosa_in_Mysuru,_July_2013.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sunnya343",
+    "note": "identified by perceptual hash (distance 0)"
+  },
+  {
+    "file": "parsi-hero.jpg",
+    "region": "parsi",
+    "slot": "hero",
+    "wiki_title": "Parsi dhansak",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Vegetable_Dhansak_With_Brown_Rice.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Aparna Balasubramanian",
+    "note": "recovered from deleted git manifest"
+  },
+  {
+    "file": "sindhi-g1.jpg",
+    "region": "sindhi",
+    "slot": "gallery",
+    "wiki_title": "Sai bhaji, the spinach and dal one-pot",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sindhi_Sai_Bhaji.JPG",
+    "license": "Public domain",
+    "artist": "Miansari66",
+    "note": "recovered from deleted git manifest"
+  },
+  {
+    "file": "sindhi-g2.jpg",
+    "region": "sindhi",
+    "slot": "gallery",
+    "wiki_title": "Dal pakwan, crisp fried discs with chana dal",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dal_Pakwan_-_Sindhi_Food_-_6.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Urvi Yagnik",
+    "note": "recovered from deleted git manifest"
+  },
+  {
+    "file": "sindhi-hero.jpg",
+    "region": "sindhi",
+    "slot": "hero",
+    "wiki_title": "Sindhi biryani",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sindhi_Biryani.JPG",
+    "license": "Public domain",
+    "artist": "Miansari66",
+    "note": "recovered from deleted git manifest"
+  },
+  {
+    "file": "andhra-g2.jpg",
+    "region": "andhra",
+    "slot": "gallery",
+    "wiki_title": "Andhra Fried Chicken.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Andhra_Fried_Chicken.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Aditya525125",
+    "note": "replaced an unattributable image; fetched with full provenance"
+  },
+  {
+    "file": "india-cuisine-zones.svg",
+    "region": "india",
+    "slot": "hero",
+    "wiki_title": "Base map: India dark grey (state outlines, recolored; cuisine zone overlays are original)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:India_dark_grey.svg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Filpro",
+    "note": "imported from the hand-maintained CREDITS.md"
+  },
+  {
+    "file": "recipes/aloo-gobi.jpg",
+    "region": "aloo",
+    "slot": "recipe",
+    "wiki_title": "Aloo gobi",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Aloo_gobi.jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "Unknown",
+    "note": "imported from the hand-maintained CREDITS.md"
+  },
+  {
+    "file": "recipes/baingan-bharta.jpg",
+    "region": "baingan",
+    "slot": "recipe",
+    "wiki_title": "Baingan bharta",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Baingan_Ka_Bharta.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Zeel Patel",
+    "note": "imported from the hand-maintained CREDITS.md"
+  },
+  {
+    "file": "recipes/bisi-bele-bath.jpg",
+    "region": "bisi",
+    "slot": "recipe",
+    "wiki_title": "Bisi bele bath",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bisi_Bele_Bath_(Bisibelebath",
+    "license": "CC BY-SA 3.0",
+    "artist": "Food and Remedy, LLC",
+    "note": "imported from the hand-maintained CREDITS.md"
+  },
+  {
+    "file": "recipes/chana-masala.jpg",
+    "region": "chana",
+    "slot": "recipe",
+    "wiki_title": "Chana masala",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chana_Masala_-_Mohammed_-_Spice_Of_Life_2024-05-27.jpg",
+    "license": "CC0",
+    "artist": "Andy Li",
+    "note": "imported from the hand-maintained CREDITS.md"
+  },
+  {
+    "file": "recipes/dal-tadka.jpg",
+    "region": "dal",
+    "slot": "recipe",
+    "wiki_title": "Dal tadka",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dal_tadka_and_naan.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Wind Hashira",
+    "note": "imported from the hand-maintained CREDITS.md"
+  },
+  {
+    "file": "recipes/palak-paneer.jpg",
+    "region": "palak",
+    "slot": "recipe",
+    "wiki_title": "Palak paneer",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Palakpaneer_Rayagada_Odisha_0009.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Lopanayak",
+    "note": "imported from the hand-maintained CREDITS.md"
+  },
+  {
+    "file": "recipes/pav-bhaji.jpg",
+    "region": "pav",
+    "slot": "recipe",
+    "wiki_title": "Pav bhaji",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bhaji_pav_2.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "BHAAGIi",
+    "note": "imported from the hand-maintained CREDITS.md"
+  },
+  {
+    "file": "recipes/rajma-chawal.jpg",
+    "region": "rajma",
+    "slot": "recipe",
+    "wiki_title": "Rajma chawal",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rajma_Chawal_Thali.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Medhi jyoti",
+    "note": "imported from the hand-maintained CREDITS.md"
+  },
+  {
+    "file": "recipes/rasam.jpg",
+    "region": "rasam.jpg",
+    "slot": "recipe",
+    "wiki_title": "Rasam soup",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rasam.JPG",
+    "license": "Public domain",
+    "artist": "Miansari66",
+    "note": "imported from the hand-maintained CREDITS.md"
+  },
+  {
+    "file": "recipes/upma.jpg",
+    "region": "upma.jpg",
+    "slot": "recipe",
+    "wiki_title": "Upma",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Upma_South_India.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Intodustin",
+    "note": "imported from the hand-maintained CREDITS.md"
+  },
+  {
+    "file": "bihari-hero.jpg",
+    "region": "bihari",
+    "slot": "hero",
+    "wiki_title": "Litti chokha",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Litti_Chokha_2.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Eddie Stann",
+    "note": "imported from the hand-maintained CREDITS.md"
+  },
+  {
+    "file": "bihari-g1.jpg",
+    "region": "bihari",
+    "slot": "gallery",
+    "wiki_title": "Champaran ahuna mutton",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Champaran_meat.jpg",
+    "license": "CC BY 3.0",
+    "artist": "YN Food Affair",
+    "note": "imported from the hand-maintained CREDITS.md"
+  },
+  {
+    "file": "bihari-g2.jpg",
+    "region": "bihari",
+    "slot": "gallery",
+    "wiki_title": "Tilkut being pounded in Gaya",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Tilkut_preparation_during_Sankranti_37.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Goutam1962",
+    "note": "imported from the hand-maintained CREDITS.md"
   }
 ]
