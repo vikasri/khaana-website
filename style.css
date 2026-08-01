@@ -121,13 +121,13 @@ p { margin: 0 0 1.1em; }
 .nav-links a:hover, .nav-links a.active { color: var(--terracotta); text-decoration: none; }
 
 /* Home and Recipes are the two destinations that are not a single cuisine, so
-   they are larger and carry their own colours: green for Home, blue for
+   they are larger and carry their own colours: maroon for Home, blue for
    Recipes. Both are checked against white, since nav text must clear AA at
-   4.5:1 — #146c43 is 6.45:1 and #0b5ed7 is 5.84:1. A more vivid blue like
-   #0a84ff measures 3.65:1 and fails, which is why it is not used. */
-.nav-links a[href="index.html"] { color: #146c43; }
+   4.5:1. #b0003a measures 7.22:1 and #0b5ed7 measures 5.84:1. A more vivid
+   blue like #0a84ff drops to 3.65:1 and fails, which is why it is not used. */
+.nav-links a[href="index.html"] { color: #b0003a; }
 .nav-links a[href="index.html"]:hover,
-.nav-links a[href="index.html"].active { color: #0d5130; }
+.nav-links a[href="index.html"].active { color: #8a002d; }
 
 .nav-links a[href="cook.html"] { color: #0b5ed7; }
 .nav-links a[href="cook.html"]:hover,
