@@ -117,13 +117,17 @@ def nutrition_panel(r):
     if not n:
         return ""
     ps, pc = n["perServing"], n["per100g"]
+    # A floor, not an estimate: unweighable ingredients count as zero.
+    plus = "+" if n.get("direction") == "understated" else ""
 
     def row(label, key, unit="g", cls=""):
         return ('<tr class="%s"><th>%s</th><td>%s</td><td>%s</td></tr>'
                 % (cls,
                    esc(label),
-                   ("%d kcal" % ps[key]) if key == "kcal" else ("%.1f %s" % (ps[key], unit)),
-                   ("%d kcal" % pc[key]) if key == "kcal" else ("%.1f %s" % (pc[key], unit))))
+                   ("%d%s kcal" % (ps[key], plus)) if key == "kcal"
+                   else ("%.1f%s %s" % (ps[key], plus, unit)),
+                   ("%d%s kcal" % (pc[key], plus)) if key == "kcal"
+                   else ("%.1f%s %s" % (pc[key], plus, unit))))
 
     rows = [
         row("Calories", "kcal", cls="nut-major"),
@@ -136,10 +140,15 @@ def nutrition_panel(r):
     ]
     unsat_s = ps["monoFat"] + ps["polyFat"]
     unsat_c = pc["monoFat"] + pc["polyFat"]
-    rows.append('<tr class="nut-sub"><th>of which unsaturated</th><td>%.1f g</td><td>%.1f g</td></tr>'
-                % (unsat_s, unsat_c))
+    rows.append('<tr class="nut-sub"><th>of which unsaturated</th><td>%.1f%s g</td>'
+                '<td>%.1f%s g</td></tr>' % (unsat_s, plus, unsat_c, plus))
 
-    notes = [CONFIDENCE_NOTE.get(n.get("confidence", "medium"))]
+    notes = []
+    if plus:
+        notes.append("The <strong>+</strong> means ingredients given to taste rather than by "
+                     "weight are counted as zero, so the true figure is a little higher than "
+                     "shown.")
+    notes.append(CONFIDENCE_NOTE.get(n.get("confidence", "medium")))
     if n.get("caveat"):
         notes.append(n["caveat"])
     if n.get("approximated"):

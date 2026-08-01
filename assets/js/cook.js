@@ -440,6 +440,19 @@
     line.innerHTML = html;
   }
 
+  // Delegated once, so cards redrawn on every keystroke need no re-binding.
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest && ev.target.closest('.kcal-toggle');
+    if (!b) return;
+    ev.preventDefault();
+    ev.stopPropagation();
+    var panel = document.getElementById(b.getAttribute('aria-controls'));
+    if (!panel) return;
+    var open = b.getAttribute('aria-expanded') === 'true';
+    b.setAttribute('aria-expanded', open ? 'false' : 'true');
+    panel.hidden = open;
+  });
+
   function renderResults(eligible, blocked, filters, sparse) {
     var out = el('results');
     out.innerHTML = '';
@@ -538,11 +551,45 @@
      pantry the reader may not have been using: with the four-item starter
      pantry every hit otherwise showed "13%" and a long Missing list, which
      reads as though the search had been filtered by it. */
+  /* Calories are shown on every card by default, with the serving weight so the
+     figure means something. The rest of the panel is one click away rather than
+     four more lines on every card in a list of twenty. */
+  function nutritionRow(r) {
+    var n = r.nutrition;
+    if (!n) return '';
+    var id = 'nut-' + r.id;
+    // Anything unweighable is counted as zero, so those figures are floors, not
+    // estimates. A + says the real number is higher rather than pretending the
+    // arithmetic is complete.
+    var plus = n.direction === 'understated' ? '+' : '';
+    var note = n.direction === 'understated'
+      ? 'The + means ingredients given to taste are counted as zero, so the real figure is a little higher.'
+      : n.direction === 'overstated'
+        ? 'Likely lower in practice: much of what is weighed here is not eaten.'
+        : 'Worked out from the listed quantities.';
+    return '<div class="kcal-row">' +
+             '<span class="kcal-main"><strong>' + n.kcal + plus + ' kcal</strong> a serving' +
+               ' <span class="kcal-weight">(' + n.servingGrams + ' g)</span></span>' +
+             '<button type="button" class="kcal-toggle" aria-expanded="false" ' +
+               'aria-controls="' + id + '">Nutrition</button>' +
+           '</div>' +
+           '<div class="kcal-detail" id="' + id + '" hidden>' +
+             '<span><b>' + n.protein.toFixed(1) + plus + ' g</b> protein</span>' +
+             '<span><b>' + n.carbs.toFixed(1) + plus + ' g</b> carbs</span>' +
+             '<span><b>' + n.fibre.toFixed(1) + plus + ' g</b> fibre</span>' +
+             '<span><b>' + n.fat.toFixed(1) + plus + ' g</b> fat</span>' +
+             '<span><b>' + n.satFat.toFixed(1) + plus + ' g</b> saturated</span>' +
+             '<p class="kcal-note">' + esc(note) + ' Full detail on the recipe page.</p>' +
+           '</div>';
+  }
+
   function card(s, searching) {
     var r = s.recipe;
-    var a = document.createElement('a');
+    // An <article> rather than an <a>: the nutrition toggle is a real button,
+    // and a button inside a link is invalid and unusable by keyboard. The whole
+    // card stays clickable through a stretched link on the title.
+    var a = document.createElement('article');
     a.className = 'match-card';
-    a.href = 'recipes/' + r.id + '.html';
 
     var have = s.lines.filter(function (l) { return !l.staple && l.state === 'have'; }).length;
     var countable = s.lines.filter(function (l) { return !l.staple; }).length;
@@ -564,11 +611,13 @@
       '<div class="match-body">' +
         '<div class="match-meta">' + esc(r.region) + ' &middot; ' + esc(r.difficulty) +
           ' &middot; ' + (r.prepMinutes + r.cookMinutes) + ' min &middot; serves ' + r.servings + '</div>' +
-        '<h3>' + esc(r.name) + '</h3>' +
+        '<h3><a class="match-link" href="recipes/' + esc(r.id) + '.html">' +
+          esc(r.name) + '</a></h3>' +
         '<p class="match-sub">' + esc(r.subtitle) + '</p>' +
         '<div class="diet-tags">' + r.tags.map(function (t) {
             return '<span class="diet-tag">' + esc(labelForTag(t)) + '</span>';
           }).join('') + '</div>' +
+        nutritionRow(r) +
         (searching ? '' :
         '<div class="match-lines">' +
           '<div class="ml have"><strong>' + have + '/' + countable + '</strong> ingredients on hand</div>' +

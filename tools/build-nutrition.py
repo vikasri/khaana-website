@@ -236,9 +236,24 @@ def main(usda_path):
         soaky = any(w in blob for w in ("syrup", "soaked in", "batter", "fermented batter"))
         n["confidence"] = ("low" if share > 0.30 or soaky
                            else "medium" if share > 0.15 else "good")
+
+        # Which way the error runs matters more than that there is one.
+        # Anything that could not be weighed is counted as zero, so the real
+        # figure is HIGHER than shown — those are marked with a + on the number.
+        # Syrup and batter dishes run the other way: the weighed input overstates
+        # what is actually eaten, so a + there would be a lie.
         if soaky:
+            n["direction"] = "overstated"
             n["caveat"] = ("Much of the weighed input may not be eaten — syrup left in the "
-                           "bowl, or batter that yields more than the stated servings.")
+                           "bowl, or batter that yields more than the stated servings — so "
+                           "the real figure is likely lower than this.")
+        elif share > 0.10:
+            n["direction"] = "understated"
+            n["caveat"] = ("Ingredients given to taste rather than by weight are counted as "
+                           "zero, so the real figure is a little higher than this. The + says "
+                           "so.")
+        else:
+            n["direction"] = "ok"
         r["nutrition"] = n
         done += 1
         coverage.append(len(n["unquantified"]) / max(1, len(r["ingredients"])))

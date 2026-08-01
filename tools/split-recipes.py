@@ -44,6 +44,23 @@ def main():
             {"id": i["id"], "essential": i.get("essential", True)}
             for i in r["ingredients"]
         ]
+        # A slim nutrition subset: what a result card shows, not the whole
+        # block. The full figures, the caveats and the approximation notes stay
+        # in the detail file and on the recipe page.
+        n = r.get("nutrition")
+        if n:
+            ps = n["perServing"]
+            entry["nutrition"] = {
+                "kcal": ps["kcal"],
+                "servingGrams": n["servingGrams"],
+                "protein": ps["protein"],
+                "carbs": ps["carbs"],
+                "fat": ps["fat"],
+                "satFat": ps["satFat"],
+                "fibre": ps["fibre"],
+                "confidence": n.get("confidence", "medium"),
+                "direction": n.get("direction", "ok"),
+            }
         index.append(entry)
         json.dump(r, open(os.path.join(DETAIL_DIR, r["id"] + ".json"), "w",
                           encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
