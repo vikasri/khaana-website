@@ -110,11 +110,6 @@
     });
     if (f.maxTime && total > f.maxTime) reasons.push('over ' + f.maxTime + ' min');
 
-    var missingKit = (recipe.equipment || []).filter(function (e) {
-      return f.equipment.length > 0 && f.equipment.indexOf(e) === -1;
-    });
-    if (missingKit.length) reasons.push('needs ' + missingKit.map(labelForEquip).join(', '));
-
     return reasons;
   }
 
@@ -191,13 +186,9 @@
     var diets = Array.prototype.slice
       .call(document.querySelectorAll('input[name="diet"]:checked'))
       .map(function (i) { return i.value; });
-    var equipment = Array.prototype.slice
-      .call(document.querySelectorAll('input[name="equip"]:checked'))
-      .map(function (i) { return i.value; });
     var t = el('f-time').value;
     return {
       diets: diets,
-      equipment: equipment,
       maxTime: t ? parseInt(t, 10) : null
     };
   }
@@ -318,13 +309,6 @@
     var applied = [];
     if (filters.diets.length) applied.push(filters.diets.map(labelForTag).join(', '));
     if (filters.maxTime) applied.push('under ' + filters.maxTime + ' minutes');
-    // EQUIP_LABELS carry an article because they are read in a sentence
-    // ("needs a pressure cooker"). In a filter list the article is wrong.
-    if (filters.equipment.length) {
-      applied.push(filters.equipment
-        .map(function (e) { return labelForEquip(e).replace(/^an? /, ''); })
-        .join(', '));
-    }
 
     if (!chosen && !applied.length) { line.hidden = true; line.innerHTML = ''; return; }
 
@@ -385,8 +369,8 @@
       none.className = 'no-results';
       none.textContent = hidden
         ? 'Nothing reaches ' + MIN_PCT + '% of its ingredients from your pantry yet. ' +
-          'Tick a few more staples, or loosen the time and equipment filters.'
-        : 'Nothing fits those constraints yet. Try loosening the time limit or the equipment list.';
+          'Tick a few more staples, or loosen the time and dietary filters.'
+        : 'Nothing fits those constraints yet. Try loosening the time limit or the dietary filters.';
       out.appendChild(none);
     }
 
@@ -517,7 +501,7 @@
   /* ---------- boot ---------- */
 
   function wire() {
-    document.querySelectorAll('input[name="diet"], input[name="equip"]').forEach(function (i) {
+    document.querySelectorAll('input[name="diet"]').forEach(function (i) {
       i.addEventListener('change', update);
     });
     el('f-time').addEventListener('change', update);
