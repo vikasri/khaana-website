@@ -13,8 +13,14 @@
   // Below this share of a recipe's ingredients the suggestion stops being
   // useful — it is a shopping list with a photo attached.
   var MIN_PCT = 20;
-  // The pantry starts empty; nothing is ticked on a first visit.
-  var DEFAULT_PANTRY = [];
+  // Ticked on a first visit: the handful almost every Indian kitchen has, so
+  // the page shows real suggestions before the reader touches anything. A saved
+  // pantry always wins over this, including one deliberately emptied.
+  //
+  // Salt is deliberately absent. It is a staple in data/pantry.json, which is a
+  // stronger claim than a tick: scoring skips staples outright, so every recipe
+  // already assumes salt. Listing it here would add a row that changes nothing.
+  var DEFAULT_PANTRY = ['black-pepper', 'tomato', 'garam-masala', 'garlic'];
   // The size of the database is not something the page advertises. Any count
   // above this is reported as "100+" rather than exactly.
   var COUNT_CAP = 100;
