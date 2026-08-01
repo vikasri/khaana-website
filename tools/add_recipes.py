@@ -47,15 +47,18 @@ REGION_PAGE = {
  "Awadhi/Lucknowi": "awadhi-lucknowi.html", "Kashmiri": "kashmiri.html",
  "Punjabi": "punjabi.html", "Rajasthani": "rajasthani.html",
  "Gujarati": "gujarati.html", "Maharashtrian": "maharashtrian.html",
- "Goan": "goan.html", "Kerala": "kerala.html", "South Indian": "south-indian.html",
- "Hyderabadi": "hyderabadi.html", "Odia": "odia.html", "Bengali": "bengali.html",
+ "Goan": "goan.html", "Kerala": "kerala.html", "Hyderabadi": "hyderabadi.html",
+ "Odia": "odia.html", "Bengali": "bengali.html", "Bihari": "bihari.html",
  "Northeast Indian": "northeast-indian.html",
- "Bihari": "bihari.html",
- # Cuisines without a region page of their own. recipe.js renders the region
- # as plain text rather than a dead link when this is None.
- "Sindhi": None, "Parsi": None, "Chettinad": None, "Himachali": None,
- "Andhra": None, "Karnataka": None, "Mangalorean": None, "Kodava": None,
- "Uttarakhandi": None, "Anglo-Indian": None,
+ # "South Indian" was a catch-all overlapping Andhra, Karnataka and Kerala.
+ # With those separate it means Tamil by elimination, so it is named that.
+ "Tamil Nadu": "tamil-nadu.html",
+ "Andhra": "andhra.html", "Karnataka": "karnataka.html",
+ "Himachali/Pahari": "himachali.html",
+ # Community cuisines with no territory in modern India: they get a page but
+ # no zone on the map, because a zone would be a false claim.
+ "Parsi": "parsi.html", "Sindhi": "sindhi.html",
+ "Anglo-Indian": "anglo-indian.html",
 }
 
 
