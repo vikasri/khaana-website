@@ -45,15 +45,32 @@ SKIP = {"south-indian.html", "himachali.html"}   # redirect stubs
 
 
 def nav_html(current):
+    """Home, Recipes, a Cuisines menu, About.
+
+    The 21 cuisines used to sit in the bar itself, which meant 24 items
+    wrapping to three lines on a desktop and colliding with the brand. They are
+    still written into the page, inside a menu that is closed by default, so
+    every cuisine remains a crawlable link from every page.
+    """
+    cuisine_hrefs = {h for h, _ in CUISINES}
+    on_cuisine = current in cuisine_hrefs
+
     rows = ['        <li><a href="index.html"%s>Home</a></li>'
             % (' class="active"' if current == "index.html" else ""),
             '        <li><a href="cook.html"%s>Recipes</a></li>'
             % (' class="active"' if current == "cook.html" else "")]
+
+    menu = ['        <li class="nav-cuisines">',
+            '          <button type="button" class="nav-cuisines-toggle%s" '
+            'aria-expanded="false" aria-controls="nav-cuisine-menu">Cuisines</button>'
+            % (" active" if on_cuisine else ""),
+            '          <ul class="nav-dropdown" id="nav-cuisine-menu">']
     for href, label in CUISINES:
         cls = ' class="active"' if href == current else ""
-        rows.append('        <li><a href="%s"%s>%s</a></li>' % (href, cls, label))
-    # About closes the list: it is the one item that is neither a cuisine nor a
-    # way into the recipes, and it says what the site has and has not checked.
+        menu.append('            <li><a href="%s"%s>%s</a></li>' % (href, cls, label))
+    menu += ['          </ul>', '        </li>']
+    rows += menu
+
     rows.append('        <li><a href="about.html"%s>About</a></li>'
                 % (' class="active"' if current == "about.html" else ""))
     return '      <ul class="nav-links">\n' + "\n".join(rows) + "\n      </ul>"

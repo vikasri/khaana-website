@@ -59,3 +59,34 @@ document.addEventListener('DOMContentLoaded', function () {
       : 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
   });
 })();
+
+
+/* The Cuisines menu. Click to open, click away or press Escape to close. */
+(function () {
+  document.addEventListener('click', function (ev) {
+    var t = ev.target.closest && ev.target.closest('.nav-cuisines-toggle');
+    var open = document.querySelector('.nav-cuisines.open');
+    if (t) {
+      var li = t.parentNode;
+      var wasOpen = li.classList.contains('open');
+      if (open) { open.classList.remove('open');
+                  open.querySelector('.nav-cuisines-toggle').setAttribute('aria-expanded', 'false'); }
+      if (!wasOpen) { li.classList.add('open'); t.setAttribute('aria-expanded', 'true'); }
+      ev.preventDefault();
+      return;
+    }
+    if (open && !ev.target.closest('.nav-dropdown')) {
+      open.classList.remove('open');
+      open.querySelector('.nav-cuisines-toggle').setAttribute('aria-expanded', 'false');
+    }
+  });
+  document.addEventListener('keydown', function (ev) {
+    if (ev.key !== 'Escape') return;
+    var open = document.querySelector('.nav-cuisines.open');
+    if (!open) return;
+    open.classList.remove('open');
+    var b = open.querySelector('.nav-cuisines-toggle');
+    b.setAttribute('aria-expanded', 'false');
+    b.focus();
+  });
+})();
