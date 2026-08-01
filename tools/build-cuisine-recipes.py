@@ -94,7 +94,6 @@ def block(region, query, recipes):
 <section class="tight cuisine-recipes">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">Every recipe</div>
       <h2>More %s recipes</h2>
     </div>
     <div class="recipe-tiles">
@@ -115,14 +114,13 @@ def block(region, query, recipes):
         <a class="eat-out-btn" data-query="%s"
            href="https://www.google.com/maps/search/?api=1&amp;query=%s"
            target="_blank" rel="noopener noreferrer">Find %s restaurants</a>
-      </div>
-      <p class="eat-out-note">Leave the box empty and it uses your device location.
-        Nothing is stored here. Prefer
+        <!-- The explanation that used to sit here said what the reader finds
+             out faster by clicking. The Apple Maps alternative is the one part
+             worth keeping, so it moves into the row as a plain second link. -->
         <a class="eat-out-alt" data-query="%s"
            href="https://maps.apple.com/?q=%s"
-           target="_blank" rel="noopener noreferrer">Apple&nbsp;Maps</a>?
-        Getting the cuisine right matters more than the drive, so results can be
-        an hour or two away.</p>
+           target="_blank" rel="noopener noreferrer">Apple&nbsp;Maps</a>
+      </div>
     </div>
   </div>
 </section>

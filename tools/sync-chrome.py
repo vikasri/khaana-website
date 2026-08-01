@@ -90,7 +90,12 @@ def footer_html():
 
 
 def main():
-    nav_re = re.compile(r'      <ul class="nav-links">.*?</ul>', re.S)
+    # Bounded by </nav>, not by the first </ul>. The Cuisines dropdown put a
+    # nested <ul> inside this one, so a non-greedy match to "</ul>" stopped at
+    # the dropdown's closing tag and left the real tail behind, duplicating the
+    # About link on all 25 pages. Matching to </nav> takes the whole list
+    # however deeply it nests, and repairs a page that was already doubled.
+    nav_re = re.compile(r'      <ul class="nav-links">.*?(?=\n\s*</nav>)', re.S)
     foot_re = re.compile(r'    <div>\s*<h4>Cuisines</h4>.*?(?=    <div class="credit-line">)', re.S)
     changed = []
     for path in sorted(glob.glob(os.path.join(ROOT, "*.html"))):
