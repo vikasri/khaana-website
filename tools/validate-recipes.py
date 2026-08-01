@@ -24,7 +24,7 @@ TAGS = {"vegetarian", "vegan", "gluten-free", "dairy-free", "nut-free",
         "no-onion-garlic", "pescatarian",
         # Derived by tools/tag-healthy.py from explicit thresholds, not authored.
         "healthier"}
-ALLERGENS = {"dairy", "gluten", "nuts", "fish"}
+ALLERGENS = {"dairy", "gluten", "nuts", "fish", "soy"}
 
 # Ingredient groups that decide a tag. Kept here rather than in pantry.json
 # because they encode dietary rules, not pantry structure.
@@ -34,7 +34,12 @@ MEAT = {"beef", "chicken", "duck", "mutton", "pork"}
 SEAFOOD = {"crab", "dried-fish", "fish", "prawns", "squid"}
 # rava (semolina) and dalia (broken wheat) are wheat despite not being called
 # flour; leaving them out would let a gluten-free tag through on an upma.
-GLUTEN = {"atta", "maida", "bread", "pav", "vermicelli", "dalia", "rava"}
+GLUTEN = {"atta", "maida", "bread", "pav", "vermicelli", "dalia", "rava",
+          # Soy sauce is brewed with wheat and egg noodles are wheat.
+          "noodles", "soy-sauce"}
+# Soy arrived with the Indo-Chinese recipes and is a major allergen in its own
+# right, so it is declared rather than folded in with something else.
+SOY = {"soy-sauce", "tofu"}
 NUTS = {"almonds", "cashew", "peanut", "pistachios", "walnuts", "melon-seeds"}
 # US labelling counts coconut as a tree nut; Indian cooking never does, and
 # treating it as one would put a nuts warning on most of Kerala and Goa. So
@@ -121,7 +126,7 @@ def main():
 
         # Allergens follow the same essential/optional split.
         for group, name in ((DAIRY, "dairy"), (GLUTEN, "gluten"),
-                            (NUTS, "nuts"), (SEAFOOD, "fish")):
+                            (NUTS, "nuts"), (SEAFOOD, "fish"), (SOY, "soy")):
             if essential & group and name not in allerg:
                 err(rid, "essential %s (%s) but does not declare the allergen"
                     % (name, ", ".join(sorted(essential & group))))

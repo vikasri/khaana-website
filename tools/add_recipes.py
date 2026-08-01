@@ -59,6 +59,7 @@ REGION_PAGE = {
  # no zone on the map, because a zone would be a false claim.
  "Parsi": "parsi.html", "Sindhi": "sindhi.html",
  "Anglo-Indian": "anglo-indian.html",
+ "Indo-Chinese": "indo-chinese.html",
 }
 
 

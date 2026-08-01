@@ -22,7 +22,7 @@ EQUIPMENT = {"stovetop", "kadhai", "tawa", "oven", "steamer", "blender",
              "pressure-cooker"}
 TAGS = {"vegetarian", "vegan", "gluten-free", "dairy-free", "nut-free",
         "no-onion-garlic", "pescatarian", "healthier"}
-ALLERGENS = {"dairy", "gluten", "nuts", "fish"}
+ALLERGENS = {"dairy", "gluten", "nuts", "fish", "soy"}
 
 
 def main():

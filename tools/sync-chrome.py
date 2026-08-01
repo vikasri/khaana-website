@@ -36,6 +36,7 @@ CUISINES = [
     ("sindhi.html",          "Sindhi"),
     ("parsi.html",           "Parsi"),
     ("anglo-indian.html",    "Anglo-Indian"),
+    ("indo-chinese.html",    "Indo-Chinese"),
 ]
 FOOTER_HEADS = ["Cuisines", "More", "Also", "And"]
 
