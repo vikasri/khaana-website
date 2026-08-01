@@ -1213,23 +1213,29 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
   display: inline-flex;
   align-items: center;
   gap: 16px;
-  padding: 30px 60px;
+  padding: 34px 68px;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--azure), var(--azure-dark));
+  /* A vivid blue rather than the muted --azure steel this used to carry: it is
+     the page's primary action and the likeliest way in for most visitors.
+     The light stop is #2563eb because the hover state brightens by 8%, and the
+     hovered colour is what has to clear AA — 5.17:1 at rest, 4.54:1 hovered.
+     A more obvious choice like #1a73e8 measures 4.51:1 at rest and drops to
+     3.94:1 under the same hover, which fails. */
+  background: linear-gradient(135deg, #2563eb, #0847a6);
   color: #fff;
   font-family: var(--sans);
-  font-size: 1.55rem;
+  font-size: 1.7rem;
   font-weight: 700;
   line-height: 1.2;
   text-decoration: none;
-  box-shadow: 0 8px 20px rgba(18, 63, 93, 0.32);
+  box-shadow: 0 8px 22px rgba(8, 71, 166, 0.34);
   transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
 }
 .find-cta:hover {
   text-decoration: none;
   transform: translateY(-2px);
   filter: brightness(1.08);
-  box-shadow: 0 14px 30px rgba(18, 63, 93, 0.40);
+  box-shadow: 0 14px 32px rgba(8, 71, 166, 0.42);
 }
 .find-cta:active {
   transform: translateY(0);
@@ -1261,14 +1267,23 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 }
 
 @media (max-width: 760px) {
-  .find-wrap { grid-template-columns: 1fr; gap: 16px; }
+  /* Stacked, the button and the search box were 16px apart and read as one
+     undifferentiated block. This is the page's main way in, so it gets room on
+     both sides rather than being one item in a list. */
+  .find-wrap { grid-template-columns: 1fr; gap: 30px; }
+  .find-cta-wrap { margin: 14px 0 6px; }
   .find-divider { display: none; }
   /* The label is long, so the enlarged padding has to give way on narrow
      screens or the pill overflows its column. */
-  .find-cta { padding: 22px 30px; font-size: 1.22rem; max-width: 100%; }
+  .find-cta { padding: 26px 34px; font-size: 1.32rem; max-width: 100%; }
   /* Narrow screens have no room for the label on one line — let it wrap here
      rather than overflow the viewport. */
   .find-cta-label { white-space: normal; }
+  /* Same button closes every region page, where it sits directly in the
+     container with no wrapper, so the air has to come from the band itself.
+     Needs the element qualifier to outrank `section.tight`, which is the same
+     specificity and comes later in the file. */
+  section.cook-cta-band { padding-top: 38px; padding-bottom: 38px; }
 }
 
 /* Recipes without a photograph get a lettered tile rather than a broken image
