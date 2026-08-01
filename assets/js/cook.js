@@ -263,9 +263,28 @@
     renderResults(eligible, blocked, filters, sparse);
   }
 
+  // A plain restatement of what the results are filtered by, so the reader can
+  // see it without scrolling back up to the panel.
+  function renderSelectedLine(filters) {
+    var line = el('selected-line');
+    if (!line) return;
+    var bits = [];
+    if (selected.size) {
+      bits.push(Array.from(selected).map(nameFor).sort().join(', '));
+    }
+    if (filters.diets.length) bits.push(filters.diets.map(labelForTag).join(', '));
+    if (filters.maxTime) bits.push('under ' + filters.maxTime + ' minutes');
+    if (filters.equipment.length) bits.push(filters.equipment.map(labelForEquip).join(', '));
+    if (!bits.length) { line.hidden = true; line.textContent = ''; return; }
+    line.hidden = false;
+    line.innerHTML = '<span class="selected-label">Selected</span> ' + esc(bits.join(' &middot; '))
+      .replace(/&amp;middot;/g, '&middot;');
+  }
+
   function renderResults(eligible, blocked, filters, sparse) {
     var out = el('results');
     out.innerHTML = '';
+    renderSelectedLine(filters);
 
     var hidden = (sparse || []).length;
     var summary = el('results-summary');
@@ -346,7 +365,7 @@
       blocked.forEach(function (s) {
         var p = document.createElement('p');
         p.className = 'blocked-row';
-        p.innerHTML = '<a href="recipe.html?id=' + s.recipe.id + '">' + esc(s.recipe.name) +
+        p.innerHTML = '<a href="recipes/' + s.recipe.id + '.html">' + esc(s.recipe.name) +
           '</a> <span>' + esc(s.excluded.join(' / ')) + '</span>';
         bwrap.appendChild(p);
       });
@@ -357,7 +376,7 @@
     var r = s.recipe;
     var a = document.createElement('a');
     a.className = 'match-card';
-    a.href = 'recipe.html?id=' + r.id;
+    a.href = 'recipes/' + r.id + '.html';
 
     var have = s.lines.filter(function (l) { return !l.staple && l.state === 'have'; }).length;
     var countable = s.lines.filter(function (l) { return !l.staple; }).length;

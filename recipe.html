@@ -5,7 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Recipe | Khaana</title>
 <meta name="description" content="A standardised Khaana recipe: measured ingredients, preparation notes, step-by-step method, substitutions, allergens and storage guidance." />
+<link rel="canonical" href="https://khaana.com/recipe.html" />
+<meta name="robots" content="noindex, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Khaana" />
+<meta property="og:title" content="Recipe | Khaana" />
+<meta property="og:description" content="A standardised Khaana recipe: measured ingredients, preparation notes, step-by-step method, substitutions, allergens and storage guidance." />
+<meta property="og:url" content="https://khaana.com/recipe.html" />
+<meta property="og:image" content="https://khaana.com/assets/images/home-hero.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Recipe | Khaana" />
+<meta name="twitter:description" content="A standardised Khaana recipe: measured ingredients, preparation notes, step-by-step method, substitutions, allergens and storage guidance." />
+<meta name="twitter:image" content="https://khaana.com/assets/images/home-hero.jpg" />
 <link rel="stylesheet" href="style.css" />
+<script>
+// Recipes now live at /recipes/<id>.html so they can carry their own title,
+// description, Open Graph tags and Recipe schema. Anything already shared as
+// recipes/x.html lands here and is forwarded.
+(function () {
+  var m = /[?&]id=([^&]+)/.exec(location.search);
+  if (m) location.replace('recipes/' + encodeURIComponent(decodeURIComponent(m[1])) + '.html');
+})();
+</script>
 </head>
 <body>
 
