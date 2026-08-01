@@ -163,11 +163,14 @@
                'mustard-seeds', 'garam-masala', 'cloves', 'cinnamon', 'mustard-oil',
                'bay-leaf', 'kashmiri-chilli', 'coconut-oil', 'cumin-powder'];
 
-  // The twenty most-used things that are not shelf stock: what actually varies.
+  // The most-used things that are not shelf stock. Both rices are here: they
+  // substitute for each other at a 0.20 penalty, so the matcher barely cares
+  // which you own, but basmati is what most kitchens actually have and leaving
+  // it out sent those cooks digging through a category to find it.
   var COMMON = ['onion', 'tomato', 'potato', 'ginger', 'garlic', 'green-chilli',
                 'coriander-leaves', 'curry-leaves', 'shallot', 'chicken', 'mutton',
-                'fish', 'chana-dal', 'toor-dal', 'urad-dal', 'rice', 'atta',
-                'besan', 'maida', 'rice-flour'];
+                'fish', 'chana-dal', 'toor-dal', 'urad-dal', 'basmati-rice', 'rice',
+                'atta', 'besan', 'maida', 'rice-flour'];
 
   function catalogue() {
     var out = [];
@@ -255,7 +258,7 @@
     var group = document.createElement('div');
     group.className = 'pantry-group pantry-common-group';
     var h = document.createElement('h4');
-    h.textContent = 'Fresh things you have tonight';
+    h.textContent = 'Most-used ingredients';
     group.appendChild(h);
     var list = document.createElement('div');
     list.className = 'pantry-items';
