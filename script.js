@@ -50,8 +50,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!a) return;
     var box = document.getElementById('eat-out-where');
     var where = box ? box.value.trim() : '';
-    var cuisine = a.getAttribute('data-cuisine') || '';
-    var q = cuisine + ' restaurant' + (where ? ' ' + where : '');
+    // The search phrase is built by tools/build-cuisine-recipes.py and carried
+    // in data-query, so the typed-postcode path and the plain href ask Maps
+    // for exactly the same thing. Composing it here from the region name is
+    // what produced "Pahari restaurant" and a list of nearby pizza.
+    var q = a.getAttribute('data-query') || '';
+    if (!q) return;
+    // "near <place>" rather than a bare append. Maps reads it as a centre to
+    // search around and will reach well past the town for a match, where a
+    // trailing place name reads as part of the business name and narrows it.
+    if (where) q += ' near ' + where;
     // Apple Maps takes a plain q; Google wants its api=1 search form. Both
     // open in a browser when the app is absent, so neither is a dead end.
     a.href = a.classList.contains('eat-out-alt')

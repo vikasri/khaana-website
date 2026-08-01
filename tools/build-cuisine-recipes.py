@@ -18,11 +18,51 @@ it has, and a per-region count adds up to the same thing.
 Idempotent: the block is delimited by markers and replaced whole on each run.
 """
 import html, json, os, re, sys
+from urllib.parse import quote_plus
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BEGIN = "<!-- BEGIN generated cuisine recipe list -->"
 END = "<!-- END generated cuisine recipe list -->"
 ROW_LIMIT = 12
+
+# What to actually ask Maps for.
+#
+# The first version searched the region name plus "restaurant", which is fine
+# for Punjabi or Bengali and useless for the rest. There is no such listing as
+# a "Pahari restaurant" or an "Odia restaurant", so Maps found no match and did
+# what it does with any unmatched query: returned whatever was nearby. Readers
+# got Thai places and pizza.
+#
+# So each region gets a phrase built out of the words restaurants put on their
+# own signage, not the words a food writer would use. Awadhi food is sold as
+# Mughlai, Karnataka food as Udupi, Tamil Nadu food as Chettinad or South
+# Indian. Every phrase ends in "Indian restaurant" (Indo-Chinese reads "Indian
+# Chinese"), which is the part that keeps the results on-cuisine: where the
+# specific term matches nothing, Maps still has a real category to fall back
+# to, so the worst case is a nearby Indian restaurant rather than a taqueria.
+SEARCH = {
+    "Andhra":           "Andhra Indian restaurant",
+    "Anglo-Indian":     "Anglo Indian restaurant",
+    "Awadhi/Lucknowi":  "Awadhi Mughlai Indian restaurant",
+    "Bengali":          "Bengali Indian restaurant",
+    "Bihari":           "Bihari North Indian restaurant",
+    "Goan":             "Goan Indian restaurant",
+    "Gujarati":         "Gujarati Indian restaurant",
+    "Hyderabadi":       "Hyderabadi biryani Indian restaurant",
+    "Indo-Chinese":     "Indian Chinese Hakka restaurant",
+    "Karnataka":        "Udupi Mangalorean Indian restaurant",
+    "Kashmiri":         "Kashmiri Indian restaurant",
+    "Kerala":           "Kerala South Indian restaurant",
+    "Maharashtrian":    "Maharashtrian Indian restaurant",
+    "Northeast Indian": "Northeast Indian Naga restaurant",
+    "Odia":             "Odia Indian restaurant",
+    "Pahari":           "Pahari North Indian restaurant",
+    "Parsi":            "Parsi Irani Indian restaurant",
+    "Punjabi":          "Punjabi North Indian restaurant",
+    "Rajasthani":       "Rajasthani Marwari Indian restaurant",
+    "Sindhi":           "Sindhi Indian restaurant",
+    "Tamil Nadu":       "Chettinad South Indian restaurant",
+}
 
 
 def esc(s):
@@ -42,7 +82,7 @@ def tile(r, hidden):
                thumb, esc(r["name"]), mins, esc(r.get("difficulty", ""))))
 
 
-def block(region, recipes):
+def block(region, query, recipes):
     shown = recipes[:ROW_LIMIT]
     rest = recipes[ROW_LIMIT:]
     tiles = "\n      ".join(tile(r, False) for r in shown)
@@ -72,21 +112,23 @@ def block(region, recipes):
         <label class="sr-only" for="eat-out-where">Postcode or town, optional</label>
         <input type="text" id="eat-out-where" class="eat-out-where"
                placeholder="Postcode or town (optional)" autocomplete="postal-code" />
-        <a class="eat-out-btn" data-cuisine="%s"
-           href="https://www.google.com/maps/search/?api=1&amp;query=%s+restaurant"
+        <a class="eat-out-btn" data-query="%s"
+           href="https://www.google.com/maps/search/?api=1&amp;query=%s"
            target="_blank" rel="noopener noreferrer">Find %s restaurants</a>
       </div>
       <p class="eat-out-note">Leave the box empty and it uses your device location.
         Nothing is stored here. Prefer
-        <a class="eat-out-alt" data-cuisine="%s"
-           href="https://maps.apple.com/?q=%s+restaurant"
-           target="_blank" rel="noopener noreferrer">Apple&nbsp;Maps</a>?</p>
+        <a class="eat-out-alt" data-query="%s"
+           href="https://maps.apple.com/?q=%s"
+           target="_blank" rel="noopener noreferrer">Apple&nbsp;Maps</a>?
+        Getting the cuisine right matters more than the drive, so results can be
+        an hour or two away.</p>
     </div>
   </div>
 </section>
 %s""" % (BEGIN, esc(region), tiles, more,
-         esc(region), esc(region.replace(" ", "+").replace("/", "+")), esc(region),
-         esc(region), esc(region.replace(" ", "+").replace("/", "+")), END)
+         esc(query), quote_plus(query), esc(region),
+         esc(query), quote_plus(query), END)
 
 
 def main():
@@ -97,6 +139,16 @@ def main():
         if page:
             by_page.setdefault(page, []).append(r)
 
+    # A region with no phrase, or one that forgot the Indian anchor, would ship
+    # the bug this table exists to fix. Refuse to write anything rather than
+    # let one page quietly send readers to the nearest sandwich shop.
+    regions = sorted({r["region"] for r in db if r.get("regionPage")})
+    bad = [x for x in regions if "indian" not in SEARCH.get(x, "").lower()]
+    if bad:
+        print("  ! no anchored Maps query for: %s" % ", ".join(bad))
+        print("    add one to SEARCH in this file")
+        return 1
+
     written = 0
     for page, recipes in sorted(by_page.items()):
         path = os.path.join(ROOT, page)
@@ -105,7 +157,8 @@ def main():
             continue
         recipes.sort(key=lambda r: r["name"])
         src = open(path, encoding="utf-8").read()
-        new_block = block(recipes[0]["region"], recipes)
+        region = recipes[0]["region"]
+        new_block = block(region, SEARCH[region], recipes)
 
         if BEGIN in src:
             src = re.sub(re.escape(BEGIN) + r".*?" + re.escape(END), new_block, src, flags=re.S)

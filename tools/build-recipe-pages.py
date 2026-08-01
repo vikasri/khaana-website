@@ -53,6 +53,12 @@ def schema(r, url, img):
         "name": r["name"],
         "description": r.get("subtitle", ""),
         "url": url,
+        # Search engines want a named author on a recipe, and leaving it out is
+        # part of why these pages look thin to them. It is the site rather than
+        # a person, so Organization is the honest type. Kept to the markup: no
+        # byline is printed on the page, since a line saying who wrote it adds
+        # nothing a reader of khaana.com does not already know.
+        "author": {"@type": "Organization", "name": "Khaana", "url": "https://khaana.com/"},
         "recipeCuisine": r["region"],
         "recipeCategory": "Main" if "dessert" not in (r.get("subtitle") or "").lower() else "Dessert",
         "prepTime": iso_duration(r.get("prepMinutes")),
