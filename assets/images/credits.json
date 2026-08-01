@@ -790,5 +790,2655 @@
     "license": "CC BY-SA 4.0",
     "artist": "Goutam1962",
     "note": "imported from the hand-maintained CREDITS.md"
+  },
+  {
+    "file": "recipes/andhra-kodi-kura.jpg",
+    "region": "Andhra",
+    "slot": "recipe",
+    "wiki_title": "Andhra kodi kura (chicken gravy).JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Andhra_kodi_kura_(chicken_gravy).JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Karteeki4u",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/bobbatlu.jpg",
+    "region": "Andhra",
+    "slot": "recipe",
+    "wiki_title": "Nethi Bobbatlu.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Nethi_Bobbatlu.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "K.Venkataramana",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/gutti-vankaya-kura.jpg",
+    "region": "Andhra",
+    "slot": "recipe",
+    "wiki_title": "Gutti Vankaya Kura.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gutti_Vankaya_Kura.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Rupak76",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/pulihora.jpg",
+    "region": "Andhra",
+    "slot": "recipe",
+    "wiki_title": "LEMON PULIHORA.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:LEMON_PULIHORA.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Mkr.lines",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/punugulu.jpg",
+    "region": "Andhra",
+    "slot": "recipe",
+    "wiki_title": "Punugulu1.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Punugulu1.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Balajijagadesh",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/anglo-indian-ball-curry.jpg",
+    "region": "Anglo-Indian",
+    "slot": "recipe",
+    "wiki_title": "LaMelo Ball and Steph Curry (51916614019).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:LaMelo_Ball_and_Steph_Curry_(51916614019).jpg",
+    "license": "CC BY 2.0",
+    "artist": "Erik Drost",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/country-captain-chicken.jpg",
+    "region": "Anglo-Indian",
+    "slot": "recipe",
+    "wiki_title": "Country Captain.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Country_Captain.jpg",
+    "license": "CC BY 2.0",
+    "artist": "Dan Costin",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kalkals.jpg",
+    "region": "Anglo-Indian",
+    "slot": "recipe",
+    "wiki_title": "Kalkals 1.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kalkals_1.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sere bites",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/anglo-indian-mutton-cutlets.jpg",
+    "region": "Anglo-Indian",
+    "slot": "recipe",
+    "wiki_title": "Mutton Afgani Cutlet.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mutton_Afgani_Cutlet.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Marajozkee",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/anglo-indian-pepper-water.jpg",
+    "region": "Anglo-Indian",
+    "slot": "recipe",
+    "wiki_title": "Peppers in water.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Peppers_in_water.jpg",
+    "license": "CC0",
+    "artist": "ulleo",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/yellow-coconut-rice.jpg",
+    "region": "Anglo-Indian",
+    "slot": "recipe",
+    "wiki_title": "Yellow curry and green curry - Nok Nok Kitchen at The Cow 2025-09-30.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Yellow_curry_and_green_curry_-_Nok_Nok_Kitchen_at_The_Cow_2025-09-30.jpg",
+    "license": "CC0",
+    "artist": "Andy Li",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/arhar-ki-dal-awadhi.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Stuffed Batti with Dal and Gajar ka Halwa.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Stuffed_Batti_with_Dal_and_Gajar_ka_Halwa.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Nj02",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/awadhi-kheer.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Kheer.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kheer.jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "stu spivack",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/awadhi-murgh-masala.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Nizami Murgh Masala 02.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Nizami_Murgh_Masala_02.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Vis M",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/awadhi-paneer-korma.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Paneer Korma with Gravy.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Paneer_Korma_with_Gravy.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Manish Kumar Majumdar",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/bhindi-do-pyaza.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Bhindi Do Pyaza.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bhindi_Do_Pyaza.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ravi Talwar",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/boti-kebab.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Boti and shesh kebab.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Boti_and_shesh_kebab.jpg",
+    "license": "CC BY 2.0",
+    "artist": "raasiel",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/dahi-ke-kebab.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Dahi ke Kebabs.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dahi_ke_Kebabs.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Mayurbhandari",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kakori-kebab.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Kebab Gerashi.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kebab_Gerashi.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Amin Noubahar",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kathal-ki-sabzi.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Kathal ki sabzi.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kathal_ki_sabzi.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sapanabehl",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/murgh-korma.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Goat Korma, Butter Chicken, Cabbage Stir-fry with Pilau Rice and Teh Tarik - Cafe Zam Zam (608627954).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Goat_Korma,_Butter_Chicken,_Cabbage_Stir-fry_with_Pilau_Rice_and_Teh_Tarik_-_Cafe_Zam_Zam_(608627954).jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "Alpha from Melbourne, Australia",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/murgh-musallam.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Murgh Musallam - Musamman.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Murgh_Musallam_-_Musamman.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Souradepp",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/mutton-korma.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Chicken Korma.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Korma.JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/nargisi-kofta.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Chicken Biryani and Nargisi Kofta with Raita.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Biryani_and_Nargisi_Kofta_with_Raita.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Rashmeet Kaur",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/shahi-tukda.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Shahi Tukda - Dessert of India.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Shahi_Tukda_-_Dessert_of_India.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Rodrick rajive lal",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/shami-kebab.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "4th October 2012 Shami Kebab.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:4th_October_2012_Shami_Kebab.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Murcotipton",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/sheermal.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Sheermal Lucknow.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sheermal_Lucknow.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Pranaykuma12",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/zarda.jpg",
+    "region": "Awadhi/Lucknowi",
+    "slot": "recipe",
+    "wiki_title": "Coloured Zarda Chawal.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Coloured_Zarda_Chawal.JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/aloo-posto.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Aloo Posto.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Aloo_Posto.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "SDBeast",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/begun-bhaja.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Lomba Begun Bhaja 2.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lomba_Begun_Bhaja_2.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "SaranikaC",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/bengali-alur-dom.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Bengali food 03.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bengali_food_03.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Kritzolina",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/bengali-ghugni.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Bengali breakfast Luchi ghugni bandhakopir torkari simer torkari chatney salad.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bengali_breakfast_Luchi_ghugni_bandhakopir_torkari_simer_torkari_chatney_salad.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Betssy13",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chingri-bhapa.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Chingri Bhapa.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chingri_Bhapa.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Prianxi",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chingri-malai-curry.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Chingri Macher Malai Curry.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chingri_Macher_Malai_Curry.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Riya Chattopadhyay",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/cholar-dal.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Cholar Dal (Luchi).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cholar_Dal_(Luchi).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Vis M",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/dhokar-dalna.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Traditional Bengali Thali (veg).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Traditional_Bengali_Thali_(veg).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Chaitali Sarkar",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/dimer-dalna.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Hasher Dimer Dalna Lokaahar Restaurant (14).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hasher_Dimer_Dalna_Lokaahar_Restaurant_(14).jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Sumitsurai",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/ilish-bhapa.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Ilish jeere bhapa.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ilish_jeere_bhapa.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Atudu",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/labra.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Labra tarkari-MA17.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Labra_tarkari-MA17.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Rajeeb Dutta",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/lau-ghonto.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Chingri diye lau ghonto.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chingri_diye_lau_ghonto.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Atudu",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/luchi.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Black channa and luchi Rayagada Odisha 08.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Black_channa_and_luchi_Rayagada_Odisha_08.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Lopanayak",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/macher-jhol.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Chingri macher jhol, cuisine of West Bengal 20200213135306.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chingri_macher_jhol,_cuisine_of_West_Bengal_20200213135306.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "বাক্যবাগীশ",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/mishti-doi.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Mishti Doi.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mishti_Doi.jpg",
+    "license": "CC BY 2.0",
+    "artist": "Kirti Poddar",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/patishapta.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Patishapta, a bengali sweet dish.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Patishapta,_a_bengali_sweet_dish.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Dasgopawb2015",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/payesh.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Payesh (Bengali sweet dish).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Payesh_(Bengali_sweet_dish).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sharnab neogi",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/peyaji.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Peyaju frying in a Bengali food store at Amtoli Bazar Dhamrai.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Peyaju_frying_in_a_Bengali_food_store_at_Amtoli_Bazar_Dhamrai.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sm faysal",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/potoler-dorma.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Bengali style Potoler Dorma.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bengali_style_Potoler_Dorma.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Prads2189",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/rui-macher-kalia.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Rui Machher Kalia.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rui_Machher_Kalia.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sharnab neogi",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/sandesh.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Notun Gurer Sandesh.png",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Notun_Gurer_Sandesh.png",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sucharitabanerji",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/shukto.jpg",
+    "region": "Bengali",
+    "slot": "recipe",
+    "wiki_title": "Shukto-Ahare Bangla 2016 DSC 7615.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Shukto-Ahare_Bangla_2016_DSC_7615.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Schwiki",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/bihari-aloo-bhujia.jpg",
+    "region": "Bihari",
+    "slot": "recipe",
+    "wiki_title": "Dum Aloo with spicy bhujia.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dum_Aloo_with_spicy_bhujia.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Pullak Parag Khetan",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/baingan-chokha.jpg",
+    "region": "Bihari",
+    "slot": "recipe",
+    "wiki_title": "Litti chokha dipped in Ghee.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Litti_chokha_dipped_in_Ghee.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Vinay Sah",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/bihari-khichdi.jpg",
+    "region": "Bihari",
+    "slot": "recipe",
+    "wiki_title": "Vegetable Khichdi 1.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Vegetable_Khichdi_1.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Dolon Prova",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/dal-pitha.jpg",
+    "region": "Bihari",
+    "slot": "recipe",
+    "wiki_title": "Podo pitha.png",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Podo_pitha.png",
+    "license": "CC BY-SA 4.0",
+    "artist": "Meghana Mohanty",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/dhuska.jpg",
+    "region": "Bihari",
+    "slot": "recipe",
+    "wiki_title": "Dhuska.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dhuska.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Parijatpathak30",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/bihari-ghugni.jpg",
+    "region": "Bihari",
+    "slot": "recipe",
+    "wiki_title": "Ghugni image.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ghugni_image.jpg",
+    "license": "CC BY 2.0",
+    "artist": "raasiel",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/bihari-kadhi-bari.jpg",
+    "region": "Bihari",
+    "slot": "recipe",
+    "wiki_title": "Maithili New Year or Jur Sital, Jhori bari - 20200414.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Maithili_New_Year_or_Jur_Sital,_Jhori_bari_-_20200414.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Tulsi Bhagat",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/bihari-malpua.jpg",
+    "region": "Bihari",
+    "slot": "recipe",
+    "wiki_title": "Malpua sweet in Kolkata, India.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Malpua_sweet_in_Kolkata,_India.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ravi Dwivedi",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/bihari-tamatar-chokha.jpg",
+    "region": "Bihari",
+    "slot": "recipe",
+    "wiki_title": "Bihari Cusine- Litti and its associates.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bihari_Cusine-_Litti_and_its_associates.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "RASHMITHAKURSHARMA",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/thekua.jpg",
+    "region": "Bihari",
+    "slot": "recipe",
+    "wiki_title": "Thekua 2.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Thekua_2.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Harpreet 712",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/goan-baath-cake.jpg",
+    "region": "Goan",
+    "slot": "recipe",
+    "wiki_title": "Goan Baath.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Goan_Baath.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sanfy",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chicken-cafreal.jpg",
+    "region": "Goan",
+    "slot": "recipe",
+    "wiki_title": "Chicken Cafreal-panji-goa-003.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Cafreal-panji-goa-003.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Abhijeet Chandankhede",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chicken-xacuti.jpg",
+    "region": "Goan",
+    "slot": "recipe",
+    "wiki_title": "Chicken Xacuti curry with Biryani rice.png",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Xacuti_curry_with_Biryani_rice.png",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sriyarao22",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/goan-dodol.jpg",
+    "region": "Goan",
+    "slot": "recipe",
+    "wiki_title": "Dodol Garut Cihampelas Bandung.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dodol_Garut_Cihampelas_Bandung.JPG",
+    "license": "CC BY 3.0",
+    "artist": "Midori",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/goan-fish-curry.jpg",
+    "region": "Goan",
+    "slot": "recipe",
+    "wiki_title": "Goan typical meal -- fish, curry and rice.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Goan_typical_meal_--_fish,_curry_and_rice.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Fredericknoronha",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/goan-sausage-pulao.jpg",
+    "region": "Goan",
+    "slot": "recipe",
+    "wiki_title": "Goan Pulao.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Goan_Pulao.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "notpresleybutelvis",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/khatkhate.jpg",
+    "region": "Goan",
+    "slot": "recipe",
+    "wiki_title": "Khatkhate.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Khatkhate.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Portugal Editor Exploration",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kismur.jpg",
+    "region": "Goan",
+    "slot": "recipe",
+    "wiki_title": "Goa. Homemade prawn curry with boiled Rice and Kismur... IMG-20210120-WA0009.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Goa._Homemade_prawn_curry_with_boiled_Rice_and_Kismur..._IMG-20210120-WA0009.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sharbelle Fernandez",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/patoleo.jpg",
+    "region": "Goan",
+    "slot": "recipe",
+    "wiki_title": "Steamed Goan rice and jaggery cakes.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Steamed_Goan_rice_and_jaggery_cakes.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sanfy",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/prawn-balchao.jpg",
+    "region": "Goan",
+    "slot": "recipe",
+    "wiki_title": "Prawns Balchao.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Prawns_Balchao.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "notpresleybutelvis",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/recheado-mackerel.jpg",
+    "region": "Goan",
+    "slot": "recipe",
+    "wiki_title": "Mackerel Recheado.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mackerel_Recheado.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Kaushir1711",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/sanna.jpg",
+    "region": "Goan",
+    "slot": "recipe",
+    "wiki_title": "Sanna (Commons).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sanna_(Commons).jpg",
+    "license": "Public domain",
+    "artist": "Kensplanet",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/goan-solkadhi.jpg",
+    "region": "Goan",
+    "slot": "recipe",
+    "wiki_title": "Fried pomfret with Solkadhi.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fried_pomfret_with_Solkadhi.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Kaushiki Prabhudesai",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/sorpotel.jpg",
+    "region": "Goan",
+    "slot": "recipe",
+    "wiki_title": "Goa Sorpotel.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Goa_Sorpotel.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sanfy",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/basundi.jpg",
+    "region": "Gujarati",
+    "slot": "recipe",
+    "wiki_title": "Basundi Indian Dessert Mithai Sweets.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Basundi_Indian_Dessert_Mithai_Sweets.jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "Edsel Little",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/dal-dhokli.jpg",
+    "region": "Gujarati",
+    "slot": "recipe",
+    "wiki_title": "Dalthokali.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dalthokali.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Heenah",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/fafda.jpg",
+    "region": "Gujarati",
+    "slot": "recipe",
+    "wiki_title": "Fafda.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fafda.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Shubhamj29",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/gujarati-dal.jpg",
+    "region": "Gujarati",
+    "slot": "recipe",
+    "wiki_title": "Gujarati Dal..JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gujarati_Dal..JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/gujarati-kadhi.jpg",
+    "region": "Gujarati",
+    "slot": "recipe",
+    "wiki_title": "Gujarati Thali with Rotlo, Kadhi, Olo, Gol.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gujarati_Thali_with_Rotlo,_Kadhi,_Olo,_Gol.jpg",
+    "license": "CC0",
+    "artist": "Brihaspati",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/gujarati-khichdi.jpg",
+    "region": "Gujarati",
+    "slot": "recipe",
+    "wiki_title": "Gujarati Kathiyawadi Dish.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gujarati_Kathiyawadi_Dish.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Jalpaparakhiya",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/handvo.jpg",
+    "region": "Gujarati",
+    "slot": "recipe",
+    "wiki_title": "Handvo Gujarati Food.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Handvo_Gujarati_Food.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "KartikMistry",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/khaman.jpg",
+    "region": "Gujarati",
+    "slot": "recipe",
+    "wiki_title": "KHAMAN DHOKLA-HOMEMADE,CHANDRAPURA-JHARKHAND-2020002.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:KHAMAN_DHOKLA-HOMEMADE,CHANDRAPURA-JHARKHAND-2020002.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Namrata Osta",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/khandvi.jpg",
+    "region": "Gujarati",
+    "slot": "recipe",
+    "wiki_title": "Khandvi, Gujarati snack.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Khandvi,_Gujarati_snack.jpg",
+    "license": "CC BY 2.0",
+    "artist": "Kirti Poddar",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/khichu.jpg",
+    "region": "Gujarati",
+    "slot": "recipe",
+    "wiki_title": "Khichu- makai.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Khichu-_makai.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Kanikatwl",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/methi-muthiya.jpg",
+    "region": "Gujarati",
+    "slot": "recipe",
+    "wiki_title": "Methi Muthiya ( fried ).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Methi_Muthiya_(_fried_).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sushant savla",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/methi-thepla.jpg",
+    "region": "Gujarati",
+    "slot": "recipe",
+    "wiki_title": "Masala thepla with Methi kela.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Masala_thepla_with_Methi_kela.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Rupasree",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/patra.jpg",
+    "region": "Gujarati",
+    "slot": "recipe",
+    "wiki_title": "Patra (Gujarati snack).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Patra_(Gujarati_snack).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "BhargavVora",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/sev-tameta-nu-shaak.jpg",
+    "region": "Gujarati",
+    "slot": "recipe",
+    "wiki_title": "Sev Tameta Nu Shaak.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sev_Tameta_Nu_Shaak.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "UserWiki",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/shrikhand.jpg",
+    "region": "Gujarati",
+    "slot": "recipe",
+    "wiki_title": "Shrikhand.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Shrikhand.JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/sukhdi.jpg",
+    "region": "Gujarati",
+    "slot": "recipe",
+    "wiki_title": "Sukhdi..jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sukhdi..jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Maitrikvora21",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/bagara-baingan.jpg",
+    "region": "Hyderabadi",
+    "slot": "recipe",
+    "wiki_title": "Bhagare Baingan..JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bhagare_Baingan..JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/bagara-rice.jpg",
+    "region": "Hyderabadi",
+    "slot": "recipe",
+    "wiki_title": "Bagar khana.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bagar_khana.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Bhaskaranaidu",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/dalcha.jpg",
+    "region": "Hyderabadi",
+    "slot": "recipe",
+    "wiki_title": "Dalcha.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dalcha.JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/double-ka-meetha.jpg",
+    "region": "Hyderabadi",
+    "slot": "recipe",
+    "wiki_title": "Double ka meetha 2.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Double_ka_meetha_2.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Vis M",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/dum-ka-murgh.jpg",
+    "region": "Hyderabadi",
+    "slot": "recipe",
+    "wiki_title": "Dum ka Murgh.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dum_ka_Murgh.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Vis M",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/hyderabadi-chicken-65.jpg",
+    "region": "Hyderabadi",
+    "slot": "recipe",
+    "wiki_title": "Chicken 65 (Dish).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_65_(Dish).jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Amiyashrivastava",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kheema.jpg",
+    "region": "Hyderabadi",
+    "slot": "recipe",
+    "wiki_title": "Hyderabadi Keema by Preeti Tamilarasan.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hyderabadi_Keema_by_Preeti_Tamilarasan.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Preeti Tamilarasan",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/hyderabadi-khichdi.jpg",
+    "region": "Hyderabadi",
+    "slot": "recipe",
+    "wiki_title": "Vegetable Khichdi 1.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Vegetable_Khichdi_1.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Dolon Prova",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/khatti-dal.jpg",
+    "region": "Hyderabadi",
+    "slot": "recipe",
+    "wiki_title": "Hyderabadi Khatti Dal.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hyderabadi_Khatti_Dal.JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/hyderabadi-marag.jpg",
+    "region": "Hyderabadi",
+    "slot": "recipe",
+    "wiki_title": "Hyderabadi marag.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hyderabadi_marag.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Shaharbano",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/methi-murgh.jpg",
+    "region": "Hyderabadi",
+    "slot": "recipe",
+    "wiki_title": "Methi Murgh - Kolkata 2015-07-17 9517.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Methi_Murgh_-_Kolkata_2015-07-17_9517.JPG",
+    "license": "CC BY 3.0",
+    "artist": "Biswarup Ganguly",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/mirchi-ka-salan.jpg",
+    "region": "Hyderabadi",
+    "slot": "recipe",
+    "wiki_title": "Mirchi ka salan and Dahi chutney.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mirchi_ka_salan_and_Dahi_chutney.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Randhirreddy at English Wikipedia",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/murgh-do-pyaza.jpg",
+    "region": "Hyderabadi",
+    "slot": "recipe",
+    "wiki_title": "Murg Do Pyaza.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Murg_Do_Pyaza.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "TabassumJawed",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/patthar-ka-gosht.jpg",
+    "region": "Hyderabadi",
+    "slot": "recipe",
+    "wiki_title": "Pattar ka gosht.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pattar_ka_gosht.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Shaharbano",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/sheer-khurma.jpg",
+    "region": "Hyderabadi",
+    "slot": "recipe",
+    "wiki_title": "Sheer Khurma special.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sheer_Khurma_special.JPG",
+    "license": "Public domain",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/shikampuri-kebab.jpg",
+    "region": "Hyderabadi",
+    "slot": "recipe",
+    "wiki_title": "Shikampuri Kabab.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Shikampuri_Kabab.JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/american-chopsuey.jpg",
+    "region": "Indo-Chinese",
+    "slot": "recipe",
+    "wiki_title": "Homemade American chopsuey 04.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Homemade_American_chopsuey_04.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Indrajit Das",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chicken-lollipop.jpg",
+    "region": "Indo-Chinese",
+    "slot": "recipe",
+    "wiki_title": "Chicken lollipop in Goa.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_lollipop_in_Goa.jpg",
+    "license": "CC BY 2.0",
+    "artist": "Peiling Tan from Singapore, Singapore",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chilli-paneer.jpg",
+    "region": "Indo-Chinese",
+    "slot": "recipe",
+    "wiki_title": "Chilly Paneer 01.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chilly_Paneer_01.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Marajozkee",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chilli-tofu.jpg",
+    "region": "Indo-Chinese",
+    "slot": "recipe",
+    "wiki_title": "Tofu fries with sweet chilli sauce (19172708213).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Tofu_fries_with_sweet_chilli_sauce_(19172708213).jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "sunny mama",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/honey-chilli-potato.jpg",
+    "region": "Indo-Chinese",
+    "slot": "recipe",
+    "wiki_title": "Honey chilli potato 2.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Honey_chilli_potato_2.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Gannu03",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/manchow-soup.jpg",
+    "region": "Indo-Chinese",
+    "slot": "recipe",
+    "wiki_title": "Manchow soup - Indo-Chinese cuisine.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Manchow_soup_-_Indo-Chinese_cuisine.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sarkar Sayantan",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/schezwan-fried-rice.jpg",
+    "region": "Indo-Chinese",
+    "slot": "recipe",
+    "wiki_title": "Schezwan Egg Fried Rice with raitha 03.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Schezwan_Egg_Fried_Rice_with_raitha_03.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Nandhinikandhasamy",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/sweet-corn-soup.jpg",
+    "region": "Indo-Chinese",
+    "slot": "recipe",
+    "wiki_title": "Set D - Tomato Soup Macaroni with Scrambled Egg, Toasted Bun, Buttered Sweet Corn - HOKO 2024-12-21.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Set_D_-_Tomato_Soup_Macaroni_with_Scrambled_Egg,_Toasted_Bun,_Buttered_Sweet_Corn_-_HOKO_2024-12-21.jpg",
+    "license": "CC0",
+    "artist": "Andy Li",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/veg-manchurian-gravy.jpg",
+    "region": "Indo-Chinese",
+    "slot": "recipe",
+    "wiki_title": "Hakka Noodles, Veg Manchurian PK009.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hakka_Noodles,_Veg_Manchurian_PK009.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "PallaviKhale",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/akki-rotti.jpg",
+    "region": "Karnataka",
+    "slot": "recipe",
+    "wiki_title": "Akki Rotti.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Akki_Rotti.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Anand Narayan",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/jolada-rotti.jpg",
+    "region": "Karnataka",
+    "slot": "recipe",
+    "wiki_title": "ಜೋಳದ ರೊಟ್ಟಿ Jōḷada roṭṭi.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:%E0%B2%9C%E0%B3%8B%E0%B2%B3%E0%B2%A6_%E0%B2%B0%E0%B3%8A%E0%B2%9F%E0%B3%8D%E0%B2%9F%E0%B2%BF_J%C5%8D%E1%B8%B7ada_ro%E1%B9%AD%E1%B9%ADi.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "ಪ್ರಶಾಂತ ಸೊರಟೂರ",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/koli-curry.jpg",
+    "region": "Karnataka",
+    "slot": "recipe",
+    "wiki_title": "Koli kolumbu.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Koli_kolumbu.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Andrew Jabakumar",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kori-rotti.jpg",
+    "region": "Karnataka",
+    "slot": "recipe",
+    "wiki_title": "Kori Rotti.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kori_Rotti.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "DreamyFlutura11",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kosambari.jpg",
+    "region": "Karnataka",
+    "slot": "recipe",
+    "wiki_title": "Totapuri moong dal kosambari.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Totapuri_moong_dal_kosambari.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Vidya pmysore",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/majjige-huli.jpg",
+    "region": "Karnataka",
+    "slot": "recipe",
+    "wiki_title": "Sorekayi Majjige Huli- my home Bangalore-Karnataka-pic 12.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sorekayi_Majjige_Huli-_my_home_Bangalore-Karnataka-pic_12.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Shruthi Gaurav Alva",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/pandi-curry.jpg",
+    "region": "Karnataka",
+    "slot": "recipe",
+    "wiki_title": "Pandi Curry.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pandi_Curry.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Rupak76",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/pork-bafat.jpg",
+    "region": "Karnataka",
+    "slot": "recipe",
+    "wiki_title": "Pork Bafat.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pork_Bafat.jpg",
+    "license": "CC0",
+    "artist": "Tyasathi",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/pundi-gatti.jpg",
+    "region": "Karnataka",
+    "slot": "recipe",
+    "wiki_title": "Pundi Gatti with Kothambari Chutney.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pundi_Gatti_with_Kothambari_Chutney.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Kart127",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/vangi-bath.jpg",
+    "region": "Karnataka",
+    "slot": "recipe",
+    "wiki_title": "Brinjal rice bath.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brinjal_rice_bath.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Vidya pmysore",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/aab-gosht.jpg",
+    "region": "Kashmiri",
+    "slot": "recipe",
+    "wiki_title": "Kashmiri Aab Gosht.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kashmiri_Aab_Gosht.jpg",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/gushtaba.jpg",
+    "region": "Kashmiri",
+    "slot": "recipe",
+    "wiki_title": "Gushtaba..JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gushtaba..JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kashmiri-rajma.jpg",
+    "region": "Kashmiri",
+    "slot": "recipe",
+    "wiki_title": "Kashmiri Pandit vegetarian thali served at Matamaal restaurants with Rajma, Dum aloo, Paneer dishes.png",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kashmiri_Pandit_vegetarian_thali_served_at_Matamaal_restaurants_with_Rajma,_Dum_aloo,_Paneer_dishes.png",
+    "license": "CC BY-SA 4.0",
+    "artist": "Coastalcakes (Matamaal Restaurants)",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/methi-maaz.jpg",
+    "region": "Kashmiri",
+    "slot": "recipe",
+    "wiki_title": "Maithi Maaz Kashmiri.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Maithi_Maaz_Kashmiri.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Officialthor31",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/phirni.jpg",
+    "region": "Kashmiri",
+    "slot": "recipe",
+    "wiki_title": "Firni Or Phirni Bangladeshi Sweet (1).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Firni_Or_Phirni_Bangladeshi_Sweet_(1).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Dolon Prova",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/rista.jpg",
+    "region": "Kashmiri",
+    "slot": "recipe",
+    "wiki_title": "Rista wazwan.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rista_wazwan.jpg",
+    "license": "Public domain",
+    "artist": "Oniongas",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/shufta.jpg",
+    "region": "Kashmiri",
+    "slot": "recipe",
+    "wiki_title": "Shufta Kashmiri cuisine.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Shufta_Kashmiri_cuisine.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "DiplomatTesterMan",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/tabak-maaz.jpg",
+    "region": "Kashmiri",
+    "slot": "recipe",
+    "wiki_title": "Tabak Maaz.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Tabak_Maaz.JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/ada-pradhaman.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Kerala style virundhu.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kerala_style_virundhu.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Shafana jasmine",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/beef-ularthiyathu.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Kerala Beef Fry.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kerala_Beef_Fry.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Solowomanwalks",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/cabbage-thoran.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Cabbage thoran.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cabbage_thoran.jpg",
+    "license": "Public domain",
+    "artist": "Rameshng at Malayalam Wikipedia",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/cheera-thoran.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Cheera Thoran Stage2.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cheera_Thoran_Stage2.JPG",
+    "license": "CC BY-SA 3.0",
+    "artist": "Ranjithsiji",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/duck-mappas.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Kuttanadan Tharavu Mappas Duck Curry with Coconut Milk (15292488414).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kuttanadan_Tharavu_Mappas_Duck_Curry_with_Coconut_Milk_(15292488414).jpg",
+    "license": "CC BY 2.0",
+    "artist": "Yummy O Yummy",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/fish-molee.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Fish moilee moily molee.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fish_moilee_moily_molee.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "CNEcija12345",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/idiyappam.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Idiyappam with Egg Masala Curry.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Idiyappam_with_Egg_Masala_Curry.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Viewfinder18",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kaalan.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Kaalan curry.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kaalan_curry.jpg",
+    "license": "Public domain",
+    "artist": "Rameshng at Malayalam Wikipedia",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kadala-curry.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Kadala Curry (9686012452).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kadala_Curry_(9686012452).jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "Devika",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/koottu-curry.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Traditional Koottu Curry of Kerala.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Traditional_Koottu_Curry_of_Kerala.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Nairdeepa",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kozhukatta.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Kozhukatta Nasrani food.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kozhukatta_Nasrani_food.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Rahul Payyappilly",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/meen-varuthathu.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Meen Varuthathu.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Meen_Varuthathu.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Muskansriv317",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/neyyappam.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Kerala Neyyappam.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kerala_Neyyappam.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Samphotography",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/olan.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Ash Gourd (Kumblanga) \"Olan\".jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ash_Gourd_(Kumblanga)_%22Olan%22.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "DivergenTribute",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/parippu-curry.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Padavalam parippu.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Padavalam_parippu.JPG",
+    "license": "CC BY-SA 3.0",
+    "artist": "Sivahari",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/pazham-pori.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Pazham pori with beef roast.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pazham_pori_with_beef_roast.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Aiwin Soji",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/pulissery.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Pulishery from Kerala 01.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pulishery_from_Kerala_01.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ganesh Mohan T",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/puttu.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Puttu (Rice Flour steamed cake).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Puttu_(Rice_Flour_steamed_cake).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Mathew Jibin",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/semiya-payasam.jpg",
+    "region": "Kerala",
+    "slot": "recipe",
+    "wiki_title": "Semiya Payasam Vermicelli Kheer Indian Sweets Mithai.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Semiya_Payasam_Vermicelli_Kheer_Indian_Sweets_Mithai.jpg",
+    "license": "CC BY 2.0",
+    "artist": "Divya Kudua",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/alu-vadi.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Crispy Alu Vadi from my Kitchen, Pune, Maharashtra.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Crispy_Alu_Vadi_from_my_Kitchen,_Pune,_Maharashtra.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sharvarism",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/amti.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Amti Bhakari.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Amti_Bhakari.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Santosh Phatangare",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/maharashtrian-basundi.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Basundi in Maharashtrian style.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Basundi_in_Maharashtrian_style.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Wefffrrr",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/batata-bhaji.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Batata bhaji and chai-Pune-Maharashtra.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Batata_bhaji_and_chai-Pune-Maharashtra.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Wattamwarsamiksha",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/bombil-fry.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Bombil Fry (6883605717).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bombil_Fry_(6883605717).jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "Joegoaukfishcurry2",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/jowar-bhakri.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Harbharyachi bhaji with toor dal jowar bhakri bharli mirchi salad dahi.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Harbharyachi_bhaji_with_toor_dal_jowar_bhakri_bharli_mirchi_salad_dahi.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Meena Kharatmal",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kanda-poha.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Kanda Poha is Favourite Breakfast of Maharashtrian Peoples.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kanda_Poha_is_Favourite_Breakfast_of_Maharashtrian_Peoples.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Cadat7",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/katachi-amti.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Puran Poli and Katachi Amti by Dr. Raju Kasambe 03.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Puran_Poli_and_Katachi_Amti_by_Dr._Raju_Kasambe_03.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Dr. Raju Kasambe",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/masale-bhat.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Masale Bhat -Homemade - Maharashtra.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Masale_Bhat_-Homemade_-_Maharashtra.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Phadke09",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/patodi-rassa.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Patodi Rasa.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Patodi_Rasa.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Dheerajk88",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/pithla.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Pithla NMM Soc Thane Maharashtra 01.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pithla_NMM_Soc_Thane_Maharashtra_01.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Om Bankar",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/puran-poli.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Puran Poli image.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Puran_Poli_image.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Had5185",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/sabudana-khichdi.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Sabudana Khichdi with Sweet curd.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sabudana_Khichdi_with_Sweet_curd.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Dheerajk88",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/sabudana-vada.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Sabudana vada.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sabudana_vada.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Archana Joshi",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/saoji-mutton.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Savaji Mutton Curry2.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Savaji_Mutton_Curry2.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Skasturee",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/thalipeeth.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Thalipeeth (Indian Pancake).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Thalipeeth_(Indian_Pancake).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "BhargavVora",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/varan-bhaat.jpg",
+    "region": "Maharashtrian",
+    "slot": "recipe",
+    "wiki_title": "Varan Bhat.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Varan_Bhat.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Kashmira3091",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/aloo-pitika.jpg",
+    "region": "Northeast Indian",
+    "slot": "recipe",
+    "wiki_title": "Kumol Saul with Aloo Pitika.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kumol_Saul_with_Aloo_Pitika.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "পাপৰি বৰা",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/axone-pork.jpg",
+    "region": "Northeast Indian",
+    "slot": "recipe",
+    "wiki_title": "Naga Smoked Pork with Axone (Fermented Soyabeans).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Naga_Smoked_Pork_with_Axone_(Fermented_Soyabeans).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sumit Surai",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chakhwi.jpg",
+    "region": "Northeast Indian",
+    "slot": "recipe",
+    "wiki_title": "Chakhwi.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chakhwi.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Tirengma",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chamthong.jpg",
+    "region": "Northeast Indian",
+    "slot": "recipe",
+    "wiki_title": "Hanggam Thongba (or Hangam Chamthong or Kangshoi or Kangsoi) - mustard stew - Traditional Meitei cuisine - Gastronomic cultural heritage of Manipur & domestic and international Meitei diasporas.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hanggam_Thongba_(or_Hangam_Chamthong_or_Kangshoi_or_Kangsoi)_-_mustard_stew_-_Traditional_Meitei_cuisine_-_Gastronomic_cultural_heritage_of_Manipur_%26_domestic_and_international_Meitei_diasporas.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "User:Andrew Jabakumar",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/eromba.jpg",
+    "region": "Northeast Indian",
+    "slot": "recipe",
+    "wiki_title": "Ingredients for making traditional Meitei food, Eromba (alias Iromba, Eronba, Ironba) - Classical Meitei cuisine of Kangleipak.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ingredients_for_making_traditional_Meitei_food,_Eromba_(alias_Iromba,_Eronba,_Ironba)_-_Classical_Meitei_cuisine_of_Kangleipak.jpg",
+    "license": "CC BY 4.0",
+    "artist": "Haoreima",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/jadoh.jpg",
+    "region": "Northeast Indian",
+    "slot": "recipe",
+    "wiki_title": "Jadoh (Meghalaya.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Jadoh_(Meghalaya.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Real Sovan",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/muya-awandru.jpg",
+    "region": "Northeast Indian",
+    "slot": "recipe",
+    "wiki_title": "Awandru.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Awandru.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Tirengma",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/nga-thongba.jpg",
+    "region": "Northeast Indian",
+    "slot": "recipe",
+    "wiki_title": "2 types of Nga Thongba (fish curry) - Toithong (Nga Atoiba Thongba) & Taothong (Nga Ataoba Thongba) - Traditional Meitei cuisine - Gastronomic cultural heritage of Manipur & domestic and international Meitei diasporas.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:2_types_of_Nga_Thongba_(fish_curry)_-_Toithong_(Nga_Atoiba_Thongba)_%26_Taothong_(Nga_Ataoba_Thongba)_-_Traditional_Meitei_cuisine_-_Gastronomic_cultural_heritage_of_Manipur_%26_domestic_and_international_Meitei_diasporas.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "User:Ishani Nath",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/poita-bhat.jpg",
+    "region": "Northeast Indian",
+    "slot": "recipe",
+    "wiki_title": "Poita bhat and egg.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Poita_bhat_and_egg.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "IKHazarika",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/sel-roti.jpg",
+    "region": "Northeast Indian",
+    "slot": "recipe",
+    "wiki_title": "Chiya Sel Roti.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chiya_Sel_Roti.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Gaurav Dhwaj Khadka",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/singju.jpg",
+    "region": "Northeast Indian",
+    "slot": "recipe",
+    "wiki_title": "Thambou singju (2).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Thambou_singju_(2).jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Punshiba18",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/thukpa.jpg",
+    "region": "Northeast Indian",
+    "slot": "recipe",
+    "wiki_title": "Thukpa, Tibetan noodle in Osaka, Japan.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Thukpa,_Tibetan_noodle_in_Osaka,_Japan.jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "m-louis from Osaka",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/arisa-pitha.jpg",
+    "region": "Odia",
+    "slot": "recipe",
+    "wiki_title": "Arisa pitha Odia cuisine.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Arisa_pitha_Odia_cuisine.jpg",
+    "license": "CC BY 3.0",
+    "artist": "Subhashish Panigrahi",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/badi-chura.jpg",
+    "region": "Odia",
+    "slot": "recipe",
+    "wiki_title": "Badi Chura.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Badi_Chura.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sailesh Patnaik",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/besara.jpg",
+    "region": "Odia",
+    "slot": "recipe",
+    "wiki_title": "Machha Besara ( ମାଛ ବେସର ).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Machha_Besara_(_%E0%AC%AE%E0%AC%BE%E0%AC%9B_%E0%AC%AC%E0%AD%87%E0%AC%B8%E0%AC%B0_).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Kumarnihar",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chakuli-pitha.jpg",
+    "region": "Odia",
+    "slot": "recipe",
+    "wiki_title": "Chakuli pitha with chutney.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chakuli_pitha_with_chutney.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ashwas priya",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chingudi-tarkari.jpg",
+    "region": "Odia",
+    "slot": "recipe",
+    "wiki_title": "CHINGUDI TARKARI.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:CHINGUDI_TARKARI.jpg",
+    "license": "CC BY 3.0",
+    "artist": "myself. Sanshlistha m",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/dahi-baigana.jpg",
+    "region": "Odia",
+    "slot": "recipe",
+    "wiki_title": "Dahi baigana Odia recipe.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dahi_baigana_Odia_recipe.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Subhashish Panigrahi",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kanika.jpg",
+    "region": "Odia",
+    "slot": "recipe",
+    "wiki_title": "Kanika and dalma.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kanika_and_dalma.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Soumyasmita Mallick",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/khaja.jpg",
+    "region": "Odia",
+    "slot": "recipe",
+    "wiki_title": "Baleswari khaja pheni Oriya cuisine.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Baleswari_khaja_pheni_Oriya_cuisine.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Subhashish Panigrahi",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/macha-besara.jpg",
+    "region": "Odia",
+    "slot": "recipe",
+    "wiki_title": "Macha Besara.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Macha_Besara.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "B.Sunita M",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/mudhi-mansa.jpg",
+    "region": "Odia",
+    "slot": "recipe",
+    "wiki_title": "Mudhi Mansa.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mudhi_Mansa.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sangram Keshari Senapati",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/rasabali.jpg",
+    "region": "Odia",
+    "slot": "recipe",
+    "wiki_title": "Rasabali, Odisha traditional sweet.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rasabali,_Odisha_traditional_sweet.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Prateek Pattanaik",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/saga-bhaja.jpg",
+    "region": "Odia",
+    "slot": "recipe",
+    "wiki_title": "Sunusunia Saga Bhaja Odia Cuisine.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sunusunia_Saga_Bhaja_Odia_Cuisine.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Psubhashish",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/santula.jpg",
+    "region": "Odia",
+    "slot": "recipe",
+    "wiki_title": "Santula Odia Cuisine.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Santula_Odia_Cuisine.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "ସୁଭ ପା/Subhashish Panigrahi",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chana-dal-dham.jpg",
+    "region": "Pahari",
+    "slot": "recipe",
+    "wiki_title": "Kangri Dham with chana dal , maani and white rice.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kangri_Dham_with_chana_dal_,_maani_and_white_rice.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Niyati Sharma 1505",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chana-madra.jpg",
+    "region": "Pahari",
+    "slot": "recipe",
+    "wiki_title": "White Chana Madra.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:White_Chana_Madra.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Niyati Sharma 1505",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/himachali-mash-dal.jpg",
+    "region": "Pahari",
+    "slot": "recipe",
+    "wiki_title": "Dal Chana Aur Mash Ki Dal.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dal_Chana_Aur_Mash_Ki_Dal.JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/himachali-mittha.jpg",
+    "region": "Pahari",
+    "slot": "recipe",
+    "wiki_title": "Double Ka Mittha Cooking Bowl.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Double_Ka_Mittha_Cooking_Bowl.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Christopher Malapati",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/patrode-pahadi.jpg",
+    "region": "Pahari",
+    "slot": "recipe",
+    "wiki_title": "Patrode ಪತ್ರೊಡೆ.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Patrode_%E0%B2%AA%E0%B2%A4%E0%B3%8D%E0%B2%B0%E0%B3%8A%E0%B2%A1%E0%B3%86.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "BHARATHESHA ALASANDEMAJALU",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/parsi-akuri.jpg",
+    "region": "Parsi",
+    "slot": "recipe",
+    "wiki_title": "Paneer Akuri.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Paneer_Akuri.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Arzina Hossain",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/parsi-berry-pulao.jpg",
+    "region": "Parsi",
+    "slot": "recipe",
+    "wiki_title": "Parsi Mutton Berry Pulao.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Parsi_Mutton_Berry_Pulao.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sumit Surai",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/parsi-sev.jpg",
+    "region": "Parsi",
+    "slot": "recipe",
+    "wiki_title": "Sev 2013-12-01 16-57.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sev_2013-12-01_16-57.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "User:Randhirreddy",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/aloo-methi.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Aloo Methi (Aaloo Methi).JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Aloo_Methi_(Aaloo_Methi).JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/aloo-paratha.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "\"Amazing Aloo Paratha and Lovely Lassi\".jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:%22Amazing_Aloo_Paratha_and_Lovely_Lassi%22.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Mahi Tatavarty",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/amritsari-fish.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Amritsari Fried Fish.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Amritsari_Fried_Fish.JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/amritsari-kulcha.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Amritsari kulcha chana.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Amritsari_kulcha_chana.jpg",
+    "license": "CC BY 4.0",
+    "artist": "LittleT889",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/bhindi-masala.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Bhindi masala (49657981033).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bhindi_masala_(49657981033).jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "やましこ",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/dahi-bhalla.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Dahi bhalla with papdi.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dahi_bhalla_with_papdi.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Vipul7229",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/dal-makhani.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Dal Makhani along with Naan.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dal_Makhani_along_with_Naan.jpg",
+    "license": "CC BY 2.0",
+    "artist": "Barry Pousman from New York, NY",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/gajar-ka-halwa.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Gajar Ka Halwa a famous Indian Sweet Dish 01.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gajar_Ka_Halwa_a_famous_Indian_Sweet_Dish_01.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Bugatti Enthusiast Aishwary Raj",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/keema-matar.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Keema Matar (a dish from India).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Keema_Matar_(a_dish_from_India).jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Cabeza2000",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/lauki-kofta.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Lauki Kofta Curry.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lauki_Kofta_Curry.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Nithajay",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/makki-di-roti.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Makki Di Roti.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Makki_Di_Roti.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Vsigamany",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/matar-paneer.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Matar Paneer with Butter Naan.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Matar_Paneer_with_Butter_Naan.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ravi Dwivedi",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/methi-malai-matar.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Methi Malai Matar.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Methi_Malai_Matar.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ujjawaoo7",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/missi-roti.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Missi Roti Recipe (27427169530).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Missi_Roti_Recipe_(27427169530).jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "Soniya Goyal from Jaipur, India",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/paneer-bhurji.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Homemade Paneer Bhurji cooked in pan India.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Homemade_Paneer_Bhurji_cooked_in_pan_India.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Status 401",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/paneer-tikka.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Panir Tikka Indian cheese grilled.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Panir_Tikka_Indian_cheese_grilled.jpg",
+    "license": "CC BY 2.0 de",
+    "artist": "Sonja Pauen -Stanhopea",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/pindi-chole.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Pindi Chole with Poori or Chole Poori 02.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pindi_Chole_with_Poori_or_Chole_Poori_02.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Best Ever Cooking Show SudShi",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/punjabi-chana-dal.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Chana Dal Curry.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chana_Dal_Curry.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ravi Talwar",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kadhi-pakora.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Punjabi curry.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Punjabi_curry.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ruaking gurleen",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/sarson-ka-saag.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Sarson Ka Saag - Mohali 2016-08-06 8227.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sarson_Ka_Saag_-_Mohali_2016-08-06_8227.JPG",
+    "license": "CC BY 3.0",
+    "artist": "Biswarup Ganguly",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/shahi-paneer.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Shahi Paneer & Butter Naan.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Shahi_Paneer_%26_Butter_Naan.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Shashank7200",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/tandoori-chicken.jpg",
+    "region": "Punjabi",
+    "slot": "recipe",
+    "wiki_title": "Chicken Tandoori prepared in Malvan style.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Tandoori_prepared_in_Malvan_style.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Amitkumar Si",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/aloo-pyaaz-ki-sabzi.jpg",
+    "region": "Rajasthani",
+    "slot": "recipe",
+    "wiki_title": "Rice and Daal with Allo-Pyaaz Ki Sabzi.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rice_and_Daal_with_Allo-Pyaaz_Ki_Sabzi.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Nami Verma",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/bajre-ki-roti.jpg",
+    "region": "Rajasthani",
+    "slot": "recipe",
+    "wiki_title": "1 bajre ki roti .bthuve ki sbji.desi tindi gi v lssi ka gilas.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:1_bajre_ki_roti_.bthuve_ki_sbji.desi_tindi_gi_v_lssi_ka_gilas.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "KUMER PAL",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/besan-chakki.jpg",
+    "region": "Rajasthani",
+    "slot": "recipe",
+    "wiki_title": "BESAN CHAKKI HOMEMADE KOTA 003.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:BESAN_CHAKKI_HOMEMADE_KOTA_003.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Manoj2095",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/gatte-ki-sabzi.jpg",
+    "region": "Rajasthani",
+    "slot": "recipe",
+    "wiki_title": "Gatte ki sabzi served with aamras and garlic chutney.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gatte_ki_sabzi_served_with_aamras_and_garlic_chutney.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Kanikatwl",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/haldi-ki-sabzi.jpg",
+    "region": "Rajasthani",
+    "slot": "recipe",
+    "wiki_title": "Haldi Ki Sabzi.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Haldi_Ki_Sabzi.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "RohitValecha",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/ker-sangri.jpg",
+    "region": "Rajasthani",
+    "slot": "recipe",
+    "wiki_title": "Ker Sangri.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ker_Sangri.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "AKSHRAJJODHA",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/laal-maas.jpg",
+    "region": "Rajasthani",
+    "slot": "recipe",
+    "wiki_title": "Laal-Maans.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Laal-Maans.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Hamzaghanchi",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/lehsun-ki-chutney.jpg",
+    "region": "Rajasthani",
+    "slot": "recipe",
+    "wiki_title": "Rajasthani Food.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rajasthani_Food.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Anirudh Chordia",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/malpua.jpg",
+    "region": "Rajasthani",
+    "slot": "recipe",
+    "wiki_title": "Rajasthani Malpua.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rajasthani_Malpua.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Acoomar",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/mirchi-vada.jpg",
+    "region": "Rajasthani",
+    "slot": "recipe",
+    "wiki_title": "GARLIC MIRCHI VADA.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:GARLIC_MIRCHI_VADA.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "SS Khurana",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/moong-dal-halwa.jpg",
+    "region": "Rajasthani",
+    "slot": "recipe",
+    "wiki_title": "Moong Dal Halwa and Mysore Pak Sweet Dish Desert.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Moong_Dal_Halwa_and_Mysore_Pak_Sweet_Dish_Desert.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Dev Jadiya",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/panchmel-dal.jpg",
+    "region": "Rajasthani",
+    "slot": "recipe",
+    "wiki_title": "Dal Panchmel.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dal_Panchmel.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Vis M",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/rajasthani-kadhi.jpg",
+    "region": "Rajasthani",
+    "slot": "recipe",
+    "wiki_title": "Rajasthani Kadhi.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rajasthani_Kadhi.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Saurabhshekhar2329",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/bhee-ji-bhaji.jpg",
+    "region": "Sindhi",
+    "slot": "recipe",
+    "wiki_title": "Sindhi Bhee Ji Bhaji.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sindhi_Bhee_Ji_Bhaji.JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/koki.jpg",
+    "region": "Sindhi",
+    "slot": "recipe",
+    "wiki_title": "Koki banane poyo.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Koki_banane_poyo.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Bandrefam",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/sindhi-besan-bhaji.jpg",
+    "region": "Sindhi",
+    "slot": "recipe",
+    "wiki_title": "Kanda Bhaji with Tangy Salsa.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kanda_Bhaji_with_Tangy_Salsa.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Shrabee",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/sindhi-chicken-curry.jpg",
+    "region": "Sindhi",
+    "slot": "recipe",
+    "wiki_title": "Chicken Curry 9.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Curry_9.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Gaurav Dhwaj Khadka",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/sindhi-kadhi.jpg",
+    "region": "Sindhi",
+    "slot": "recipe",
+    "wiki_title": "Sindhi Kadhi.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sindhi_Kadhi.JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/sindhi-tomato-chutney.jpg",
+    "region": "Sindhi",
+    "slot": "recipe",
+    "wiki_title": "Tomato Chutney 3.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Tomato_Chutney_3.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Gaurav Dhwaj Khadka",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/adai.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Adai Dosai with Chutney 01.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Adai_Dosai_with_Chutney_01.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sudhan Ram",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/beans-poriyal.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Beans poriyal.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Beans_poriyal.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "Nithyasrm",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/beetroot-poriyal.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Beetroot Poriyal from Tamilnadu.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Beetroot_Poriyal_from_Tamilnadu.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Pradeepraajkumar1981",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/cabbage-poriyal.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Cabbage and Carrot Poriyal.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cabbage_and_Carrot_Poriyal.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Deviselvam",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chettinad-chicken-curry.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "CHICKEN CHETTINAD - Mini Madras 2026-03-13.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:CHICKEN_CHETTINAD_-_Mini_Madras_2026-03-13.jpg",
+    "license": "CC0",
+    "artist": "Andy Li",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chettinad-kara-kuzhambu.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Chettinad Garlic Kara Kuzhambu Paste The Grand Sweets And Snacks.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chettinad_Garlic_Kara_Kuzhambu_Paste_The_Grand_Sweets_And_Snacks.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "The Grand Sweets And Snacks",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chettinad-crab-masala.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Chettinad Nandu Masala.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chettinad_Nandu_Masala.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Praveena Thangaraj",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/coconut-chutney.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Butter Dosa served with coconut chutney and sambhar.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Butter_Dosa_served_with_coconut_chutney_and_sambhar.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ravi Dwivedi",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/curd-rice.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Curd rice in ICH Bhopal.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Curd_rice_in_ICH_Bhopal.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Suyash Dwivedi",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kandarappam.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Kandarappam.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kandarappam.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Rajan1981",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/kesari-bath.jpg",
+    "region": "Karnataka",
+    "slot": "recipe",
+    "wiki_title": "Kesari Bath (5832083727).jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kesari_Bath_(5832083727).jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "Harsha K R from Bangalore, India",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/chettinad-kuzhi-paniyaram.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "A shot of Kuzhi paniyaram making.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:A_shot_of_Kuzhi_paniyaram_making.JPG",
+    "license": "CC BY-SA 3.0",
+    "artist": "Thamizhpparithi Maari",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/lemon-rice.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Lemon Rice in Kerala.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lemon_Rice_in_Kerala.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ganesh Gore",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/medu-vada.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Idli and Medu Vada.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Idli_and_Medu_Vada.JPG",
+    "license": "CC BY-SA 4.0",
+    "artist": "OdetomyLife",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/mysore-pak.jpg",
+    "region": "Karnataka",
+    "slot": "recipe",
+    "wiki_title": "Mysore pak.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mysore_pak.jpg",
+    "license": "CC BY-SA 2.0",
+    "artist": "Charles Haynes",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/rava-dosa.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Rava Dosa with Coconut Chutney.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rava_Dosa_with_Coconut_Chutney.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "SamarthBhandavale",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/sakkarai-pongal.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Sakkarai pongal with milk.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sakkarai_pongal_with_milk.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "selvam",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/thayir-vadai.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Medhu Vadai & Coconut Chutney.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Medhu_Vadai_%26_Coconut_Chutney.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sunshinegal10",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/tomato-chutney.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Tomato Chutney 3.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Tomato_Chutney_3.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Gaurav Dhwaj Khadka",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/tomato-pappu.jpg",
+    "region": "Andhra",
+    "slot": "recipe",
+    "wiki_title": "Food at Indic Wikimedia Hackathon 2023 06 Tomato Pappu.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Food_at_Indic_Wikimedia_Hackathon_2023_06_Tomato_Pappu.jpg",
+    "license": "CC BY 4.0",
+    "artist": "Jnanaranjan sahu",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/uttapam.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Mix lentils Uttapam P 20190410 144153.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mix_lentils_Uttapam_P_20190410_144153.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Sumita Roy Dutta",
+    "note": "fetched by tools/fetch-recipe-images.py"
+  },
+  {
+    "file": "recipes/ven-pongal.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Ven Pongal & sakkarai pongal with vada & bonda.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ven_Pongal_%26_sakkarai_pongal_with_vada_%26_bonda.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Raamsanjay",
+    "note": "fetched by tools/fetch-recipe-images.py"
   }
 ]
