@@ -200,28 +200,41 @@ p { margin: 0 0 1.1em; }
 .hero.small { height: 42vh; min-height: 280px; }
 
 /* ---------- Word mark (khaana pronunciation) ---------- */
-/* Both classes are needed to outrank `section.tight` further down the file,
-   which would otherwise keep its 40px bottom padding (same specificity, and it
-   comes later). */
-section.word-mark-section.tight { padding-top: 18px; padding-bottom: 0; }
-/* The word mark reads as one unit with the section that follows, so cut the
-   usual 64px gap right down — but leave enough to separate them. */
-.word-mark-section + section { padding-top: 26px; }
-
-.word-mark {
+/* Sits in the hero's top-right corner, clear of the headline because
+   .hero-content p is capped at 560px while the hero runs the full width.
+   Stacking it in flow instead was tried and clipped: hero-content alone is
+   ~290px of a 396px hero, so there was no room above it.
+   The panel is not decoration — the hero gradient is nearly clear at the top
+   and the photo underneath is a bright spice grid, so terracotta on bare
+   image would not hold. Cream keeps the mark's own colours legible. */
+.hero-wordmark {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  z-index: 2;
+  padding: 12px 18px 13px;
+  border-radius: var(--radius);
+  background: rgba(253, 248, 241, 0.93);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 6px 22px rgba(8, 24, 22, 0.26);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   text-align: center;
-  max-width: 860px;
-  margin: 0 auto;
 }
-
-/* Title and syllable breakdown sit side by side, wrapping to two lines only
-   when there genuinely isn't room. */
-.word-mark-lockup {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 34px;
-  flex-wrap: wrap;
+/* Corner scale. The band version had a full content width to spread across;
+   here everything stacks and has to stay out of the headline's way. */
+.hero-wordmark .word-mark-title { justify-content: center; gap: 10px; }
+.hero-wordmark .word-mark-title-hi,
+.hero-wordmark .word-mark-title-en { font-size: 1.4rem; }
+.hero-wordmark .word-mark-syllables { gap: 11px; margin-top: 7px; }
+.hero-wordmark .syllable-dev { font-size: 1.35rem; }
+.hero-wordmark .syllable-rom { font-size: 0.82rem; letter-spacing: 0.14em; margin-top: 3px; }
+.hero-wordmark .syllable-sep { font-size: 1rem; transform: translateY(-7px); }
+.hero-wordmark .word-mark-caption {
+  margin-top: 7px;
+  max-width: none;
+  text-align: center;
+  font-size: 0.83rem;
 }
 
 .word-mark-title {
@@ -527,9 +540,23 @@ section.tight { padding: 22px 0; }
   .hero-content { padding: 26px 18px; }
   .hero-content p { font-size: 1.02rem; }
 
-  .word-mark-section { padding-top: 34px; }
-  .word-mark-title { gap: 10px; margin-bottom: 20px; }
-  .word-mark-syllables { gap: 12px; }
+  /* The badge and the headline share a fixed-height hero here, and the hero
+     clips at the top, so the badge has to give ground rather than push the
+     headline out of view. */
+  .hero-wordmark {
+    top: 10px;
+    right: 10px;
+    padding: 7px 10px 8px;
+    border-radius: 10px;
+  }
+  .hero-wordmark .word-mark-title-hi,
+  .hero-wordmark .word-mark-title-en { font-size: 1.08rem; }
+  .hero-wordmark .word-mark-title { gap: 7px; }
+  .hero-wordmark .word-mark-syllables { gap: 7px; margin-top: 4px; }
+  .hero-wordmark .syllable-dev { font-size: 1.05rem; }
+  .hero-wordmark .syllable-rom { font-size: 0.62rem; letter-spacing: 0.1em; margin-top: 1px; }
+  .hero-wordmark .syllable-sep { font-size: 0.8rem; transform: translateY(-5px); }
+  .hero-wordmark .word-mark-caption { margin-top: 4px; font-size: 0.7rem; }
 
   .section-head { margin-bottom: 26px; }
 
