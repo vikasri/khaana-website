@@ -35,11 +35,19 @@ const NOT_FOUND = `<!doctype html>
 
 export default {
   async fetch(request, env) {
-    // Ask the asset layer first. Cloudflare is documented to match assets
-    // before invoking the script, but with "main" present every path fell
-    // through to here and 404'd, the whole site included. Doing it
-    // explicitly is one line and does not depend on that behaviour.
-    const asset = await env.ASSETS.fetch(request);
+    // Ask the asset layer first, against a neutral hostname.
+    //
+    // Passing `request` straight through fails with Cloudflare error 1042,
+    // "Worker tried to fetch from another Worker on the same zone": the
+    // request URL is this Worker's own host, so the binding call looks like
+    // the Worker fetching itself and is refused. Every path on the site,
+    // stylesheet included, returned 404 because of it. Only the path and
+    // query matter to the asset lookup, so they are rehung on a host that is
+    // not ours.
+    const url = new URL(request.url);
+    const asset = await env.ASSETS.fetch(
+      new Request(new URL(url.pathname + url.search, 'https://assets.local'), request)
+    );
     if (asset.status !== 404) return asset;
 
     return new Response(NOT_FOUND, {
