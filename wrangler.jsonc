@@ -5,14 +5,23 @@
 // command has nothing to deploy and the build fails with "error occurred
 // while running deploy command".
 //
-// There is no server-side code here. This is a static site, so there is no
-// "main" field: an assets-only Worker is a supported configuration and simply
-// serves the directory. _headers and _redirects in the repository root are
-// read natively by Workers static assets, exactly as they would be by Pages,
-// so the caching, security headers and the www redirect all still apply.
+// This is a static site. It carries a "main" script anyway, for the reason
+// given at the field below, but that script only ever answers a 404: assets
+// are matched first, so every real page is served by the asset layer.
+// _headers and _redirects in the repository root are read natively there,
+// exactly as they would be by Pages, so the caching, the security headers and
+// the redirects all still apply.
 {
   "name": "khaana-website",
   "compatibility_date": "2026-08-01",
+  // Cloudflare treats a Worker with no script as "assets-only" and hides
+  // triggers for it, so Settings had no Domains & Routes panel and khaana.com
+  // could not be attached. A script makes it an ordinary Worker.
+  //
+  // It does not change how the site is served: static assets are matched
+  // first by default, so worker.js only runs when nothing matched, which
+  // means a 404.
+  "main": "worker.js",
   "assets": {
     "directory": "./",
     // Serve /recipes/naan.html as itself. The default, "auto-trailing-slash",
