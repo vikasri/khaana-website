@@ -117,6 +117,11 @@
       reasons.push('over ' + f.maxKcal + ' kcal');
     }
 
+    if (f.protein) {
+      var b = proteinBand(recipe.nutrition);
+      if (b !== f.protein) reasons.push(PROTEIN_LABEL[f.protein].toLowerCase());
+    }
+
     return reasons;
   }
 
@@ -308,6 +313,7 @@
     var maxKcal = kcalEl && kcalEl.value ? parseInt(kcalEl.value, 10) : 0;
     return {
       diets: diets,
+      protein: (document.querySelector('input[name="protein"]:checked') || {}).value || '',
       maxKcal: maxKcal,
       maxTime: t ? parseInt(t, 10) : null
     };
@@ -584,6 +590,10 @@
                ' <span class="kcal-weight">(' + n.servingGrams + ' g' +
                (n.kcal100 ? ' &middot; ' + n.kcal100 + ' kcal/100 g' : '') +
                ')</span></span>' +
+             (proteinBand(n)
+               ? '<span class="kcal-protein" data-band="' + proteinBand(n) + '">' +
+                   n.protein.toFixed(0) + plus + ' g protein</span>'
+               : '') +
              '<button type="button" class="kcal-toggle" aria-expanded="false" ' +
                'aria-controls="' + id + '">Nutrition</button>' +
            '</div>' +
@@ -608,8 +618,16 @@
     var have = s.lines.filter(function (l) { return !l.staple && l.state === 'have'; }).length;
     var countable = s.lines.filter(function (l) { return !l.staple; }).length;
 
-    var missBits = s.missingAll.slice(0, 4).map(function (l) { return esc(l.name); }).join(', ');
-    var extraMiss = s.missingAll.length > 4 ? ' +' + (s.missingAll.length - 4) + ' more' : '';
+    // "+3 more" used to be plain text. It sits under the stretched link that
+    // makes the whole card clickable, so pressing it opened the recipe instead
+    // of showing the rest. It is a real button now, and the full list ships
+    // hidden beside it rather than being fetched again.
+    var missAll = s.missingAll.map(function (l) { return esc(l.name); });
+    var missBits = missAll.slice(0, 4).join(', ');
+    var extraMiss = missAll.length > 4
+      ? '<span class="miss-rest" hidden>, ' + missAll.slice(4).join(', ') + '</span>' +
+        '<button type="button" class="miss-more">+' + (missAll.length - 4) + ' more</button>'
+      : '';
 
     var subLines = s.lines.filter(function (l) { return l.state === 'substitute'; });
 
@@ -646,6 +664,33 @@
     return a;
   }
 
+  /* Protein band. Two tests, because either alone misleads.
+     Grams alone rewards a big portion: dal baati churma reaches 30 g while
+     protein is a tenth of 1,215 kcal. Share of calories alone rewards the
+     absence of calories: a glass of sambharam is 23% protein and 2.3 g.
+     High needs both. The EU threshold for a "high protein" claim is 20% of
+     energy, which on this catalogue would pass 186 dishes and only 6
+     vegetarian ones, so it is used as a floor rather than the test. */
+  function proteinBand(n) {
+    if (!n || !n.kcal || typeof n.protein !== 'number') return null;
+    var share = (n.protein * 4) / n.kcal;
+    if (n.protein >= 20 && share >= 0.12) return 'high';
+    if (n.protein >= 10) return 'medium';
+    return 'low';
+  }
+  var PROTEIN_LABEL = { high: 'High protein', medium: 'Medium protein', low: 'Low protein' };
+
+  // Delegated, because cards are re-rendered on every filter change.
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest && ev.target.closest('.miss-more');
+    if (!b) return;
+    ev.preventDefault();
+    ev.stopPropagation();
+    var rest = b.parentNode.querySelector('.miss-rest');
+    if (rest) rest.hidden = false;
+    b.remove();
+  });
+
   function tier(p) { return p >= 90 ? 'high' : p >= 65 ? 'mid' : 'low'; }
 
   function esc(s) {
@@ -676,7 +721,7 @@
   /* ---------- boot ---------- */
 
   function wire() {
-    document.querySelectorAll('input[name="diet"], input[name="kcal"]').forEach(function (i) {
+    document.querySelectorAll('input[name="diet"], input[name="kcal"], input[name="protein"]').forEach(function (i) {
       i.addEventListener('change', update);
     });
     el('f-time').addEventListener('change', update);

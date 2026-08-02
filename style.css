@@ -158,6 +158,14 @@ p { margin: 0 0 1.1em; }
     gap: 10px;
   }
   .nav-links.open { display: flex; }
+  /* Even collapsed the menu can outgrow a short phone screen in landscape,
+     and it lives in a sticky header, so it has to scroll on its own. */
+  .nav-links.open {
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
 }
 
 /* ---------- Hero ---------- */
@@ -995,7 +1003,14 @@ section.tight { padding: 34px 0; }
   transform: translateY(-3px); text-decoration: none;
   box-shadow: 0 16px 36px rgba(232,89,12,0.24);
 }
-.match-thumb { position: relative; height: 100%; min-height: 172px; overflow: hidden; }
+/* height:100% made the photo as tall as the card, so a long Missing list
+   stretched it into a column. Bounded instead: the row can grow, the
+   picture stops at 210px and stays the same shape card to card. */
+.match-thumb {
+  position: relative; align-self: start;
+  height: 100%; min-height: 150px; max-height: 210px;
+  overflow: hidden;
+}
 .match-thumb img { width: 100%; height: 100%; object-fit: cover; }
 .match-pct {
   position: absolute; top: 10px; left: 10px;
@@ -1014,11 +1029,14 @@ section.tight { padding: 34px 0; }
 .match-body h3 { margin: 0 0 4px; font-size: 1.16rem; }
 .match-sub { font-size: 0.92rem; color: var(--ink-soft); margin: 0 0 9px; }
 
-.diet-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+.diet-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
+/* Four pills were taking a line and a half on a result card, which pushed
+   the part people read (what is missing) below the fold of the card. */
 .diet-tag {
-  font-size: 0.71rem; font-weight: 700; letter-spacing: 0.04em;
+  font-size: 0.63rem; font-weight: 700; letter-spacing: 0.03em;
   text-transform: uppercase; color: var(--saffron-dark);
-  background: #ffe4df; padding: 2px 8px; border-radius: 999px;
+  background: #ffe4df; padding: 1px 6px; border-radius: 999px;
+  line-height: 1.6;
 }
 
 .match-lines { display: grid; gap: 3px; font-size: 0.87rem; }
@@ -1147,7 +1165,7 @@ section.tight { padding: 34px 0; }
 }
 @media (max-width: 560px) {
   .match-card { grid-template-columns: 1fr; }
-  .match-thumb { min-height: 170px; }
+  .match-thumb { min-height: 150px; max-height: 190px; }
 }
 
 /* ---------- AI suggestion tier (Cook page) ----------
@@ -1695,19 +1713,18 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 .nav-dropdown a:hover { background: var(--cream); color: var(--terracotta); text-decoration: none; }
 
 @media (max-width: 820px) {
-  /* Inside the burger menu there is no bar to protect, so just list them. */
+  /* Cuisines is a real control here, not a label. It used to be
+     pointer-events: none with the 21 cuisines permanently expanded, which
+     made the burger menu 24 items long: About fell off the bottom and there
+     was no way to collapse the list to reach it. */
   .nav-dropdown {
-    position: static; display: block; min-width: 0; columns: 1;
+    position: static; display: none; min-width: 0; columns: 1;
     border: 0; box-shadow: none; padding: 2px 0 8px 14px; background: none;
   }
-  /* Kept as a label, not a control: the list below it is already open, but
-     without a heading the cuisines read as a wall of links under Recipes. */
-  .nav-cuisines-toggle {
-    display: block; pointer-events: none; padding: 6px 0 2px;
-    font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--ink-soft);
-  }
-  .nav-cuisines-toggle::after { content: ''; }
+  .nav-cuisines.open .nav-dropdown { display: block; }
+  .nav-cuisines-toggle { display: block; width: 100%; text-align: left; }
+  .nav-cuisines-toggle::after { content: ' \25BE'; font-size: 0.8em; }
+  .nav-cuisines.open > .nav-cuisines-toggle::after { content: ' \25B4'; }
 }
 
 /* Recipe photographs vary from 0.45 to 2.2 in aspect ratio, and a tall
@@ -1778,3 +1795,34 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
   .provenance { border-top: 1px solid #bbb; margin-top: 12pt; padding-top: 6pt; font-size: 8pt; }
   .provenance::after { content: " Printed from khaana.com"; }
 }
+
+
+/* ---------- the Missing line's "more" control ----------
+   It used to be plain text sitting under .match-link::after, which covers the
+   whole card, so clicking it opened the recipe instead of showing the rest.
+   A real button, lifted above the overlay. */
+.miss-more {
+  position: relative; z-index: 1;
+  border: 0; background: none; padding: 0 0 0 2px; margin: 0;
+  font: inherit; color: var(--saffron-dark); font-weight: 700;
+  cursor: pointer; text-decoration: underline; text-underline-offset: 2px;
+}
+.miss-more:hover { color: var(--deep-red); }
+
+
+/* ---------- protein band ----------
+   Two numbers because either alone misleads: grams reward a big portion,
+   share of calories rewards the absence of calories. */
+.kcal-protein {
+  position: relative; z-index: 1;
+  font-weight: 700; font-size: 0.86rem; padding: 1px 8px; border-radius: 999px;
+}
+.kcal-protein[data-band="high"]   { color: #1d6b42; background: #e3f3ea; }
+.kcal-protein[data-band="medium"] { color: #8a6212; background: #fbf0d8; }
+.kcal-protein[data-band="low"]    { color: var(--ink-soft); background: #eef0ef; }
+
+.nut-band {
+  margin: 0 0 14px; font-size: 0.92rem; color: var(--ink-soft);
+}
+.nut-band strong { color: var(--ink); }
+.nut-band[data-band="high"] strong { color: #1d6b42; }

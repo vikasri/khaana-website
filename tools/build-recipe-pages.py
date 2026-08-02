@@ -137,6 +137,11 @@ def nutrition_panel(r):
                    ("%d%s kcal" % (pc[key], plus)) if key == "kcal"
                    else ("%.0f%s %s" % (pc[key], plus, unit))))
 
+    # The same two-part test the Cook page filter uses.
+    share = (ps["protein"] * 4) / ps["kcal"] if ps["kcal"] else 0
+    band = ("high" if ps["protein"] >= 20 and share >= 0.12
+            else "medium" if ps["protein"] >= 10 else "low")
+
     rows = [
         row("Calories", "kcal", cls="nut-major"),
         row("Protein", "protein", cls="nut-major"),
@@ -171,12 +176,15 @@ def nutrition_panel(r):
 
     return ("""<section class="nutrition" aria-labelledby="nutrition-h">
         <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="%s">%s estimate</span></h2>
+        <p class="nut-band" data-band="%s">%s protein: <strong>%.0f%s g</strong> a serving,
+          %.0f%% of the calories</p>
         <table class="nut-table">
           <thead><tr><th></th><th>Per serving<span>%d g</span></th><th>Per 100 g</th></tr></thead>
           <tbody>%s</tbody>
         </table>
         <p class="nut-note">%s</p>
       </section>""" % (n.get("confidence", "medium"), n.get("confidence", "medium").title(),
+                       band, band.title(), ps["protein"], plus, share * 100,
                        n["servingGrams"], "".join(rows), " ".join(notes)))
 
 
