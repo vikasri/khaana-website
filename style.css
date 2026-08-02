@@ -166,10 +166,16 @@ p { margin: 0 0 1.1em; }
    squashing it, and pulls the content below up towards the top of the page. */
 .hero {
   position: relative;
-  height: 44vh;
-  min-height: 300px;
+  /* 20% shorter than the 44vh it was. The photograph is a grid of spice
+     bowls, so a shorter frame crops the outer rows and keeps the middle
+     ones, which is the part worth showing. object-position says so
+     explicitly rather than relying on the default. */
+  height: 35vh;
+  min-height: 240px;
   display: flex;
-  align-items: flex-end;
+  /* Centred, not bottom-aligned. The headline sat at the bottom left and the
+     word mark at the top right, so the two never lined up with each other. */
+  align-items: center;
   overflow: hidden;
 }
 .hero img {
@@ -178,6 +184,7 @@ p { margin: 0 0 1.1em; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 50%;
 }
 .hero::after {
   content: '';
@@ -187,9 +194,9 @@ p { margin: 0 0 1.1em; }
      still nearly transparent and the eyebrow washed out against pale spices.
      The mid stop darkens the band the text actually occupies. */
   background: linear-gradient(180deg,
-    rgba(8,24,22,0.10) 0%,
-    rgba(6,20,18,0.52) 45%,
-    rgba(6,20,18,0.86) 100%);
+    rgba(8,24,22,0.22) 0%,
+    rgba(6,20,18,0.62) 50%,
+    rgba(6,20,18,0.72) 100%);
 }
 .hero-content {
   position: relative;
@@ -211,7 +218,9 @@ p { margin: 0 0 1.1em; }
 .hero-content h1 { color: #fff; margin-bottom: 10px; }
 .hero-content p { color: #f2e7db; max-width: 560px; font-size: 1.1rem; }
 
-.hero.small { height: 42vh; min-height: 280px; }
+.hero.small { height: 42vh; min-height: 280px; align-items: flex-end; }
+/* Cuisine pages keep the badge in the corner; only the home hero centres it. */
+.hero.small .hero-wordmark { top: 18px; transform: none; }
 
 /* ---------- Word mark (khaana pronunciation) ---------- */
 /* Sits in the hero's top-right corner, clear of the headline because
@@ -223,7 +232,8 @@ p { margin: 0 0 1.1em; }
    image would not hold. Cream keeps the mark's own colours legible. */
 .hero-wordmark {
   position: absolute;
-  top: 18px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 24px;
   z-index: 2;
   padding: 12px 18px 13px;
@@ -324,10 +334,10 @@ p { margin: 0 0 1.1em; }
 /* ---------- Sections ---------- */
 /* Trimmed from 64/40: the old values stacked into ~104px between sections,
    which read as dead space rather than rhythm. */
-section { padding: 30px 0; }
-section.tight { padding: 22px 0; }
+section { padding: 44px 0; }
+section.tight { padding: 34px 0; }
 
-.section-head { max-width: 720px; margin: 0 0 26px; }
+.section-head { max-width: 720px; margin: 0 0 34px; }
 .section-head .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -595,8 +605,8 @@ section.tight { padding: 22px 0; }
 /* ---------- Phones ---------- */
 @media (max-width: 560px) {
   .container { padding: 0 18px; }
-  section { padding: 44px 0; }
-  section.tight { padding: 30px 0; }
+  section { padding: 64px 0; }
+  section.tight { padding: 48px 0; }
 
   /* Bigger, easier-to-tap nav items in the dropdown */
   .nav-wrap { padding: 12px 18px; }
@@ -608,7 +618,7 @@ section.tight { padding: 22px 0; }
   .nav-links a[href="cook.html"] { font-size: 1.22rem; }
 
   /* Hero: a touch shorter, tighter text block */
-  .hero { height: 40vh; min-height: 250px; }
+  .hero { height: 32vh; min-height: 210px; }
   .hero.small { height: 40vh; min-height: 240px; }
   .hero-content { padding: 26px 18px; }
   .hero-content p { font-size: 1.02rem; }
@@ -617,7 +627,7 @@ section.tight { padding: 22px 0; }
      clips at the top, so the badge has to give ground rather than push the
      headline out of view. */
   .hero-wordmark {
-    top: 10px;
+    top: 50%;
     right: 10px;
     padding: 7px 10px 8px;
     border-radius: 10px;
@@ -1040,7 +1050,7 @@ section.tight { padding: 22px 0; }
 .recipe { max-width: 1000px; }
 .crumbs { font-size: 0.88rem; margin-bottom: 16px; }
 
-.recipe-head { display: grid; grid-template-columns: 1fr 380px; gap: 32px; align-items: start; }
+.recipe-head { display: grid; grid-template-columns: 1fr 380px; gap: 32px; align-items: start; margin-bottom: 34px; }
 .recipe-headline h1 { margin-bottom: 8px; }
 .recipe-headline .lede { font-size: 1.05rem; color: var(--ink-soft); }
 .recipe-photo { margin: 0; }
@@ -1076,7 +1086,7 @@ section.tight { padding: 22px 0; }
   margin: 0 0 18px;
 }
 
-.recipe-cols { display: grid; grid-template-columns: 340px 1fr; gap: 38px; align-items: start; margin-top: 12px; }
+.recipe-cols { display: grid; grid-template-columns: 340px 1fr; gap: 38px; align-items: start; margin-top: 30px; }
 .recipe-ing { position: sticky; top: 92px; }
 .serves-note { font-size: 0.85rem; color: var(--ink-soft); margin-bottom: 10px; }
 .equip-line { font-size: 0.9rem; color: var(--ink-soft); text-transform: capitalize; }
@@ -1520,7 +1530,7 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 /* ---------- Nutrition panel ---------- */
 /* Ordered by what people look for: calories, protein, carbohydrate, fat, with
    the breakdowns indented under their parent. */
-.nutrition { margin: 30px 0 6px; }
+.nutrition { margin: 46px 0 6px; }
 .nutrition h2 { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
 .nut-conf {
   font-family: var(--sans); font-size: 0.68rem; font-weight: 800;

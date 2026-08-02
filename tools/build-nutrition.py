@@ -167,9 +167,13 @@ def to_grams(qty, ing_id, portions, note=""):
         g = float(m.group(1)) * (1000 if m.group(2).lower() == "kg" else 1)
         return g, "stated grams"
 
-    m = re.search(r"(\d+(?:\.\d+)?)\s*(ml|l)\b", q, re.I)
+    # "l" alone matched but "litre", "litres" and "liter" did not, so 69
+    # recipes had their largest liquid ingredient silently counted as zero.
+    # Harmless for water; it meant 22 milk sweets were missing their milk.
+    m = re.search(r"(\d+(?:\.\d+)?)\s*(ml|millilitres?|litres?|liters?|l)\b", q, re.I)
     if m and not SOAKING.search(q):
-        ml = float(m.group(1)) * (1000 if m.group(2).lower() == "l" else 1)
+        unit = m.group(2).lower()
+        ml = float(m.group(1)) * (1 if unit.startswith(("ml", "milli")) else 1000)
         d = DENSITY["oil"] if "oil" in ing_id else DENSITY.get(ing_id, DENSITY["default"])
         return ml * d, "volume"
 
@@ -351,7 +355,14 @@ def compute(table):
         # soaks in, batter that yields more than the stated servings.
         share = len(n["unquantified"]) / max(1, len(r["ingredients"]))
         blob = (r["name"] + " " + (r.get("subtitle") or "")).lower()
-        soaky = any(w in blob for w in ("syrup", "soaked in", "batter", "fermented batter"))
+        # A dish that curdles milk and throws the whey away has most of the
+        # weighed milk leaving the pan. Counting the full 2 litres against a
+        # sandesh made from 400 g of chhena is as wrong in one direction as
+        # counting none of it was in the other.
+        method = " ".join(x["text"] for x in r.get("steps", [])).lower()
+        whey = any(w in method for w in ("whey", "curdle", "chhena", "muslin"))
+        soaky = whey or any(w in blob for w in
+                            ("syrup", "soaked in", "batter", "fermented batter"))
         n["confidence"] = ("low" if share > 0.30 or soaky
                            else "medium" if share > 0.15 else "good")
 
@@ -362,7 +373,12 @@ def compute(table):
         # what is actually eaten, so a + there would be a lie.
         if soaky:
             n["direction"] = "overstated"
-            n["caveat"] = ("Much of the weighed input may not be eaten. Syrup left in the "
+            n["caveat"] = ("Much of the weighed input is not eaten. Whey poured away when "
+                           "milk is curdled, syrup left in the bowl, or batter that yields "
+                           "more than the stated servings all mean the real figure is lower "
+                           "than this."
+                           if whey else
+                           "Much of the weighed input may not be eaten. Syrup left in the "
                            "bowl, or batter that yields more than the stated servings, means "
                            "the real figure is likely lower than this.")
         elif share > 0.10:

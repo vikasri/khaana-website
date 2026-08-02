@@ -104,9 +104,27 @@ def main():
     todo = [r for r in doc["recipes"] if r["id"] in failures and not r.get("image")]
     print("second pass over %d recipes\n" % len(todo))
 
-    # The subtitle-derived term names a food category, not this dish, so the
-    # filename guard would reject every hit. The category gate still applies.
-    F.name_ok = lambda term, title: True
+    # The subtitle-derived term names a food category rather than this dish, so
+    # the first-pass filename guard would reject every hit. It used to be
+    # switched off entirely here, and that is how a recipe for devilled kidneys
+    # was given a colonial photograph captioned "Enslaved natives with a load of
+    # rubber weighing 75 kilos". Loose about which dish, never loose about
+    # whether the subject is food at all.
+    NOT_FOOD = (
+        "enslaved", "slave", "native", "portrait", "war", "colonial", "monument",
+        "temple", "church", "mosque", "map", "coin", "stamp", "painting", "print",
+        "engraving", "museum", "statue", "soldier", "battle", "funeral", "grave",
+        "protest", "poster", "logo", "flag", "building", "railway", "bridge",
+        "cemetery", "memorial", "manuscript", "coat of arms", "bm ",
+    )
+
+    def food_guard(term, title):
+        low = title.lower()
+        if any(w in low for w in NOT_FOOD):
+            return False
+        return True
+
+    F.name_ok = food_guard
     F.terms_for = second_pass_terms
 
     # Generic terms mean many recipes chase the same few photographs — every

@@ -246,7 +246,7 @@
     if (!b) return;
     var held = shelfHeld(), all = held === SHELF.length;
     b.textContent = all ? '\u2713 Spice shelf added. Remove it'
-                        : '+ I keep a standard Indian spice shelf';
+                        : '+ I keep a standard spice shelf';
     b.classList.toggle('is-on', all);
     note.textContent = all
       ? 'The six spices almost every one of these recipes assumes.'
