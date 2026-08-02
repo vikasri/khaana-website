@@ -1,0 +1,13 @@
+# Files in the repository that are not part of the website. Everything here is
+# already public on GitHub, so this is about keeping the deployed site to what
+# a visitor should actually be able to fetch, not about hiding anything.
+#
+# Careful: anything listed here stops being served. Do not add data/, assets/,
+# recipes/ or any .html, all of which the site fetches at runtime.
+tools/
+api/
+DEPLOY.md
+wrangler.jsonc
+.assetsignore
+.gitignore
+CNAME

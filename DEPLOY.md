@@ -38,25 +38,36 @@ data.
    list.** Confirm the `google-site-verification` TXT is in it. Add it by hand
    if not.
 
-3. **Create the Pages project.** *Workers & Pages* → *Create* → *Pages* →
-   *Connect to Git* → the `khaana-website` repo. Build settings:
+3. **Create the project.** Cloudflare has moved new accounts to Workers and
+   no longer offers Pages project creation in every account, so use the Workers
+   route. *Workers & Pages* (or *Compute*) → **Create** → **Import a
+   repository** → the `khaana-website` repo.
 
-   | Field | Value |
-   |---|---|
-   | Framework preset | None |
-   | Build command | *(leave empty)* |
-   | Build output directory | `/` |
-   | Production branch | `main` |
+   Leave the build and deploy commands at their defaults. The repository now
+   contains `wrangler.jsonc`, which is what that flow needs:
 
-   The site is pre-built and committed, so there is no build step. It deploys
-   to `<project>.pages.dev` in a minute or two.
+   ```jsonc
+   { "name": "khaana-website", "compatibility_date": "2026-08-01",
+     "assets": { "directory": "./" } }
+   ```
 
-4. **Check the `.pages.dev` URL before touching DNS.** Load the home page, a
+   There is no `main` field because there is no server-side code. An
+   assets-only Worker just serves the directory. Without this file the deploy
+   fails with "error occurred while running deploy command", because
+   `wrangler deploy` has nothing to act on.
+
+   `_headers` and `_redirects` are read natively by Workers static assets, the
+   same as they would be by Pages, so caching, security headers and the www
+   redirect all still apply. `.assetsignore` keeps `tools/`, `api/` and the
+   repository's own housekeeping files out of the deployed site: 1,815 files
+   are served, including all 586 recipe pages and their JSON.
+
+4. **Check the temporary `workers.dev` URL before touching DNS.** Load the home page, a
    cuisine page, a recipe, and the Cook page. The Cook page is the real test
    because it fetches JSON at runtime. Nothing is live for your visitors yet,
    so this is free to get wrong.
 
-5. **Add the custom domains** in the Pages project: `khaana.com` and
+5. **Add the custom domains** in the project settings: `khaana.com` and
    `www.khaana.com`. Cloudflare will say it needs to manage DNS.
 
 6. **Switch the nameservers at GoDaddy** to the two Cloudflare gives you.
@@ -89,8 +100,9 @@ change.
 - **`www` redirects to the apex**, so search engines stop seeing two sites.
   See `_redirects`.
 - **A path to a backend.** `api/suggest.js` was parked because GitHub Pages
-  cannot run code. Cloudflare Pages Functions can, on the same free plan, which
-  is also what an email signup or saved pantries would need.
+  cannot run code. A Worker can, on the same free plan, and this project is
+  already a Worker: adding a `main` script alongside the assets is all it
+  takes. That is also what an email signup or saved pantries would need.
 - **Commercial use is permitted on the free plan.** This matters for the LLC:
   Vercel's Hobby plan is "restricted to non-commercial personal use only" and
   counts advertising, affiliate links and donations as commercial use.
