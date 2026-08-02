@@ -17,7 +17,6 @@ tools/
 api/
 DEPLOY.md
 wrangler.jsonc
-worker.js
 .assetsignore
 .gitignore
 CNAME
