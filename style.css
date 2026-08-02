@@ -1203,7 +1203,14 @@ section.tight { padding: 34px 0; }
 }
 @media (max-width: 560px) {
   .match-card { grid-template-columns: minmax(0, 1fr); }
-  .match-thumb { min-height: 150px; }
+  /* One shape for every card. Stacked, the thumbnail took its height from the
+     photograph, so a portrait shot made a card half again as tall as the one
+     above it and the list read as ragged. A fixed 16:9 crop keeps the run
+     even, and shorter, which is the better use of a phone screen. */
+  .match-thumb {
+    min-height: 0; height: auto; aspect-ratio: 16 / 9;
+  }
+  .match-thumb img { width: 100%; height: 100%; object-fit: cover; }
 
   /* Every checkbox row was 19px tall, which is not something you can hit
      reliably with a thumb. Apple asks for 44px and Google for 48dp; 40 is

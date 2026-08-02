@@ -98,6 +98,19 @@
     ['egg', 'eggs', 'anda'],
     ['capsicum', 'bellpepper', 'shimla'],
     ['ghee', 'clarified'],
+    ['paneer', 'panir', 'cheese'],
+    ['toor', 'tuvar', 'arhar', 'tur'],
+    ['urad', 'udad'],
+    ['moong', 'mung'],
+    ['masoor', 'musoor'],
+    ['besan', 'gramflour'],
+    ['rava', 'sooji', 'suji', 'semolina', 'rawa'],
+    ['puri', 'poori', 'bhatura', 'luchi'],
+    ['sweet', 'sweets', 'mithai', 'dessert', 'desserts', 'pudding'],
+    ['snack', 'snacks', 'nashta', 'tiffin'],
+    ['soup', 'shorba', 'saar'],
+    ['drink', 'sharbat', 'beverage'],
+    ['bread', 'flatbread'],
     ['chai', 'tea'],
 
     // regions and communities
@@ -147,12 +160,78 @@
     recipes: 1, dish: 1, dishes: 1, food: 1, cuisine: 1, style: 1
   };
 
+  /* Multi-word names, folded to one word before anything else happens.
+
+     The variant rows below map single tokens, so they cannot reach a name
+     that is two words long. Measured against the catalogue, that was where
+     the search actually failed: "cottage cheese", "pigeon pea", "black gram",
+     "clarified butter" and "fried bread" all returned nothing, while
+     one-word equivalents like "aubergine" and "ladyfinger" already worked.
+
+     Applied to recipe text as well as to the query, so both sides meet at the
+     same word: a reader typing "lauki" finds "Bottle Gourd Kootu" and a
+     reader typing "bottle gourd" finds "Lau Ghonto". Longest phrases first,
+     so "black gram flour" does not match "black gram" and strand "flour". */
+  var PHRASE_ROWS = [
+    ['cottage cheese', 'paneer'],
+    ['indian cheese', 'paneer'],
+    ['clarified butter', 'ghee'],
+    ['pigeon pea', 'toor'], ['pigeon peas', 'toor'], ['split pigeon', 'toor'],
+    ['black gram', 'urad'], ['split black', 'urad'],
+    ['green gram', 'moong'], ['split green', 'moong'],
+    ['bengal gram', 'chana'], ['split chickpea', 'chana'],
+    ['red lentil', 'masoor'], ['red lentils', 'masoor'],
+    ['horse gram', 'kulith'],
+    ['gram flour', 'besan'], ['chickpea flour', 'besan'],
+    ['rice flour', 'riceflour'],
+    ['wholewheat flour', 'atta'], ['whole wheat', 'atta'],
+    ['plain flour', 'maida'], ['all purpose flour', 'maida'],
+    ['bottle gourd', 'lauki'], ['bitter gourd', 'karela'],
+    ['ridge gourd', 'turai'], ['ash gourd', 'petha'],
+    ['snake gourd', 'padwal'], ['pointed gourd', 'parwal'],
+    ['fenugreek leaves', 'methi'], ['fenugreek leaf', 'methi'],
+    ['curry leaves', 'curryleaf'], ['curry leaf', 'curryleaf'],
+    ['mustard oil', 'mustardoil'], ['mustard seeds', 'mustardseed'],
+    ['coriander leaves', 'dhania'], ['coriander leaf', 'dhania'],
+    ['spring onion', 'springonion'], ['green onion', 'springonion'],
+    ['raw banana', 'plantain'], ['green banana', 'plantain'],
+    ['raw mango', 'kairi'], ['green mango', 'kairi'],
+    ['jack fruit', 'kathal'], ['raw jackfruit', 'kathal'],
+    ['lotus stem', 'nadru'], ['lotus root', 'nadru'],
+    ['drumstick', 'moringa'],
+    ['flat bread', 'flatbread'], ['fried bread', 'puri'],
+    ['rice pudding', 'kheer'], ['semolina pudding', 'sheera'],
+    ['lentil soup', 'dal'], ['lentil curry', 'dal'],
+    ['yogurt drink', 'lassi'], ['yoghurt drink', 'lassi'],
+    ['scrambled egg', 'bhurji'], ['scrambled eggs', 'bhurji'],
+    // Deliberately no rows collapsing a two-ingredient dish into one token.
+    // "spinach cheese" was mapped to "palakpaneer", a word that appears in no
+    // recipe, so a query that had previously found nothing went on finding
+    // nothing by a longer route. Left as two words, the spinach row and the
+    // paneer row each match and Palak Paneer comes top.
+    ['clotted cream', 'malai'], ['reduced milk', 'khoya'],
+    ['cracked wheat', 'dalia'], ['flattened rice', 'poha'],
+    ['puffed rice', 'murmura'], ['black eyed', 'lobia'],
+    ['kidney bean', 'rajma'], ['kidney beans', 'rajma'],
+    ['cluster bean', 'guar'], ['french bean', 'beans'],
+    ['banana leaf', 'bananaleaf'], ['sesame oil', 'sesameoil'],
+    ['tamarind pulp', 'imli'], ['jaggery syrup', 'gur']
+  ];
+  var PHRASE_RE = new RegExp(
+    '\\b(' + PHRASE_ROWS.map(function (r) { return r[0]; })
+      .sort(function (a, b) { return b.length - a.length; })
+      .join('|') + ')\\b', 'g');
+  var PHRASE_TO = {};
+  PHRASE_ROWS.forEach(function (r) { PHRASE_TO[r[0]] = r[1]; });
+
   function norm(s) {
-    return String(s == null ? '' : s)
+    var t = String(s == null ? '' : s)
       .toLowerCase()
       .normalize('NFD').replace(/[\u0300-\u036f]/g, '')   // café -> cafe
       .replace(/[^a-z0-9]+/g, ' ')
       .trim();
+    if (!t) return t;
+    return t.replace(PHRASE_RE, function (m) { return PHRASE_TO[m] || m; });
   }
 
   function wordsOf(s) {
