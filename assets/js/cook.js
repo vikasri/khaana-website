@@ -118,8 +118,11 @@
     }
 
     if (f.protein) {
+      // "medium" is medium-or-better, not exactly medium: someone asking for
+      // a decent amount of protein does not want the high ones filtered out.
       var b = proteinBand(recipe.nutrition);
-      if (b !== f.protein) reasons.push(PROTEIN_LABEL[f.protein].toLowerCase());
+      var ok = f.protein === 'high' ? b === 'high' : (b === 'high' || b === 'medium');
+      if (!ok) reasons.push(PROTEIN_LABEL[f.protein].toLowerCase());
     }
 
     return reasons;
@@ -178,8 +181,8 @@
   // which you own, but basmati is what most kitchens actually have and leaving
   // it out sent those cooks digging through a category to find it.
   var COMMON = ['onion', 'tomato', 'potato', 'ginger', 'garlic', 'green-chilli',
-                'coriander-leaves', 'curry-leaves', 'shallot', 'chicken', 'mutton',
-                'fish', 'chana-dal', 'toor-dal', 'urad-dal', 'basmati-rice', 'rice',
+                'coriander-leaves', 'curry-leaves', 'chicken',
+                'chana-dal', 'toor-dal', 'urad-dal', 'basmati-rice', 'rice',
                 'atta', 'besan', 'maida', 'rice-flour'];
 
   function catalogue() {
@@ -265,11 +268,16 @@
     wrap.innerHTML = '';
     var known = {};
     catalogue().forEach(function (e) { known[e.item.id] = e.item; });
-    var group = document.createElement('div');
-    group.className = 'pantry-group pantry-common-group';
-    var h = document.createElement('h4');
-    h.textContent = 'Most-used ingredients';
-    group.appendChild(h);
+    // A <details> rather than a plain block: open on arrival because it is the
+    // fastest way in, foldable afterwards because once it is set it is a long
+    // list between the reader and everything below it.
+    var group = document.createElement('details');
+    group.className = 'pantry-group pantry-common-group pantry-cat';
+    group.open = true;
+    var sum = document.createElement('summary');
+    var n = COMMON.filter(function (id) { return known[id]; }).length;
+    sum.innerHTML = 'Most-used ingredients <span class="cat-n">' + n + '</span>';
+    group.appendChild(sum);
     var list = document.createElement('div');
     list.className = 'pantry-items';
     COMMON.forEach(function (id) { if (known[id]) list.appendChild(ingLabel(known[id])); });
@@ -309,11 +317,11 @@
       .call(document.querySelectorAll('input[name="diet"]:checked'))
       .map(function (i) { return i.value; });
     var t = el('f-time').value;
-    var kcalEl = document.querySelector('input[name="kcal"]:checked');
+    var kcalEl = el('f-kcal');
     var maxKcal = kcalEl && kcalEl.value ? parseInt(kcalEl.value, 10) : 0;
     return {
       diets: diets,
-      protein: (document.querySelector('input[name="protein"]:checked') || {}).value || '',
+      protein: (el('f-protein') || {}).value || '',
       maxKcal: maxKcal,
       maxTime: t ? parseInt(t, 10) : null
     };
@@ -486,7 +494,7 @@
     // has everything. Only mention the total while some of it is still hidden.
     function countPhrase(drawn, total) {
       var noun = ' recipe' + (total === 1 ? '' : 's');
-      return drawn < total ? 'Showing ' + drawn + ' of ' + shown(total) + noun
+      return drawn < total ? 'Showing first ' + drawn + ' of ' + shown(total) + noun
                            : shown(total) + noun;
     }
 
@@ -500,11 +508,11 @@
         summary.textContent = countPhrase(drawn, total) +
           '. Tick what is in your kitchen to rank them by your pantry.';
       } else {
-        // Say what was withheld. A bare count would read as "that is everything".
-        summary.textContent = countPhrase(drawn, total) +
-          ' you can mostly make, ranked by how much of each you already have.' +
-          (hidden ? ' ' + shown(hidden) + ' more need over ' + (100 - MIN_PCT) +
-                    '% of their ingredients bought in, so they are not shown.' : '');
+        // The sentence explaining what was withheld and why has gone. It was
+        // accurate but it was three lines of small print above the results,
+        // and the ranking already makes the point: what is shown is what you
+        // can mostly make.
+        summary.textContent = countPhrase(drawn, total) + ' you can mostly make.';
       }
     }
 
@@ -685,7 +693,8 @@
     if (n.protein >= 10) return 'medium';
     return 'low';
   }
-  var PROTEIN_LABEL = { high: 'High protein', medium: 'Medium protein', low: 'Low protein' };
+  var PROTEIN_LABEL = { high: 'High protein', medium: 'Medium protein or better',
+                        low: 'Low protein' };
 
   // Delegated, because cards are re-rendered on every filter change.
   document.addEventListener('click', function (ev) {
@@ -772,14 +781,14 @@
     if (!btn) return;
     var n = selected.size;
     var diets = document.querySelectorAll('input[name="diet"]:checked').length;
-    var kcal = (document.querySelector('input[name="kcal"]:checked') || {}).value;
-    var prot = (document.querySelector('input[name="protein"]:checked') || {}).value;
+    var kcal = (el('f-kcal') || {}).value;
+    var prot = (el('f-protein') || {}).value;
     var extras = diets + (kcal ? 1 : 0) + (prot ? 1 : 0) +
                  ((el('f-time') || {}).value ? 1 : 0);
     var bits = [];
     bits.push(n ? n + ' ingredient' + (n === 1 ? '' : 's') : 'nothing chosen yet');
     if (extras) bits.push(extras + ' filter' + (extras === 1 ? '' : 's'));
-    btn.innerHTML = '<span>Your kitchen and filters</span>' +
+    btn.innerHTML = '<span>Select ingredients and filters</span>' +
                     '<span class="panel-toggle-count">' + esc(bits.join(' \u00b7 ')) + '</span>';
   }
 
@@ -793,10 +802,13 @@
       });
     }
 
-    document.querySelectorAll('input[name="diet"], input[name="kcal"], input[name="protein"]').forEach(function (i) {
+    document.querySelectorAll('input[name="diet"]').forEach(function (i) {
       i.addEventListener('change', update);
     });
-    el('f-time').addEventListener('change', update);
+    ['f-time', 'f-kcal', 'f-protein'].forEach(function (id) {
+      var s = el(id);
+      if (s) s.addEventListener('change', update);
+    });
     el('clear-pantry').addEventListener('click', function () {
       selected.clear();
       persist();

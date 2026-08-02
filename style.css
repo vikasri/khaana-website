@@ -1915,6 +1915,10 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
    thumb like any phone, but every one of these rules used to stop at 560, so
    a tablet got the mouse-sized targets and the 8.8px type. */
 @media (max-width: 900px), (pointer: coarse) {
+  /* Time, Calories and Protein are the three main controls now that the last
+     two are dropdowns rather than radio lists. 35px is under the 40 that
+     everything else here got. */
+  .field select { min-height: 44px; padding: 10px 12px; font-size: 1rem; }
   .miss-more, .link-btn { padding-top: 9px; padding-bottom: 9px; }
   .page-sources a { display: inline-block; padding: 8px 2px; }
   .src-back { padding: 8px 10px; min-width: 24px; text-align: center; }
@@ -1931,19 +1935,27 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 .panel-toggle { display: none; }
 
 @media (max-width: 900px) {
+  /* Reads as a button, not a panel heading. It is the only way into the
+     ingredients on a phone, so it uses the same blue as the home page's
+     primary call to action rather than looking like the cards around it. */
   .panel-toggle {
-    display: flex; align-items: center; justify-content: space-between; gap: 10px;
-    width: 100%; margin: 0 0 14px;
-    padding: 14px 16px; min-height: 48px;
-    font-family: var(--sans); font-size: 1rem; font-weight: 700;
-    color: var(--ink); background: var(--paper);
-    border: 1px solid var(--line); border-radius: var(--radius);
-    box-shadow: var(--shadow); cursor: pointer; text-align: left;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    width: 100%; margin: 0 0 16px;
+    padding: 16px 18px; min-height: 56px;
+    font-family: var(--sans); font-size: 1.05rem; font-weight: 800;
+    color: #fff; background: var(--azure);
+    border: 0; border-radius: var(--radius);
+    box-shadow: 0 6px 18px rgba(26, 95, 138, 0.3);
+    cursor: pointer; text-align: left;
   }
-  .panel-toggle::after { content: '\25BE'; color: var(--ink-soft); font-size: 0.9em; }
+  .panel-toggle:hover, .panel-toggle:active { background: var(--azure-dark); }
+  .panel-toggle::after {
+    content: '\25BE'; font-size: 1.1em; opacity: 0.9; flex: 0 0 auto;
+  }
   .panel-toggle[aria-expanded="true"]::after { content: '\25B4'; }
   .panel-toggle .panel-toggle-count {
-    font-weight: 600; font-size: 0.85rem; color: var(--ink-soft);
+    font-weight: 600; font-size: 0.85rem; color: rgba(255,255,255,0.85);
+    margin-left: auto; text-align: right;
   }
   .cook-panel { display: none; }
   .cook-panel.open { display: grid; }

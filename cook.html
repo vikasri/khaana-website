@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Cook With What You Have | Khaana" />
 <meta name="twitter:description" content="Tell Khaana what is in your kitchen and it will suggest Indian dishes you can actually cook tonight, ranked by how much of each recipe you already have." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/home-hero.jpg" />
-<link rel="stylesheet" href="style.css?v=40588c18" />
+<link rel="stylesheet" href="style.css?v=e9a3fa56" />
 </head>
 <body>
 
@@ -99,7 +99,7 @@
            behind this button, which is hidden on wider screens where the
            panel is a sidebar and costs nothing. -->
       <button type="button" id="panel-toggle" class="panel-toggle" aria-expanded="false"
-              aria-controls="cook-panel">Your kitchen and filters</button>
+              aria-controls="cook-panel">Select ingredients and filters</button>
 
       <aside class="cook-panel" id="cook-panel">
         <div class="panel-block">
@@ -118,12 +118,15 @@
 
         <div class="panel-block">
           <h3>Calories</h3>
-          <div class="filter-set">
-            <label><input type="radio" name="kcal" value="" checked /> Any</label>
-            <label><input type="radio" name="kcal" value="300" /> Under 300 a serving</label>
-            <label><input type="radio" name="kcal" value="500" /> Under 500 a serving</label>
-            <label><input type="radio" name="kcal" value="700" /> Under 700 a serving</label>
-          </div>
+          <label class="field">
+            <span>Show me</span>
+            <select id="f-kcal">
+              <option value="">any number of calories</option>
+              <option value="300">under 300 a serving</option>
+              <option value="500">under 500 a serving</option>
+              <option value="700">under 700 a serving</option>
+            </select>
+          </label>
           <details class="panel-note">
             <summary>How to read these</summary>
             <p>Calculated from the raw ingredients. A <strong>+</strong> means the real number is a
@@ -134,18 +137,21 @@
 
         <div class="panel-block">
           <h3>Protein</h3>
-          <div class="filter-set">
-            <label><input type="radio" name="protein" value="" checked /> Any</label>
-            <label><input type="radio" name="protein" value="high" /> High</label>
-            <label><input type="radio" name="protein" value="medium" /> Medium</label>
-            <label><input type="radio" name="protein" value="low" /> Low</label>
-          </div>
+          <label class="field">
+            <span>Show me</span>
+            <select id="f-protein">
+              <option value="">any amount of protein</option>
+              <option value="high">high protein</option>
+              <option value="medium">medium or better</option>
+            </select>
+          </label>
           <details class="panel-note">
             <summary>How these are set</summary>
             <p><strong>High</strong> is at least 20&nbsp;g a serving and at least 12% of the
-              calories. <strong>Medium</strong> is 10&nbsp;g or more. Both tests matter: a glass
-              of buttermilk is 23% protein by calories and only 2&nbsp;g, and a very rich dish
-              can hit 30&nbsp;g while protein is a tenth of what you are eating.</p>
+              calories. <strong>Medium or better</strong> takes anything from 10&nbsp;g up.
+              Both tests matter: a glass of buttermilk is 23% protein by calories and only
+              2&nbsp;g, and a very rich dish can hit 30&nbsp;g while protein is a tenth of
+              what you are eating.</p>
             <p>Most vegetarian dishes land in medium. Dal and rice together make a complete
               protein, but nothing here can see a plate, only a recipe.</p>
           </details>
@@ -278,6 +284,6 @@
 
 <script src="script.js?v=9aeff587"></script>
 <script src="assets/js/search-match.js?v=a52ef68b"></script>
-<script src="assets/js/cook.js?v=8a010113"></script>
+<script src="assets/js/cook.js?v=27e9c02f"></script>
 </body>
 </html>
