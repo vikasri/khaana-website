@@ -240,7 +240,9 @@ p { margin: 0 0 1.1em; }
    image would not hold. Cream keeps the mark's own colours legible. */
 .hero-wordmark {
   position: absolute;
-  top: 50%;
+  /* Above the centre line rather than on it: the headline occupies the middle
+     of the hero and the panel reads better sitting clear of it. */
+  top: 34%;
   /* Straddling the turmeric and the bowl to its right, rather than pinned to
      the corner. Sampling the photograph, the bright saturated yellow runs 60%
      to 75% of the width, so a centre of 72% puts the panel's left half over
@@ -641,9 +643,13 @@ section.tight { padding: 34px 0; }
   /* The badge and the headline share a fixed-height hero here, and the hero
      clips at the top, so the badge has to give ground rather than push the
      headline out of view. */
-  /* Back to the corner on a phone: there is not enough width for the panel to
-     sit mid-hero without landing on the headline. */
+  /* Hidden on a phone. There is no corner to put it in: the hero is 270px
+     tall and the headline and its paragraph fill all of it, so wherever the
+     panel went it covered words. Measured at 390px it sat over 29% of the
+     paragraph. The header already carries the brand on every page, so
+     nothing is lost by dropping it here. */
   .hero-wordmark {
+    display: none;
     top: 50%;
     left: auto;
     right: 10px;
@@ -1004,7 +1010,7 @@ section.tight { padding: 34px 0; }
 .show-more:hover { background: var(--azure); color: #fff; }
 
 .match-card {
-  display: grid; grid-template-columns: 190px 1fr;
+  display: grid; grid-template-columns: 190px minmax(0, 1fr);
   background: var(--paper); border: 1px solid var(--line);
   border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
   color: inherit; text-decoration: none;
@@ -1181,14 +1187,42 @@ section.tight { padding: 34px 0; }
 @media (max-width: 900px) {
   .cook-layout { grid-template-columns: 1fr; }
   .cook-panel { position: static; max-height: none; overflow: visible; padding-right: 0; }
-  #pantry-groups { max-height: 260px; }
+  /* No cap here. It was 260px with overflow left at visible, so 436px of
+     checkboxes spilled straight out of the white panel and over whatever
+     came next. On a phone the panel is in normal flow, so the list can
+     simply grow and the page scrolls: a nested scroller inside a page
+     scroll is the wrong thing to hand someone on a touchscreen. */
+  #pantry-groups { max-height: none; overflow: visible; }
   .recipe-head { grid-template-columns: 1fr; }
   .recipe-cols { grid-template-columns: 1fr; gap: 24px; }
   .recipe-ing { position: static; }
 }
 @media (max-width: 560px) {
-  .match-card { grid-template-columns: 1fr; }
+  .match-card { grid-template-columns: minmax(0, 1fr); }
   .match-thumb { min-height: 150px; }
+
+  /* Every checkbox row was 19px tall, which is not something you can hit
+     reliably with a thumb. Apple asks for 44px and Google for 48dp; 40 is
+     the compromise that keeps a long pantry list navigable. */
+  .ing, .filter-set label {
+    min-height: 40px;
+    align-items: center;
+    padding: 2px 0;
+  }
+  .ing input, .filter-set label input { width: 20px; height: 20px; }
+
+  /* 8.8px is too small to read at arm's length. The card is full width here
+     so a second row of pills costs proportionally less than illegibility. */
+  .match-card .diet-tags { flex-wrap: wrap; }
+  .match-card .diet-tag { font-size: 0.7rem; padding: 2px 7px; }
+
+  /* The footer cuisine list is 21 stacked navigation links at 19px each.
+     Fine with a mouse, awkward with a thumb. */
+  .foot-links a { display: block; padding: 10px 0; }
+  .foot-links li { margin: 0; }
+
+  /* "Recipe" links under each signature dish: 22px is under the thumb. */
+  .dish-recipe { display: inline-block; padding: 9px 0; }
 }
 
 /* ---------- AI suggestion tier (Cook page) ----------
@@ -1611,10 +1645,16 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
   margin: 0 0 8px; font-size: 0.9rem; color: var(--ink-soft);
 }
 /* One line on a result card. It carries the two numbers people scan by, and
-   wrapping it cost three lines of card height on every card. */
-.match-card .kcal-row { flex-wrap: nowrap; font-size: 0.82rem; }
-.match-card .kcal-main { white-space: nowrap; }
+   wrapping it cost three lines of card height on every card.
+   nowrap gives the card body a minimum width, so on a phone the track grew to
+   394px inside a 354px card and overflow:hidden quietly clipped the Nutrition
+   button off the right edge. Only applied where there is room for it. */
+.match-card .kcal-row { font-size: 0.82rem; }
 .match-card .kcal-toggle { flex: 0 0 auto; }
+@media (min-width: 561px) {
+  .match-card .kcal-row { flex-wrap: nowrap; }
+  .match-card .kcal-main { white-space: nowrap; }
+}
 .kcal-main strong { color: var(--ink); font-size: 1rem; }
 .kcal-weight { color: var(--ink-soft); }
 .kcal-toggle {
@@ -1857,3 +1897,16 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 /* The "+2" that stands for the pills a card had no room for. Muted, because
    it is a count rather than a claim about the dish. */
 .match-card .diet-tag.more { background: #ecefee; color: var(--ink-soft); }
+
+
+/* ---------- touch targets ----------
+   Last in the file on purpose. These override component rules that are
+   themselves near the end, and at equal specificity the later rule wins.
+   An earlier @media block silently lost that argument. */
+@media (max-width: 560px) {
+  .miss-more, .link-btn { padding-top: 9px; padding-bottom: 9px; }
+  .page-sources a { display: inline-block; padding: 8px 2px; }
+  .src-back { padding: 8px 10px; min-width: 24px; text-align: center; }
+  /* The confidence badge sat at 10.88px, just under readable. */
+  .nut-conf { font-size: 0.72rem; }
+}
