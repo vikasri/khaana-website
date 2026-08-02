@@ -595,12 +595,16 @@
     // Anything unweighable is counted as zero, so those figures are floors, not
     // estimates. A + says the real number is higher rather than pretending the
     // arithmetic is complete.
-    var plus = n.direction === 'understated' ? '+' : '';
+    // No "+" on the numbers. It marked the two thirds of recipes whose figure
+    // is a floor rather than an estimate, which was accurate and which nobody
+    // else does, so it read as a typo or a footnote marker rather than as
+    // information. The caveat stays, in words, under the panel that opens.
+    var plus = '';
     var note = n.direction === 'understated'
-      ? 'The + means ingredients given to taste are counted as zero, so the real figure is a little higher.'
+      ? 'An estimate. Ingredients added to taste are not counted, so the real figure is a little higher.'
       : n.direction === 'overstated'
-        ? 'Likely lower in practice: much of what is weighed here is not eaten.'
-        : 'Worked out from the listed quantities.';
+        ? 'An estimate, and likely lower in practice: much of what is weighed here is not eaten.'
+        : 'An estimate, worked out from the listed quantities.';
     return '<div class="kcal-row">' +
              // Protein sits inside the same bracket as the serving weight so
              // that "a serving" governs it too. As its own pill alongside, the

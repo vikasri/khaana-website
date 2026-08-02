@@ -1459,6 +1459,12 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
   align-items: center;
   gap: 16px;
   padding: 34px 68px;
+  /* Bounded by its column. The label is nowrap and the side padding is 68px,
+     so its min-content came to 574px against a 482px track at 1280px, and the
+     button ran over the "Or" beside it. The track can shrink; without this the
+     button will not shrink with it. */
+  max-width: 100%;
+  box-sizing: border-box;
   border-radius: 999px;
   /* A vivid blue rather than the muted --azure steel this used to carry: it is
      the page's primary action and the likeliest way in for most visitors.
@@ -1494,6 +1500,17 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
    push the arrow onto a second line, which made the pill 120px tall. It fits
    the column on one line; mobile re-allows wrapping below. */
 .find-cta-label { font-weight: 800; letter-spacing: 0.01em; white-space: nowrap; }
+
+/* Between a phone and a wide desktop there is not enough room for the button
+   at full size beside the search box. It scales down rather than overflowing,
+   and the label is allowed to wrap as a last resort. */
+@media (max-width: 1400px) {
+  .find-cta { padding: 24px 40px; font-size: 1.35rem; gap: 12px; }
+  .find-cta-label { white-space: normal; }
+}
+@media (max-width: 1050px) {
+  .find-cta { padding: 20px 30px; font-size: 1.2rem; }
+}
 .find-cta-arrow { font-size: 1.15em; transition: transform 0.16s ease; }
 .find-cta:hover .find-cta-arrow { transform: translateX(3px); }
 

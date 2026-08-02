@@ -124,7 +124,10 @@ def nutrition_panel(r):
         return ""
     ps, pc = n["perServing"], n["per100g"]
     # A floor, not an estimate: unweighable ingredients count as zero.
-    plus = "+" if n.get("direction") == "understated" else ""
+    # No "+" on the numbers. It was honest about the two thirds of figures
+    # that are floors rather than estimates, but no other recipe site marks
+    # them and it read as a typo. The caveat is kept in words below the table.
+    plus = ""
 
     def row(label, key, unit="g", cls=""):
         return ('<tr class="%s"><th>%s</th><td>%s</td><td>%s</td></tr>'
@@ -157,10 +160,9 @@ def nutrition_panel(r):
                 '<td>%.0f%s g</td></tr>' % (unsat_s, plus, unsat_c, plus))
 
     notes = []
-    if plus:
-        notes.append("The <strong>+</strong> means ingredients given to taste rather than by "
-                     "weight are counted as zero, so the true figure is a little higher than "
-                     "shown.")
+    if n.get("direction") == "understated":
+        notes.append("Ingredients added to taste rather than by weight are counted as zero, "
+                     "so the true figure is a little higher than shown.")
     notes.append(CONFIDENCE_NOTE.get(n.get("confidence", "medium")))
     if n.get("caveat"):
         notes.append(n["caveat"])
