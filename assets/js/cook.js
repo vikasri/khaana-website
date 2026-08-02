@@ -646,9 +646,7 @@
         '<h3><a class="match-link" href="recipes/' + esc(r.id) + '.html">' +
           esc(r.name) + '</a></h3>' +
         '<p class="match-sub">' + esc(r.subtitle) + '</p>' +
-        '<div class="diet-tags">' + r.tags.map(function (t) {
-            return '<span class="diet-tag">' + esc(labelForTag(t)) + '</span>';
-          }).join('') + '</div>' +
+        '<div class="diet-tags">' + cardTags(r.tags) + '</div>' +
         nutritionRow(r) +
         (searching ? '' :
         '<div class="match-lines">' +
@@ -690,6 +688,44 @@
     if (rest) rest.hidden = false;
     b.remove();
   });
+
+  /* Which diet pills to print on a card.
+
+     Two steps. First drop anything another tag already tells you: vegan means
+     vegetarian, dairy-free and egg-free, and vegetarian on this site excludes
+     egg, so it means egg-free too. Checked against the whole database, that
+     holds for every recipe with no exceptions, and it takes the worst card
+     from eight pills to seven.
+
+     Then cap at five, most telling first, because past that the strip wraps
+     onto a second line and every wrapped line is a line of card height. The
+     count of what is left is shown rather than hidden, and the recipe page
+     lists all of them. */
+  var TAG_IMPLIES = {
+    vegan: ['vegetarian', 'dairy-free', 'egg-free', 'pescatarian'],
+    vegetarian: ['egg-free', 'pescatarian']
+  };
+  var TAG_ORDER = ['vegan', 'vegetarian', 'pescatarian', 'gluten-free', 'dairy-free',
+                   'nut-free', 'egg-free', 'no-onion-garlic', 'healthier'];
+  var CARD_TAG_LIMIT = 5;
+
+  function cardTags(tags) {
+    var hide = {};
+    tags.forEach(function (t) {
+      (TAG_IMPLIES[t] || []).forEach(function (h) { hide[h] = true; });
+    });
+    var keep = tags.filter(function (t) { return !hide[t]; })
+      .sort(function (a, b) {
+        var ia = TAG_ORDER.indexOf(a), ib = TAG_ORDER.indexOf(b);
+        return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+      });
+    var extra = keep.length - CARD_TAG_LIMIT;
+    var out = keep.slice(0, CARD_TAG_LIMIT).map(function (t) {
+      return '<span class="diet-tag">' + esc(labelForTag(t)) + '</span>';
+    }).join('');
+    if (extra > 0) out += '<span class="diet-tag more">+' + extra + '</span>';
+    return out;
+  }
 
   function tier(p) { return p >= 90 ? 'high' : p >= 65 ? 'mid' : 'low'; }
 

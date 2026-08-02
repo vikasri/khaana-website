@@ -1003,12 +1003,14 @@ section.tight { padding: 34px 0; }
   transform: translateY(-3px); text-decoration: none;
   box-shadow: 0 16px 36px rgba(232,89,12,0.24);
 }
-/* height:100% made the photo as tall as the card, so a long Missing list
-   stretched it into a column. Bounded instead: the row can grow, the
-   picture stops at 210px and stays the same shape card to card. */
+/* The photo fills the card top to bottom. Capping it and aligning it to the
+   top was tried and was worse: it left a band of white under the picture
+   whenever the body was the taller of the two. The card's height comes from
+   its text, not from the image, so the way to keep cards short is to keep the
+   text short, which is what the pill sizing below does. */
 .match-thumb {
-  position: relative; align-self: start;
-  height: 100%; min-height: 150px; max-height: 210px;
+  position: relative;
+  height: 100%; min-height: 150px;
   overflow: hidden;
 }
 .match-thumb img { width: 100%; height: 100%; object-fit: cover; }
@@ -1030,13 +1032,23 @@ section.tight { padding: 34px 0; }
 .match-sub { font-size: 0.92rem; color: var(--ink-soft); margin: 0 0 9px; }
 
 .diet-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
-/* Four pills were taking a line and a half on a result card, which pushed
-   the part people read (what is missing) below the fold of the card. */
 .diet-tag {
-  font-size: 0.63rem; font-weight: 700; letter-spacing: 0.03em;
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.03em;
   text-transform: uppercase; color: var(--saffron-dark);
-  background: #ffe4df; padding: 1px 6px; border-radius: 999px;
-  line-height: 1.6;
+  background: #ffe4df; padding: 2px 7px; border-radius: 999px;
+  line-height: 1.5;
+}
+
+/* On a result card the pills are a scannable strip, not a list, and every
+   line they wrap onto is a line of card height. The worst case is eight tags
+   at 76 characters of label, so they are set much smaller here than on a
+   recipe page and kept to a single row. */
+.match-card .diet-tags {
+  flex-wrap: nowrap; overflow: hidden; gap: 3px; margin-bottom: 6px;
+}
+.match-card .diet-tag {
+  font-size: 0.55rem; letter-spacing: 0.02em; padding: 1px 5px;
+  line-height: 1.5; white-space: nowrap; flex: 0 0 auto;
 }
 
 .match-lines { display: grid; gap: 3px; font-size: 0.87rem; }
@@ -1165,7 +1177,7 @@ section.tight { padding: 34px 0; }
 }
 @media (max-width: 560px) {
   .match-card { grid-template-columns: 1fr; }
-  .match-thumb { min-height: 150px; max-height: 190px; }
+  .match-thumb { min-height: 150px; }
 }
 
 /* ---------- AI suggestion tier (Cook page) ----------
@@ -1826,3 +1838,7 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 }
 .nut-band strong { color: var(--ink); }
 .nut-band[data-band="high"] strong { color: #1d6b42; }
+
+/* The "+2" that stands for the pills a card had no room for. Muted, because
+   it is a count rather than a claim about the dish. */
+.match-card .diet-tag.more { background: #ecefee; color: var(--ink-soft); }
