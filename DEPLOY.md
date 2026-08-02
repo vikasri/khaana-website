@@ -70,12 +70,34 @@ data.
 5. **Add the custom domains** in the project settings: `khaana.com` and
    `www.khaana.com`. Cloudflare will say it needs to manage DNS.
 
-6. **Switch the nameservers at GoDaddy** to the two Cloudflare gives you.
+6. **Redirect www to the apex.** Workers accepts a `_redirects` file but only
+   with relative URLs, so a cross-host redirect cannot go in one: the deploy
+   fails with "Only relative URLs are allowed". It is a zone-level Redirect
+   Rule instead, which is free and runs before the Worker.
+
+   *khaana.com* → **Rules** → **Redirect Rules** → **Create rule**
+
+   | Field | Value |
+   |---|---|
+   | Rule name | `www to apex` |
+   | If: field | Hostname |
+   | Operator | equals |
+   | Value | `www.khaana.com` |
+   | Then: type | Dynamic |
+   | Expression | `concat("https://khaana.com", http.request.uri.path)` |
+   | Status code | 301 |
+   | Preserve query string | on |
+
+   Dynamic rather than static so the path survives: a link to
+   `www.khaana.com/goan.html` should land on `khaana.com/goan.html`, not on the
+   home page.
+
+7. **Switch the nameservers at GoDaddy** to the two Cloudflare gives you.
    Propagation is usually under an hour and can take up to 24. The site stays
    up throughout: GitHub Pages keeps serving until DNS moves, Cloudflare serves
    after.
 
-7. **Turn off GitHub Pages** only once the live site is served by Cloudflare
+8. **Turn off GitHub Pages** only once the live site is served by Cloudflare
    (`curl -sI https://khaana.com | grep -i server` should say `cloudflare`).
    Repo → Settings → Pages → set source to None. Leave the `CNAME` file alone;
    it does no harm and makes going back easy.
@@ -98,7 +120,7 @@ change.
   (the site has no inline scripts and loads nothing from a third party),
   nosniff, a referrer policy, and HSTS.
 - **`www` redirects to the apex**, so search engines stop seeing two sites.
-  See `_redirects`.
+  Set up as a Redirect Rule, not a file. See below.
 - **A path to a backend.** `api/suggest.js` was parked because GitHub Pages
   cannot run code. A Worker can, on the same free plan, and this project is
   already a Worker: adding a `main` script alongside the assets is all it

@@ -1,7 +1,0 @@
-# Cloudflare Pages redirects. Ignored by GitHub Pages.
-#
-# One canonical hostname. Every canonical tag, the sitemap and the JSON-LD all
-# say https://khaana.com, so www should not be a second address serving the
-# same pages: search engines treat them as separate sites and split the
-# ranking between them.
-https://www.khaana.com/* https://khaana.com/:splat 301
