@@ -22,6 +22,14 @@
   // first by default, so worker.js only runs when nothing matched, which
   // means a 404.
   "main": "worker.js",
+  // The custom domains, declared here rather than clicked in the dashboard.
+  // wrangler creates them on deploy and manages the DNS record and the
+  // certificate itself, so this replaces the GitHub Pages A records that
+  // Cloudflare imported and is currently proxying through to.
+  "routes": [
+    { "pattern": "khaana.com", "custom_domain": true },
+    { "pattern": "www.khaana.com", "custom_domain": true }
+  ],
   "assets": {
     "directory": "./",
     // Serve /recipes/naan.html as itself. The default, "auto-trailing-slash",
