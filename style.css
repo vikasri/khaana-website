@@ -2093,3 +2093,55 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 }
 
 @media print { .save-btn { display: none !important; } }
+
+/* ---- Feedback form ------------------------------------------------------
+   Our fields, Google's inbox. The form posts to a Google Form endpoint but
+   is styled as part of the site, so everything below is ordinary form CSS. */
+.feedback-page { max-width: 620px; }
+.feedback-form { margin-top: 26px; }
+.feedback-form .ff-row { display: flex; flex-direction: column; margin: 0 0 20px; }
+.feedback-form label {
+  font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; color: var(--ink);
+}
+.feedback-form .ff-opt { font-weight: 400; color: #6b5d51; }
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+  width: 100%; box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #d9cec2; border-radius: 10px;
+  background: #fff; color: var(--ink);
+  /* 16px minimum: anything smaller and iOS zooms the page on focus. */
+  font: inherit; font-size: 1rem;
+}
+.feedback-form textarea { resize: vertical; min-height: 140px; }
+.feedback-form input:focus, .feedback-form textarea:focus {
+  outline: 2px solid #2563eb; outline-offset: 1px; border-color: #2563eb;
+}
+.feedback-form .ff-note { font-size: 0.85rem; color: #6b5d51; margin-top: 6px; }
+
+/* Off-screen rather than display:none. A bot reading the markup fills every
+   input it can find, hidden ones included; a real person never reaches it,
+   and aria-hidden plus tabindex keep it away from screen readers too. */
+.feedback-form .ff-trap {
+  position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;
+}
+
+.feedback-form .ff-submit {
+  display: inline-block; border: 0; cursor: pointer;
+  padding: 14px 34px; border-radius: 999px;
+  background: linear-gradient(135deg, #2563eb, #0847a6);
+  color: #fff; font: inherit; font-weight: 800; font-size: 1.02rem;
+  box-shadow: 0 6px 18px rgba(8, 71, 166, 0.25);
+}
+.feedback-form .ff-submit:hover { filter: brightness(1.07); }
+.feedback-form .ff-submit:disabled { opacity: 0.6; cursor: default; filter: none; }
+
+.feedback-form .ff-status { margin: 14px 0 0; font-size: 0.95rem; min-height: 1.2em; }
+.feedback-form .ff-status.is-ok  { color: #1d6b3f; }
+.feedback-form .ff-status.is-bad { color: #a12a1e; }
+
+/* Receives the post so the page does not navigate to Google. */
+#ff-sink { display: none; }
+
+.ff-fallback { margin-top: 18px; font-size: 0.92rem; color: #6b5d51; }

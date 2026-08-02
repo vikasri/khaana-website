@@ -36,7 +36,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG_DIR = os.path.join(ROOT, "assets", "images")
 CREDITS_JSON = os.path.join(IMG_DIR, "credits.json")
 API = "https://commons.wikimedia.org/w/api.php"
-UA = "KhaanaSiteBot/1.0 (https://khaana.com; strategychoice1@gmail.com)"
+UA = "KhaanaSiteBot/1.0 (https://khaana.com; hello@khaana.com)"
 
 # Same licence policy as tools/fetch-images.py.
 OK_LICENCE = re.compile(r"^(cc0|public domain|cc by(-sa)?[\s-]|cc by(-sa)?$)", re.I)

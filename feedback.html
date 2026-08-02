@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Send feedback | Khaana</title>
+<meta name="description" content="Tell us what is wrong, missing or confusing on Khaana." />
+<meta name="robots" content="noindex, follow" />
+<link rel="canonical" href="https://khaana.com/feedback.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Khaana" />
+<meta property="og:title" content="Send feedback | Khaana" />
+<meta property="og:description" content="Tell us what is wrong, missing or confusing on Khaana." />
+<meta property="og:url" content="https://khaana.com/feedback.html" />
+<meta property="og:image" content="https://khaana.com/assets/images/home-hero.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Send feedback | Khaana" />
+<meta name="twitter:description" content="Tell us what is wrong, missing or confusing on Khaana." />
+<meta name="twitter:image" content="https://khaana.com/assets/images/home-hero.jpg" />
+<link rel="stylesheet" href="style.css?v=b92f895e" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">Khaana <span>| भारत के स्वाद</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cook.html">Recipes</a></li>
+        <li class="nav-cuisines">
+          <button type="button" class="nav-cuisines-toggle" aria-expanded="false" aria-controls="nav-cuisine-menu">Cuisines</button>
+          <ul class="nav-dropdown" id="nav-cuisine-menu">
+            <li><a href="awadhi-lucknowi.html">Awadhi/Lucknowi</a></li>
+            <li><a href="pahari.html">Pahari</a></li>
+            <li><a href="kashmiri.html">Kashmiri</a></li>
+            <li><a href="punjabi.html">Punjabi</a></li>
+            <li><a href="rajasthani.html">Rajasthani</a></li>
+            <li><a href="gujarati.html">Gujarati</a></li>
+            <li><a href="maharashtrian.html">Maharashtrian</a></li>
+            <li><a href="goan.html">Goan</a></li>
+            <li><a href="karnataka.html">Karnataka</a></li>
+            <li><a href="kerala.html">Kerala</a></li>
+            <li><a href="tamil-nadu.html">Tamil Nadu</a></li>
+            <li><a href="andhra.html">Andhra</a></li>
+            <li><a href="hyderabadi.html">Hyderabadi</a></li>
+            <li><a href="odia.html">Odia</a></li>
+            <li><a href="bihari.html">Bihari</a></li>
+            <li><a href="bengali.html">Bengali</a></li>
+            <li><a href="northeast-indian.html">Northeast Indian</a></li>
+            <li><a href="sindhi.html">Sindhi</a></li>
+            <li><a href="parsi.html">Parsi</a></li>
+            <li><a href="anglo-indian.html">Anglo-Indian</a></li>
+            <li><a href="indo-chinese.html">Indo-Chinese</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="tight">
+  <div class="container feedback-page">
+    <div class="section-head">
+      <div class="eyebrow">Feedback</div>
+      <h1>Tell us what is wrong</h1>
+    </div>
+
+    <p class="lede">A wrong quantity, a step that does not work, a photo of the wrong dish,
+      a cuisine we have misdescribed. Whatever it is, we would rather know.</p>
+
+    <form class="feedback-form" id="feedback-form" method="POST" target="ff-sink"
+          action="https://docs.google.com/forms/d/e/1FAIpQLScpY4V-AzhBIqIg-TTbJJ7ahbb3AbKuM8aJqUZq8gtHV0ttOQ/formResponse">
+
+      <p class="ff-row">
+        <label for="ff-name">Your name <span class="ff-opt">(optional)</span></label>
+        <input type="text" id="ff-name" name="entry.1155349832" autocomplete="name" />
+      </p>
+
+      <p class="ff-row">
+        <label for="ff-email">Your email</label>
+        <input type="email" id="ff-email" name="entry.2046932908" required
+               autocomplete="email" placeholder="you@example.com" />
+        <span class="ff-note">So we can reply. We do not add you to anything.</span>
+      </p>
+
+      <p class="ff-row">
+        <label for="ff-message">Your message</label>
+        <textarea id="ff-message" name="entry.469502425" rows="7" required
+                  placeholder="What did you find?"></textarea>
+      </p>
+
+      <!-- Never sent. A bot fills every input it can find, so anything in
+           here means the submission was not typed by a person. -->
+      <p class="ff-trap" aria-hidden="true">
+        <label for="ff-website">Leave this empty</label>
+        <input type="text" id="ff-website" tabindex="-1" autocomplete="off" />
+      </p>
+
+      <button type="submit" class="ff-submit">Send feedback</button>
+      <p class="ff-status" id="ff-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <!-- The form posts into this rather than navigating, so the visitor stays
+         on khaana.com instead of landing on Google's confirmation page. -->
+    <iframe name="ff-sink" id="ff-sink" title="" aria-hidden="true" tabindex="-1"></iframe>
+
+    <p class="ff-fallback">The form sends through Google, which some networks
+      block. If it will not go through, email
+      <a href="mailto:hello@khaana.com">hello@khaana.com</a> instead and say
+      which page you were on.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <h4>Khaana</h4>
+      <p style="max-width:280px; font-size:0.97rem;">The history, traditions and recipes behind India's regional cuisines.</p>
+    </div>
+    <div>
+      <h4>Cuisines</h4>
+      <ul class="foot-links">
+        <li><a href="awadhi-lucknowi.html">Awadhi/Lucknowi</a></li>
+        <li><a href="pahari.html">Pahari</a></li>
+        <li><a href="kashmiri.html">Kashmiri</a></li>
+        <li><a href="punjabi.html">Punjabi</a></li>
+        <li><a href="rajasthani.html">Rajasthani</a></li>
+        <li><a href="gujarati.html">Gujarati</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>More</h4>
+      <ul class="foot-links">
+        <li><a href="maharashtrian.html">Maharashtrian</a></li>
+        <li><a href="goan.html">Goan</a></li>
+        <li><a href="karnataka.html">Karnataka</a></li>
+        <li><a href="kerala.html">Kerala</a></li>
+        <li><a href="tamil-nadu.html">Tamil Nadu</a></li>
+        <li><a href="andhra.html">Andhra</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Also</h4>
+      <ul class="foot-links">
+        <li><a href="hyderabadi.html">Hyderabadi</a></li>
+        <li><a href="odia.html">Odia</a></li>
+        <li><a href="bihari.html">Bihari</a></li>
+        <li><a href="bengali.html">Bengali</a></li>
+        <li><a href="northeast-indian.html">Northeast Indian</a></li>
+        <li><a href="sindhi.html">Sindhi</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>And</h4>
+      <ul class="foot-links">
+        <li><a href="parsi.html">Parsi</a></li>
+        <li><a href="anglo-indian.html">Anglo-Indian</a></li>
+        <li><a href="indo-chinese.html">Indo-Chinese</a></li>
+      </ul>
+    </div>
+    <div class="credit-line"><a href="about.html">About &amp; disclaimers</a> &middot; <a href="credits.html">Image credits</a> &middot; <a href="feedback.html?from=/feedback.html">Send feedback</a></div>
+  </div>
+</footer>
+
+<script src="script.js?v=9aeff587"></script>
+<script src="assets/js/feedback.js?v=b1622332"></script>
+</body>
+</html>

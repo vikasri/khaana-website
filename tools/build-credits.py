@@ -113,7 +113,7 @@ def write_html_page(rows, n_files):
     <p class="credits-intro">CC BY and CC BY-SA require attribution, so this page is part of
       meeting the licence terms rather than a courtesy. It lists all %d images on the site.
       If you believe something here is credited wrongly,
-      <a href="mailto:strategychoice1@gmail.com">tell us</a> and it will be corrected.</p>
+      <a href="feedback.html">tell us</a> and it will be corrected.</p>
 
 %s
 
