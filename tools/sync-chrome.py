@@ -45,7 +45,7 @@ SKIP = {"south-indian.html", "himachali.html"}   # redirect stubs
 
 
 def nav_html(current):
-    """Home, Recipes, a Cuisines menu, About.
+    """Home, Recipes, a Cuisines menu, Recommendations, About.
 
     The 21 cuisines used to sit in the bar itself, which meant 24 items
     wrapping to three lines on a desktop and colliding with the brand. They are
@@ -71,6 +71,8 @@ def nav_html(current):
     menu += ['          </ul>', '        </li>']
     rows += menu
 
+    rows.append('        <li><a href="recommendations.html"%s>Recommendations</a></li>'
+                % (' class="active"' if current == "recommendations.html" else ""))
     rows.append('        <li><a href="about.html"%s>About</a></li>'
                 % (' class="active"' if current == "about.html" else ""))
     return '      <ul class="nav-links">\n' + "\n".join(rows) + "\n      </ul>"

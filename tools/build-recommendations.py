@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate healthy.html, a curated seven.
+"""Generate recommendations.html, a curated seven.
 
     python3 tools/build-recommendations.py
 
@@ -16,53 +16,58 @@ Two rules held while choosing:
     Medium or Low because much of the ingredient list is given to taste. Those
     may well be lighter than what is here, but "healthy" is a claim, and a
     claim wants the numbers that can carry it.
-  * One region each, and both diet types. Seven Punjabi chicken dishes would
-    be a truthful answer to the calorie question and a useless answer to the
-    question anyone is actually asking.
+  * One region each, and one protein source each. Seven Punjabi chicken
+    dishes would be a truthful answer to the calorie question and a useless
+    answer to the question anyone is actually asking. The first draft of this
+    page had three fish dishes and no chicken at all, which is why both rules
+    are checked below rather than left to whoever edits PICKS.
 
 Run after build-nutrition.py, and before build-seo.py and version-assets.py.
 """
 import html, json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, "healthy.html")
+OUT = os.path.join(ROOT, "recommendations.html")
 
-# (recipe id, the note). Order is the order on the page: the two leanest meat
-# dishes first because they are the surprise, the drink last for the same
-# reason.
+# (recipe id, protein source, note). The source is named rather than guessed
+# from the ingredients, which would put pork and paneer in the wrong bucket,
+# and it is checked for duplicates below.
+#
+# Order: the four that carry real protein first, the drink last because it is
+# the one nobody expects.
 PICKS = [
-    ("fish-tikka",
+    ("fish-tikka", "fish",
      "Half the calories here are protein, the highest ratio of anything on the "
      "site. Yogurt, spice and a very hot oven do all the work, and nothing is "
      "fried at any point."),
-    ("patthar-ka-gosht",
+    ("patthar-ka-gosht", "mutton",
      "Cooked on a slab of heated stone, which sounds like a restaurant gimmick "
      "and is in fact the reason it needs almost no fat. The leanest red meat "
      "dish we have."),
-    ("nga-thongba",
-     "A fish curry with nothing rich anywhere in it: no cream, no coconut, no "
-     "cashew paste. Manipur has been cooking this way for a long time without "
-     "ever needing a word for it."),
-    ("parsi-patra-ni-machhi",
-     "Packed in green chutney and steamed inside a banana leaf, so nothing "
-     "fries and nothing dries out. The lightest thing on this list by a "
-     "distance."),
-    ("pithla",
-     "Gram flour, water, and about ten minutes. This is what gets made when "
-     "there is nothing in the house, which is precisely the moment most people "
-     "reach for a menu instead."),
-    ("arhar-ki-dal-awadhi",
+    ("jalfrezi", "chicken",
+     "The leanest chicken here, and it exists because Anglo-Indian kitchens "
+     "refused to waste yesterday's roast. Chilli, onion and vinegar, and the "
+     "leftovers come back better than they went in."),
+    ("parsi-akuri", "egg",
+     "Eggs scrambled soft and slow with onion, chilli and coriander. Eighteen "
+     "grams of protein and about ten minutes, which is most of the argument "
+     "for eggs in one dish."),
+    ("arhar-ki-dal-awadhi", "lentils",
      "Eaten daily across most of north India and written about almost never. "
      "Twelve grams of protein and no technique to speak of."),
-    ("namkeen-sattu-sharbat",
+    ("ulavacharu", "horse gram",
+     "A thin dark broth cooked down from horse gram, which carries more "
+     "protein than most pulses grown anywhere. Andhra has been drinking it for "
+     "centuries without the help of a marketing department."),
+    ("namkeen-sattu-sharbat", "roasted gram",
      "Eleven grams of protein in a glass of roasted gram flour, salt and "
      "lemon. Bihar arrived at the protein shake roughly two centuries ahead of "
      "the supplement aisle."),
 ]
 
 INTRO = ("Seven that are worth cooking, not seven that are merely low in "
-         "something. Each is picked from the recipes whose nutrition we can "
-         "stand behind, and no two come from the same regional kitchen.")
+         "something. No two share a regional kitchen, and no two lean on the "
+         "same thing for their protein.")
 
 
 def esc(s):
@@ -82,22 +87,34 @@ def main():
     db = json.load(open(os.path.join(ROOT, "data", "recipes.json"), encoding="utf-8"))
     by_id = {r["id"]: r for r in db["recipes"]}
 
-    missing = [i for i, _ in PICKS if i not in by_id]
+    missing = [i for i, _, _ in PICKS if i not in by_id]
     if missing:
         print("  ! no such recipe: %s" % ", ".join(missing))
         return 1
 
     # A pick whose confidence has since dropped is a broken promise, not a
     # cosmetic problem, so it stops the build rather than printing quietly.
-    weak = [i for i, _ in PICKS
+    weak = [i for i, _, _ in PICKS
             if (by_id[i].get("nutrition") or {}).get("confidence") != "good"]
     if weak:
         print("  ! these picks are no longer a Good-confidence estimate: %s"
               % ", ".join(weak))
         return 1
 
+    # Diversity is the whole point of a list of seven, and it is the thing
+    # that quietly rots as picks get swapped. The first draft ran three fish
+    # dishes and no chicken. Checked, not remembered.
+    for label, idx in [("region", None), ("protein source", 1)]:
+        vals = ([by_id[i]["region"] for i, _, _ in PICKS] if idx is None
+                else [p[1] for p in PICKS])
+        dupes = {v for v in vals if vals.count(v) > 1}
+        if dupes:
+            print("  ! more than one pick shares a %s: %s"
+                  % (label, ", ".join(sorted(dupes))))
+            return 1
+
     items = []
-    for n, (rid, note) in enumerate(PICKS, 1):
+    for n, (rid, source, note) in enumerate(PICKS, 1):
         r = by_id[rid]
         ps = r["nutrition"]["perServing"]
         share = (ps["protein"] * 4) / ps["kcal"] if ps["kcal"] else 0
@@ -118,7 +135,7 @@ def main():
                   esc(note)))
 
     nav, foot = chrome()
-    title = "Healthy Indian Recipes: Seven Worth Cooking"
+    title = "Recommendations: Seven Healthy Indian Recipes Worth Cooking"
     desc = ("Seven lighter Indian recipes from seven regional kitchens, chosen "
             "from the dishes whose calorie and protein figures we can stand behind.")
 
@@ -164,12 +181,12 @@ def main():
 """ % (esc(title), esc(desc), nav, esc(INTRO), "\n".join(items), foot)
 
     open(OUT, "w", encoding="utf-8").write(page)
-    print("wrote healthy.html with %d picks" % len(PICKS))
-    for rid, _ in PICKS:
+    print("wrote recommendations.html with %d picks" % len(PICKS))
+    for rid, source, _ in PICKS:
         r = by_id[rid]
         ps = r["nutrition"]["perServing"]
-        print("   %-24s %-16s %3d kcal  %4.1f g" % (rid, r["region"][:16],
-                                                    ps["kcal"], ps["protein"]))
+        print("   %-24s %-16s %-12s %3d kcal  %4.1f g"
+              % (rid, r["region"][:16], source, ps["kcal"], ps["protein"]))
     return 0
 
 
