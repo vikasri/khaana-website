@@ -18,7 +18,11 @@ SITE = "https://khaana.com"
 # Redirect stubs must stay out of the sitemap and keep pointing at their target.
 STUBS = {"south-indian.html": "tamil-nadu.html", "himachali.html": "pahari.html"}
 # recipe.html is a forwarder now; the static pages are the real thing.
-NOINDEX = set(STUBS) | {"recipe.html"}
+# feedback.html is a form: nothing on it is worth a search result, and listing
+# it in the sitemap while the page says noindex is a contradiction Search
+# Console reports as an error. Membership here settles both, since the sitemap
+# below skips this set.
+NOINDEX = set(STUBS) | {"recipe.html", "feedback.html"}
 
 HERO = {
     "index.html": "assets/images/home-hero.jpg",
