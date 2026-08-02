@@ -1950,18 +1950,25 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
     width: 100%; margin: 0 0 16px;
     padding: 16px 18px; min-height: 56px;
     font-family: var(--sans); font-size: 1.05rem; font-weight: 800;
-    color: #fff; background: var(--azure);
+    color: #fff;
+    /* The same vivid blue as the home page's primary button, not the muted
+       --azure steel. This is the only way into the ingredients on a phone,
+       so it should read as the same kind of action. */
+    background: linear-gradient(135deg, #2563eb, #0847a6);
     border: 0; border-radius: var(--radius);
-    box-shadow: 0 6px 18px rgba(26, 95, 138, 0.3);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.32);
     cursor: pointer; text-align: left;
   }
-  .panel-toggle:hover, .panel-toggle:active { background: var(--azure-dark); }
+  .panel-toggle:hover, .panel-toggle:active { filter: brightness(1.08); }
   .panel-toggle::after {
     content: '\25BE'; font-size: 1.1em; opacity: 0.9; flex: 0 0 auto;
   }
   .panel-toggle[aria-expanded="true"]::after { content: '\25B4'; }
   .panel-toggle .panel-toggle-count {
-    font-weight: 600; font-size: 0.85rem; color: rgba(255,255,255,0.85);
+    /* Full white, not a faded one. At 92% it measured 4.09:1 against the
+       light end of the gradient once hovered, under the 4.5 AA needs for
+       text this size. The hierarchy comes from size and weight instead. */
+    font-weight: 600; font-size: 0.85rem; color: #fff;
     margin-left: auto; text-align: right;
   }
   .cook-panel { display: none; }
