@@ -279,7 +279,9 @@ def render(r, nav, foot):
       <div class="recipe-head">
         <div class="recipe-headline">
           <div class="eyebrow">{region_link}</div>
-          <h1>{esc(r['name'])}</h1>
+          <h1>{esc(r['name'])}<button type="button" class="save-btn"
+              data-save-id="{esc(rid)}" aria-pressed="false"
+              aria-label="Save this recipe"></button></h1>
           <p class="lede">{esc(r.get('subtitle',''))}</p>
           <div class="diet-tags">{tags}</div>
         </div>
@@ -345,6 +347,7 @@ def render(r, nav, foot):
 {foot}
 
 <script src="../script.js"></script>
+<script src="../assets/js/favourites.js"></script>
 </body>
 </html>
 """

@@ -2019,3 +2019,56 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
   .dish-recipe { display: inline-block; padding: 9px 0; }
   .match-card .diet-tag { font-size: 0.7rem; padding: 2px 6px; }
 }
+
+
+/* ---------- saved recipes ----------
+   A heart and nothing else. On a card it sits over the photograph, which is
+   why it needs its own z-index: the card carries a stretched link across the
+   whole tile, and without this the heart is under it and a tap opens the
+   recipe instead of saving it. */
+.save-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 0; background: none; padding: 6px; margin: 0;
+  cursor: pointer; color: var(--ink-soft);
+  position: relative; z-index: 2;
+  -webkit-tap-highlight-color: transparent;
+}
+.save-btn svg { width: 26px; height: 26px; display: block; }
+/* Same path either way, so only the fill changes and the outline never
+   shifts by a pixel when tapped. */
+.save-btn svg path { fill: none; stroke: currentColor; stroke-width: 1.9; }
+.save-btn.is-saved { color: #d4145a; }
+.save-btn.is-saved svg path { fill: currentColor; stroke: currentColor; }
+.save-btn:hover { color: #d4145a; }
+.save-btn:active svg { transform: scale(0.9); }
+.save-btn svg { transition: transform 0.12s ease; }
+
+/* Beside the recipe title. */
+.recipe-headline h1 .save-btn {
+  vertical-align: middle; margin-left: 12px;
+}
+.recipe-headline h1 .save-btn svg { width: 30px; height: 30px; }
+
+/* On a result card, over the top-right of the photograph. The match badge is
+   top-left, so they do not collide. */
+.save-btn-compact {
+  position: absolute; top: 6px; right: 6px;
+  color: #fff; padding: 8px;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.55));
+}
+.save-btn-compact svg { width: 24px; height: 24px; }
+.save-btn-compact.is-saved { color: #ff4d7e; }
+
+.saved-count {
+  display: inline-block; min-width: 20px; padding: 0 5px;
+  border-radius: 999px; background: var(--line); color: var(--ink-soft);
+  font-size: 0.75rem; font-weight: 700; text-align: center;
+}
+
+@media (max-width: 900px), (pointer: coarse) {
+  /* 26px of heart is not 44px of target. */
+  .save-btn { padding: 10px; }
+  .save-btn-compact { padding: 10px; top: 2px; right: 2px; }
+}
+
+@media print { .save-btn { display: none !important; } }

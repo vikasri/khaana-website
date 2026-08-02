@@ -117,6 +117,10 @@
       reasons.push('over ' + f.maxKcal + ' kcal');
     }
 
+    if (f.savedOnly && window.KhaanaSaved && !window.KhaanaSaved.has(recipe.id)) {
+      reasons.push('not saved');
+    }
+
     if (f.protein) {
       // "medium" is medium-or-better, not exactly medium: someone asking for
       // a decent amount of protein does not want the high ones filtered out.
@@ -322,6 +326,7 @@
     return {
       diets: diets,
       protein: (el('f-protein') || {}).value || '',
+      savedOnly: !!(el('f-saved') || {}).checked,
       maxKcal: maxKcal,
       maxTime: t ? parseInt(t, 10) : null
     };
@@ -540,6 +545,8 @@
       eligible.slice(drawn, drawn + PAGE).forEach(function (s) {
         out.insertBefore(card(s, !!q || selected.size === 0), more);
       });
+      // Cards ship with an empty heart; this fills in the ones already saved.
+      if (window.KhaanaSaved) window.KhaanaSaved.paintExisting();
       drawn = Math.min(drawn + PAGE, eligible.length);
       var left = eligible.length - drawn;
       if (left <= 0) {
@@ -654,6 +661,8 @@
 
     a.innerHTML =
       '<div class="match-thumb">' + thumb +
+        '<button type="button" class="save-btn save-btn-compact" data-save-id="' +
+          esc(r.id) + '" aria-pressed="false" aria-label="Save this recipe"></button>' +
         (searching ? '' :
           '<span class="match-pct" data-tier="' + tier(s.pct) + '">' + s.pct + '%</span>') +
       '</div>' +
@@ -792,7 +801,27 @@
                     '<span class="panel-toggle-count">' + esc(bits.join(' \u00b7 ')) + '</span>';
   }
 
+  /* The Saved filter stays out of the way until it would do something. An
+     empty "Saved only" box on a first visit is a control that can only ever
+     return nothing. */
+  function syncSaved() {
+    if (!window.KhaanaSaved) return;
+    var n = window.KhaanaSaved.count();
+    var wrap = el('saved-filter-wrap'), box = el('f-saved'), c = el('saved-count');
+    if (!wrap) return;
+    wrap.hidden = n === 0;
+    if (c) c.textContent = n;
+    if (n === 0 && box && box.checked) { box.checked = false; update(); }
+  }
+
   function wire() {
+    var savedBox = el('f-saved');
+    if (savedBox) savedBox.addEventListener('change', update);
+    document.addEventListener('khaana:saved-changed', function () {
+      syncSaved();
+      if (el('f-saved') && el('f-saved').checked) update();
+    });
+
     var toggle = el('panel-toggle');
     if (toggle) {
       toggle.addEventListener('click', function () {
