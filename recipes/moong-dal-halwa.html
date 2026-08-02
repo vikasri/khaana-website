@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Moong Dal Halwa. A slow-roasted lentil halwa, grainy and deeply nutty, eaten in the cold months. A Rajasthani recipe: 85 minutes, serves 6, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/moong-dal-halwa.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -193,9 +193,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 6.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">200g split yellow moong dal, soaked 4 hours</span> <span class="ing-name">Moong Dal</span></li>
@@ -214,7 +225,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Soak the moong dal 4 hours, then drain it very well and grind it coarse with barely a tablespoon of water. A wet, smooth paste makes gluey halwa; a coarse, thick one makes grainy halwa, which is what you want.</li><li>Heat the milk and keep it hot on the side. Cold milk added to roasting dal seizes it into lumps.</li><li>Clear an hour for this. The roasting cannot be hurried and cannot be left alone, and every recipe that claims otherwise is describing a worse halwa.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Grind the drained dal to a coarse, thick paste. It should hold a ridge when you drag a spoon through it.</li>
         <li>Melt the ghee in a heavy kadhai over low-medium heat and add the dal paste. It will seize into a solid mass immediately, this is normal.</li>
@@ -232,8 +243,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
         <p class="nut-band" data-band="medium">Medium protein: <strong>11+ g</strong> a serving,
           7% of the calories</p>
         <table class="nut-table">

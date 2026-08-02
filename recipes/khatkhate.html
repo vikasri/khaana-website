@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Khatkhate. The saraswat temple stew of eight vegetables in coconut, no onion or garlic anywhere. A Goan recipe: 70 minutes, serves 6, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/khatkhate.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -195,9 +195,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 6.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">1/2 cup, rinsed</span> <span class="ing-name">Toor Dal</span></li>
@@ -223,7 +234,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Cut the vegetables large and roughly equal, about 3cm. Khatkhate is a chunky stew and small dice disappears into it.</li><li>Add the vegetables in order of hardness (yam and colocasia first, beans and pumpkin last) or half of them collapse.</li><li>If you can find teppal (triphal), use 6 berries crushed instead of the pepper and add them in the last two minutes.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Boil the toor dal in 400ml water for 20 minutes, until soft enough to crush against the side of the pot.</li>
         <li>Meanwhile grind the coconut, dried chillies and coriander powder with 150ml water to a coarse-ish paste. A little texture is right here.<span class="step-tip">Do not grind this one glass-smooth. Khatkhate should feel like coconut, not like sauce.</span></li>
@@ -240,8 +251,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
         <p class="nut-band" data-band="low">Low protein: <strong>7+ g</strong> a serving,
           9% of the calories</p>
         <table class="nut-table">

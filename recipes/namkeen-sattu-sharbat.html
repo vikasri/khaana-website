@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Namkeen Sattu Sharbat. Savoury roasted gram drink with black salt, lemon and roasted cumin, drunk cold through the summer. A Bihari recipe: 20 minutes, serves 2, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/namkeen-sattu-sharbat.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -173,9 +173,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 2.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">6 tbsp, dry-roasted</span> <span class="ing-name">Sattu</span><span class="ing-note">roasted gram flour, the whole point of the drink</span></li>
@@ -194,7 +205,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Sattu is sold already roasted, so it goes straight in. If you are standing in besan, dry-roast it over low heat for 8-10 minutes until it darkens a shade and smells like roasted grain, then cool it completely (unroasted besan tastes raw and pasty. It must be cold either way) hot flour will not disperse in cold water.</li><li>Chill the water beforehand. This is drunk cold, and a lukewarm sattu sharbat is heavy and dull.</li><li>Roast and crush the cumin fresh; pre-ground cumin powder has none of the smokiness this needs.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Dry-roast the cumin seeds in the same pan for about 1 minute, until they darken and pop, then crush them coarsely.</li>
         <li>Whisk the sattu with just 100ml of the chilled water to a completely smooth, thick paste.<span class="step-tip">Paste first, then thin. Pour all the water in at once and you get lumps that never break up.</span></li>
@@ -208,8 +219,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="medium">Medium protein: <strong>11 g</strong> a serving,
           23% of the calories</p>
         <table class="nut-table">

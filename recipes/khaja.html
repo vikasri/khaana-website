@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Khaja. Layered flaky pastry fried and dipped in sugar syrup, sold in stacks outside the puri temple. An Odia recipe: 80 minutes, serves 6, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/khaja.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -195,9 +195,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 6.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">300g</span> <span class="ing-name">Maida</span></li>
@@ -214,7 +225,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Rub the 60g melted ghee into the flour until a fistful holds its shape when squeezed. This moyan is what makes khaja short rather than hard.</li><li>Rest the dough a full 30 minutes under a damp cloth. Unrested dough springs back and the layers will not roll thin.</li><li>Beat the 3 tbsp ghee with the rice flour into a smooth white paste before you begin rolling. This sata is what separates the layers in the hot oil.</li><li>Make the syrup while the khaja fry so it is warm at the same moment they come out.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Rub the melted ghee and salt into the maida for 3 minutes, then add the 150ml water a little at a time to make a firm, tight dough. Knead 6 minutes.<span class="step-tip">Firm, not soft. A slack dough will not hold its layers.</span></li>
         <li>Cover with a damp cloth and rest 30 minutes.</li>
@@ -233,8 +244,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
         <p class="nut-band" data-band="low">Low protein: <strong>6 g</strong> a serving,
           3% of the calories</p>
         <table class="nut-table">

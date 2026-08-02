@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Prawn Balchao. A fierce vinegar-and-chilli prawn pickle eaten a spoonful at a time. A Goan recipe: 55 minutes, serves 6, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/prawn-balchao.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -187,9 +187,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 6.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">500g small, peeled and deveined</span> <span class="ing-name">Prawns</span><span class="ing-note">small prawns hold up better than large</span></li>
@@ -213,7 +224,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Soak the chillies in the vinegar for 30 minutes before grinding. This is what makes balchao red rather than brown.</li><li>Pat the prawns bone dry on a cloth. Wet prawns weep water and the pickle will not keep.</li><li>Use a scrupulously dry glass or ceramic jar. Any water in the jar and it spoils within the week.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Grind the soaked chillies, garlic, ginger, cumin, pepper, cloves, cinnamon and turmeric to a thick paste using only the soaking vinegar, no water.<span class="step-tip">No water at any stage. Vinegar is the only liquid in this recipe.</span></li>
         <li>Toss the prawns with 1/2 tsp salt and a pinch of turmeric and fry them in 2 tbsp of the oil over high heat for 2 minutes, until they just turn pink. Lift them out.<span class="step-tip">Two minutes only. They cook again later and rubbery prawns are the usual failure here.</span></li>
@@ -229,8 +240,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
         <p class="nut-band" data-band="medium">Medium protein: <strong>18+ g</strong> a serving,
           22% of the calories</p>
         <table class="nut-table">

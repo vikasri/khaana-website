@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Mutton Yakhni. Pale yogurt and fennel mutton curry, aromatic rather than hot. A Kashmiri recipe: 80 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/mutton-yakhni.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -187,9 +187,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">700g on the bone, cut into 4cm pieces</span> <span class="ing-name">Mutton</span><span class="ing-note">shoulder or leg; the bone makes the stock</span></li>
@@ -213,7 +224,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Whisk the yogurt with 2 tbsp water until there is not a single lump, and leave it on the counter for 30 minutes. Cold, grainy yogurt splits the moment it meets a hot pan.</li><li>This is Kashmiri Pandit cooking: no onion, no garlic. Everything rests on fennel, dry ginger and a pinch of hing, so use fresh stock of all three. Year-old fennel powder tastes of dust.</li><li>Take the mutton out of the fridge 30 minutes ahead so it does not seize when it hits the ghee.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Bring the mutton, water, bay leaves, black cardamom, cloves, cinnamon and 1 tsp salt to a boil, then skim off every bit of grey foam.<span class="step-tip">Skim properly now or the finished yakhni will be cloudy instead of ivory.</span></li>
         <li>Cover and simmer 40 minutes, until the meat gives easily to a fork. Lift the pieces out and keep the strained stock.</li>
@@ -229,8 +240,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>42+ g</strong> a serving,
           44% of the calories</p>
         <table class="nut-table">

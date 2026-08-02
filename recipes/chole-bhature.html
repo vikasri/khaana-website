@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Chole Bhature. Dark spiced chickpeas with a puffed, fried bread the size of a plate. A Punjabi recipe: 90 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/chole-bhature.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -190,9 +190,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">250g dried, soaked overnight</span> <span class="ing-name">Chickpeas</span></li>
@@ -219,7 +230,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>The colour is not from chilli. Traditionally the chickpeas are boiled with a tea bag or amla; here the black cardamom and long bhuna do the work.</li><li>Bhatura dough needs a warm 2-hour rest. Under-rested dough does not puff, it fries flat and hard.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Make the bhatura dough first: maida, rava, yogurt, a pinch of salt and enough warm water for a soft dough. Knead 10 minutes, cover, rest 2 hours in a warm place.</li>
         <li>Pressure cook the soaked chickpeas with the bay leaf, black cardamom and salt for 6 whistles, until they crush easily between finger and thumb.<span class="step-tip">Undercooked chana never softens later in the masala.</span></li>
@@ -235,8 +246,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>25+ g</strong> a serving,
           12% of the calories</p>
         <table class="nut-table">

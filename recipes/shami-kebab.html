@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Shami Kebab. Dense little mutton and chana dal patties, smooth inside and crisp at the edge. An Awadhi/Lucknowi recipe: 75 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/shami-kebab.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -192,9 +192,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">500g boneless shoulder, cut in 3cm cubes</span> <span class="ing-name">Mutton</span></li>
@@ -223,7 +234,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Soak the chana dal 1 hour in warm water. Undersoaked dal stays gritty and the kebab will crumble.</li><li>The cooked mince must be bone dry before grinding. Any moisture and the patties fall apart in the pan.</li><li>Chill the shaped kebabs 30 minutes before frying. They firm up and turn far more easily.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Pressure cook the mutton, drained dal, quartered onion, garlic, ginger, whole chillies, black cardamom, green cardamom, cinnamon, cloves, peppercorns, salt and 250ml water for 5 whistles, about 20 minutes.<span class="step-tip">In a pan instead, allow 50 minutes covered on low.</span></li>
         <li>Open the lid and boil hard, stirring, until every trace of liquid has gone and the mix looks dry and sandy, 8–10 minutes.<span class="step-tip">This is the step people skip. Wet mince equals kebabs that disintegrate.</span></li>
@@ -239,8 +250,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>33+ g</strong> a serving,
           35% of the calories</p>
         <table class="nut-table">

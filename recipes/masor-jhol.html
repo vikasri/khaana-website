@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Masor Jhol. The everyday assamese fish curry, thin and turmeric-yellow with potato and tomato. A Northeast Indian recipe: 40 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/masor-jhol.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -196,9 +196,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">600g rohu or any firm river fish, cut into 2cm steaks on the bone</span> <span class="ing-name">Fish</span></li>
@@ -221,7 +232,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Rub the fish with turmeric and salt and leave it 10 minutes before frying. It firms the surface so the pieces do not break in the pan.</li><li>Bring the fish to room temperature first. Cold pieces stick and tear.</li><li>This is a thin curry, not a thick one. It should pool around the rice rather than sit on it.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Rub the fish with 1/2 tsp of the turmeric and 1 tsp salt and set it aside for 10 minutes.</li>
         <li>Heat the mustard oil in a kadhai until it smokes and the sharp smell fades, then take it off the heat for 30 seconds.<span class="step-tip">Raw mustard oil tastes bitter in a curry. Smoking it once fixes that.</span></li>
@@ -239,8 +250,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>34 g</strong> a serving,
           35% of the calories</p>
         <table class="nut-table">

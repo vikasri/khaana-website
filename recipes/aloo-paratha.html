@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Aloo Paratha. Wholewheat flatbread stuffed with spiced potato and griddled in ghee. A Punjabi recipe: 55 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/aloo-paratha.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -202,9 +202,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">2.5 cups (300g), wholewheat flour</span> <span class="ing-name">Atta</span></li>
@@ -228,7 +239,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Boil the potatoes the night before, or at least cool them completely. Warm potato releases steam inside the paratha and tears it open.</li><li>Knead the dough and rest it 30 minutes under a damp cloth. Rested dough stretches around the filling instead of splitting.</li><li>Mash the potato dry with a fork or ricer. Never use a blender, which turns it to glue.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Mix the atta with 1/2 tsp salt and 1 tbsp ghee, then add the water gradually and knead 8 minutes to a soft, smooth dough.<span class="step-tip">It should be softer than you think. Barely holding its shape. Stiff dough makes hard parathas.</span></li>
         <li>Cover with a damp cloth and rest 30 minutes.</li>
@@ -247,8 +258,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
         <p class="nut-band" data-band="medium">Medium protein: <strong>11+ g</strong> a serving,
           8% of the calories</p>
         <table class="nut-table">

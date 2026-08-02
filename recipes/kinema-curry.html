@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Kinema. Fermented soybeans cooked with tomato and chilli, pungent and deeply savoury. A Northeast Indian recipe: 40 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/kinema-curry.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -168,9 +168,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">250g, crumbled and left uncovered overnight</span> <span class="ing-name">Tofu</span><span class="ing-note">standing in for kinema, fermented whole soybeans; the flavour is milder but the base is right</span></li>
@@ -189,7 +200,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Kinema is a Limbu and Nepali ferment of the eastern Himalaya, close kin to Japanese natto. It smells strong and tastes savoury rather than sour.</li><li>Real kinema cannot be improvised. This uses crumbled tofu for texture and leans on the mustard oil and chilli for character; it is a version, not the thing itself.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Fry the crumbled tofu in the mustard oil until browned and dry at the edges, 8 minutes.</li>
         <li>Add the onion, garlic, ginger and green chillies and cook until soft.</li>
@@ -202,8 +213,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
         <p class="nut-band" data-band="medium">Medium protein: <strong>13+ g</strong> a serving,
           22% of the calories</p>
         <table class="nut-table">

@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Patoleo. Steamed rice parcels of coconut and jaggery, made for the feast of the assumption. A Goan recipe: 60 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/patoleo.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -185,9 +185,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">2 cups, fine</span> <span class="ing-name">Rice Flour</span><span class="ing-note">or 2 cups raw rice soaked 4 hours and ground thick</span></li>
@@ -203,7 +214,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>You need 12 fresh turmeric leaves, washed and wiped dry, with the thick centre rib shaved flat. They are seasonal and not something a shop stocks year round. Banana leaf cut into 20cm x 15cm rectangles and softened over a flame is the standard substitute, though it gives none of the perfume.</li><li>Make the filling first and let it cool. Hot filling melts through the rice layer.</li><li>Mix the dough with water as hot as you can handle. Cold water gives a dough that cracks when you spread it.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Melt the jaggery with 4 tbsp water over low heat until it dissolves, about 3 minutes, then strain out the grit.</li>
         <li>Return it to the pan with the grated coconut and cook 8-10 minutes, stirring, until the mixture pulls together and leaves the sides of the pan.<span class="step-tip">Stop while it is still moist. Cooked to dryness it turns hard and grainy in the parcel.</span></li>
@@ -220,8 +231,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="low">Low protein: <strong>6+ g</strong> a serving,
           3% of the calories</p>
         <table class="nut-table">

@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Mutton Chukka Varuval. Slow-cooked mutton fried down dry until every piece is coated in black masala. A Tamil Nadu recipe: 95 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/chettinad-mutton-chukka.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -197,9 +197,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">700g, bone-in, cut into 3cm pieces</span> <span class="ing-name">Mutton</span><span class="ing-note">shoulder or leg</span></li>
@@ -228,7 +239,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Chukka means dry. The mutton is cooked soft first, then fried until the gravy has vanished into a coating. Plan for two stages and do not shortcut the second.</li><li>Bring the mutton to room temperature for 30 minutes before cooking; cold meat straight from the fridge seizes and takes longer to tenderise.</li><li>Goat, not lamb, if you can get it. The flavour holds up to this much pepper.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Dry-roast the chillies, coriander, fennel, cumin, stone flower, star anise, cinnamon, cloves and 1 tsp of the pepper over low heat for 5 minutes, until fragrant and a shade darker. Cool and grind fine with the coconut.<span class="step-tip">Roast on the lowest flame you can hold. Scorched kalpasi turns the whole dish bitter.</span></li>
         <li>Pressure cook the mutton with turmeric, half the crushed garlic and ginger, one sprig of curry leaves, salt and 250ml water for 5 whistles, then 15 minutes on low.</li>
@@ -245,8 +256,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>39+ g</strong> a serving,
           35% of the calories</p>
         <table class="nut-table">

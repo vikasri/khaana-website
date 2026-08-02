@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Duck Buffath. Duck stewed with vinegar and whole spice, a christmas table dish. An Anglo-Indian recipe: 115 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/home-hero.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -175,9 +175,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">1.2kg, jointed, excess fat trimmed</span> <span class="ing-name">Duck</span></li>
@@ -199,7 +210,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Buffath is close kin to Goan vindaloo and sorpotel: meat, vinegar, garlic and long keeping. It sat on Anglo-Indian Christmas tables because it improved for days.</li><li>Render the duck fat off first and cook the onions in it. Nothing else gives the same depth.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Brown the duck pieces skin down in a dry heavy pot until the fat runs and the skin is deep gold. Lift out.<span class="step-tip">No oil. There is more than enough fat in the bird.</span></li>
         <li>Pour off all but 4 tbsp of the fat. Fry the onions in it until soft and brown, 15 minutes.</li>
@@ -213,8 +224,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>60+ g</strong> a serving,
           41% of the calories</p>
         <table class="nut-table">

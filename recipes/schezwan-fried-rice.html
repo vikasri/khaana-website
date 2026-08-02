@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Schezwan Fried Rice. Day-old rice fried hard with a red chilli garlic paste and numbing pepper. An Indo-Chinese recipe: 35 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/schezwan-fried-rice.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -198,9 +198,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">300g raw, cooked to firm grains and cooled</span> <span class="ing-name">Basmati Rice</span><span class="ing-note">long-grain rice cooked the day before is best</span></li>
@@ -225,7 +236,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Cook the rice a day ahead, spread it on a tray and refrigerate uncovered. Fresh warm rice turns to porridge in the pan.</li><li>Soak the dried chillies in hot water for 20 minutes before grinding, or the paste stays gritty.</li><li>The schezwan paste can be made up to a fortnight ahead and kept in a jar under a film of oil.</li><li>Separate the cold rice grains with wet fingers before it goes anywhere near heat.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Drain the soaked chillies and grind them with 10 garlic cloves, the ginger and 60ml water to a coarse red paste.</li>
         <li>Heat 4 tbsp oil, add the paste and cook on a low flame for 8 minutes, stirring, until it darkens and oil beads at the edges.<span class="step-tip">This slow fry is the difference between schezwan sauce and raw chilli. Stop when the oil separates, not before.</span></li>
@@ -243,8 +254,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="low">Low protein: <strong>8+ g</strong> a serving,
           6% of the calories</p>
         <table class="nut-table">

@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Naga Smoked Pork with Bamboo Shoot. Smoked pork simmered with fermented bamboo shoot and raja mircha. A Northeast Indian recipe: 90 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/northeast-g1.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -171,9 +171,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">700g smoked pork belly, in cubes</span> <span class="ing-name">Pork</span></li>
@@ -191,7 +202,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Naga cooking uses very little oil and few spices; the flavour is carried by smoke, fermentation and heat. Adding garam masala here would be a mistake.</li><li>Fermented bamboo shoot is pungent. Rinse it, and add it in stages, tasting as you go.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Rinse the fermented bamboo shoot in two changes of water and drain.</li>
         <li>Put the smoked pork in a pot with the ginger, garlic, chillies and just enough water to cover. Bring to a boil.<span class="step-tip">No oil. The pork renders plenty of its own.</span></li>
@@ -205,8 +216,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>40+ g</strong> a serving,
           54% of the calories</p>
         <table class="nut-table">

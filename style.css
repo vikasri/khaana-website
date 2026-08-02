@@ -956,6 +956,10 @@ section.tight { padding: 34px 0; }
 @media (max-width: 860px) {
   .kitchen-strip-inner { grid-template-columns: 1fr; gap: 16px; }
   .kitchen-strip-cards { grid-template-columns: 1fr; }
+  /* Three across is too tight for a tablet: the button, the "Or" and the
+     search box each end up too narrow to read. */
+  .find-wrap { grid-template-columns: 1fr; gap: 16px; }
+  .find-or { display: none; }
 }
 
 /* What the results are filtered by, restated above them. Quiet by design — it
@@ -1327,7 +1331,10 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 
 .find-wrap {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  /* minmax(0, 1fr), not 1fr: a plain 1fr will not shrink below the CTA
+     button's min-content width, which pushed the search box 17px off the
+     right edge at 768px and gave the home page a sideways scroll. */
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   gap: 26px;
   align-items: center;
 }
@@ -1902,11 +1909,87 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 /* ---------- touch targets ----------
    Last in the file on purpose. These override component rules that are
    themselves near the end, and at equal specificity the later rule wins.
-   An earlier @media block silently lost that argument. */
-@media (max-width: 560px) {
+   An earlier @media block silently lost that argument.
+
+   900px, not 560px. An iPad in portrait is 768px wide and is operated with a
+   thumb like any phone, but every one of these rules used to stop at 560, so
+   a tablet got the mouse-sized targets and the 8.8px type. */
+@media (max-width: 900px), (pointer: coarse) {
   .miss-more, .link-btn { padding-top: 9px; padding-bottom: 9px; }
   .page-sources a { display: inline-block; padding: 8px 2px; }
   .src-back { padding: 8px 10px; min-width: 24px; text-align: center; }
   /* The confidence badge sat at 10.88px, just under readable. */
   .nut-conf { font-size: 0.72rem; }
+}
+
+
+/* ---------- the Cook panel on small screens ----------
+   Measured before this existed: on a 390px phone the first result sat 3,503px
+   down, 4.2 screens, and typing "biryani" into the search box did not change
+   that. The controls have to be reachable, but they cannot be the whole first
+   four screens of the page. */
+.panel-toggle { display: none; }
+
+@media (max-width: 900px) {
+  .panel-toggle {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    width: 100%; margin: 0 0 14px;
+    padding: 14px 16px; min-height: 48px;
+    font-family: var(--sans); font-size: 1rem; font-weight: 700;
+    color: var(--ink); background: var(--paper);
+    border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow); cursor: pointer; text-align: left;
+  }
+  .panel-toggle::after { content: '\25BE'; color: var(--ink-soft); font-size: 0.9em; }
+  .panel-toggle[aria-expanded="true"]::after { content: '\25B4'; }
+  .panel-toggle .panel-toggle-count {
+    font-weight: 600; font-size: 0.85rem; color: var(--ink-soft);
+  }
+  .cook-panel { display: none; }
+  .cook-panel.open { display: grid; }
+}
+
+
+/* ---------- recipe jump links ----------
+   Only on small screens. On a laptop the ingredient column is sticky beside
+   the method, so there is nothing to jump to; on a phone the method begins
+   2,000px down and there was no way back to the quantities. */
+.recipe-jump { display: none; }
+
+@media (max-width: 900px) {
+  .recipe-jump {
+    display: flex; gap: 6px;
+    position: sticky; top: var(--header-h, 65px); z-index: 40;
+    margin: 0 0 18px; padding: 8px 0;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+  }
+  .recipe-jump a {
+    flex: 1 1 0; text-align: center;
+    padding: 10px 4px; min-height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--sans); font-size: 0.82rem; font-weight: 700;
+    color: var(--ink-soft); background: var(--paper);
+    border: 1px solid var(--line); border-radius: 999px;
+    text-decoration: none;
+  }
+  .recipe-jump a:hover, .recipe-jump a:active { color: var(--terracotta); }
+
+  /* Land the heading below both sticky bars rather than under them. */
+  #ingredients, #method, #nutrition { scroll-margin-top: calc(var(--header-h, 65px) + 76px); }
+}
+
+
+/* ---------- tablet gets the touch treatment too ----------
+   These were written inside a 560px block, so an iPad in portrait at 768px
+   kept the mouse-sized rows, the 8.8px pills, and a word mark that measured
+   over 32% of the word "Khaana". Same reasoning as the block above. */
+@media (min-width: 561px) and (max-width: 900px) {
+  .hero-wordmark { display: none; }
+  .ing, .filter-set label { min-height: 40px; align-items: center; padding: 2px 0; }
+  .ing input, .filter-set label input { width: 20px; height: 20px; }
+  .foot-links a { display: block; padding: 10px 0; }
+  .foot-links li { margin: 0; }
+  .dish-recipe { display: inline-block; padding: 9px 0; }
+  .match-card .diet-tag { font-size: 0.7rem; padding: 2px 6px; }
 }

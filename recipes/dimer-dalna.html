@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Dimer Dalna. Boiled eggs fried golden then simmered in a spiced potato gravy. A Bengali recipe: 45 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/dimer-dalna.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -200,9 +200,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">6, hard-boiled and peeled</span> <span class="ing-name">Eggs</span></li>
@@ -229,7 +240,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Boil the eggs 9 minutes from cold water, then cool them under the tap so the shells come away cleanly.</li><li>Prick each peeled egg four or five times with a fork. This lets the masala get past the surface.</li><li>Mix the ground spices with 4 tbsp water into a paste before you start; dry powders scorch in hot mustard oil.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Heat the mustard oil to smoking in a kadhai, then reduce to medium.</li>
         <li>Roll the pricked eggs in 1/2 tsp turmeric and 1/2 tsp salt and fry them 3-4 minutes, turning, until blistered and golden. Lift out.<span class="step-tip">Keep a lid handy. Eggs spit violently in hot oil for the first few seconds.</span></li>
@@ -247,8 +258,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="medium">Medium protein: <strong>13+ g</strong> a serving,
           14% of the calories</p>
         <table class="nut-table">

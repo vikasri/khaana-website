@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Sandesh. Fresh chhena kneaded with sugar into a soft barely-cooked milk sweet. A Bengali recipe: 50 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/sandesh.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -189,9 +189,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">2 litres, full fat</span> <span class="ing-name">Milk</span></li>
@@ -206,7 +217,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Have a colander lined with a double layer of muslin ready over a bowl before you start heating the milk.</li><li>Use diluted lemon juice, not neat. Neat acid makes tough, rubbery chhena.</li><li>The chhena must hang 30 minutes and no longer. Over-drained chhena will not knead smooth.</li><li>Powder the sugar in advance; granulated sugar leaves a gritty sandesh.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Bring the milk to a full boil in a heavy pan, then turn the heat off completely.</li>
         <li>Wait 60 seconds, then add the diluted lemon juice a spoonful at a time, stirring slowly, until the curds separate and the whey runs pale green.<span class="step-tip">Add the acid only as far as you need. The instant the whey turns clear, stop.</span></li>
@@ -224,8 +235,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
         <p class="nut-band" data-band="medium">Medium protein: <strong>16 g</strong> a serving,
           16% of the calories</p>
         <table class="nut-table">

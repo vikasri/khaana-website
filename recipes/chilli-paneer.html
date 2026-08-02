@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Chilli Paneer. Crisp fried paneer in a sharp soy, vinegar and green chilli sauce. An Indo-Chinese recipe: 40 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/chilli-paneer.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -189,9 +189,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">400g, cut into 2.5cm fingers</span> <span class="ing-name">Paneer</span></li>
@@ -217,7 +228,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>If the paneer is shop-bought and firm, soak the cut fingers in hot salted water for 10 minutes and pat dry. They fry softer and stay tender.</li><li>This is a deep-fried dish; a shallow pan with 2cm of oil works too, turning the pieces once.</li><li>Cut the onion and capsicum into squares roughly the size of the paneer so everything picks up together on the fork.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Toss the dried paneer fingers with 3 tbsp cornflour, the maida, kashmiri chilli and 1/2 tsp salt until evenly dusted.<span class="step-tip">Dust, do not batter. Paneer wants a thin crust, not a jacket.</span></li>
         <li>Heat the oil in a kadhai to 180C and fry the paneer in two batches for 2 to 3 minutes, until pale gold. Drain on paper.<span class="step-tip">Pull it out while it is still gold, not brown. Overfried paneer squeaks and goes rubbery.</span></li>
@@ -233,8 +244,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>21 g</strong> a serving,
           15% of the calories</p>
         <table class="nut-table">

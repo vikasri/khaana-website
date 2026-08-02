@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Paneer Bhurji. Crumbled paneer scrambled with onion, tomato and capsicum in under twenty minutes. A Punjabi recipe: 25 minutes, serves 3, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/paneer-bhurji.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -190,9 +190,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 3.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">300g, crumbled by hand</span> <span class="ing-name">Paneer</span><span class="ing-note">hand-crumbled, not grated, for uneven texture</span></li>
@@ -218,7 +229,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Take the paneer out of the fridge 20 minutes ahead and crumble it by hand into pieces the size of large peas. Cold, hard paneer stays squeaky.</li><li>If using shop-bought paneer that feels firm, soak the block in hot water for 10 minutes and pat dry before crumbling.</li><li>Chop everything before you start. The whole dish is 15 minutes at the stove.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Heat the ghee in a kadhai and crackle the cumin seeds for 15 seconds.</li>
         <li>Add the onion and fry 6 minutes on medium until soft and lightly golden at the edges.</li>
@@ -234,8 +245,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>22+ g</strong> a serving,
           19% of the calories</p>
         <table class="nut-table">

@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Aloo Methi. Cubed potato and fresh fenugreek fried dry, bitter and sweet in the same mouthful. A Punjabi recipe: 40 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/aloo-methi.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -190,9 +190,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">300g, picked and washed</span> <span class="ing-name">Methi Leaves</span><span class="ing-note">about two large bunches, stems discarded</span></li>
@@ -213,7 +224,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Pick the methi leaves off the stems, wash in three changes of water and drain thoroughly. Wet leaves steam the potatoes.</li><li>Sprinkle the picked leaves with 1/2 tsp salt, rest 15 minutes and squeeze out the dark liquid if you want the bitterness tamed. Skip it if you like it bitter.</li><li>Cut the potato cubes evenly so they finish at the same time. This dish is not covered or stirred much.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Heat the oil in a kadhai and crackle the cumin seeds for 15 seconds.</li>
         <li>Add the sliced garlic and fry 40 seconds until it just turns pale gold.<span class="step-tip">Garlic browns in seconds here. Pull it back the moment it colours or it will taste burnt through the whole dish.</span></li>
@@ -230,8 +241,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>20 g</strong> a serving,
           17% of the calories</p>
         <table class="nut-table">

@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Dalcha. Mutton and chana dal simmered with bottle gourd and a firm sour edge. A Hyderabadi recipe: 80 minutes, serves 6, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/dalcha.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -198,9 +198,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 6.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">500g, bone-in pieces</span> <span class="ing-name">Mutton</span><span class="ing-note">neck and rib pieces give the best body</span></li>
@@ -230,7 +241,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Soak the chana dal for 30 minutes so it cooks at roughly the same rate as the mutton.</li><li>Soak the tamarind in hot water for 20 minutes, then squeeze and strain. Dalcha is defined by its sourness, so do not skimp.</li><li>Cut the bottle gourd last; it goes in late and should not sit and weep.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Heat 2 tbsp oil in the pressure cooker and brown the sliced onion for 8 minutes until golden at the edges.</li>
         <li>Add the ginger and garlic pastes and fry 1 minute, then the mutton. Sear on high for 5 minutes until the pieces lose their raw pink.<span class="step-tip">Sear in one layer; crowded meat steams and stays grey.</span></li>
@@ -247,8 +258,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>26 g</strong> a serving,
           29% of the calories</p>
         <table class="nut-table">

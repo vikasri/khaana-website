@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Avial. Mixed vegetables bound in coconut, cumin and yogurt, finished with raw coconut oil. A Kerala recipe: 50 minutes, serves 6, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/kerala-hero.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -178,9 +178,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 6.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">1, in batons</span> <span class="ing-name">Raw Banana</span></li>
@@ -204,7 +215,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Everything is cut to the same baton shape and size so it cooks evenly and looks right. This is not a dish where you cube things.</li><li>The final spoon of raw coconut oil is not optional. It is the smell of avial.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Cook the vegetables hardest-first in a wide pan with turmeric, salt and just enough water. Yam and banana first, softer vegetables after.<span class="step-tip">Barely enough water. Avial is not a curry and should not be swimming.</span></li>
         <li>Coarsely grind the coconut with cumin and green chilli. Do not make it a smooth paste.<span class="step-tip">Coarse. The texture of avial comes from the ground coconut.</span></li>
@@ -218,8 +229,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="low">Low protein: <strong>4 g</strong> a serving,
           6% of the calories</p>
         <table class="nut-table">

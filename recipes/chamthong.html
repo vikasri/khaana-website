@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Chamthong. The manipuri everyday vegetable stew, clear and light and lifted by fermented fish. A Northeast Indian recipe: 40 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/chamthong.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -180,9 +180,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">200g, peeled and cut into 3cm chunks</span> <span class="ing-name">Pumpkin</span></li>
@@ -204,7 +215,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Dry-roast the dried fish for 3 minutes over low heat before it goes in. Straight from the packet it makes the broth muddy.</li><li>Cut the vegetables to roughly the same size and add them in order of hardness. This stew is boiled, not layered with fat, so timing is the only thing keeping it from turning to soup.</li><li>Chamthong is deliberately plain. Resist adding garlic or masala: it is meant to sit next to eromba and a chilli chutney, not compete with them.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Dry-roast the dried fish 3 minutes over low heat until brittle and toasty, then break it into rough pieces.</li>
         <li>Bring the water to a boil in a wide pot with the onion, ginger, green chillies, roasted fish and salt. Boil 5 minutes.</li>
@@ -219,8 +230,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="low">Low protein: <strong>7 g</strong> a serving,
           21% of the calories</p>
         <table class="nut-table">

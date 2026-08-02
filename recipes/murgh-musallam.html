@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Murgh Musallam. A whole chicken stuffed with boiled eggs and simmered in a rich birista and nut gravy. An Awadhi/Lucknowi recipe: 130 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/murgh-musallam.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -206,9 +206,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">1 whole, about 1.2kg, skinned and slashed to the bone at the thighs and breast</span> <span class="ing-name">Chicken</span></li>
@@ -241,7 +252,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Marinate the chicken at least 4 hours ahead, or overnight. The slashes must be deep enough for the marinade to reach the bone.</li><li>Fry the birista and grind the nut paste before you start cooking; both are needed in quick succession.</li><li>Take the chicken out of the fridge an hour before it goes in the pan so it cooks evenly through.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Fry 3 of the sliced onions in 4 tbsp ghee over medium heat until deep brown, 14-16 minutes. Drain on paper and let them go crisp, then grind half to a paste with the cashews, almonds and 4 tbsp water.<span class="step-tip">Cool the birista completely before grinding or the paste turns gluey.</span></li>
         <li>Rub the chicken all over and into the slashes with half the ginger-garlic paste, 1 tsp salt and the kashmiri chilli. Whisk the yogurt with the coriander powder and coat the bird. Refrigerate 4 hours.</li>
@@ -259,8 +270,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>75+ g</strong> a serving,
           40% of the calories</p>
         <table class="nut-table">

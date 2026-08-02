@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Kochu Bata. Colocasia mashed with mustard and green chilli, eaten first with rice. A Bengali recipe: 40 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/kochu-bata.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -165,9 +165,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">500g, peeled and cubed</span> <span class="ing-name">Colocasia</span><span class="ing-note">wear gloves peeling it; the raw sap irritates</span></li>
@@ -183,7 +194,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>A bata is a mash, eaten at the start of the meal with plain rice and a little raw mustard oil.</li><li>Colocasia must be cooked through completely. Undercooked it scratches the throat.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Boil the colocasia in salted water with the turmeric until completely soft, about 20 minutes. Drain thoroughly.<span class="step-tip">Thoroughly. Any water left makes a sloppy bata.</span></li>
         <li>Mash it smooth while hot, or pulse briefly in a blender.</li>
@@ -196,8 +207,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="low">Low protein: <strong>3+ g</strong> a serving,
           4% of the calories</p>
         <table class="nut-table">

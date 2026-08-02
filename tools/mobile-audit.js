@@ -50,8 +50,15 @@ window.khaanaAudit = function () {
     if (!fr.width || getComputedStyle(floats[f]).display === 'none') continue;
     for (var t = 0; t < texts.length; t++) {
       if (floats[f].contains(texts[t]) || texts[t].contains(floats[f])) continue;
-      var tr = texts[t].getBoundingClientRect();
-      if (!tr.width || !texts[t].textContent.trim()) continue;
+      // The rendered text, not the element box. A block-level <h1> spans the
+      // whole container even when the word in it is 227px wide, so measuring
+      // the box reported the home page word mark as covering 23% of the
+      // headline when it was not touching a letter.
+      if (!texts[t].textContent.trim()) continue;
+      var range = document.createRange();
+      range.selectNodeContents(texts[t]);
+      var tr = range.getBoundingClientRect();
+      if (!tr.width || !tr.height) continue;
       var covered = area(fr, tr) / (tr.width * tr.height);
       if (covered > 0.06) {
         add('covers text', floats[f],
@@ -99,9 +106,13 @@ window.khaanaAudit = function () {
     // big the target is. And a link inside a sentence cannot be 40px tall
     // without wrecking the sentence: the standard is for controls and for
     // stacked navigation, not for prose.
-    var isControl = el.tagName === 'BUTTON' ||
-        (el.tagName === 'INPUT' && /checkbox|radio|submit/.test(el.type));
-    var isStackedNav = el.tagName === 'A' &&
+    // Touch sizing only applies where there is a touch. Run at 1440px this
+    // check reported 217 "problems" on the Cook page, all of them checkboxes
+    // that are the right size for a mouse.
+    var touch = vw <= 900 || matchMedia('(pointer: coarse)').matches;
+    var isControl = touch && (el.tagName === 'BUTTON' ||
+        (el.tagName === 'INPUT' && /checkbox|radio|submit/.test(el.type)));
+    var isStackedNav = touch && el.tagName === 'A' &&
         el.parentElement && /^(LI)$/.test(el.parentElement.tagName);
     if ((isControl || isStackedNav) && r.width > 0 && (r.height < 24 || r.width < 24)) {
       var stretched = getComputedStyle(el, '::after').position === 'absolute';
@@ -113,11 +124,12 @@ window.khaanaAudit = function () {
 
     // text too small to read on a phone
     var fs = parseFloat(cs.fontSize);
-    if (fs && fs < 11 && el.textContent && el.textContent.trim().length > 12 &&
+    if (touch && fs && fs < 11 && el.textContent && el.textContent.trim().length > 12 &&
         el.children.length === 0) {
       add('text under 11px', el, cs.fontSize);
     }
   }
+  out.touchRulesApplied = vw <= 900 || matchMedia('(pointer: coarse)').matches;
   out.ok = out.problems.length === 0;
   return out;
 };

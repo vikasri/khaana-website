@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Gobi Manchurian. Fried cauliflower tossed in a hot garlicky soy and vinegar glaze. An Indo-Chinese recipe: 50 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/indo-chinese-g2.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -200,9 +200,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">1 medium (about 600g), cut into 3cm florets</span> <span class="ing-name">Cauliflower</span></li>
@@ -229,7 +240,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Blanch the florets in salted boiling water for 2 minutes, then drain and dry them completely on a cloth. Wet cauliflower makes soggy batter.</li><li>Chop all the aromatics and vegetables before you start frying. Once the sauce begins it takes 3 minutes end to end.</li><li>This is a deep-fried dish. Set out a tray lined with kitchen paper and keep it next to the stove.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Whisk 3 tbsp cornflour, the maida, kashmiri chilli, 1/2 tsp salt and about 100ml water into a batter that coats a spoon thickly and drips off slowly.<span class="step-tip">Too thin and it slides off the floret; too thick and you get a doughy shell. Aim for pouring cream.</span></li>
         <li>Heat the frying oil in a kadhai to 180C. A drop of batter should rise and sizzle within 3 seconds.</li>
@@ -247,8 +258,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="low">Low protein: <strong>7 g</strong> a serving,
           7% of the calories</p>
         <table class="nut-table">

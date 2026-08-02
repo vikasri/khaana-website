@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Gushtaba. Pounded mutton meatballs poached in a white yogurt gravy, the closing course of wazwan. A Kashmiri recipe: 105 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/gushtaba.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -193,9 +193,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">600g boneless leg, minced twice and completely free of sinew</span> <span class="ing-name">Mutton</span></li>
@@ -220,7 +231,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Traditionally the meat is pounded on a stone with a wooden mallet for half an hour. Twice-minced leg plus ten minutes of working the bowl by hand gets you close; a food processor makes it pasty rather than springy.</li><li>Trim out every strand of sinew before mincing. One thread is enough to split a ball open in the gravy.</li><li>Whisk the yogurt smooth and let it come to room temperature. An hour out of the fridge.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Work the mince with 2 tbsp ghee, 1 tsp of the fennel powder, 1/2 tsp dry ginger, the ground green cardamom, black pepper, baking soda and 1 tsp salt for a full 10 minutes, until it turns pale, tacky and springy.<span class="step-tip">It is ready when a pinch stretches between your fingers instead of crumbling.</span></li>
         <li>Chill the mix 20 minutes, then wet your palms and roll 8 balls the size of a small orange, smoothing away every crack.<span class="step-tip">Any crack on the surface opens up during poaching.</span></li>
@@ -237,8 +248,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>38+ g</strong> a serving,
           35% of the calories</p>
         <table class="nut-table">

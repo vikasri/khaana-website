@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Goan Sausage Pulao. Smoky vinegary chouriço cooked through rice until every grain is stained red. A Goan recipe: 55 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/goan-sausage-pulao.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -192,9 +192,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">300g Goan chouriço sausage, casings removed and chopped</span> <span class="ing-name">Pork</span><span class="ing-note">or 300g diced pork belly tossed with 2 tbsp vinegar, 1 tsp chilli powder and 1 tsp crushed garlic</span></li>
@@ -218,7 +229,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Soak the rinsed rice 20 minutes and drain it well. Wet rice and a fatty sausage together give you a sticky pulao.</li><li>Goan chouriço is cured and heavily salted. Taste a piece once fried before you add any salt at all.</li><li>If your sausage is very lean, keep 1 tbsp oil to hand; if it is fatty you will need none.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Fry the chopped sausage in a dry heavy pot over medium heat for 6-8 minutes, until the fat runs out red and the edges crisp.<span class="step-tip">That rendered red fat is the entire flavour base. Do not drain it away.</span></li>
         <li>Lift out the sausage with a slotted spoon, leaving the fat behind.</li>
@@ -235,8 +246,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>26+ g</strong> a serving,
           19% of the calories</p>
         <table class="nut-table">

@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Kumm Curry. Quick hill mushroom curry heavy with black pepper and coconut. A Karnataka recipe: 40 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/kumm-curry.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -192,9 +192,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">400g, wiped clean and thickly sliced</span> <span class="ing-name">Mushroom</span><span class="ing-note">wild mushrooms after the first rains are the Kodagu version; button or oyster mushrooms stand in well</span></li>
@@ -217,7 +228,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Wipe the mushrooms with a damp cloth instead of washing them; soaked mushrooms release water into the pan and refuse to brown.</li><li>Slice them thick, about 1 cm. Thin slices disappear into the gravy.</li><li>Crush the black pepper coarsely just before cooking.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Heat the coconut oil in a wide pan and fry the onion over medium heat until soft and gold, about 7 minutes.</li>
         <li>Add the garlic, ginger, green chilli and curry leaves and fry 2 minutes until fragrant.</li>
@@ -234,8 +245,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
         <p class="nut-band" data-band="low">Low protein: <strong>4+ g</strong> a serving,
           12% of the calories</p>
         <table class="nut-table">

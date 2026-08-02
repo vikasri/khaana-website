@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Pesarattu. A green whole-moong crepe topped with raw onion, ginger and chilli. An Andhra recipe: 40 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/andhra-g1.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -183,9 +183,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">1.5 cups, green skins on</span> <span class="ing-name">Whole Moong</span></li>
@@ -204,7 +215,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Soak the whole moong and rice together for 6 hours or overnight. The skins must be soft enough to grind smooth without being removed.</li><li>Pesarattu batter is not fermented. Grind it and cook straight away, which makes it a good same-morning breakfast.</li><li>Chop the onion for the topping as fine as you can and keep it dry, ready beside the stove.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Drain the soaked moong and rice and grind with the whole green chillies, ginger, 1 tsp of the cumin and the salt to a smooth batter, adding water gradually.<span class="step-tip">Aim for a batter a shade thinner than dosa batter. It should coat the ladle but pour freely.</span></li>
         <li>Stir in the remaining cumin seeds whole, for texture.</li>
@@ -220,8 +231,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>20 g</strong> a serving,
           17% of the calories</p>
         <table class="nut-table">

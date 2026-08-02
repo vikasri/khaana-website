@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Dalma. Odia lentils simmered with vegetables, finished with roasted cumin and coconut. An Odia recipe: 45 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/odia-hero.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -172,9 +172,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">1 cup</span> <span class="ing-name">Toor Dal</span><span class="ing-note">rinsed until the water runs clear</span></li>
@@ -197,7 +208,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Dalma has no onion or garlic at all. The flavour comes from the roasted cumin-chilli powder added at the end, so do not skip that step.</li><li>Cut the vegetables large. They should hold their shape in the finished dish rather than dissolve into the dal.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Pressure cook the toor dal with turmeric, the ginger and 3 cups of water for 3 whistles, or simmer covered in a pot for about 35 minutes until completely soft.</li>
         <li>Add the potato, raw banana, pumpkin and drumstick with a little more hot water and salt. Cook a further 2 whistles, or 12-15 minutes in a pot, until the vegetables are tender but not collapsing.<span class="step-tip">Add the tomato in the last five minutes so it keeps some shape.</span></li>
@@ -210,8 +221,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
         <p class="nut-band" data-band="medium">Medium protein: <strong>14+ g</strong> a serving,
           15% of the calories</p>
         <table class="nut-table">

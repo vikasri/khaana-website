@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Nandu Rasam. Thin, fiercely peppery crab broth drunk from a tumbler before the meal. A Tamil Nadu recipe: 50 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/nandu-rasam.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -188,9 +188,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">3 small crabs, cleaned and quartered</span> <span class="ing-name">Crab</span><span class="ing-note">shells cracked; the shell carries the flavour</span></li>
@@ -215,7 +226,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Ask the fishmonger to clean the crabs but keep the shells cracked and the claws on. Almost all the flavour of nandu rasam comes out of the shell.</li><li>Soak the tamarind in warm water 20 minutes and squeeze it out well; the rasam should be sour enough to make you blink.</li><li>Rasam must never boil hard once the tamarind water is in. It goes cloudy and bitter.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Pound the pepper, cumin, dried chillies and 4 of the garlic cloves coarsely in a blender. Pulse it, do not powder it.<span class="step-tip">Coarse pepper floats and perfumes the broth. Fine powder sinks and makes it muddy.</span></li>
         <li>Boil the crab pieces in 600ml water with turmeric and salt for 10 minutes. Skim the grey foam off the top.<span class="step-tip">Skimming is what keeps the finished rasam clear.</span></li>
@@ -231,8 +242,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
         <p class="nut-band" data-band="low">Low protein: <strong>5+ g</strong> a serving,
           16% of the calories</p>
         <table class="nut-table">

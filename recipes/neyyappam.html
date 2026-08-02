@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Neyyappam. Dark ghee-fried rice and jaggery fritters, crisp outside and soft within. A Kerala recipe: 55 minutes, serves 6, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/neyyappam.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -198,9 +198,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 6.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">250g raw rice, soaked 4 hours</span> <span class="ing-name">Rice</span><span class="ing-note">any short or medium grain works</span></li>
@@ -219,7 +230,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Soak the rice at least 4 hours, or overnight, then drain it thoroughly in a sieve for 15 minutes.</li><li>Make the batter and rest it 2-3 hours before frying. Unrested batter fries flat and heavy.</li><li>You need an appakara or aebleskiver pan for the classic shape; otherwise fry spoonfuls as small round fritters in a deep kadhai.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Melt the jaggery with 100ml water over medium heat until dissolved, about 5 minutes, then strain through a sieve and cool to lukewarm.<span class="step-tip">Cool the syrup before it meets the rice. Hot syrup part-cooks the batter and it will never rise.</span></li>
         <li>Grind the drained rice with the cooled jaggery syrup and the remaining 50ml water to a thick, smooth batter. Thicker than dosa batter, roughly the consistency of cake batter.</li>
@@ -238,8 +249,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="low">Low protein: <strong>3 g</strong> a serving,
           3% of the calories</p>
         <table class="nut-table">

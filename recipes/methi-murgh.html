@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Methi Murgh. Chicken braised with fresh fenugreek, bitter-sweet and thick rather than soupy. A Hyderabadi recipe: 55 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/methi-murgh.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -200,9 +200,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">800g bone-in curry cut</span> <span class="ing-name">Chicken</span><span class="ing-note">thigh and drumstick hold up better than breast</span></li>
@@ -229,7 +240,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Toss the picked methi leaves with 1 tsp salt, leave 20 minutes, then squeeze out the dark liquid hard. This is what stops the dish turning harshly bitter.</li><li>Take the yogurt out of the fridge 30 minutes ahead. Cold yogurt splits the moment it hits a hot pan.</li><li>Pat the chicken dry so it browns instead of steaming.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Heat the oil in a kadhai and fry the sliced onion over medium heat until evenly golden brown, 12-14 minutes.<span class="step-tip">Stir every couple of minutes and take it to gold, not mahogany. Burnt onion turns the gravy bitter and there is no rescuing it.</span></li>
         <li>Add the ginger and garlic pastes and fry 2 minutes, until the raw smell goes and the oil looks clear at the edges.</li>
@@ -247,8 +258,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>64+ g</strong> a serving,
           36% of the calories</p>
         <table class="nut-table">

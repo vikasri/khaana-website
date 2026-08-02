@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Dar Ni Pori. Flaky ghee pastry packed with sweet lentil paste, made for navroze and weddings. A Parsi recipe: 85 minutes, serves 8, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/parsi-dar-ni-pori.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -199,9 +199,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 8.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">300g</span> <span class="ing-name">Maida</span></li>
@@ -222,7 +233,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Make the filling a day ahead if you can. It firms up in the fridge and is far easier to enclose cold.</li><li>The dough needs a full 30 minutes covered rest before rolling, or it will fight you and tear.</li><li>Work with 60g of dough and 60g of filling per pori. Weigh them, because uneven parcels burst.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Pressure cook the toor dal with 500ml water for 4 whistles, until completely soft, then drain off every drop of liquid.<span class="step-tip">Wet dal makes a filling that will not hold. Drain it hard and dry it out in the pan if you must.</span></li>
         <li>Blend or mash the dal to a smooth paste while still warm.</li>
@@ -241,8 +252,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="medium">Medium protein: <strong>15 g</strong> a serving,
           9% of the calories</p>
         <table class="nut-table">

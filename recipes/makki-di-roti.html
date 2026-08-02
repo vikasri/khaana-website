@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Makki di Roti. Coarse, crumbly winter flatbread patted out by hand and eaten hot with saag. A Punjabi recipe: 40 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/makki-di-roti.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -189,9 +189,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">2 cups (250g)</span> <span class="ing-name">Maize Flour</span></li>
@@ -206,7 +217,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Boil the water and let it sit 2 minutes before using. Hot water makes this glutenless dough far easier to handle.</li><li>Knead in small batches and keep the rest of the dough covered with a damp cloth; it dries out and cracks within minutes.</li><li>Cut two squares of baking paper or a clean plastic sheet to pat the rotis between, hand-patting takes practice.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Mix the flour, salt and ajwain in a wide bowl.</li>
         <li>Pour in the hot water a little at a time, mixing with a spoon at first, then knead 5 minutes with the heel of your hand into a smooth, pliable dough.<span class="step-tip">The dough should feel like soft clay. Too dry and it cracks; too wet and it sticks to everything.</span></li>
@@ -224,8 +235,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="low">Low protein: <strong>4 g</strong> a serving,
           5% of the calories</p>
         <table class="nut-table">

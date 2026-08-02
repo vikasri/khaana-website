@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Mangodi ki Sabzi. Sun-dried moong dal nuggets fried crisp and stewed in a tart tomato masala. A Rajasthani recipe: 55 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/mangodi-ki-sabzi.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -190,9 +190,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">150g split moong dal, soaked and ground into nuggets</span> <span class="ing-name">Moong Dal</span><span class="ing-note">or 120g ready-made mangodi from the shop</span></li>
@@ -218,7 +229,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>To make mangodi from scratch: soak the moong dal 4 hours, grind to a thick fluffy paste with almost no water, beat in a pinch of salt, then drop pea-sized blobs onto a cloth and dry them in full sun for 2-3 days until they rattle. They keep a year in a jar, which is the whole point of them.</li><li>If you are using shop-bought mangodi, sort out any broken crumbs first. They burn in the oil and turn the sabzi bitter.</li><li>Puree the tomatoes ahead; chopped tomato leaves lumps that never break down in the short cook.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Heat 3 tbsp oil in a kadhai over medium heat and fry the mangodi in two batches, stirring constantly, until they turn a deep reddish brown and smell nutty, about 3 minutes a batch. Drain on paper.<span class="step-tip">They colour all at once at the end. Stand over them.</span></li>
         <li>Tip out all but 2 tbsp of oil. Crackle the cumin and mustard seeds, then add the hing and let it foam for a second.</li>
@@ -234,8 +245,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="medium">Medium protein: <strong>11 g</strong> a serving,
           13% of the calories</p>
         <table class="nut-table">

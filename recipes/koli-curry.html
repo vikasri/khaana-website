@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Koli Curry. Kodava chicken curry in a roasted coconut and pepper gravy. A Karnataka recipe: 65 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/koli-curry.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -201,9 +201,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">800g bone-in, cut into curry pieces</span> <span class="ing-name">Chicken</span></li>
@@ -231,7 +242,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Rub the chicken with the turmeric and 1 tsp salt then cover and refrigerate it 30 minutes before cooking.</li><li>Grate the coconut fresh if you can; frozen grated coconut, thawed, is the next best thing.</li><li>Roast and grind the masala first so the gravy can go straight in. The roasted paste sits happily for an hour.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Dry-roast the coriander powder, cumin, dried red chilli, fenugreek and mustard seeds in a small pan over low heat for 2 minutes, until they smell nutty and the mustard begins to pop.<span class="step-tip">Low heat only. Fenugreek scorches first and its bitterness carries through the whole pot.</span></li>
         <li>Add the grated coconut to the same pan and roast, stirring constantly, 6 to 8 minutes until it is an even reddish brown.</li>
@@ -249,8 +260,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>46+ g</strong> a serving,
           40% of the calories</p>
         <table class="nut-table">

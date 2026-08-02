@@ -174,8 +174,8 @@ def nutrition_panel(r):
                  "Central</a>. Cooking changes are not modelled, and added salt is excluded, "
                  "so sodium is not given.")
 
-    return ("""<section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="%s">%s estimate</span></h2>
+    return ("""<section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="%s">%s estimate</span></h2>
         <p class="nut-band" data-band="%s">%s protein: <strong>%.0f%s g</strong> a serving,
           %.0f%% of the calories</p>
         <table class="nut-table">
@@ -300,9 +300,20 @@ def render(r, nav, foot):
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for {esc(r.get('servings',4))}.</p>
           <ul class="ing-list">
 {ing}
@@ -312,7 +323,7 @@ def render(r, nav, foot):
         </div>
         <div class="recipe-method">
           {'<h2>Before you start</h2><ul class="prep-notes">%s</ul>' % notes if notes else ''}
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
 {steps}
           </ol>

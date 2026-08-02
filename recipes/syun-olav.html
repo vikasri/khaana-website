@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Syun Olav. Everyday mutton and potato curry in a thin, red, chilli-warm gravy. A Kashmiri recipe: 75 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/syun-olav.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -194,9 +194,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">600g, on the bone, cut into 4cm pieces</span> <span class="ing-name">Mutton</span></li>
@@ -222,7 +233,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Halve the potatoes and keep them in cold water until you fry them, or they will grey in the time it takes to brown the meat.</li><li>Mix the Kashmiri chilli with 4 tbsp water to a loose paste before it goes in. Dry powder scorches in mustard oil and turns brown instead of red.</li><li>Bring the mutton to room temperature for 20 minutes; straight from the fridge it seizes and takes longer to tenderise.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Heat the mustard oil to smoking point in a pressure cooker, then reduce the heat.</li>
         <li>Fry the drained potato halves until golden on the cut sides, about 6 minutes, and lift them out.<span class="step-tip">Frying the potatoes first stops them disintegrating into the gravy later.</span></li>
@@ -239,8 +250,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>36+ g</strong> a serving,
           29% of the calories</p>
         <table class="nut-table">

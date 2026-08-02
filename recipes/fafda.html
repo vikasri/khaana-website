@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Fafda. Crisp-chewy strips of fried gram flour dough, the classic sunday breakfast. A Gujarati recipe: 50 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/fafda.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -192,9 +192,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">250g, coarse ground if you can get it</span> <span class="ing-name">Besan</span></li>
@@ -212,7 +223,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Dissolve the baking soda and salt in the warm water before it touches the flour, so the alkali is evenly distributed.</li><li>The dough needs 20 minutes covered rest; it becomes stretchy and stops tearing under the palm.</li><li>Clear a long stretch of oiled worktop or the back of a steel tray. Fafda is pressed out, not rolled, and needs room.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Mix the besan, ajwain, black pepper and turmeric in a wide bowl.</li>
         <li>Rub in the 3 tbsp oil until the mixture holds its shape when squeezed.</li>
@@ -230,8 +241,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="medium">Medium protein: <strong>14 g</strong> a serving,
           10% of the calories</p>
         <table class="nut-table">

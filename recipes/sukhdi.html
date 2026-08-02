@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Sukhdi. Wheat flour toasted in ghee and set with jaggery, crumbly and warming. A Gujarati recipe: 25 minutes, serves 8, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/sukhdi.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -182,9 +182,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 8.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">200g, coarse wholewheat</span> <span class="ing-name">Atta</span></li>
@@ -198,7 +209,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Grease a 20cm tray or thali before you start. Once the jaggery goes in you have about 40 seconds to spread it.</li><li>Grate the jaggery finely and have it weighed and beside the pan. Lumps will not melt in time.</li><li>Work over low heat throughout. Sukhdi is a slow toast, not a fry.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Melt the ghee in a heavy kadhai over low heat.</li>
         <li>Add the atta and stir continuously with a flat spatula, keeping the flour moving across the base.</li>
@@ -215,8 +226,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="low">Low protein: <strong>2 g</strong> a serving,
           3% of the calories</p>
         <table class="nut-table">

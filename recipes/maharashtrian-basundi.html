@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Maharashtrian Basundi. Milk cooked down by half until it is thick, grainy and the colour of ivory. A Maharashtrian recipe: 80 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/maharashtrian-basundi.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -180,9 +180,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">1.5 litres, full-fat</span> <span class="ing-name">Milk</span><span class="ing-note">the whole dish is the milk, so use the best you can get</span></li>
@@ -198,7 +209,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Use the widest, heaviest pan you own. A wide surface is what reduces milk in an hour rather than two.</li><li>Rinse the pan with cold water and leave a film of it before pouring in the milk. It makes the base far less likely to catch.</li><li>Soak the saffron in warm milk for 15 minutes so it gives up its colour before it goes in.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Bring the milk to a boil in a wide heavy pan, then drop the heat to a steady low simmer.</li>
         <li>Simmer 45-55 minutes, stirring every 3-4 minutes and scraping the base and the sides with a flat spatula.<span class="step-tip">Scrape the cream that sticks to the sides back into the milk each time. That is what makes basundi grainy rather than merely thick.</span></li>
@@ -214,8 +225,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
         <p class="nut-band" data-band="medium">Medium protein: <strong>13+ g</strong> a serving,
           15% of the calories</p>
         <table class="nut-table">

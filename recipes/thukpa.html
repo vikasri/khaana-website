@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Thukpa. Sikkim&#x27;s hand-torn noodle soup, chicken broth thick with vegetables and pepper. A Northeast Indian recipe: 65 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/thukpa.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -196,9 +196,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">250g</span> <span class="ing-name">Maida</span><span class="ing-note">for hand-pulled noodles; 300g of ready wheat noodles works if you would rather not</span></li>
@@ -224,7 +235,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Make the dough first and let it rest 30 minutes before you touch it again. Unrested, it springs back and you will fight it the whole time.</li><li>Have every vegetable cut before the broth goes on. Once the noodles are in, this dish moves in under five minutes.</li><li>Cook the noodles in the soup, not separately. The starch they release is what gives thukpa its body.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Mix the maida with 1/2 tsp salt and enough water (about 120ml) to make a firm, slightly stiff dough. Knead 8 minutes until smooth, then cover and rest 30 minutes.<span class="step-tip">Firmer than a chapati dough. A soft dough tears into shapeless scraps in the broth.</span></li>
         <li>Heat the oil in a large pot and fry the onion, garlic and ginger 5 minutes over medium heat, until the onion is soft and the garlic smells sweet.</li>
@@ -242,8 +253,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>30 g</strong> a serving,
           26% of the calories</p>
         <table class="nut-table">

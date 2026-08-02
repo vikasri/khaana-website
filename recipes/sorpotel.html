@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Sorpotel. The vinegary pork and liver stew that gets cooked days before a goan wedding. A Goan recipe: 115 minutes, serves 6, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/sorpotel.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -193,9 +193,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 6.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">700g belly and shoulder in one piece, plus 200g pork liver</span> <span class="ing-name">Pork</span><span class="ing-note">some fat is essential. Do not use lean loin, and do not leave out the liver</span></li>
@@ -220,7 +231,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Sorpotel is cooked three days before it is eaten. Plan for that. The flavour needs the wait and it is genuinely worse on day one.</li><li>Soak the chillies in half the vinegar for 30 minutes before grinding.</li><li>Everything that touches the pot must be dry and non-reactive. Use a ceramic or steel pot, never aluminium, and a dry spoon each time you go back in.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Boil the pork and liver together in the water with 1 tsp salt and 1/2 tsp turmeric for 25 minutes, until firm but not falling apart. Keep the stock.<span class="step-tip">Save every drop of that stock. It is the only water this dish gets.</span></li>
         <li>Cool the meat, then cut it into small 1cm dice. It should be knife-cut, never minced.</li>
@@ -237,8 +248,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>26+ g</strong> a serving,
           49% of the calories</p>
         <table class="nut-table">

@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Idli. Steamed cakes of fermented rice and urad dal, the lightest thing in indian breakfast. A Tamil Nadu recipe: 40 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/tamil-nadu-g1.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -168,9 +168,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">3 cups par-boiled idli rice</span> <span class="ing-name">Rice</span></li>
@@ -184,7 +195,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>The urad dal is ground first and separately, with cold water, until it is light and holds a peak. That aeration is what makes idlis fluffy. The fermentation only builds on it.</li><li>Idli batter is thicker than dosa batter. If it pours easily it is too thin.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Soak the rice in one bowl and the urad dal with fenugreek in another, for 5 hours. Soak the poha for 20 minutes before grinding.</li>
         <li>Grind the urad dal first with cold water until white, fluffy and doubled in volume. Test it: a spoon of batter should float in water.<span class="step-tip">This is the single most important step. Do not rush or overheat it.</span></li>
@@ -198,8 +209,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
         <p class="nut-band" data-band="medium">Medium protein: <strong>19+ g</strong> a serving,
           11% of the calories</p>
         <table class="nut-table">

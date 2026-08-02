@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Mango Pickle. Raw mango cured in salt then packed with mustard, fennel and oil. A Punjabi recipe: 40 minutes, serves 20, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/mango-pickle.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -173,9 +173,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 20.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">1kg firm and sour, cut into 2cm pieces with the stone shell</span> <span class="ing-name">Raw Mango</span></li>
@@ -194,7 +205,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Everything must be bone dry: the mango, the jar, the spoon, your hands. A single drop of water is how a pickle grows mould.</li><li>The first salting draws out the water that would otherwise spoil it. Do not shorten it.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Wash and dry the mango pieces thoroughly, then spread them on a cloth for 2 hours until the surface is completely dry.<span class="step-tip">Completely dry. This is not a step to rush.</span></li>
         <li>Toss with the salt and turmeric, pack into a dry jar, and leave 2 days, shaking daily.</li>
@@ -208,8 +219,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="low">Low protein: <strong>2 g</strong> a serving,
           3% of the calories</p>
         <table class="nut-table">

@@ -380,6 +380,7 @@
     var q = searchQuery();
 
     el('pantry-count').textContent = selected.size;
+    syncPanelToggle();
 
     var scored = recipes.map(function (r) { return scoreRecipe(r, has, filters); });
 
@@ -764,7 +765,34 @@
 
   /* ---------- boot ---------- */
 
+  /* The small-screen panel toggle. The label carries the pantry count so the
+     button says what is behind it without opening it. */
+  function syncPanelToggle() {
+    var btn = el('panel-toggle');
+    if (!btn) return;
+    var n = selected.size;
+    var diets = document.querySelectorAll('input[name="diet"]:checked').length;
+    var kcal = (document.querySelector('input[name="kcal"]:checked') || {}).value;
+    var prot = (document.querySelector('input[name="protein"]:checked') || {}).value;
+    var extras = diets + (kcal ? 1 : 0) + (prot ? 1 : 0) +
+                 ((el('f-time') || {}).value ? 1 : 0);
+    var bits = [];
+    bits.push(n ? n + ' ingredient' + (n === 1 ? '' : 's') : 'nothing chosen yet');
+    if (extras) bits.push(extras + ' filter' + (extras === 1 ? '' : 's'));
+    btn.innerHTML = '<span>Your kitchen and filters</span>' +
+                    '<span class="panel-toggle-count">' + esc(bits.join(' \u00b7 ')) + '</span>';
+  }
+
   function wire() {
+    var toggle = el('panel-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', function () {
+        var panel = el('cook-panel');
+        var open = panel.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+
     document.querySelectorAll('input[name="diet"], input[name="kcal"], input[name="protein"]').forEach(function (i) {
       i.addEventListener('change', update);
     });

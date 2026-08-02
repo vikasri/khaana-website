@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Chilli Chicken. Crisp fried chicken in a fierce semi-dry soy, chilli and vinegar sauce. An Indo-Chinese recipe: 50 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/indo-chinese-hero.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -192,9 +192,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">600g boneless thigh, cut into 3cm cubes</span> <span class="ing-name">Chicken</span><span class="ing-note">thigh stays juicier than breast</span></li>
@@ -221,7 +232,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Marinate the chicken at least 30 minutes ahead, or up to 4 hours in the fridge. It seasons the meat right through, not just the crust.</li><li>Bring the marinated chicken back to room temperature for 15 minutes before frying so the centres cook in the time the coating takes.</li><li>Have the onion, capsicum and aromatics cut and within arm&#x27;s reach; the sauce is finished on a full flame in under 4 minutes.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Mix the chicken with 1 tbsp soy sauce, 1 tsp kashmiri chilli, 1/2 tsp black pepper, 1/2 tsp salt and the beaten egg. Leave 30 minutes.</li>
         <li>Toss the marinated chicken with 4 tbsp cornflour and the maida until each piece wears a dry, slightly craggy jacket.<span class="step-tip">Add the flours only just before frying. Left to sit they turn to paste and the coating goes gummy.</span></li>
@@ -238,8 +249,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="good">Good estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>38 g</strong> a serving,
           28% of the calories</p>
         <table class="nut-table">

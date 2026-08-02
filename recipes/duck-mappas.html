@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Duck Mappas. Slow-braised duck in spiced coconut milk with potatoes. A Kerala recipe: 110 minutes, serves 6, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/duck-mappas.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -214,9 +214,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 6.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">1.2kg, jointed into 8-10 pieces, excess fat trimmed</span> <span class="ing-name">Duck</span><span class="ing-note">a whole duck jointed, skin left on</span></li>
@@ -247,7 +258,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Marinate the duck with the turmeric, 1 tsp black pepper, the vinegar and 1 tsp salt for at least 1 hour, or overnight in the fridge.</li><li>Trim the loose fat pads from the cavity end. Duck renders a great deal of fat and mappas should not be greasy.</li><li>Separate the thick and thin coconut milk into two jugs; they are added at different stages.</li><li>Bring the marinated duck to room temperature 30 minutes before cooking.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Heat the coconut oil in a heavy pan and brown the duck pieces skin-side down over medium heat for 6-8 minutes until the skin is golden and a pool of fat has rendered out, then lift the pieces aside.<span class="step-tip">Start the duck in a barely warm pan and let the fat render slowly. Rushing gives you burnt skin and untouched fat.</span></li>
         <li>Pour off all but 2 tbsp of the rendered fat and keep it. It is the best cooking fat in the kitchen.</li>
@@ -267,8 +278,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>42+ g</strong> a serving,
           30% of the calories</p>
         <table class="nut-table">

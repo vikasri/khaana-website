@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Masale Bhat. One-pot spiced rice with vegetables, goda masala spices and a slick of ghee. A Maharashtrian recipe: 60 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/masale-bhat.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -205,9 +205,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">1.5 cups (300g), short-grain, washed and drained</span> <span class="ing-name">Rice</span><span class="ing-note">ambemohar if you can get it</span></li>
@@ -243,7 +254,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Wash the rice well ahead and let it drain in a colander for at least 20 minutes. Surface water is what makes masale bhat claggy.</li><li>Grind the roasted masala before you light the burner. Once the tempering starts there is no time to stop.</li><li>Cut all the vegetables to roughly the same 2cm size so they finish together.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Wash the rice through three changes of water until it runs clear, then leave it to drain 20 minutes.<span class="step-tip">Well-drained rice fries rather than steams in the pan, and that is what keeps the grains separate.</span></li>
         <li>Dry-roast the dried coconut, sesame, poppy seeds, stone flower, cinnamon and cloves over low heat for 4-5 minutes, until the coconut turns one shade darker and smells nutty. Cool completely, then grind with the coriander powder to a coarse powder.<span class="step-tip">Keep the heat low and the pan moving. Poppy seeds scorch in seconds and turn the whole masala bitter.</span></li>
@@ -260,8 +271,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
         <p class="nut-band" data-band="low">Low protein: <strong>10+ g</strong> a serving,
           7% of the calories</p>
         <table class="nut-table">

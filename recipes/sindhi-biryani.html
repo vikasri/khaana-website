@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Sindhi Biryani. Sharply sour, chilli-hot mutton biryani layered with potato, yogurt and dried fruit. A Sindhi recipe: 115 minutes, serves 6, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/sindhi-hero.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -215,9 +215,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 6.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">750g, on the bone, in 4cm pieces</span> <span class="ing-name">Mutton</span></li>
@@ -254,7 +265,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Marinate the mutton in the yogurt, ginger, garlic, chilli powder and turmeric for at least 1 hour, or overnight refrigerated.</li><li>Wash the rice until the water runs clear, then soak it 30 minutes and drain. Skipping this gives you broken, sticky grains.</li><li>Fry the birista (browned onion) first and set it aside. It goes into both the masala and the layers.</li><li>Bring the marinated meat to room temperature 20 minutes before cooking so the yogurt does not split on contact with the hot pan.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Fry the sliced onion in the oil over medium heat, 15-18 minutes, stirring, until deep brown and shrunken. Drain on paper and reserve.<span class="step-tip">Pull them out a shade lighter than you want. They darken as they cool, and burnt birista turns the whole biryani bitter.</span></li>
         <li>In the same oil, crackle the cumin, bay leaf, cinnamon, cloves, cardamom and black cardamom for 30 seconds.</li>
@@ -273,8 +284,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="medium">Medium estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>39+ g</strong> a serving,
           19% of the calories</p>
         <table class="nut-table">

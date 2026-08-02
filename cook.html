@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Cook With What You Have | Khaana" />
 <meta name="twitter:description" content="Tell Khaana what is in your kitchen and it will suggest Indian dishes you can actually cook tonight, ranked by how much of each recipe you already have." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/home-hero.jpg" />
-<link rel="stylesheet" href="style.css?v=8b00e82b" />
+<link rel="stylesheet" href="style.css?v=40588c18" />
 </head>
 <body>
 
@@ -93,7 +93,15 @@
       <!-- Time and Dietary sit above the pantry because they are two short
            blocks and the pantry is a very long one: below it they were off the
            screen on every phone. -->
-      <aside class="cook-panel">
+      <!-- On a phone or a tablet the panel is 2000px of controls sitting
+           between the reader and the recipes: searching "biryani" meant
+           scrolling four screens to see a biryani. Below 900px it collapses
+           behind this button, which is hidden on wider screens where the
+           panel is a sidebar and costs nothing. -->
+      <button type="button" id="panel-toggle" class="panel-toggle" aria-expanded="false"
+              aria-controls="cook-panel">Your kitchen and filters</button>
+
+      <aside class="cook-panel" id="cook-panel">
         <div class="panel-block">
           <h3>Time</h3>
           <label class="field">
@@ -270,6 +278,6 @@
 
 <script src="script.js?v=9aeff587"></script>
 <script src="assets/js/search-match.js?v=a52ef68b"></script>
-<script src="assets/js/cook.js?v=56df92c6"></script>
+<script src="assets/js/cook.js?v=8a010113"></script>
 </body>
 </html>

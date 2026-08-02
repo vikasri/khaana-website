@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Vegetable Biryani. Layered rice and mixed vegetables sealed and steamed, the meatless dum biryani. A Hyderabadi recipe: 75 minutes, serves 6, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/veg-biryani.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -190,9 +190,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 6.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">450g, soaked 30 minutes</span> <span class="ing-name">Basmati Rice</span></li>
@@ -224,7 +235,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Vegetables release water in a way meat does not, so they are fried hard first. Raw vegetables layered under rice make it soggy.</li><li>Cook the rice to 70 per cent only. It finishes in the steam of the sealed pot.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Fry the sliced onion in ghee until deep brown and crisp. Drain and reserve; this birista carries the sweetness of the dish.<span class="step-tip">Pull them out a shade lighter than you want, they darken as they cool.</span></li>
         <li>Fry the potato, cauliflower, carrot and beans in the same ghee over high heat until the edges colour. Do not cook them through.</li>
@@ -239,8 +250,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
         <p class="nut-band" data-band="medium">Medium protein: <strong>10+ g</strong> a serving,
           9% of the calories</p>
         <table class="nut-table">

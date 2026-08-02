@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Kane Rava Fry. Ladyfish rubbed in red chilli paste and shallow fried in a sandy semolina crust. A Karnataka recipe: 40 minutes, serves 4, with measured ingredients, substitutions and storage notes." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/recipes/kane-rava-fry.jpg" />
 
-<link rel="stylesheet" href="../style.css?v=8b00e82b" />
+<link rel="stylesheet" href="../style.css?v=40588c18" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -192,9 +192,20 @@
         milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
         gluten. Brands vary, so read the label on anything new to you.</p>
 
+      <!-- Jump links. On a phone the method starts 2,000px down and there
+           were no anchors at all, so a cook at step six scrolled back through
+           twenty ingredients to check a quantity. Sticky under the header on
+           small screens; hidden on desktop, where the ingredient column is
+           already sticky beside the method. -->
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-cols">
         <div class="recipe-ing">
-          <h2>Ingredients</h2>
+          <h2 id="ingredients">Ingredients</h2>
           <p class="serves-note">Quantities for 4.</p>
           <ul class="ing-list">
         <li><span class="ing-qty">8 whole ladyfish, cleaned and slit down both sides</span> <span class="ing-name">Fish</span><span class="ing-note">kane is the local name; small pomfret or mackerel fillets fry the same way</span></li>
@@ -216,7 +227,7 @@
         </div>
         <div class="recipe-method">
           <h2>Before you start</h2><ul class="prep-notes"><li>Rinse the fish, pat it thoroughly dry inside and out, and score the thicker fish twice on each side.</li><li>Grind the masala first, then marinate the fish for 30 minutes in the fridge. Much longer and the lemon starts cooking the flesh.</li><li>Spread the rava on a wide plate so you can press the fish into it in one motion.</li></ul>
-          <h2>Method</h2>
+          <h2 id="method">Method</h2>
           <ol class="steps">
         <li>Grind the soaked chillies, garlic, ginger, tamarind, turmeric and pepper with 2 tbsp of the soaking water to a thick paste.</li>
         <li>Mix in the lemon juice and 1 tsp salt, then rub the paste into the fish, working it into the slits.</li>
@@ -234,8 +245,8 @@
         </div>
       </div>
 
-      <section class="nutrition" aria-labelledby="nutrition-h">
-        <h2 id="nutrition-h">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
+      <section class="nutrition" aria-labelledby="nutrition">
+        <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="low">Low estimate</span></h2>
         <p class="nut-band" data-band="high">High protein: <strong>87+ g</strong> a serving,
           43% of the calories</p>
         <table class="nut-table">
