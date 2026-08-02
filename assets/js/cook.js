@@ -586,14 +586,21 @@
         ? 'Likely lower in practice: much of what is weighed here is not eaten.'
         : 'Worked out from the listed quantities.';
     return '<div class="kcal-row">' +
+             // Protein sits inside the same bracket as the serving weight so
+             // that "a serving" governs it too. As its own pill alongside, the
+             // number read as if it might be per 100 g.
+             //
+             // The per-100 g calories moved into the detail below. With it on
+             // this line the row ran to three lines on every card, and of the
+             // three figures it is the one that compares dishes rather than
+             // describing the plate in front of you.
              '<span class="kcal-main"><strong>' + n.kcal + plus + ' kcal</strong> a serving' +
                ' <span class="kcal-weight">(' + n.servingGrams + ' g' +
-               (n.kcal100 ? ' &middot; ' + n.kcal100 + ' kcal/100 g' : '') +
+               (proteinBand(n)
+                 ? ' &middot; <span class="kcal-protein" data-band="' + proteinBand(n) +
+                   '">' + n.protein.toFixed(0) + plus + ' g protein</span>'
+                 : '') +
                ')</span></span>' +
-             (proteinBand(n)
-               ? '<span class="kcal-protein" data-band="' + proteinBand(n) + '">' +
-                   n.protein.toFixed(0) + plus + ' g protein</span>'
-               : '') +
              '<button type="button" class="kcal-toggle" aria-expanded="false" ' +
                'aria-controls="' + id + '">Nutrition</button>' +
            '</div>' +
@@ -603,6 +610,7 @@
              '<span><b>' + n.fibre.toFixed(1) + plus + ' g</b> fibre</span>' +
              '<span><b>' + n.fat.toFixed(1) + plus + ' g</b> fat</span>' +
              '<span><b>' + n.satFat.toFixed(1) + plus + ' g</b> saturated</span>' +
+             (n.kcal100 ? '<span><b>' + n.kcal100 + plus + ' kcal</b> per 100 g</span>' : '') +
              '<p class="kcal-note">' + esc(note) + ' Full detail on the recipe page.</p>' +
            '</div>';
   }

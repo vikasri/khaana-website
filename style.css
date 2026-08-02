@@ -228,7 +228,7 @@ p { margin: 0 0 1.1em; }
 
 .hero.small { height: 42vh; min-height: 280px; align-items: flex-end; }
 /* Cuisine pages keep the badge in the corner; only the home hero centres it. */
-.hero.small .hero-wordmark { top: 18px; transform: none; }
+.hero.small .hero-wordmark { top: 18px; left: auto; right: 24px; transform: none; }
 
 /* ---------- Word mark (khaana pronunciation) ---------- */
 /* Sits in the hero's top-right corner, clear of the headline because
@@ -241,8 +241,15 @@ p { margin: 0 0 1.1em; }
 .hero-wordmark {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  right: 24px;
+  /* Straddling the turmeric and the bowl to its right, rather than pinned to
+     the corner. Sampling the photograph, the bright saturated yellow runs 60%
+     to 75% of the width, so a centre of 76% puts the panel's left half on the
+     haldi and its right half on the next bowl. The hero is wider than the
+     photograph's aspect ratio, so cover crops vertically and never
+     horizontally, which means that fraction holds at every desktop width. */
+  left: 76%;
+  right: auto;
+  transform: translate(-50%, -50%);
   z-index: 2;
   padding: 12px 18px 13px;
   border-radius: var(--radius);
@@ -634,9 +641,13 @@ section.tight { padding: 34px 0; }
   /* The badge and the headline share a fixed-height hero here, and the hero
      clips at the top, so the badge has to give ground rather than push the
      headline out of view. */
+  /* Back to the corner on a phone: there is not enough width for the panel to
+     sit mid-hero without landing on the headline. */
   .hero-wordmark {
     top: 50%;
+    left: auto;
     right: 10px;
+    transform: translateY(-50%);
     padding: 7px 10px 8px;
     border-radius: 10px;
   }
@@ -1596,9 +1607,14 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 
 .kcal-row {
   position: relative; z-index: 1;
-  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  display: flex; align-items: baseline; gap: 8px;
   margin: 0 0 8px; font-size: 0.9rem; color: var(--ink-soft);
 }
+/* One line on a result card. It carries the two numbers people scan by, and
+   wrapping it cost three lines of card height on every card. */
+.match-card .kcal-row { flex-wrap: nowrap; font-size: 0.82rem; }
+.match-card .kcal-main { white-space: nowrap; }
+.match-card .kcal-toggle { flex: 0 0 auto; }
 .kcal-main strong { color: var(--ink); font-size: 1rem; }
 .kcal-weight { color: var(--ink-soft); }
 .kcal-toggle {
@@ -1825,13 +1841,12 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 /* ---------- protein band ----------
    Two numbers because either alone misleads: grams reward a big portion,
    share of calories rewards the absence of calories. */
-.kcal-protein {
-  position: relative; z-index: 1;
-  font-weight: 700; font-size: 0.86rem; padding: 1px 8px; border-radius: 999px;
-}
-.kcal-protein[data-band="high"]   { color: #1d6b42; background: #e3f3ea; }
-.kcal-protein[data-band="medium"] { color: #8a6212; background: #fbf0d8; }
-.kcal-protein[data-band="low"]    { color: var(--ink-soft); background: #eef0ef; }
+/* Inline inside the serving bracket, so colour and weight rather than a pill:
+   a pill in the middle of a parenthesis reads as a separate claim. */
+.kcal-protein { font-weight: 700; }
+.kcal-protein[data-band="high"]   { color: #1d6b42; }
+.kcal-protein[data-band="medium"] { color: #8a6212; }
+.kcal-protein[data-band="low"]    { color: var(--ink-soft); }
 
 .nut-band {
   margin: 0 0 14px; font-size: 0.92rem; color: var(--ink-soft);
