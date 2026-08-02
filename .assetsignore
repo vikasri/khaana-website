@@ -4,6 +4,15 @@
 #
 # Careful: anything listed here stops being served. Do not add data/, assets/,
 # recipes/ or any .html, all of which the site fetches at runtime.
+
+# The repository's own git history. wrangler does NOT skip this by itself: the
+# assets directory is the repo root, so it walks .git too and the first deploy
+# died on a 87.7 MiB pack file against the 25 MiB per-asset limit. This line is
+# what makes the deploy possible at all, not tidiness.
+.git/
+.github/
+node_modules/
+
 tools/
 api/
 DEPLOY.md
