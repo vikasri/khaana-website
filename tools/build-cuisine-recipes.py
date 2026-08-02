@@ -100,11 +100,17 @@ def block(region, query, recipes):
       %s
     </div>%s
 
-    <!-- Eating out instead. A plain link to Maps: no API key, no backend, and
-         nothing leaves the page until the reader clicks. The postcode box is
-         optional because Maps already uses the device location without it;
-         it exists for people who will not grant location permission, or who
-         are looking somewhere other than where they are standing. -->
+    <!-- Eating out instead. A plain link to Google Maps: no API key, no
+         backend, and nothing leaves the page until the reader clicks. The
+         postcode box is optional because Maps already uses the device
+         location without it; it exists for people who will not grant
+         location permission, or who are looking somewhere other than where
+         they are standing.
+
+         Google only. An Apple Maps link sat beside this and has been
+         removed: maps.google.com opens in Safari on an iPhone with no app
+         installed, so the second link bought nothing and asked every reader
+         to make a choice on behalf of their phone. -->
     <div class="eat-out">
       <p class="eat-out-lead">Not cooking tonight?</p>
       <div class="eat-out-row">
@@ -114,19 +120,12 @@ def block(region, query, recipes):
         <a class="eat-out-btn" data-query="%s"
            href="https://www.google.com/maps/search/?api=1&amp;query=%s"
            target="_blank" rel="noopener noreferrer">Find %s restaurants</a>
-        <!-- The explanation that used to sit here said what the reader finds
-             out faster by clicking. The Apple Maps alternative is the one part
-             worth keeping, so it moves into the row as a plain second link. -->
-        <a class="eat-out-alt" data-query="%s"
-           href="https://maps.apple.com/?q=%s"
-           target="_blank" rel="noopener noreferrer">Apple&nbsp;Maps</a>
       </div>
     </div>
   </div>
 </section>
 %s""" % (BEGIN, esc(region), tiles, more,
-         esc(query), quote_plus(query), esc(region),
-         esc(query), quote_plus(query), END)
+         esc(query), quote_plus(query), esc(region), END)
 
 
 def main():

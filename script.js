@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
    anywhere else. */
 (function () {
   document.addEventListener('click', function (ev) {
-    var a = ev.target.closest && ev.target.closest('.eat-out-btn, .eat-out-alt');
+    var a = ev.target.closest && ev.target.closest('.eat-out-btn');
     if (!a) return;
     var box = document.getElementById('eat-out-where');
     var where = box ? box.value.trim() : '';
@@ -60,11 +60,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // search around and will reach well past the town for a match, where a
     // trailing place name reads as part of the business name and narrows it.
     if (where) q += ' near ' + where;
-    // Apple Maps takes a plain q; Google wants its api=1 search form. Both
-    // open in a browser when the app is absent, so neither is a dead end.
-    a.href = a.classList.contains('eat-out-alt')
-      ? 'https://maps.apple.com/?q=' + encodeURIComponent(q)
-      : 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
+    // Google's api=1 search form. It opens in the browser wherever the app
+    // is absent, iPhone included, which is why the Apple Maps link that used
+    // to sit alongside was removed rather than kept as a fallback.
+    a.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
   });
 })();
 

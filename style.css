@@ -1780,12 +1780,6 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 .eat-out-btn:hover { text-decoration: none; filter: brightness(1.06); }
 /* Now sits in the row beside the button rather than inside a sentence, so it
    needs to align with a button it must not compete with. */
-.eat-out-alt {
-  display: inline-flex; align-items: center;
-  color: #0b5ed7; font-weight: 700; text-decoration: underline;
-  text-underline-offset: 3px; padding: 0 4px;
-}
-.eat-out-alt:hover { color: var(--azure-dark); }
 
 /* ---------- Cuisines menu ---------- */
 /* The 21 cuisines are still in the markup on every page, so they stay
