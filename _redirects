@@ -1,0 +1,9 @@
+# Relative rules only. Workers static assets rejects an absolute URL here
+# ("Only relative URLs are allowed"), so the www-to-apex redirect is a
+# zone-level Redirect Rule in the dashboard instead. See DEPLOY.md.
+
+# Serve the home page at the bare domain. wrangler's html_handling is set to
+# "none" so that /recipes/naan.html is served as itself rather than 307'd to
+# /recipes/naan, but turning that off also stops "/" resolving to index.html
+# on its own. 200 is a rewrite, not a redirect: the URL stays "/".
+/  /index.html  200

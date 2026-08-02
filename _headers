@@ -1,19 +1,15 @@
-# Response headers for Cloudflare Pages. GitHub Pages ignores this file, so it
-# is safe to commit before the move and it takes effect the moment DNS points
-# at Cloudflare.
+# Response headers for Workers static assets.
 #
-# The caching rules below are the main reason to move. GitHub Pages sends one
-# blanket "cache-control: max-age=600" for everything and gives no way to
-# change it, which is what made a browser hold a ten-minute-old stylesheet
-# against newly deployed markup and render the cuisines menu as a long list
-# inside the header. tools/version-assets.py exists to work around that. Here
-# the rules can just be correct.
+# IMPORTANT: rules here are ADDITIVE, not overriding. A /* rule and a specific
+# rule both match, and both values are sent, so a page ended up with
+#
+#   cache-control: public, max-age=0, must-revalidate, public, max-age=31536000, immutable
+#
+# where the first max-age wins and the immutable caching never happened. So
+# Cache-Control is set once per path class and never in /*, which carries only
+# headers that are the same everywhere.
 
-# Everything not matched below. Revalidate on every request: the response is
-# still served from cache when unchanged (304), but a deploy is visible at
-# once rather than up to ten minutes later.
 /*
-  Cache-Control: public, max-age=0, must-revalidate
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: SAMEORIGIN
@@ -28,18 +24,25 @@
   # is not something to switch on while the site is still moving around.
   Strict-Transport-Security: max-age=15768000
 
-# The JSON the Cook page reads. These are fetched without a version string,
-# so they must revalidate. Cached hard, the site would keep serving last
-# month's recipes to anyone who had visited before.
+# Pages. Revalidate on every request: still served from cache when unchanged
+# (304), but a deploy is visible at once rather than up to ten minutes later,
+# which is the whole reason for leaving GitHub Pages.
+/
+  Cache-Control: public, max-age=0, must-revalidate
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# The JSON the Cook page reads. Fetched without a version string, so it must
+# revalidate. Cached hard, the site would keep serving last month's recipes to
+# anyone who had visited before.
 /data/*
   Cache-Control: public, max-age=0, must-revalidate
 
-# Stylesheet and scripts. Every reference to these carries ?v=<content hash>
-# from tools/version-assets.py, so a changed file is a changed URL and the old
-# one can be kept forever. This depends on that tool having run: if a page
-# ever ships an unversioned reference, it will be pinned to a stale file for a
-# year. build-recipe-pages.py is the last thing to run and version-assets.py
-# runs after it.
+# Stylesheet and scripts. Every reference carries ?v=<content hash> from
+# tools/version-assets.py, so a changed file is a changed URL and the old one
+# can be kept indefinitely. This depends on that tool having run: an
+# unversioned reference would pin a visitor to a stale file for a year.
+# version-assets.py runs last in the build for exactly this reason.
 /style.css
   Cache-Control: public, max-age=31536000, immutable
 /script.js
@@ -47,8 +50,7 @@
 /assets/js/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Photographs. Filenames are stable and the contents almost never change, but
-# they do occasionally get replaced when a better licensed image turns up, so
-# a month rather than a year.
+# Photographs. Filenames are stable and contents almost never change, but they
+# do get replaced when a better licensed image turns up, so a month.
 /assets/images/*
   Cache-Control: public, max-age=2592000

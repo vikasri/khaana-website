@@ -14,6 +14,15 @@
   "name": "khaana-website",
   "compatibility_date": "2026-08-01",
   "assets": {
-    "directory": "./"
+    "directory": "./",
+    // Serve /recipes/naan.html as itself. The default, "auto-trailing-slash",
+    // 307s every .html request to the extensionless path, which would mean a
+    // redirect on all 613 pages while every canonical tag, every internal
+    // link and every sitemap entry still says .html. Cheaper and more
+    // consistent to keep the URLs the site already publishes.
+    "html_handling": "none",
+    // There is no 404.html in this site, so there is nothing for "404-page"
+    // to serve.
+    "not_found_handling": "none"
   }
 }
