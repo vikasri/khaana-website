@@ -243,11 +243,11 @@ p { margin: 0 0 1.1em; }
   top: 50%;
   /* Straddling the turmeric and the bowl to its right, rather than pinned to
      the corner. Sampling the photograph, the bright saturated yellow runs 60%
-     to 75% of the width, so a centre of 76% puts the panel's left half on the
-     haldi and its right half on the next bowl. The hero is wider than the
+     to 75% of the width, so a centre of 72% puts the panel's left half over
+     the haldi and its right half on the bowl beside it. The hero is wider than the
      photograph's aspect ratio, so cover crops vertically and never
      horizontally, which means that fraction holds at every desktop width. */
-  left: 76%;
+  left: 72%;
   right: auto;
   transform: translate(-50%, -50%);
   z-index: 2;
