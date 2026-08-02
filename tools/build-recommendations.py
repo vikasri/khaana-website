@@ -22,7 +22,11 @@ Two rules held while choosing:
     page had three fish dishes and no chicken at all, which is why both rules
     are checked below rather than left to whoever edits PICKS.
 
-Run after build-nutrition.py, and before build-seo.py and version-assets.py.
+Run after build-nutrition.py. It must be followed by sync-chrome.py and
+sync-contact.py, not just build-seo.py and version-assets.py: the nav and
+footer here are copied from cook.html with the active state stripped, so
+until those two run the page is missing its own highlighted nav item and its
+feedback link. Running this tool last leaves both quietly wrong.
 """
 import html, json, os, re, sys
 
