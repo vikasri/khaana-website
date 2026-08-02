@@ -32,6 +32,11 @@
   ],
   "assets": {
     "directory": "./",
+    // Bound, so worker.js can serve assets itself. Relying on Cloudflare to
+    // match assets before invoking the script turned out not to hold here:
+    // with "main" added, every path including /style.css fell through to the
+    // Worker and got a 404. Serving them explicitly removes the guesswork.
+    "binding": "ASSETS",
     // Serve /recipes/naan.html as itself. The default, "auto-trailing-slash",
     // 307s every .html request to the extensionless path, which would mean a
     // redirect on all 613 pages while every canonical tag, every internal
