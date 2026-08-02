@@ -35,7 +35,7 @@ RECIPES = os.path.join(ROOT, "data", "recipes.json")
 CREDITS = os.path.join(ROOT, "assets", "images", "credits.json")
 FAILED = os.path.join(ROOT, "tools", "_image_failures.json")
 API = "https://commons.wikimedia.org/w/api.php"
-UA = "KhaanaSiteBot/1.0 (https://khaana.com; hello@khaana.com)"
+UA = "KhaanaSiteBot/1.0 (https://khaana.com; strategychoice1@gmail.com)"
 
 OK_LICENCE = re.compile(r"^(cc0|public domain|cc by(-sa)?[\s-]|cc by(-sa)?$)", re.I)
 BAD_LICENCE = re.compile(r"(\bnc\b|non[- ]commercial|\bnd\b|no[- ]deriv|fair use)", re.I)

@@ -21,10 +21,11 @@ The page matters. "The picture is wrong" is not actionable across 651
 recipes; the same note carrying its own URL is. Each link passes ?from=, and
 the form reads it back.
 
-hello@khaana.com survives in exactly one place, the fallback on the form page
-for anyone whose browser will not run the embed. That is a fallback, not a
-second route, and keeping it to one page also keeps the address off 677 pages
-of harvestable HTML.
+No address anywhere. There is no mailbox on the domain, and a mailto naming
+one that does not exist is worse than no link at all: it looks like a working
+route and silently goes nowhere. The form needs no mailbox, since it posts to
+Google, so the site does not need one either. If a real mailbox ever exists,
+the place for it is here and nowhere else.
 
 Idempotent, so it is safe to re-run after any build step that restamps the
 footer. Run after sync-chrome.py and before version-assets.py.
@@ -34,13 +35,10 @@ from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-ADDRESS = "hello@khaana.com"
 FORM = "feedback.html"
 
 # Redirect stubs: no chrome, nothing to contact us about.
 SKIP = {"south-indian.html", "himachali.html"}
-# The form page keeps its own fallback address, so it is not rewritten.
-KEEPS_ADDRESS = {"feedback.html"}
 
 
 def form_href(rel, up):
@@ -74,10 +72,8 @@ def rewrite(path, rel, up):
     # the one link.
     out = CONTACT_RE.sub("", out, count=1)
 
-    if os.path.basename(path) not in KEEPS_ADDRESS:
-        out = out.replace("strategychoice1@gmail.com", ADDRESS)
-        out = PROSE_MAILTO_RE.sub(
-            lambda m: '<a href="%s">%s</a>' % (href, m.group(1)), out)
+    out = PROSE_MAILTO_RE.sub(
+        lambda m: '<a href="%s">%s</a>' % (href, m.group(1)), out)
 
     link = '<a href="%s">Send feedback</a>' % href
 
@@ -103,18 +99,14 @@ def main():
 
     changed = sum(1 for path, rel, up in pages if rewrite(path, rel, up))
 
-    # A mailto anywhere but the form page means a second route crept back in.
-    strays = []
-    for path, rel, _ in pages:
-        if os.path.basename(path) in KEEPS_ADDRESS:
-            continue
-        if "mailto:" in open(path, encoding="utf-8").read():
-            strays.append(rel)
+    # A mailto anywhere means a route to a mailbox that does not exist.
+    strays = [rel for path, rel, _ in pages
+              if "mailto:" in open(path, encoding="utf-8").read()]
 
     print("contact synced on %d of %d pages" % (changed, len(pages)))
     print("   every route -> %s" % FORM)
     if strays:
-        print("   ! %d pages still offer a mailto: %s"
+        print("   ! %d pages offer a mailto to a mailbox that does not exist: %s"
               % (len(strays), ", ".join(strays[:5])))
         return 1
     return 0
