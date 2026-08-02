@@ -240,7 +240,13 @@
    "subtitle": "rice flour and jaggery discs fried for Sankranti, chewy and dark",
    "region": "Andhra",
    "regionPage": "andhra.html",
-   "image": null,
+   "image": {
+    "src": "assets/images/recipes/ariselu.jpg",
+    "alt": "Ariselu",
+    "credit": "Anilphotojournalist",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sweety_Arishalu.jpg"
+   },
    "servings": 12,
    "prepMinutes": 40,
    "cookMinutes": 30,
@@ -823,7 +829,13 @@
    "subtitle": "fish steaks rubbed with chilli and shallow fried until the edges crisp",
    "region": "Andhra",
    "regionPage": "andhra.html",
-   "image": null,
+   "image": {
+    "src": "assets/images/recipes/chepa-vepudu.jpg",
+    "alt": "Chepa Vepudu",
+    "credit": "Radhika41",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fish_fry_Andhra_style.jpg"
+   },
    "servings": 4,
    "prepMinutes": 20,
    "cookMinutes": 15,
@@ -5074,7 +5086,13 @@
    "subtitle": "lamb kidneys in a sharp, peppery sauce, eaten on toast at breakfast",
    "region": "Anglo-Indian",
    "regionPage": "anglo-indian.html",
-   "image": null,
+   "image": {
+    "src": "assets/images/recipes/devilled-kidneys.jpg",
+    "alt": "Devilled Kidneys",
+    "credit": "Ewan Munro from London, UK",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:St_John_Hotel,_Chinatown,_London_(5882050986).jpg"
+   },
    "servings": 2,
    "prepMinutes": 15,
    "cookMinutes": 12,
@@ -14870,7 +14888,13 @@
    "subtitle": "sweetened yogurt steamed until it sets like a baked custard",
    "region": "Bengali",
    "regionPage": "bengali.html",
-   "image": null,
+   "image": {
+    "src": "assets/images/recipes/bhapa-doi.jpg",
+    "alt": "Bhapa Doi",
+    "credit": "Marajozkee",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mishti_doi_01.png"
+   },
    "servings": 6,
    "prepMinutes": 10,
    "cookMinutes": 30,
@@ -15546,7 +15570,13 @@
    "subtitle": "clown knifefish scraped from the bone, rolled into dumplings and simmered in gravy",
    "region": "Bengali",
    "regionPage": "bengali.html",
-   "image": null,
+   "image": {
+    "src": "assets/images/recipes/chitol-macher-muitha.jpg",
+    "alt": "Chitol Macher Muitha",
+    "credit": "Biswarup Ganguly",
+    "license": "CC BY 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chital_Fish_Ball_Curry_-_Howrah_20170531122522.jpg"
+   },
    "servings": 4,
    "prepMinutes": 45,
    "cookMinutes": 40,
@@ -32042,7 +32072,13 @@
    "subtitle": "sweet fried crescents filled with coconut, semolina and nuts",
    "region": "Gujarati",
    "regionPage": "gujarati.html",
-   "image": null,
+   "image": {
+    "src": "assets/images/recipes/ghughra.jpg",
+    "alt": "Ghughra",
+    "credit": "Vashisthapathak2015",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sweet_Gujiya_Recipe.JPG"
+   },
    "servings": 16,
    "prepMinutes": 35,
    "cookMinutes": 30,
@@ -59579,7 +59615,13 @@
    "subtitle": "pearl spot masala-rubbed and steamed inside a banana leaf",
    "region": "Kerala",
    "regionPage": "kerala.html",
-   "image": null,
+   "image": {
+    "src": "assets/images/recipes/karimeen-pollichathu.jpg",
+    "alt": "Karimeen Pollichathu",
+    "credit": "Ravirajdayal",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fish_cooked_in_banana_leaf.JPG"
+   },
    "servings": 2,
    "prepMinutes": 30,
    "cookMinutes": 30,
@@ -69885,7 +69927,13 @@
    "subtitle": "the fierce red mutton broth of Kolhapur, served alongside its white twin",
    "region": "Maharashtrian",
    "regionPage": "maharashtrian.html",
-   "image": null,
+   "image": {
+    "src": "assets/images/recipes/kolhapuri-tambda-rassa.jpg",
+    "alt": "Tambda Rassa",
+    "credit": "PallaviKhale",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mutton_Thali,_Children%27s_Chicken_Thali_Surmai_Rawa_Fry,_Maratha_Samrat_Pune.jpg"
+   },
    "servings": 4,
    "prepMinutes": 25,
    "cookMinutes": 60,
@@ -85735,7 +85783,13 @@
    "subtitle": "soft-scrambled spiced eggs piled on buttered toast",
    "region": "Parsi",
    "regionPage": "parsi.html",
-   "image": null,
+   "image": {
+    "src": "assets/images/recipes/parsi-akoori-toast.jpg",
+    "alt": "Akoori on Toast",
+    "credit": "Ewan Munro from London, UK",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dishoom,_King%27s_Cross,_London.jpg"
+   },
    "servings": 2,
    "prepMinutes": 10,
    "cookMinutes": 10,

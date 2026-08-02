@@ -36,6 +36,9 @@ spec.loader.exec_module(F)
 
 WIKI = "https://en.wikipedia.org/w/api.php"
 
+# See route 3 below.
+ALLOW_REGION_CATEGORY = False
+
 # Route 2. What the dish actually is, in words Commons has heard of.
 ALIAS = {
     "ulavacharu": ["horse gram soup", "horse gram rasam", "kollu rasam"],
@@ -65,6 +68,24 @@ ALIAS = {
     "bhuga-chawal": ["brown onion rice", "Sindhi rice dish"],
     "seyal-bhaji": ["Sindhi cauliflower curry", "coriander potato curry"],
     "kootu": ["Kootu", "kootu dish"],
+
+    # The fifteen left after the 65-recipe batch. Written by hand because the
+    # dish name alone returns nothing on Commons, or returns the wrong thing.
+    "ariselu": ["Ariselu", "Adhirasam", "Kajjaya"],
+    "chepa-vepudu": ["Andhra fish fry", "fish fry Indian", "meen varuval"],
+    "gongura-mamsam": ["Gongura mutton", "Andhra mutton curry", "gongura"],
+    "devilled-kidneys": ["devilled kidneys", "lamb kidney dish", "kidneys on toast"],
+    "duck-buffath": ["duck curry Goan", "bafat curry", "duck vindaloo"],
+    "bhapa-doi": ["Bhapa doi", "steamed yoghurt dessert", "mishti doi"],
+    "chitol-macher-muitha": ["chitol macher muitha", "chital fish curry", "macher kofta"],
+    "bafauri": ["Bafauri", "steamed dal dumpling", "dhuska"],
+    "ghughra": ["Gujiya", "Karanji sweet", "ghughra sweet"],
+    "harissa-kashmiri": ["Harissa Kashmiri dish", "Kashmiri hareesa", "harissa mutton Kashmir"],
+    "karimeen-pollichathu": ["Karimeen pollichathu", "meen pollichathu", "fish banana leaf Kerala"],
+    "kolhapuri-tambda-rassa": ["Tambda rassa", "Kolhapuri mutton curry", "Kolhapuri chicken rassa"],
+    "chhurpi-soup": ["Chhurpi", "churpi cheese", "Sikkimese cuisine"],
+    "parsi-akoori-toast": ["Akuri", "Akoori Parsi", "Indian scrambled eggs"],
+    "adhirasam": ["Adhirasam", "Athirasam", "Ariselu"],
 }
 
 # Route 3.
@@ -180,8 +201,13 @@ def main():
                     break
                 time.sleep(F.PAUSE)
 
-        # 3. the region's own Commons category
-        if not hit:
+        # 3. the region's own Commons category.
+        #
+        # Off by default. It takes any unused food photograph from the region's
+        # category, so it answers "is this the right cuisine" and never "is
+        # this the right dish". Every image it has produced has had to be
+        # pulled again on review. Set ALLOW_REGION_CATEGORY to re-enable it.
+        if not hit and ALLOW_REGION_CATEGORY:
             cat = REGION_CAT.get(r["region"])
             if cat:
                 for p in category_members(cat):

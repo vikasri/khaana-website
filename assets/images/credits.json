@@ -6530,5 +6530,95 @@
   "license": "CC BY-SA 4.0",
   "artist": "Gaurav Dhwaj Khadka",
   "note": "fetched by tools/fetch-recipe-images.py"
+ },
+ {
+  "file": "recipes/ariselu.jpg",
+  "region": "Andhra",
+  "slot": "recipe",
+  "wiki_title": "Sweety Arishalu.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Sweety_Arishalu.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Anilphotojournalist",
+  "note": "third pass via alias:Ariselu"
+ },
+ {
+  "file": "recipes/chepa-vepudu.jpg",
+  "region": "Andhra",
+  "slot": "recipe",
+  "wiki_title": "Fish fry Andhra style.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Fish_fry_Andhra_style.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Radhika41",
+  "note": "third pass via alias:Andhra fish fry"
+ },
+ {
+  "file": "recipes/devilled-kidneys.jpg",
+  "region": "Anglo-Indian",
+  "slot": "recipe",
+  "wiki_title": "St John Hotel, Chinatown, London (5882050986).jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:St_John_Hotel,_Chinatown,_London_(5882050986).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "Ewan Munro from London, UK",
+  "note": "third pass via alias:devilled kidneys"
+ },
+ {
+  "file": "recipes/bhapa-doi.jpg",
+  "region": "Bengali",
+  "slot": "recipe",
+  "wiki_title": "Mishti doi 01.png",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Mishti_doi_01.png",
+  "license": "CC BY-SA 4.0",
+  "artist": "Marajozkee",
+  "note": "third pass via alias:mishti doi"
+ },
+ {
+  "file": "recipes/chitol-macher-muitha.jpg",
+  "region": "Bengali",
+  "slot": "recipe",
+  "wiki_title": "Chital Fish Ball Curry - Howrah 20170531122522.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Chital_Fish_Ball_Curry_-_Howrah_20170531122522.jpg",
+  "license": "CC BY 3.0",
+  "artist": "Biswarup Ganguly",
+  "note": "third pass via alias:chital fish curry"
+ },
+ {
+  "file": "recipes/ghughra.jpg",
+  "region": "Gujarati",
+  "slot": "recipe",
+  "wiki_title": "Sweet Gujiya Recipe.JPG",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Sweet_Gujiya_Recipe.JPG",
+  "license": "CC BY-SA 4.0",
+  "artist": "Vashisthapathak2015",
+  "note": "third pass via alias:Gujiya"
+ },
+ {
+  "file": "recipes/karimeen-pollichathu.jpg",
+  "region": "Kerala",
+  "slot": "recipe",
+  "wiki_title": "Fish cooked in banana leaf.JPG",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Fish_cooked_in_banana_leaf.JPG",
+  "license": "CC BY-SA 4.0",
+  "artist": "Ravirajdayal",
+  "note": "third pass via alias:fish banana leaf Kerala"
+ },
+ {
+  "file": "recipes/kolhapuri-tambda-rassa.jpg",
+  "region": "Maharashtrian",
+  "slot": "recipe",
+  "wiki_title": "Mutton Thali, Children's Chicken Thali Surmai Rawa Fry, Maratha Samrat Pune.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Mutton_Thali,_Children%27s_Chicken_Thali_Surmai_Rawa_Fry,_Maratha_Samrat_Pune.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "PallaviKhale",
+  "note": "third pass via alias:Tambda rassa"
+ },
+ {
+  "file": "recipes/parsi-akoori-toast.jpg",
+  "region": "Parsi",
+  "slot": "recipe",
+  "wiki_title": "Dishoom, King's Cross, London.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Dishoom,_King%27s_Cross,_London.jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "Ewan Munro from London, UK",
+  "note": "third pass via alias:Akuri"
  }
 ]
