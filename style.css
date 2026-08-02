@@ -1708,3 +1708,63 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
   object-fit: cover;
   max-height: 420px;
 }
+
+
+/* ---------- printing ----------
+
+   People print recipes and stick them on the fridge. Without this they get
+   the nav, the footer, the restaurant finder and a full-bleed photograph
+   across the first page, and the actual method starts on page two.
+
+   What survives: the title, the times, the allergen line, the ingredients,
+   the method, storage and the nutrition table. What goes: everything that
+   only makes sense on a screen. The URL is printed once at the end so a
+   sheet found later can be traced back. */
+@media print {
+  /* Ink. The screen palette is warm cream on off-white, which prints as a
+     grey wash over every page. */
+  :root { --cream: #fff; --paper: #fff; --ink: #000; --ink-soft: #333; --line: #bbb; }
+  html, body { background: #fff !important; color: #000; font-size: 11pt; }
+
+  /* Screen-only furniture. */
+  /* The photo credit is a <figcaption> inside .recipe-photo, so it goes with
+     the figure. The cook- and cuisine-page selectors match nothing on a
+     recipe page, which is intended: one print block covers every page type. */
+  .site-header, .site-footer, .crumbs, .nav-cuisines, .cook-cta-band,
+  .eat-out, .show-more-recipes, .recipe-search-row, .cook-entry,
+  .cook-panel, .kcal-toggle, .src-back, .provenance a,
+  .recipe-photo { display: none !important; }
+
+  /* Let the two-column recipe body run as one column: a printed page is
+     narrower than the screen layout assumes and the ingredients column was
+     wrapping to two characters a line. */
+  .recipe-cols, .article-grid, .cook-layout { display: block !important; }
+  .container { max-width: 100%; padding: 0; }
+  section.tight, section { padding: 0 !important; }
+
+  .recipe-headline h1 { font-size: 20pt; margin: 0 0 4pt; }
+  .recipe-stats { display: flex; gap: 18pt; margin: 8pt 0; padding: 6pt 0;
+                  border-top: 1px solid #bbb; border-bottom: 1px solid #bbb; }
+  .recipe-ing, .recipe-method { margin-top: 10pt; }
+  .recipe-ing h2, .recipe-method h2, .nutrition h2 { font-size: 13pt; margin: 10pt 0 4pt; }
+
+  /* Nothing that belongs together should straddle a page break. */
+  .ing-list li, .recipe-method li, .nut-table tr, .allergen, .allergen-scope {
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .recipe-ing, .nutrition { break-inside: avoid; }
+  .recipe-method li { margin-bottom: 6pt; }
+
+  /* The nutrition detail is behind a toggle on screen. On paper there is no
+     toggle, so show it. */
+  .kcal-detail[hidden], .nut-table[hidden] { display: table !important; }
+
+  /* Where a printed link points, since the reader cannot click it. */
+  .prose a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8pt; word-break: break-all; }
+
+  .recipe-method li::marker { font-weight: 700; }
+
+  /* Provenance becomes the footer of the sheet. */
+  .provenance { border-top: 1px solid #bbb; margin-top: 12pt; padding-top: 6pt; font-size: 8pt; }
+  .provenance::after { content: " Printed from khaana.com"; }
+}

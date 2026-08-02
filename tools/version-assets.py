@@ -20,7 +20,7 @@ import glob, hashlib, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ASSETS = ["style.css", "script.js", "assets/js/cook.js", "assets/js/site-search.js",
-          "assets/js/search-match.js", "assets/js/kitchen-strip.js", "assets/js/recipe.js"]
+          "assets/js/search-match.js", "assets/js/kitchen-strip.js"]
 
 
 def digest(rel):
