@@ -108,13 +108,6 @@ def schema(r, url, img):
     return json.dumps(d, ensure_ascii=False, indent=2)
 
 
-CONFIDENCE_NOTE = {
-    "good": "Worked out from the listed quantities; most of the ingredient list could be weighed.",
-    "medium": "Worked out from the listed quantities. Some of the ingredient list is given "
-              "to taste rather than by weight, so treat these as a guide.",
-    "low": "A rough guide only. A large part of this ingredient list is given to taste rather "
-           "than by weight, or much of what is weighed is not eaten.",
-}
 
 
 def nutrition_panel(r):
@@ -159,22 +152,33 @@ def nutrition_panel(r):
     rows.append('<tr class="nut-sub"><th>of which unsaturated</th><td>%.1f%s g</td>'
                 '<td>%.0f%s g</td></tr>' % (unsat_s, plus, unsat_c, plus))
 
+    # Three sentences at most, and usually one.
+    #
+    # This paragraph had grown to 640 characters and said the same thing three
+    # times: a generated line about to-taste ingredients, a confidence note
+    # repeating it, and a stored caveat repeating it again while pointing at a
+    # "+" on the numbers that no longer exists. A caveat nobody finishes
+    # reading protects nobody.
+    #
+    # What survives is only what is specific to this dish and said nowhere
+    # else. The badge in the heading already gives the confidence level, so no
+    # sentence restates it, and the provenance line further down already says
+    # the nutrition is worked out rather than measured. That leaves which way
+    # the error runs, which substitutions were made, and where the data came
+    # from.
     notes = []
-    if n.get("direction") == "understated":
-        notes.append("Ingredients added to taste rather than by weight are counted as zero, "
-                     "so the true figure is a little higher than shown.")
-    notes.append(CONFIDENCE_NOTE.get(n.get("confidence", "medium")))
     if n.get("caveat"):
         notes.append(n["caveat"])
+    elif n.get("direction") == "understated":
+        notes.append("Ingredients given to taste count as zero, so the real figures "
+                     "run a little higher.")
     if n.get("approximated"):
-        notes.append("Some ingredients have no exact match in the nutrient database and use "
-                     "the nearest equivalent: " +
-                     ", ".join(a.replace("-", " ") for a in n["approximated"][:6]) +
-                     ("." if len(n["approximated"]) <= 6 else ", and others."))
+        notes.append("Nearest database match used for " +
+                     ", ".join(a.replace("-", " ") for a in n["approximated"][:4]) +
+                     ("." if len(n["approximated"]) <= 4 else ", and others."))
     notes.append("Estimated from raw ingredients using "
                  "<a href=\"https://fdc.nal.usda.gov/\" rel=\"noopener\">USDA FoodData "
-                 "Central</a>. Cooking changes are not modelled, and added salt is excluded, "
-                 "so sodium is not given.")
+                 "Central</a>.")
 
     return ("""<section class="nutrition" aria-labelledby="nutrition">
         <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="%s">%s estimate</span></h2>
