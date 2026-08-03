@@ -689,7 +689,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Bisi_Bele_Bath_(Bisibelebath",
     "license": "CC BY-SA 3.0",
     "artist": "Food and Remedy, LLC",
-    "note": "imported from the hand-maintained CREDITS.md"
+    "note": "imported from the hand-maintained CREDITS.md; colour-corrected"
   },
   {
     "file": "recipes/chana-masala.jpg",
@@ -699,7 +699,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chana_Masala_-_Mohammed_-_Spice_Of_Life_2024-05-27.jpg",
     "license": "CC0",
     "artist": "Andy Li",
-    "note": "imported from the hand-maintained CREDITS.md"
+    "note": "imported from the hand-maintained CREDITS.md; colour-corrected"
   },
   {
     "file": "recipes/dal-tadka.jpg",
@@ -719,7 +719,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Palakpaneer_Rayagada_Odisha_0009.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Lopanayak",
-    "note": "imported from the hand-maintained CREDITS.md"
+    "note": "imported from the hand-maintained CREDITS.md; colour-corrected"
   },
   {
     "file": "recipes/pav-bhaji.jpg",
@@ -729,7 +729,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Bhaji_pav_2.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "BHAAGIi",
-    "note": "imported from the hand-maintained CREDITS.md"
+    "note": "imported from the hand-maintained CREDITS.md; colour-corrected"
   },
   {
     "file": "recipes/rajma-chawal.jpg",
@@ -739,7 +739,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Rajma_Chawal_Thali.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Medhi jyoti",
-    "note": "imported from the hand-maintained CREDITS.md"
+    "note": "imported from the hand-maintained CREDITS.md; colour-corrected"
   },
   {
     "file": "recipes/rasam.jpg",
@@ -749,7 +749,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Rasam.JPG",
     "license": "Public domain",
     "artist": "Miansari66",
-    "note": "imported from the hand-maintained CREDITS.md"
+    "note": "imported from the hand-maintained CREDITS.md; colour-corrected"
   },
   {
     "file": "recipes/upma.jpg",
@@ -759,7 +759,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Upma_South_India.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Intodustin",
-    "note": "imported from the hand-maintained CREDITS.md"
+    "note": "imported from the hand-maintained CREDITS.md; colour-corrected"
   },
   {
     "file": "bihari-hero.jpg",
@@ -799,7 +799,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Andhra_kodi_kura_(chicken_gravy).JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Karteeki4u",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bobbatlu.jpg",
@@ -809,7 +809,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Nethi_Bobbatlu.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "K.Venkataramana",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/gutti-vankaya-kura.jpg",
@@ -819,7 +819,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Gutti_Vankaya_Kura.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Rupak76",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/pulihora.jpg",
@@ -829,7 +829,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:LEMON_PULIHORA.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Mkr.lines",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/punugulu.jpg",
@@ -846,10 +846,14 @@
     "region": "Anglo-Indian",
     "slot": "recipe",
     "wiki_title": "LaMelo Ball and Steph Curry (51916614019).jpg",
-    "source_url": "https://commons.wikimedia.org/wiki/File:LaMelo_Ball_and_Steph_Curry_(51916614019).jpg",
-    "license": "CC BY 2.0",
-    "artist": "Erik Drost",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kofta_Curry_(cropped).JPG",
+    "license": "CC0",
+    "artist": "Miansari66",
+    "note": "resized for web; replaces a photograph of a basketball game (LaMelo Ball and Steph Curry); colour-corrected",
+    "recipe": "anglo-indian-ball-curry",
+    "width": 1000,
+    "height": 902,
+    "size_bytes": 128665
   },
   {
     "file": "recipes/country-captain-chicken.jpg",
@@ -869,7 +873,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kalkals_1.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sere bites",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/anglo-indian-mutton-cutlets.jpg",
@@ -886,10 +890,14 @@
     "region": "Anglo-Indian",
     "slot": "recipe",
     "wiki_title": "Peppers in water.jpg",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Peppers_in_water.jpg",
-    "license": "CC0",
-    "artist": "ulleo",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rasam_Hot.JPG",
+    "license": "Public domain",
+    "artist": "Miansari66",
+    "note": "resized for web; replaces chillies dropped in carbonated water, a stock concept shot; colour-corrected",
+    "recipe": "anglo-indian-pepper-water",
+    "width": 1000,
+    "height": 750,
+    "size_bytes": 86120
   },
   {
     "file": "recipes/yellow-coconut-rice.jpg",
@@ -899,7 +907,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Yellow_curry_and_green_curry_-_Nok_Nok_Kitchen_at_The_Cow_2025-09-30.jpg",
     "license": "CC0",
     "artist": "Andy Li",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/arhar-ki-dal-awadhi.jpg",
@@ -909,7 +917,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Stuffed_Batti_with_Dal_and_Gajar_ka_Halwa.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Nj02",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/awadhi-kheer.jpg",
@@ -929,7 +937,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Nizami_Murgh_Masala_02.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Vis M",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/awadhi-paneer-korma.jpg",
@@ -939,7 +947,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Paneer_Korma_with_Gravy.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Manish Kumar Majumdar",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bhindi-do-pyaza.jpg",
@@ -949,7 +957,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Bhindi_Do_Pyaza.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Ravi Talwar",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/boti-kebab.jpg",
@@ -959,7 +967,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Boti_and_shesh_kebab.jpg",
     "license": "CC BY 2.0",
     "artist": "raasiel",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/dahi-ke-kebab.jpg",
@@ -969,7 +977,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Dahi_ke_Kebabs.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Mayurbhandari",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kakori-kebab.jpg",
@@ -979,7 +987,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kebab_Gerashi.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Amin Noubahar",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kathal-ki-sabzi.jpg",
@@ -989,7 +997,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kathal_ki_sabzi.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sapanabehl",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/murgh-korma.jpg",
@@ -999,7 +1007,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Goat_Korma,_Butter_Chicken,_Cabbage_Stir-fry_with_Pilau_Rice_and_Teh_Tarik_-_Cafe_Zam_Zam_(608627954).jpg",
     "license": "CC BY-SA 2.0",
     "artist": "Alpha from Melbourne, Australia",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/murgh-musallam.jpg",
@@ -1019,7 +1027,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Korma.JPG",
     "license": "CC0",
     "artist": "Miansari66",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/nargisi-kofta.jpg",
@@ -1039,7 +1047,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Shahi_Tukda_-_Dessert_of_India.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Rodrick rajive lal",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/shami-kebab.jpg",
@@ -1059,7 +1067,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Sheermal_Lucknow.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Pranaykuma12",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/zarda.jpg",
@@ -1089,7 +1097,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Lomba_Begun_Bhaja_2.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "SaranikaC",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bengali-alur-dom.jpg",
@@ -1099,7 +1107,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Bengali_food_03.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Kritzolina",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bengali-ghugni.jpg",
@@ -1109,7 +1117,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Bengali_breakfast_Luchi_ghugni_bandhakopir_torkari_simer_torkari_chatney_salad.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Betssy13",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chingri-bhapa.jpg",
@@ -1119,7 +1127,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chingri_Bhapa.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Prianxi",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chingri-malai-curry.jpg",
@@ -1149,7 +1157,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Traditional_Bengali_Thali_(veg).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Chaitali Sarkar",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/dimer-dalna.jpg",
@@ -1169,7 +1177,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Ilish_jeere_bhapa.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Atudu",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/labra.jpg",
@@ -1179,7 +1187,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Labra_tarkari-MA17.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Rajeeb Dutta",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/lau-ghonto.jpg",
@@ -1189,7 +1197,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chingri_diye_lau_ghonto.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Atudu",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/luchi.jpg",
@@ -1199,7 +1207,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Black_channa_and_luchi_Rayagada_Odisha_08.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Lopanayak",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/macher-jhol.jpg",
@@ -1209,7 +1217,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chingri_macher_jhol,_cuisine_of_West_Bengal_20200213135306.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "বাক্যবাগীশ",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/mishti-doi.jpg",
@@ -1219,7 +1227,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mishti_Doi.jpg",
     "license": "CC BY 2.0",
     "artist": "Kirti Poddar",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/patishapta.jpg",
@@ -1239,7 +1247,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Payesh_(Bengali_sweet_dish).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sharnab neogi",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/peyaji.jpg",
@@ -1249,7 +1257,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Peyaju_frying_in_a_Bengali_food_store_at_Amtoli_Bazar_Dhamrai.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sm faysal",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/potoler-dorma.jpg",
@@ -1259,7 +1267,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Bengali_style_Potoler_Dorma.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Prads2189",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/rui-macher-kalia.jpg",
@@ -1289,7 +1297,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Shukto-Ahare_Bangla_2016_DSC_7615.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Schwiki",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bihari-aloo-bhujia.jpg",
@@ -1299,7 +1307,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Dum_Aloo_with_spicy_bhujia.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Pullak Parag Khetan",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/baingan-chokha.jpg",
@@ -1309,7 +1317,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Litti_chokha_dipped_in_Ghee.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Vinay Sah",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bihari-khichdi.jpg",
@@ -1319,7 +1327,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Vegetable_Khichdi_1.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Dolon Prova",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/dal-pitha.jpg",
@@ -1329,7 +1337,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Podo_pitha.png",
     "license": "CC BY-SA 4.0",
     "artist": "Meghana Mohanty",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/dhuska.jpg",
@@ -1339,7 +1347,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Dhuska.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Parijatpathak30",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bihari-ghugni.jpg",
@@ -1359,7 +1367,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Maithili_New_Year_or_Jur_Sital,_Jhori_bari_-_20200414.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Tulsi Bhagat",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bihari-malpua.jpg",
@@ -1369,7 +1377,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Malpua_sweet_in_Kolkata,_India.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Ravi Dwivedi",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bihari-tamatar-chokha.jpg",
@@ -1379,7 +1387,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Bihari_Cusine-_Litti_and_its_associates.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "RASHMITHAKURSHARMA",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/thekua.jpg",
@@ -1389,7 +1397,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Thekua_2.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Harpreet 712",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/goan-baath-cake.jpg",
@@ -1399,7 +1407,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Goan_Baath.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sanfy",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chicken-cafreal.jpg",
@@ -1419,7 +1427,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Xacuti_curry_with_Biryani_rice.png",
     "license": "CC BY-SA 4.0",
     "artist": "Sriyarao22",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/goan-dodol.jpg",
@@ -1429,7 +1437,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Dodol_Garut_Cihampelas_Bandung.JPG",
     "license": "CC BY 3.0",
     "artist": "Midori",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/goan-fish-curry.jpg",
@@ -1459,7 +1467,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Khatkhate.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Portugal Editor Exploration",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kismur.jpg",
@@ -1469,7 +1477,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Goa._Homemade_prawn_curry_with_boiled_Rice_and_Kismur..._IMG-20210120-WA0009.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sharbelle Fernandez",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/patoleo.jpg",
@@ -1479,7 +1487,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Steamed_Goan_rice_and_jaggery_cakes.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sanfy",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/prawn-balchao.jpg",
@@ -1489,7 +1497,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Prawns_Balchao.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "notpresleybutelvis",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/recheado-mackerel.jpg",
@@ -1499,7 +1507,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mackerel_Recheado.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Kaushir1711",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/sanna.jpg",
@@ -1509,7 +1517,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Sanna_(Commons).jpg",
     "license": "Public domain",
     "artist": "Kensplanet",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/goan-solkadhi.jpg",
@@ -1529,7 +1537,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Goa_Sorpotel.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sanfy",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/basundi.jpg",
@@ -1539,7 +1547,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Basundi_Indian_Dessert_Mithai_Sweets.jpg",
     "license": "CC BY-SA 2.0",
     "artist": "Edsel Little",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/dal-dhokli.jpg",
@@ -1549,7 +1557,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Dalthokali.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Heenah",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/fafda.jpg",
@@ -1559,7 +1567,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Fafda.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Shubhamj29",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/gujarati-dal.jpg",
@@ -1579,7 +1587,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Gujarati_Thali_with_Rotlo,_Kadhi,_Olo,_Gol.jpg",
     "license": "CC0",
     "artist": "Brihaspati",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/gujarati-khichdi.jpg",
@@ -1589,7 +1597,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Gujarati_Kathiyawadi_Dish.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Jalpaparakhiya",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/handvo.jpg",
@@ -1599,7 +1607,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Handvo_Gujarati_Food.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "KartikMistry",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/khaman.jpg",
@@ -1639,7 +1647,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Methi_Muthiya_(_fried_).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sushant savla",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/methi-thepla.jpg",
@@ -1659,7 +1667,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Patra_(Gujarati_snack).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "BhargavVora",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/sev-tameta-nu-shaak.jpg",
@@ -1679,7 +1687,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Shrikhand.JPG",
     "license": "CC0",
     "artist": "Miansari66",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/sukhdi.jpg",
@@ -1689,7 +1697,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Sukhdi..jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Maitrikvora21",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bagara-baingan.jpg",
@@ -1699,7 +1707,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Bhagare_Baingan..JPG",
     "license": "CC0",
     "artist": "Miansari66",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bagara-rice.jpg",
@@ -1729,7 +1737,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Double_ka_meetha_2.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Vis M",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/dum-ka-murgh.jpg",
@@ -1739,7 +1747,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Dum_ka_Murgh.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Vis M",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/hyderabadi-chicken-65.jpg",
@@ -1749,7 +1757,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_65_(Dish).jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Amiyashrivastava",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kheema.jpg",
@@ -1759,7 +1767,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Hyderabadi_Keema_by_Preeti_Tamilarasan.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Preeti Tamilarasan",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/hyderabadi-khichdi.jpg",
@@ -1769,7 +1777,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Vegetable_Khichdi_1.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Dolon Prova",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/khatti-dal.jpg",
@@ -1799,7 +1807,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Methi_Murgh_-_Kolkata_2015-07-17_9517.JPG",
     "license": "CC BY 3.0",
     "artist": "Biswarup Ganguly",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/mirchi-ka-salan.jpg",
@@ -1819,7 +1827,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Murg_Do_Pyaza.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "TabassumJawed",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/patthar-ka-gosht.jpg",
@@ -1839,7 +1847,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Sheer_Khurma_special.JPG",
     "license": "Public domain",
     "artist": "Miansari66",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/shikampuri-kebab.jpg",
@@ -1849,7 +1857,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Shikampuri_Kabab.JPG",
     "license": "CC0",
     "artist": "Miansari66",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/american-chopsuey.jpg",
@@ -1879,7 +1887,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chilly_Paneer_01.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Marajozkee",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chilli-tofu.jpg",
@@ -1899,7 +1907,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Honey_chilli_potato_2.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gannu03",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/manchow-soup.jpg",
@@ -1909,7 +1917,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Manchow_soup_-_Indo-Chinese_cuisine.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sarkar Sayantan",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/schezwan-fried-rice.jpg",
@@ -1929,7 +1937,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Set_D_-_Tomato_Soup_Macaroni_with_Scrambled_Egg,_Toasted_Bun,_Buttered_Sweet_Corn_-_HOKO_2024-12-21.jpg",
     "license": "CC0",
     "artist": "Andy Li",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/veg-manchurian-gravy.jpg",
@@ -1939,7 +1947,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Hakka_Noodles,_Veg_Manchurian_PK009.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "PallaviKhale",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/akki-rotti.jpg",
@@ -1949,7 +1957,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Akki_Rotti.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Anand Narayan",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/jolada-rotti.jpg",
@@ -1959,7 +1967,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:%E0%B2%9C%E0%B3%8B%E0%B2%B3%E0%B2%A6_%E0%B2%B0%E0%B3%8A%E0%B2%9F%E0%B3%8D%E0%B2%9F%E0%B2%BF_J%C5%8D%E1%B8%B7ada_ro%E1%B9%AD%E1%B9%ADi.jpg",
     "license": "CC BY-SA 3.0",
     "artist": "ಪ್ರಶಾಂತ ಸೊರಟೂರ",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/koli-curry.jpg",
@@ -1969,7 +1977,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Koli_kolumbu.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Andrew Jabakumar",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kori-rotti.jpg",
@@ -1979,7 +1987,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kori_Rotti.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "DreamyFlutura11",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kosambari.jpg",
@@ -1999,7 +2007,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Sorekayi_Majjige_Huli-_my_home_Bangalore-Karnataka-pic_12.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Shruthi Gaurav Alva",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/pandi-curry.jpg",
@@ -2019,7 +2027,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Pork_Bafat.jpg",
     "license": "CC0",
     "artist": "Tyasathi",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/pundi-gatti.jpg",
@@ -2029,7 +2037,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Pundi_Gatti_with_Kothambari_Chutney.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Kart127",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/vangi-bath.jpg",
@@ -2039,7 +2047,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Brinjal_rice_bath.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Vidya pmysore",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/aab-gosht.jpg",
@@ -2049,7 +2057,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kashmiri_Aab_Gosht.jpg",
     "license": "CC0",
     "artist": "Miansari66",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/gushtaba.jpg",
@@ -2059,7 +2067,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Gushtaba..JPG",
     "license": "CC0",
     "artist": "Miansari66",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kashmiri-rajma.jpg",
@@ -2069,7 +2077,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kashmiri_Pandit_vegetarian_thali_served_at_Matamaal_restaurants_with_Rajma,_Dum_aloo,_Paneer_dishes.png",
     "license": "CC BY-SA 4.0",
     "artist": "Coastalcakes (Matamaal Restaurants)",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/methi-maaz.jpg",
@@ -2099,7 +2107,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Rista_wazwan.jpg",
     "license": "Public domain",
     "artist": "Oniongas",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/shufta.jpg",
@@ -2109,7 +2117,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Shufta_Kashmiri_cuisine.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "DiplomatTesterMan",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/tabak-maaz.jpg",
@@ -2119,7 +2127,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Tabak_Maaz.JPG",
     "license": "CC0",
     "artist": "Miansari66",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/ada-pradhaman.jpg",
@@ -2139,7 +2147,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kerala_Beef_Fry.jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Solowomanwalks",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/cabbage-thoran.jpg",
@@ -2159,7 +2167,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Cheera_Thoran_Stage2.JPG",
     "license": "CC BY-SA 3.0",
     "artist": "Ranjithsiji",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/duck-mappas.jpg",
@@ -2179,7 +2187,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Fish_moilee_moily_molee.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "CNEcija12345",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/idiyappam.jpg",
@@ -2189,7 +2197,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Idiyappam_with_Egg_Masala_Curry.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Viewfinder18",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kaalan.jpg",
@@ -2199,7 +2207,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kaalan_curry.jpg",
     "license": "Public domain",
     "artist": "Rameshng at Malayalam Wikipedia",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kadala-curry.jpg",
@@ -2219,7 +2227,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Traditional_Koottu_Curry_of_Kerala.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Nairdeepa",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kozhukatta.jpg",
@@ -2259,7 +2267,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Ash_Gourd_(Kumblanga)_%22Olan%22.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "DivergenTribute",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/parippu-curry.jpg",
@@ -2269,7 +2277,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Padavalam_parippu.JPG",
     "license": "CC BY-SA 3.0",
     "artist": "Sivahari",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/pazham-pori.jpg",
@@ -2289,7 +2297,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Pulishery_from_Kerala_01.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Ganesh Mohan T",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/puttu.jpg",
@@ -2299,7 +2307,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Puttu_(Rice_Flour_steamed_cake).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Mathew Jibin",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/semiya-payasam.jpg",
@@ -2309,7 +2317,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Semiya_Payasam_Vermicelli_Kheer_Indian_Sweets_Mithai.jpg",
     "license": "CC BY 2.0",
     "artist": "Divya Kudua",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/alu-vadi.jpg",
@@ -2319,7 +2327,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Crispy_Alu_Vadi_from_my_Kitchen,_Pune,_Maharashtra.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sharvarism",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/amti.jpg",
@@ -2339,7 +2347,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Basundi_in_Maharashtrian_style.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Wefffrrr",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/batata-bhaji.jpg",
@@ -2349,7 +2357,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Batata_bhaji_and_chai-Pune-Maharashtra.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Wattamwarsamiksha",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bombil-fry.jpg",
@@ -2359,7 +2367,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Bombil_Fry_(6883605717).jpg",
     "license": "CC BY-SA 2.0",
     "artist": "Joegoaukfishcurry2",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/jowar-bhakri.jpg",
@@ -2369,7 +2377,7 @@
     "source_url": "https://wordpress.org/photos/photo/930661f3d1/",
     "license": "cc0 1.0",
     "artist": "Makarand Mane",
-    "note": "found via Openverse, verified by eye"
+    "note": "found via Openverse, verified by eye; colour-corrected"
   },
   {
     "file": "recipes/kanda-poha.jpg",
@@ -2379,7 +2387,7 @@
     "source_url": "https://wordpress.org/photos/photo/336624c4a1/",
     "license": "cc0 1.0",
     "artist": "Suresh Shinde",
-    "note": "found via Openverse, verified by eye"
+    "note": "found via Openverse, verified by eye; colour-corrected"
   },
   {
     "file": "recipes/katachi-amti.jpg",
@@ -2389,7 +2397,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Puran_Poli_and_Katachi_Amti_by_Dr._Raju_Kasambe_03.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Dr. Raju Kasambe",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/masale-bhat.jpg",
@@ -2399,7 +2407,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Masale_Bhat_-Homemade_-_Maharashtra.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Phadke09",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/patodi-rassa.jpg",
@@ -2419,7 +2427,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Pithla_NMM_Soc_Thane_Maharashtra_01.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Om Bankar",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/puran-poli.jpg",
@@ -2429,7 +2437,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Puran_Poli_image.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Had5185",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/sabudana-khichdi.jpg",
@@ -2449,7 +2457,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Sabudana_vada.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Archana Joshi",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/saoji-mutton.jpg",
@@ -2459,7 +2467,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Savaji_Mutton_Curry2.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Skasturee",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/thalipeeth.jpg",
@@ -2469,7 +2477,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Thalipeeth_(Indian_Pancake).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "BhargavVora",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/varan-bhaat.jpg",
@@ -2479,7 +2487,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Varan_Bhat.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Kashmira3091",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/aloo-pitika.jpg",
@@ -2489,7 +2497,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kumol_Saul_with_Aloo_Pitika.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "পাপৰি বৰা",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/axone-pork.jpg",
@@ -2499,7 +2507,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Naga_Smoked_Pork_with_Axone_(Fermented_Soyabeans).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sumit Surai",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chakhwi.jpg",
@@ -2509,7 +2517,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chakhwi.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Tirengma",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chamthong.jpg",
@@ -2519,7 +2527,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Hanggam_Thongba_(or_Hangam_Chamthong_or_Kangshoi_or_Kangsoi)_-_mustard_stew_-_Traditional_Meitei_cuisine_-_Gastronomic_cultural_heritage_of_Manipur_%26_domestic_and_international_Meitei_diasporas.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "User:Andrew Jabakumar",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/eromba.jpg",
@@ -2529,7 +2537,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Ingredients_for_making_traditional_Meitei_food,_Eromba_(alias_Iromba,_Eronba,_Ironba)_-_Classical_Meitei_cuisine_of_Kangleipak.jpg",
     "license": "CC BY 4.0",
     "artist": "Haoreima",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/jadoh.jpg",
@@ -2539,7 +2547,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Jadoh_(Meghalaya.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Real Sovan",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/muya-awandru.jpg",
@@ -2559,7 +2567,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:2_types_of_Nga_Thongba_(fish_curry)_-_Toithong_(Nga_Atoiba_Thongba)_%26_Taothong_(Nga_Ataoba_Thongba)_-_Traditional_Meitei_cuisine_-_Gastronomic_cultural_heritage_of_Manipur_%26_domestic_and_international_Meitei_diasporas.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "User:Ishani Nath",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/poita-bhat.jpg",
@@ -2569,7 +2577,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Poita_bhat_and_egg.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "IKHazarika",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/sel-roti.jpg",
@@ -2579,7 +2587,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chiya_Sel_Roti.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/singju.jpg",
@@ -2609,7 +2617,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Arisa_pitha_Odia_cuisine.jpg",
     "license": "CC BY 3.0",
     "artist": "Subhashish Panigrahi",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/badi-chura.jpg",
@@ -2639,7 +2647,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chakuli_pitha_with_chutney.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Ashwas priya",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chingudi-tarkari.jpg",
@@ -2659,7 +2667,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Dahi_baigana_Odia_recipe.jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Subhashish Panigrahi",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kanika.jpg",
@@ -2669,7 +2677,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kanika_and_dalma.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Soumyasmita Mallick",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/khaja.jpg",
@@ -2679,7 +2687,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Baleswari_khaja_pheni_Oriya_cuisine.jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Subhashish Panigrahi",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/macha-besara.jpg",
@@ -2689,7 +2697,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Macha_Besara.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "B.Sunita M",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/mudhi-mansa.jpg",
@@ -2699,7 +2707,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mudhi_Mansa.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sangram Keshari Senapati",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/rasabali.jpg",
@@ -2709,7 +2717,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Rasabali,_Odisha_traditional_sweet.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Prateek Pattanaik",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/saga-bhaja.jpg",
@@ -2729,7 +2737,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Santula_Odia_Cuisine.jpg",
     "license": "CC BY-SA 3.0",
     "artist": "ସୁଭ ପା/Subhashish Panigrahi",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chana-dal-dham.jpg",
@@ -2739,7 +2747,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kangri_Dham_with_chana_dal_,_maani_and_white_rice.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Niyati Sharma 1505",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chana-madra.jpg",
@@ -2749,7 +2757,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:White_Chana_Madra.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Niyati Sharma 1505",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/himachali-mash-dal.jpg",
@@ -2759,7 +2767,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Dal_Chana_Aur_Mash_Ki_Dal.JPG",
     "license": "CC0",
     "artist": "Miansari66",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/himachali-mittha.jpg",
@@ -2769,7 +2777,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Double_Ka_Mittha_Cooking_Bowl.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Christopher Malapati",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/patrode-pahadi.jpg",
@@ -2779,7 +2787,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Patrode_%E0%B2%AA%E0%B2%A4%E0%B3%8D%E0%B2%B0%E0%B3%8A%E0%B2%A1%E0%B3%86.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "BHARATHESHA ALASANDEMAJALU",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/parsi-akuri.jpg",
@@ -2799,7 +2807,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Parsi_Mutton_Berry_Pulao.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sumit Surai",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/parsi-sev.jpg",
@@ -2829,7 +2837,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:%22Amazing_Aloo_Paratha_and_Lovely_Lassi%22.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Mahi Tatavarty",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/amritsari-fish.jpg",
@@ -2859,7 +2867,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Bhindi_masala_(49657981033).jpg",
     "license": "CC BY-SA 2.0",
     "artist": "やましこ",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/dahi-bhalla.jpg",
@@ -2869,7 +2877,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Dahi_bhalla_with_papdi.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Vipul7229",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/dal-makhani.jpg",
@@ -2879,7 +2887,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Dal_Makhani_along_with_Naan.jpg",
     "license": "CC BY 2.0",
     "artist": "Barry Pousman from New York, NY",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/gajar-ka-halwa.jpg",
@@ -2889,7 +2897,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Gajar_Ka_Halwa_a_famous_Indian_Sweet_Dish_01.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Bugatti Enthusiast Aishwary Raj",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/keema-matar.jpg",
@@ -2899,7 +2907,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Keema_Matar_(a_dish_from_India).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Cabeza2000",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/lauki-kofta.jpg",
@@ -2909,7 +2917,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Lauki_Kofta_Curry.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Nithajay",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/makki-di-roti.jpg",
@@ -2919,7 +2927,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Makki_Di_Roti.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Vsigamany",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/matar-paneer.jpg",
@@ -2929,7 +2937,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Matar_Paneer_with_Butter_Naan.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Ravi Dwivedi",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/methi-malai-matar.jpg",
@@ -2939,7 +2947,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Methi_Malai_Matar.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Ujjawaoo7",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/missi-roti.jpg",
@@ -2949,7 +2957,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Missi_Roti_Recipe_(27427169530).jpg",
     "license": "CC BY-SA 2.0",
     "artist": "Soniya Goyal from Jaipur, India",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/paneer-bhurji.jpg",
@@ -2959,7 +2967,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Homemade_Paneer_Bhurji_cooked_in_pan_India.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Status 401",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/paneer-tikka.jpg",
@@ -2969,7 +2977,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Panir_Tikka_Indian_cheese_grilled.jpg",
     "license": "CC BY 2.0 de",
     "artist": "Sonja Pauen -Stanhopea",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/pindi-chole.jpg",
@@ -2989,7 +2997,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chana_Dal_Curry.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Ravi Talwar",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kadhi-pakora.jpg",
@@ -2999,7 +3007,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Punjabi_curry.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Ruaking gurleen",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/sarson-ka-saag.jpg",
@@ -3009,7 +3017,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Sarson_Ka_Saag_-_Mohali_2016-08-06_8227.JPG",
     "license": "CC BY 3.0",
     "artist": "Biswarup Ganguly",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/shahi-paneer.jpg",
@@ -3019,7 +3027,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Shahi_Paneer_%26_Butter_Naan.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Shashank7200",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/tandoori-chicken.jpg",
@@ -3029,7 +3037,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Tandoori_prepared_in_Malvan_style.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Amitkumar Si",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/aloo-pyaaz-ki-sabzi.jpg",
@@ -3039,7 +3047,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Rice_and_Daal_with_Allo-Pyaaz_Ki_Sabzi.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Nami Verma",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bajre-ki-roti.jpg",
@@ -3049,7 +3057,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:1_bajre_ki_roti_.bthuve_ki_sbji.desi_tindi_gi_v_lssi_ka_gilas.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "KUMER PAL",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/besan-chakki.jpg",
@@ -3059,7 +3067,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:BESAN_CHAKKI_HOMEMADE_KOTA_003.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Manoj2095",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/gatte-ki-sabzi.jpg",
@@ -3079,7 +3087,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Haldi_Ki_Sabzi.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "RohitValecha",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/ker-sangri.jpg",
@@ -3089,7 +3097,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Ker_Sangri.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "AKSHRAJJODHA",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/laal-maas.jpg",
@@ -3109,7 +3117,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Rajasthani_Food.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Anirudh Chordia",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/malpua.jpg",
@@ -3119,7 +3127,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Rajasthani_Malpua.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Acoomar",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/mirchi-vada.jpg",
@@ -3129,7 +3137,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:GARLIC_MIRCHI_VADA.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "SS Khurana",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/moong-dal-halwa.jpg",
@@ -3149,7 +3157,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Dal_Panchmel.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Vis M",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/rajasthani-kadhi.jpg",
@@ -3159,7 +3167,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Rajasthani_Kadhi.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Saurabhshekhar2329",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bhee-ji-bhaji.jpg",
@@ -3169,7 +3177,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Sindhi_Bhee_Ji_Bhaji.JPG",
     "license": "CC0",
     "artist": "Miansari66",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/koki.jpg",
@@ -3189,7 +3197,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kanda_Bhaji_with_Tangy_Salsa.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Shrabee",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/sindhi-chicken-curry.jpg",
@@ -3199,7 +3207,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Curry_9.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/sindhi-kadhi.jpg",
@@ -3209,7 +3217,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Sindhi_Kadhi.JPG",
     "license": "CC0",
     "artist": "Miansari66",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/sindhi-tomato-chutney.jpg",
@@ -3219,7 +3227,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Tomato_Chutney_3.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/adai.jpg",
@@ -3229,7 +3237,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Adai_Dosai_with_Chutney_01.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sudhan Ram",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/beans-poriyal.jpg",
@@ -3239,7 +3247,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Beans_poriyal.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Nithyasrm",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/beetroot-poriyal.jpg",
@@ -3249,7 +3257,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Beetroot_Poriyal_from_Tamilnadu.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Pradeepraajkumar1981",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/cabbage-poriyal.jpg",
@@ -3269,7 +3277,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:CHICKEN_CHETTINAD_-_Mini_Madras_2026-03-13.jpg",
     "license": "CC0",
     "artist": "Andy Li",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chettinad-kara-kuzhambu.jpg",
@@ -3279,7 +3287,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chettinad_Garlic_Kara_Kuzhambu_Paste_The_Grand_Sweets_And_Snacks.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "The Grand Sweets And Snacks",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chettinad-crab-masala.jpg",
@@ -3289,7 +3297,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chettinad_Nandu_Masala.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Praveena Thangaraj",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/coconut-chutney.jpg",
@@ -3299,7 +3307,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Butter_Dosa_served_with_coconut_chutney_and_sambhar.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Ravi Dwivedi",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/curd-rice.jpg",
@@ -3309,7 +3317,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Curd_rice_in_ICH_Bhopal.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Suyash Dwivedi",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kandarappam.jpg",
@@ -3319,7 +3327,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kandarappam.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Rajan1981",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kesari-bath.jpg",
@@ -3329,7 +3337,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kesari_Bath_(5832083727).jpg",
     "license": "CC BY-SA 2.0",
     "artist": "Harsha K R from Bangalore, India",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chettinad-kuzhi-paniyaram.jpg",
@@ -3339,7 +3347,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:A_shot_of_Kuzhi_paniyaram_making.JPG",
     "license": "CC BY-SA 3.0",
     "artist": "Thamizhpparithi Maari",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/lemon-rice.jpg",
@@ -3349,7 +3357,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Lemon_Rice_in_Kerala.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Ganesh Gore",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/medu-vada.jpg",
@@ -3359,7 +3367,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Idli_and_Medu_Vada.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "OdetomyLife",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/mysore-pak.jpg",
@@ -3369,7 +3377,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mysore_pak.jpg",
     "license": "CC BY-SA 2.0",
     "artist": "Charles Haynes",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/rava-dosa.jpg",
@@ -3379,7 +3387,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Rava_Dosa_with_Coconut_Chutney.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "SamarthBhandavale",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/sakkarai-pongal.jpg",
@@ -3389,7 +3397,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Sakkarai_pongal_with_milk.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "selvam",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/thayir-vadai.jpg",
@@ -3399,7 +3407,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Medhu_Vadai_%26_Coconut_Chutney.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sunshinegal10",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/tomato-chutney.jpg",
@@ -3409,7 +3417,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Tomato_Chutney_3.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/tomato-pappu.jpg",
@@ -3419,7 +3427,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Food_at_Indic_Wikimedia_Hackathon_2023_06_Tomato_Pappu.jpg",
     "license": "CC BY 4.0",
     "artist": "Jnanaranjan sahu",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/uttapam.jpg",
@@ -3429,7 +3437,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mix_lentils_Uttapam_P_20190410_144153.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sumita Roy Dutta",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/ven-pongal.jpg",
@@ -3439,7 +3447,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Ven_Pongal_%26_sakkarai_pongal_with_vada_%26_bonda.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Raamsanjay",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chepala-pulusu.jpg",
@@ -3449,7 +3457,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Manglorean_style_white_pomfret_fish_curry-My_home_Bangalore-Karn.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Shruthi Gaurav Alva",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/dosakaya-pappu.jpg",
@@ -3459,7 +3467,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Dal_soup_(Indian_lentil_dish).jpg",
     "license": "CC BY-SA 2.0",
     "artist": "Pelican",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/royyala-iguru.jpg",
@@ -3469,7 +3477,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Prawn_Biryani.jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Number55",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/aloo-ki-tehri.jpg",
@@ -3489,7 +3497,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Alur_dom_%26_luchi.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Rocky Masum",
-    "note": "replaced by hand: the previous file was a different dish"
+    "note": "replaced by hand: the previous file was a different dish; colour-corrected"
   },
   {
     "file": "recipes/kali-mirch-ka-murgh.jpg",
@@ -3499,7 +3507,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Curry_7.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/awadhi-mutton-kaliya.jpg",
@@ -3509,7 +3517,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mutton_Curry_(44786).jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/muzaffar.jpg",
@@ -3519,7 +3527,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Traditional_Vermicelli_Upma_(Semiya_Upma)_with_Fresh_Vegetables.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Srujanabotcha",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/ulte-tawe-ka-paratha.jpg",
@@ -3529,7 +3537,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Awadhi_palak_paneer_paratha_dahi.jpg",
     "license": "CC BY 2.0",
     "artist": "rovingl",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/warqi-paratha.jpg",
@@ -3539,7 +3547,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Awadhi_breakfast_tea_with_paratha.jpg",
     "license": "CC BY 2.0",
     "artist": "Asim Bijarani",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/basanti-pulao.jpg",
@@ -3549,7 +3557,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:A_traditional_indian_dish_of_bengal(pulao-mangsha_with_misti_doi).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Biprajitsen123",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/doi-maach.jpg",
@@ -3589,7 +3597,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Indian_cuisine_from_South_india.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Rajatsingh8808",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/radhaballavi.jpg",
@@ -3599,7 +3607,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Pure_Bengali_dish_-_rice,_veg_curry,_dal,_egg_curry_etc.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Billjones94",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bihari-aloo-parwal.jpg",
@@ -3619,7 +3627,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Curry_5.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/dahi-chura-gud.jpg",
@@ -3629,7 +3637,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Curd_Rice.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sudharshan Shanmugasundaram",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bihari-machhli-jhor.jpg",
@@ -3669,7 +3677,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Broccoli_and_Potato_dish_with_Indian_seasoning_in_Paul%C3%ADnia,_2023-10-17.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Parzeus",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/sattu-paratha.jpg",
@@ -3679,7 +3687,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Sattu_Ke_Parathe.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Neha Sonal",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/alsande-tonak.jpg",
@@ -3689,7 +3697,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Black_Eye_Pea_Gravy.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Ravi Talwar",
-    "note": "replaced by hand: the previous file was a different dish"
+    "note": "replaced by hand: the previous file was a different dish; colour-corrected"
   },
   {
     "file": "recipes/ambot-tik.jpg",
@@ -3699,7 +3707,7 @@
     "source_url": "https://www.flickr.com/photos/87799359@N03/15469328378",
     "license": "by-sa 2.0",
     "artist": "goanfishcurryrice3",
-    "note": "found via Openverse, verified by eye"
+    "note": "found via Openverse, verified by eye; colour-corrected"
   },
   {
     "file": "recipes/batata-song.jpg",
@@ -3709,7 +3717,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Potato_curry_(3278761476).jpg",
     "license": "CC BY-SA 2.0",
     "artist": "pelican from Tokyo, Japan",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/fish-caldine.jpg",
@@ -3719,7 +3727,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Fish-curry-rice,_Goan-style_02.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Fredericknoronha",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/mackerel-uddamethi.jpg",
@@ -3729,7 +3737,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Dal_makhani.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "TarnishedPath",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/pork-indad.jpg",
@@ -3739,7 +3747,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Medaillons_of_pork_(Indian_style)_%2B_wine.jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Manfred&amp;Barbara Aulbach",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/prawn-rissois.jpg",
@@ -3749,7 +3757,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Prawn_Biryani_by_Sukla_Dhar.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sukla Dhar",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/sungtachi-kodi.jpg",
@@ -3759,7 +3767,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:King_prawn_curry_-_Sunoso.jpg",
     "license": "CC0",
     "artist": "Andy Li",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/tondak.jpg",
@@ -3769,7 +3777,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Coconut_Chutney_-_Home_Made.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Mailz2kumar",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bajra-no-rotlo.jpg",
@@ -3789,7 +3797,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Sodhi_with_Fried_Potatoes_and_Coriander_leaf_chutney.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Dharshana Nathan",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/batata-nu-shaak.jpg",
@@ -3799,7 +3807,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Aloo_Gobi_Sabzi.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "TabassumJawed",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bhinda-sambhariya.jpg",
@@ -3829,7 +3837,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chichinga_(snake_gourd)_ghanto.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Hrishikes",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/guvar-nu-shaak.jpg",
@@ -3849,7 +3857,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Vegan_Aloo_Gobi_(6971515438).jpg",
     "license": "CC BY 2.0",
     "artist": "Jennifer from Vancouver, Canada",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/mag-ni-dal.jpg",
@@ -3879,7 +3887,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Rice_ganji_or_porridge_aloo_fry_homemade_by_Sujatha_aunty_karnataka.jpg_03.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Draupadigamy9305",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/khichdi-ka-khatta.jpg",
@@ -3889,7 +3897,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Shahjahani_Khichdi_(9307081572).jpg",
     "license": "CC BY-SA 2.0",
     "artist": "Devika",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/lukhmi.jpg",
@@ -3909,7 +3917,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mutton_Curry_1.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/tala-hua-gosht.jpg",
@@ -3919,7 +3927,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mutton_Rogan_Josh_dish.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "CNEcija12345",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/til-ki-chutney.jpg",
@@ -3929,7 +3937,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Coconut_Chutney_(Indian_Cuisine).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Balurbala",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/tomato-kut.jpg",
@@ -3949,7 +3957,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Coconut_Curry_(6737777777).jpg",
     "license": "CC BY-SA 2.0",
     "artist": "Jen Arrr",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chana-gashi.jpg",
@@ -3959,7 +3967,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Potato_curry_(4356270962).jpg",
     "license": "CC BY-SA 2.0",
     "artist": "pelican from Tokyo, Japan",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chekke-curry.jpg",
@@ -3969,7 +3977,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Jackfruit_curry_with_rice.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Vis M",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/dali-thoy.jpg",
@@ -3979,7 +3987,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Pigeon_pea_pods_in_Raichur,_Karnataka.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Nanditha Gogate, WELL Labs",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/halbai.jpg",
@@ -3989,7 +3997,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Payasa-_home_Bangalore-Karnataka-pic_16_Bisu.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Shruthi Gaurav Alva",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/hesarubele-payasa.jpg",
@@ -3999,7 +4007,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Rava_-_e_-_lazawaab.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "deep1104",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kadambuttu.jpg",
@@ -4009,7 +4017,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kadubu_of_Coorg.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Abhishek Chintamani",
-    "note": "replaced by hand: the previous file was a different dish"
+    "note": "replaced by hand: the previous file was a different dish; colour-corrected"
   },
   {
     "file": "recipes/koli-saaru.jpg",
@@ -4019,7 +4027,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Curry_6.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chicken-ghee-roast.jpg",
@@ -4039,7 +4047,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Vada_Bengaluru.jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Subhashish Panigrahi",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/meen-gassi.jpg",
@@ -4049,7 +4057,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Rice_and_fish_curry.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Dolon Prova",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/otti.jpg",
@@ -4059,7 +4067,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Curd_rice_with_chatni.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Marajozkee",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/thambuttu.jpg",
@@ -4069,7 +4077,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Rava_Aape_with_coconut_chutney_and_sambar.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Ruchika More",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/al-yakhni.jpg",
@@ -4079,7 +4087,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Bottle_Gourd_Curry.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chaman-qaliya.jpg",
@@ -4089,7 +4097,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Curry_house_curry_pan.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "CurryTime7-24",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/choek-wangun.jpg",
@@ -4099,7 +4107,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Hilsa_curry_with_aubergine_and_pumpkin.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sarkar Sayantan",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/haak.jpg",
@@ -4109,7 +4117,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Rayo_Ko_Saag_-_Raw.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/marchwangan-korma.jpg",
@@ -4119,7 +4127,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mutton_rogan_Josh_(kashmiri_cuisine).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Rajatsingh8808",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/mujh-chetin.jpg",
@@ -4129,7 +4137,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Sabudana_Vada_With_Yogurt-Celantro_Chutni.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "PuneetAttri82",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/muji-gaad.jpg",
@@ -4139,7 +4147,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Fish_Curry_(965863650).jpg",
     "license": "CC BY 2.0",
     "artist": "rovingI",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/mutton-yakhni.jpg",
@@ -4149,7 +4157,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mutton_curry_(1).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Dolon Prova",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/nadru-monje.jpg",
@@ -4159,7 +4167,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_pakora-MB21.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Rajeeb Dutta",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/nadru-yakhni.jpg",
@@ -4169,7 +4177,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Gujaratikadhi.jpg",
     "license": "Public domain",
     "artist": "Mowglee",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/ruwangan-chaman.jpg",
@@ -4179,7 +4187,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Matar_Paneer_Curry_1.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/syun-olav.jpg",
@@ -4189,7 +4197,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mutton_Curry_2.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chemmeen-manga-curry.jpg",
@@ -4199,7 +4207,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:King_prawn_curry_-_Sunoso_(verticle).jpg",
     "license": "CC0",
     "artist": "Andy Li",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kozhi-porichathu.jpg",
@@ -4209,7 +4217,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Curry_4.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/mutta-roast.jpg",
@@ -4229,7 +4237,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Stew_(1205814362).jpg",
     "license": "CC BY 2.0",
     "artist": "rovingI",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/nadan-mutton-curry.jpg",
@@ -4239,7 +4247,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mutton_curry_(2).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Dolon Prova",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/erissery.jpg",
@@ -4269,7 +4277,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Vegan_coconut_curry_(7447386856).jpg",
     "license": "CC BY 2.0",
     "artist": "Lablascovegmenu from London",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bharli-vangi.jpg",
@@ -4299,7 +4307,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Maharashtrian_Mejwani.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sharvarism",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kolambi-bhaat.jpg",
@@ -4309,7 +4317,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Prawn_Schezwan_Rice.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sunshinegal10",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kolhapuri-chicken.jpg",
@@ -4319,7 +4327,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Curry_8.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/matki-usal.jpg",
@@ -4329,7 +4337,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Potato_and_Green_Beans_Curry.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/sol-kadhi.jpg",
@@ -4339,7 +4347,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Rava_Aape_with_samabr_and_coconut_chutney.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Ruchika More",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/doh-khleh.jpg",
@@ -4349,7 +4357,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Medaillons_of_pork_(Indian_style).jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Manfred&amp;Barbara Aulbach",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/doh-neiiong.jpg",
@@ -4359,7 +4367,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Pork-cutlet-curry.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "些細な日常",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/galho.jpg",
@@ -4369,7 +4377,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mixed_Steamed_Rice.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sumit Surai",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/hanhor-mangkho.jpg",
@@ -4399,7 +4407,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:North_Indian_Fish_Curry_(Cat_Fish).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Seetrw",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/aloo-potala-rasa.jpg",
@@ -4409,7 +4417,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Pointed_Gourd_Curry.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chungdi-malai.jpg",
@@ -4419,7 +4427,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Prawn_curry_with_rice.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Drmray",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/ghanta-tarkari.jpg",
@@ -4429,7 +4437,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Coconut_oil_2.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Tiia Monto",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/machha-ghanta.jpg",
@@ -4449,7 +4457,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Pumpkin_curry_(1861461547).jpg",
     "license": "CC BY 2.0",
     "artist": "Upendra Kanda",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/sajana-chhuin-rai.jpg",
@@ -4459,7 +4467,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Potato_cream_covered_curry_udon_in_Ebisu-Minami.jpg",
     "license": "CC0",
     "artist": "Syced",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/tomato-khajuri-khatta.jpg",
@@ -4469,7 +4477,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Tomato_chutney_2006.jpg",
     "license": "CC BY-SA 2.0",
     "artist": "Paul Goyette from Chicago, USA",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/aloo-ke-gutke.jpg",
@@ -4479,7 +4487,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Jeera_aloo.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "replaced by hand: the previous file was a different dish"
+    "note": "replaced by hand: the previous file was a different dish; colour-corrected"
   },
   {
     "file": "recipes/auriya-kaddu.jpg",
@@ -4489,7 +4497,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Pumpkin_Curry_Rice_-_Pompoko.jpg",
     "license": "CC0",
     "artist": "Andy Li",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bhatt-ki-churkani.jpg",
@@ -4509,7 +4517,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Dal,_part_of_the_Indian_staple_diet.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Neha Sonal",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/jhangora-ki-kheer.jpg",
@@ -4519,7 +4527,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kheer_Rice_Pudding_Indian_Sweet_Buffalo_New_York.jpg",
     "license": "CC BY 2.0",
     "artist": "purdman1",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kaapa.jpg",
@@ -4529,7 +4537,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Sarson-Ka-Saag.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Officialksv",
-    "note": "replaced by hand: the previous file was a different dish"
+    "note": "replaced by hand: the previous file was a different dish; colour-corrected"
   },
   {
     "file": "recipes/kaddu-ka-khatta.jpg",
@@ -4539,7 +4547,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Roti_with_KadduGhost.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Rashid Jorvee",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kafuli.jpg",
@@ -4549,7 +4557,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_spinach_curry_(20518478923).jpg",
     "license": "CC BY-SA 2.0",
     "artist": "pelican from Tokyo, Japan",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/khatta-meat.jpg",
@@ -4559,7 +4567,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mutton_Curry_3.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kumaoni-raita.jpg",
@@ -4569,17 +4577,21 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Raita_with_cucumber_and_mint.jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Elisabeth Nara at English Wikipedia",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/mandua-ki-roti.jpg",
     "region": "Pahari",
     "slot": "recipe",
     "wiki_title": "Photograph of Udham Singh rolling dough to make roti (Indian flatbread), London, England, ca.1938.gif",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Photograph_of_Udham_Singh_rolling_dough_to_make_roti_(Indian_flatbread),_London,_England,_ca.1938.gif",
-    "license": "Public domain",
-    "artist": "Unknown photographer",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ghol_bhaji_nachni_bhakri.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Meena Kharatmal",
+    "note": "resized for web; replaces a black-and-white archival portrait of a man; colour-corrected",
+    "recipe": "mandua-ki-roti",
+    "width": 1000,
+    "height": 750,
+    "size_bytes": 134577
   },
   {
     "file": "recipes/rajma-madra.jpg",
@@ -4589,7 +4601,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Saury,_broiled_with_soy_sauce,_black_pepper,_and_curry_powder,_atop_split_peas_and_refried_beans_-_Massachusetts.jpg",
     "license": "CC0",
     "artist": "Daderot",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/sepu-vadi.jpg",
@@ -4599,7 +4611,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Humble_wholesome_Spinach_Dal_with_rice.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Likhita Suresh",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/thechwani.jpg",
@@ -4629,7 +4641,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Meal_with_Rice,_Roti_and_Scrambled_Egg_Curry.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Ranjithraj",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/parsi-jardaloo-ma-gosht.jpg",
@@ -4639,7 +4651,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mutton_curry_photographed_in_West_Bengal,_India,_January_28,_2024.jpg",
     "license": "CC0",
     "artist": "Billjones94",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/parsi-kheema-par-eeda.jpg",
@@ -4649,7 +4661,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mutton_rogan_josh.jpg",
     "license": "CC BY-SA 2.0",
     "artist": "stu_spivack",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/parsi-kolmi-no-patio.jpg",
@@ -4659,7 +4671,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Tawa_Prawn,_New_Delhi.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Bulbul10",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/parsi-machhi-no-saas.jpg",
@@ -4669,7 +4681,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Traditional_Indian_Meal.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sabitha33",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/parsi-margi-na-farcha.jpg",
@@ -4679,7 +4691,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Fry_(Indian_style).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sharnab neogi",
-    "note": "replaced by hand: the previous file was a different dish"
+    "note": "replaced by hand: the previous file was a different dish; colour-corrected"
   },
   {
     "file": "recipes/parsi-mutton-pulao-dal.jpg",
@@ -4689,7 +4701,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Indian_Mushroom_%26_Mutton_Pulao.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Prashant Sahu",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/parsi-papeta-ma-gosht.jpg",
@@ -4729,7 +4741,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Indian_mutton_Curry.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Vikas Jayaswal",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/parsi-salli-marghi.jpg",
@@ -4739,7 +4751,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_curry_Trivandrum.jpg",
     "license": "CC0",
     "artist": "Abhilashsnair",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/parsi-tamota-par-eeda.jpg",
@@ -4749,7 +4761,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Egg_devil.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Hrishikes",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/atte-ka-halwa.jpg",
@@ -4769,7 +4781,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mughlai_food.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "SwingingUvula",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/mah-di-dal.jpg",
@@ -4779,7 +4791,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Breakfast_plate_-_Puri,_Chana_dal,_Methi_Paneer,_Assamese_sweet_tomato_chutny_(Bilahi_tok)_with_dates_and_dry_fruits,_Kalakand.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "AjayDas",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/aam-ki-launji.jpg",
@@ -4789,7 +4801,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Unripe_Mango_Chutney_-_Kolkata_2011-02-23_1714.JPG",
     "license": "CC BY 3.0",
     "artist": "Biswarup Ganguly",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bajre-ki-raab.jpg",
@@ -4819,7 +4831,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Besan_Gatta_Sabji.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Nizil Shah",
-    "note": "replaced by hand: the previous file was a different dish"
+    "note": "replaced by hand: the previous file was a different dish; colour-corrected"
   },
   {
     "file": "recipes/govind-gatte.jpg",
@@ -4829,7 +4841,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kadhi_1.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/junglee-maas.jpg",
@@ -4839,7 +4851,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mutton_rogan_josh_in_blue_bowl.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Karan1dhawan",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/khoba-roti.jpg",
@@ -4849,7 +4861,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Missi_Roti.jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Sumit Surai",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/mangodi-ki-sabzi.jpg",
@@ -4859,7 +4871,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Delicious_tomato_dal_(1861335231).jpg",
     "license": "CC BY 2.0",
     "artist": "Upendra Kanda",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/mawa-kachori.jpg",
@@ -4869,7 +4881,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Gujiya-Home-India-UttarPradesh-Lucknow-DSC001.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Nikitamahoviya",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/methi-bajra-puri.jpg",
@@ -4879,7 +4891,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Fried_Indian_Bread_-_Puri.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Nivedita Walunj",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/safed-maas.jpg",
@@ -4889,7 +4901,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mutton_Rogan_Josh_-_Mohali_2016-08-07_9110.JPG",
     "license": "CC BY 3.0",
     "artist": "Biswarup Ganguly",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/aloo-tuk.jpg",
@@ -4899,7 +4911,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Jeera_aloo_served_with_sprouts_and_dal.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Kanikatwl",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/mitho-lolo.jpg",
@@ -4909,7 +4921,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Yogurt_and_Rice_aka_Curd_Rice.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Ananth Pattabiraman",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/sanna-pakora.jpg",
@@ -4919,7 +4931,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Pakora_in_fry_pan.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "JogiAsad",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/seyal-gosht.jpg",
@@ -4949,7 +4961,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Halwa,_North_Indian_Special.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sidheeq",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/sindhi-teevan.jpg",
@@ -4959,7 +4971,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mutton_curry_with_butter_naan,_Kolkata_-_West_Bengal_-_DSC_0049.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "TAPAS KUMAR HALDER",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/tidali-dal.jpg",
@@ -4969,7 +4981,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Dal_Pakwan_-_Sindhi_Food_-_5.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Urvi Yagnik",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chettinad-eral-masala.jpg",
@@ -4979,7 +4991,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chettinad_Prawn_Masala.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Seethabharathi",
-    "note": "replaced by hand: the previous file was a different dish"
+    "note": "replaced by hand: the previous file was a different dish; colour-corrected"
   },
   {
     "file": "recipes/chettinad-kozhi-biryani.jpg",
@@ -4999,7 +5011,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Tuna_Fish_curry_South_Indian_Style.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Pradeepraajkumar1981",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chettinad-meen-varuval.jpg",
@@ -5019,7 +5031,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Egg_roll.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Hrishikes",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chettinad-mutton-kuzhambu.jpg",
@@ -5039,7 +5051,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Turco-Indian_fusion_dish.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "E4024",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chettinad-urulai-roast.jpg",
@@ -5049,7 +5061,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Spicy_chicken_and_potato_curry_(10771218216).jpg",
     "license": "CC BY-SA 2.0",
     "artist": "pelican from Tokyo, Japan",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chettinad-idiyappam.jpg",
@@ -5059,7 +5071,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Coconut_Roti.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Ralbahitha",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kathirikai-chettinad.jpg",
@@ -5079,7 +5091,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:South_Indian_famous_-_Manathakkali_Keerai.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Arul Raj C",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/milagu-kuzhambu.jpg",
@@ -5089,7 +5101,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Tamil_Nadu_Fish_Curry.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Deviselvam",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/more-kuzhambu.jpg",
@@ -5099,7 +5111,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Coconut_and_curry_upma.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Cherylsharma",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chettinad-mutton-chukka.jpg",
@@ -5119,7 +5131,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mutton_chana_dal_curry.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "NAVYA",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/nandu-rasam.jpg",
@@ -5129,7 +5141,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Rot_dal_sabji_paneer-Coimbatour-Tamilnadu-4.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Dr Suryakanta Acharya",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/paal-paniyaram.jpg",
@@ -5139,7 +5151,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Puttu_(%E0%B4%AA%E0%B5%81%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Chiring chandan",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/paruppu-payasam.jpg",
@@ -5149,7 +5161,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Payasam_preparation.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Adarshjchandran",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/puliyodarai.jpg",
@@ -5159,7 +5171,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Pongal_Vada_-_A_South_Indian_Breakfast.png",
     "license": "CC BY-SA 4.0",
     "artist": "Shyambabugarlapati",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/thengai-sadam.jpg",
@@ -5169,7 +5181,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mangalorean_Catholic_Ros.jpg",
     "license": "Public domain",
     "artist": "Kensplanet",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/vatha-kuzhambu.jpg",
@@ -5179,7 +5191,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kalaki_(An_Omelette_half_cooked_with_chicken_curry_on_it)_as_served_in_Chennai,Tamil_Nadu..jpg",
     "license": "CC BY-SA 4.0",
     "artist": "KARTY JazZ",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/vellai-paniyaram.jpg",
@@ -5189,7 +5201,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Pakora_of_Kallakurichi.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Thamizhpparithi Maari",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/ulavacharu.jpg",
@@ -5209,7 +5221,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Anarasa.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Raj.Ranveer",
-    "note": "third pass via alias:Anarsa sweet"
+    "note": "third pass via alias:Anarsa sweet; colour-corrected"
   },
   {
     "file": "recipes/badanekayi-ennegayi.jpg",
@@ -5239,7 +5251,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Lunch_at_Curry_Leaf_Cafe_2024-01-20.jpg",
     "license": "CC0",
     "artist": "Andy Li",
-    "note": "third pass via alias:mushroom curry dish"
+    "note": "third pass via alias:mushroom curry dish; colour-corrected"
   },
   {
     "file": "recipes/modur-pulav.jpg",
@@ -5259,7 +5271,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Tehri_With_Kachumbar_Salad.JPG",
     "license": "CC0",
     "artist": "Miansari66",
-    "note": "third pass via wikipedia:Tehri (dish)"
+    "note": "third pass via wikipedia:Tehri (dish); colour-corrected"
   },
   {
     "file": "recipes/kothimbir-vadi.jpg",
@@ -5279,7 +5291,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Jhunka_Bhakri_Marathi_Food_by_Dr._Raju_Kasambe_DSCN0221_(8).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Dr. Raju Kasambe",
-    "note": "third pass via wikipedia:Jhunka"
+    "note": "third pass via wikipedia:Jhunka; colour-corrected"
   },
   {
     "file": "recipes/gundruk-ko-jhol.jpg",
@@ -5289,7 +5301,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Nepali_dal-bhat-tarkari.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Subhashish Panigrahi",
-    "note": "third pass via wikipedia:Nepalese cuisine"
+    "note": "third pass via wikipedia:Nepalese cuisine; colour-corrected"
   },
   {
     "file": "recipes/omita-khar.jpg",
@@ -5309,7 +5321,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Cabbage_and_chana_Singju.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sherin",
-    "note": "third pass via alias:Manipuri peas dish"
+    "note": "third pass via alias:Manipuri peas dish; colour-corrected"
   },
   {
     "file": "recipes/pika-pila.jpg",
@@ -5329,7 +5341,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Pork_and_vegetables_dish_from_Nagareyama,_Chiba_Prefecture;_December_2012.jpg",
     "license": "CC BY 2.0",
     "artist": "t-mizo",
-    "note": "third pass via alias:Mizo cuisine dish"
+    "note": "third pass via alias:Mizo cuisine dish; colour-corrected"
   },
   {
     "file": "recipes/chhatu-rai.jpg",
@@ -5339,7 +5351,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Traditional_Odial_Lunch_Thali.jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Swetapadma07",
-    "note": "third pass via wikipedia:Cuisine of Odisha"
+    "note": "third pass via wikipedia:Cuisine of Odisha; colour-corrected"
   },
   {
     "file": "recipes/saja-pakhala.jpg",
@@ -5369,7 +5381,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Trout_dish,_Rauenthal.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gerda Arendt",
-    "note": "third pass via alias:fried trout dish"
+    "note": "third pass via alias:fried trout dish; colour-corrected"
   },
   {
     "file": "recipes/bharwa-karela.jpg",
@@ -5389,7 +5401,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Curry_(lotus_roots).JPG",
     "license": "CC BY-SA 4.0",
     "artist": "AntanO",
-    "note": "third pass via alias:lotus root curry"
+    "note": "third pass via alias:lotus root curry; colour-corrected"
   },
   {
     "file": "recipes/seyal-bhaji.jpg",
@@ -5399,7 +5411,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Potato-Tomato_Curry.jpeg",
     "license": "CC BY-SA 4.0",
     "artist": "PratishthaSharma1991",
-    "note": "third pass via alias:coriander potato curry"
+    "note": "third pass via alias:coriander potato curry; colour-corrected"
   },
   {
     "file": "recipes/kootu.jpg",
@@ -5409,7 +5421,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Cabbage_kootu.jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Sanjay Acharya",
-    "note": "third pass via alias:Kootu"
+    "note": "third pass via alias:Kootu; colour-corrected"
   },
   {
     "file": "recipes/parsi-dar-ni-pori.jpg",
@@ -5419,7 +5431,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Obbattu.jpg",
     "license": "CC BY 3.0",
     "artist": "GaneshDatta (talk) (Uploads)",
-    "note": "fourth pass, alias 'puran poli'"
+    "note": "fourth pass, alias 'puran poli'; colour-corrected"
   },
   {
     "file": "recipes/parsi-lagan-nu-custard.jpg",
@@ -5429,7 +5441,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Homemade_Flan.jpg",
     "license": "CC BY-SA 2.5",
     "artist": "Cary Bass",
-    "note": "fourth pass, alias 'caramel custard'"
+    "note": "fourth pass, alias 'caramel custard'; colour-corrected"
   },
   {
     "file": "recipes/parsi-ravo.jpg",
@@ -5439,7 +5451,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Rava_Kesari_garnished_with_roasted_dry_fruits.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Pooja Kabirdas",
-    "note": "fourth pass, alias 'rava kesari'"
+    "note": "fourth pass, alias 'rava kesari'; colour-corrected"
   },
   {
     "file": "recipes/roth.jpg",
@@ -5449,7 +5461,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Coconut_and_Banana_Malpua.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Sangram Keshari Senapati",
-    "note": "nearest relative: malpua, a sweet fried dough of the same family"
+    "note": "nearest relative: malpua, a sweet fried dough of the same family; colour-corrected"
   },
   {
     "file": "recipes/gulab-jamun.jpg",
@@ -5459,7 +5471,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Two_Gulab_Jamun_in_a_plate_01.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Suyash.dwivedi",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kulfi.jpg",
@@ -5469,7 +5481,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kulfi_3.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/navratan-korma.jpg",
@@ -5489,7 +5501,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Paneer_Do_Pyaza.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "AlekhyaDas",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chicken-kathi-roll.jpg",
@@ -5509,7 +5521,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kolkata_mutton_biryani.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "DeepanjanGhosh",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/rasmalai.jpg",
@@ -5529,7 +5541,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Dabeli_Stuffing_(Indian_snack).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "SwatiGupta1986",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/veg-biryani.jpg",
@@ -5539,7 +5551,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Vegetable_Biryani_IMG_001.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Phadke09",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/malabar-parotta.jpg",
@@ -5549,7 +5561,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Malabar_Porotta.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Praveen",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/vegetable-korma.jpg",
@@ -5559,7 +5571,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Vegetable_Korma_03.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Vis M",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bhel-puri.jpg",
@@ -5579,7 +5591,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Odia_Style_Dahi_bara_Puri_Odisha-IMG_953.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Subhransuphotography",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/pani-puri.jpg",
@@ -5589,7 +5601,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Indian_cuisine-Panipuri-03.jpg",
     "license": "CC BY-SA 2.0",
     "artist": "Ramakrishna Reddy y",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/ragda-pattice.jpg",
@@ -5599,7 +5611,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Ragda_pattice.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "AKS.9955",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/sev-puri.jpg",
@@ -5609,7 +5621,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Sev_Puri.jpg",
     "license": "CC BY-SA 2.0",
     "artist": "https://www.flickr.com/photos/feastguru_kirti/",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/aloo-tikki.jpg",
@@ -5619,7 +5631,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Aloo_Tikki_-_Homemade_-_Assam_-_DSC_002.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gitika Gayan",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/boondi-raita.jpg",
@@ -5629,7 +5641,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Boondi_Raita.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Ravi Dwivedi",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/bread-pakora.jpg",
@@ -5639,7 +5651,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Bread_Pakora_(Stuffed_with_Mashed-Spicy_Potatoes).JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Mdsmds0",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chapati.jpg",
@@ -5659,7 +5671,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_tikka_masala_at_Yeti_in_Glen_Ellen_2015_-_Sarah_Stierch.jpg",
     "license": "CC BY 4.0",
     "artist": "Missvain",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chole-bhature.jpg",
@@ -5669,7 +5681,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chole_Bhature_1.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/cucumber-raita.jpg",
@@ -5679,17 +5691,21 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Cucumber-raita.jpg",
     "license": "CC BY-SA 2.0",
     "artist": "Sonia Goyal",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/egg-bhurji.jpg",
     "region": "Punjabi",
     "slot": "recipe",
     "wiki_title": "Egg bhurji with pav (bread).jpg",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Egg_bhurji_with_pav_(bread).jpg",
-    "license": "CC BY-SA 4.0",
-    "artist": "Urniel",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Spicy_egg_bhurji_@_the_eggfactory.jpg",
+    "license": "CC BY 2.0",
+    "artist": "Praveen from Bangalore, India",
+    "note": "resized for web; replaces a night street-stall scene with the dish barely visible",
+    "recipe": "egg-bhurji",
+    "width": 1000,
+    "height": 667,
+    "size_bytes": 114189
   },
   {
     "file": "recipes/egg-curry.jpg",
@@ -5699,7 +5715,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Egg_curry_pic.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Ekabhishek",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/fish-tikka.jpg",
@@ -5719,7 +5735,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Garlic_Butter_Naan_Food_by_Ms_Ujwala_Kasambe_DSCN1136_(3).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Dr. Raju Kasambe",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/jalebi.jpg",
@@ -5729,7 +5745,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Jalebi_6.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gannu03",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/jeera-rice.jpg",
@@ -5739,7 +5755,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Jeera-rice.JPG",
     "license": "CC BY-SA 2.0",
     "artist": "Sonia Goyal",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kadai-chicken.jpg",
@@ -5749,7 +5765,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kadai_chicken_by_usamah.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Shiek md usamah",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kadai-paneer.jpg",
@@ -5769,7 +5785,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Malai_Kofta_Curry.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Mrudit161187",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/mango-pickle.jpg",
@@ -5779,7 +5795,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mango_pickle._jpg.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "BHAVAPRIYA J U",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/masala-chai.jpg",
@@ -5796,10 +5812,14 @@
     "region": "Punjabi",
     "slot": "recipe",
     "wiki_title": "Vada Pav with Fresh green coriander and mint Chutney and Garlic chutney.jpg",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Vada_Pav_with_Fresh_green_coriander_and_mint_Chutney_and_Garlic_chutney.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Coriander_mint_chutney.JPG",
     "license": "CC BY-SA 4.0",
-    "artist": "Rainmaker87",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "artist": "Pduaroxxx",
+    "note": "resized for web; replaces a vada pav, with the chutney only smeared on it; colour-corrected",
+    "recipe": "mint-coriander-chutney",
+    "width": 1000,
+    "height": 698,
+    "size_bytes": 54017
   },
   {
     "file": "recipes/mixed-vegetable-pakora.jpg",
@@ -5809,7 +5829,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mixed_Vegetable_Pakora.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Mdsmds0",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/naan.jpg",
@@ -5819,7 +5839,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Naan_is_a_flatbread_found_in_mainly_of_Indian_subcontinent.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Shahzaib Damn Cruze",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/onion-pakora.jpg",
@@ -5839,7 +5859,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Paneer_butter_masala_3.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gannu03",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/samosa.jpg",
@@ -5849,7 +5869,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Samosa_4.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/seekh-kebab.jpg",
@@ -5859,7 +5879,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Seekh_Kebab.JPG",
     "license": "CC BY 2.0",
     "artist": "raasiel",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/lassi.jpg",
@@ -5869,7 +5889,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Lassi_Sweet_or_Salted.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "HARIOM.AWASTHI",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/tamarind-date-chutney.jpg",
@@ -5879,7 +5899,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Jodhpuri_Kanda(Pyaaz)_Kachori_with_tamarind_chutney.jpg",
     "license": "CC0",
     "artist": "PabIoChocobar",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/plain-dosa.jpg",
@@ -5889,7 +5909,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:PLAIN_DOSA_-_Mini_Madras_2026-03-13.jpg",
     "license": "CC0",
     "artist": "Andy Li",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kathi-roll.jpg",
@@ -5899,7 +5919,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Kathi_Roll_(5646735923).jpg",
     "license": "CC BY-SA 2.0",
     "artist": "Andy Mitchell from Glasgow, UK",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chicken-biryani.jpg",
@@ -5909,7 +5929,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_biriyani-_My_cafe_restaurant_-_Meghalaya_DSC_009.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gitika Gayan",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/aloo-chaat.jpg",
@@ -5919,7 +5939,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Aloo_chaat_vendor,_Connaught_Place,_New_Delhi.jpg",
     "license": "CC BY-SA 2.0",
     "artist": "ampersandyslexia",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chicken-tikka.jpg",
@@ -5936,10 +5956,14 @@
     "region": "Punjabi",
     "slot": "recipe",
     "wiki_title": "Costco treats - Lassi.jpg",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Costco_treats_-_Lassi.jpg",
-    "license": "CC BY-SA 4.0",
-    "artist": "Infrogmation of New Orleans",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "source_url": "https://www.flickr.com/photos/49506223@N00/7282461250",
+    "license": "CC BY-SA 2.0",
+    "artist": "Shockingly Tasty",
+    "note": "resized for web; replaces a branded plastic bottle on a counter, with the label legible; colour-corrected",
+    "recipe": "mango-lassi",
+    "width": 500,
+    "height": 500,
+    "size_bytes": 34511
   },
   {
     "file": "recipes/papdi-chaat.jpg",
@@ -5949,7 +5973,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Bhalla_papdi.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Nishlovesfod",
-    "note": "fetched via 'dahi papdi chaat'"
+    "note": "fetched via 'dahi papdi chaat'; colour-corrected"
   },
   {
     "file": "recipes/avakaya.jpg",
@@ -5969,7 +5993,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Bandar_Laddu.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Bal1234",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kodi-vepudu.jpg",
@@ -5979,7 +6003,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kodi_guddu_vepudu.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Radhika41",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/natu-kodi-pulusu.jpg",
@@ -5989,7 +6013,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Natu_kodi_pulusu.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Keerthi93",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/pootharekulu.jpg",
@@ -5999,7 +6023,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Pootharekulu_dry_fruits.jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Balajijagadesh",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/ragi-sangati.jpg",
@@ -6009,7 +6033,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Raagi_Sangati.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Vamsi202",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/anglo-bread-pudding.jpg",
@@ -6039,7 +6063,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_tikka_jalfrezi.jpg",
     "license": "CC BY-SA 2.5",
     "artist": "Tarquin Binary",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/anglo-rissoles.jpg",
@@ -6049,7 +6073,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:02024_0414_Rissole_(rissol).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Silar",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/imarti.jpg",
@@ -6059,7 +6083,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:An_Imarti,_a_sweet_from_West_Bengal,_India,_made_by_deep-frying_vigna_mungo_flour_(later_soaked_in_sugar_syrup),_photographed_by_Yogabrata_Chakraborty_on_June_19,_2023.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Billjones94",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/nalli-nihari.jpg",
@@ -6079,7 +6103,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Rabri_Malpua.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Ms.ithm",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/zarda-pulao.jpg",
@@ -6089,7 +6113,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Afghani_Zarda_Pulao.JPG",
     "license": "CC0",
     "artist": "Miansari66",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/aam-doi.jpg",
@@ -6099,7 +6123,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Aam_doi.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Silvereeds",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kochu-bata.jpg",
@@ -6109,7 +6133,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Food-Kochu-Bata.jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Sumit Surai",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/muri-ghonto.jpg",
@@ -6119,7 +6143,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Muri_ghonto_-2.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Pranab Saikia",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/khakhra.jpg",
@@ -6129,7 +6153,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Gujarati_khakhra.jpg",
     "license": "Public domain",
     "artist": "Randhir. The original uploader was Randhirreddy at English Wikipedia.",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chicken-manchurian.jpg",
@@ -6139,7 +6163,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Manchurian_(Hyderabad_Style)_(11960049916).jpg",
     "license": "CC BY 2.0",
     "artist": "Abhinaba Basu from Redmond, United States",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/crispy-chilli-baby-corn.jpg",
@@ -6169,7 +6193,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Hot-and-Sour-Soup-Bowl.jpg",
     "license": "Public domain",
     "artist": "Evan-Amos",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kolkata-spring-rolls.jpg",
@@ -6189,7 +6213,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Veg_Triple_Schezwan_Fried_Rice_Vishwanand_2026-01-28.jpg",
     "license": "CC0",
     "artist": "Sakurakat",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/wonton-soup.jpg",
@@ -6199,7 +6223,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:FOOD_Wonton_Soup.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Grueslayer",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/goli-baje.jpg",
@@ -6209,7 +6233,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Goli_baje_or_Mangalore_bajji.jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Rayabhari",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/mangalore-buns.jpg",
@@ -6229,7 +6253,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kappa-and-meen-curry.jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Sumitsurai",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/unniyappam.jpg",
@@ -6239,7 +6263,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Unniyappam_makingg.jpg",
     "license": "CC BY-SA 3.0",
     "artist": "irvin calicut",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/chakli.jpg",
@@ -6249,7 +6273,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chakli_(Indian_snack).jpg",
     "license": "CC BY-SA 4.0",
     "artist": "SwatiGupta1986",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/shankarpali.jpg",
@@ -6259,7 +6283,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Shankarpali_sweets_mithai_Western_India_2012.jpg",
     "license": "CC BY 2.0",
     "artist": "Vijay Sonar",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kinema-curry.jpg",
@@ -6269,7 +6293,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Kinema_food-nepal.jpg",
     "license": "CC BY-SA 3.0",
     "artist": "Kaajakocks",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/parsi-chelo-kebab.jpg",
@@ -6299,7 +6323,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Achari_Chicken.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Monali.mishra",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/laccha-paratha.jpg",
@@ -6319,7 +6343,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mooli_Paratha.jpg",
     "license": "CC BY 4.0",
     "artist": "Dr. Chinchu C.",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/pindi-chana.jpg",
@@ -6349,7 +6373,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Dindigul_Thalappakatti_Biryani_1.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Maharana7573",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/murukku.jpg",
@@ -6369,7 +6393,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Corn_Ribbon_Pakoda_The_Grand_Sweets_And_Snacks.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "The Grand Sweets And Snacks",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/seedai.jpg",
@@ -6379,7 +6403,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Uppu_Seedai-Ashwin_restaurant,Attur-Tamilnadu-IMG_20210317_193820.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Nandhinikandhasamy",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/thattai.jpg",
@@ -6389,7 +6413,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Thattai_Image.jpg",
     "license": "CC0",
     "artist": "Krisanthiparax2n",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/menthi-kura-pappu.jpg",
@@ -6399,7 +6423,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Vankaya_Menthi-Kharam.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "MVishnuV",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/perugu-vada.jpg",
@@ -6409,7 +6433,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Dahi_vada_special.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "BHAVYA KAPOOR",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/royyala-vepudu.jpg",
@@ -6419,7 +6443,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Bangladeshi_Prawn_Curry.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Jubair1985",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/dak-bungalow-curry.jpg",
@@ -6429,7 +6453,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chicken_Tikka_Masala_@_Indian%27s_Food_@_Annecy_(27825645419).jpg",
     "license": "CC BY 2.0",
     "artist": "Guilhem Vellut from Annecy, France",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/kedgeree.jpg",
@@ -6439,7 +6463,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Khichdi_%26_Other_Curries.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Prem Kumar Karmakar",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/silbatte-ki-chutney.jpg",
@@ -6449,7 +6473,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Tomato_Chutney_1.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Gaurav Dhwaj Khadka",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
   },
   {
     "file": "recipes/ariselu.jpg",
@@ -6499,7 +6523,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Chital_Fish_Ball_Curry_-_Howrah_20170531122522.jpg",
     "license": "CC BY 3.0",
     "artist": "Biswarup Ganguly",
-    "note": "third pass via alias:chital fish curry"
+    "note": "third pass via alias:chital fish curry; colour-corrected"
   },
   {
     "file": "recipes/ghughra.jpg",
@@ -6509,7 +6533,7 @@
     "source_url": "https://wordpress.org/photos/photo/926459501c/",
     "license": "cc0 1.0",
     "artist": "Dipakkumar Parmar",
-    "note": "found via Openverse, verified by eye"
+    "note": "found via Openverse, verified by eye; colour-corrected"
   },
   {
     "file": "recipes/karimeen-pollichathu.jpg",
@@ -6519,7 +6543,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Fish_cooked_in_banana_leaf.JPG",
     "license": "CC BY-SA 4.0",
     "artist": "Ravirajdayal",
-    "note": "third pass via alias:fish banana leaf Kerala"
+    "note": "third pass via alias:fish banana leaf Kerala; colour-corrected"
   },
   {
     "file": "recipes/kolhapuri-tambda-rassa.jpg",
@@ -6529,7 +6553,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Mutton_Thali,_Children%27s_Chicken_Thali_Surmai_Rawa_Fry,_Maratha_Samrat_Pune.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "PallaviKhale",
-    "note": "third pass via alias:Tambda rassa"
+    "note": "third pass via alias:Tambda rassa; colour-corrected"
   },
   {
     "file": "recipes/parsi-akoori-toast.jpg",
@@ -6549,6 +6573,6 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Ariselu_or_Adhirasam_or_Kajjaya_or_Athirasa.jpg",
     "license": "CC BY-SA 4.0",
     "artist": "Jagisnowjughead",
-    "note": "found via Openverse; the earlier Commons search missed it"
+    "note": "found via Openverse; the earlier Commons search missed it; colour-corrected"
   }
 ]

@@ -114,6 +114,13 @@ def write_html_page(rows, n_files):
       meeting the licence terms rather than a courtesy. It lists all %d images on the site.
       If you believe something here is credited wrongly,
       <a href="feedback.html">tell us</a> and it will be corrected.</p>
+    <!-- CC BY-SA also asks that modification be indicated. Most of these
+         photographs have been resized, and the darker or flatter ones
+         brightened and colour-corrected, so the page says so rather than
+         leaving a reader to assume they are as shot. -->
+    <p class="credits-intro">Photographs are resized for the web, and where one was dark,
+      flat or lit badly it has also been brightened and colour-corrected. Nothing is
+      recomposed or added to. Follow any link below for the photographer's original.</p>
 
 %s
 

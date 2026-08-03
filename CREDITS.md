@@ -113,9 +113,9 @@ this one.
 | `recipes/andhra-kodi-kura.jpg` | Andhra kodi kura (chicken gravy).JPG | CC BY-SA 4.0 | Karteeki4u | [link](https://commons.wikimedia.org/wiki/File:Andhra_kodi_kura_(chicken_gravy).JPG) |
 | `recipes/anglo-bread-pudding.jpg` | Rew13c05-745a Bread Pudding.JPG | CC BY-SA 3.0 | Roly Williams | [link](https://commons.wikimedia.org/wiki/File:Rew13c05-745a_Bread_Pudding.JPG) |
 | `recipes/anglo-coconut-toffee.jpg` | Toffee-Peanuts.jpg | Public domain | Evan-Amos | [link](https://commons.wikimedia.org/wiki/File:Toffee-Peanuts.jpg) |
-| `recipes/anglo-indian-ball-curry.jpg` | LaMelo Ball and Steph Curry (51916614019).jpg | CC BY 2.0 | Erik Drost | [link](https://commons.wikimedia.org/wiki/File:LaMelo_Ball_and_Steph_Curry_(51916614019).jpg) |
+| `recipes/anglo-indian-ball-curry.jpg` | LaMelo Ball and Steph Curry (51916614019).jpg | CC0 | Miansari66 | [link](https://commons.wikimedia.org/wiki/File:Kofta_Curry_(cropped).JPG) |
 | `recipes/anglo-indian-mutton-cutlets.jpg` | Mutton Afgani Cutlet.jpg | CC BY-SA 4.0 | Marajozkee | [link](https://commons.wikimedia.org/wiki/File:Mutton_Afgani_Cutlet.jpg) |
-| `recipes/anglo-indian-pepper-water.jpg` | Peppers in water.jpg | CC0 | ulleo | [link](https://commons.wikimedia.org/wiki/File:Peppers_in_water.jpg) |
+| `recipes/anglo-indian-pepper-water.jpg` | Peppers in water.jpg | Public domain | Miansari66 | [link](https://commons.wikimedia.org/wiki/File:Rasam_Hot.JPG) |
 | `recipes/anglo-rissoles.jpg` | 02024 0414 Rissole (rissol).jpg | CC BY-SA 4.0 | Silar | [link](https://commons.wikimedia.org/wiki/File:02024_0414_Rissole_(rissol).jpg) |
 | `recipes/arhar-ki-dal-awadhi.jpg` | Stuffed Batti with Dal and Gajar ka Halwa.jpg | CC BY-SA 4.0 | Nj02 | [link](https://commons.wikimedia.org/wiki/File:Stuffed_Batti_with_Dal_and_Gajar_ka_Halwa.jpg) |
 | `recipes/arisa-pitha.jpg` | Arisa pitha Odia cuisine.jpg | CC BY 3.0 | Subhashish Panigrahi | [link](https://commons.wikimedia.org/wiki/File:Arisa_pitha_Odia_cuisine.jpg) |
@@ -267,7 +267,7 @@ this one.
 | `recipes/dum-aloo-lucknowi.jpg` | Alur dom & luchi.jpg | CC BY-SA 4.0 | Rocky Masum | [link](https://commons.wikimedia.org/wiki/File:Alur_dom_%26_luchi.jpg) |
 | `recipes/dum-ka-murgh.jpg` | Dum ka Murgh.jpg | CC BY-SA 4.0 | Vis M | [link](https://commons.wikimedia.org/wiki/File:Dum_ka_Murgh.jpg) |
 | `recipes/echorer-dalna.jpg` | Jackfruit curry, Kerala.jpg | CC BY-SA 4.0 | Vis M | [link](https://commons.wikimedia.org/wiki/File:Jackfruit_curry,_Kerala.jpg) |
-| `recipes/egg-bhurji.jpg` | Egg bhurji with pav (bread).jpg | CC BY-SA 4.0 | Urniel | [link](https://commons.wikimedia.org/wiki/File:Egg_bhurji_with_pav_(bread).jpg) |
+| `recipes/egg-bhurji.jpg` | Egg bhurji with pav (bread).jpg | CC BY 2.0 | Praveen from Bangalore, India | [link](https://commons.wikimedia.org/wiki/File:Spicy_egg_bhurji_@_the_eggfactory.jpg) |
 | `recipes/egg-curry.jpg` | Egg curry pic.jpg | CC BY-SA 4.0 | Ekabhishek | [link](https://commons.wikimedia.org/wiki/File:Egg_curry_pic.jpg) |
 | `recipes/erissery.jpg` | Pumpkin, mushroom, chicken, Indian basmati rice cooked.jpg | CC BY 2.0 | Vernon Chan from Kuala Lumpur, Malaysia | [link](https://commons.wikimedia.org/wiki/File:Pumpkin,_mushroom,_chicken,_Indian_basmati_rice_cooked.jpg) |
 | `recipes/eromba.jpg` | Ingredients for making traditional Meitei food, Eromba (alias Iromba, Eronba, Ironba) - Classical Meitei cuisine of Kangleipak.jpg | CC BY 4.0 | Haoreima | [link](https://commons.wikimedia.org/wiki/File:Ingredients_for_making_traditional_Meitei_food,_Eromba_(alias_Iromba,_Eronba,_Ironba)_-_Classical_Meitei_cuisine_of_Kangleipak.jpg) |
@@ -412,9 +412,9 @@ this one.
 | `recipes/malai-kofta.jpg` | Malai Kofta Curry.jpg | CC BY-SA 4.0 | Mrudit161187 | [link](https://commons.wikimedia.org/wiki/File:Malai_Kofta_Curry.jpg) |
 | `recipes/malpua.jpg` | Rajasthani Malpua.jpg | CC BY-SA 4.0 | Acoomar | [link](https://commons.wikimedia.org/wiki/File:Rajasthani_Malpua.jpg) |
 | `recipes/manchow-soup.jpg` | Manchow soup - Indo-Chinese cuisine.jpg | CC BY-SA 4.0 | Sarkar Sayantan | [link](https://commons.wikimedia.org/wiki/File:Manchow_soup_-_Indo-Chinese_cuisine.jpg) |
-| `recipes/mandua-ki-roti.jpg` | Photograph of Udham Singh rolling dough to make roti (Indian flatbread), London, England, ca.1938.gif | Public domain | Unknown photographer | [link](https://commons.wikimedia.org/wiki/File:Photograph_of_Udham_Singh_rolling_dough_to_make_roti_(Indian_flatbread),_London,_England,_ca.1938.gif) |
+| `recipes/mandua-ki-roti.jpg` | Photograph of Udham Singh rolling dough to make roti (Indian flatbread), London, England, ca.1938.gif | CC BY-SA 4.0 | Meena Kharatmal | [link](https://commons.wikimedia.org/wiki/File:Ghol_bhaji_nachni_bhakri.jpg) |
 | `recipes/mangalore-buns.jpg` | Mangalore Bun + Pickle (4307171460).jpg | CC BY 2.0 | Manish Chauhan from Bangalore, India | [link](https://commons.wikimedia.org/wiki/File:Mangalore_Bun_%2B_Pickle_(4307171460).jpg) |
-| `recipes/mango-lassi.jpg` | Costco treats - Lassi.jpg | CC BY-SA 4.0 | Infrogmation of New Orleans | [link](https://commons.wikimedia.org/wiki/File:Costco_treats_-_Lassi.jpg) |
+| `recipes/mango-lassi.jpg` | Costco treats - Lassi.jpg | CC BY-SA 2.0 | Shockingly Tasty | [link](https://www.flickr.com/photos/49506223@N00/7282461250) |
 | `recipes/mango-pickle.jpg` | Mango pickle. jpg.jpg | CC BY-SA 4.0 | BHAVAPRIYA J U | [link](https://commons.wikimedia.org/wiki/File:Mango_pickle._jpg.jpg) |
 | `recipes/mangodi-ki-sabzi.jpg` | Delicious tomato dal (1861335231).jpg | CC BY 2.0 | Upendra Kanda | [link](https://commons.wikimedia.org/wiki/File:Delicious_tomato_dal_(1861335231).jpg) |
 | `recipes/marchwangan-korma.jpg` | Mutton rogan Josh (kashmiri cuisine).jpg | CC BY-SA 4.0 | Rajatsingh8808 | [link](https://commons.wikimedia.org/wiki/File:Mutton_rogan_Josh_(kashmiri_cuisine).jpg) |
@@ -436,7 +436,7 @@ this one.
 | `recipes/methi-muthiya.jpg` | Methi Muthiya ( fried ).jpg | CC BY-SA 4.0 | Sushant savla | [link](https://commons.wikimedia.org/wiki/File:Methi_Muthiya_(_fried_).jpg) |
 | `recipes/methi-thepla.jpg` | Masala thepla with Methi kela.JPG | CC BY-SA 4.0 | Rupasree | [link](https://commons.wikimedia.org/wiki/File:Masala_thepla_with_Methi_kela.JPG) |
 | `recipes/milagu-kuzhambu.jpg` | Tamil Nadu Fish Curry.jpg | CC BY-SA 4.0 | Deviselvam | [link](https://commons.wikimedia.org/wiki/File:Tamil_Nadu_Fish_Curry.jpg) |
-| `recipes/mint-coriander-chutney.jpg` | Vada Pav with Fresh green coriander and mint Chutney and Garlic chutney.jpg | CC BY-SA 4.0 | Rainmaker87 | [link](https://commons.wikimedia.org/wiki/File:Vada_Pav_with_Fresh_green_coriander_and_mint_Chutney_and_Garlic_chutney.jpg) |
+| `recipes/mint-coriander-chutney.jpg` | Vada Pav with Fresh green coriander and mint Chutney and Garlic chutney.jpg | CC BY-SA 4.0 | Pduaroxxx | [link](https://commons.wikimedia.org/wiki/File:Coriander_mint_chutney.JPG) |
 | `recipes/mirchi-ka-salan.jpg` | Mirchi ka salan and Dahi chutney.jpg | CC BY-SA 3.0 | Randhirreddy at English Wikipedia | [link](https://commons.wikimedia.org/wiki/File:Mirchi_ka_salan_and_Dahi_chutney.jpg) |
 | `recipes/mirchi-vada.jpg` | GARLIC MIRCHI VADA.jpg | CC BY-SA 4.0 | SS Khurana | [link](https://commons.wikimedia.org/wiki/File:GARLIC_MIRCHI_VADA.jpg) |
 | `recipes/mishti-doi.jpg` | Mishti Doi.jpg | CC BY 2.0 | Kirti Poddar | [link](https://commons.wikimedia.org/wiki/File:Mishti_Doi.jpg) |
