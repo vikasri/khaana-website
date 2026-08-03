@@ -2365,21 +2365,21 @@
     "file": "recipes/jowar-bhakri.jpg",
     "region": "Maharashtrian",
     "slot": "recipe",
-    "wiki_title": "Harbharyachi bhaji with toor dal jowar bhakri bharli mirchi salad dahi.jpg",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Harbharyachi_bhaji_with_toor_dal_jowar_bhakri_bharli_mirchi_salad_dahi.jpg",
-    "license": "CC BY-SA 4.0",
-    "artist": "Meena Kharatmal",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "wiki_title": "An Indian Dish of Bitter gourd, Jowar bhakri (Bread) and",
+    "source_url": "https://wordpress.org/photos/photo/930661f3d1/",
+    "license": "cc0 1.0",
+    "artist": "Makarand Mane",
+    "note": "found via Openverse, verified by eye"
   },
   {
     "file": "recipes/kanda-poha.jpg",
     "region": "Maharashtrian",
     "slot": "recipe",
-    "wiki_title": "Kanda Poha is Favourite Breakfast of Maharashtrian Peoples.jpg",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Kanda_Poha_is_Favourite_Breakfast_of_Maharashtrian_Peoples.jpg",
-    "license": "CC BY-SA 4.0",
-    "artist": "Cadat7",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "wiki_title": "Kanda Poha",
+    "source_url": "https://wordpress.org/photos/photo/336624c4a1/",
+    "license": "cc0 1.0",
+    "artist": "Suresh Shinde",
+    "note": "found via Openverse, verified by eye"
   },
   {
     "file": "recipes/katachi-amti.jpg",
@@ -3695,11 +3695,11 @@
     "file": "recipes/ambot-tik.jpg",
     "region": "Goan",
     "slot": "recipe",
-    "wiki_title": "Meen curry 2 (cropped).JPG",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Meen_curry_2_(cropped).JPG",
-    "license": "CC BY-SA 2.5",
-    "artist": "Kalakki at ml.wikipedia",
-    "note": "fetched by tools/fetch-recipe-images.py"
+    "wiki_title": "Kite fish ambot-tik",
+    "source_url": "https://www.flickr.com/photos/87799359@N03/15469328378",
+    "license": "by-sa 2.0",
+    "artist": "goanfishcurryrice3",
+    "note": "found via Openverse, verified by eye"
   },
   {
     "file": "recipes/batata-song.jpg",
@@ -6505,11 +6505,11 @@
     "file": "recipes/ghughra.jpg",
     "region": "Gujarati",
     "slot": "recipe",
-    "wiki_title": "Sweet Gujiya Recipe.JPG",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Sweet_Gujiya_Recipe.JPG",
-    "license": "CC BY-SA 4.0",
-    "artist": "Vashisthapathak2015",
-    "note": "third pass via alias:Gujiya"
+    "wiki_title": "Ghughra can be enjoyed as a snack during morning or afte",
+    "source_url": "https://wordpress.org/photos/photo/926459501c/",
+    "license": "cc0 1.0",
+    "artist": "Dipakkumar Parmar",
+    "note": "found via Openverse, verified by eye"
   },
   {
     "file": "recipes/karimeen-pollichathu.jpg",
