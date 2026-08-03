@@ -1,0 +1,3949 @@
+{
+  "weak": [
+    {
+      "id": "olan",
+      "name": "Olan",
+      "region": "Kerala",
+      "faults": [
+        "low resolution (640x480)",
+        "flat",
+        "colourless"
+      ],
+      "credit": "DivergenTribute",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ash_Gourd_(Kumblanga)_%22Olan%22.jpg",
+      "w": 640,
+      "h": 480,
+      "pixels": 307200,
+      "kb": 46,
+      "sharpness": 866.4,
+      "mean": 133.9,
+      "contrast": 30.6,
+      "saturation": 0.1
+    },
+    {
+      "id": "sanna",
+      "name": "Sanna",
+      "region": "Goan",
+      "faults": [
+        "low resolution (390x255)",
+        "flat",
+        "colourless"
+      ],
+      "credit": "Kensplanet",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Sanna_(Commons).jpg",
+      "w": 390,
+      "h": 255,
+      "pixels": 99450,
+      "kb": 17,
+      "sharpness": 1462.0,
+      "mean": 180.0,
+      "contrast": 43.3,
+      "saturation": 0.22
+    },
+    {
+      "id": "rasgulla",
+      "name": "Rasgulla",
+      "region": "Bengali",
+      "faults": [
+        "soft or blurred",
+        "still dark after correction"
+      ],
+      "credit": "Mdsmds0",
+      "license": "CC BY-SA 4.0",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/a/af/Rasgulla_Sweet.JPG",
+      "w": 1600,
+      "h": 1200,
+      "pixels": 1920000,
+      "kb": 278,
+      "sharpness": 72.6,
+      "mean": 73.0,
+      "contrast": 72.5,
+      "saturation": 0.34
+    },
+    {
+      "id": "chettinad-egg-curry",
+      "name": "Chettinad Muttai Masala",
+      "region": "Tamil Nadu",
+      "faults": [
+        "low resolution (720x540)",
+        "still dark after correction"
+      ],
+      "credit": "Hrishikes",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Egg_roll.jpg",
+      "w": 720,
+      "h": 540,
+      "pixels": 388800,
+      "kb": 42,
+      "sharpness": 376.2,
+      "mean": 103.2,
+      "contrast": 73.6,
+      "saturation": 0.62
+    },
+    {
+      "id": "neer-dosa",
+      "name": "Neer Dosa",
+      "region": "Karnataka",
+      "faults": [
+        "still dark after correction",
+        "subject may be wrong"
+      ],
+      "credit": "Yakshitha",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Neer_Dosa(_Neer_Tellavu).jpg",
+      "w": 1280,
+      "h": 2851,
+      "pixels": 3649280,
+      "kb": 599,
+      "sharpness": 727.1,
+      "mean": 69.1,
+      "contrast": 84.5,
+      "saturation": 0.41
+    },
+    {
+      "id": "more-kuzhambu",
+      "name": "More Kuzhambu",
+      "region": "Tamil Nadu",
+      "faults": [
+        "low resolution (512x512)",
+        "colourless"
+      ],
+      "credit": "Cherylsharma",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Coconut_and_curry_upma.jpg",
+      "w": 512,
+      "h": 512,
+      "pixels": 262144,
+      "kb": 24,
+      "sharpness": 1044.1,
+      "mean": 105.7,
+      "contrast": 91.8,
+      "saturation": 0.14
+    },
+    {
+      "id": "kumaoni-raita",
+      "name": "Kumaoni Raita",
+      "region": "Pahari",
+      "faults": [
+        "low resolution (400x346)",
+        "flat"
+      ],
+      "credit": "Elisabeth Nara at English Wikipedia",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Raita_with_cucumber_and_mint.jpg",
+      "w": 400,
+      "h": 346,
+      "pixels": 138400,
+      "kb": 20,
+      "sharpness": 1050.1,
+      "mean": 177.1,
+      "contrast": 43.0,
+      "saturation": 0.34
+    },
+    {
+      "id": "gobi-manchurian",
+      "name": "Gobi Manchurian",
+      "region": "Indo-Chinese",
+      "faults": [
+        "low resolution (800x600)",
+        "still dark after correction"
+      ],
+      "credit": "scaredy_kat",
+      "license": "CC BY 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Gobi_manchurian.jpg",
+      "w": 800,
+      "h": 600,
+      "pixels": 480000,
+      "kb": 96,
+      "sharpness": 1099.5,
+      "mean": 64.3,
+      "contrast": 49.8,
+      "saturation": 0.46
+    },
+    {
+      "id": "qubani-ka-meetha",
+      "name": "Qubani ka Meetha",
+      "region": "Hyderabadi",
+      "faults": [
+        "still dark after correction",
+        "flat"
+      ],
+      "credit": "Miansari66",
+      "license": "CC0",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Khobani_Ka_Meetha.JPG",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 213,
+      "sharpness": 1104.8,
+      "mean": 60.0,
+      "contrast": 43.6,
+      "saturation": 0.89
+    },
+    {
+      "id": "bobbatlu",
+      "name": "Bobbatlu",
+      "region": "Andhra",
+      "faults": [
+        "low resolution (1000x462)",
+        "flat"
+      ],
+      "credit": "K.Venkataramana",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nethi_Bobbatlu.jpg",
+      "w": 1000,
+      "h": 462,
+      "pixels": 462000,
+      "kb": 71,
+      "sharpness": 1110.8,
+      "mean": 165.6,
+      "contrast": 43.5,
+      "saturation": 0.26
+    },
+    {
+      "id": "mango-lassi",
+      "name": "Mango Lassi",
+      "region": "Punjabi",
+      "faults": [
+        "low resolution (500x500)",
+        "still dark after correction"
+      ],
+      "credit": "Shockingly Tasty",
+      "license": "CC BY-SA 2.0",
+      "source": "https://www.flickr.com/photos/49506223@N00/7282461250",
+      "w": 500,
+      "h": 500,
+      "pixels": 250000,
+      "kb": 39,
+      "sharpness": 1426.3,
+      "mean": 81.8,
+      "contrast": 74.5,
+      "saturation": 0.59
+    },
+    {
+      "id": "fish-caldine",
+      "name": "Fish Caldine",
+      "region": "Goan",
+      "faults": [
+        "still dark after correction",
+        "colourless"
+      ],
+      "credit": "Fredericknoronha",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fish-curry-rice,_Goan-style_02.jpg",
+      "w": 1000,
+      "h": 665,
+      "pixels": 665000,
+      "kb": 107,
+      "sharpness": 1682.7,
+      "mean": 77.8,
+      "contrast": 64.0,
+      "saturation": 0.07
+    },
+    {
+      "id": "pesarattu",
+      "name": "Pesarattu",
+      "region": "Andhra",
+      "faults": [
+        "low resolution (400x301)",
+        "flat"
+      ],
+      "credit": "Ryallabandi at en.wikipedia",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pesarattu.jpg",
+      "w": 400,
+      "h": 301,
+      "pixels": 120400,
+      "kb": 32,
+      "sharpness": 1864.1,
+      "mean": 138.5,
+      "contrast": 40.8,
+      "saturation": 0.45
+    },
+    {
+      "id": "sattu-paratha",
+      "name": "Sattu ka Paratha",
+      "region": "Bihari",
+      "faults": [
+        "still dark after correction",
+        "colourless"
+      ],
+      "credit": "Neha Sonal",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sattu_Ke_Parathe.JPG",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 135,
+      "sharpness": 1922.0,
+      "mean": 103.8,
+      "contrast": 83.9,
+      "saturation": 0.16
+    },
+    {
+      "id": "thengai-sadam",
+      "name": "Thengai Sadam",
+      "region": "Tamil Nadu",
+      "faults": [
+        "low resolution (344x235)",
+        "colourless"
+      ],
+      "credit": "Kensplanet",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Mangalorean_Catholic_Ros.jpg",
+      "w": 344,
+      "h": 235,
+      "pixels": 80840,
+      "kb": 16,
+      "sharpness": 2319.2,
+      "mean": 132.6,
+      "contrast": 69.4,
+      "saturation": 0.18
+    },
+    {
+      "id": "goli-baje",
+      "name": "Goli Baje",
+      "region": "Karnataka",
+      "faults": [
+        "still dark after correction",
+        "colourless"
+      ],
+      "credit": "Rayabhari",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Goli_baje_or_Mangalore_bajji.jpg",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 164,
+      "sharpness": 3447.6,
+      "mean": 64.3,
+      "contrast": 71.0,
+      "saturation": 0.2
+    },
+    {
+      "id": "missi-roti",
+      "name": "Missi Roti",
+      "region": "Punjabi",
+      "faults": [
+        "low resolution (500x375)",
+        "flat"
+      ],
+      "credit": "Soniya Goyal from Jaipur, India",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Missi_Roti_Recipe_(27427169530).jpg",
+      "w": 500,
+      "h": 375,
+      "pixels": 187500,
+      "kb": 55,
+      "sharpness": 3483.8,
+      "mean": 157.9,
+      "contrast": 32.0,
+      "saturation": 0.5
+    },
+    {
+      "id": "kanika",
+      "name": "Kanika",
+      "region": "Odia",
+      "faults": [
+        "low resolution (1000x473)",
+        "still dark after correction"
+      ],
+      "credit": "Soumyasmita Mallick",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kanika_and_dalma.jpg",
+      "w": 1000,
+      "h": 473,
+      "pixels": 473000,
+      "kb": 125,
+      "sharpness": 4090.4,
+      "mean": 104.6,
+      "contrast": 80.2,
+      "saturation": 0.37
+    },
+    {
+      "id": "chettinad-kuzhi-paniyaram",
+      "name": "Kuzhi Paniyaram",
+      "region": "Tamil Nadu",
+      "faults": [
+        "still dark after correction",
+        "colourless"
+      ],
+      "credit": "Thamizhpparithi Maari",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A_shot_of_Kuzhi_paniyaram_making.JPG",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 179,
+      "sharpness": 4813.7,
+      "mean": 93.7,
+      "contrast": 77.6,
+      "saturation": 0.16
+    },
+    {
+      "id": "vada-pav",
+      "name": "Vada Pav",
+      "region": "Maharashtrian",
+      "faults": [
+        "soft or blurred"
+      ],
+      "credit": "Rutvi Mistry",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vada_Pav-Indian_street_food.JPG",
+      "w": 1600,
+      "h": 1066,
+      "pixels": 1705600,
+      "kb": 217,
+      "sharpness": 117.7,
+      "mean": 134.0,
+      "contrast": 73.5,
+      "saturation": 0.48
+    },
+    {
+      "id": "maharashtrian-basundi",
+      "name": "Maharashtrian Basundi",
+      "region": "Maharashtrian",
+      "faults": [
+        "low resolution (893x490)"
+      ],
+      "credit": "Wefffrrr",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Basundi_in_Maharashtrian_style.jpg",
+      "w": 893,
+      "h": 490,
+      "pixels": 437570,
+      "kb": 42,
+      "sharpness": 138.9,
+      "mean": 125.8,
+      "contrast": 73.0,
+      "saturation": 0.49
+    },
+    {
+      "id": "dahi-pakhala",
+      "name": "Dahi Pakhala",
+      "region": "Odia",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Sangram Keshari Senapati",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dahi_Pakhala_for_Pakhala_Dibasa.jpg",
+      "w": 1200,
+      "h": 800,
+      "pixels": 960000,
+      "kb": 157,
+      "sharpness": 165.8,
+      "mean": 100.2,
+      "contrast": 50.1,
+      "saturation": 0.28
+    },
+    {
+      "id": "aam-doi",
+      "name": "Aam Doi",
+      "region": "Bengali",
+      "faults": [
+        "low resolution (720x540)"
+      ],
+      "credit": "Silvereeds",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Aam_doi.jpg",
+      "w": 720,
+      "h": 540,
+      "pixels": 388800,
+      "kb": 43,
+      "sharpness": 201.6,
+      "mean": 124.5,
+      "contrast": 68.4,
+      "saturation": 0.47
+    },
+    {
+      "id": "momos",
+      "name": "Momos",
+      "region": "Northeast Indian",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "efk.apple",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:North_Eastern_Momos_(Macro).JPG",
+      "w": 1800,
+      "h": 1350,
+      "pixels": 2430000,
+      "kb": 367,
+      "sharpness": 205.3,
+      "mean": 82.9,
+      "contrast": 59.1,
+      "saturation": 0.31
+    },
+    {
+      "id": "siddu",
+      "name": "Siddu",
+      "region": "Pahari",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "Gannu03",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Siddu_(73518).jpg",
+      "w": 1280,
+      "h": 1707,
+      "pixels": 2184960,
+      "kb": 208,
+      "sharpness": 205.4,
+      "mean": 106.5,
+      "contrast": 69.4,
+      "saturation": 0.21
+    },
+    {
+      "id": "govind-gatte",
+      "name": "Govind Gatte",
+      "region": "Rajasthani",
+      "faults": [
+        "flat"
+      ],
+      "credit": "Gaurav Dhwaj Khadka",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kadhi_1.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 133,
+      "sharpness": 220.6,
+      "mean": 131.7,
+      "contrast": 41.5,
+      "saturation": 0.6
+    },
+    {
+      "id": "sepu-vadi",
+      "name": "Sepu Vadi",
+      "region": "Pahari",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Likhita Suresh",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Humble_wholesome_Spinach_Dal_with_rice.JPG",
+      "w": 1000,
+      "h": 666,
+      "pixels": 666000,
+      "kb": 73,
+      "sharpness": 238.3,
+      "mean": 94.9,
+      "contrast": 72.8,
+      "saturation": 0.42
+    },
+    {
+      "id": "galouti-kebab",
+      "name": "Galouti Kebab",
+      "region": "Awadhi/Lucknowi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Fatimahope",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mouth_Watering_Gauloti_Kababs.jpg",
+      "w": 1800,
+      "h": 1350,
+      "pixels": 2430000,
+      "kb": 539,
+      "sharpness": 256.2,
+      "mean": 92.0,
+      "contrast": 60.4,
+      "saturation": 0.46
+    },
+    {
+      "id": "kulfi",
+      "name": "Kulfi",
+      "region": "Awadhi/Lucknowi",
+      "faults": [
+        "flat"
+      ],
+      "credit": "Gaurav Dhwaj Khadka",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kulfi_3.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 126,
+      "sharpness": 265.8,
+      "mean": 124.5,
+      "contrast": 42.2,
+      "saturation": 0.51
+    },
+    {
+      "id": "chole",
+      "name": "Chole",
+      "region": "Punjabi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Dheerajk88",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chole_Bhature_from_Nagpur.JPG",
+      "w": 1000,
+      "h": 564,
+      "pixels": 564000,
+      "kb": 95,
+      "sharpness": 281.5,
+      "mean": 96.4,
+      "contrast": 82.8,
+      "saturation": 0.53
+    },
+    {
+      "id": "parsi-ravo",
+      "name": "Ravo",
+      "region": "Parsi",
+      "faults": [
+        "low resolution (640x480)"
+      ],
+      "credit": "Pooja Kabirdas",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rava_Kesari_garnished_with_roasted_dry_fruits.jpg",
+      "w": 640,
+      "h": 480,
+      "pixels": 307200,
+      "kb": 38,
+      "sharpness": 345.0,
+      "mean": 133.9,
+      "contrast": 55.8,
+      "saturation": 0.39
+    },
+    {
+      "id": "gatta-pulao",
+      "name": "Gatta Pulao",
+      "region": "Rajasthani",
+      "faults": [
+        "flat"
+      ],
+      "credit": "Nizil Shah",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Besan_Gatta_Sabji.jpg",
+      "w": 1000,
+      "h": 1328,
+      "pixels": 1328000,
+      "kb": 169,
+      "sharpness": 368.4,
+      "mean": 140.4,
+      "contrast": 42.8,
+      "saturation": 0.44
+    },
+    {
+      "id": "lassi",
+      "name": "Sweet or Salted Lassi",
+      "region": "Punjabi",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "HARIOM.AWASTHI",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lassi_Sweet_or_Salted.JPG",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 97,
+      "sharpness": 381.4,
+      "mean": 122.5,
+      "contrast": 69.3,
+      "saturation": 0.15
+    },
+    {
+      "id": "mangodi-ki-sabzi",
+      "name": "Mangodi ki Sabzi",
+      "region": "Rajasthani",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Upendra Kanda",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Delicious_tomato_dal_(1861335231).jpg",
+      "w": 1000,
+      "h": 665,
+      "pixels": 665000,
+      "kb": 81,
+      "sharpness": 383.0,
+      "mean": 101.2,
+      "contrast": 65.4,
+      "saturation": 0.48
+    },
+    {
+      "id": "koki",
+      "name": "Koki",
+      "region": "Sindhi",
+      "faults": [
+        "low resolution (640x480)"
+      ],
+      "credit": "Bandrefam",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Koki_banane_poyo.jpg",
+      "w": 640,
+      "h": 480,
+      "pixels": 307200,
+      "kb": 35,
+      "sharpness": 425.0,
+      "mean": 134.0,
+      "contrast": 50.3,
+      "saturation": 0.39
+    },
+    {
+      "id": "pazham-pori",
+      "name": "Pazham Pori",
+      "region": "Kerala",
+      "faults": [
+        "low resolution (1000x462)"
+      ],
+      "credit": "Aiwin Soji",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pazham_pori_with_beef_roast.jpg",
+      "w": 1000,
+      "h": 462,
+      "pixels": 462000,
+      "kb": 49,
+      "sharpness": 437.1,
+      "mean": 133.3,
+      "contrast": 66.2,
+      "saturation": 0.44
+    },
+    {
+      "id": "chamthong",
+      "name": "Chamthong",
+      "region": "Northeast Indian",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "User:Andrew Jabakumar",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hanggam_Thongba_(or_Hangam_Chamthong_or_Kangshoi_or_Kangsoi)_-_mustard_stew_-_Traditional_Meitei_cuisine_-_Gastronomic_cultural_heritage_of_Manipur_%26_domestic_and_international_Meitei_diasporas.jpg",
+      "w": 1000,
+      "h": 1000,
+      "pixels": 1000000,
+      "kb": 136,
+      "sharpness": 451.5,
+      "mean": 59.9,
+      "contrast": 46.2,
+      "saturation": 0.55
+    },
+    {
+      "id": "silbatte-ki-chutney",
+      "name": "Silbatte ki Chutney",
+      "region": "Bihari",
+      "faults": [
+        "flat"
+      ],
+      "credit": "Gaurav Dhwaj Khadka",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tomato_Chutney_1.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 173,
+      "sharpness": 462.3,
+      "mean": 108.5,
+      "contrast": 41.7,
+      "saturation": 0.56
+    },
+    {
+      "id": "khandvi",
+      "name": "Khandvi",
+      "region": "Gujarati",
+      "faults": [
+        "low resolution (640x480)"
+      ],
+      "credit": "Kirti Poddar",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Khandvi,_Gujarati_snack.jpg",
+      "w": 640,
+      "h": 480,
+      "pixels": 307200,
+      "kb": 45,
+      "sharpness": 508.2,
+      "mean": 140.1,
+      "contrast": 54.6,
+      "saturation": 0.91
+    },
+    {
+      "id": "lucknowi-biryani",
+      "name": "Lucknowi Dum Biryani",
+      "region": "Awadhi/Lucknowi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Kalesh",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lucknowi_Mutton_Matka_Dum_Biriyani.jpg",
+      "w": 1800,
+      "h": 1013,
+      "pixels": 1823400,
+      "kb": 471,
+      "sharpness": 539.1,
+      "mean": 94.6,
+      "contrast": 59.9,
+      "saturation": 0.48
+    },
+    {
+      "id": "parsi-kolmi-no-patio",
+      "name": "Kolmi no Patio",
+      "region": "Parsi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Bulbul10",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tawa_Prawn,_New_Delhi.jpg",
+      "w": 1000,
+      "h": 666,
+      "pixels": 666000,
+      "kb": 79,
+      "sharpness": 566.6,
+      "mean": 97.1,
+      "contrast": 65.4,
+      "saturation": 0.31
+    },
+    {
+      "id": "bharwa-karela",
+      "name": "Bharwa Karela",
+      "region": "Punjabi",
+      "faults": [
+        "low resolution (800x413)"
+      ],
+      "credit": "KoyeliC",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pur_Vara_Karola.jpg",
+      "w": 800,
+      "h": 413,
+      "pixels": 330400,
+      "kb": 49,
+      "sharpness": 602.4,
+      "mean": 124.4,
+      "contrast": 62.6,
+      "saturation": 0.32
+    },
+    {
+      "id": "dal-baati-churma",
+      "name": "Dal Baati Churma",
+      "region": "Rajasthani",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Niranjan.gohane",
+      "license": "CC BY-SA 4.0",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/0/0b/DalBati.jpg",
+      "w": 1600,
+      "h": 1200,
+      "pixels": 1920000,
+      "kb": 455,
+      "sharpness": 627.6,
+      "mean": 74.4,
+      "contrast": 50.1,
+      "saturation": 0.54
+    },
+    {
+      "id": "parsi-kheema-par-eeda",
+      "name": "Kheema Par Eeda",
+      "region": "Parsi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "stu_spivack",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mutton_rogan_josh.jpg",
+      "w": 1000,
+      "h": 665,
+      "pixels": 665000,
+      "kb": 83,
+      "sharpness": 634.7,
+      "mean": 82.1,
+      "contrast": 62.2,
+      "saturation": 0.84
+    },
+    {
+      "id": "kolambi-bhaat",
+      "name": "Kolambi Bhaat",
+      "region": "Maharashtrian",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Sunshinegal10",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Prawn_Schezwan_Rice.jpg",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 134,
+      "sharpness": 660.2,
+      "mean": 80.7,
+      "contrast": 65.4,
+      "saturation": 0.58
+    },
+    {
+      "id": "gahat-ki-dal",
+      "name": "Gahat ki Dal",
+      "region": "Pahari",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Neha Sonal",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dal,_part_of_the_Indian_staple_diet.jpg",
+      "w": 1000,
+      "h": 562,
+      "pixels": 562000,
+      "kb": 84,
+      "sharpness": 662.9,
+      "mean": 91.6,
+      "contrast": 73.9,
+      "saturation": 0.54
+    },
+    {
+      "id": "idiyappam",
+      "name": "Kerala Idiyappam",
+      "region": "Kerala",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "Viewfinder18",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Idiyappam_with_Egg_Masala_Curry.jpg",
+      "w": 1000,
+      "h": 773,
+      "pixels": 773000,
+      "kb": 110,
+      "sharpness": 721.6,
+      "mean": 126.9,
+      "contrast": 71.6,
+      "saturation": 0.25
+    },
+    {
+      "id": "chilli-chicken",
+      "name": "Chilli Chicken",
+      "region": "Indo-Chinese",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Gaurav Dhwaj Khadka",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chicken_Chilli_1.jpg",
+      "w": 1280,
+      "h": 1707,
+      "pixels": 2184960,
+      "kb": 401,
+      "sharpness": 741.7,
+      "mean": 98.5,
+      "contrast": 52.8,
+      "saturation": 0.54
+    },
+    {
+      "id": "bihari-tamatar-chokha",
+      "name": "Tamatar Chokha",
+      "region": "Bihari",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "RASHMITHAKURSHARMA",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bihari_Cusine-_Litti_and_its_associates.JPG",
+      "w": 1000,
+      "h": 666,
+      "pixels": 666000,
+      "kb": 93,
+      "sharpness": 744.4,
+      "mean": 118.5,
+      "contrast": 81.8,
+      "saturation": 0.22
+    },
+    {
+      "id": "sakkarai-pongal",
+      "name": "Sakkarai Pongal",
+      "region": "Tamil Nadu",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "selvam",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sakkarai_pongal_with_milk.jpg",
+      "w": 1000,
+      "h": 664,
+      "pixels": 664000,
+      "kb": 90,
+      "sharpness": 754.4,
+      "mean": 90.2,
+      "contrast": 64.4,
+      "saturation": 0.34
+    },
+    {
+      "id": "kandarappam",
+      "name": "Kandarappam",
+      "region": "Tamil Nadu",
+      "faults": [
+        "low resolution (800x600)"
+      ],
+      "credit": "Rajan1981",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kandarappam.jpg",
+      "w": 800,
+      "h": 600,
+      "pixels": 480000,
+      "kb": 83,
+      "sharpness": 761.7,
+      "mean": 126.4,
+      "contrast": 68.7,
+      "saturation": 0.55
+    },
+    {
+      "id": "mitho-lolo",
+      "name": "Mitho Lolo",
+      "region": "Sindhi",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "Ananth Pattabiraman",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Yogurt_and_Rice_aka_Curd_Rice.jpg",
+      "w": 1000,
+      "h": 562,
+      "pixels": 562000,
+      "kb": 96,
+      "sharpness": 764.9,
+      "mean": 151.3,
+      "contrast": 52.1,
+      "saturation": 0.17
+    },
+    {
+      "id": "chilli-tofu",
+      "name": "Chilli Tofu",
+      "region": "Indo-Chinese",
+      "faults": [
+        "low resolution (590x788)"
+      ],
+      "credit": "sunny mama",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tofu_fries_with_sweet_chilli_sauce_(19172708213).jpg",
+      "w": 590,
+      "h": 788,
+      "pixels": 464920,
+      "kb": 85,
+      "sharpness": 787.4,
+      "mean": 149.1,
+      "contrast": 63.4,
+      "saturation": 0.45
+    },
+    {
+      "id": "anglo-indian-pepper-water",
+      "name": "Pepper Water",
+      "region": "Anglo-Indian",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Miansari66",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Rasam_Hot.JPG",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 94,
+      "sharpness": 788.9,
+      "mean": 83.2,
+      "contrast": 73.7,
+      "saturation": 0.26
+    },
+    {
+      "id": "makki-di-roti",
+      "name": "Makki di Roti",
+      "region": "Punjabi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Vsigamany",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Makki_Di_Roti.JPG",
+      "w": 1000,
+      "h": 666,
+      "pixels": 666000,
+      "kb": 114,
+      "sharpness": 800.1,
+      "mean": 95.4,
+      "contrast": 74.5,
+      "saturation": 0.51
+    },
+    {
+      "id": "upma",
+      "name": "Upma",
+      "region": "Tamil Nadu",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Intodustin",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Upma_South_India.JPG",
+      "w": 1280,
+      "h": 853,
+      "pixels": 1091840,
+      "kb": 162,
+      "sharpness": 823.0,
+      "mean": 89.0,
+      "contrast": 74.5,
+      "saturation": 0.39
+    },
+    {
+      "id": "kathal-ki-sabzi",
+      "name": "Kathal ki Sabzi",
+      "region": "Awadhi/Lucknowi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Sapanabehl",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kathal_ki_sabzi.jpg",
+      "w": 800,
+      "h": 1200,
+      "pixels": 960000,
+      "kb": 114,
+      "sharpness": 827.1,
+      "mean": 69.7,
+      "contrast": 69.4,
+      "saturation": 0.36
+    },
+    {
+      "id": "mudhi-mansa",
+      "name": "Mudhi Mansa",
+      "region": "Odia",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Sangram Keshari Senapati",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mudhi_Mansa.jpg",
+      "w": 1000,
+      "h": 666,
+      "pixels": 666000,
+      "kb": 90,
+      "sharpness": 834.6,
+      "mean": 62.4,
+      "contrast": 70.8,
+      "saturation": 0.48
+    },
+    {
+      "id": "punjabi-chana-dal",
+      "name": "Punjabi Chana Dal",
+      "region": "Punjabi",
+      "faults": [
+        "flat"
+      ],
+      "credit": "Ravi Talwar",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chana_Dal_Curry.jpg",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 128,
+      "sharpness": 856.1,
+      "mean": 120.1,
+      "contrast": 34.7,
+      "saturation": 0.79
+    },
+    {
+      "id": "meen-curry",
+      "name": "Kerala Meen Curry",
+      "region": "Kerala",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Kalakki at Malayalam Wikipedia",
+      "license": "CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Meen_curry_2.JPG",
+      "w": 1800,
+      "h": 1350,
+      "pixels": 2430000,
+      "kb": 666,
+      "sharpness": 858.6,
+      "mean": 59.4,
+      "contrast": 51.6,
+      "saturation": 0.35
+    },
+    {
+      "id": "menthi-kura-pappu",
+      "name": "Menthi Kura Pappu",
+      "region": "Andhra",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "MVishnuV",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vankaya_Menthi-Kharam.JPG",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 172,
+      "sharpness": 918.0,
+      "mean": 149.6,
+      "contrast": 69.9,
+      "saturation": 0.22
+    },
+    {
+      "id": "dahi-chura-gud",
+      "name": "Dahi Chura Gud",
+      "region": "Bihari",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "Sudharshan Shanmugasundaram",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Curd_Rice.jpg",
+      "w": 1000,
+      "h": 758,
+      "pixels": 758000,
+      "kb": 124,
+      "sharpness": 921.4,
+      "mean": 177.9,
+      "contrast": 57.7,
+      "saturation": 0.24
+    },
+    {
+      "id": "chana-gashi",
+      "name": "Chana Gashi",
+      "region": "Karnataka",
+      "faults": [
+        "flat"
+      ],
+      "credit": "pelican from Tokyo, Japan",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Potato_curry_(4356270962).jpg",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 112,
+      "sharpness": 950.9,
+      "mean": 129.9,
+      "contrast": 35.4,
+      "saturation": 0.45
+    },
+    {
+      "id": "kinema-curry",
+      "name": "Kinema",
+      "region": "Northeast Indian",
+      "faults": [
+        "low resolution (800x506)"
+      ],
+      "credit": "Kaajakocks",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kinema_food-nepal.jpg",
+      "w": 800,
+      "h": 506,
+      "pixels": 404800,
+      "kb": 77,
+      "sharpness": 970.7,
+      "mean": 106.7,
+      "contrast": 59.4,
+      "saturation": 0.65
+    },
+    {
+      "id": "manchow-soup",
+      "name": "Manchow Soup",
+      "region": "Indo-Chinese",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Sarkar Sayantan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Manchow_soup_-_Indo-Chinese_cuisine.jpg",
+      "w": 1000,
+      "h": 666,
+      "pixels": 666000,
+      "kb": 100,
+      "sharpness": 1011.2,
+      "mean": 90.4,
+      "contrast": 70.9,
+      "saturation": 0.51
+    },
+    {
+      "id": "bebinca",
+      "name": "Bebinca",
+      "region": "Goan",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Warren Noronha",
+      "license": "CC BY 2.0",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/3/31/Bebinca_com_gelado.jpg",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 156,
+      "sharpness": 1015.3,
+      "mean": 95.9,
+      "contrast": 62.9,
+      "saturation": 0.37
+    },
+    {
+      "id": "lemon-rice",
+      "name": "Lemon Rice",
+      "region": "Tamil Nadu",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Ganesh Gore",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lemon_Rice_in_Kerala.jpg",
+      "w": 1000,
+      "h": 562,
+      "pixels": 562000,
+      "kb": 101,
+      "sharpness": 1039.3,
+      "mean": 99.2,
+      "contrast": 76.5,
+      "saturation": 0.38
+    },
+    {
+      "id": "vangi-bath",
+      "name": "Vangi Bath",
+      "region": "Karnataka",
+      "faults": [
+        "low resolution (614x504)"
+      ],
+      "credit": "Vidya pmysore",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Brinjal_rice_bath.jpg",
+      "w": 614,
+      "h": 504,
+      "pixels": 309456,
+      "kb": 61,
+      "sharpness": 1064.6,
+      "mean": 118.8,
+      "contrast": 68.6,
+      "saturation": 0.62
+    },
+    {
+      "id": "akki-rotti",
+      "name": "Akki Rotti",
+      "region": "Karnataka",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "Anand Narayan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Akki_Rotti.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 176,
+      "sharpness": 1078.0,
+      "mean": 133.4,
+      "contrast": 58.7,
+      "saturation": 0.24
+    },
+    {
+      "id": "paruppu-payasam",
+      "name": "Paruppu Payasam",
+      "region": "Tamil Nadu",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Adarshjchandran",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Payasam_preparation.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 184,
+      "sharpness": 1081.6,
+      "mean": 69.6,
+      "contrast": 66.8,
+      "saturation": 0.42
+    },
+    {
+      "id": "bandar-laddu",
+      "name": "Bandar Laddu",
+      "region": "Andhra",
+      "faults": [
+        "low resolution (700x525)"
+      ],
+      "credit": "Bal1234",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bandar_Laddu.jpg",
+      "w": 700,
+      "h": 525,
+      "pixels": 367500,
+      "kb": 42,
+      "sharpness": 1087.6,
+      "mean": 115.2,
+      "contrast": 90.7,
+      "saturation": 0.29
+    },
+    {
+      "id": "paneer-butter-masala",
+      "name": "Paneer Butter Masala",
+      "region": "Punjabi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Gannu03",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Paneer_butter_masala_3.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 179,
+      "sharpness": 1096.6,
+      "mean": 88.6,
+      "contrast": 70.8,
+      "saturation": 0.31
+    },
+    {
+      "id": "rista",
+      "name": "Rista",
+      "region": "Kashmiri",
+      "faults": [
+        "low resolution (800x600)"
+      ],
+      "credit": "Oniongas",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Rista_wazwan.jpg",
+      "w": 800,
+      "h": 600,
+      "pixels": 480000,
+      "kb": 91,
+      "sharpness": 1114.7,
+      "mean": 138.0,
+      "contrast": 55.5,
+      "saturation": 0.43
+    },
+    {
+      "id": "parsi-akuri",
+      "name": "Akuri",
+      "region": "Parsi",
+      "faults": [
+        "low resolution (645x363)"
+      ],
+      "credit": "Arzina Hossain",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Paneer_Akuri.jpg",
+      "w": 645,
+      "h": 363,
+      "pixels": 234135,
+      "kb": 42,
+      "sharpness": 1116.7,
+      "mean": 121.8,
+      "contrast": 58.7,
+      "saturation": 0.45
+    },
+    {
+      "id": "avial",
+      "name": "Avial",
+      "region": "Kerala",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Bhuvana Meenakshi",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Traditional_Onam_Sadya_2024.jpg",
+      "w": 1500,
+      "h": 1482,
+      "pixels": 2223000,
+      "kb": 316,
+      "sharpness": 1145.0,
+      "mean": 81.7,
+      "contrast": 54.1,
+      "saturation": 0.44
+    },
+    {
+      "id": "hesarubele-payasa",
+      "name": "Hesarubele Payasa",
+      "region": "Karnataka",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "deep1104",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rava_-_e_-_lazawaab.jpg",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 136,
+      "sharpness": 1145.8,
+      "mean": 95.4,
+      "contrast": 71.7,
+      "saturation": 0.44
+    },
+    {
+      "id": "chettinad-eral-masala",
+      "name": "Chettinad Eral Masala",
+      "region": "Tamil Nadu",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Seethabharathi",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chettinad_Prawn_Masala.JPG",
+      "w": 1000,
+      "h": 698,
+      "pixels": 698000,
+      "kb": 104,
+      "sharpness": 1186.5,
+      "mean": 58.8,
+      "contrast": 61.8,
+      "saturation": 0.72
+    },
+    {
+      "id": "parsi-tamota-par-eeda",
+      "name": "Tamota Par Eeda",
+      "region": "Parsi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Hrishikes",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Egg_devil.JPG",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 105,
+      "sharpness": 1187.4,
+      "mean": 93.9,
+      "contrast": 78.5,
+      "saturation": 0.41
+    },
+    {
+      "id": "halbai",
+      "name": "Halbai",
+      "region": "Karnataka",
+      "faults": [
+        "flat"
+      ],
+      "credit": "Shruthi Gaurav Alva",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Payasa-_home_Bangalore-Karnataka-pic_16_Bisu.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 178,
+      "sharpness": 1217.4,
+      "mean": 138.5,
+      "contrast": 38.1,
+      "saturation": 0.53
+    },
+    {
+      "id": "shahi-paneer",
+      "name": "Shahi Paneer",
+      "region": "Punjabi",
+      "faults": [
+        "low resolution (827x507)"
+      ],
+      "credit": "Shashank7200",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Shahi_Paneer_%26_Butter_Naan.jpg",
+      "w": 827,
+      "h": 507,
+      "pixels": 419289,
+      "kb": 83,
+      "sharpness": 1227.4,
+      "mean": 116.3,
+      "contrast": 69.1,
+      "saturation": 0.39
+    },
+    {
+      "id": "chhena-poda",
+      "name": "Chhena Poda",
+      "region": "Odia",
+      "faults": [
+        "flat"
+      ],
+      "credit": "Subhransuphotography",
+      "license": "CC BY-SA 4.0",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Chhena_Poda-Puri-Odisha-IMG_1323.jpg/1920px-Chhena_Poda-Puri-Odisha-IMG_1323.jpg",
+      "w": 1200,
+      "h": 768,
+      "pixels": 921600,
+      "kb": 227,
+      "sharpness": 1242.5,
+      "mean": 107.7,
+      "contrast": 43.6,
+      "saturation": 0.39
+    },
+    {
+      "id": "idli",
+      "name": "Idli",
+      "region": "Tamil Nadu",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Soumya dey at English Wikipedia",
+      "license": "CC BY-SA 3.0",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/1/11/Idli_Sambar.JPG",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 213,
+      "sharpness": 1307.8,
+      "mean": 96.2,
+      "contrast": 74.9,
+      "saturation": 0.54
+    },
+    {
+      "id": "sheermal",
+      "name": "Sheermal",
+      "region": "Awadhi/Lucknowi",
+      "faults": [
+        "low resolution (1000x449)"
+      ],
+      "credit": "Pranaykuma12",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sheermal_Lucknow.JPG",
+      "w": 1000,
+      "h": 449,
+      "pixels": 449000,
+      "kb": 95,
+      "sharpness": 1315.3,
+      "mean": 129.2,
+      "contrast": 57.9,
+      "saturation": 0.5
+    },
+    {
+      "id": "butter-chicken",
+      "name": "Butter Chicken",
+      "region": "Punjabi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Yuvraj Singh 97",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Butter_Chicken_%26_Butter_Naan_-_Home_-_Chandigarh_-_India_-_0006.jpg",
+      "w": 751,
+      "h": 1000,
+      "pixels": 751000,
+      "kb": 212,
+      "sharpness": 1339.2,
+      "mean": 104.3,
+      "contrast": 63.3,
+      "saturation": 0.54
+    },
+    {
+      "id": "dal-dhokli",
+      "name": "Dal Dhokli",
+      "region": "Gujarati",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Heenah",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dalthokali.jpg",
+      "w": 1000,
+      "h": 590,
+      "pixels": 590000,
+      "kb": 100,
+      "sharpness": 1372.2,
+      "mean": 97.9,
+      "contrast": 58.5,
+      "saturation": 0.47
+    },
+    {
+      "id": "chicken-xacuti",
+      "name": "Chicken Xacuti",
+      "region": "Goan",
+      "faults": [
+        "low resolution (647x525)"
+      ],
+      "credit": "Sriyarao22",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chicken_Xacuti_curry_with_Biryani_rice.png",
+      "w": 647,
+      "h": 525,
+      "pixels": 339675,
+      "kb": 64,
+      "sharpness": 1372.7,
+      "mean": 117.2,
+      "contrast": 74.3,
+      "saturation": 0.41
+    },
+    {
+      "id": "misal-pav",
+      "name": "Misal Pav",
+      "region": "Maharashtrian",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "Ankushkr2020",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kolhapuri_Misal_Pav.jpg",
+      "w": 1000,
+      "h": 666,
+      "pixels": 666000,
+      "kb": 132,
+      "sharpness": 1425.8,
+      "mean": 121.3,
+      "contrast": 62.8,
+      "saturation": 0.2
+    },
+    {
+      "id": "kochu-bata",
+      "name": "Kochu Bata",
+      "region": "Bengali",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Sumit Surai",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Food-Kochu-Bata.jpg",
+      "w": 1000,
+      "h": 562,
+      "pixels": 562000,
+      "kb": 107,
+      "sharpness": 1445.0,
+      "mean": 104.9,
+      "contrast": 74.7,
+      "saturation": 0.39
+    },
+    {
+      "id": "muya-awandru",
+      "name": "Muya Awandru",
+      "region": "Northeast Indian",
+      "faults": [
+        "low resolution (540x553)"
+      ],
+      "credit": "Tirengma",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Awandru.jpg",
+      "w": 540,
+      "h": 553,
+      "pixels": 298620,
+      "kb": 64,
+      "sharpness": 1477.3,
+      "mean": 150.4,
+      "contrast": 72.1,
+      "saturation": 0.41
+    },
+    {
+      "id": "curd-rice",
+      "name": "Curd Rice",
+      "region": "Tamil Nadu",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "Suyash Dwivedi",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Curd_rice_in_ICH_Bhopal.jpg",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 108,
+      "sharpness": 1478.5,
+      "mean": 170.4,
+      "contrast": 52.5,
+      "saturation": 0.16
+    },
+    {
+      "id": "chana-madra",
+      "name": "Chana Madra",
+      "region": "Pahari",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Niyati Sharma 1505",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:White_Chana_Madra.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 179,
+      "sharpness": 1486.1,
+      "mean": 104.0,
+      "contrast": 57.0,
+      "saturation": 0.54
+    },
+    {
+      "id": "chakhwi",
+      "name": "Chakhwi",
+      "region": "Northeast Indian",
+      "faults": [
+        "low resolution (540x536)"
+      ],
+      "credit": "Tirengma",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chakhwi.jpg",
+      "w": 540,
+      "h": 536,
+      "pixels": 289440,
+      "kb": 55,
+      "sharpness": 1505.1,
+      "mean": 118.2,
+      "contrast": 70.2,
+      "saturation": 0.39
+    },
+    {
+      "id": "khakhra",
+      "name": "Khakhra",
+      "region": "Gujarati",
+      "faults": [
+        "low resolution (384x512)"
+      ],
+      "credit": "Randhir. The original uploader was Randhirreddy at English Wikipedia.",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Gujarati_khakhra.jpg",
+      "w": 384,
+      "h": 512,
+      "pixels": 196608,
+      "kb": 41,
+      "sharpness": 1541.2,
+      "mean": 120.9,
+      "contrast": 47.5,
+      "saturation": 0.46
+    },
+    {
+      "id": "al-yakhni",
+      "name": "Al Yakhni",
+      "region": "Kashmiri",
+      "faults": [
+        "flat"
+      ],
+      "credit": "Gaurav Dhwaj Khadka",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bottle_Gourd_Curry.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 184,
+      "sharpness": 1566.9,
+      "mean": 107.7,
+      "contrast": 42.3,
+      "saturation": 0.73
+    },
+    {
+      "id": "vatha-kuzhambu",
+      "name": "Vatha Kuzhambu",
+      "region": "Tamil Nadu",
+      "faults": [
+        "low resolution (682x470)"
+      ],
+      "credit": "KARTY JazZ",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kalaki_(An_Omelette_half_cooked_with_chicken_curry_on_it)_as_served_in_Chennai,Tamil_Nadu..jpg",
+      "w": 682,
+      "h": 470,
+      "pixels": 320540,
+      "kb": 58,
+      "sharpness": 1618.4,
+      "mean": 159.2,
+      "contrast": 65.3,
+      "saturation": 0.26
+    },
+    {
+      "id": "chicken-manchurian",
+      "name": "Chicken Manchurian",
+      "region": "Indo-Chinese",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Abhinaba Basu from Redmond, United States",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chicken_Manchurian_(Hyderabad_Style)_(11960049916).jpg",
+      "w": 1000,
+      "h": 647,
+      "pixels": 647000,
+      "kb": 102,
+      "sharpness": 1629.3,
+      "mean": 86.9,
+      "contrast": 68.2,
+      "saturation": 0.36
+    },
+    {
+      "id": "parsi-mutton-pulao-dal",
+      "name": "Mutton Pulao Dal",
+      "region": "Parsi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Prashant Sahu",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Indian_Mushroom_%26_Mutton_Pulao.jpg",
+      "w": 1000,
+      "h": 666,
+      "pixels": 666000,
+      "kb": 97,
+      "sharpness": 1633.1,
+      "mean": 79.4,
+      "contrast": 75.1,
+      "saturation": 0.34
+    },
+    {
+      "id": "boondi-raita",
+      "name": "Boondi Raita",
+      "region": "Punjabi",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "Ravi Dwivedi",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Boondi_Raita.jpg",
+      "w": 1000,
+      "h": 1176,
+      "pixels": 1176000,
+      "kb": 177,
+      "sharpness": 1636.5,
+      "mean": 132.1,
+      "contrast": 63.3,
+      "saturation": 0.25
+    },
+    {
+      "id": "bihari-murgh-jhor",
+      "name": "Bihari Murgh Jhor",
+      "region": "Bihari",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Gaurav Dhwaj Khadka",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chicken_Curry_5.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 183,
+      "sharpness": 1637.0,
+      "mean": 96.4,
+      "contrast": 46.7,
+      "saturation": 0.52
+    },
+    {
+      "id": "shukto",
+      "name": "Shukto",
+      "region": "Bengali",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Schwiki",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Shukto-Ahare_Bangla_2016_DSC_7615.jpg",
+      "w": 1000,
+      "h": 662,
+      "pixels": 662000,
+      "kb": 121,
+      "sharpness": 1660.8,
+      "mean": 89.5,
+      "contrast": 47.7,
+      "saturation": 0.83
+    },
+    {
+      "id": "kodi-vepudu",
+      "name": "Kodi Vepudu",
+      "region": "Andhra",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Radhika41",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kodi_guddu_vepudu.jpg",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 157,
+      "sharpness": 1689.2,
+      "mean": 64.4,
+      "contrast": 67.1,
+      "saturation": 0.48
+    },
+    {
+      "id": "sukhdi",
+      "name": "Sukhdi",
+      "region": "Gujarati",
+      "faults": [
+        "low resolution (400x234)"
+      ],
+      "credit": "Maitrikvora21",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sukhdi..jpg",
+      "w": 400,
+      "h": 234,
+      "pixels": 93600,
+      "kb": 14,
+      "sharpness": 1694.5,
+      "mean": 139.0,
+      "contrast": 54.0,
+      "saturation": 0.53
+    },
+    {
+      "id": "anarsa",
+      "name": "Anarsa",
+      "region": "Bihari",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "Raj.Ranveer",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Anarasa.jpg",
+      "w": 1000,
+      "h": 791,
+      "pixels": 791000,
+      "kb": 115,
+      "sharpness": 1710.2,
+      "mean": 180.2,
+      "contrast": 58.7,
+      "saturation": 0.21
+    },
+    {
+      "id": "kafuli",
+      "name": "Kafuli",
+      "region": "Pahari",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "pelican from Tokyo, Japan",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chicken_spinach_curry_(20518478923).jpg",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 153,
+      "sharpness": 1750.5,
+      "mean": 72.6,
+      "contrast": 71.0,
+      "saturation": 0.5
+    },
+    {
+      "id": "sindhi-tomato-chutney",
+      "name": "Sindhi Tomato Chutney",
+      "region": "Sindhi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Gaurav Dhwaj Khadka",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tomato_Chutney_3.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 189,
+      "sharpness": 1787.1,
+      "mean": 101.0,
+      "contrast": 46.2,
+      "saturation": 0.61
+    },
+    {
+      "id": "tomato-chutney",
+      "name": "Tomato Chutney",
+      "region": "Tamil Nadu",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Gaurav Dhwaj Khadka",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tomato_Chutney_3.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 189,
+      "sharpness": 1787.1,
+      "mean": 101.0,
+      "contrast": 46.2,
+      "saturation": 0.61
+    },
+    {
+      "id": "imarti",
+      "name": "Imarti",
+      "region": "Awadhi/Lucknowi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Billjones94",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:An_Imarti,_a_sweet_from_West_Bengal,_India,_made_by_deep-frying_vigna_mungo_flour_(later_soaked_in_sugar_syrup),_photographed_by_Yogabrata_Chakraborty_on_June_19,_2023.jpg",
+      "w": 1000,
+      "h": 1069,
+      "pixels": 1069000,
+      "kb": 172,
+      "sharpness": 1804.7,
+      "mean": 97.1,
+      "contrast": 72.0,
+      "saturation": 0.47
+    },
+    {
+      "id": "koli-saaru",
+      "name": "Koli Saaru",
+      "region": "Karnataka",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Gaurav Dhwaj Khadka",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chicken_Curry_6.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 185,
+      "sharpness": 1827.7,
+      "mean": 101.8,
+      "contrast": 62.2,
+      "saturation": 0.47
+    },
+    {
+      "id": "meen-gassi",
+      "name": "Meen Gassi",
+      "region": "Karnataka",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Dolon Prova",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rice_and_fish_curry.jpg",
+      "w": 1000,
+      "h": 690,
+      "pixels": 690000,
+      "kb": 133,
+      "sharpness": 1870.8,
+      "mean": 71.4,
+      "contrast": 68.1,
+      "saturation": 0.45
+    },
+    {
+      "id": "saga-bhaja",
+      "name": "Saga Bhaja",
+      "region": "Odia",
+      "faults": [
+        "low resolution (772x579)"
+      ],
+      "credit": "Psubhashish",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sunusunia_Saga_Bhaja_Odia_Cuisine.jpg",
+      "w": 772,
+      "h": 579,
+      "pixels": 446988,
+      "kb": 85,
+      "sharpness": 1883.7,
+      "mean": 135.6,
+      "contrast": 76.3,
+      "saturation": 0.46
+    },
+    {
+      "id": "boti-kebab",
+      "name": "Boti Kebab",
+      "region": "Awadhi/Lucknowi",
+      "faults": [
+        "low resolution (720x477)"
+      ],
+      "credit": "raasiel",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Boti_and_shesh_kebab.jpg",
+      "w": 720,
+      "h": 477,
+      "pixels": 343440,
+      "kb": 71,
+      "sharpness": 1928.0,
+      "mean": 126.0,
+      "contrast": 68.1,
+      "saturation": 0.47
+    },
+    {
+      "id": "bajre-ki-roti",
+      "name": "Bajre ki Roti",
+      "region": "Rajasthani",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "KUMER PAL",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:1_bajre_ki_roti_.bthuve_ki_sbji.desi_tindi_gi_v_lssi_ka_gilas.jpg",
+      "w": 1000,
+      "h": 934,
+      "pixels": 934000,
+      "kb": 178,
+      "sharpness": 1941.5,
+      "mean": 130.1,
+      "contrast": 62.5,
+      "saturation": 0.24
+    },
+    {
+      "id": "ulte-tawe-ka-paratha",
+      "name": "Ulte Tawe Ka Paratha",
+      "region": "Awadhi/Lucknowi",
+      "faults": [
+        "low resolution (640x480)"
+      ],
+      "credit": "rovingl",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Awadhi_palak_paneer_paratha_dahi.jpg",
+      "w": 640,
+      "h": 480,
+      "pixels": 307200,
+      "kb": 64,
+      "sharpness": 1971.1,
+      "mean": 137.8,
+      "contrast": 62.2,
+      "saturation": 0.39
+    },
+    {
+      "id": "sorpotel",
+      "name": "Sorpotel",
+      "region": "Goan",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Sanfy",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Goa_Sorpotel.jpg",
+      "w": 1000,
+      "h": 546,
+      "pixels": 546000,
+      "kb": 104,
+      "sharpness": 2011.3,
+      "mean": 103.6,
+      "contrast": 67.4,
+      "saturation": 0.63
+    },
+    {
+      "id": "bhee-patata",
+      "name": "Bhee Patata",
+      "region": "Sindhi",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "AntanO",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Curry_(lotus_roots).JPG",
+      "w": 1000,
+      "h": 666,
+      "pixels": 666000,
+      "kb": 82,
+      "sharpness": 2024.3,
+      "mean": 196.1,
+      "contrast": 58.9,
+      "saturation": 0.23
+    },
+    {
+      "id": "kheema",
+      "name": "Hyderabadi Kheema",
+      "region": "Hyderabadi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Preeti Tamilarasan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hyderabadi_Keema_by_Preeti_Tamilarasan.jpg",
+      "w": 681,
+      "h": 1028,
+      "pixels": 700068,
+      "kb": 126,
+      "sharpness": 2071.3,
+      "mean": 62.9,
+      "contrast": 71.8,
+      "saturation": 0.48
+    },
+    {
+      "id": "chilli-paneer",
+      "name": "Chilli Paneer",
+      "region": "Indo-Chinese",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Marajozkee",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chilly_Paneer_01.jpg",
+      "w": 1000,
+      "h": 995,
+      "pixels": 995000,
+      "kb": 182,
+      "sharpness": 2106.1,
+      "mean": 84.1,
+      "contrast": 59.0,
+      "saturation": 0.65
+    },
+    {
+      "id": "tomato-khajuri-khatta",
+      "name": "Tomato Khajuri Khatta",
+      "region": "Odia",
+      "faults": [
+        "low resolution (609x800)"
+      ],
+      "credit": "Paul Goyette from Chicago, USA",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tomato_chutney_2006.jpg",
+      "w": 609,
+      "h": 800,
+      "pixels": 487200,
+      "kb": 99,
+      "sharpness": 2126.2,
+      "mean": 127.8,
+      "contrast": 65.3,
+      "saturation": 0.53
+    },
+    {
+      "id": "ulli-theeyal",
+      "name": "Ulli Theeyal",
+      "region": "Kerala",
+      "faults": [
+        "low resolution (612x612)"
+      ],
+      "credit": "Lablascovegmenu from London",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vegan_coconut_curry_(7447386856).jpg",
+      "w": 612,
+      "h": 612,
+      "pixels": 374544,
+      "kb": 79,
+      "sharpness": 2154.2,
+      "mean": 132.1,
+      "contrast": 48.0,
+      "saturation": 0.44
+    },
+    {
+      "id": "keerai-masiyal",
+      "name": "Keerai Masiyal",
+      "region": "Tamil Nadu",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "Arul Raj C",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:South_Indian_famous_-_Manathakkali_Keerai.jpg",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 159,
+      "sharpness": 2161.7,
+      "mean": 157.8,
+      "contrast": 70.4,
+      "saturation": 0.19
+    },
+    {
+      "id": "erissery",
+      "name": "Pumpkin Erissery",
+      "region": "Kerala",
+      "faults": [
+        "low resolution (640x640)"
+      ],
+      "credit": "Vernon Chan from Kuala Lumpur, Malaysia",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pumpkin,_mushroom,_chicken,_Indian_basmati_rice_cooked.jpg",
+      "w": 640,
+      "h": 640,
+      "pixels": 409600,
+      "kb": 94,
+      "sharpness": 2195.1,
+      "mean": 143.5,
+      "contrast": 49.2,
+      "saturation": 0.39
+    },
+    {
+      "id": "mango-pickle",
+      "name": "Mango Pickle",
+      "region": "Punjabi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "BHAVAPRIYA J U",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mango_pickle._jpg.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 185,
+      "sharpness": 2251.9,
+      "mean": 77.6,
+      "contrast": 60.2,
+      "saturation": 0.7
+    },
+    {
+      "id": "bhindi-masala",
+      "name": "Bhindi Masala",
+      "region": "Punjabi",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "やましこ",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bhindi_masala_(49657981033).jpg",
+      "w": 1000,
+      "h": 666,
+      "pixels": 666000,
+      "kb": 119,
+      "sharpness": 2253.6,
+      "mean": 122.9,
+      "contrast": 77.9,
+      "saturation": 0.24
+    },
+    {
+      "id": "parsi-berry-pulao",
+      "name": "Berry Pulao",
+      "region": "Parsi",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "Sumit Surai",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Parsi_Mutton_Berry_Pulao.jpg",
+      "w": 1000,
+      "h": 905,
+      "pixels": 905000,
+      "kb": 169,
+      "sharpness": 2264.1,
+      "mean": 166.2,
+      "contrast": 67.7,
+      "saturation": 0.25
+    },
+    {
+      "id": "beans-poriyal",
+      "name": "Beans Poriyal",
+      "region": "Tamil Nadu",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Nithyasrm",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Beans_poriyal.JPG",
+      "w": 1000,
+      "h": 1500,
+      "pixels": 1500000,
+      "kb": 181,
+      "sharpness": 2270.7,
+      "mean": 95.4,
+      "contrast": 68.2,
+      "saturation": 0.41
+    },
+    {
+      "id": "ribbon-pakoda",
+      "name": "Ribbon Pakoda",
+      "region": "Tamil Nadu",
+      "faults": [
+        "low resolution (500x500)"
+      ],
+      "credit": "The Grand Sweets And Snacks",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Corn_Ribbon_Pakoda_The_Grand_Sweets_And_Snacks.jpg",
+      "w": 500,
+      "h": 500,
+      "pixels": 250000,
+      "kb": 58,
+      "sharpness": 2286.8,
+      "mean": 118.7,
+      "contrast": 68.2,
+      "saturation": 0.47
+    },
+    {
+      "id": "maddur-vada",
+      "name": "Maddur Vada",
+      "region": "Karnataka",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Subhashish Panigrahi",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vada_Bengaluru.jpg",
+      "w": 1000,
+      "h": 747,
+      "pixels": 747000,
+      "kb": 171,
+      "sharpness": 2299.7,
+      "mean": 88.0,
+      "contrast": 71.0,
+      "saturation": 0.38
+    },
+    {
+      "id": "choek-wangun",
+      "name": "Choek Wangun",
+      "region": "Kashmiri",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Sarkar Sayantan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hilsa_curry_with_aubergine_and_pumpkin.jpg",
+      "w": 1000,
+      "h": 1250,
+      "pixels": 1250000,
+      "kb": 183,
+      "sharpness": 2303.6,
+      "mean": 90.4,
+      "contrast": 66.1,
+      "saturation": 0.51
+    },
+    {
+      "id": "methi-muthiya",
+      "name": "Methi Muthiya",
+      "region": "Gujarati",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Sushant savla",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Methi_Muthiya_(_fried_).jpg",
+      "w": 888,
+      "h": 1280,
+      "pixels": 1136640,
+      "kb": 185,
+      "sharpness": 2312.0,
+      "mean": 88.9,
+      "contrast": 68.5,
+      "saturation": 0.46
+    },
+    {
+      "id": "aloo-tikki",
+      "name": "Aloo Tikki",
+      "region": "Punjabi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Gitika Gayan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Aloo_Tikki_-_Homemade_-_Assam_-_DSC_002.jpg",
+      "w": 1000,
+      "h": 748,
+      "pixels": 748000,
+      "kb": 121,
+      "sharpness": 2414.2,
+      "mean": 58.5,
+      "contrast": 72.1,
+      "saturation": 0.29
+    },
+    {
+      "id": "kothimbir-vadi",
+      "name": "Kothimbir Vadi",
+      "region": "Maharashtrian",
+      "faults": [
+        "low resolution (472x551)"
+      ],
+      "credit": "Master Sahil Gaikwad",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nevaidya-_food_offered_to_good.png",
+      "w": 472,
+      "h": 551,
+      "pixels": 260072,
+      "kb": 65,
+      "sharpness": 2440.8,
+      "mean": 133.5,
+      "contrast": 57.4,
+      "saturation": 0.57
+    },
+    {
+      "id": "jalfrezi",
+      "name": "Jalfrezi",
+      "region": "Anglo-Indian",
+      "faults": [
+        "low resolution (640x632)"
+      ],
+      "credit": "Tarquin Binary",
+      "license": "CC BY-SA 2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Chicken_tikka_jalfrezi.jpg",
+      "w": 640,
+      "h": 632,
+      "pixels": 404480,
+      "kb": 105,
+      "sharpness": 2496.4,
+      "mean": 117.2,
+      "contrast": 75.5,
+      "saturation": 0.43
+    },
+    {
+      "id": "kedgeree",
+      "name": "Kedgeree",
+      "region": "Anglo-Indian",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Prem Kumar Karmakar",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Khichdi_%26_Other_Curries.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 189,
+      "sharpness": 2507.1,
+      "mean": 94.9,
+      "contrast": 63.0,
+      "saturation": 0.51
+    },
+    {
+      "id": "pav-bhaji",
+      "name": "Pav Bhaji",
+      "region": "Maharashtrian",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "BHAAGIi",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bhaji_pav_2.jpg",
+      "w": 900,
+      "h": 1201,
+      "pixels": 1080900,
+      "kb": 175,
+      "sharpness": 2522.9,
+      "mean": 86.7,
+      "contrast": 69.6,
+      "saturation": 0.36
+    },
+    {
+      "id": "bengali-alur-dom",
+      "name": "Bengali Alur Dom",
+      "region": "Bengali",
+      "faults": [
+        "flat"
+      ],
+      "credit": "Kritzolina",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bengali_food_03.jpg",
+      "w": 1000,
+      "h": 666,
+      "pixels": 666000,
+      "kb": 142,
+      "sharpness": 2559.8,
+      "mean": 136.2,
+      "contrast": 33.1,
+      "saturation": 0.52
+    },
+    {
+      "id": "goan-solkadhi",
+      "name": "Solkadhi",
+      "region": "Goan",
+      "faults": [
+        "low resolution (689x501)"
+      ],
+      "credit": "Kaushiki Prabhudesai",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fried_pomfret_with_Solkadhi.jpg",
+      "w": 689,
+      "h": 501,
+      "pixels": 345189,
+      "kb": 85,
+      "sharpness": 2587.1,
+      "mean": 133.5,
+      "contrast": 51.3,
+      "saturation": 0.37
+    },
+    {
+      "id": "alu-vadi",
+      "name": "Alu Vadi",
+      "region": "Maharashtrian",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Sharvarism",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Crispy_Alu_Vadi_from_my_Kitchen,_Pune,_Maharashtra.jpg",
+      "w": 1000,
+      "h": 666,
+      "pixels": 666000,
+      "kb": 143,
+      "sharpness": 2632.5,
+      "mean": 74.3,
+      "contrast": 74.3,
+      "saturation": 0.57
+    },
+    {
+      "id": "khatkhate",
+      "name": "Khatkhate",
+      "region": "Goan",
+      "faults": [
+        "low resolution (640x480)"
+      ],
+      "credit": "Portugal Editor Exploration",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Khatkhate.jpg",
+      "w": 640,
+      "h": 480,
+      "pixels": 307200,
+      "kb": 78,
+      "sharpness": 2646.8,
+      "mean": 122.2,
+      "contrast": 71.5,
+      "saturation": 0.55
+    },
+    {
+      "id": "seekh-kebab",
+      "name": "Seekh Kebab",
+      "region": "Punjabi",
+      "faults": [
+        "low resolution (639x423)"
+      ],
+      "credit": "raasiel",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Seekh_Kebab.JPG",
+      "w": 639,
+      "h": 423,
+      "pixels": 270297,
+      "kb": 57,
+      "sharpness": 2658.4,
+      "mean": 125.9,
+      "contrast": 69.0,
+      "saturation": 0.47
+    },
+    {
+      "id": "chakli",
+      "name": "Chakli",
+      "region": "Maharashtrian",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "SwatiGupta1986",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chakli_(Indian_snack).jpg",
+      "w": 1000,
+      "h": 999,
+      "pixels": 999000,
+      "kb": 182,
+      "sharpness": 2681.6,
+      "mean": 99.3,
+      "contrast": 63.7,
+      "saturation": 0.51
+    },
+    {
+      "id": "cheera-thoran",
+      "name": "Cheera Thoran",
+      "region": "Kerala",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Ranjithsiji",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cheera_Thoran_Stage2.JPG",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 155,
+      "sharpness": 2692.8,
+      "mean": 82.0,
+      "contrast": 65.0,
+      "saturation": 0.34
+    },
+    {
+      "id": "syun-olav",
+      "name": "Syun Olav",
+      "region": "Kashmiri",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Gaurav Dhwaj Khadka",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mutton_Curry_2.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 188,
+      "sharpness": 2699.3,
+      "mean": 82.8,
+      "contrast": 65.5,
+      "saturation": 0.53
+    },
+    {
+      "id": "chepala-pulusu",
+      "name": "Chepala Pulusu",
+      "region": "Andhra",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Shruthi Gaurav Alva",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Manglorean_style_white_pomfret_fish_curry-My_home_Bangalore-Karn.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 183,
+      "sharpness": 2729.9,
+      "mean": 93.8,
+      "contrast": 52.8,
+      "saturation": 0.66
+    },
+    {
+      "id": "sindhi-kadhi",
+      "name": "Sindhi Kadhi",
+      "region": "Sindhi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Miansari66",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sindhi_Kadhi.JPG",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 186,
+      "sharpness": 2764.1,
+      "mean": 103.9,
+      "contrast": 70.0,
+      "saturation": 0.56
+    },
+    {
+      "id": "puran-poli",
+      "name": "Puran Poli",
+      "region": "Maharashtrian",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "Had5185",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Puran_Poli_image.jpg",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 143,
+      "sharpness": 2766.2,
+      "mean": 128.7,
+      "contrast": 83.5,
+      "saturation": 0.15
+    },
+    {
+      "id": "chettinad-kara-kuzhambu",
+      "name": "Chettinad Kara Kuzhambu",
+      "region": "Tamil Nadu",
+      "faults": [
+        "low resolution (500x500)"
+      ],
+      "credit": "The Grand Sweets And Snacks",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chettinad_Garlic_Kara_Kuzhambu_Paste_The_Grand_Sweets_And_Snacks.jpg",
+      "w": 500,
+      "h": 500,
+      "pixels": 250000,
+      "kb": 59,
+      "sharpness": 2802.2,
+      "mean": 124.6,
+      "contrast": 70.8,
+      "saturation": 0.45
+    },
+    {
+      "id": "ragi-sangati",
+      "name": "Ragi Sangati",
+      "region": "Andhra",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "Vamsi202",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Raagi_Sangati.jpg",
+      "w": 1000,
+      "h": 562,
+      "pixels": 562000,
+      "kb": 138,
+      "sharpness": 2803.9,
+      "mean": 126.4,
+      "contrast": 57.4,
+      "saturation": 0.24
+    },
+    {
+      "id": "paneer-do-pyaza",
+      "name": "Paneer Do Pyaza",
+      "region": "Awadhi/Lucknowi",
+      "faults": [
+        "low resolution (640x640)"
+      ],
+      "credit": "AlekhyaDas",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Paneer_Do_Pyaza.jpg",
+      "w": 640,
+      "h": 640,
+      "pixels": 409600,
+      "kb": 102,
+      "sharpness": 2829.9,
+      "mean": 127.2,
+      "contrast": 53.3,
+      "saturation": 0.82
+    },
+    {
+      "id": "gundruk-ko-jhol",
+      "name": "Gundruk ko Jhol",
+      "region": "Northeast Indian",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Subhashish Panigrahi",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nepali_dal-bhat-tarkari.jpg",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 163,
+      "sharpness": 2833.7,
+      "mean": 102.5,
+      "contrast": 71.3,
+      "saturation": 0.41
+    },
+    {
+      "id": "koottu-curry",
+      "name": "Koottu Curry",
+      "region": "Kerala",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Nairdeepa",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Traditional_Koottu_Curry_of_Kerala.JPG",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 172,
+      "sharpness": 2925.6,
+      "mean": 104.3,
+      "contrast": 75.9,
+      "saturation": 0.38
+    },
+    {
+      "id": "arhar-ki-dal-awadhi",
+      "name": "Arhar ki Dal",
+      "region": "Awadhi/Lucknowi",
+      "faults": [
+        "low resolution (617x475)"
+      ],
+      "credit": "Nj02",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Stuffed_Batti_with_Dal_and_Gajar_ka_Halwa.jpg",
+      "w": 617,
+      "h": 475,
+      "pixels": 293075,
+      "kb": 81,
+      "sharpness": 2994.9,
+      "mean": 128.1,
+      "contrast": 66.5,
+      "saturation": 0.38
+    },
+    {
+      "id": "lehsun-ki-chutney",
+      "name": "Lehsun ki Chutney",
+      "region": "Rajasthani",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Anirudh Chordia",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rajasthani_Food.JPG",
+      "w": 1000,
+      "h": 1000,
+      "pixels": 1000000,
+      "kb": 183,
+      "sharpness": 3038.5,
+      "mean": 83.9,
+      "contrast": 75.2,
+      "saturation": 0.56
+    },
+    {
+      "id": "laal-maas",
+      "name": "Laal Maas",
+      "region": "Rajasthani",
+      "faults": [
+        "low resolution (200x256)"
+      ],
+      "credit": "Hamzaghanchi",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Laal-Maans.jpg",
+      "w": 200,
+      "h": 256,
+      "pixels": 51200,
+      "kb": 12,
+      "sharpness": 3082.1,
+      "mean": 169.0,
+      "contrast": 48.6,
+      "saturation": 0.36
+    },
+    {
+      "id": "seyal-bhaji",
+      "name": "Seyal Bhaji",
+      "region": "Sindhi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "PratishthaSharma1991",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Potato-Tomato_Curry.jpeg",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 180,
+      "sharpness": 3275.1,
+      "mean": 85.1,
+      "contrast": 65.9,
+      "saturation": 0.69
+    },
+    {
+      "id": "aam-ki-launji",
+      "name": "Aam ki Launji",
+      "region": "Rajasthani",
+      "faults": [
+        "flat"
+      ],
+      "credit": "Biswarup Ganguly",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Unripe_Mango_Chutney_-_Kolkata_2011-02-23_1714.JPG",
+      "w": 1000,
+      "h": 664,
+      "pixels": 664000,
+      "kb": 174,
+      "sharpness": 3328.2,
+      "mean": 145.7,
+      "contrast": 42.7,
+      "saturation": 0.87
+    },
+    {
+      "id": "mirchi-vada",
+      "name": "Mirchi Vada",
+      "region": "Rajasthani",
+      "faults": [
+        "low resolution (525x350)"
+      ],
+      "credit": "SS Khurana",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:GARLIC_MIRCHI_VADA.jpg",
+      "w": 525,
+      "h": 350,
+      "pixels": 183750,
+      "kb": 41,
+      "sharpness": 3338.0,
+      "mean": 126.1,
+      "contrast": 61.5,
+      "saturation": 0.51
+    },
+    {
+      "id": "puliyodarai",
+      "name": "Puliyodarai",
+      "region": "Tamil Nadu",
+      "faults": [
+        "low resolution (616x553)"
+      ],
+      "credit": "Shyambabugarlapati",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pongal_Vada_-_A_South_Indian_Breakfast.png",
+      "w": 616,
+      "h": 553,
+      "pixels": 340648,
+      "kb": 75,
+      "sharpness": 3348.8,
+      "mean": 177.3,
+      "contrast": 59.0,
+      "saturation": 0.28
+    },
+    {
+      "id": "tamarind-date-chutney",
+      "name": "Tamarind-Date Chutney",
+      "region": "Punjabi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "PabIoChocobar",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jodhpuri_Kanda(Pyaaz)_Kachori_with_tamarind_chutney.jpg",
+      "w": 1000,
+      "h": 630,
+      "pixels": 630000,
+      "kb": 150,
+      "sharpness": 3452.9,
+      "mean": 102.2,
+      "contrast": 68.5,
+      "saturation": 0.27
+    },
+    {
+      "id": "chhatu-rai",
+      "name": "Chhatu Rai",
+      "region": "Odia",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Swetapadma07",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Traditional_Odial_Lunch_Thali.jpg",
+      "w": 1000,
+      "h": 783,
+      "pixels": 783000,
+      "kb": 179,
+      "sharpness": 3536.5,
+      "mean": 75.8,
+      "contrast": 62.9,
+      "saturation": 0.52
+    },
+    {
+      "id": "khatta-meat",
+      "name": "Khatta Meat",
+      "region": "Pahari",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Gaurav Dhwaj Khadka",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mutton_Curry_3.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 187,
+      "sharpness": 3613.7,
+      "mean": 83.8,
+      "contrast": 63.8,
+      "saturation": 0.53
+    },
+    {
+      "id": "garlic-naan",
+      "name": "Garlic Naan",
+      "region": "Punjabi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Dr. Raju Kasambe",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Garlic_Butter_Naan_Food_by_Ms_Ujwala_Kasambe_DSCN1136_(3).jpg",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 157,
+      "sharpness": 3789.7,
+      "mean": 43.9,
+      "contrast": 52.9,
+      "saturation": 0.43
+    },
+    {
+      "id": "warqi-paratha",
+      "name": "Warqi Paratha",
+      "region": "Awadhi/Lucknowi",
+      "faults": [
+        "low resolution (640x480)"
+      ],
+      "credit": "Asim Bijarani",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Awadhi_breakfast_tea_with_paratha.jpg",
+      "w": 640,
+      "h": 480,
+      "pixels": 307200,
+      "kb": 85,
+      "sharpness": 3792.8,
+      "mean": 119.7,
+      "contrast": 67.2,
+      "saturation": 0.34
+    },
+    {
+      "id": "uttapam",
+      "name": "Uttapam",
+      "region": "Tamil Nadu",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Sumita Roy Dutta",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mix_lentils_Uttapam_P_20190410_144153.jpg",
+      "w": 1000,
+      "h": 562,
+      "pixels": 562000,
+      "kb": 153,
+      "sharpness": 3825.1,
+      "mean": 89.4,
+      "contrast": 73.9,
+      "saturation": 0.35
+    },
+    {
+      "id": "kozhi-porichathu",
+      "name": "Kozhi Porichathu",
+      "region": "Kerala",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Gaurav Dhwaj Khadka",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chicken_Curry_4.jpg",
+      "w": 1000,
+      "h": 750,
+      "pixels": 750000,
+      "kb": 180,
+      "sharpness": 3905.9,
+      "mean": 98.6,
+      "contrast": 57.8,
+      "saturation": 0.53
+    },
+    {
+      "id": "vagharelo-bhaat",
+      "name": "Vagharelo Bhaat",
+      "region": "Gujarati",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "Draupadigamy9305",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rice_ganji_or_porridge_aloo_fry_homemade_by_Sujatha_aunty_karnataka.jpg_03.jpg",
+      "w": 1000,
+      "h": 1334,
+      "pixels": 1334000,
+      "kb": 184,
+      "sharpness": 4006.4,
+      "mean": 129.2,
+      "contrast": 69.0,
+      "saturation": 0.25
+    },
+    {
+      "id": "shahi-tukda",
+      "name": "Shahi Tukda",
+      "region": "Awadhi/Lucknowi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Rodrick rajive lal",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Shahi_Tukda_-_Dessert_of_India.jpg",
+      "w": 1000,
+      "h": 666,
+      "pixels": 666000,
+      "kb": 158,
+      "sharpness": 4032.2,
+      "mean": 68.0,
+      "contrast": 76.1,
+      "saturation": 0.37
+    },
+    {
+      "id": "doh-neiiong",
+      "name": "Doh Neiiong",
+      "region": "Northeast Indian",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "些細な日常",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pork-cutlet-curry.jpg",
+      "w": 1000,
+      "h": 667,
+      "pixels": 667000,
+      "kb": 171,
+      "sharpness": 4045.3,
+      "mean": 88.5,
+      "contrast": 70.4,
+      "saturation": 0.51
+    },
+    {
+      "id": "beef-ularthiyathu",
+      "name": "Beef Ularthiyathu",
+      "region": "Kerala",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "Solowomanwalks",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kerala_Beef_Fry.jpg",
+      "w": 1000,
+      "h": 930,
+      "pixels": 930000,
+      "kb": 182,
+      "sharpness": 4050.3,
+      "mean": 151.3,
+      "contrast": 71.9,
+      "saturation": 0.25
+    },
+    {
+      "id": "anglo-coconut-toffee",
+      "name": "Coconut Toffee",
+      "region": "Anglo-Indian",
+      "faults": [
+        "low resolution (1000x407)"
+      ],
+      "credit": "Evan-Amos",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Toffee-Peanuts.jpg",
+      "w": 1000,
+      "h": 407,
+      "pixels": 407000,
+      "kb": 92,
+      "sharpness": 4108.7,
+      "mean": 161.8,
+      "contrast": 81.6,
+      "saturation": 0.4
+    },
+    {
+      "id": "chettinad-meen-kuzhambu",
+      "name": "Chettinad Meen Kuzhambu",
+      "region": "Tamil Nadu",
+      "faults": [
+        "low resolution (604x453)"
+      ],
+      "credit": "Pradeepraajkumar1981",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tuna_Fish_curry_South_Indian_Style.jpg",
+      "w": 604,
+      "h": 453,
+      "pixels": 273612,
+      "kb": 76,
+      "sharpness": 4152.5,
+      "mean": 119.6,
+      "contrast": 71.6,
+      "saturation": 0.32
+    },
+    {
+      "id": "rogan-josh",
+      "name": "Rogan Josh",
+      "region": "Kashmiri",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Draabidwani1",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kashmiri_Wazwan.jpg",
+      "w": 736,
+      "h": 919,
+      "pixels": 676384,
+      "kb": 247,
+      "sharpness": 4267.4,
+      "mean": 104.1,
+      "contrast": 59.5,
+      "saturation": 0.52
+    },
+    {
+      "id": "roth",
+      "name": "Roth",
+      "region": "Kashmiri",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Sangram Keshari Senapati",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Coconut_and_Banana_Malpua.jpg",
+      "w": 1000,
+      "h": 1000,
+      "pixels": 1000000,
+      "kb": 180,
+      "sharpness": 4427.4,
+      "mean": 93.6,
+      "contrast": 64.4,
+      "saturation": 0.59
+    },
+    {
+      "id": "tilkut",
+      "name": "Tilkut",
+      "region": "Bihari",
+      "faults": [
+        "colourless"
+      ],
+      "credit": "Goutam1962",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tilkut_preparation_during_Sankranti_37.jpg",
+      "w": 960,
+      "h": 1707,
+      "pixels": 1638720,
+      "kb": 536,
+      "sharpness": 4559.0,
+      "mean": 139.0,
+      "contrast": 60.2,
+      "saturation": 0.22
+    },
+    {
+      "id": "himachali-mittha",
+      "name": "Mittha",
+      "region": "Pahari",
+      "faults": [
+        "low resolution (640x480)"
+      ],
+      "credit": "Christopher Malapati",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Double_Ka_Mittha_Cooking_Bowl.jpg",
+      "w": 640,
+      "h": 480,
+      "pixels": 307200,
+      "kb": 86,
+      "sharpness": 4706.3,
+      "mean": 122.7,
+      "contrast": 62.2,
+      "saturation": 0.42
+    },
+    {
+      "id": "palak-paneer",
+      "name": "Palak Paneer",
+      "region": "Punjabi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Lopanayak",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Palakpaneer_Rayagada_Odisha_0009.jpg",
+      "w": 900,
+      "h": 777,
+      "pixels": 699300,
+      "kb": 168,
+      "sharpness": 4711.1,
+      "mean": 70.4,
+      "contrast": 77.2,
+      "saturation": 0.32
+    },
+    {
+      "id": "dudhi-na-muthiya",
+      "name": "Dudhi na Muthiya",
+      "region": "Gujarati",
+      "faults": [
+        "low resolution (720x540)"
+      ],
+      "credit": "Hrishikes",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chichinga_(snake_gourd)_ghanto.jpg",
+      "w": 720,
+      "h": 540,
+      "pixels": 388800,
+      "kb": 117,
+      "sharpness": 4978.5,
+      "mean": 124.8,
+      "contrast": 57.5,
+      "saturation": 0.73
+    },
+    {
+      "id": "dindigul-biryani",
+      "name": "Dindigul Biryani",
+      "region": "Tamil Nadu",
+      "faults": [
+        "low resolution (1000x456)"
+      ],
+      "credit": "Maharana7573",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dindigul_Thalappakatti_Biryani_1.jpg",
+      "w": 1000,
+      "h": 456,
+      "pixels": 456000,
+      "kb": 139,
+      "sharpness": 5421.6,
+      "mean": 120.9,
+      "contrast": 73.4,
+      "saturation": 0.47
+    },
+    {
+      "id": "pork-indad",
+      "name": "Pork Indad",
+      "region": "Goan",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Manfred&amp;Barbara Aulbach",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Medaillons_of_pork_(Indian_style)_%2B_wine.jpg",
+      "w": 1000,
+      "h": 563,
+      "pixels": 563000,
+      "kb": 171,
+      "sharpness": 6182.9,
+      "mean": 99.3,
+      "contrast": 72.8,
+      "saturation": 0.44
+    },
+    {
+      "id": "arisa-pitha",
+      "name": "Arisa Pitha",
+      "region": "Odia",
+      "faults": [
+        "low resolution (766x426)"
+      ],
+      "credit": "Subhashish Panigrahi",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Arisa_pitha_Odia_cuisine.jpg",
+      "w": 766,
+      "h": 426,
+      "pixels": 326316,
+      "kb": 116,
+      "sharpness": 6665.7,
+      "mean": 120.5,
+      "contrast": 63.0,
+      "saturation": 0.56
+    },
+    {
+      "id": "mutton-kola-urundai",
+      "name": "Mutton Kola Urundai",
+      "region": "Tamil Nadu",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "NAVYA",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mutton_chana_dal_curry.jpg",
+      "w": 1000,
+      "h": 600,
+      "pixels": 600000,
+      "kb": 183,
+      "sharpness": 7066.9,
+      "mean": 97.1,
+      "contrast": 53.5,
+      "saturation": 0.64
+    },
+    {
+      "id": "phirni",
+      "name": "Phirni",
+      "region": "Kashmiri",
+      "faults": [
+        "low resolution (1000x451)"
+      ],
+      "credit": "Dolon Prova",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Firni_Or_Phirni_Bangladeshi_Sweet_(1).jpg",
+      "w": 1000,
+      "h": 451,
+      "pixels": 451000,
+      "kb": 154,
+      "sharpness": 7186.0,
+      "mean": 160.5,
+      "contrast": 48.5,
+      "saturation": 0.43
+    },
+    {
+      "id": "kashmiri-rajma",
+      "name": "Kashmiri Rajma",
+      "region": "Kashmiri",
+      "faults": [
+        "low resolution (640x640)"
+      ],
+      "credit": "Coastalcakes (Matamaal Restaurants)",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kashmiri_Pandit_vegetarian_thali_served_at_Matamaal_restaurants_with_Rajma,_Dum_aloo,_Paneer_dishes.png",
+      "w": 640,
+      "h": 640,
+      "pixels": 409600,
+      "kb": 139,
+      "sharpness": 7797.4,
+      "mean": 133.7,
+      "contrast": 68.5,
+      "saturation": 0.37
+    },
+    {
+      "id": "mutton-yakhni",
+      "name": "Mutton Yakhni",
+      "region": "Kashmiri",
+      "faults": [
+        "low resolution (1000x451)"
+      ],
+      "credit": "Dolon Prova",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mutton_curry_(1).jpg",
+      "w": 1000,
+      "h": 451,
+      "pixels": 451000,
+      "kb": 162,
+      "sharpness": 7932.5,
+      "mean": 169.9,
+      "contrast": 68.3,
+      "saturation": 0.35
+    },
+    {
+      "id": "dabeli",
+      "name": "Dabeli",
+      "region": "Gujarati",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "SwatiGupta1986",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dabeli_Stuffing_(Indian_snack).jpg",
+      "w": 1000,
+      "h": 734,
+      "pixels": 734000,
+      "kb": 181,
+      "sharpness": 7958.2,
+      "mean": 96.4,
+      "contrast": 68.6,
+      "saturation": 0.5
+    },
+    {
+      "id": "nadan-mutton-curry",
+      "name": "Nadan Mutton Curry",
+      "region": "Kerala",
+      "faults": [
+        "low resolution (1000x451)"
+      ],
+      "credit": "Dolon Prova",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mutton_curry_(2).jpg",
+      "w": 1000,
+      "h": 451,
+      "pixels": 451000,
+      "kb": 171,
+      "sharpness": 8512.0,
+      "mean": 177.6,
+      "contrast": 69.2,
+      "saturation": 0.35
+    }
+  ],
+  "missing": [
+    {
+      "id": "gongura-mamsam",
+      "name": "Gongura Mamsam",
+      "region": "Andhra"
+    },
+    {
+      "id": "duck-buffath",
+      "name": "Duck Buffath",
+      "region": "Anglo-Indian"
+    },
+    {
+      "id": "bafauri",
+      "name": "Bafauri",
+      "region": "Bihari"
+    },
+    {
+      "id": "baghara-tamatar",
+      "name": "Baghara Tamatar",
+      "region": "Hyderabadi"
+    },
+    {
+      "id": "gil-e-firdaus",
+      "name": "Gil-e-Firdaus",
+      "region": "Hyderabadi"
+    },
+    {
+      "id": "harissa-kashmiri",
+      "name": "Harissa",
+      "region": "Kashmiri"
+    },
+    {
+      "id": "mizo-bai",
+      "name": "Bai",
+      "region": "Northeast Indian"
+    },
+    {
+      "id": "bilahi-pitika",
+      "name": "Bilahi Pitika",
+      "region": "Northeast Indian"
+    },
+    {
+      "id": "chhurpi-soup",
+      "name": "Chhurpi Soup",
+      "region": "Northeast Indian"
+    },
+    {
+      "id": "chhena-tarkari",
+      "name": "Chhena Tarkari",
+      "region": "Odia"
+    },
+    {
+      "id": "babru",
+      "name": "Babru",
+      "region": "Pahari"
+    },
+    {
+      "id": "chainsoo",
+      "name": "Chainsoo",
+      "region": "Pahari"
+    },
+    {
+      "id": "bhuga-chawal",
+      "name": "Bhuga Chawal",
+      "region": "Sindhi"
+    }
+  ],
+  "borrowed": [
+    {
+      "id": "gongura-pachadi",
+      "name": "Gongura Pachadi",
+      "region": "Andhra",
+      "src": "assets/images/andhra-hero.jpg"
+    },
+    {
+      "id": "pesarattu",
+      "name": "Pesarattu",
+      "region": "Andhra",
+      "src": "assets/images/andhra-g1.jpg"
+    },
+    {
+      "id": "mulligatawny-soup",
+      "name": "Mulligatawny Soup",
+      "region": "Anglo-Indian",
+      "src": "assets/images/anglo-indian-g1.jpg"
+    },
+    {
+      "id": "railway-mutton-curry",
+      "name": "Railway Mutton Curry",
+      "region": "Anglo-Indian",
+      "src": "assets/images/anglo-indian-hero.jpg"
+    },
+    {
+      "id": "galouti-kebab",
+      "name": "Galouti Kebab",
+      "region": "Awadhi/Lucknowi",
+      "src": "assets/images/awadhi-g1.jpg"
+    },
+    {
+      "id": "lucknowi-biryani",
+      "name": "Lucknowi Dum Biryani",
+      "region": "Awadhi/Lucknowi",
+      "src": "assets/images/awadhi-hero.jpg"
+    },
+    {
+      "id": "nihari",
+      "name": "Nihari",
+      "region": "Awadhi/Lucknowi",
+      "src": "assets/images/awadhi-g2.jpg"
+    },
+    {
+      "id": "kosha-mangsho",
+      "name": "Kosha Mangsho",
+      "region": "Bengali",
+      "src": "assets/images/bengali-hero.jpg"
+    },
+    {
+      "id": "rasgulla",
+      "name": "Rasgulla",
+      "region": "Bengali",
+      "src": "assets/images/bengali-g1.jpg"
+    },
+    {
+      "id": "shorshe-ilish",
+      "name": "Shorshe Ilish",
+      "region": "Bengali",
+      "src": "assets/images/bengali-g2.jpg"
+    },
+    {
+      "id": "champaran-ahuna-mutton",
+      "name": "Champaran Ahuna Mutton",
+      "region": "Bihari",
+      "src": "assets/images/bihari-g1.jpg"
+    },
+    {
+      "id": "litti-chokha",
+      "name": "Litti Chokha",
+      "region": "Bihari",
+      "src": "assets/images/bihari-hero.jpg"
+    },
+    {
+      "id": "tilkut",
+      "name": "Tilkut",
+      "region": "Bihari",
+      "src": "assets/images/bihari-g2.jpg"
+    },
+    {
+      "id": "bebinca",
+      "name": "Bebinca",
+      "region": "Goan",
+      "src": "assets/images/goan-g2.jpg"
+    },
+    {
+      "id": "xacuti",
+      "name": "Goan Xacuti",
+      "region": "Goan",
+      "src": "assets/images/goan-g1.jpg"
+    },
+    {
+      "id": "vindaloo",
+      "name": "Pork Vindaloo",
+      "region": "Goan",
+      "src": "assets/images/goan-hero.jpg"
+    },
+    {
+      "id": "dhokla",
+      "name": "Khaman Dhokla",
+      "region": "Gujarati",
+      "src": "assets/images/gujarati-g1.jpg"
+    },
+    {
+      "id": "undhiyu",
+      "name": "Undhiyu",
+      "region": "Gujarati",
+      "src": "assets/images/gujarati-g2.jpg"
+    },
+    {
+      "id": "haleem",
+      "name": "Haleem",
+      "region": "Hyderabadi",
+      "src": "assets/images/hyderabadi-g1.jpg"
+    },
+    {
+      "id": "hyderabadi-biryani",
+      "name": "Hyderabadi Dum Biryani",
+      "region": "Hyderabadi",
+      "src": "assets/images/hyderabadi-hero.jpg"
+    },
+    {
+      "id": "qubani-ka-meetha",
+      "name": "Qubani ka Meetha",
+      "region": "Hyderabadi",
+      "src": "assets/images/hyderabadi-g2.jpg"
+    },
+    {
+      "id": "chilli-chicken",
+      "name": "Chilli Chicken",
+      "region": "Indo-Chinese",
+      "src": "assets/images/indo-chinese-hero.jpg"
+    },
+    {
+      "id": "gobi-manchurian",
+      "name": "Gobi Manchurian",
+      "region": "Indo-Chinese",
+      "src": "assets/images/indo-chinese-g2.jpg"
+    },
+    {
+      "id": "hakka-noodles",
+      "name": "Hakka Noodles",
+      "region": "Indo-Chinese",
+      "src": "assets/images/indo-chinese-g1.jpg"
+    },
+    {
+      "id": "neer-dosa",
+      "name": "Neer Dosa",
+      "region": "Karnataka",
+      "src": "assets/images/karnataka-g2.jpg"
+    },
+    {
+      "id": "ragi-mudde",
+      "name": "Ragi Mudde",
+      "region": "Karnataka",
+      "src": "assets/images/karnataka-g1.jpg"
+    },
+    {
+      "id": "kashmiri-dum-aloo",
+      "name": "Kashmiri Dum Aloo",
+      "region": "Kashmiri",
+      "src": "assets/images/kashmiri-g2.jpg"
+    },
+    {
+      "id": "kashmiri-pulav",
+      "name": "Kashmiri Pulav",
+      "region": "Kashmiri",
+      "src": "assets/images/kashmiri-g1.jpg"
+    },
+    {
+      "id": "rogan-josh",
+      "name": "Rogan Josh",
+      "region": "Kashmiri",
+      "src": "assets/images/kashmiri-hero.jpg"
+    },
+    {
+      "id": "appam",
+      "name": "Appam",
+      "region": "Kerala",
+      "src": "assets/images/kerala-g2.jpg"
+    },
+    {
+      "id": "avial",
+      "name": "Avial",
+      "region": "Kerala",
+      "src": "assets/images/kerala-hero.jpg"
+    },
+    {
+      "id": "meen-curry",
+      "name": "Kerala Meen Curry",
+      "region": "Kerala",
+      "src": "assets/images/kerala-g1.jpg"
+    },
+    {
+      "id": "misal-pav",
+      "name": "Misal Pav",
+      "region": "Maharashtrian",
+      "src": "assets/images/maharashtrian-g1.jpg"
+    },
+    {
+      "id": "modak",
+      "name": "Ukadiche Modak",
+      "region": "Maharashtrian",
+      "src": "assets/images/maharashtrian-g2.jpg"
+    },
+    {
+      "id": "vada-pav",
+      "name": "Vada Pav",
+      "region": "Maharashtrian",
+      "src": "assets/images/maharashtrian-hero.jpg"
+    },
+    {
+      "id": "momos",
+      "name": "Momos",
+      "region": "Northeast Indian",
+      "src": "assets/images/northeast-g2.jpg"
+    },
+    {
+      "id": "naga-smoked-pork",
+      "name": "Naga Smoked Pork with Bamboo Shoot",
+      "region": "Northeast Indian",
+      "src": "assets/images/northeast-g1.jpg"
+    },
+    {
+      "id": "chhena-poda",
+      "name": "Chhena Poda",
+      "region": "Odia",
+      "src": "assets/images/odia-g1.jpg"
+    },
+    {
+      "id": "dahi-pakhala",
+      "name": "Dahi Pakhala",
+      "region": "Odia",
+      "src": "assets/images/odia-g2.jpg"
+    },
+    {
+      "id": "dalma",
+      "name": "Dalma",
+      "region": "Odia",
+      "src": "assets/images/odia-hero.jpg"
+    },
+    {
+      "id": "siddu",
+      "name": "Siddu",
+      "region": "Pahari",
+      "src": "assets/images/himachali-hero.jpg"
+    },
+    {
+      "id": "parsi-dhansak",
+      "name": "Dhansak",
+      "region": "Parsi",
+      "src": "assets/images/parsi-hero.jpg"
+    },
+    {
+      "id": "butter-chicken",
+      "name": "Butter Chicken",
+      "region": "Punjabi",
+      "src": "assets/images/punjabi-g1.jpg"
+    },
+    {
+      "id": "chole",
+      "name": "Chole",
+      "region": "Punjabi",
+      "src": "assets/images/punjabi-g2.jpg"
+    },
+    {
+      "id": "dal-baati-churma",
+      "name": "Dal Baati Churma",
+      "region": "Rajasthani",
+      "src": "assets/images/rajasthani-hero.jpg"
+    },
+    {
+      "id": "pyaaz-kachori",
+      "name": "Pyaaz Kachori",
+      "region": "Rajasthani",
+      "src": "assets/images/rajasthani-g2.jpg"
+    },
+    {
+      "id": "dal-pakwan",
+      "name": "Dal Pakwan",
+      "region": "Sindhi",
+      "src": "assets/images/sindhi-g2.jpg"
+    },
+    {
+      "id": "sai-bhaji",
+      "name": "Sai Bhaji",
+      "region": "Sindhi",
+      "src": "assets/images/sindhi-g1.jpg"
+    },
+    {
+      "id": "sindhi-biryani",
+      "name": "Sindhi Biryani",
+      "region": "Sindhi",
+      "src": "assets/images/sindhi-hero.jpg"
+    },
+    {
+      "id": "idli",
+      "name": "Idli",
+      "region": "Tamil Nadu",
+      "src": "assets/images/tamil-nadu-g1.jpg"
+    },
+    {
+      "id": "masala-dosa",
+      "name": "Masala Dosa",
+      "region": "Tamil Nadu",
+      "src": "assets/images/tamil-nadu-hero.jpg"
+    },
+    {
+      "id": "sambar",
+      "name": "Sambar",
+      "region": "Tamil Nadu",
+      "src": "assets/images/tamil-nadu-g2.jpg"
+    }
+  ],
+  "clean": 453,
+  "unverified_subject": [
+    "adhirasam",
+    "anglo-indian-pepper-water",
+    "avial",
+    "baingan-bharta",
+    "bisi-bele-bath",
+    "chana-masala",
+    "dahi-pakhala",
+    "dal-tadka",
+    "dhokla",
+    "dum-aloo-lucknowi",
+    "egg-bhurji",
+    "gatta-pulao",
+    "kaapa",
+    "kashmiri-dum-aloo",
+    "kashmiri-pulav",
+    "mandua-ki-roti",
+    "misal-pav",
+    "nihari",
+    "pesarattu",
+    "punugulu",
+    "rasam",
+    "shorshe-ilish",
+    "siddu",
+    "tilkut",
+    "upma"
+  ]
+}
