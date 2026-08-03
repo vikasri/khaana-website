@@ -90,7 +90,7 @@ this one.
 | `recipes/al-yakhni.jpg` | Bottle Gourd Curry.jpg | CC BY-SA 4.0 | Gaurav Dhwaj Khadka | [link](https://commons.wikimedia.org/wiki/File:Bottle_Gourd_Curry.jpg) |
 | `recipes/aloo-chaat.jpg` | Aloo chaat vendor, Connaught Place, New Delhi.jpg | CC BY-SA 2.0 | ampersandyslexia | [link](https://commons.wikimedia.org/wiki/File:Aloo_chaat_vendor,_Connaught_Place,_New_Delhi.jpg) |
 | `recipes/aloo-gobi.jpg` | Aloo gobi | CC BY-SA 2.0 | Unknown | [link](https://commons.wikimedia.org/wiki/File:Aloo_gobi.jpg) |
-| `recipes/aloo-ke-gutke.jpg` | Aloo Gobi Sabji.jpg | CC BY-SA 4.0 | Monali.mishra | [link](https://commons.wikimedia.org/wiki/File:Aloo_Gobi_Sabji.jpg) |
+| `recipes/aloo-ke-gutke.jpg` | Jeera aloo.jpg | CC BY-SA 4.0 | Gaurav Dhwaj Khadka | [link](https://commons.wikimedia.org/wiki/File:Jeera_aloo.jpg) |
 | `recipes/aloo-ki-tehri.jpg` | Indian Bengali rice dish, with drumsticks curry and onion vada.jpg | CC BY-SA 4.0 | Billjones94 | [link](https://commons.wikimedia.org/wiki/File:Indian_Bengali_rice_dish,_with_drumsticks_curry_and_onion_vada.jpg) |
 | `recipes/aloo-methi.jpg` | Aloo Methi (Aaloo Methi).JPG | CC0 | Miansari66 | [link](https://commons.wikimedia.org/wiki/File:Aloo_Methi_(Aaloo_Methi).JPG) |
 | `recipes/aloo-paratha.jpg` | "Amazing Aloo Paratha and Lovely Lassi".jpg | CC BY-SA 4.0 | Mahi Tatavarty | [link](https://commons.wikimedia.org/wiki/File:%22Amazing_Aloo_Paratha_and_Lovely_Lassi%22.jpg) |
@@ -513,7 +513,7 @@ this one.
 | `recipes/parsi-kolmi-no-patio.jpg` | Tawa Prawn, New Delhi.jpg | CC BY-SA 4.0 | Bulbul10 | [link](https://commons.wikimedia.org/wiki/File:Tawa_Prawn,_New_Delhi.jpg) |
 | `recipes/parsi-lagan-nu-custard.jpg` | Homemade Flan.jpg | CC BY-SA 2.5 | Cary Bass | [link](https://commons.wikimedia.org/wiki/File:Homemade_Flan.jpg) |
 | `recipes/parsi-machhi-no-saas.jpg` | Traditional Indian Meal.jpg | CC BY-SA 4.0 | Sabitha33 | [link](https://commons.wikimedia.org/wiki/File:Traditional_Indian_Meal.jpg) |
-| `recipes/parsi-margi-na-farcha.jpg` | Chicken Masala Indian Dish.jpg | CC BY-SA 4.0 | AlekhyaDas | [link](https://commons.wikimedia.org/wiki/File:Chicken_Masala_Indian_Dish.jpg) |
+| `recipes/parsi-margi-na-farcha.jpg` | Chicken Fry (Indian style).jpg | CC BY-SA 4.0 | Sharnab neogi | [link](https://commons.wikimedia.org/wiki/File:Chicken_Fry_(Indian_style).jpg) |
 | `recipes/parsi-mawa-cake.jpg` | Home made Mawa Cake.jpg | CC BY-SA 4.0 | Sanika Dhumal | [link](https://commons.wikimedia.org/wiki/File:Home_made_Mawa_Cake.jpg) |
 | `recipes/parsi-mutton-pulao-dal.jpg` | Indian Mushroom & Mutton Pulao.jpg | CC BY-SA 4.0 | Prashant Sahu | [link](https://commons.wikimedia.org/wiki/File:Indian_Mushroom_%26_Mutton_Pulao.jpg) |
 | `recipes/parsi-papeta-ma-gosht.jpg` | Mutton Ishtew.jpg | CC BY-SA 4.0 | Nilanjan Sasmal | [link](https://commons.wikimedia.org/wiki/File:Mutton_Ishtew.jpg) |
