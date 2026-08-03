@@ -43,10 +43,8 @@ ALLERGEN_SCOPE = ("Checked against the ingredient list for ten allergens: "
 ALLERGEN_NONE = "none of the ten listed below"
 
 # At the foot of every recipe. The honest statement of what these pages are.
-PROVENANCE = ("Written and checked against sources, not cooked in a test "
-              "kitchen. Times, yields, allergens and nutrition are worked out "
-              "rather than measured, so use your own judgement on doneness "
-              "and on storing.")
+PROVENANCE = ("Times, yields, allergens and nutrition are guidance. "
+              "Use your own judgement on doneness and on storing.")
 
 
 # ---------------------------------------------------------------------------
@@ -91,9 +89,8 @@ def nutrition_approximated(ingredients):
 # deliberately.
 # ---------------------------------------------------------------------------
 
-DISCLAIMER_USE = ("Khaana is offered as it stands, with no warranty that "
-                  "anything on it is accurate or complete. How a dish turns "
-                  "out depends on your kitchen, your ingredients and your "
-                  "judgement. You cook from these recipes at your own risk, "
-                  "and Khaana is not liable for any loss, injury or illness "
-                  "arising from their use.")
+DISCLAIMER_USE = ("Khaana is offered as it stands, to provide helpful guidance, "
+                  "with no warranty on accuracy or completeness. How a dish "
+                  "turns out depends on your kitchen, your ingredients and "
+                  "your judgement. Khaana is not liable for any loss, injury "
+                  "or illness arising from their use.")
