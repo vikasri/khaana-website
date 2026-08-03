@@ -1060,6 +1060,14 @@ section.tight { padding: 34px 0; }
   line-height: 1.5;
 }
 
+/* "vegan option" rather than "vegan": the claim holds for the version you get
+   by leaving an optional ingredient out. Outlined rather than filled so the
+   difference survives being read at a glance, and by someone who cannot tell
+   the two backgrounds apart. */
+.diet-tag-opt {
+  background: transparent; box-shadow: inset 0 0 0 1px currentColor;
+}
+
 /* On a result card the pills are a scannable strip, not a list, and every
    line they wrap onto is a line of card height. The worst case is eight tags
    at 76 characters of label, so they are set much smaller here than on a
@@ -1123,6 +1131,20 @@ section.tight { padding: 34px 0; }
 }
 .stat-value { display: block; font-family: var(--serif); font-size: 1.16rem; text-transform: capitalize; }
 
+/* The soak, ferment, marinade or rest. It needs more room than the others
+   because it carries two words ("10 hr soaking"), and it wants to read as
+   part of the time group rather than as a sixth equal column. */
+.stat-plus { flex: 1 1 130px; }
+.stat-plus .stat-value { color: var(--saffron-dark); }
+
+/* Under the stats, on the recipes where a wait is long enough that finding
+   out at step one is finding out too late. */
+.start-ahead {
+  margin: 0 0 16px; font-size: 0.88rem; line-height: 1.55;
+  color: var(--ink-soft);
+}
+.start-ahead::before { content: "\2192\00a0"; color: var(--saffron-dark); font-weight: 700; }
+
 .allergen { font-size: 0.9rem; color: var(--ink-soft); margin-bottom: 4px; }
 .allergen strong { color: var(--ink); }
 /* What the allergen line does and does not cover. The page used to say
@@ -1170,6 +1192,19 @@ section.tight { padding: 34px 0; }
   border-left: 3px solid var(--gold);
   font-size: 0.9rem; color: var(--ink-soft);
 }
+
+/* Safe internal temperatures, under the method on the recipes with meat, fish
+   or egg in them. Set apart from the steps because it is not one of them: the
+   steps say what to look for, this says what to check it against. */
+.doneness {
+  margin: 18px 0 0; padding: 12px 14px;
+  background: var(--cream); border: 1px solid var(--line); border-radius: 4px;
+  font-size: 0.88rem; line-height: 1.6; color: var(--ink-soft);
+}
+.doneness strong { color: var(--ink); }
+.doneness-src { white-space: nowrap; }
+.doneness-src a { color: var(--ink-soft); text-decoration: underline; text-underline-offset: 2px; }
+.doneness-src a:hover { color: var(--saffron-dark); }
 
 .gloss {
   margin: 12px 0; padding: 12px 14px;
@@ -1873,7 +1908,8 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
   .recipe-ing h2, .recipe-method h2, .nutrition h2 { font-size: 13pt; margin: 10pt 0 4pt; }
 
   /* Nothing that belongs together should straddle a page break. */
-  .ing-list li, .recipe-method li, .nut-table tr, .allergen, .allergen-scope {
+  .ing-list li, .recipe-method li, .nut-table tr, .allergen, .allergen-scope,
+  .doneness, .start-ahead {
     break-inside: avoid; page-break-inside: avoid;
   }
   .recipe-ing, .nutrition { break-inside: avoid; }

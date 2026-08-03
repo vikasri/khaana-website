@@ -22,9 +22,16 @@ INDEX = os.path.join(ROOT, "data", "recipes-index.json")
 DETAIL_DIR = os.path.join(ROOT, "data", "recipes")
 
 # Fields the Cook page needs to filter, score and render a card.
+#
+# inactiveMinutes and inactiveLabel are here because a card that says "30 min"
+# for sabudana khichdi is describing thirty minutes that begin five hours after
+# you start. The time filter still runs on active minutes, which is what
+# somebody asking for a twenty-minute dinner means, but the card has to say
+# there is a wait or the filter has simply moved the surprise later.
 INDEX_FIELDS = ("id", "name", "subtitle", "region", "regionPage", "servings",
-                "prepMinutes", "cookMinutes", "difficulty", "equipment",
-                "tags", "allergens", "image")
+                "prepMinutes", "cookMinutes", "inactiveMinutes",
+                "inactiveLabel", "difficulty", "equipment",
+                "tags", "tagsConditional", "allergens", "image")
 
 
 def main():

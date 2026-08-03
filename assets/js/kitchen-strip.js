@@ -79,7 +79,12 @@
                    '<span class="kitchen-card-pct">' + s.pct + '%</span>' +
                    '<span class="kitchen-card-name">' + esc(r.name) + '</span>' +
                    '<span class="kitchen-card-meta">' + esc(r.region) + ' &middot; ' +
-                     (r.prepMinutes + r.cookMinutes) + ' min</span>' +
+                     (r.prepMinutes + r.cookMinutes) + ' min' +
+                     // Active minutes. A card this small has no room for the
+                     // figure, but "+ soaking" is the part that decides
+                     // whether it can be tonight's dinner.
+                     (r.inactiveMinutes ? ' + ' + esc(r.inactiveLabel) : '') +
+                   '</span>' +
                  '</span>' +
                '</a>';
       }).join('');

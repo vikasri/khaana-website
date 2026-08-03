@@ -48,6 +48,45 @@ PROVENANCE = ("Times, yields, allergens and nutrition are guidance. "
 
 
 # ---------------------------------------------------------------------------
+# Safe internal temperatures, on the 209 recipes with meat, fish or egg
+#
+# Which of these a recipe prints is decided by tools/derive-doneness.py from
+# its ingredients. These sentences sit ALONGSIDE the recipe's own cue, never
+# instead of it: "until the oil separates and the mutton pulls off the bone"
+# tells a cook something a thermometer cannot, and a temperature tells them
+# something the look of the pan cannot.
+#
+# Figures are the FDA and USDA FSIS minimums. Do not round them; 63C and 145F
+# are the same number in two scales and both are the published value.
+# ---------------------------------------------------------------------------
+
+DONENESS = {
+    "poultry": "Chicken and duck are done at 74°C / 165°F, taken at the "
+               "thickest part and clear of the bone.",
+    "ground": "Minced meat is done at 71°C / 160°F all the way through.",
+    # Braises are the common case here and they overshoot this by an hour, so
+    # the sentence says so rather than leaving a cook wondering whether their
+    # two-hour rogan josh has somehow undershot.
+    "whole-red": "Whole cuts of mutton, beef and pork are done at 63°C / "
+                 "145°F, rested 3 minutes. A long braise passes that well "
+                 "before the meat is tender.",
+    "fish": "Fish is done at 63°C / 145°F, or when it turns opaque and "
+            "flakes easily.",
+    # FSIS gives no temperature for these, so neither do we.
+    "shellfish": "Prawns, crab and squid are done when the flesh is opaque and "
+                 "pearly right through.",
+    "egg": "Egg dishes are done at 71°C / 160°F; a whole egg when the "
+           "yolk and white are both firm.",
+}
+
+DONENESS_REHEAT = "Reheat leftovers to 74°C / 165°F."
+
+DONENESS_SOURCE = ("<a href=\"https://www.foodsafety.gov/food-safety-charts/"
+                   "safe-minimum-internal-temperatures\" rel=\"noopener\">"
+                   "FoodSafety.gov</a>")
+
+
+# ---------------------------------------------------------------------------
 # Nutrition notes
 #
 # Kept short on purpose. This paragraph once ran to 640 characters and said

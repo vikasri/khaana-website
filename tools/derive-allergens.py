@@ -89,6 +89,32 @@ def main():
             tags.add("vegetarian")
         r["tags"] = sorted(tags)
 
+        # Which of those tags are true only of a variation. Khaman Dhokla is
+        # tagged vegan and gluten-free while listing optional yogurt and
+        # optional rava; the ingredient notes say to omit them, which is why
+        # the tag survives the rule above and why the allergen line still
+        # declares milk and gluten. Nothing is hidden, but a card that says
+        # "vegan" flat is describing the version you get by leaving something
+        # out, and it should say so. An audit called this out on Dhokla and
+        # Chapati; deriving it finds the other nine as well.
+        conditional = set()
+        for i in r["ingredients"]:
+            if i.get("essential", True):
+                continue
+            note = (i.get("note") or "").lower()
+            if not any(w in note for w in OMIT_WORDS):
+                continue
+            for tag, blockers in TAG_BLOCKERS.items():
+                if i["id"] in blockers and tag in tags:
+                    conditional.add(tag)
+        # vegan is the stronger claim, so if it is conditional then so is the
+        # vegetarian that comes with it — but only when something non-
+        # vegetarian is what makes it so.
+        if conditional:
+            r["tagsConditional"] = sorted(conditional)
+        else:
+            r.pop("tagsConditional", None)
+
     def report(title, d):
         if not d:
             return
@@ -105,7 +131,7 @@ def main():
     if dry:
         print("\ndry run, nothing written")
         return 0
-    json.dump(db, open(SRC, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
+    json.dump(db, open(SRC, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
     print("\nwrote %s" % os.path.relpath(SRC, ROOT))
     return 0
 

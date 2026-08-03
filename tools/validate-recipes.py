@@ -13,7 +13,7 @@ Two classes of problem matter here and they fail differently:
 
 Exits non-zero if anything is wrong, so it can gate a build.
 """
-import json, os, sys
+import importlib.util, json, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -26,6 +26,24 @@ EQUIPMENT = {"stovetop", "kadhai", "tawa", "oven", "steamer", "blender",
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from diet_rules import (ALLERGEN_GROUPS, ALLERGENS, JUSTIFIES, TAGS,
                         TAG_BLOCKERS, NUT_ADJACENT)
+
+
+def load(script):
+    """Import a tools/ script whose filename has a hyphen in it."""
+    path = os.path.join(ROOT, "tools", script)
+    spec = importlib.util.spec_from_file_location(script[:-3].replace("-", "_"), path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+# Both of these are pure functions of the recipe, so the check is simply to run
+# the deriver and compare. They matter because both go on the page as promises
+# and both go stale silently: edit the step that says how long a batter
+# ferments, or swap chicken for paneer, and the old figure sits there looking
+# authoritative until someone cooks from it.
+INACTIVE = load("derive-inactive.py")
+DONENESS = load("derive-doneness.py")
 
 
 def main():
@@ -120,6 +138,16 @@ def main():
             warnings.append("%-28s no storage line" % rid)
         if r["prepMinutes"] < 0 or r["cookMinutes"] < 0:
             err(rid, "negative time")
+
+        mins, label = INACTIVE.derive(r)
+        if (r.get("inactiveMinutes", 0), r.get("inactiveLabel")) != (mins, label or None):
+            err(rid, "inactive time is %s but the steps say %s; run derive-inactive.py"
+                % (r.get("inactiveMinutes", 0), mins))
+
+        want_done = DONENESS.categories(r)
+        if r.get("doneness", []) != want_done:
+            err(rid, "doneness is %s but the ingredients say %s; run derive-doneness.py"
+                % (r.get("doneness", []), want_done))
 
     print("checked %d recipes across %d regions"
           % (len(recipes), len({r["region"] for r in recipes})))

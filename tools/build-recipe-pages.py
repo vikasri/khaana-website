@@ -49,6 +49,26 @@ def iso_duration(mins):
     return "PT%dM" % int(mins or 0)
 
 
+def human_duration(mins):
+    """"8 hr", "3 days 1 hr", "45 min" — the way the stat row says it.
+
+    Anything past a day is said in days. Anarsa's elapsed time is 4,390
+    minutes and "73 hr 10 min" is a number nobody can plan around.
+    """
+    mins = int(mins)
+    if mins >= 1440:
+        d, rest = divmod(mins, 1440)
+        h = round(rest / 60)
+        if h == 24:                       # rounded up into the next day
+            d, h = d + 1, 0
+        out = "%d day%s" % (d, "" if d == 1 else "s")
+        return out if not h else "%s %d hr" % (out, h)
+    if mins >= 60:
+        h, m = divmod(mins, 60)
+        return "%d hr" % h if not m else "%d hr %d min" % (h, m)
+    return "%d min" % mins
+
+
 def schema(r, url, img):
     """schema.org/Recipe. Only fields we can fill honestly."""
     d = {
@@ -65,9 +85,18 @@ def schema(r, url, img):
         "author": {"@type": "Organization", "name": "Khaana", "url": "https://khaana.com/"},
         "recipeCuisine": r["region"],
         "recipeCategory": "Main" if "dessert" not in (r.get("subtitle") or "").lower() else "Dessert",
-        "prepTime": iso_duration(r.get("prepMinutes")),
+        # totalTime used to be prep plus cook, which on a recipe that soaks
+        # its beans overnight told a search engine the dish takes 80 minutes.
+        # The soak, ferment, marinade or rest goes into prepTime, which is
+        # where schema.org puts getting the ingredients ready, so the three
+        # figures still add up and totalTime is now elapsed time. It matches
+        # the Active and Plus figures printed on the page.
+        "prepTime": iso_duration((r.get("prepMinutes") or 0)
+                                 + (r.get("inactiveMinutes") or 0)),
         "cookTime": iso_duration(r.get("cookMinutes")),
-        "totalTime": iso_duration((r.get("prepMinutes") or 0) + (r.get("cookMinutes") or 0)),
+        "totalTime": iso_duration((r.get("prepMinutes") or 0)
+                                  + (r.get("cookMinutes") or 0)
+                                  + (r.get("inactiveMinutes") or 0)),
         "recipeYield": "%s servings" % r.get("servings", 4),
         "recipeIngredient": [
             (i.get("qty", "").strip() + " " + i["id"].replace("-", " ")).strip()
@@ -193,12 +222,36 @@ def nutrition_panel(r):
                        n["servingGrams"], "".join(rows), " ".join(notes)))
 
 
+def doneness_block(r):
+    """Safe internal temperatures for whatever animal protein is in the pot.
+
+    Under the method, not inside it. The steps keep their own cues — oil
+    separating, meat pulling off the bone, fish going opaque — and this is the
+    number to check them against, not a replacement for them.
+    """
+    keys = r.get("doneness")
+    if not keys:
+        return ""
+    lines = [T.DONENESS[k] for k in keys if k in T.DONENESS]
+    if not lines:
+        return ""
+    lines.append(T.DONENESS_REHEAT)
+    return ('<p class="doneness"><strong>Safe temperatures:</strong> %s '
+            '<span class="doneness-src">%s</span></p>'
+            % (esc(" ".join(lines)), T.DONENESS_SOURCE))
+
+
 def render(r, nav, foot):
     rid = r["id"]
     url = "%s/recipes/%s.html" % (SITE, rid)
     img_rel = r["image"]["src"] if r.get("image") else FALLBACK_IMG
     img_abs = "%s/%s" % (SITE, img_rel)
-    total = (r.get("prepMinutes") or 0) + (r.get("cookMinutes") or 0)
+    # "Total" was prep plus cook and was called total on 651 pages, including
+    # the 141 where a required soak or ferment is longer than the whole of it.
+    # Active is what that number always was; elapsed is what it claimed to be.
+    active = (r.get("prepMinutes") or 0) + (r.get("cookMinutes") or 0)
+    inactive = r.get("inactiveMinutes") or 0
+    total = active + inactive
 
     # "A Andhra recipe" was going out in 89 descriptions. The article follows
     # the sound, not the letter, so this is a first-letter test plus the
@@ -208,10 +261,15 @@ def render(r, nav, foot):
     region = r["region"]
     article = "An" if (region[0].upper() in "AEIOU"
                        and not region.startswith(CONSONANT_SOUND)) else "A"
-    desc = "%s. %s %s %s recipe: %d minutes, serves %s, with measured ingredients, " \
-           "substitutions and storage notes." % (
+    # The minutes in a search result are a promise, so they are active minutes
+    # with the wait named separately. "545 minutes" would be true of chana
+    # masala and would tell nobody anything.
+    wait = (" plus %s %s," % (human_duration(inactive), r.get("inactiveLabel", "resting"))
+            if inactive else "")
+    desc = "%s. %s %s %s recipe: %d minutes active,%s serves %s, with measured " \
+           "ingredients, substitutions and storage notes." % (
                r["name"], (r.get("subtitle") or "").capitalize().rstrip(".") + ".",
-               article, region, total, r.get("servings", 4))
+               article, region, active, wait, r.get("servings", 4))
     desc = re.sub(r"\s+", " ", desc)[:300]
 
     ing = "\n".join(
@@ -227,7 +285,16 @@ def render(r, nav, foot):
         for s in r["steps"])
 
     notes = "".join('<li>%s</li>' % esc(n) for n in r.get("prepNotes", []))
-    tags = "".join('<span class="diet-tag">%s</span>' % esc(t.replace("-", " ")) for t in r.get("tags", []))
+    # A tag that only holds if you leave an optional ingredient out says so.
+    # Khaman Dhokla is vegan without the yogurt and gluten-free without the
+    # rava, and a flat "vegan" chip describes a dish the page does not quite
+    # print. The allergen line above still declares milk and gluten either way.
+    cond = set(r.get("tagsConditional") or [])
+    tags = "".join(
+        '<span class="diet-tag%s">%s%s</span>'
+        % (" diet-tag-opt" if t in cond else "", esc(t.replace("-", " ")),
+           " option" if t in cond else "")
+        for t in r.get("tags", []))
     # "crustacean" is the regulatory word; "crustacean shellfish" is what a
     # reader scanning the line actually recognises.
     ALLERGEN_LABEL = {"crustacean": "crustacean shellfish", "nuts": "tree nuts",
@@ -247,6 +314,28 @@ def render(r, nav, foot):
              % esc(r["name"][:1]))
 
     nutrition_html = nutrition_panel(r)
+    doneness_html = doneness_block(r)
+
+    # The sixth stat, only where there is a wait to name. Leaving it off the
+    # other 240 recipes keeps its presence meaningful.
+    plus_stat = ('<div class="stat stat-plus"><span class="stat-label">Plus</span>'
+                 '<span class="stat-value">%s %s</span></div>'
+                 % (human_duration(inactive), esc(r.get("inactiveLabel", "resting")))
+                 if inactive else "")
+
+    # And a line telling the reader when to start, for waits long enough that
+    # finding out at step one is finding out too late.
+    ahead = ""
+    if inactive >= 240:
+        when = ("the day before" if inactive < 1440
+                else "%s ahead" % human_duration(inactive))
+        # Against the active figure rather than the elapsed one: "3 days, and
+        # the whole thing takes 3 days 1 hr" says the same number twice, and
+        # the useful comparison is how little of it is work.
+        ahead = ('<p class="start-ahead">Start %s. The %s alone is %s, against '
+                 '%d min of actual work.</p>'
+                 % (when, esc(r.get("inactiveLabel", "resting")),
+                    human_duration(inactive), active))
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -296,10 +385,12 @@ def render(r, nav, foot):
       <div class="recipe-stats">
         <div class="stat"><span class="stat-label">Prep</span><span class="stat-value">{r.get('prepMinutes',0)} min</span></div>
         <div class="stat"><span class="stat-label">Cook</span><span class="stat-value">{r.get('cookMinutes',0)} min</span></div>
-        <div class="stat"><span class="stat-label">Total</span><span class="stat-value">{total} min</span></div>
+        <div class="stat"><span class="stat-label">Active</span><span class="stat-value">{active} min</span></div>
+        {plus_stat}
         <div class="stat"><span class="stat-label">Serves</span><span class="stat-value">{esc(r.get('servings',4))}</span></div>
         <div class="stat"><span class="stat-label">Difficulty</span><span class="stat-value">{esc(r.get('difficulty',''))}</span></div>
       </div>
+      {ahead}
 
       {'<p class="allergen"><strong>Contains:</strong> %s</p>' % esc(allerg) if allerg
        else f'<p class="allergen none"><strong>Allergens:</strong> {T.ALLERGEN_NONE}</p>'}
@@ -332,6 +423,7 @@ def render(r, nav, foot):
           <ol class="steps">
 {steps}
           </ol>
+          {doneness_html}
           <h2>Storage</h2>
           <p>{esc(r.get('storage',''))}</p>
         </div>

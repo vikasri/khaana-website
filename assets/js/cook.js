@@ -99,6 +99,30 @@
     };
   }
 
+  // "+ 10 hr soaking" after the minutes on a card.
+  //
+  // The minutes stay active minutes and so does the time filter: somebody
+  // asking for a twenty-minute dinner means twenty minutes of their evening,
+  // not twenty minutes of elapsed clock, and filtering on elapsed time would
+  // hide every marinade in the collection from them. But sabudana khichdi is
+  // thirty active minutes that begin five hours after you start, and a card
+  // saying only "30 min" moves the surprise to the recipe page instead of
+  // removing it.
+  function waitNote(r) {
+    if (!r.inactiveMinutes) return '';
+    var m = r.inactiveMinutes, n;
+    if (m >= 1440) {
+      var d = Math.floor(m / 1440), h = Math.round((m % 1440) / 60);
+      if (h === 24) { d += 1; h = 0; }
+      n = d + (d === 1 ? ' day' : ' days') + (h ? ' ' + h + ' hr' : '');
+    } else if (m >= 60) {
+      n = (m % 60 ? Math.floor(m / 60) + ' hr ' + (m % 60) + ' min' : (m / 60) + ' hr');
+    } else {
+      n = m + ' min';
+    }
+    return ' + ' + n + ' ' + esc(r.inactiveLabel || 'resting');
+  }
+
   // Hard constraints. These remove a recipe rather than lowering its score,
   // because "vegan" and "I have 20 minutes" are not preferences you rank by.
   function excludedBy(recipe, f) {
@@ -670,11 +694,12 @@
       '</div>' +
       '<div class="match-body">' +
         '<div class="match-meta">' + esc(r.region) + ' &middot; ' + esc(r.difficulty) +
-          ' &middot; ' + (r.prepMinutes + r.cookMinutes) + ' min &middot; serves ' + r.servings + '</div>' +
+          ' &middot; ' + (r.prepMinutes + r.cookMinutes) + ' min' + waitNote(r) +
+          ' &middot; serves ' + r.servings + '</div>' +
         '<h3><a class="match-link" href="recipes/' + esc(r.id) + '.html">' +
           esc(r.name) + '</a></h3>' +
         '<p class="match-sub">' + esc(r.subtitle) + '</p>' +
-        '<div class="diet-tags">' + cardTags(r.tags) + '</div>' +
+        '<div class="diet-tags">' + cardTags(r.tags, r.tagsConditional) + '</div>' +
         nutritionRow(r) +
         (searching ? '' :
         '<div class="match-lines">' +
@@ -738,7 +763,12 @@
                    'nut-free', 'egg-free', 'no-onion-garlic', 'healthier'];
   var CARD_TAG_LIMIT = 5;
 
-  function cardTags(tags) {
+  // conditional: tags that hold only if you leave an optional ingredient out.
+  // Khaman Dhokla is vegan without its optional yogurt, and a flat "vegan"
+  // pill on the card describes a dish the recipe does not quite print.
+  function cardTags(tags, conditional) {
+    var cond = {};
+    (conditional || []).forEach(function (t) { cond[t] = true; });
     var hide = {};
     tags.forEach(function (t) {
       (TAG_IMPLIES[t] || []).forEach(function (h) { hide[h] = true; });
@@ -750,7 +780,8 @@
       });
     var extra = keep.length - CARD_TAG_LIMIT;
     var out = keep.slice(0, CARD_TAG_LIMIT).map(function (t) {
-      return '<span class="diet-tag">' + esc(labelForTag(t)) + '</span>';
+      return '<span class="diet-tag' + (cond[t] ? ' diet-tag-opt' : '') + '">' +
+             esc(labelForTag(t)) + (cond[t] ? ' option' : '') + '</span>';
     }).join('');
     if (extra > 0) out += '<span class="diet-tag more">+' + extra + '</span>';
     return out;

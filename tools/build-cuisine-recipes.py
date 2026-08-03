@@ -74,12 +74,16 @@ def tile(r, hidden):
              if r.get("image") else
              '<span class="tile-noimg" aria-hidden="true">%s</span>' % esc(r["name"][:1]))
     mins = (r.get("prepMinutes") or 0) + (r.get("cookMinutes") or 0)
+    # Active minutes, and a word for the wait where there is one. A tile is too
+    # small for the figure, and "+ soaking" is the part that changes whether
+    # you can cook this tonight.
+    wait = (" + %s" % esc(r["inactiveLabel"]) if r.get("inactiveMinutes") else "")
     return ('<a class="recipe-tile%s" href="recipes/%s.html"%s>'
             '<span class="tile-thumb">%s</span>'
             '<span class="tile-body"><span class="tile-name">%s</span>'
-            '<span class="tile-meta">%d min &middot; %s</span></span></a>'
+            '<span class="tile-meta">%d min%s &middot; %s</span></span></a>'
             % (" is-extra" if hidden else "", esc(r["id"]), " hidden" if hidden else "",
-               thumb, esc(r["name"]), mins, esc(r.get("difficulty", ""))))
+               thumb, esc(r["name"]), mins, wait, esc(r.get("difficulty", ""))))
 
 
 def block(region, query, recipes):

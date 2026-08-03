@@ -63,10 +63,33 @@ the network or a multi-gigabyte local archive:
 - `tools/fetch-*.py` — pull recipe photographs from Wikimedia Commons
 - `tools/build-nutrition.py` — recompute nutrition from USDA FoodData Central
 
+## Derived fields
+
+Four things on a recipe are not authored, they are computed from the rest of
+it, because a hand-typed copy of something the recipe already says goes stale
+the moment the recipe changes and nothing complains:
+
+```
+python3 tools/derive-allergens.py     # allergens, diet tags, tagsConditional
+python3 tools/derive-inactive.py      # inactiveMinutes, inactiveLabel
+python3 tools/derive-doneness.py      # doneness
+python3 tools/build-nutrition.py      # nutrition (from the cached USDA table)
+```
+
+Run the relevant one after editing a recipe's ingredients or steps.
+`validate-recipes.py` fails if you forget, so nothing ships stale — but it
+fails after the fact, not instead of running them.
+
+`inactiveMinutes` is the soak, ferment, marinade, rest or chill the recipe
+requires. It is the reason the page says **Active** rather than Total: prep
+plus cook on a dish that soaks overnight is the time you spend standing at the
+stove, not the time the dish takes. `derive-inactive.py --report` lists every
+recipe where the wait is longer than the whole of the active time.
+
 ## Checks worth running
 
 ```
-python3 tools/validate-recipes.py     # ingredients, tags, allergens, structure
+python3 tools/validate-recipes.py     # ingredients, tags, allergens, derived fields
 python3 tools/rebuild.py              # then: git diff, before committing
 ```
 
