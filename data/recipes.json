@@ -8621,9 +8621,9 @@
       "image": {
         "src": "assets/images/recipes/dum-aloo-lucknowi.jpg",
         "alt": "Dum Aloo Lucknowi",
-        "credit": "Ocdp",
-        "license": "CC0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Beef_curry_rice_003.jpg"
+        "credit": "Rocky Masum",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alur_dom_%26_luchi.jpg"
       },
       "servings": 4,
       "prepMinutes": 20,
@@ -25393,9 +25393,9 @@
       "image": {
         "src": "assets/images/recipes/alsande-tonak.jpg",
         "alt": "Alsande Tonak",
-        "credit": "AyyanD",
+        "credit": "Ravi Talwar",
         "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Masak_lemak_lada_api_selections.jpg"
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black_Eye_Pea_Gravy.JPG"
       },
       "servings": 4,
       "prepMinutes": 15,
@@ -30240,9 +30240,9 @@
       "image": {
         "src": "assets/images/recipes/bajra-no-rotlo.jpg",
         "alt": "Bajra no Rotlo",
-        "credit": "Medhi jyoti",
+        "credit": "Zeel Patel",
         "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Foxtail_millet_kheer.jpg"
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bajri_na_Rotla.JPG"
       },
       "servings": 4,
       "prepMinutes": 20,
@@ -36779,13 +36779,6 @@
       "subtitle": "whole tomatoes simmered in the peanut, sesame and coconut gravy of the salan family",
       "region": "Hyderabadi",
       "regionPage": "hyderabadi.html",
-      "image": {
-        "src": "assets/images/recipes/baghara-tamatar.jpg",
-        "alt": "Baghara Tamatar",
-        "credit": "Daderot",
-        "license": "CC0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Thai_ginger_curry_with_vegetables_and_coconut_milk,_on_rotini_-_Massachusetts.jpg"
-      },
       "servings": 4,
       "prepMinutes": 20,
       "cookMinutes": 35,
@@ -37855,13 +37848,6 @@
       "subtitle": "bottle gourd cooked down in thickened milk with sago, a wedding-table pudding",
       "region": "Hyderabadi",
       "regionPage": "hyderabadi.html",
-      "image": {
-        "src": "assets/images/recipes/gil-e-firdaus.jpg",
-        "alt": "Gil-e-Firdaus",
-        "credit": "Padma kalaga",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Turai_(ribbed_gourd)_in_onion_gravy.jpg"
-      },
       "servings": 6,
       "prepMinutes": 20,
       "cookMinutes": 45,
@@ -48082,9 +48068,9 @@
       "image": {
         "src": "assets/images/recipes/kadambuttu.jpg",
         "alt": "Kadambuttu",
-        "credit": "Shruthi Gaurav Alva",
+        "credit": "Abhishek Chintamani",
         "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Egg_drop_curry_-_my_home_Bangalore_-_Karnataka_-pic_11.jpg"
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kadubu_of_Coorg.jpg"
       },
       "servings": 4,
       "prepMinutes": 25,
@@ -71101,13 +71087,6 @@
       "subtitle": "the mizo pot of greens and pumpkin, barely seasoned and softened with an alkaline pinch",
       "region": "Northeast Indian",
       "regionPage": "northeast-indian.html",
-      "image": {
-        "src": "assets/images/recipes/mizo-bai.jpg",
-        "alt": "Bai",
-        "credit": "foodLover-A",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Complete_traditional_Odia_vegetarian_lunch.jpg"
-      },
       "servings": 4,
       "prepMinutes": 15,
       "cookMinutes": 25,
@@ -71261,13 +71240,6 @@
       "subtitle": "fire-roasted tomatoes mashed with raw mustard oil, onion and green chilli",
       "region": "Northeast Indian",
       "regionPage": "northeast-indian.html",
-      "image": {
-        "src": "assets/images/recipes/bilahi-pitika.jpg",
-        "alt": "Bilahi Pitika",
-        "credit": "Rashmiwalia85",
-        "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:South_indian_food.jpg"
-      },
       "servings": 4,
       "prepMinutes": 10,
       "cookMinutes": 10,
@@ -76807,13 +76779,6 @@
       "subtitle": "soft fresh cheese in a light gingered tomato gravy, no onion, no garlic, straight out of the temple kitchen",
       "region": "Odia",
       "regionPage": "odia.html",
-      "image": {
-        "src": "assets/images/recipes/chhena-tarkari.jpg",
-        "alt": "Chhena Tarkari",
-        "credit": "Andy Li",
-        "license": "CC0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eating_a_curry_pan_at_Brighton_and_Hove_Japanese_Club_Open_Day_2023.jpg"
-      },
       "servings": 4,
       "prepMinutes": 20,
       "cookMinutes": 25,
@@ -80978,13 +80943,6 @@
       "subtitle": "shimla-style fried breads packed with spiced ground urad dal, crisp outside and savoury through",
       "region": "Pahari",
       "regionPage": "pahari.html",
-      "image": {
-        "src": "assets/images/recipes/babru.jpg",
-        "alt": "Babru",
-        "credit": "Sonia Goyal Jaipur",
-        "license": "CC BY-SA 2.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dal_Fry_Recipe_In_Dhaba_Style_From_Indian_Cuisine_By_Sonia_Goyal.jpg"
-      },
       "servings": 4,
       "prepMinutes": 25,
       "cookMinutes": 25,
@@ -81403,13 +81361,6 @@
       "subtitle": "dark roasted black gram dal from the kumaon hills, smoky and heavy",
       "region": "Pahari",
       "regionPage": "pahari.html",
-      "image": {
-        "src": "assets/images/recipes/chainsoo.jpg",
-        "alt": "Chainsoo",
-        "credit": "Sonia Goyal Jaipur",
-        "license": "CC BY-SA 2.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Moong_Dal_Kachori_Recipe_From_Indian_Cuisine_By_Sonia_Goyal.jpg"
-      },
       "servings": 4,
       "prepMinutes": 20,
       "cookMinutes": 50,
@@ -82420,9 +82371,9 @@
       "image": {
         "src": "assets/images/recipes/kaapa.jpg",
         "alt": "Kaapa",
-        "credit": "Radhikamprabhu82",
+        "credit": "Officialksv",
         "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cottage_cheese_in_spinach_gravy(palak_paneer).jpg"
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sarson-Ka-Saag.jpg"
       },
       "servings": 4,
       "prepMinutes": 15,
@@ -103933,9 +103884,9 @@
       "image": {
         "src": "assets/images/recipes/gatta-pulao.jpg",
         "alt": "Gatta Pulao",
-        "credit": "Sonia Goyal Jaipur",
-        "license": "CC BY-SA 2.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stuffed_Chili_Recipe_A_Vegetable_Recipe_From_Indian_Cuisine_By_Sonia_Goyal.jpg"
+        "credit": "Nizil Shah",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Besan_Gatta_Sabji.jpg"
       },
       "servings": 4,
       "prepMinutes": 25,
@@ -108218,13 +108169,6 @@
       "subtitle": "brown onion rice, sweet and savoury at once, the plate that sindhi kadhi is poured over",
       "region": "Sindhi",
       "regionPage": "sindhi.html",
-      "image": {
-        "src": "assets/images/recipes/bhuga-chawal.jpg",
-        "alt": "Bhuga Chawal",
-        "credit": "Daderot",
-        "license": "CC0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Baked_saury_and_wild_onions_(lampascioni)_on_brown_rice,_black_beans,_and_tomato_-_Massachusetts.jpg"
-      },
       "servings": 4,
       "prepMinutes": 15,
       "cookMinutes": 35,
@@ -113099,9 +113043,9 @@
       "image": {
         "src": "assets/images/recipes/chettinad-eral-masala.jpg",
         "alt": "Chettinad Eral Masala",
-        "credit": "Sampanna.pani",
+        "credit": "Seethabharathi",
         "license": "CC BY-SA 4.0",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Authentic_Oriya_Food.jpg"
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chettinad_Prawn_Masala.JPG"
       },
       "servings": 4,
       "prepMinutes": 20,
