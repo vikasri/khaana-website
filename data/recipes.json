@@ -111718,7 +111718,13 @@
       "subtitle": "jaggery and rice flour discs fried dark and dense, the Diwali sweet that takes practice",
       "region": "Tamil Nadu",
       "regionPage": "tamil-nadu.html",
-      "image": null,
+      "image": {
+        "src": "assets/images/recipes/adhirasam.jpg",
+        "alt": "Adhirasam",
+        "credit": "Jagisnowjughead",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ariselu_or_Adhirasam_or_Kajjaya_or_Athirasa.jpg"
+      },
       "servings": 15,
       "prepMinutes": 40,
       "cookMinutes": 30,

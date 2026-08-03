@@ -86,6 +86,7 @@ this one.
 | `recipes/achari-chicken.jpg` | Achari Chicken.jpg | CC BY-SA 4.0 | Monali.mishra | [link](https://commons.wikimedia.org/wiki/File:Achari_Chicken.jpg) |
 | `recipes/ada-pradhaman.jpg` | Kerala style virundhu.jpg | CC BY-SA 4.0 | Shafana jasmine | [link](https://commons.wikimedia.org/wiki/File:Kerala_style_virundhu.jpg) |
 | `recipes/adai.jpg` | Adai Dosai with Chutney 01.jpg | CC BY-SA 4.0 | Sudhan Ram | [link](https://commons.wikimedia.org/wiki/File:Adai_Dosai_with_Chutney_01.jpg) |
+| `recipes/adhirasam.jpg` | Ariselu or Adhirasam or Kajjaya or Athirasa.jpg | CC BY-SA 4.0 | Jagisnowjughead | [link](https://commons.wikimedia.org/wiki/File:Ariselu_or_Adhirasam_or_Kajjaya_or_Athirasa.jpg) |
 | `recipes/akki-rotti.jpg` | Akki Rotti.jpg | CC BY-SA 4.0 | Anand Narayan | [link](https://commons.wikimedia.org/wiki/File:Akki_Rotti.jpg) |
 | `recipes/al-yakhni.jpg` | Bottle Gourd Curry.jpg | CC BY-SA 4.0 | Gaurav Dhwaj Khadka | [link](https://commons.wikimedia.org/wiki/File:Bottle_Gourd_Curry.jpg) |
 | `recipes/aloo-chaat.jpg` | Aloo chaat vendor, Connaught Place, New Delhi.jpg | CC BY-SA 2.0 | ampersandyslexia | [link](https://commons.wikimedia.org/wiki/File:Aloo_chaat_vendor,_Connaught_Place,_New_Delhi.jpg) |

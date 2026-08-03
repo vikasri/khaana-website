@@ -6540,5 +6540,15 @@
     "license": "CC BY-SA 2.0",
     "artist": "Ewan Munro from London, UK",
     "note": "third pass via alias:Akuri"
+  },
+  {
+    "file": "recipes/adhirasam.jpg",
+    "region": "Tamil Nadu",
+    "slot": "recipe",
+    "wiki_title": "Ariselu or Adhirasam or Kajjaya or Athirasa.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ariselu_or_Adhirasam_or_Kajjaya_or_Athirasa.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Jagisnowjughead",
+    "note": "found via Openverse; the earlier Commons search missed it"
   }
 ]
