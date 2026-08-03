@@ -19,6 +19,10 @@ Run after tools/split-recipes.py.
 """
 import html, json, os, re, sys
 
+# Shared copy. Python puts this script's own directory on sys.path, so a
+# plain import finds tools/site_text.py.
+import site_text as T
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "recipes")
 SITE = "https://khaana.com"
@@ -170,15 +174,10 @@ def nutrition_panel(r):
     if n.get("caveat"):
         notes.append(n["caveat"])
     elif n.get("direction") == "understated":
-        notes.append("Ingredients given to taste count as zero, so the real figures "
-                     "run a little higher.")
+        notes.append(T.NUTRITION_UNDERSTATED)
     if n.get("approximated"):
-        notes.append("Nearest database match used for " +
-                     ", ".join(a.replace("-", " ") for a in n["approximated"][:4]) +
-                     ("." if len(n["approximated"]) <= 4 else ", and others."))
-    notes.append("Estimated from raw ingredients using "
-                 "<a href=\"https://fdc.nal.usda.gov/\" rel=\"noopener\">USDA FoodData "
-                 "Central</a>.")
+        notes.append(T.nutrition_approximated(n["approximated"]))
+    notes.append(T.NUTRITION_SOURCE)
 
     return ("""<section class="nutrition" aria-labelledby="nutrition">
         <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="%s">%s estimate</span></h2>
@@ -303,10 +302,8 @@ def render(r, nav, foot):
       </div>
 
       {'<p class="allergen"><strong>Contains:</strong> %s</p>' % esc(allerg) if allerg
-       else '<p class="allergen none"><strong>Allergens:</strong> none of the ten listed below</p>'}
-      <p class="allergen-scope">Checked against the ingredient list for ten allergens:
-        milk, egg, fish, crustaceans, tree nuts, peanuts, sesame, mustard, soy and
-        gluten. Brands vary, so read the label on anything new to you.</p>
+       else f'<p class="allergen none"><strong>Allergens:</strong> {T.ALLERGEN_NONE}</p>'}
+      <p class="allergen-scope">{T.ALLERGEN_SCOPE}</p>
 
       <!-- Jump links. On a phone the method starts 2,000px down and there
            were no anchors at all, so a cook at step six scrolled back through
@@ -342,10 +339,8 @@ def render(r, nav, foot):
 
       {nutrition_html}
 
-      <p class="provenance">Written and checked against sources, not cooked in a test
-        kitchen. Times, yields, allergens and nutrition are worked out rather than
-        measured, so use your own judgement on doneness and on storing.
-        <a href="../about.html">More in About</a>.</p>
+      <p class="provenance">{T.PROVENANCE}
+          <a href="../about.html">More in About</a>.</p>
     </article>
   </div>
 </section>

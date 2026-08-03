@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
-"""Point every "get in touch" on the site at the feedback form.
+"""Stamp the shared copy from site_text.py into every hand-written page.
 
-    python3 tools/sync-contact.py
+    python3 tools/sync-shared-text.py
 
-sync-chrome.py owns the nav and the footer's cuisine columns. It never owned
-the footer's first column, so the contact line there was copied by hand and
-then drifted: 680 pages ended up publishing a personal gmail address.
+sync-chrome.py owns the nav and the footer's cuisine columns. This owns the
+words inside them, and everywhere else a sentence from site_text.py appears in
+a page that is not generated: the footer tagline, the feedback link, and any
+region marked <!-- text:name --> ... <!-- /text:name --> in the HTML.
+
+Nothing owned the footer's first column before, which is exactly how it
+drifted. 680 pages ended up publishing a personal gmail address, and the
+heading above it read "Khaana" on recipe pages and "Khaana (Hindi for Food)"
+on the root pages.
 
 There is one way to reach us and it is the form. Offering an address as well
 made the reader choose between two routes to the same inbox, and the two are
@@ -31,6 +37,8 @@ Idempotent, so it is safe to re-run after any build step that restamps the
 footer. Run after sync-chrome.py and before version-assets.py.
 """
 import glob, html, os, re, sys
+
+import site_text as T
 from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -56,8 +64,18 @@ def form_href(rel, up):
 CONTACT_RE = re.compile(
     r'\s*<p style="max-width:280px; font-size:0\.9rem; margin-top:12px;">.*?</p>', re.S)
 
+TAGLINE_RE = re.compile(
+    r'(<p style="max-width:280px; font-size:0\.97rem;">)(.*?)(</p>)', re.S)
+
+# A marked region in hand-written HTML, so the wording can change in
+# site_text.py without this tool having to recognise the old wording.
+MARKED_RE = re.compile(
+    r'(<!-- text:([a-z-]+) -->)(.*?)(<!-- /text:\2 -->)', re.S)
+MARKED = {"disclaimer-use": lambda: "<p>%s</p>" % T.DISCLAIMER_USE}
+
 CREDIT_RE = re.compile(r'(<div class="credit-line">)(.*?)(</div>)', re.S)
-EXISTING_FEEDBACK_RE = re.compile(r'\s*&middot;\s*<a href="[^"]*">Send feedback</a>')
+EXISTING_FEEDBACK_RE = re.compile(
+    r'\s*&middot;\s*<a href="[^"]*">' + re.escape(T.FEEDBACK_LINK) + r'</a>')
 
 # Any remaining mailto, wherever it sits in the prose, keeping its link text.
 PROSE_MAILTO_RE = re.compile(r'<a href="mailto:[^"]*">(.*?)</a>', re.S)
@@ -75,7 +93,12 @@ def rewrite(path, rel, up):
     out = PROSE_MAILTO_RE.sub(
         lambda m: '<a href="%s">%s</a>' % (href, m.group(1)), out)
 
-    link = '<a href="%s">Send feedback</a>' % href
+    out = TAGLINE_RE.sub(lambda m: m.group(1) + T.BRAND_TAGLINE + m.group(3), out, count=1)
+    out = MARKED_RE.sub(
+        lambda m: m.group(1) + MARKED[m.group(2)]() + m.group(4)
+        if m.group(2) in MARKED else m.group(0), out)
+
+    link = '<a href="%s">%s</a>' % (href, T.FEEDBACK_LINK)
 
     def credit(m):
         inner = EXISTING_FEEDBACK_RE.sub("", m.group(2))

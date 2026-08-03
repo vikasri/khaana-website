@@ -40,6 +40,12 @@ CUISINES = [
 ]
 FOOTER_HEADS = ["Cuisines", "More", "Also", "And"]
 
+# The community cuisines, counted back from the end of CUISINES above. They
+# get the last footer column to themselves: they are the four defined by a
+# people rather than a place, and an even split put Sindhi at the foot of the
+# third column, away from the other three it belongs with.
+COMMUNITY = 4
+
 # Pages that are not part of the site chrome.
 SKIP = {"south-indian.html", "himachali.html"}   # redirect stubs
 
@@ -79,10 +85,16 @@ def nav_html(current):
 
 
 def footer_html():
-    per = (len(CUISINES) + len(FOOTER_HEADS) - 1) // len(FOOTER_HEADS)
+    # The community cuisines take the last column whole; the territorial ones
+    # divide as evenly as they can across the columns before it.
+    territorial = CUISINES[:-COMMUNITY]
+    cols = len(FOOTER_HEADS) - 1
+    per = (len(territorial) + cols - 1) // cols
+    chunks = [territorial[i * per:(i + 1) * per] for i in range(cols)]
+    chunks.append(CUISINES[-COMMUNITY:])
+
     out = []
-    for i, head in enumerate(FOOTER_HEADS):
-        chunk = CUISINES[i * per:(i + 1) * per]
+    for head, chunk in zip(FOOTER_HEADS, chunks):
         if not chunk:
             continue
         links = "\n".join('        <li><a href="%s">%s</a></li>' % (h, l) for h, l in chunk)

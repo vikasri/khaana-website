@@ -29,7 +29,11 @@ Method, stated here because the site states it to readers too:
 Anything that cannot be quantified is counted as zero and recorded in
 "unquantified", so a recipe's coverage is visible instead of implied.
 """
-import json, math, os, re, sys, importlib.util
+import importlib.util, json, math, os, re, sys
+
+# Shared copy. Python puts this script's own directory on sys.path, so a
+# plain import finds tools/site_text.py.
+import site_text as T
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RECIPES = os.path.join(ROOT, "data", "recipes.json")
@@ -373,19 +377,15 @@ def compute(table):
         # what is actually eaten, so a + there would be a lie.
         if soaky:
             n["direction"] = "overstated"
-            n["caveat"] = ("Much of the weighed input is not eaten. Whey poured away when "
-                           "milk is curdled, syrup left in the bowl, or batter that yields "
-                           "more than the stated servings all mean the real figure is lower "
-                           "than this."
-                           if whey else
-                           "Much of the weighed input may not be eaten. Syrup left in the "
-                           "bowl, or batter that yields more than the stated servings, means "
-                           "the real figure is likely lower than this.")
+            n["caveat"] = (T.NUTRITION_OVERSTATED_WHEY if whey
+                           else T.NUTRITION_OVERSTATED_SYRUP)
         elif share > 0.10:
             n["direction"] = "understated"
-            n["caveat"] = ("Ingredients given to taste rather than by weight are counted as "
-                           "zero, so the real figure is a little higher than this. The + says "
-                           "so.")
+            # No caveat stored: the page writes NUTRITION_UNDERSTATED from
+            # the direction, and storing a second copy is how this line came
+            # to be printed twice, one of them still pointing at a "+" that
+            # had been taken off the numbers.
+            n.pop("caveat", None)
         else:
             n["direction"] = "ok"
         r["nutrition"] = n
