@@ -103,13 +103,48 @@ def grams_of(qty):
     return 0.0
 
 
+# A panful, not a spoonful. Matches build-nutrition.py's FRY_BATH_GRAMS: below
+# this the oil is a measured amount that mostly ends up in the food, above it
+# the food is sitting in a bath and most of it goes back in the bottle.
+FRY_BATH_ML = 100
+BATH = re.compile(r"(\d+(?:\.\d+)?)\s*(ml|g|l\b|litres?|liters?)", re.I)
+
+
+def is_oil_bath(qty_text):
+    """True if this quantity describes deep frying rather than a few spoons."""
+    if not re.search(r"\bfry|\bfrying\b", qty_text, re.I):
+        return False
+    for m in BATH.finditer(qty_text):
+        unit = m.group(2).lower()
+        ml = float(m.group(1)) * (1000 if unit.startswith(("l", "lit")) else 1)
+        if ml >= FRY_BATH_ML:
+            return True
+    return False
+
+
 def assess(r):
     """Return (is_healthy, reason_it_failed_or_None)."""
     serves = max(1, r.get("servings") or 4)
     ess = [i for i in r["ingredients"] if i.get("essential", True)]
     ids = {i["id"] for i in ess}
     text = " ".join([s["text"] for s in r["steps"]] +
-                    [s.get("tip") or "" for s in r["steps"]])
+                    [s.get("tip") or "" for s in r["steps"]] +
+                    # The oil ingredient too, but only when the quantity is a
+                    # bath. Reading only the method let murukku, thattai,
+                    # chakli and seedai through — all four a pan of oil deep,
+                    # all four tagged healthier — because their steps say "fry
+                    # on medium until the bubbling stops" and never say deep,
+                    # while the ingredient line says "500ml for deep frying".
+                    #
+                    # The quantity has to decide it, not the phrase: kathal ki
+                    # sabzi says "6 tbsp, 4 for frying the jackfruit" and
+                    # macha besara "5 tbsp, 4 for frying the fish". Both match
+                    # "for frying" and neither is deep-fried. Same threshold
+                    # build-nutrition.py uses to decide what to discount for
+                    # absorption.
+                    [t for i in r["ingredients"]
+                     for t in [(i.get("qty") or "") + " " + (i.get("note") or "")]
+                     if is_oil_bath(t)])
 
     # The method text alone missed dishes that announce frying up front —
     # "fried breads", "fried paneer" — so the name and subtitle count too.
