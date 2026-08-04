@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Food Trivia: Fun Facts About Indian Cooking | Khaana</title>
+<meta name="description" content="Four food trivia questions a day, from 60 in all. Where the chilli came from, why milk beats water on a burnt tongue, and what vindaloo is actually named after." />
+<link rel="canonical" href="https://khaana.com/fun-facts.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Khaana" />
+<meta property="og:title" content="Food Trivia: Fun Facts About Indian Cooking | Khaana" />
+<meta property="og:description" content="Four food trivia questions a day, from 60 in all. Where the chilli came from, why milk beats water on a burnt tongue, and what vindaloo is actually named after." />
+<meta property="og:url" content="https://khaana.com/fun-facts.html" />
+<meta property="og:image" content="https://khaana.com/assets/images/home-hero.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Food Trivia: Fun Facts About Indian Cooking | Khaana" />
+<meta name="twitter:description" content="Four food trivia questions a day, from 60 in all. Where the chilli came from, why milk beats water on a burnt tongue, and what vindaloo is actually named after." />
+<meta name="twitter:image" content="https://khaana.com/assets/images/home-hero.jpg" />
+<link rel="stylesheet" href="style.css?v=8969e13d" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">Khaana <span>| भारत के स्वाद</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cook.html">Recipes</a></li>
+        <li class="nav-cuisines">
+          <button type="button" class="nav-cuisines-toggle" aria-expanded="false" aria-controls="nav-cuisine-menu">Cuisines</button>
+          <ul class="nav-dropdown" id="nav-cuisine-menu">
+            <li><a href="awadhi-lucknowi.html">Awadhi/Lucknowi</a></li>
+            <li><a href="pahari.html">Pahari</a></li>
+            <li><a href="kashmiri.html">Kashmiri</a></li>
+            <li><a href="punjabi.html">Punjabi</a></li>
+            <li><a href="rajasthani.html">Rajasthani</a></li>
+            <li><a href="gujarati.html">Gujarati</a></li>
+            <li><a href="maharashtrian.html">Maharashtrian</a></li>
+            <li><a href="goan.html">Goan</a></li>
+            <li><a href="karnataka.html">Karnataka</a></li>
+            <li><a href="kerala.html">Kerala</a></li>
+            <li><a href="tamil-nadu.html">Tamil Nadu</a></li>
+            <li><a href="andhra.html">Andhra</a></li>
+            <li><a href="hyderabadi.html">Hyderabadi</a></li>
+            <li><a href="odia.html">Odia</a></li>
+            <li><a href="bihari.html">Bihari</a></li>
+            <li><a href="bengali.html">Bengali</a></li>
+            <li><a href="northeast-indian.html">Northeast Indian</a></li>
+            <li><a href="sindhi.html">Sindhi</a></li>
+            <li><a href="parsi.html">Parsi</a></li>
+            <li><a href="anglo-indian.html">Anglo-Indian</a></li>
+            <li><a href="indo-chinese.html">Indo-Chinese</a></li>
+          </ul>
+        </li>
+        <li><a href="fun-facts.html" class="active">Fun Facts</a></li>
+        <li><a href="recommendations.html">Recommendations</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="tight">
+  <div class="container trivia-page">
+    <div class="section-head">
+      <div class="eyebrow">Fun facts</div>
+      <h1>Food Trivia</h1>
+    </div>
+    <p class="trivia-intro">Four questions a day, drawn from 60. They change at
+      midnight and the whole set comes round every 15 days, so there is no way
+      to binge it and no reason to come back twice in one day.</p>
+
+    <div class="trivia-head">
+      <p class="trivia-day" id="trivia-day"></p>
+      <p class="trivia-score" id="trivia-score" hidden></p>
+    </div>
+
+    <ol class="trivia-list" id="trivia-list">
+      <li class="tq" data-answer="2" data-id="chilli-arrival">
+        <p class="tq-q"><span class="tq-n">1</span>Indian food is famous for chilli heat. When did the chilli actually reach India?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Around 2000 BC, with the Indus Valley</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> The 6th century, along the Silk Road</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> The 16th century, with Portuguese traders</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> The 19th century, under the British</button></li>
+        </ul>
+        <p class="tq-note" hidden>Chillies are American. The Portuguese brought them to Goa in the 1500s and they spread across the subcontinent in roughly a century. Every fiery curry you can think of is, historically speaking, a recent development.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="heat-before-chilli">
+        <p class="tq-q"><span class="tq-n">2</span>So what made Indian food hot before chillies turned up?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Ginger</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Black pepper and long pepper</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Mustard oil</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Nothing — it was mild</button></li>
+        </ul>
+        <p class="tq-note" hidden>Pepper did the work, which is why it was worth more than gold to medieval Europe. Long pepper (pippali) was the sharper of the two and has largely fallen out of use.</p>
+      </li>
+      <li class="tq" data-answer="3" data-id="curry-powder">
+        <p class="tq-q"><span class="tq-n">3</span>Where would you find a jar of &#x27;curry powder&#x27; in India?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Every kitchen</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Only in the south</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Only at weddings</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Almost nowhere — it is a British invention</button></li>
+        </ul>
+        <p class="tq-note" hidden>It was blended for colonial officers who wanted one tin to reproduce a whole cuisine. Indian cooks mix spices per dish, and often per stage of the same dish.</p>
+      </li>
+      <li class="tq" data-answer="2" data-id="vindaloo-name">
+        <p class="tq-q"><span class="tq-n">4</span>Vindaloo gets its name from...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> &#x27;Vindh&#x27; meaning fiery</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Potatoes — the &#x27;aloo&#x27; in the name</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Portuguese &#x27;vinha d&#x27;alhos&#x27;, wine and garlic</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> The Vindhya mountains</button></li>
+        </ul>
+        <p class="tq-note" hidden>It is a Portuguese marinade of wine and garlic that landed in Goa and met palm vinegar and chillies. The &#x27;aloo&#x27; is a coincidence. Putting potatoes in it is a misunderstanding with a long and happy career.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="samosa-origin">
+        <p class="tq-q"><span class="tq-n">5</span>The samosa arrived in India from where?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> It is indigenous</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> The Middle East and Central Asia</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Portugal</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> China</button></li>
+        </ul>
+        <p class="tq-note" hidden>It travelled as sanbusak along trade routes and turns up in Persian writing well before it reached Delhi. The potato filling had to wait for the Portuguese to bring potatoes.</p>
+      </li>
+      <li class="tq" data-answer="2" data-id="potato-native">
+        <p class="tq-q"><span class="tq-n">6</span>Which of these is actually native to India?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Potato</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Tomato</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Black pepper</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Chilli</button></li>
+        </ul>
+        <p class="tq-note" hidden>Pepper is from the Malabar coast. Potato, tomato and chilli are all American, and all three arrived in the last five hundred years.</p>
+      </li>
+      <li class="tq" data-answer="2" data-id="saffron-flowers">
+        <p class="tq-q"><span class="tq-n">7</span>Roughly how many crocus flowers does it take to make one gram of saffron?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> About 5</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> About 15</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> About 150</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> About 1,500</button></li>
+        </ul>
+        <p class="tq-note" hidden>Each flower gives three red stigmas, picked by hand at dawn. That is the whole reason saffron costs what it does — there is no way to mechanise it.</p>
+      </li>
+      <li class="tq" data-answer="2" data-id="ghost-pepper">
+        <p class="tq-q"><span class="tq-n">8</span>The bhut jolokia, or ghost pepper, comes from which part of India?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Kerala</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Rajasthan</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> The Northeast</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Kashmir</button></li>
+        </ul>
+        <p class="tq-note" hidden>It grows in Assam, Nagaland and Manipur, and in 2007 Guinness certified it as the world&#x27;s hottest chilli. It has since been comfortably overtaken, which tells you something about the people breeding chillies.</p>
+      </li>
+      <li class="tq" data-answer="2" data-id="capsaicin-milk">
+        <p class="tq-q"><span class="tq-n">9</span>Why does milk help with chilli burn when water does not?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> It is colder</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> It coats the tongue</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Casein in milk binds the capsaicin</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> It neutralises the acid</button></li>
+        </ul>
+        <p class="tq-note" hidden>Capsaicin is oil-soluble, so water just moves it around. Casein, a protein in dairy, lifts it off the pain receptors. Lassi with a hot meal is not decoration.</p>
+      </li>
+      <li class="tq" data-answer="2" data-id="chilli-hot-part">
+        <p class="tq-q"><span class="tq-n">10</span>Which part of a chilli is hottest?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> The seeds</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> The skin</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> The pale pith the seeds attach to</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> The stalk</button></li>
+        </ul>
+        <p class="tq-note" hidden>The placenta, that white rib inside, is where capsaicin is made. Seeds only taste hot because they have been sitting against it. Deseeding a chilli works mostly because you scrape the pith out along with them.</p>
+      </li>
+      <li class="tq" data-answer="2" data-id="turmeric-share">
+        <p class="tq-q"><span class="tq-n">11</span>About what share of the world&#x27;s turmeric does India grow?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> A quarter</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> A half</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Around 80 per cent</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Almost all of it</button></li>
+        </ul>
+        <p class="tq-note" hidden>India grows the great majority of it and also eats the great majority of it, so relatively little enters world trade.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="asafoetida-origin">
+        <p class="tq-q"><span class="tq-n">12</span>Hing, the asafoetida in your tadka, is mostly...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Grown across central India</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Imported from Afghanistan and Iran</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Made synthetically in Gujarat</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> A by-product of onion processing</button></li>
+        </ul>
+        <p class="tq-note" hidden>The plant barely grows in India. A country that puts hing in a great deal of its cooking imports almost every gram of it, and has done for centuries.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="nutmeg-mace">
+        <p class="tq-q"><span class="tq-n">13</span>Nutmeg and mace are...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Two unrelated spices</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Two parts of the same fruit</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> The same spice, ground differently</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Nutmeg is the plant, mace the tree</button></li>
+        </ul>
+        <p class="tq-note" hidden>Mace is the scarlet lacy covering wrapped around the nutmeg seed. One fruit, two spices, two prices.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="tandoori-chicken">
+        <p class="tq-q"><span class="tq-n">14</span>Tandoori chicken as we know it was popularised at which Delhi restaurant?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Karim&#x27;s</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Moti Mahal</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Bukhara</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> The Imperial</button></li>
+        </ul>
+        <p class="tq-note" hidden>Kundan Lal Gujral brought it from Peshawar after Partition. Butter chicken came out of the same kitchen, invented to rescue tandoori chicken that had dried out.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="butter-chicken-origin">
+        <p class="tq-q"><span class="tq-n">15</span>Butter chicken was invented to solve what problem?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Too much butter in the kitchen</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Leftover tandoori chicken drying out</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> A shortage of chillies</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> A vegetarian guest</button></li>
+        </ul>
+        <p class="tq-note" hidden>Unsold tandoori chicken went into a tomato, butter and cream gravy to bring it back. One of the world&#x27;s most ordered dishes began as waste management.</p>
+      </li>
+      <li class="tq" data-answer="2" data-id="chicken-tikka-masala">
+        <p class="tq-q"><span class="tq-n">16</span>Chicken tikka masala is most often credited to a kitchen in...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Amritsar</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Lucknow</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Glasgow</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Dhaka</button></li>
+        </ul>
+        <p class="tq-note" hidden>The best-known story has a Glasgow cook improvising a sauce for a customer who complained his chicken was dry. The claim is disputed, which has never slowed the dish down.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="ketchup-origin">
+        <p class="tq-q"><span class="tq-n">17</span>Tomato ketchup descends from what?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> A French tomato sauce</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> A fermented fish sauce from Asia</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> A Spanish salsa</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> An Italian passata</button></li>
+        </ul>
+        <p class="tq-note" hidden>The word comes from kê-tsiap, a fermented fish brine from southern China and Southeast Asia. Tomatoes were a late substitution, and the fish quietly dropped out.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="gulab-jamun">
+        <p class="tq-q"><span class="tq-n">18</span>What does the &#x27;jamun&#x27; in gulab jamun refer to?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> The cook who invented it</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> A dark purple Indian fruit it resembles</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> The river Yamuna</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> A kind of sugar</button></li>
+        </ul>
+        <p class="tq-note" hidden>Gulab is rose water, jamun is the java plum, which the fried balls resemble in size and colour. The dish is named for looking like fruit it is not.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="paneer-melt">
+        <p class="tq-q"><span class="tq-n">19</span>Why does paneer hold its shape in a hot curry instead of melting?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> It is pressed very hard</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> It is acid-set, with no rennet</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> It is cooked twice</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> The fat is removed</button></li>
+        </ul>
+        <p class="tq-note" hidden>Curdling milk with lemon or vinegar sets the protein in a way that will not flow again with heat. Rennet cheeses like mozzarella melt; acid-set ones like paneer and halloumi grill instead.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="idli-ferment">
+        <p class="tq-q"><span class="tq-n">20</span>What makes idli batter rise overnight?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Baking soda in the rice</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Wild yeast and lactic acid bacteria</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> The steam during cooking</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Whisking air into it</button></li>
+        </ul>
+        <p class="tq-note" hidden>Nothing is added. Microbes already on the grain and on the cook&#x27;s hands do it, which is why the same recipe behaves differently in different kitchens and different seasons.</p>
+      </li>
+      <li class="tq" data-answer="2" data-id="garam-masala-meaning">
+        <p class="tq-q"><span class="tq-n">21</span>Garam masala literally means &#x27;hot spice&#x27;. Hot in what sense?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Chilli hot</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Served hot</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Warming to the body</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Cooked at high heat</button></li>
+        </ul>
+        <p class="tq-note" hidden>It is the Ayurvedic sense of warming, not pungent. A classic garam masala often contains no chilli at all — cinnamon, cardamom, clove, pepper, cumin.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="basmati-meaning">
+        <p class="tq-q"><span class="tq-n">22</span>Basmati means...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Long grain</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Fragrant</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> From Basmat</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Royal rice</button></li>
+        </ul>
+        <p class="tq-note" hidden>From Sanskrit roots meaning aroma. The name is about the smell, not the shape, which is the right way round: the smell is the point.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="biryani-pulao">
+        <p class="tq-q"><span class="tq-n">23</span>The usual distinction between biryani and pulao is that...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Biryani has meat, pulao does not</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Biryani is layered, rice and meat cooked separately then combined</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Pulao is always vegetarian</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Biryani uses basmati, pulao does not</button></li>
+        </ul>
+        <p class="tq-note" hidden>In a pulao the rice cooks in the stock and absorbs it. In a biryani the two are cooked apart and layered, then finished sealed. Plenty of families will argue with this, at length.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="dum-seal">
+        <p class="tq-q"><span class="tq-n">24</span>In dum cooking, what traditionally seals the pot?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> A tight metal lid</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> A ring of dough</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Banana leaf</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Wet cloth</button></li>
+        </ul>
+        <p class="tq-note" hidden>A rope of atta dough pressed around the rim traps the steam. It bakes hard during cooking and gets broken open at the table, which is half the theatre.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="kulfi-churn">
+        <p class="tq-q"><span class="tq-n">25</span>What makes kulfi denser than ice cream?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> More cream</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> It is not churned, so no air is beaten in</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> It is frozen harder</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Added cornflour</button></li>
+        </ul>
+        <p class="tq-note" hidden>Ice cream is up to half air by volume. Kulfi is frozen still, in sealed moulds, so it stays solid and melts far more slowly.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="chai-tea">
+        <p class="tq-q"><span class="tq-n">26</span>Why do Indians wince slightly at the phrase &#x27;chai tea&#x27;?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Chai is coffee</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Chai just means tea, so it says &#x27;tea tea&#x27;</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Chai is a brand name</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> It is a regional insult</button></li>
+        </ul>
+        <p class="tq-note" hidden>Chai is tea in Hindi and a dozen other languages, from the same Chinese root as the English word. The drink people mean is masala chai.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="filter-coffee-chicory">
+        <p class="tq-q"><span class="tq-n">27</span>South Indian filter coffee traditionally contains what besides coffee?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Cardamom</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Chicory</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Salt</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Ginger</button></li>
+        </ul>
+        <p class="tq-note" hidden>Usually 10 to 20 per cent chicory root, which arrived as a wartime extender and stayed because people preferred the taste. It is what gives the decoction its body.</p>
+      </li>
+      <li class="tq" data-answer="2" data-id="tea-assam">
+        <p class="tq-q"><span class="tq-n">28</span>Before the British planted tea in Assam, what did India mostly do with tea?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Exported it to China</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Drank it at every meal</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Very little — it was barely consumed</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Used it as currency</button></li>
+        </ul>
+        <p class="tq-note" hidden>The tea plant grew wild in Assam but was not a national drink. Mass tea drinking was manufactured by a marketing campaign in the early 1900s, and it worked spectacularly.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="milk-production">
+        <p class="tq-q"><span class="tq-n">29</span>Which country produces the most milk?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> The United States</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> India</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> New Zealand</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Germany</button></li>
+        </ul>
+        <p class="tq-note" hidden>India has led since the 1990s, on the back of a cooperative movement that turned millions of one and two-animal households into a national dairy supply.</p>
+      </li>
+      <li class="tq" data-answer="2" data-id="mango-production">
+        <p class="tq-q"><span class="tq-n">30</span>Which country grows the most mangoes?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Thailand</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Mexico</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> India</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Brazil</button></li>
+        </ul>
+        <p class="tq-note" hidden>India grows around half the world&#x27;s mangoes and exports very few of them, because they get eaten at home. There are well over a thousand named varieties.</p>
+      </li>
+      <li class="tq" data-answer="2" data-id="spice-most-expensive">
+        <p class="tq-q"><span class="tq-n">31</span>Which is the most expensive spice by weight?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Vanilla</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Cardamom</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Saffron</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Black pepper</button></li>
+        </ul>
+        <p class="tq-note" hidden>Saffron, by a distance. Vanilla is usually second, and both are expensive for the same reason: the harvest cannot be mechanised.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="pepper-black-gold">
+        <p class="tq-q"><span class="tq-n">32</span>Black pepper was once called &#x27;black gold&#x27;. Which Indian coast built its wealth on it?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Coromandel</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Malabar</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Konkan</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Gujarat</button></li>
+        </ul>
+        <p class="tq-note" hidden>The Malabar coast of Kerala. The search for a sea route to that pepper is the reason Vasco da Gama sailed, and the reason a great deal of subsequent history happened.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="jalebi-origin">
+        <p class="tq-q"><span class="tq-n">33</span>Jalebi&#x27;s name comes from...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Sanskrit jalaka, meaning water</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Arabic zulabiya</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> The city of Jalore</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Persian for &#x27;spiral&#x27;</button></li>
+        </ul>
+        <p class="tq-note" hidden>It arrived with Persian and Arab traders as zulabiya. Nearly every sweet-shop favourite has a passport, which is rather the point of Indian food.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="papad-cooking">
+        <p class="tq-q"><span class="tq-n">34</span>A papad puffs and blisters over a flame because...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Of baking soda in the dough</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Trapped moisture turns to steam</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> The oil in it boils</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> The lentil flour caramelises</button></li>
+        </ul>
+        <p class="tq-note" hidden>The dough is dried, not dead: the little moisture left flashes to steam and lifts the layers. The same physics puffs a puri and a phulka.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="puri-puff">
+        <p class="tq-q"><span class="tq-n">35</span>For a puri to balloon properly, the oil must be...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Barely warm</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Properly hot</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> At a rolling boil</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Any temperature, it does not matter</button></li>
+        </ul>
+        <p class="tq-note" hidden>Hot oil sets the outside instantly, so the steam inside has nowhere to go but up. Cool oil lets it soak in and you get a heavy, greasy disc.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="jaggery-what">
+        <p class="tq-q"><span class="tq-n">36</span>Jaggery, or gur, is...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Refined white sugar, coloured</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Unrefined cane or palm sugar with the molasses left in</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Honey, solidified</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> A sugar substitute made from dates</button></li>
+        </ul>
+        <p class="tq-note" hidden>Cane juice boiled down without separating out the molasses, which is where the colour and the mineral taste come from. Palm and date versions are common too.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="sugar-word">
+        <p class="tq-q"><span class="tq-n">37</span>The English word &#x27;sugar&#x27; traces back to which language?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Arabic</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Sanskrit</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Greek</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Latin</button></li>
+        </ul>
+        <p class="tq-note" hidden>Sanskrit sharkara, through Arabic and Italian into English. Crystallising sugar from cane was worked out in India, and the word travelled with the technique.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="coconut-name">
+        <p class="tq-q"><span class="tq-n">38</span>In Sanskrit the coconut palm is kalpavriksha. What does that mean?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Tree of the coast</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> The wish-fulfilling tree</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Tree of a hundred uses</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> The tall tree</button></li>
+        </ul>
+        <p class="tq-note" hidden>Rather generous, but defensible: the fruit, the water, the oil, the milk, the shell, the fibre, the leaves and the timber all get used.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="banana-leaf">
+        <p class="tq-q"><span class="tq-n">39</span>Eating off a banana leaf is not only tradition. What does the leaf do?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Adds sweetness</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Releases polyphenols when hot food touches it</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Keeps food cold</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Absorbs excess oil</button></li>
+        </ul>
+        <p class="tq-note" hidden>Hot food draws a faint aroma and some polyphenols out of the wax. It is also a plate nobody has to wash, which may be the more persuasive argument.</p>
+      </li>
+      <li class="tq" data-answer="2" data-id="rasgulla-gi">
+        <p class="tq-q"><span class="tq-n">40</span>West Bengal and Odisha both hold a GI tag connected to rasgulla. What settled it?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Bengal won outright</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Odisha won outright</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> They were granted for different things</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> The case is still open</button></li>
+        </ul>
+        <p class="tq-note" hidden>Bengal was granted one for Banglar Rasogolla in 2017 and Odisha one for Odisha Rasagola in 2019. Two tags, two sweets, and an argument that carries on regardless.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="fortune-cookie">
+        <p class="tq-q"><span class="tq-n">41</span>The fortune cookie was invented in...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> China</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Japan and the United States</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Hong Kong</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Singapore</button></li>
+        </ul>
+        <p class="tq-note" hidden>It descends from a Japanese cracker and was popularised in California. It is served in Chinese restaurants nearly everywhere except China.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="bhindi-okra">
+        <p class="tq-q"><span class="tq-n">42</span>Bhindi is which vegetable?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Bitter gourd</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Okra</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Aubergine</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Ridge gourd</button></li>
+        </ul>
+        <p class="tq-note" hidden>Okra, or ladies&#x27; fingers. The sliminess that puts people off is soluble fibre, and it disappears if you keep the pods dry and the pan hot.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="karela-bitter">
+        <p class="tq-q"><span class="tq-n">43</span>Karela is famously bitter. What is the usual way to tame it?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Boiling twice</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Salting and resting, then squeezing</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Adding baking soda</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Freezing first</button></li>
+        </ul>
+        <p class="tq-note" hidden>Salt draws out the bitter juice; you wring it out and cook on. Plenty of cooks refuse to, on the grounds that the bitterness is the entire point.</p>
+      </li>
+      <li class="tq" data-answer="2" data-id="tikka-meaning">
+        <p class="tq-q"><span class="tq-n">44</span>In &#x27;chicken tikka&#x27;, what does tikka mean?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Spiced</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Grilled</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Pieces</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Boneless</button></li>
+        </ul>
+        <p class="tq-note" hidden>It just means bits or pieces. The cooking method is in the tandoor, not in the name.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="thali-meaning">
+        <p class="tq-q"><span class="tq-n">45</span>A thali is named after...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> The region it comes from</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> The metal plate it is served on</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> The number of dishes</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> A kind of rice</button></li>
+        </ul>
+        <p class="tq-note" hidden>The plate. A meal named after its crockery, which is a fair description of a format where the arrangement is as fixed as the food.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="lentil-production">
+        <p class="tq-q"><span class="tq-n">46</span>Which country grows and eats the most pulses — dals, beans, chickpeas?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Brazil</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> India</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Canada</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> China</button></li>
+        </ul>
+        <p class="tq-note" hidden>India by a wide margin on both counts, and it still imports more, which is roughly how much dal gets eaten there.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="wasabi-real">
+        <p class="tq-q"><span class="tq-n">47</span>The green paste served with sushi outside Japan is usually...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Real wasabi</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Horseradish, mustard and green colouring</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Ground green chilli</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Fermented soy</button></li>
+        </ul>
+        <p class="tq-note" hidden>Real wasabi is difficult to grow and loses its punch within about fifteen minutes of grating, so most of the world has been eating dyed horseradish for decades.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="honey-spoil">
+        <p class="tq-q"><span class="tq-n">48</span>Which of these does not spoil, essentially ever?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Ghee</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Honey</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Salt-cured fish</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Dried chillies</button></li>
+        </ul>
+        <p class="tq-note" hidden>Low water, high acidity and a little hydrogen peroxide make honey hostile to microbes. Edible honey has been found in Egyptian tombs.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="pineapple-tongue">
+        <p class="tq-q"><span class="tq-n">49</span>Why does pineapple sting your tongue?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Acidity</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> An enzyme that digests protein</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Tiny crystals in the flesh</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Natural capsaicin</button></li>
+        </ul>
+        <p class="tq-note" hidden>Bromelain breaks down protein, and your tongue is protein. It is, briefly and very slightly, eating you back.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="carrot-colour">
+        <p class="tq-q"><span class="tq-n">50</span>Carrots were originally which colour?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Orange</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Purple and yellow</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> White only</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Red</button></li>
+        </ul>
+        <p class="tq-note" hidden>Purple and yellow, and India still grows red-black ones for kanji and gajar halwa. The orange carrot is a much later Dutch development.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="cashew-origin">
+        <p class="tq-q"><span class="tq-n">51</span>The cashew, so at home in Goan and Kerala cooking, came from...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Sri Lanka</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Brazil</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Persia</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Indonesia</button></li>
+        </ul>
+        <p class="tq-note" hidden>Portuguese traders brought it from Brazil in the 16th century. Feni, Goa&#x27;s cashew spirit, is made from the fruit the nut hangs off, not the nut.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="cashew-shell">
+        <p class="tq-q"><span class="tq-n">52</span>Why do you never see cashews sold in the shell?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> The shell is too hard</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> The shell contains a caustic oil related to poison ivy</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> There is no shell</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> It spoils the flavour</button></li>
+        </ul>
+        <p class="tq-note" hidden>The shell oil blisters skin, and shelling is skilled, hazardous work. That labour is a large part of what you are paying for.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="kadhai-name">
+        <p class="tq-q"><span class="tq-n">53</span>Kadhai paneer is named after...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> A spice blend</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> The pan it is cooked in</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> The city of Kadhai</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> A cooking time</button></li>
+        </ul>
+        <p class="tq-note" hidden>The deep, round-bottomed pan. Its shape concentrates the heat at the base, which is why the same dish in a flat frying pan never quite tastes right.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="shelf-life-ghee">
+        <p class="tq-q"><span class="tq-n">54</span>Ghee keeps far longer than butter because...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> It is salted</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> The milk solids and water have been cooked off</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> It is pasteurised twice</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> It is stored in copper</button></li>
+        </ul>
+        <p class="tq-note" hidden>Water and milk protein are what spoil. Take both out and you have almost pure fat, which keeps for months without a fridge — the reason it exists.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="bay-leaf-difference">
+        <p class="tq-q"><span class="tq-n">55</span>Indian tej patta and the European bay leaf are...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> The same leaf</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Different plants that taste quite different</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> The same plant, dried differently</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Both from the clove tree</button></li>
+        </ul>
+        <p class="tq-note" hidden>Tej patta is cassia, closer to cinnamon. Swapping in a Mediterranean bay leaf gives you a completely different flavour and a mildly confused biryani.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="onion-tears">
+        <p class="tq-q"><span class="tq-n">56</span>Chilling an onion before chopping helps because...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> It hardens the flesh</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> It slows the reaction that makes the irritant gas</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> It removes sulphur</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> It has no effect at all</button></li>
+        </ul>
+        <p class="tq-note" hidden>Cutting releases enzymes that produce a volatile sulphur compound; cold slows the reaction and the gas rises less readily. A sharp knife helps too, by crushing fewer cells.</p>
+      </li>
+      <li class="tq" data-answer="2" data-id="rice-second">
+        <p class="tq-q"><span class="tq-n">57</span>India is the world&#x27;s second largest producer of rice. Who is first?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Indonesia</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Bangladesh</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> China</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Vietnam</button></li>
+        </ul>
+        <p class="tq-note" hidden>China grows more, but India exports far more, and has been the largest rice exporter for years.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="naan-tandoor">
+        <p class="tq-q"><span class="tq-n">58</span>Why is naan hard to make properly at home?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> The dough is difficult</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> It needs a tandoor&#x27;s heat, far above a domestic oven</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> The flour is rare</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> It must be made in pairs</button></li>
+        </ul>
+        <p class="tq-note" hidden>A tandoor runs around 400-480°C, roughly double a home oven. The blistering and the chew both come from cooking that fast. A very hot cast-iron pan is the usual compromise.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="sourdough-idli">
+        <p class="tq-q"><span class="tq-n">59</span>What do sourdough bread and idli batter have in common?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Both use commercial yeast</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Both rely on wild fermentation by microbes already present</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Both need a starter bought from a shop</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Neither is fermented</button></li>
+        </ul>
+        <p class="tq-note" hidden>Same principle, different continents and grains. Both are also unreliable in a cold kitchen, and both are the reason cooks talk about their batter as though it has moods.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="black-salt">
+        <p class="tq-q"><span class="tq-n">60</span>Kala namak, black salt, smells strongly of what?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Smoke</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Boiled egg</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Liquorice</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Nothing much</button></li>
+        </ul>
+        <p class="tq-note" hidden>Sulphur compounds give it a distinctly eggy note. It is also why it turns up in vegan cooking outside India, doing an impression of scrambled eggs.</p>
+      </li>
+    </ol>
+
+    <p class="trivia-foot" id="trivia-foot" hidden>
+      That is today's four. <a href="cook.html">Go and cook something</a>, or
+      come back tomorrow for the next set.</p>
+
+    <noscript><p class="trivia-intro">All 60 questions are listed above, with
+      their answers. The four-a-day version needs JavaScript.</p></noscript>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <h4>Khaana</h4>
+      <p style="max-width:280px; font-size:0.97rem;">The history, traditions and recipes behind India's regional cuisines.</p>
+    </div>
+    <div>
+      <h4>Cuisines</h4>
+      <ul class="foot-links">
+        <li><a href="awadhi-lucknowi.html">Awadhi/Lucknowi</a></li>
+        <li><a href="pahari.html">Pahari</a></li>
+        <li><a href="kashmiri.html">Kashmiri</a></li>
+        <li><a href="punjabi.html">Punjabi</a></li>
+        <li><a href="rajasthani.html">Rajasthani</a></li>
+        <li><a href="gujarati.html">Gujarati</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>More</h4>
+      <ul class="foot-links">
+        <li><a href="maharashtrian.html">Maharashtrian</a></li>
+        <li><a href="goan.html">Goan</a></li>
+        <li><a href="karnataka.html">Karnataka</a></li>
+        <li><a href="kerala.html">Kerala</a></li>
+        <li><a href="tamil-nadu.html">Tamil Nadu</a></li>
+        <li><a href="andhra.html">Andhra</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Also</h4>
+      <ul class="foot-links">
+        <li><a href="hyderabadi.html">Hyderabadi</a></li>
+        <li><a href="odia.html">Odia</a></li>
+        <li><a href="bihari.html">Bihari</a></li>
+        <li><a href="bengali.html">Bengali</a></li>
+        <li><a href="northeast-indian.html">Northeast Indian</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>And</h4>
+      <ul class="foot-links">
+        <li><a href="sindhi.html">Sindhi</a></li>
+        <li><a href="parsi.html">Parsi</a></li>
+        <li><a href="anglo-indian.html">Anglo-Indian</a></li>
+        <li><a href="indo-chinese.html">Indo-Chinese</a></li>
+      </ul>
+    </div>
+    <div class="credit-line"><a href="about.html">About &amp; disclaimers</a> &middot; <a href="credits.html">Image credits</a> &middot; <a href="feedback.html?from=/fun-facts.html">Send feedback</a></div>
+  </div>
+</footer>
+
+<script src="script.js?v=cff5324b"></script>
+<script src="assets/js/trivia.js"></script>
+</body>
+</html>

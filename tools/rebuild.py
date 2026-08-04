@@ -35,6 +35,7 @@ STEPS = [
     ("build-recipe-pages.py",    "651 recipe pages"),
     ("build-cuisine-recipes.py", "recipe lists on the 21 cuisine pages"),
     ("build-recommendations.py", "the curated seven"),
+    ("build-trivia.py",          "the fun facts page"),
     ("build-credits.py",         "the image credits page"),
 
     # Again, because the generators write pages of their own and strip the

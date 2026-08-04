@@ -77,6 +77,8 @@ def nav_html(current):
     menu += ['          </ul>', '        </li>']
     rows += menu
 
+    rows.append('        <li><a href="fun-facts.html"%s>Fun Facts</a></li>'
+                % (' class="active"' if current == "fun-facts.html" else ""))
     rows.append('        <li><a href="recommendations.html"%s>Recommendations</a></li>'
                 % (' class="active"' if current == "recommendations.html" else ""))
     rows.append('        <li><a href="about.html"%s>About</a></li>'

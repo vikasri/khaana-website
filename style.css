@@ -6,6 +6,9 @@
   --saffron: #ff6f59;
   --saffron-dark: #d9432c;
   --terracotta: #e8590c;
+  /* The nav's "you are here" orange. Darker than --terracotta so it clears
+     AA at 4.5:1 on white (4.70:1) at the mobile nav's smaller size. */
+  --nav-active: #c94a09;
   --deep-red: #b8380a;
   --gold: #ffa94d;
   /* Blue accent, used only for the home-page search and the Cook link. Cool
@@ -126,21 +129,25 @@ p { margin: 0 0 1.1em; }
   vertical-align: middle;
 }
 
-.nav-links a { color: var(--ink-soft); }
-.nav-links a:hover, .nav-links a.active { color: var(--terracotta); text-decoration: none; }
+/* One job for colour in the nav: saying which page you are on.
 
-/* Home and Recipes are the two destinations that are not a single cuisine, so
-   they are larger and carry their own colours: maroon for Home, blue for
-   Recipes. Both are checked against white, since nav text must clear AA at
-   4.5:1. #b0003a measures 7.22:1 and #0b5ed7 measures 5.84:1. A more vivid
-   blue like #0a84ff drops to 3.65:1 and fails, which is why it is not used. */
-.nav-links a[href="index.html"] { color: #b0003a; }
-.nav-links a[href="index.html"]:hover,
-.nav-links a[href="index.html"].active { color: #8a002d; }
+   Home used to be maroon and Recipes blue, which meant three different colours
+   competed for attention before the active state got a chance to speak. Every
+   link is now the same near-black, and orange means "this page" and nothing
+   else. Home and Recipes stay larger than the rest, so they keep their
+   prominence through size instead.
 
-.nav-links a[href="cook.html"] { color: #0b5ed7; }
-.nav-links a[href="cook.html"]:hover,
-.nav-links a[href="cook.html"].active { color: #0a4bb0; }
+   --nav-active is a darker orange than --terracotta on purpose. Nav text must
+   clear AA at 4.5:1 against white, and #e8590c measures only 3.58:1 — fine for
+   the 1.34rem desktop nav, which counts as large text, but the mobile dropdown
+   drops to 1.05rem where it would fail. #c94a09 measures 4.70:1 and passes at
+   both sizes. */
+.nav-links a,
+.nav-cuisines-toggle { color: var(--ink); }
+.nav-links a:hover,
+.nav-links a.active,
+.nav-cuisines-toggle:hover,
+.nav-cuisines-toggle.active { color: var(--nav-active); text-decoration: none; }
 
 
 
@@ -1821,10 +1828,11 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
    crawlable; the menu only hides them from the bar, which was wrapping to
    three lines and colliding with the brand. */
 .nav-cuisines { position: relative; }
-.nav-cuisines-toggle { cursor: pointer; border: 0; background: none; color: var(--ink-soft); }
+/* Colour is set with the rest of the nav further up; this block only owns the
+   button's shape. It used to restate the colours here too, and being later in
+   the file it quietly won, so the nav had two sources of truth for one rule. */
+.nav-cuisines-toggle { cursor: pointer; border: 0; background: none; }
 .nav-cuisines-toggle::after { content: ' \25BE'; font-size: 0.8em; }
-.nav-cuisines-toggle:hover,
-.nav-cuisines-toggle.active { color: var(--terracotta); }
 .nav-dropdown {
   display: none;
   /* Anchored to its right edge: the toggle sits near the end of the bar, so
@@ -1838,11 +1846,16 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 }
 .nav-cuisines.open .nav-dropdown { display: block; }
 .nav-dropdown li { break-inside: avoid; }
+/* The 21 cuisines inside the menu. Same rule as the bar above it: black by
+   default, orange for the one you are on. These are 0.95rem and not bold, so
+   they need the full 4.5:1 that --nav-active carries and --terracotta does
+   not. */
 .nav-dropdown a {
   display: block; padding: 5px 8px; border-radius: 7px;
-  font-size: 0.95rem; line-height: 1.4; color: var(--ink-soft); font-weight: 600;
+  font-size: 0.95rem; line-height: 1.4; color: var(--ink); font-weight: 600;
 }
-.nav-dropdown a:hover { background: var(--cream); color: var(--terracotta); text-decoration: none; }
+.nav-dropdown a:hover,
+.nav-dropdown a.active { background: var(--cream); color: var(--nav-active); text-decoration: none; }
 
 @media (max-width: 820px) {
   /* Cuisines is a real control here, not a label. It used to be
@@ -2241,3 +2254,74 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
   color: var(--ink-soft);
 }
 .find-pick a { font-weight: 700; }
+
+/* ---------- Fun facts ---------- */
+/* Four questions a day out of sixty. All sixty are in the markup so the page
+   works without JavaScript; trivia.js hides all but today's. */
+.trivia-intro { max-width: 68ch; color: var(--ink-soft); font-size: 0.97rem; line-height: 1.65; }
+
+.trivia-head {
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  justify-content: space-between; gap: 8px 18px;
+  margin: 26px 0 6px; padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+.trivia-day {
+  margin: 0; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.11em;
+  text-transform: uppercase; color: var(--ink-soft);
+}
+.trivia-score {
+  margin: 0; font-family: var(--serif); font-size: 1.05rem; color: var(--ink-soft);
+}
+.trivia-score[data-all="done"] { color: var(--nav-active); font-weight: 700; }
+
+.trivia-list { list-style: none; margin: 0; padding: 0; }
+.tq { margin: 0 0 30px; }
+.tq-q {
+  font-family: var(--serif); font-size: 1.22rem; line-height: 1.45;
+  margin: 0 0 12px; color: var(--ink);
+}
+.tq-n { color: var(--ink-soft); font-weight: 700; }
+
+.tq-opts { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+/* Two columns once there is room. Four options stacked on a desktop makes the
+   page a long thin ribbon and pushes the note below the fold. */
+@media (min-width: 700px) { .tq-opts { grid-template-columns: 1fr 1fr; } }
+
+.tq-opt {
+  display: flex; align-items: baseline; gap: 9px; width: 100%;
+  text-align: left; cursor: pointer;
+  padding: 11px 14px; border: 1px solid var(--line); border-radius: 9px;
+  background: var(--paper); color: var(--ink);
+  font-family: var(--sans); font-size: 0.97rem; line-height: 1.45;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.tq-opt:hover:not(:disabled) { border-color: var(--nav-active); background: var(--cream); }
+.tq-opt:disabled { cursor: default; }
+.tq-letter { font-weight: 800; color: var(--ink-soft); flex: 0 0 auto; }
+
+/* Right and wrong carry a word as well as a colour, via ::after, so the result
+   does not depend on telling green from red. */
+.tq-opt.is-right { border-color: #2e7d4f; background: #edf7f1; color: #1c5535; }
+.tq-opt.is-right .tq-letter { color: #2e7d4f; }
+.tq-opt.is-right::after { content: 'correct'; margin-left: auto; padding-left: 10px;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.tq-opt.is-wrong { border-color: #b3261e; background: #fdeeec; color: #8c1d18; }
+.tq-opt.is-wrong .tq-letter { color: #b3261e; }
+.tq-opt.is-wrong::after { content: 'not this one'; margin-left: auto; padding-left: 10px;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+
+.tq-note {
+  margin: 12px 0 0; padding: 11px 14px;
+  background: var(--cream); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0;
+  font-size: 0.93rem; line-height: 1.6; color: var(--ink-soft);
+}
+
+.trivia-foot {
+  margin-top: 30px; padding-top: 16px; border-top: 1px solid var(--line);
+  color: var(--ink-soft); font-size: 0.95rem;
+}
+
+/* Without JavaScript every question is visible with its answer already shown,
+   which is a readable list rather than a broken quiz. */
+@media print { .tq-opt { border-color: #bbb; } .tq-note { background: none; } }
