@@ -45,6 +45,7 @@ STEPS = [
 
     ("build-search-index.py",    "the site search index"),
     ("build-seo.py",             "canonical tags, sitemap.xml, robots.txt"),
+    ("stamp-image-dims.py",      "intrinsic width/height on every image"),
     ("version-assets.py",        "cache-busting stamps (must be last)"),
 ]
 

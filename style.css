@@ -95,7 +95,19 @@ p { margin: 0 0 1.1em; }
 }
 /* "भारत के स्वाद" is one phrase and must not break across lines. The brand as a
    whole may still wrap between the English and the Hindi on a narrow header. */
-.brand span { color: var(--ink); white-space: nowrap; }
+/* The Hindi sits on its own line under the English rather than beside it.
+   On the home page the brand reads "Khaana (Food)", and with the Hindi
+   alongside it the whole lockup was wide enough to push About onto a second
+   row of the nav. Stacking narrows it and reads as one wordmark. */
+.brand { line-height: 1.15; }
+.brand span {
+  display: block;
+  color: var(--ink);
+  white-space: nowrap;
+  font-size: 0.68em;
+  font-weight: 400;
+  letter-spacing: 0;
+}
 
 .nav-toggle {
   display: none;
