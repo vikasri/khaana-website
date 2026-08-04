@@ -1,7 +1,20 @@
 {
   "_comment": "Food trivia for the Fun Facts page. Five are shown a day, chosen from this list by date, so the whole set is seen every twenty days. Edit here and run tools/build-trivia.py. Keep every claim checkable: this is a page people will repeat at dinner, and a wrong fact travels further than a right one.",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "updated": "2026-08-03",
+  "_wrongMessages_comment": "Shown one at a time, at random, when a reader picks a wrong answer. Edit here and run tools/build-trivia.py. Keep them light: the reader has just got something wrong and is about to try again.",
+  "wrongMessages": [
+    "Not quite! Take another bite at it.",
+    "That answer needed more seasoning.",
+    "Oops! The masala led you astray.",
+    "Close, but no samosa.",
+    "A delicious guess, but incorrect.",
+    "Your culinary compass slipped.",
+    "The kitchen jury says: try again.",
+    "That fact is still a little undercooked.",
+    "Good guess, wrong ingredient.",
+    "Lost points, but excellent confidence."
+  ],
   "questions": [
     {
       "id": "chilli-arrival",

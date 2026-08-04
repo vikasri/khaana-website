@@ -59,6 +59,7 @@ def question_html(n, q):
         <ul class="tq-opts">
 %s
         </ul>
+        <p class="tq-nudge" role="status" aria-live="polite" hidden></p>
         <p class="tq-note" hidden>%s</p>
       </li>""" % (q["answer"], esc(q["id"]), n, esc(q["q"]), opts, esc(q["note"]))
 
@@ -70,6 +71,9 @@ def main():
         print("  ! %d questions is not a whole number of days of %d"
               % (len(qs), PER_DAY))
     nav, foot = chrome()
+    # As data, not as script: the page hands the messages to trivia.js without
+    # either of them owning a second copy of the copy.
+    nudges = json.dumps(db.get("wrongMessages") or [], ensure_ascii=False)
     body = "\n".join(question_html(n + 1, q) for n, q in enumerate(qs))
     days = len(qs) // PER_DAY
 
@@ -117,6 +121,7 @@ def main():
     <ol class="trivia-list" id="trivia-list">
 %s
     </ol>
+    <script type="application/json" id="trivia-nudges">%s</script>
 
     <p class="trivia-foot" id="trivia-foot" hidden>
       More tomorrow. Meanwhile, <a href="cook.html">go and cook something</a>.</p>
@@ -132,7 +137,7 @@ def main():
 <script src="assets/js/trivia.js"></script>
 </body>
 </html>
-""" % (nav, body, foot)
+""" % (nav, body, nudges, foot)
 
     open(OUT, "w", encoding="utf-8").write(page)
     print("fun-facts.html written: %d questions, %d a day, a %d-day cycle"

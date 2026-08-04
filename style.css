@@ -2347,3 +2347,27 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 }
 .trivia-sound:hover { border-color: var(--nav-active); color: var(--nav-active); }
 .trivia-sound[aria-pressed="false"] { color: var(--ink-soft); opacity: 0.75; }
+
+/* The line shown after a wrong answer, while the options are briefly locked. */
+.tq-nudge {
+  margin: 12px 0 0;
+  font-family: var(--serif); font-size: 1.02rem; line-height: 1.5;
+  color: var(--nav-active);
+}
+/* Two seconds where nothing responds needs to look deliberate, or it reads as
+   a broken page. The options dim and the cursor says wait. */
+.tq.is-holding .tq-opt:not(.is-wrong):not(.is-right) { opacity: 0.5; }
+.tq.is-holding .tq-opt { cursor: wait; }
+.tq-nudge::after {
+  content: '';
+  display: block; height: 2px; margin-top: 7px; width: 100%;
+  background: linear-gradient(to right, var(--nav-active) 0 100%);
+  transform-origin: left;
+  animation: tq-hold 2s linear forwards;
+}
+/* The bar draining is the only thing telling the reader the pause is finite. */
+@keyframes tq-hold { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+.tq.answered .tq-nudge::after { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .tq-nudge::after { animation: none; transform: scaleX(0); }
+}

@@ -186,9 +186,58 @@
    * floor, though you would have to work at it.
    */
   var MAX = PER_DAY * 2;
+  var HOLD_MS = 2000;
   var solved = 0, score = 0;
   var scoreEl = document.getElementById('trivia-score');
   var footEl = document.getElementById('trivia-foot');
+
+  /* A friendly line on a wrong answer, and two seconds to read it.
+   *
+   * Without the pause the messages are pointless: a reader who is guessing
+   * clicks straight through the next option and the line changes before their
+   * eye has reached it. Two seconds is long enough to read ten words and short
+   * enough not to feel like a punishment. Only the question they are on
+   * locks — the other four stay live, since being made to wait on a question
+   * you are not looking at would be nonsense.
+   *
+   * The messages come from data/trivia.json by way of a JSON block in the page,
+   * so the copy has one home and it is not this file.
+   */
+  var nudges = [];
+  var nudgeEl = document.getElementById('trivia-nudges');
+  if (nudgeEl) {
+    try { nudges = JSON.parse(nudgeEl.textContent) || []; } catch (e) { nudges = []; }
+  }
+  var lastNudge = -1;
+
+  function nudge(q) {
+    var el = q.querySelector('.tq-nudge');
+    if (!el || !nudges.length) return;
+    var i = Math.floor(Math.random() * nudges.length);
+    // Never the same line twice running; with ten of them that would look
+    // less like randomness and more like the page repeating itself.
+    if (nudges.length > 1 && i === lastNudge) i = (i + 1) % nudges.length;
+    lastNudge = i;
+    el.textContent = nudges[i];
+    el.hidden = false;
+  }
+
+  function hold(q) {
+    q.classList.add('is-holding');
+    var live = [];
+    q.querySelectorAll('.tq-opt').forEach(function (b) {
+      if (!b.disabled) { b.disabled = true; live.push(b); }
+    });
+    setTimeout(function () {
+      q.classList.remove('is-holding');
+      // Re-enable only what was live when we locked. A question solved in the
+      // meantime cannot happen, but re-enabling blindly would undo the
+      // permanent disable on the options already spent.
+      if (!q.classList.contains('answered')) {
+        live.forEach(function (b) { b.disabled = false; });
+      }
+    }, HOLD_MS);
+  }
 
   function scoreLine() {
     if (!scoreEl) return;
@@ -215,12 +264,19 @@
       score -= 1;
       womp();
       scoreLine();
+      nudge(q);
+      hold(q);
       return;
     }
 
     q.classList.add('answered');
     btn.classList.add('is-right');
     q.querySelectorAll('.tq-opt').forEach(function (b) { b.disabled = true; });
+
+    // The nudge was an encouragement to try again. They have, so it goes and
+    // the fact takes its place.
+    var nudged = q.querySelector('.tq-nudge');
+    if (nudged) nudged.hidden = true;
 
     var note = q.querySelector('.tq-note');
     if (note) note.hidden = false;
