@@ -915,7 +915,6 @@ section.tight { padding: 34px 0; }
   .cook-entry > :nth-child(1) { order: 3; }
   .cook-entry-or { justify-self: start; }
 }
-}
 
 /* Homepage "what can I cook tonight" strip. Only appears for a returning
    visitor with a saved pantry, so it must look settled rather than promotional:
