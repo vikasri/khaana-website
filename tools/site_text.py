@@ -128,8 +128,12 @@ def nutrition_approximated(ingredients):
 # deliberately.
 # ---------------------------------------------------------------------------
 
-DISCLAIMER_USE = ("Khaana is offered as it stands, to provide helpful guidance, "
-                  "with no warranty on accuracy or completeness. How a dish "
-                  "turns out depends on your kitchen, your ingredients and "
-                  "your judgement. Khaana is not liable for any loss, injury "
-                  "or illness arising from their use.")
+DISCLAIMER_USE = ("Khaana recipes are helpful guides, not guaranteed outcomes. "
+                  "Ingredients, equipment, technique and taste vary, and "
+                  "recipes may contain errors or omissions. Please use your "
+                  "own judgement and follow appropriate food-safety practices. "
+                  "Always check ingredients and product labels for allergens "
+                  "or dietary suitability. Khaana is not responsible or liable "
+                  "for dissatisfaction, loss, injury or illness resulting from "
+                  "use of its recipes or website. Nothing here is medical or "
+                  "nutritional advice.")
