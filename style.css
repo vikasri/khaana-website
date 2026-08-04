@@ -2335,10 +2335,13 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 .tq.answered .tq-opt.is-wrong { opacity: 0.55; }
 .tq.answered .tq-opt.is-wrong::after { content: 'not this one'; }
 
+/* The fact, once they have got it right. Dark green to match the correct
+   answer above it, and big enough to be the reward rather than a footnote —
+   it is the thing the page exists to tell them. 8.6:1 on the cream panel. */
 .tq-note {
-  margin: 12px 0 0; padding: 11px 14px;
-  background: var(--cream); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0;
-  font-size: 0.93rem; line-height: 1.6; color: var(--ink-soft);
+  margin: 12px 0 0; padding: 13px 16px;
+  background: var(--cream); border-left: 3px solid #14532d; border-radius: 0 6px 6px 0;
+  font-size: 1.06rem; line-height: 1.6; color: #14532d;
 }
 
 .trivia-foot {
@@ -2361,10 +2364,12 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 .trivia-sound[aria-pressed="false"] { color: var(--ink-soft); opacity: 0.75; }
 
 /* The line shown after a wrong answer, while the options are briefly locked. */
+/* The nudge after a wrong answer, in maroon to match the option it just
+   greyed out. 8.6:1 against the page. */
 .tq-nudge {
   margin: 12px 0 0;
-  font-family: var(--serif); font-size: 1.02rem; line-height: 1.5;
-  color: var(--nav-active);
+  font-family: var(--serif); font-size: 1.14rem; line-height: 1.5;
+  color: #8c1d18;
 }
 /* Two seconds where nothing responds needs to look deliberate, or it reads as
    a broken page. The options dim and the cursor says wait. */
@@ -2373,7 +2378,7 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 .tq-nudge::after {
   content: '';
   display: block; height: 2px; margin-top: 7px; width: 100%;
-  background: linear-gradient(to right, var(--nav-active) 0 100%);
+  background: linear-gradient(to right, #8c1d18 0 100%);
   transform-origin: left;
   animation: tq-hold 2s linear forwards;
 }
