@@ -19,10 +19,21 @@ Idempotent: an existing ?v= is replaced rather than stacked.
 import glob, hashlib, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ASSETS = ["style.css", "script.js", "assets/js/cook.js", "assets/js/site-search.js",
-          "assets/js/search-match.js", "assets/js/kitchen-strip.js",
-          "assets/js/favourites.js",
-          "assets/js/feedback.js"]
+def assets():
+    """Every stylesheet and script the site serves.
+
+    This was a hand-written list, and a hand-written list of files is a list
+    that goes out of date the first time somebody adds one. assets/js/trivia.js
+    shipped unstamped for exactly that reason: returning visitors kept a cached
+    copy of the old script against new markup, which is the precise failure the
+    stamping exists to prevent.
+
+    Discovering them means a new script is covered the moment it exists.
+    """
+    found = ["style.css", "script.js"]
+    found += sorted(os.path.relpath(p, ROOT).replace(os.sep, "/")
+                    for p in glob.glob(os.path.join(ROOT, "assets", "js", "*.js")))
+    return found
 
 
 def digest(rel):
@@ -33,7 +44,7 @@ def digest(rel):
 
 
 def main():
-    stamps = {rel: digest(rel) for rel in ASSETS}
+    stamps = {rel: digest(rel) for rel in assets()}
     stamps = {k: v for k, v in stamps.items() if v}
 
     pages = glob.glob(os.path.join(ROOT, "*.html")) + glob.glob(os.path.join(ROOT, "recipes", "*.html"))
