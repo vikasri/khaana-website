@@ -108,7 +108,7 @@ def main():
     <div class="trivia-head">
       <p class="trivia-day" id="trivia-day"></p>
       <div class="trivia-head-right">
-        <p class="trivia-score" id="trivia-score" hidden></p>
+        <p class="trivia-score" id="trivia-score" hidden>Score 0 / 10</p>
         <button type="button" class="trivia-sound" id="trivia-sound"
                 aria-pressed="true">Sound on</button>
       </div>

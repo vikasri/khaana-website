@@ -169,42 +169,66 @@
     });
   }
 
-  var answered = 0, right = 0;
+  /* Keep guessing until you get it.
+   *
+   * A wrong pick greys itself out and the question stays open, so the reader
+   * works down to the answer instead of being told off once and shut out. Only
+   * the right answer closes the question and reveals the note, which also
+   * means the note is never a consolation prize for having failed.
+   *
+   * Scoring is what stops that being free. Two for a right answer, one off for
+   * a wrong one, so a question solved first time is worth 2, after one miss 1,
+   * after two 0, and after three -1. Counting rights alone would put everybody
+   * on full marks by the end of the page, which is not a score, it is a
+   * participation note.
+   *
+   * The total is allowed to go negative. Ten is the ceiling and minus five the
+   * floor, though you would have to work at it.
+   */
+  var MAX = PER_DAY * 2;
+  var solved = 0, score = 0;
   var scoreEl = document.getElementById('trivia-score');
   var footEl = document.getElementById('trivia-foot');
 
   function scoreLine() {
     if (!scoreEl) return;
     scoreEl.hidden = false;
-    scoreEl.textContent = right + ' of ' + answered + ' right';
-    scoreEl.setAttribute('data-all', answered === PER_DAY ? 'done' : 'part');
+    scoreEl.textContent = 'Score ' + score + ' / ' + MAX;
+    scoreEl.setAttribute('data-all', solved === PER_DAY ? 'done' : 'part');
+    scoreEl.setAttribute('data-neg', score < 0 ? '1' : '0');
   }
+
+  scoreLine();                           // on screen from load, starting at zero
 
   list.addEventListener('click', function (e) {
     var btn = e.target.closest ? e.target.closest('.tq-opt') : null;
-    if (!btn) return;
+    if (!btn || btn.disabled) return;
     var q = btn.closest('.tq');
-    if (!q || q.classList.contains('answered')) return;   // one go per question
+    if (!q || q.classList.contains('answered')) return;   // already solved
 
     var correct = parseInt(q.getAttribute('data-answer'), 10);
     var chose = parseInt(btn.getAttribute('data-i'), 10);
+
+    if (chose !== correct) {
+      btn.classList.add('is-wrong');
+      btn.disabled = true;                 // that one is spent; the rest are not
+      score -= 1;
+      womp();
+      scoreLine();
+      return;
+    }
+
     q.classList.add('answered');
+    btn.classList.add('is-right');
+    q.querySelectorAll('.tq-opt').forEach(function (b) { b.disabled = true; });
 
-    q.querySelectorAll('.tq-opt').forEach(function (b) {
-      var i = parseInt(b.getAttribute('data-i'), 10);
-      b.disabled = true;
-      if (i === correct) b.classList.add('is-right');
-      else if (i === chose) b.classList.add('is-wrong');
-    });
-
-    // The note is the payoff, so it shows either way. Getting it wrong and
-    // then being told nothing would be the worst of both.
     var note = q.querySelector('.tq-note');
     if (note) note.hidden = false;
 
-    answered++;
-    if (chose === correct) { right++; cheer(); } else { womp(); }
+    solved++;
+    score += 2;
+    cheer();
     scoreLine();
-    if (answered === PER_DAY && footEl) footEl.hidden = false;
+    if (solved === PER_DAY && footEl) footEl.hidden = false;
   });
 })();

@@ -2274,6 +2274,7 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
   margin: 0; font-family: var(--serif); font-size: 1.05rem; color: var(--ink-soft);
 }
 .trivia-score[data-all="done"] { color: var(--nav-active); font-weight: 700; }
+.trivia-score[data-neg="1"] { color: #b3261e; }
 
 .trivia-list { list-style: none; margin: 0; padding: 0; }
 .tq { margin: 0 0 30px; }
@@ -2308,8 +2309,14 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
   font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
 .tq-opt.is-wrong { border-color: #b3261e; background: #fdeeec; color: #8c1d18; }
 .tq-opt.is-wrong .tq-letter { color: #b3261e; }
-.tq-opt.is-wrong::after { content: 'not this one'; margin-left: auto; padding-left: 10px;
+.tq-opt.is-wrong::after { margin-left: auto; padding-left: 10px;
   font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+/* A wrong pick does not end the question, so while it is still open the label
+   invites another go. Once the question is solved it becomes a plain record of
+   what was tried, and fades back so the right answer is what the eye lands on. */
+.tq:not(.answered) .tq-opt.is-wrong::after { content: 'try again'; }
+.tq.answered .tq-opt.is-wrong { opacity: 0.55; }
+.tq.answered .tq-opt.is-wrong::after { content: 'not this one'; }
 
 .tq-note {
   margin: 12px 0 0; padding: 11px 14px;
