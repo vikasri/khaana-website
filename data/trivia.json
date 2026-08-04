@@ -1,6 +1,6 @@
 {
   "_comment": "Food trivia for the Fun Facts page. Five are shown a day, chosen from this list by date, so the whole set is seen every twenty days. Edit here and run tools/build-trivia.py. Keep every claim checkable: this is a page people will repeat at dinner, and a wrong fact travels further than a right one.",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "updated": "2026-08-03",
   "questions": [
     {
@@ -37,7 +37,7 @@
         "Persian traders"
       ],
       "answer": 1,
-      "note": "Spice blending in India is far older than any of that, but it is done per dish and often per stage of a dish. The one tin meant to stand in for a whole cuisine was built for export."
+      "note": "Spice blending in India is far older than any of this, but it is done per dish and often per stage of a dish. The single all-purpose tin was put together for British kitchens and the export trade, to stand in for a whole cuisine."
     },
     {
       "id": "vindaloo-name",
@@ -105,7 +105,7 @@
       "options": [
         "It is colder",
         "It coats the tongue",
-        "Casein in milk binds the capsaicin",
+        "Milk protein and fat disperse the capsaicin",
         "It neutralises the acid"
       ],
       "answer": 2,
@@ -361,7 +361,7 @@
         "Brazil"
       ],
       "answer": 2,
-      "note": "India grows roughly two-fifths of the world's mangoes, depending on the dataset, and exports few of them because they get eaten at home. The number of named varieties runs into the hundreds and is often given as more than a thousand."
+      "note": "On recent figures India grows roughly two-fifths of the world's mangoes, depending on the dataset, and exports few of them because they get eaten at home. The number of named varieties runs into the hundreds and is often given as more than a thousand."
     },
     {
       "id": "spice-most-expensive",
@@ -373,7 +373,7 @@
         "Black pepper"
       ],
       "answer": 2,
-      "note": "Saffron, at retail, though grade and origin move the price a great deal. Vanilla is usually next, and both are expensive for the same reason: the harvest resists mechanising."
+      "note": "Saffron, at retail today, though grade and origin move the price a great deal. Vanilla is usually next, and both are expensive for the same reason: the harvest resists mechanising."
     },
     {
       "id": "pepper-black-gold",
@@ -553,7 +553,7 @@
         "China"
       ],
       "answer": 1,
-      "note": "India by a wide margin on both counts, and it still imports more, which is roughly how much dal gets eaten there."
+      "note": "India on both counts, by a wide margin on recent figures, and it still imports more on top. Which is roughly how much dal gets eaten there."
     },
     {
       "id": "wasabi-real",
@@ -601,7 +601,7 @@
         "White only"
       ],
       "answer": 1,
-      "note": "Orange is the one everybody pictures and it was never the only option. India still grows a deep red-black carrot for kanji and gajar halwa."
+      "note": "Purple, yellow and white were all ordinary, and orange is simply the one that won. India still grows a deep red-black carrot for kanji and gajar halwa."
     },
     {
       "id": "cashew-origin",
@@ -685,7 +685,7 @@
         "Vietnam"
       ],
       "answer": 2,
-      "note": "China grows more, but India exports far more, and has been the largest rice exporter for years."
+      "note": "China has grown more for years, though India has recently been the larger exporter by some distance."
     },
     {
       "id": "naan-tandoor",
