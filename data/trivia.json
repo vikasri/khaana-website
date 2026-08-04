@@ -313,7 +313,7 @@
         "It is a regional insult"
       ],
       "answer": 1,
-      "note": "Chai is tea in Hindi and a dozen other languages, from the same Chinese root as the English word. The drink people mean is masala chai."
+      "note": "Chai is tea in Hindi and many other languages. It and the English word both go back to the same Chinese character, by two different routes: chá overland, and the Min Nan te by sea. The drink people mean is masala chai."
     },
     {
       "id": "filter-coffee-chicory",
@@ -817,7 +817,7 @@
         "Beer"
       ],
       "answer": 1,
-      "note": "Fermenting sap from the coconut palm, collected before dawn. Most modern recipes use yeast or an overnight ferment instead, which works but is less fun to explain."
+      "note": "Fermenting sap tapped from the coconut palm. Most modern recipes use yeast or an overnight ferment instead, which works but is less fun to explain."
     },
     {
       "id": "feni-gi",
@@ -841,7 +841,7 @@
         "Mexico"
       ],
       "answer": 1,
-      "note": "Tropical Africa. Its Latin name, Tamarindus indica, and the Arabic tamr hindi both mean 'Indian date', which is two continents' worth of confusion in one plant."
+      "note": "Africa, not India. Kew places its native range around Madagascar and the Comoros, and says long cultivation has made the exact origin hard to pin down. Its Latin name, Tamarindus indica, and the Arabic tamr hindi both mean 'Indian date', which is two continents' worth of confusion in one plant."
     },
     {
       "id": "kokum-what",
