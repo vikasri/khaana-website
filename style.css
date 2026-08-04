@@ -2325,3 +2325,13 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 /* Without JavaScript every question is visible with its answer already shown,
    which is a readable list rather than a broken quiz. */
 @media print { .tq-opt { border-color: #bbb; } .tq-note { background: none; } }
+
+.trivia-head-right { display: flex; align-items: baseline; gap: 14px; }
+.trivia-sound {
+  border: 1px solid var(--line); background: var(--paper); color: var(--ink-soft);
+  border-radius: 999px; padding: 3px 11px; cursor: pointer;
+  font-family: var(--sans); font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.trivia-sound:hover { border-color: var(--nav-active); color: var(--nav-active); }
+.trivia-sound[aria-pressed="false"] { color: var(--ink-soft); opacity: 0.75; }

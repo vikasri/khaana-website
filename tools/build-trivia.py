@@ -3,16 +3,20 @@
 
     python3 tools/build-trivia.py
 
-Four questions a day out of sixty, chosen by the date, so the whole set comes
-round every fifteen days and everybody looking at the page on the same day sees
-the same four.
+Five questions a day out of a hundred, chosen by the date, so the whole set
+comes round every twenty days and everybody looking at the page on the same day
+sees the same five.
+
+Nothing about that mechanism appears on the page. The reader gets five
+questions and an invitation to come back tomorrow; the rotation is the site's
+business, not theirs.
 
 Why the questions are written into the page rather than fetched
 ---------------------------------------------------------------
 
-All sixty ship in the HTML, and the script picks today's four on load. That is
-the wrong instinct for a big dataset and the right one for this: sixty
-questions is about 18 KB, less than one recipe photograph, and it buys three
+All hundred ship in the HTML, and the script picks today's five on load. That
+is the wrong instinct for a big dataset and the right one for this: a hundred
+questions is about 30 KB, well under one recipe photograph, and it buys three
 things a fetch would cost. The page works with no second request. The answers
 and the notes are in the markup, so a search engine and a reader with
 JavaScript off both get the whole thing as a plain list. And there is no
@@ -29,7 +33,7 @@ import site_text as T
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "data", "trivia.json")
 OUT = os.path.join(ROOT, "fun-facts.html")
-PER_DAY = 4
+PER_DAY = 5
 
 
 def esc(s):
@@ -75,13 +79,13 @@ def main():
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Food Trivia: Fun Facts About Indian Cooking | Khaana</title>
-<meta name="description" content="Four food trivia questions a day, from %d in all. Where the chilli came from, why milk beats water on a burnt tongue, and what vindaloo is actually named after." />
+<meta name="description" content="Food trivia from India and beyond. Where the chilli really came from, why milk beats water on a burnt tongue, and what vindaloo is actually named after." />
 <link rel="canonical" href="https://khaana.com/fun-facts.html" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Khaana" />
 <meta property="og:title" content="Food Trivia | Khaana" />
-<meta property="og:description" content="Four food trivia questions a day, from %d in all." />
+<meta property="og:description" content="Where the chilli really came from, why milk beats water on a burnt tongue, and what vindaloo is actually named after." />
 <meta property="og:url" content="https://khaana.com/fun-facts.html" />
 <meta property="og:image" content="https://khaana.com/assets/images/home-hero.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -98,13 +102,16 @@ def main():
       <div class="eyebrow">Fun facts</div>
       <h1>Food Trivia</h1>
     </div>
-    <p class="trivia-intro">Four questions a day, drawn from %d. They change at
-      midnight and the whole set comes round every %d days, so there is no way
-      to binge it and no reason to come back twice in one day.</p>
+    <p class="trivia-intro">Try this food trivia. Come here again tomorrow
+      for more fun facts.</p>
 
     <div class="trivia-head">
       <p class="trivia-day" id="trivia-day"></p>
-      <p class="trivia-score" id="trivia-score" hidden></p>
+      <div class="trivia-head-right">
+        <p class="trivia-score" id="trivia-score" hidden></p>
+        <button type="button" class="trivia-sound" id="trivia-sound"
+                aria-pressed="true">Sound on</button>
+      </div>
     </div>
 
     <ol class="trivia-list" id="trivia-list">
@@ -112,11 +119,10 @@ def main():
     </ol>
 
     <p class="trivia-foot" id="trivia-foot" hidden>
-      That is today's four. <a href="cook.html">Go and cook something</a>, or
-      come back tomorrow for the next set.</p>
+      More tomorrow. Meanwhile, <a href="cook.html">go and cook something</a>.</p>
 
-    <noscript><p class="trivia-intro">All %d questions are listed above, with
-      their answers. The four-a-day version needs JavaScript.</p></noscript>
+    <noscript><p class="trivia-intro">Every question and answer is listed
+      above.</p></noscript>
   </div>
 </section>
 
@@ -126,7 +132,7 @@ def main():
 <script src="assets/js/trivia.js"></script>
 </body>
 </html>
-""" % (len(qs), len(qs), nav, len(qs), days, body, len(qs), foot)
+""" % (nav, body, foot)
 
     open(OUT, "w", encoding="utf-8").write(page)
     print("fun-facts.html written: %d questions, %d a day, a %d-day cycle"

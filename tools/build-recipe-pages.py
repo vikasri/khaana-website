@@ -242,6 +242,14 @@ def doneness_block(r):
 
 
 def render(r, nav, foot):
+    """One recipe page.
+
+    The jump links below the allergen line are not decoration. On a phone the
+    method starts about 2,000px down and there were no anchors at all, so a
+    cook at step six scrolled back through twenty ingredients to check a
+    quantity. Sticky under the header on small screens; hidden on desktop,
+    where the ingredient column is already sticky beside the method.
+    """
     rid = r["id"]
     url = "%s/recipes/%s.html" % (SITE, rid)
     img_rel = r["image"]["src"] if r.get("image") else FALLBACK_IMG
@@ -396,11 +404,6 @@ def render(r, nav, foot):
        else f'<p class="allergen none"><strong>Allergens:</strong> {T.ALLERGEN_NONE}</p>'}
       <p class="allergen-scope">{T.ALLERGEN_SCOPE}</p>
 
-      <!-- Jump links. On a phone the method starts 2,000px down and there
-           were no anchors at all, so a cook at step six scrolled back through
-           twenty ingredients to check a quantity. Sticky under the header on
-           small screens; hidden on desktop, where the ingredient column is
-           already sticky beside the method. -->
       <nav class="recipe-jump" aria-label="Jump to a section">
         <a href="#ingredients">Ingredients</a>
         <a href="#method">Method</a>

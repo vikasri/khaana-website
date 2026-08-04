@@ -4,19 +4,19 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Food Trivia: Fun Facts About Indian Cooking | Khaana</title>
-<meta name="description" content="Four food trivia questions a day, from 60 in all. Where the chilli came from, why milk beats water on a burnt tongue, and what vindaloo is actually named after." />
+<meta name="description" content="Food trivia from India and beyond. Where the chilli really came from, why milk beats water on a burnt tongue, and what vindaloo is actually named after." />
 <link rel="canonical" href="https://khaana.com/fun-facts.html" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Khaana" />
 <meta property="og:title" content="Food Trivia: Fun Facts About Indian Cooking | Khaana" />
-<meta property="og:description" content="Four food trivia questions a day, from 60 in all. Where the chilli came from, why milk beats water on a burnt tongue, and what vindaloo is actually named after." />
+<meta property="og:description" content="Food trivia from India and beyond. Where the chilli really came from, why milk beats water on a burnt tongue, and what vindaloo is actually named after." />
 <meta property="og:url" content="https://khaana.com/fun-facts.html" />
 <meta property="og:image" content="https://khaana.com/assets/images/home-hero.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Food Trivia: Fun Facts About Indian Cooking | Khaana" />
-<meta name="twitter:description" content="Four food trivia questions a day, from 60 in all. Where the chilli came from, why milk beats water on a burnt tongue, and what vindaloo is actually named after." />
+<meta name="twitter:description" content="Food trivia from India and beyond. Where the chilli really came from, why milk beats water on a burnt tongue, and what vindaloo is actually named after." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/home-hero.jpg" />
-<link rel="stylesheet" href="style.css?v=8969e13d" />
+<link rel="stylesheet" href="style.css?v=926f433d" />
 </head>
 <body>
 
@@ -68,13 +68,16 @@
       <div class="eyebrow">Fun facts</div>
       <h1>Food Trivia</h1>
     </div>
-    <p class="trivia-intro">Four questions a day, drawn from 60. They change at
-      midnight and the whole set comes round every 15 days, so there is no way
-      to binge it and no reason to come back twice in one day.</p>
+    <p class="trivia-intro">Try this food trivia. Come here again tomorrow
+      for more fun facts.</p>
 
     <div class="trivia-head">
       <p class="trivia-day" id="trivia-day"></p>
-      <p class="trivia-score" id="trivia-score" hidden></p>
+      <div class="trivia-head-right">
+        <p class="trivia-score" id="trivia-score" hidden></p>
+        <button type="button" class="trivia-sound" id="trivia-sound"
+                aria-pressed="true">Sound on</button>
+      </div>
     </div>
 
     <ol class="trivia-list" id="trivia-list">
@@ -678,14 +681,413 @@
         </ul>
         <p class="tq-note" hidden>Sulphur compounds give it a distinctly eggy note. It is also why it turns up in vegan cooking outside India, doing an impression of scrambled eggs.</p>
       </li>
+      <li class="tq" data-answer="1" data-id="vada-pav-city">
+        <p class="tq-q"><span class="tq-n">61</span>The vada pav was invented outside a railway station in which city?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Chennai</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Mumbai</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Kolkata</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Ahmedabad</button></li>
+        </ul>
+        <p class="tq-note" hidden>Dadar station, Mumbai, around 1966, generally credited to a stallholder named Ashok Vaidya. It was designed to be eaten standing up in under a minute, which is still exactly how it is eaten.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="pav-portuguese">
+        <p class="tq-q"><span class="tq-n">62</span>The &#x27;pav&#x27; in vada pav is a Portuguese word. What does it mean?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Small</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Bread</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Round</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Soft</button></li>
+        </ul>
+        <p class="tq-note" hidden>From pão. Portuguese bakers brought yeasted bread to the west coast, and the square dinner roll it became is now inseparable from Bombay street food.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="bombay-duck">
+        <p class="tq-q"><span class="tq-n">63</span>Bombay duck is...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> A duck curry</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> A fish</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> A rice dish</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> A kind of pickle</button></li>
+        </ul>
+        <p class="tq-note" hidden>A lizardfish, usually dried until it is pungent enough to be noticeable from another room. The name may come from the Bombay Dak mail trains it travelled on.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="mulligatawny-name">
+        <p class="tq-q"><span class="tq-n">64</span>Mulligatawny is an English mangling of two Tamil words meaning...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Spice broth</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Pepper water</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Village soup</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Rice water</button></li>
+        </ul>
+        <p class="tq-note" hidden>Milagu tannir. Colonial cooks were asked to turn a thin south Indian rasam into a proper soup course, so in went meat, rice and cream, and out came something quite different.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="kedgeree-khichdi">
+        <p class="tq-q"><span class="tq-n">65</span>The British breakfast dish kedgeree descends from which Indian dish?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Biryani</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Khichdi</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Upma</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Pongal</button></li>
+        </ul>
+        <p class="tq-note" hidden>Khichdi is rice and dal. Kedgeree kept the rice, dropped the dal, and added smoked haddock and hard-boiled egg, which nobody in India had asked for.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="punch-drink">
+        <p class="tq-q"><span class="tq-n">66</span>The word &#x27;punch&#x27;, as in a bowl of punch, comes from a Hindi word meaning...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Party</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Five</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Sweet</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Mix</button></li>
+        </ul>
+        <p class="tq-note" hidden>Panch, for the five ingredients: spirit, sugar, lemon, water and spice. Sailors of the East India Company took it home, and the name came with it.</p>
+      </li>
+      <li class="tq" data-answer="0" data-id="chutney-word">
+        <p class="tq-q"><span class="tq-n">67</span>&#x27;Chutney&#x27; entered English from which word?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Chatni, from chatna, to lick</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Chhota, small</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Chatur, clever</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Chai, tea</button></li>
+        </ul>
+        <p class="tq-note" hidden>Roughly, something you lick. Which is a fair description of what happens to the last spoonful.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="toddy-appam">
+        <p class="tq-q"><span class="tq-n">68</span>Traditional appam batter is leavened with what?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Baking soda</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Palm toddy</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Buttermilk</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Beer</button></li>
+        </ul>
+        <p class="tq-note" hidden>Fermenting sap from the coconut palm, collected before dawn. Most modern recipes use yeast or an overnight ferment instead, which works but is less fun to explain.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="feni-gi">
+        <p class="tq-q"><span class="tq-n">69</span>Feni, Goa&#x27;s local spirit, is distilled from what?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Rice</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Cashew fruit or coconut sap</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Sugarcane</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Mango</button></li>
+        </ul>
+        <p class="tq-note" hidden>Cashew feni uses the fleshy fruit the nut dangles from, which is otherwise mostly wasted. It holds a Geographical Indication, so only Goa can call it feni.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="tamarind-native">
+        <p class="tq-q"><span class="tq-n">70</span>Tamarind, the backbone of south Indian sourness, is originally from...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> India</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Africa</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Thailand</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Mexico</button></li>
+        </ul>
+        <p class="tq-note" hidden>Tropical Africa. Its Latin name, Tamarindus indica, and the Arabic tamr hindi both mean &#x27;Indian date&#x27;, which is two continents&#x27; worth of confusion in one plant.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="kokum-what">
+        <p class="tq-q"><span class="tq-n">71</span>Kokum, used along the Konkan coast, is used for...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Heat</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Sourness</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Sweetness</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Colour only</button></li>
+        </ul>
+        <p class="tq-note" hidden>A dried purple fruit rind that sours a curry without the muddiness of tamarind. It also makes sol kadhi, which is pink, cold and the correct thing to drink after a very hot meal.</p>
+      </li>
+      <li class="tq" data-answer="0" data-id="amchur-what">
+        <p class="tq-q"><span class="tq-n">72</span>Amchur powder is made from...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Dried unripe mango</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Dried lemon</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Pomegranate seeds</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Tamarind pulp</button></li>
+        </ul>
+        <p class="tq-note" hidden>Green mangoes, dried and ground. It sours a dish without adding liquid, which is why it turns up in dry sabzis and stuffings where lemon juice would make a mess.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="kasuri-methi">
+        <p class="tq-q"><span class="tq-n">73</span>Kasuri methi is...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Fresh fenugreek leaves</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Dried fenugreek leaves</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Fenugreek seeds</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> A fenugreek paste</button></li>
+        </ul>
+        <p class="tq-note" hidden>Dried leaves, crushed between the palms at the end so the heat wakes them up. It is the smell people cannot place in a good butter chicken.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="fenugreek-maple">
+        <p class="tq-q"><span class="tq-n">74</span>Fenugreek seed is used commercially to imitate the flavour of...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Vanilla</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Maple syrup</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Caramel</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Coffee</button></li>
+        </ul>
+        <p class="tq-note" hidden>The compound sotolon smells strongly of maple. Eat enough fenugreek and other people can smell it on you, which is a genuine and well-documented nuisance.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="curry-leaf-relation">
+        <p class="tq-q"><span class="tq-n">75</span>What is the curry leaf&#x27;s relationship to curry powder?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> It is the main ingredient</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> None — the names are a coincidence</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> It is a ground form of it</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> It replaced it</button></li>
+        </ul>
+        <p class="tq-note" hidden>Different plant, different history, no connection. The leaf is Murraya koenigii, a citrus relative, and it loses almost everything when dried — which is why the dusty jar of them is a waste of money.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="mustard-oil-us">
+        <p class="tq-q"><span class="tq-n">76</span>In the United States, bottles of Indian mustard oil are often labelled...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Extra virgin</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> For external use only</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Cold pressed</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Food grade</button></li>
+        </ul>
+        <p class="tq-note" hidden>Because of its erucic acid content it is not approved there as a cooking oil, so it is sold as massage oil that everybody quietly cooks with.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="tadka-fat">
+        <p class="tq-q"><span class="tq-n">77</span>Why are spices bloomed in hot fat rather than stirred into water?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> It is faster</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Their flavour compounds are fat-soluble</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> It sterilises them</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> It thickens the dish</button></li>
+        </ul>
+        <p class="tq-note" hidden>The aromatics dissolve in oil and not in water, so the fat carries them through the whole dish. This is the entire point of a tadka, and skipping it makes everything taste flat.</p>
+      </li>
+      <li class="tq" data-answer="0" data-id="onion-brown">
+        <p class="tq-q"><span class="tq-n">78</span>Browning onions properly takes time because you are waiting for...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> The water to boil off, then Maillard browning and caramelisation</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> The onion to soften</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> The sugar to crystallise</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> The oil to be absorbed</button></li>
+        </ul>
+        <p class="tq-note" hidden>An onion is around 89 per cent water and none of the browning starts until most of that has gone. There is no honest fifteen-minute shortcut, whatever the recipe says.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="millets-year">
+        <p class="tq-q"><span class="tq-n">79</span>The UN declared 2023 the International Year of Millets at whose proposal?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Ethiopia</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> India</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Nigeria</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> China</button></li>
+        </ul>
+        <p class="tq-note" hidden>India grows more millets than anyone and had been pushing them as a drought-tolerant, low-water grain. Bajra, jowar and ragi went from rural staple to fashionable overnight.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="makki-maize">
+        <p class="tq-q"><span class="tq-n">80</span>Makki di roti is made from maize. Maize came to India from...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Central Asia</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> The Americas</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Africa</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> It is native</button></li>
+        </ul>
+        <p class="tq-note" hidden>Another Columbian import. Punjab&#x27;s most traditional-looking winter meal is built on a grain that arrived at roughly the same time as the chilli in it.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="star-anise-tamiflu">
+        <p class="tq-q"><span class="tq-n">81</span>Star anise was for years the main industrial source of what?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Vitamin C</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Shikimic acid, used to make Tamiflu</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Aspirin</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Food colouring</button></li>
+        </ul>
+        <p class="tq-note" hidden>During flu scares the price of a biryani spice tracked global pharmaceutical demand, which is not a sentence anybody expected to write.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="cloves-what">
+        <p class="tq-q"><span class="tq-n">82</span>Cloves are...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Seeds</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Dried flower buds</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Bark</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Roots</button></li>
+        </ul>
+        <p class="tq-note" hidden>Picked before they open and dried until hard. Eugenol makes them numbing, which is why clove oil ends up in dentistry and why biting one is a small shock.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="cinnamon-cassia">
+        <p class="tq-q"><span class="tq-n">83</span>Most &#x27;cinnamon&#x27; sold worldwide is actually cassia. How do you tell them apart?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Cassia is paler</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> True cinnamon is thin and layered, cassia is one thick curl</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Cassia has no smell</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> They are identical</button></li>
+        </ul>
+        <p class="tq-note" hidden>True cinnamon rolls up like a cigar of tissue paper and crumbles easily. Cassia is one hard slab. Indian dalchini is usually cassia, and most recipes assume it.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="cardamom-black-green">
+        <p class="tq-q"><span class="tq-n">84</span>Black cardamom and green cardamom are...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> The same pod at different ripeness</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Different plants with quite different uses</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> The same plant, one smoked</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Green is unripe black</button></li>
+        </ul>
+        <p class="tq-note" hidden>Different species. Black is dried over fire and turns up in savoury braises; green is floral and goes in sweets and chai. Swapping them ruins both dishes.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="turmeric-pepper">
+        <p class="tq-q"><span class="tq-n">85</span>Why do turmeric supplements almost always include black pepper?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> For flavour</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Piperine sharply increases curcumin absorption</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> To preserve it</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> For colour</button></li>
+        </ul>
+        <p class="tq-note" hidden>Curcumin on its own is poorly absorbed; piperine changes that dramatically. Indian cooking has been putting the two in the same pot for a very long time without needing the study.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="umami-discovery">
+        <p class="tq-q"><span class="tq-n">86</span>Umami was identified as a distinct taste in 1908 by a chemist in which country?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> France</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Japan</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Germany</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> China</button></li>
+        </ul>
+        <p class="tq-note" hidden>Kikunae Ikeda, working out what made kombu broth so satisfying. He isolated glutamate and went on to sell it as MSG.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="peanut-nut">
+        <p class="tq-q"><span class="tq-n">87</span>A peanut is botanically...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> A nut</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> A legume</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> A seed of a drupe</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> A grain</button></li>
+        </ul>
+        <p class="tq-note" hidden>It is a pea that grows underground. This is why peanut and tree-nut allergies are separate things, and why this site declares them separately.</p>
+      </li>
+      <li class="tq" data-answer="2" data-id="banana-berry">
+        <p class="tq-q"><span class="tq-n">88</span>Which of these is botanically a berry?</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Strawberry</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Raspberry</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Banana</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Blackberry</button></li>
+        </ul>
+        <p class="tq-note" hidden>Bananas qualify; strawberries do not. Botanical categories were not designed with fruit salad in mind.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="tomato-poison">
+        <p class="tq-q"><span class="tq-n">89</span>Europeans avoided tomatoes for years, partly because...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> They were too expensive</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Acid in them leached lead from pewter plates</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> They were thought to cause fever</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Religious objection</button></li>
+        </ul>
+        <p class="tq-note" hidden>Wealthy diners ate off pewter, the acid drew out the lead, and people got sick. The tomato took the blame for roughly two centuries.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="carrot-vision">
+        <p class="tq-q"><span class="tq-n">90</span>The idea that carrots improve night vision was spread by...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Victorian doctors</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Wartime British propaganda</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> A cereal company</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Ancient Greek medicine</button></li>
+        </ul>
+        <p class="tq-note" hidden>Put about to explain why RAF pilots were suddenly finding German bombers at night. The real answer was radar, and the story has outlived the secret by eighty years.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="vanilla-pollination">
+        <p class="tq-q"><span class="tq-n">91</span>Vanilla is expensive largely because each flower must be...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Grown in a greenhouse</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Hand-pollinated</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Picked at night</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Aged for ten years</button></li>
+        </ul>
+        <p class="tq-note" hidden>Outside its native Mexico there is no insect that does the job, so every pod is pollinated by hand within a few hours of the flower opening. The technique was worked out by a twelve-year-old enslaved boy, Edmond Albius, in 1841.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="chocolate-currency">
+        <p class="tq-q"><span class="tq-n">92</span>The Aztecs used cacao beans as...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Medicine only</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Money</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Building material</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Dye</button></li>
+        </ul>
+        <p class="tq-note" hidden>You could buy a turkey for a hundred beans. There are also records of counterfeiters filling empty husks with clay, which is a very modern crime for the 15th century.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="nutmeg-dose">
+        <p class="tq-q"><span class="tq-n">93</span>Eating nutmeg by the spoonful is a bad idea because it is...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Extremely bitter</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Mildly toxic and hallucinogenic in quantity</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Impossible to digest</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Highly acidic</button></li>
+        </ul>
+        <p class="tq-note" hidden>Myristicin causes nausea, palpitations and hours of unpleasant confusion. A grating over kheer is delightful. A tablespoon is a trip to hospital.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="durian-banned">
+        <p class="tq-q"><span class="tq-n">94</span>Durian is banned on public transport in Singapore because of its...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Weight</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Smell</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Sharp husk</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Cost</button></li>
+        </ul>
+        <p class="tq-note" hidden>The signs on the MRT are pictorial and unambiguous. Enthusiasts describe the fruit as custard; everyone else describes it as a problem.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="cheese-theft">
+        <p class="tq-q"><span class="tq-n">95</span>The most stolen food in the world, by proportion of stock, is...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Chocolate</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Cheese</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Coffee</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Saffron</button></li>
+        </ul>
+        <p class="tq-note" hidden>Retail surveys have repeatedly put cheese at the top, at around four per cent of stock walking out unpaid for. It is small, expensive and easy to hide.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="apple-float">
+        <p class="tq-q"><span class="tq-n">96</span>Apples float in water because they are about a quarter...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Sugar</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Air</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Fibre</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Water</button></li>
+        </ul>
+        <p class="tq-note" hidden>Roughly 25 per cent of an apple&#x27;s volume is air held between the cells, which is the whole reason bobbing for apples works.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="banana-ethylene">
+        <p class="tq-q"><span class="tq-n">97</span>Putting an unripe avocado in a bag with a banana works because bananas release...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Heat</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Ethylene gas</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Moisture</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Sugar</button></li>
+        </ul>
+        <p class="tq-note" hidden>Ethylene is a ripening hormone, and trapping it speeds everything in the bag along. It also explains why one bad apple genuinely does spoil the barrel.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="kopi-luwak">
+        <p class="tq-q"><span class="tq-n">98</span>Kopi luwak coffee is made from beans that have been...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Aged in oak</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Eaten and passed by a civet</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Roasted twice</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Fermented in seawater</button></li>
+        </ul>
+        <p class="tq-note" hidden>The civet digests the fruit and leaves the bean. It is among the most expensive coffees in the world, and the industry around it is now a serious animal-welfare problem.</p>
+      </li>
+      <li class="tq" data-answer="0" data-id="saffron-fake">
+        <p class="tq-q"><span class="tq-n">99</span>The commonest way saffron is faked is with...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> Dyed safflower or corn silk</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> Paprika</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Turmeric root</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Chilli threads</button></li>
+        </ul>
+        <p class="tq-note" hidden>Safflower petals look close and cost almost nothing. Real saffron colours water gold slowly; a dye job colours it instantly and the threads go pale.</p>
+      </li>
+      <li class="tq" data-answer="1" data-id="sugarcane-origin">
+        <p class="tq-q"><span class="tq-n">100</span>Sugarcane was first domesticated in...</p>
+        <ul class="tq-opts">
+            <li><button type="button" class="tq-opt" data-i="0"><span class="tq-letter">A</span> India</button></li>
+            <li><button type="button" class="tq-opt" data-i="1"><span class="tq-letter">B</span> New Guinea</button></li>
+            <li><button type="button" class="tq-opt" data-i="2"><span class="tq-letter">C</span> Egypt</button></li>
+            <li><button type="button" class="tq-opt" data-i="3"><span class="tq-letter">D</span> Brazil</button></li>
+        </ul>
+        <p class="tq-note" hidden>New Guinea, several thousand years ago. It reached India later, and India worked out how to crystallise the juice into something you could carry — which is what turned a chewable stalk into a world commodity.</p>
+      </li>
     </ol>
 
     <p class="trivia-foot" id="trivia-foot" hidden>
-      That is today's four. <a href="cook.html">Go and cook something</a>, or
-      come back tomorrow for the next set.</p>
+      More tomorrow. Meanwhile, <a href="cook.html">go and cook something</a>.</p>
 
-    <noscript><p class="trivia-intro">All 60 questions are listed above, with
-      their answers. The four-a-day version needs JavaScript.</p></noscript>
+    <noscript><p class="trivia-intro">Every question and answer is listed
+      above.</p></noscript>
   </div>
 </section>
 

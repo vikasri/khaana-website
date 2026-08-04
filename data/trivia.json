@@ -1,427 +1,1207 @@
 {
-  "_comment": "Food trivia for the Fun Facts page. Four are shown a day, chosen from this list by date, so the whole set is seen every fifteen days. Edit here and run tools/build-trivia.py. Keep every claim checkable: this is a page people will repeat at dinner, and a wrong fact travels further than a right one.",
-  "version": "1.0.0",
+  "_comment": "Food trivia for the Fun Facts page. Five are shown a day, chosen from this list by date, so the whole set is seen every twenty days. Edit here and run tools/build-trivia.py. Keep every claim checkable: this is a page people will repeat at dinner, and a wrong fact travels further than a right one.",
+  "version": "2.0.0",
   "updated": "2026-08-03",
   "questions": [
     {
       "id": "chilli-arrival",
       "q": "Indian food is famous for chilli heat. When did the chilli actually reach India?",
-      "options": ["Around 2000 BC, with the Indus Valley", "The 6th century, along the Silk Road", "The 16th century, with Portuguese traders", "The 19th century, under the British"],
+      "options": [
+        "Around 2000 BC, with the Indus Valley",
+        "The 6th century, along the Silk Road",
+        "The 16th century, with Portuguese traders",
+        "The 19th century, under the British"
+      ],
       "answer": 2,
       "note": "Chillies are American. The Portuguese brought them to Goa in the 1500s and they spread across the subcontinent in roughly a century. Every fiery curry you can think of is, historically speaking, a recent development."
     },
     {
       "id": "heat-before-chilli",
       "q": "So what made Indian food hot before chillies turned up?",
-      "options": ["Ginger", "Black pepper and long pepper", "Mustard oil", "Nothing — it was mild"],
+      "options": [
+        "Ginger",
+        "Black pepper and long pepper",
+        "Mustard oil",
+        "Nothing — it was mild"
+      ],
       "answer": 1,
       "note": "Pepper did the work, which is why it was worth more than gold to medieval Europe. Long pepper (pippali) was the sharper of the two and has largely fallen out of use."
     },
     {
       "id": "curry-powder",
       "q": "Where would you find a jar of 'curry powder' in India?",
-      "options": ["Every kitchen", "Only in the south", "Only at weddings", "Almost nowhere — it is a British invention"],
+      "options": [
+        "Every kitchen",
+        "Only in the south",
+        "Only at weddings",
+        "Almost nowhere — it is a British invention"
+      ],
       "answer": 3,
       "note": "It was blended for colonial officers who wanted one tin to reproduce a whole cuisine. Indian cooks mix spices per dish, and often per stage of the same dish."
     },
     {
       "id": "vindaloo-name",
       "q": "Vindaloo gets its name from...",
-      "options": ["'Vindh' meaning fiery", "Potatoes — the 'aloo' in the name", "Portuguese 'vinha d'alhos', wine and garlic", "The Vindhya mountains"],
+      "options": [
+        "'Vindh' meaning fiery",
+        "Potatoes — the 'aloo' in the name",
+        "Portuguese 'vinha d'alhos', wine and garlic",
+        "The Vindhya mountains"
+      ],
       "answer": 2,
       "note": "It is a Portuguese marinade of wine and garlic that landed in Goa and met palm vinegar and chillies. The 'aloo' is a coincidence. Putting potatoes in it is a misunderstanding with a long and happy career."
     },
     {
       "id": "samosa-origin",
       "q": "The samosa arrived in India from where?",
-      "options": ["It is indigenous", "The Middle East and Central Asia", "Portugal", "China"],
+      "options": [
+        "It is indigenous",
+        "The Middle East and Central Asia",
+        "Portugal",
+        "China"
+      ],
       "answer": 1,
       "note": "It travelled as sanbusak along trade routes and turns up in Persian writing well before it reached Delhi. The potato filling had to wait for the Portuguese to bring potatoes."
     },
     {
       "id": "potato-native",
       "q": "Which of these is actually native to India?",
-      "options": ["Potato", "Tomato", "Black pepper", "Chilli"],
+      "options": [
+        "Potato",
+        "Tomato",
+        "Black pepper",
+        "Chilli"
+      ],
       "answer": 2,
       "note": "Pepper is from the Malabar coast. Potato, tomato and chilli are all American, and all three arrived in the last five hundred years."
     },
     {
       "id": "saffron-flowers",
       "q": "Roughly how many crocus flowers does it take to make one gram of saffron?",
-      "options": ["About 5", "About 15", "About 150", "About 1,500"],
+      "options": [
+        "About 5",
+        "About 15",
+        "About 150",
+        "About 1,500"
+      ],
       "answer": 2,
       "note": "Each flower gives three red stigmas, picked by hand at dawn. That is the whole reason saffron costs what it does — there is no way to mechanise it."
     },
     {
       "id": "ghost-pepper",
       "q": "The bhut jolokia, or ghost pepper, comes from which part of India?",
-      "options": ["Kerala", "Rajasthan", "The Northeast", "Kashmir"],
+      "options": [
+        "Kerala",
+        "Rajasthan",
+        "The Northeast",
+        "Kashmir"
+      ],
       "answer": 2,
       "note": "It grows in Assam, Nagaland and Manipur, and in 2007 Guinness certified it as the world's hottest chilli. It has since been comfortably overtaken, which tells you something about the people breeding chillies."
     },
     {
       "id": "capsaicin-milk",
       "q": "Why does milk help with chilli burn when water does not?",
-      "options": ["It is colder", "It coats the tongue", "Casein in milk binds the capsaicin", "It neutralises the acid"],
+      "options": [
+        "It is colder",
+        "It coats the tongue",
+        "Casein in milk binds the capsaicin",
+        "It neutralises the acid"
+      ],
       "answer": 2,
       "note": "Capsaicin is oil-soluble, so water just moves it around. Casein, a protein in dairy, lifts it off the pain receptors. Lassi with a hot meal is not decoration."
     },
     {
       "id": "chilli-hot-part",
       "q": "Which part of a chilli is hottest?",
-      "options": ["The seeds", "The skin", "The pale pith the seeds attach to", "The stalk"],
+      "options": [
+        "The seeds",
+        "The skin",
+        "The pale pith the seeds attach to",
+        "The stalk"
+      ],
       "answer": 2,
       "note": "The placenta, that white rib inside, is where capsaicin is made. Seeds only taste hot because they have been sitting against it. Deseeding a chilli works mostly because you scrape the pith out along with them."
     },
     {
       "id": "turmeric-share",
       "q": "About what share of the world's turmeric does India grow?",
-      "options": ["A quarter", "A half", "Around 80 per cent", "Almost all of it"],
+      "options": [
+        "A quarter",
+        "A half",
+        "Around 80 per cent",
+        "Almost all of it"
+      ],
       "answer": 2,
       "note": "India grows the great majority of it and also eats the great majority of it, so relatively little enters world trade."
     },
     {
       "id": "asafoetida-origin",
       "q": "Hing, the asafoetida in your tadka, is mostly...",
-      "options": ["Grown across central India", "Imported from Afghanistan and Iran", "Made synthetically in Gujarat", "A by-product of onion processing"],
+      "options": [
+        "Grown across central India",
+        "Imported from Afghanistan and Iran",
+        "Made synthetically in Gujarat",
+        "A by-product of onion processing"
+      ],
       "answer": 1,
       "note": "The plant barely grows in India. A country that puts hing in a great deal of its cooking imports almost every gram of it, and has done for centuries."
     },
     {
       "id": "nutmeg-mace",
       "q": "Nutmeg and mace are...",
-      "options": ["Two unrelated spices", "Two parts of the same fruit", "The same spice, ground differently", "Nutmeg is the plant, mace the tree"],
+      "options": [
+        "Two unrelated spices",
+        "Two parts of the same fruit",
+        "The same spice, ground differently",
+        "Nutmeg is the plant, mace the tree"
+      ],
       "answer": 1,
       "note": "Mace is the scarlet lacy covering wrapped around the nutmeg seed. One fruit, two spices, two prices."
     },
     {
       "id": "tandoori-chicken",
       "q": "Tandoori chicken as we know it was popularised at which Delhi restaurant?",
-      "options": ["Karim's", "Moti Mahal", "Bukhara", "The Imperial"],
+      "options": [
+        "Karim's",
+        "Moti Mahal",
+        "Bukhara",
+        "The Imperial"
+      ],
       "answer": 1,
       "note": "Kundan Lal Gujral brought it from Peshawar after Partition. Butter chicken came out of the same kitchen, invented to rescue tandoori chicken that had dried out."
     },
     {
       "id": "butter-chicken-origin",
       "q": "Butter chicken was invented to solve what problem?",
-      "options": ["Too much butter in the kitchen", "Leftover tandoori chicken drying out", "A shortage of chillies", "A vegetarian guest"],
+      "options": [
+        "Too much butter in the kitchen",
+        "Leftover tandoori chicken drying out",
+        "A shortage of chillies",
+        "A vegetarian guest"
+      ],
       "answer": 1,
       "note": "Unsold tandoori chicken went into a tomato, butter and cream gravy to bring it back. One of the world's most ordered dishes began as waste management."
     },
     {
       "id": "chicken-tikka-masala",
       "q": "Chicken tikka masala is most often credited to a kitchen in...",
-      "options": ["Amritsar", "Lucknow", "Glasgow", "Dhaka"],
+      "options": [
+        "Amritsar",
+        "Lucknow",
+        "Glasgow",
+        "Dhaka"
+      ],
       "answer": 2,
       "note": "The best-known story has a Glasgow cook improvising a sauce for a customer who complained his chicken was dry. The claim is disputed, which has never slowed the dish down."
     },
     {
       "id": "ketchup-origin",
       "q": "Tomato ketchup descends from what?",
-      "options": ["A French tomato sauce", "A fermented fish sauce from Asia", "A Spanish salsa", "An Italian passata"],
+      "options": [
+        "A French tomato sauce",
+        "A fermented fish sauce from Asia",
+        "A Spanish salsa",
+        "An Italian passata"
+      ],
       "answer": 1,
       "note": "The word comes from kê-tsiap, a fermented fish brine from southern China and Southeast Asia. Tomatoes were a late substitution, and the fish quietly dropped out."
     },
     {
       "id": "gulab-jamun",
       "q": "What does the 'jamun' in gulab jamun refer to?",
-      "options": ["The cook who invented it", "A dark purple Indian fruit it resembles", "The river Yamuna", "A kind of sugar"],
+      "options": [
+        "The cook who invented it",
+        "A dark purple Indian fruit it resembles",
+        "The river Yamuna",
+        "A kind of sugar"
+      ],
       "answer": 1,
       "note": "Gulab is rose water, jamun is the java plum, which the fried balls resemble in size and colour. The dish is named for looking like fruit it is not."
     },
     {
       "id": "paneer-melt",
       "q": "Why does paneer hold its shape in a hot curry instead of melting?",
-      "options": ["It is pressed very hard", "It is acid-set, with no rennet", "It is cooked twice", "The fat is removed"],
+      "options": [
+        "It is pressed very hard",
+        "It is acid-set, with no rennet",
+        "It is cooked twice",
+        "The fat is removed"
+      ],
       "answer": 1,
       "note": "Curdling milk with lemon or vinegar sets the protein in a way that will not flow again with heat. Rennet cheeses like mozzarella melt; acid-set ones like paneer and halloumi grill instead."
     },
     {
       "id": "idli-ferment",
       "q": "What makes idli batter rise overnight?",
-      "options": ["Baking soda in the rice", "Wild yeast and lactic acid bacteria", "The steam during cooking", "Whisking air into it"],
+      "options": [
+        "Baking soda in the rice",
+        "Wild yeast and lactic acid bacteria",
+        "The steam during cooking",
+        "Whisking air into it"
+      ],
       "answer": 1,
       "note": "Nothing is added. Microbes already on the grain and on the cook's hands do it, which is why the same recipe behaves differently in different kitchens and different seasons."
     },
     {
       "id": "garam-masala-meaning",
       "q": "Garam masala literally means 'hot spice'. Hot in what sense?",
-      "options": ["Chilli hot", "Served hot", "Warming to the body", "Cooked at high heat"],
+      "options": [
+        "Chilli hot",
+        "Served hot",
+        "Warming to the body",
+        "Cooked at high heat"
+      ],
       "answer": 2,
       "note": "It is the Ayurvedic sense of warming, not pungent. A classic garam masala often contains no chilli at all — cinnamon, cardamom, clove, pepper, cumin."
     },
     {
       "id": "basmati-meaning",
       "q": "Basmati means...",
-      "options": ["Long grain", "Fragrant", "From Basmat", "Royal rice"],
+      "options": [
+        "Long grain",
+        "Fragrant",
+        "From Basmat",
+        "Royal rice"
+      ],
       "answer": 1,
       "note": "From Sanskrit roots meaning aroma. The name is about the smell, not the shape, which is the right way round: the smell is the point."
     },
     {
       "id": "biryani-pulao",
       "q": "The usual distinction between biryani and pulao is that...",
-      "options": ["Biryani has meat, pulao does not", "Biryani is layered, rice and meat cooked separately then combined", "Pulao is always vegetarian", "Biryani uses basmati, pulao does not"],
+      "options": [
+        "Biryani has meat, pulao does not",
+        "Biryani is layered, rice and meat cooked separately then combined",
+        "Pulao is always vegetarian",
+        "Biryani uses basmati, pulao does not"
+      ],
       "answer": 1,
       "note": "In a pulao the rice cooks in the stock and absorbs it. In a biryani the two are cooked apart and layered, then finished sealed. Plenty of families will argue with this, at length."
     },
     {
       "id": "dum-seal",
       "q": "In dum cooking, what traditionally seals the pot?",
-      "options": ["A tight metal lid", "A ring of dough", "Banana leaf", "Wet cloth"],
+      "options": [
+        "A tight metal lid",
+        "A ring of dough",
+        "Banana leaf",
+        "Wet cloth"
+      ],
       "answer": 1,
       "note": "A rope of atta dough pressed around the rim traps the steam. It bakes hard during cooking and gets broken open at the table, which is half the theatre."
     },
     {
       "id": "kulfi-churn",
       "q": "What makes kulfi denser than ice cream?",
-      "options": ["More cream", "It is not churned, so no air is beaten in", "It is frozen harder", "Added cornflour"],
+      "options": [
+        "More cream",
+        "It is not churned, so no air is beaten in",
+        "It is frozen harder",
+        "Added cornflour"
+      ],
       "answer": 1,
       "note": "Ice cream is up to half air by volume. Kulfi is frozen still, in sealed moulds, so it stays solid and melts far more slowly."
     },
     {
       "id": "chai-tea",
       "q": "Why do Indians wince slightly at the phrase 'chai tea'?",
-      "options": ["Chai is coffee", "Chai just means tea, so it says 'tea tea'", "Chai is a brand name", "It is a regional insult"],
+      "options": [
+        "Chai is coffee",
+        "Chai just means tea, so it says 'tea tea'",
+        "Chai is a brand name",
+        "It is a regional insult"
+      ],
       "answer": 1,
       "note": "Chai is tea in Hindi and a dozen other languages, from the same Chinese root as the English word. The drink people mean is masala chai."
     },
     {
       "id": "filter-coffee-chicory",
       "q": "South Indian filter coffee traditionally contains what besides coffee?",
-      "options": ["Cardamom", "Chicory", "Salt", "Ginger"],
+      "options": [
+        "Cardamom",
+        "Chicory",
+        "Salt",
+        "Ginger"
+      ],
       "answer": 1,
       "note": "Usually 10 to 20 per cent chicory root, which arrived as a wartime extender and stayed because people preferred the taste. It is what gives the decoction its body."
     },
     {
       "id": "tea-assam",
       "q": "Before the British planted tea in Assam, what did India mostly do with tea?",
-      "options": ["Exported it to China", "Drank it at every meal", "Very little — it was barely consumed", "Used it as currency"],
+      "options": [
+        "Exported it to China",
+        "Drank it at every meal",
+        "Very little — it was barely consumed",
+        "Used it as currency"
+      ],
       "answer": 2,
       "note": "The tea plant grew wild in Assam but was not a national drink. Mass tea drinking was manufactured by a marketing campaign in the early 1900s, and it worked spectacularly."
     },
     {
       "id": "milk-production",
       "q": "Which country produces the most milk?",
-      "options": ["The United States", "India", "New Zealand", "Germany"],
+      "options": [
+        "The United States",
+        "India",
+        "New Zealand",
+        "Germany"
+      ],
       "answer": 1,
       "note": "India has led since the 1990s, on the back of a cooperative movement that turned millions of one and two-animal households into a national dairy supply."
     },
     {
       "id": "mango-production",
       "q": "Which country grows the most mangoes?",
-      "options": ["Thailand", "Mexico", "India", "Brazil"],
+      "options": [
+        "Thailand",
+        "Mexico",
+        "India",
+        "Brazil"
+      ],
       "answer": 2,
       "note": "India grows around half the world's mangoes and exports very few of them, because they get eaten at home. There are well over a thousand named varieties."
     },
     {
       "id": "spice-most-expensive",
       "q": "Which is the most expensive spice by weight?",
-      "options": ["Vanilla", "Cardamom", "Saffron", "Black pepper"],
+      "options": [
+        "Vanilla",
+        "Cardamom",
+        "Saffron",
+        "Black pepper"
+      ],
       "answer": 2,
       "note": "Saffron, by a distance. Vanilla is usually second, and both are expensive for the same reason: the harvest cannot be mechanised."
     },
     {
       "id": "pepper-black-gold",
       "q": "Black pepper was once called 'black gold'. Which Indian coast built its wealth on it?",
-      "options": ["Coromandel", "Malabar", "Konkan", "Gujarat"],
+      "options": [
+        "Coromandel",
+        "Malabar",
+        "Konkan",
+        "Gujarat"
+      ],
       "answer": 1,
       "note": "The Malabar coast of Kerala. The search for a sea route to that pepper is the reason Vasco da Gama sailed, and the reason a great deal of subsequent history happened."
     },
     {
       "id": "jalebi-origin",
       "q": "Jalebi's name comes from...",
-      "options": ["Sanskrit jalaka, meaning water", "Arabic zulabiya", "The city of Jalore", "Persian for 'spiral'"],
+      "options": [
+        "Sanskrit jalaka, meaning water",
+        "Arabic zulabiya",
+        "The city of Jalore",
+        "Persian for 'spiral'"
+      ],
       "answer": 1,
       "note": "It arrived with Persian and Arab traders as zulabiya. Nearly every sweet-shop favourite has a passport, which is rather the point of Indian food."
     },
     {
       "id": "papad-cooking",
       "q": "A papad puffs and blisters over a flame because...",
-      "options": ["Of baking soda in the dough", "Trapped moisture turns to steam", "The oil in it boils", "The lentil flour caramelises"],
+      "options": [
+        "Of baking soda in the dough",
+        "Trapped moisture turns to steam",
+        "The oil in it boils",
+        "The lentil flour caramelises"
+      ],
       "answer": 1,
       "note": "The dough is dried, not dead: the little moisture left flashes to steam and lifts the layers. The same physics puffs a puri and a phulka."
     },
     {
       "id": "puri-puff",
       "q": "For a puri to balloon properly, the oil must be...",
-      "options": ["Barely warm", "Properly hot", "At a rolling boil", "Any temperature, it does not matter"],
+      "options": [
+        "Barely warm",
+        "Properly hot",
+        "At a rolling boil",
+        "Any temperature, it does not matter"
+      ],
       "answer": 1,
       "note": "Hot oil sets the outside instantly, so the steam inside has nowhere to go but up. Cool oil lets it soak in and you get a heavy, greasy disc."
     },
     {
       "id": "jaggery-what",
       "q": "Jaggery, or gur, is...",
-      "options": ["Refined white sugar, coloured", "Unrefined cane or palm sugar with the molasses left in", "Honey, solidified", "A sugar substitute made from dates"],
+      "options": [
+        "Refined white sugar, coloured",
+        "Unrefined cane or palm sugar with the molasses left in",
+        "Honey, solidified",
+        "A sugar substitute made from dates"
+      ],
       "answer": 1,
       "note": "Cane juice boiled down without separating out the molasses, which is where the colour and the mineral taste come from. Palm and date versions are common too."
     },
     {
       "id": "sugar-word",
       "q": "The English word 'sugar' traces back to which language?",
-      "options": ["Arabic", "Sanskrit", "Greek", "Latin"],
+      "options": [
+        "Arabic",
+        "Sanskrit",
+        "Greek",
+        "Latin"
+      ],
       "answer": 1,
       "note": "Sanskrit sharkara, through Arabic and Italian into English. Crystallising sugar from cane was worked out in India, and the word travelled with the technique."
     },
     {
       "id": "coconut-name",
       "q": "In Sanskrit the coconut palm is kalpavriksha. What does that mean?",
-      "options": ["Tree of the coast", "The wish-fulfilling tree", "Tree of a hundred uses", "The tall tree"],
+      "options": [
+        "Tree of the coast",
+        "The wish-fulfilling tree",
+        "Tree of a hundred uses",
+        "The tall tree"
+      ],
       "answer": 1,
       "note": "Rather generous, but defensible: the fruit, the water, the oil, the milk, the shell, the fibre, the leaves and the timber all get used."
     },
     {
       "id": "banana-leaf",
       "q": "Eating off a banana leaf is not only tradition. What does the leaf do?",
-      "options": ["Adds sweetness", "Releases polyphenols when hot food touches it", "Keeps food cold", "Absorbs excess oil"],
+      "options": [
+        "Adds sweetness",
+        "Releases polyphenols when hot food touches it",
+        "Keeps food cold",
+        "Absorbs excess oil"
+      ],
       "answer": 1,
       "note": "Hot food draws a faint aroma and some polyphenols out of the wax. It is also a plate nobody has to wash, which may be the more persuasive argument."
     },
     {
       "id": "rasgulla-gi",
       "q": "West Bengal and Odisha both hold a GI tag connected to rasgulla. What settled it?",
-      "options": ["Bengal won outright", "Odisha won outright", "They were granted for different things", "The case is still open"],
+      "options": [
+        "Bengal won outright",
+        "Odisha won outright",
+        "They were granted for different things",
+        "The case is still open"
+      ],
       "answer": 2,
       "note": "Bengal was granted one for Banglar Rasogolla in 2017 and Odisha one for Odisha Rasagola in 2019. Two tags, two sweets, and an argument that carries on regardless."
     },
     {
       "id": "fortune-cookie",
       "q": "The fortune cookie was invented in...",
-      "options": ["China", "Japan and the United States", "Hong Kong", "Singapore"],
+      "options": [
+        "China",
+        "Japan and the United States",
+        "Hong Kong",
+        "Singapore"
+      ],
       "answer": 1,
       "note": "It descends from a Japanese cracker and was popularised in California. It is served in Chinese restaurants nearly everywhere except China."
     },
     {
       "id": "bhindi-okra",
       "q": "Bhindi is which vegetable?",
-      "options": ["Bitter gourd", "Okra", "Aubergine", "Ridge gourd"],
+      "options": [
+        "Bitter gourd",
+        "Okra",
+        "Aubergine",
+        "Ridge gourd"
+      ],
       "answer": 1,
       "note": "Okra, or ladies' fingers. The sliminess that puts people off is soluble fibre, and it disappears if you keep the pods dry and the pan hot."
     },
     {
       "id": "karela-bitter",
       "q": "Karela is famously bitter. What is the usual way to tame it?",
-      "options": ["Boiling twice", "Salting and resting, then squeezing", "Adding baking soda", "Freezing first"],
+      "options": [
+        "Boiling twice",
+        "Salting and resting, then squeezing",
+        "Adding baking soda",
+        "Freezing first"
+      ],
       "answer": 1,
       "note": "Salt draws out the bitter juice; you wring it out and cook on. Plenty of cooks refuse to, on the grounds that the bitterness is the entire point."
     },
     {
       "id": "tikka-meaning",
       "q": "In 'chicken tikka', what does tikka mean?",
-      "options": ["Spiced", "Grilled", "Pieces", "Boneless"],
+      "options": [
+        "Spiced",
+        "Grilled",
+        "Pieces",
+        "Boneless"
+      ],
       "answer": 2,
       "note": "It just means bits or pieces. The cooking method is in the tandoor, not in the name."
     },
     {
       "id": "thali-meaning",
       "q": "A thali is named after...",
-      "options": ["The region it comes from", "The metal plate it is served on", "The number of dishes", "A kind of rice"],
+      "options": [
+        "The region it comes from",
+        "The metal plate it is served on",
+        "The number of dishes",
+        "A kind of rice"
+      ],
       "answer": 1,
       "note": "The plate. A meal named after its crockery, which is a fair description of a format where the arrangement is as fixed as the food."
     },
     {
       "id": "lentil-production",
       "q": "Which country grows and eats the most pulses — dals, beans, chickpeas?",
-      "options": ["Brazil", "India", "Canada", "China"],
+      "options": [
+        "Brazil",
+        "India",
+        "Canada",
+        "China"
+      ],
       "answer": 1,
       "note": "India by a wide margin on both counts, and it still imports more, which is roughly how much dal gets eaten there."
     },
     {
       "id": "wasabi-real",
       "q": "The green paste served with sushi outside Japan is usually...",
-      "options": ["Real wasabi", "Horseradish, mustard and green colouring", "Ground green chilli", "Fermented soy"],
+      "options": [
+        "Real wasabi",
+        "Horseradish, mustard and green colouring",
+        "Ground green chilli",
+        "Fermented soy"
+      ],
       "answer": 1,
       "note": "Real wasabi is difficult to grow and loses its punch within about fifteen minutes of grating, so most of the world has been eating dyed horseradish for decades."
     },
     {
       "id": "honey-spoil",
       "q": "Which of these does not spoil, essentially ever?",
-      "options": ["Ghee", "Honey", "Salt-cured fish", "Dried chillies"],
+      "options": [
+        "Ghee",
+        "Honey",
+        "Salt-cured fish",
+        "Dried chillies"
+      ],
       "answer": 1,
       "note": "Low water, high acidity and a little hydrogen peroxide make honey hostile to microbes. Edible honey has been found in Egyptian tombs."
     },
     {
       "id": "pineapple-tongue",
       "q": "Why does pineapple sting your tongue?",
-      "options": ["Acidity", "An enzyme that digests protein", "Tiny crystals in the flesh", "Natural capsaicin"],
+      "options": [
+        "Acidity",
+        "An enzyme that digests protein",
+        "Tiny crystals in the flesh",
+        "Natural capsaicin"
+      ],
       "answer": 1,
       "note": "Bromelain breaks down protein, and your tongue is protein. It is, briefly and very slightly, eating you back."
     },
     {
       "id": "carrot-colour",
       "q": "Carrots were originally which colour?",
-      "options": ["Orange", "Purple and yellow", "White only", "Red"],
+      "options": [
+        "Orange",
+        "Purple and yellow",
+        "White only",
+        "Red"
+      ],
       "answer": 1,
       "note": "Purple and yellow, and India still grows red-black ones for kanji and gajar halwa. The orange carrot is a much later Dutch development."
     },
     {
       "id": "cashew-origin",
       "q": "The cashew, so at home in Goan and Kerala cooking, came from...",
-      "options": ["Sri Lanka", "Brazil", "Persia", "Indonesia"],
+      "options": [
+        "Sri Lanka",
+        "Brazil",
+        "Persia",
+        "Indonesia"
+      ],
       "answer": 1,
       "note": "Portuguese traders brought it from Brazil in the 16th century. Feni, Goa's cashew spirit, is made from the fruit the nut hangs off, not the nut."
     },
     {
       "id": "cashew-shell",
       "q": "Why do you never see cashews sold in the shell?",
-      "options": ["The shell is too hard", "The shell contains a caustic oil related to poison ivy", "There is no shell", "It spoils the flavour"],
+      "options": [
+        "The shell is too hard",
+        "The shell contains a caustic oil related to poison ivy",
+        "There is no shell",
+        "It spoils the flavour"
+      ],
       "answer": 1,
       "note": "The shell oil blisters skin, and shelling is skilled, hazardous work. That labour is a large part of what you are paying for."
     },
     {
       "id": "kadhai-name",
       "q": "Kadhai paneer is named after...",
-      "options": ["A spice blend", "The pan it is cooked in", "The city of Kadhai", "A cooking time"],
+      "options": [
+        "A spice blend",
+        "The pan it is cooked in",
+        "The city of Kadhai",
+        "A cooking time"
+      ],
       "answer": 1,
       "note": "The deep, round-bottomed pan. Its shape concentrates the heat at the base, which is why the same dish in a flat frying pan never quite tastes right."
     },
     {
       "id": "shelf-life-ghee",
       "q": "Ghee keeps far longer than butter because...",
-      "options": ["It is salted", "The milk solids and water have been cooked off", "It is pasteurised twice", "It is stored in copper"],
+      "options": [
+        "It is salted",
+        "The milk solids and water have been cooked off",
+        "It is pasteurised twice",
+        "It is stored in copper"
+      ],
       "answer": 1,
       "note": "Water and milk protein are what spoil. Take both out and you have almost pure fat, which keeps for months without a fridge — the reason it exists."
     },
     {
       "id": "bay-leaf-difference",
       "q": "Indian tej patta and the European bay leaf are...",
-      "options": ["The same leaf", "Different plants that taste quite different", "The same plant, dried differently", "Both from the clove tree"],
+      "options": [
+        "The same leaf",
+        "Different plants that taste quite different",
+        "The same plant, dried differently",
+        "Both from the clove tree"
+      ],
       "answer": 1,
       "note": "Tej patta is cassia, closer to cinnamon. Swapping in a Mediterranean bay leaf gives you a completely different flavour and a mildly confused biryani."
     },
     {
       "id": "onion-tears",
       "q": "Chilling an onion before chopping helps because...",
-      "options": ["It hardens the flesh", "It slows the reaction that makes the irritant gas", "It removes sulphur", "It has no effect at all"],
+      "options": [
+        "It hardens the flesh",
+        "It slows the reaction that makes the irritant gas",
+        "It removes sulphur",
+        "It has no effect at all"
+      ],
       "answer": 1,
       "note": "Cutting releases enzymes that produce a volatile sulphur compound; cold slows the reaction and the gas rises less readily. A sharp knife helps too, by crushing fewer cells."
     },
     {
       "id": "rice-second",
       "q": "India is the world's second largest producer of rice. Who is first?",
-      "options": ["Indonesia", "Bangladesh", "China", "Vietnam"],
+      "options": [
+        "Indonesia",
+        "Bangladesh",
+        "China",
+        "Vietnam"
+      ],
       "answer": 2,
       "note": "China grows more, but India exports far more, and has been the largest rice exporter for years."
     },
     {
       "id": "naan-tandoor",
       "q": "Why is naan hard to make properly at home?",
-      "options": ["The dough is difficult", "It needs a tandoor's heat, far above a domestic oven", "The flour is rare", "It must be made in pairs"],
+      "options": [
+        "The dough is difficult",
+        "It needs a tandoor's heat, far above a domestic oven",
+        "The flour is rare",
+        "It must be made in pairs"
+      ],
       "answer": 1,
       "note": "A tandoor runs around 400-480°C, roughly double a home oven. The blistering and the chew both come from cooking that fast. A very hot cast-iron pan is the usual compromise."
     },
     {
       "id": "sourdough-idli",
       "q": "What do sourdough bread and idli batter have in common?",
-      "options": ["Both use commercial yeast", "Both rely on wild fermentation by microbes already present", "Both need a starter bought from a shop", "Neither is fermented"],
+      "options": [
+        "Both use commercial yeast",
+        "Both rely on wild fermentation by microbes already present",
+        "Both need a starter bought from a shop",
+        "Neither is fermented"
+      ],
       "answer": 1,
       "note": "Same principle, different continents and grains. Both are also unreliable in a cold kitchen, and both are the reason cooks talk about their batter as though it has moods."
     },
     {
       "id": "black-salt",
       "q": "Kala namak, black salt, smells strongly of what?",
-      "options": ["Smoke", "Boiled egg", "Liquorice", "Nothing much"],
+      "options": [
+        "Smoke",
+        "Boiled egg",
+        "Liquorice",
+        "Nothing much"
+      ],
       "answer": 1,
       "note": "Sulphur compounds give it a distinctly eggy note. It is also why it turns up in vegan cooking outside India, doing an impression of scrambled eggs."
+    },
+    {
+      "id": "vada-pav-city",
+      "q": "The vada pav was invented outside a railway station in which city?",
+      "options": [
+        "Chennai",
+        "Mumbai",
+        "Kolkata",
+        "Ahmedabad"
+      ],
+      "answer": 1,
+      "note": "Dadar station, Mumbai, around 1966, generally credited to a stallholder named Ashok Vaidya. It was designed to be eaten standing up in under a minute, which is still exactly how it is eaten."
+    },
+    {
+      "id": "pav-portuguese",
+      "q": "The 'pav' in vada pav is a Portuguese word. What does it mean?",
+      "options": [
+        "Small",
+        "Bread",
+        "Round",
+        "Soft"
+      ],
+      "answer": 1,
+      "note": "From pão. Portuguese bakers brought yeasted bread to the west coast, and the square dinner roll it became is now inseparable from Bombay street food."
+    },
+    {
+      "id": "bombay-duck",
+      "q": "Bombay duck is...",
+      "options": [
+        "A duck curry",
+        "A fish",
+        "A rice dish",
+        "A kind of pickle"
+      ],
+      "answer": 1,
+      "note": "A lizardfish, usually dried until it is pungent enough to be noticeable from another room. The name may come from the Bombay Dak mail trains it travelled on."
+    },
+    {
+      "id": "mulligatawny-name",
+      "q": "Mulligatawny is an English mangling of two Tamil words meaning...",
+      "options": [
+        "Spice broth",
+        "Pepper water",
+        "Village soup",
+        "Rice water"
+      ],
+      "answer": 1,
+      "note": "Milagu tannir. Colonial cooks were asked to turn a thin south Indian rasam into a proper soup course, so in went meat, rice and cream, and out came something quite different."
+    },
+    {
+      "id": "kedgeree-khichdi",
+      "q": "The British breakfast dish kedgeree descends from which Indian dish?",
+      "options": [
+        "Biryani",
+        "Khichdi",
+        "Upma",
+        "Pongal"
+      ],
+      "answer": 1,
+      "note": "Khichdi is rice and dal. Kedgeree kept the rice, dropped the dal, and added smoked haddock and hard-boiled egg, which nobody in India had asked for."
+    },
+    {
+      "id": "punch-drink",
+      "q": "The word 'punch', as in a bowl of punch, comes from a Hindi word meaning...",
+      "options": [
+        "Party",
+        "Five",
+        "Sweet",
+        "Mix"
+      ],
+      "answer": 1,
+      "note": "Panch, for the five ingredients: spirit, sugar, lemon, water and spice. Sailors of the East India Company took it home, and the name came with it."
+    },
+    {
+      "id": "chutney-word",
+      "q": "'Chutney' entered English from which word?",
+      "options": [
+        "Chatni, from chatna, to lick",
+        "Chhota, small",
+        "Chatur, clever",
+        "Chai, tea"
+      ],
+      "answer": 0,
+      "note": "Roughly, something you lick. Which is a fair description of what happens to the last spoonful."
+    },
+    {
+      "id": "toddy-appam",
+      "q": "Traditional appam batter is leavened with what?",
+      "options": [
+        "Baking soda",
+        "Palm toddy",
+        "Buttermilk",
+        "Beer"
+      ],
+      "answer": 1,
+      "note": "Fermenting sap from the coconut palm, collected before dawn. Most modern recipes use yeast or an overnight ferment instead, which works but is less fun to explain."
+    },
+    {
+      "id": "feni-gi",
+      "q": "Feni, Goa's local spirit, is distilled from what?",
+      "options": [
+        "Rice",
+        "Cashew fruit or coconut sap",
+        "Sugarcane",
+        "Mango"
+      ],
+      "answer": 1,
+      "note": "Cashew feni uses the fleshy fruit the nut dangles from, which is otherwise mostly wasted. It holds a Geographical Indication, so only Goa can call it feni."
+    },
+    {
+      "id": "tamarind-native",
+      "q": "Tamarind, the backbone of south Indian sourness, is originally from...",
+      "options": [
+        "India",
+        "Africa",
+        "Thailand",
+        "Mexico"
+      ],
+      "answer": 1,
+      "note": "Tropical Africa. Its Latin name, Tamarindus indica, and the Arabic tamr hindi both mean 'Indian date', which is two continents' worth of confusion in one plant."
+    },
+    {
+      "id": "kokum-what",
+      "q": "Kokum, used along the Konkan coast, is used for...",
+      "options": [
+        "Heat",
+        "Sourness",
+        "Sweetness",
+        "Colour only"
+      ],
+      "answer": 1,
+      "note": "A dried purple fruit rind that sours a curry without the muddiness of tamarind. It also makes sol kadhi, which is pink, cold and the correct thing to drink after a very hot meal."
+    },
+    {
+      "id": "amchur-what",
+      "q": "Amchur powder is made from...",
+      "options": [
+        "Dried unripe mango",
+        "Dried lemon",
+        "Pomegranate seeds",
+        "Tamarind pulp"
+      ],
+      "answer": 0,
+      "note": "Green mangoes, dried and ground. It sours a dish without adding liquid, which is why it turns up in dry sabzis and stuffings where lemon juice would make a mess."
+    },
+    {
+      "id": "kasuri-methi",
+      "q": "Kasuri methi is...",
+      "options": [
+        "Fresh fenugreek leaves",
+        "Dried fenugreek leaves",
+        "Fenugreek seeds",
+        "A fenugreek paste"
+      ],
+      "answer": 1,
+      "note": "Dried leaves, crushed between the palms at the end so the heat wakes them up. It is the smell people cannot place in a good butter chicken."
+    },
+    {
+      "id": "fenugreek-maple",
+      "q": "Fenugreek seed is used commercially to imitate the flavour of...",
+      "options": [
+        "Vanilla",
+        "Maple syrup",
+        "Caramel",
+        "Coffee"
+      ],
+      "answer": 1,
+      "note": "The compound sotolon smells strongly of maple. Eat enough fenugreek and other people can smell it on you, which is a genuine and well-documented nuisance."
+    },
+    {
+      "id": "curry-leaf-relation",
+      "q": "What is the curry leaf's relationship to curry powder?",
+      "options": [
+        "It is the main ingredient",
+        "None — the names are a coincidence",
+        "It is a ground form of it",
+        "It replaced it"
+      ],
+      "answer": 1,
+      "note": "Different plant, different history, no connection. The leaf is Murraya koenigii, a citrus relative, and it loses almost everything when dried — which is why the dusty jar of them is a waste of money."
+    },
+    {
+      "id": "mustard-oil-us",
+      "q": "In the United States, bottles of Indian mustard oil are often labelled...",
+      "options": [
+        "Extra virgin",
+        "For external use only",
+        "Cold pressed",
+        "Food grade"
+      ],
+      "answer": 1,
+      "note": "Because of its erucic acid content it is not approved there as a cooking oil, so it is sold as massage oil that everybody quietly cooks with."
+    },
+    {
+      "id": "tadka-fat",
+      "q": "Why are spices bloomed in hot fat rather than stirred into water?",
+      "options": [
+        "It is faster",
+        "Their flavour compounds are fat-soluble",
+        "It sterilises them",
+        "It thickens the dish"
+      ],
+      "answer": 1,
+      "note": "The aromatics dissolve in oil and not in water, so the fat carries them through the whole dish. This is the entire point of a tadka, and skipping it makes everything taste flat."
+    },
+    {
+      "id": "onion-brown",
+      "q": "Browning onions properly takes time because you are waiting for...",
+      "options": [
+        "The water to boil off, then Maillard browning and caramelisation",
+        "The onion to soften",
+        "The sugar to crystallise",
+        "The oil to be absorbed"
+      ],
+      "answer": 0,
+      "note": "An onion is around 89 per cent water and none of the browning starts until most of that has gone. There is no honest fifteen-minute shortcut, whatever the recipe says."
+    },
+    {
+      "id": "millets-year",
+      "q": "The UN declared 2023 the International Year of Millets at whose proposal?",
+      "options": [
+        "Ethiopia",
+        "India",
+        "Nigeria",
+        "China"
+      ],
+      "answer": 1,
+      "note": "India grows more millets than anyone and had been pushing them as a drought-tolerant, low-water grain. Bajra, jowar and ragi went from rural staple to fashionable overnight."
+    },
+    {
+      "id": "makki-maize",
+      "q": "Makki di roti is made from maize. Maize came to India from...",
+      "options": [
+        "Central Asia",
+        "The Americas",
+        "Africa",
+        "It is native"
+      ],
+      "answer": 1,
+      "note": "Another Columbian import. Punjab's most traditional-looking winter meal is built on a grain that arrived at roughly the same time as the chilli in it."
+    },
+    {
+      "id": "star-anise-tamiflu",
+      "q": "Star anise was for years the main industrial source of what?",
+      "options": [
+        "Vitamin C",
+        "Shikimic acid, used to make Tamiflu",
+        "Aspirin",
+        "Food colouring"
+      ],
+      "answer": 1,
+      "note": "During flu scares the price of a biryani spice tracked global pharmaceutical demand, which is not a sentence anybody expected to write."
+    },
+    {
+      "id": "cloves-what",
+      "q": "Cloves are...",
+      "options": [
+        "Seeds",
+        "Dried flower buds",
+        "Bark",
+        "Roots"
+      ],
+      "answer": 1,
+      "note": "Picked before they open and dried until hard. Eugenol makes them numbing, which is why clove oil ends up in dentistry and why biting one is a small shock."
+    },
+    {
+      "id": "cinnamon-cassia",
+      "q": "Most 'cinnamon' sold worldwide is actually cassia. How do you tell them apart?",
+      "options": [
+        "Cassia is paler",
+        "True cinnamon is thin and layered, cassia is one thick curl",
+        "Cassia has no smell",
+        "They are identical"
+      ],
+      "answer": 1,
+      "note": "True cinnamon rolls up like a cigar of tissue paper and crumbles easily. Cassia is one hard slab. Indian dalchini is usually cassia, and most recipes assume it."
+    },
+    {
+      "id": "cardamom-black-green",
+      "q": "Black cardamom and green cardamom are...",
+      "options": [
+        "The same pod at different ripeness",
+        "Different plants with quite different uses",
+        "The same plant, one smoked",
+        "Green is unripe black"
+      ],
+      "answer": 1,
+      "note": "Different species. Black is dried over fire and turns up in savoury braises; green is floral and goes in sweets and chai. Swapping them ruins both dishes."
+    },
+    {
+      "id": "turmeric-pepper",
+      "q": "Why do turmeric supplements almost always include black pepper?",
+      "options": [
+        "For flavour",
+        "Piperine sharply increases curcumin absorption",
+        "To preserve it",
+        "For colour"
+      ],
+      "answer": 1,
+      "note": "Curcumin on its own is poorly absorbed; piperine changes that dramatically. Indian cooking has been putting the two in the same pot for a very long time without needing the study."
+    },
+    {
+      "id": "umami-discovery",
+      "q": "Umami was identified as a distinct taste in 1908 by a chemist in which country?",
+      "options": [
+        "France",
+        "Japan",
+        "Germany",
+        "China"
+      ],
+      "answer": 1,
+      "note": "Kikunae Ikeda, working out what made kombu broth so satisfying. He isolated glutamate and went on to sell it as MSG."
+    },
+    {
+      "id": "peanut-nut",
+      "q": "A peanut is botanically...",
+      "options": [
+        "A nut",
+        "A legume",
+        "A seed of a drupe",
+        "A grain"
+      ],
+      "answer": 1,
+      "note": "It is a pea that grows underground. This is why peanut and tree-nut allergies are separate things, and why this site declares them separately."
+    },
+    {
+      "id": "banana-berry",
+      "q": "Which of these is botanically a berry?",
+      "options": [
+        "Strawberry",
+        "Raspberry",
+        "Banana",
+        "Blackberry"
+      ],
+      "answer": 2,
+      "note": "Bananas qualify; strawberries do not. Botanical categories were not designed with fruit salad in mind."
+    },
+    {
+      "id": "tomato-poison",
+      "q": "Europeans avoided tomatoes for years, partly because...",
+      "options": [
+        "They were too expensive",
+        "Acid in them leached lead from pewter plates",
+        "They were thought to cause fever",
+        "Religious objection"
+      ],
+      "answer": 1,
+      "note": "Wealthy diners ate off pewter, the acid drew out the lead, and people got sick. The tomato took the blame for roughly two centuries."
+    },
+    {
+      "id": "carrot-vision",
+      "q": "The idea that carrots improve night vision was spread by...",
+      "options": [
+        "Victorian doctors",
+        "Wartime British propaganda",
+        "A cereal company",
+        "Ancient Greek medicine"
+      ],
+      "answer": 1,
+      "note": "Put about to explain why RAF pilots were suddenly finding German bombers at night. The real answer was radar, and the story has outlived the secret by eighty years."
+    },
+    {
+      "id": "vanilla-pollination",
+      "q": "Vanilla is expensive largely because each flower must be...",
+      "options": [
+        "Grown in a greenhouse",
+        "Hand-pollinated",
+        "Picked at night",
+        "Aged for ten years"
+      ],
+      "answer": 1,
+      "note": "Outside its native Mexico there is no insect that does the job, so every pod is pollinated by hand within a few hours of the flower opening. The technique was worked out by a twelve-year-old enslaved boy, Edmond Albius, in 1841."
+    },
+    {
+      "id": "chocolate-currency",
+      "q": "The Aztecs used cacao beans as...",
+      "options": [
+        "Medicine only",
+        "Money",
+        "Building material",
+        "Dye"
+      ],
+      "answer": 1,
+      "note": "You could buy a turkey for a hundred beans. There are also records of counterfeiters filling empty husks with clay, which is a very modern crime for the 15th century."
+    },
+    {
+      "id": "nutmeg-dose",
+      "q": "Eating nutmeg by the spoonful is a bad idea because it is...",
+      "options": [
+        "Extremely bitter",
+        "Mildly toxic and hallucinogenic in quantity",
+        "Impossible to digest",
+        "Highly acidic"
+      ],
+      "answer": 1,
+      "note": "Myristicin causes nausea, palpitations and hours of unpleasant confusion. A grating over kheer is delightful. A tablespoon is a trip to hospital."
+    },
+    {
+      "id": "durian-banned",
+      "q": "Durian is banned on public transport in Singapore because of its...",
+      "options": [
+        "Weight",
+        "Smell",
+        "Sharp husk",
+        "Cost"
+      ],
+      "answer": 1,
+      "note": "The signs on the MRT are pictorial and unambiguous. Enthusiasts describe the fruit as custard; everyone else describes it as a problem."
+    },
+    {
+      "id": "cheese-theft",
+      "q": "The most stolen food in the world, by proportion of stock, is...",
+      "options": [
+        "Chocolate",
+        "Cheese",
+        "Coffee",
+        "Saffron"
+      ],
+      "answer": 1,
+      "note": "Retail surveys have repeatedly put cheese at the top, at around four per cent of stock walking out unpaid for. It is small, expensive and easy to hide."
+    },
+    {
+      "id": "apple-float",
+      "q": "Apples float in water because they are about a quarter...",
+      "options": [
+        "Sugar",
+        "Air",
+        "Fibre",
+        "Water"
+      ],
+      "answer": 1,
+      "note": "Roughly 25 per cent of an apple's volume is air held between the cells, which is the whole reason bobbing for apples works."
+    },
+    {
+      "id": "banana-ethylene",
+      "q": "Putting an unripe avocado in a bag with a banana works because bananas release...",
+      "options": [
+        "Heat",
+        "Ethylene gas",
+        "Moisture",
+        "Sugar"
+      ],
+      "answer": 1,
+      "note": "Ethylene is a ripening hormone, and trapping it speeds everything in the bag along. It also explains why one bad apple genuinely does spoil the barrel."
+    },
+    {
+      "id": "kopi-luwak",
+      "q": "Kopi luwak coffee is made from beans that have been...",
+      "options": [
+        "Aged in oak",
+        "Eaten and passed by a civet",
+        "Roasted twice",
+        "Fermented in seawater"
+      ],
+      "answer": 1,
+      "note": "The civet digests the fruit and leaves the bean. It is among the most expensive coffees in the world, and the industry around it is now a serious animal-welfare problem."
+    },
+    {
+      "id": "saffron-fake",
+      "q": "The commonest way saffron is faked is with...",
+      "options": [
+        "Dyed safflower or corn silk",
+        "Paprika",
+        "Turmeric root",
+        "Chilli threads"
+      ],
+      "answer": 0,
+      "note": "Safflower petals look close and cost almost nothing. Real saffron colours water gold slowly; a dye job colours it instantly and the threads go pale."
+    },
+    {
+      "id": "sugarcane-origin",
+      "q": "Sugarcane was first domesticated in...",
+      "options": [
+        "India",
+        "New Guinea",
+        "Egypt",
+        "Brazil"
+      ],
+      "answer": 1,
+      "note": "New Guinea, several thousand years ago. It reached India later, and India worked out how to crystallise the juice into something you could carry — which is what turned a chewable stalk into a world commodity."
     }
   ]
 }
