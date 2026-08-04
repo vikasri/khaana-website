@@ -2258,7 +2258,12 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 /* ---------- Fun facts ---------- */
 /* Four questions a day out of sixty. All sixty are in the markup so the page
    works without JavaScript; trivia.js hides all but today's. */
-.trivia-intro { max-width: 68ch; color: var(--ink-soft); font-size: 0.97rem; line-height: 1.65; }
+/* The welcome line, so it is sized to be read rather than skimmed past. The
+   no-JavaScript fallback below the questions keeps the smaller size. */
+.trivia-intro {
+  max-width: 68ch; color: var(--ink); font-size: 1.18rem; line-height: 1.55;
+}
+noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 
 .trivia-head {
   display: flex; flex-wrap: wrap; align-items: baseline;

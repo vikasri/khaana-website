@@ -1,6 +1,6 @@
 {
   "_comment": "Food trivia for the Fun Facts page. Five are shown a day, chosen from this list by date, so the whole set is seen every twenty days. Edit here and run tools/build-trivia.py. Keep every claim checkable: this is a page people will repeat at dinner, and a wrong fact travels further than a right one.",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "updated": "2026-08-03",
   "questions": [
     {
@@ -133,7 +133,7 @@
         "Almost all of it"
       ],
       "answer": 2,
-      "note": "Indian government figures put it above 80 per cent. India also eats most of what it grows, so relatively little enters world trade. Crop shares move year to year."
+      "note": "Indian government figures put it at about 80 per cent. India also eats most of what it grows, so relatively little enters world trade. Crop shares move year to year."
     },
     {
       "id": "asafoetida-origin",
