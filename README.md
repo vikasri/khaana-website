@@ -25,7 +25,7 @@ home page hero — lives in that page, or in the recipe's own entry in
 `data/recipes.json`. Editing the HTML directly is fine for the hand-written
 pages: `index.html`, `about.html`, `cook.html` and the 21 cuisine pages.
 
-**Do not hand-edit anything in `recipes/`.** All 651 of those are generated
+**Do not hand-edit anything in `recipes/`.** All 652 of those are generated
 and your change will be overwritten on the next rebuild. Edit
 `data/recipes.json` instead.
 
@@ -36,7 +36,7 @@ index.html, about.html, cook.html      hand-written pages
 <cuisine>.html  x21                    hand-written, with a generated recipe list
 recommendations.html, credits.html     fully generated
 feedback.html                          hand-written; posts to a Google Form
-recipes/  x651                         fully generated - do not edit
+recipes/  x652                         fully generated - do not edit
 
 data/recipes.json                      the source of truth for every recipe
 data/nutrition.json                    computed from USDA data
