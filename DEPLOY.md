@@ -145,11 +145,26 @@ The slow part, and by now it carries no unknowns: whichever nameserver a
 resolver asks, the answer is already GitHub's addresses. This only changes who
 is asked.
 
-At **GoDaddy**, build the zone before switching anything to it: the four A
-records above, the `www` CNAME, and **both** `google-site-verification` TXT
-records — those are what keep Search Console. No MX, since nothing uses it. An
-SPF record of `v=spf1 -all` is worth adding in their place: it says no mail is
-ever sent from this domain, which makes it harder to spoof.
+Build the zone at **GoDaddy** before switching anything to it. Every value,
+so nothing has to be looked up twice:
+
+| Type | Name | Value |
+|---|---|---|
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `vikasri.github.io` |
+| TXT | `@` | `google-site-verification=K9s30Is97phCshKSdYOm1_MVQ5T098-YxV3bTOnX52E` |
+| TXT | `@` | `google-site-verification=sLusuinZWcjaFeKBhZ9JTE_Q8xh3QWdnmFiFwUkY2U4` |
+| TXT | `@` | `v=spf1 -all` |
+
+Both verification records, or a Search Console property is lost. No MX: the
+Cloudflare Email Routing records forward nothing, and the SPF above replaces
+Cloudflare's by saying no mail is ever sent from this domain, which makes it
+harder to spoof. Those two can also be cleared in the Cloudflare panel
+beforehand — three MX records deleted and the SPF edited — which retires the
+last Cloudflare service without waiting on the registrar.
 
 Then point the registrar's nameservers away from Cloudflare. Propagation is
 usually under an hour and can take 24. The site stays up throughout, because
