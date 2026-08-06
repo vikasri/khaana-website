@@ -2314,10 +2314,16 @@ section.trivia-section { padding-top: 24px; }
   font-size: clamp(1.25rem, 2vw, 1.5rem); margin-bottom: 0.15em;
 }
 .trivia-page .section-head .eyebrow { font-size: 0.72rem; margin-bottom: 3px; }
-.trivia-intro {
-  margin: 0; max-width: 68ch; color: var(--ink); font-size: 1.02rem;
-  line-height: 1.5;
+/* The instruction sits beside the title rather than under it. It is four
+   words; a line of its own cost more vertical space than it was worth. */
+.trivia-title-row {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px;
 }
+.trivia-intro {
+  margin: 0; max-width: 68ch; color: var(--ink-soft); font-size: 1rem;
+  line-height: 1.4;
+}
+noscript .trivia-intro { display: block; margin-top: 10px; }
 noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 
 /* Title and welcome line on the left, what a question is worth and the running

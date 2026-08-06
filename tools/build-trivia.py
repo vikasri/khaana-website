@@ -121,8 +121,10 @@ def main():
       <div class="trivia-head">
         <div class="section-head">
           <div class="eyebrow">Fun facts</div>
-          <h1 id="trivia-title">Food Trivia</h1>
-          <p class="trivia-intro">Select one answer.</p>
+          <div class="trivia-title-row">
+            <h1 id="trivia-title">Food Trivia</h1>
+            <p class="trivia-intro">Select one answer</p>
+          </div>
         </div>
         <div class="trivia-head-right">
           <div class="trivia-scoring">
