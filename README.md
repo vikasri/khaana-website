@@ -1,11 +1,11 @@
 # khaana.com
 
-A static site about India's regional cooking. 651 recipes across 21 regional
+A static site about India's regional cooking. 652 recipes across 21 regional
 cuisines, plus a guide page for each cuisine.
 
 There is no framework and no build step in the usual sense. The pages in this
 repository are the pages that get served. Python scripts in `tools/` write
-them, and GitHub Pages serves the result through Cloudflare.
+them, and GitHub Pages serves the result.
 
 ## I want to change some words
 
@@ -99,4 +99,5 @@ shows more, something upstream moved.
 ## Deploying
 
 Commit and push. GitHub Pages rebuilds within a minute or two. See
-[DEPLOY.md](DEPLOY.md) for the DNS and Cloudflare side.
+[DEPLOY.md](DEPLOY.md) for how the domain is served, why renaming a page means
+adding a redirect stub, and why `tools/version-assets.py` has to run last.
