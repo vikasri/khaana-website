@@ -120,8 +120,8 @@ def main():
   <div class="container trivia-page">
     <div class="pair-launch" id="pair-launch" hidden>
       <button type="button" class="pair-start" id="pair-start"
-              aria-expanded="false" aria-controls="pair-game">Match Dishes with
-        Cultural Cuisines</button>
+              aria-expanded="false" aria-controls="pair-game">Play: Match Dishes
+        with Cuisines</button>
     </div>
 
     <section class="pair" id="pair-game" hidden aria-labelledby="pair-title">
@@ -142,10 +142,12 @@ def main():
         <div class="pair-bank" id="pair-bank" role="group"
              aria-label="Cuisines to place"></div>
       </div>
-      <p class="pair-verdict" id="pair-verdict" role="status"
-         aria-live="polite" hidden></p>
-      <button type="button" class="pair-again" id="pair-again" hidden>Play
-        again</button>
+      <div class="pair-foot">
+        <p class="pair-verdict" id="pair-verdict" role="status"
+           aria-live="polite" hidden></p>
+        <button type="button" class="pair-again" id="pair-again" hidden>Play
+          again</button>
+      </div>
     </section>
     <script type="application/json" id="pair-pool">%s</script>
     <script type="application/json" id="pair-messages">%s</script>

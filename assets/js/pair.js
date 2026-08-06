@@ -137,6 +137,7 @@
       verdictEl.removeAttribute('data-tone');
     }
     if (againBtn) againBtn.hidden = true;
+    bankEl.classList.remove('is-spent');
   }
 
   /* --- the board ---------------------------------------------------------- */
@@ -158,12 +159,17 @@
       if (p.thumb) {
         thumb = document.createElement('img');
         thumb.className = 'pair-thumb';
-        thumb.src = 'assets/images/pair/' + p.thumb + '.jpg';
         thumb.alt = '';
         thumb.width = 48;
         thumb.height = 48;
-        thumb.loading = 'lazy';
+        /* Not lazy, and src set last. Four pictures of 3 KB, on screen the
+         * moment the board is, are not worth deferring — and deferring them
+         * did not work: the rows are built in the same tick that unhides the
+         * panel, so the browser measured them against a layout that had not
+         * happened, decided they were out of view, and never asked again.
+         * Live, the squares stayed empty and no request was ever made. */
         thumb.decoding = 'async';
+        thumb.src = 'assets/images/pair/' + p.thumb + '.jpg';
       } else {
         thumb = document.createElement('span');
         thumb.className = 'pair-thumb pair-thumb-none';
@@ -317,6 +323,11 @@
    * they ask for another. */
   function solved() {
     say(attempt, 'all');
+    // Every chip is placed, so on a phone — where the bank sits under the
+    // board rather than beside it — the space it was holding open is now a
+    // blank block between the last pair and the reply. Nothing is being
+    // dragged any more, so it can safely go.
+    bankEl.classList.add('is-spent');
     if (againBtn) {
       againBtn.hidden = false;
       againBtn.focus();

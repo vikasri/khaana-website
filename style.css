@@ -2281,18 +2281,22 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 section.trivia-section { padding-top: 24px; }
 @media (max-width: 560px) { section.trivia-section { padding-top: 30px; } }
 /* The trivia's own title sits below the game rather than at the top of the
-   page, so it needs less room under it than a page-opening heading does. */
-.trivia-page .section-head { margin-bottom: 12px; }
+   page. A page-opening h1 at 3.2rem was doing a job nothing here needs done:
+   it is a section heading now, so it is sized like one — still larger than
+   the game's heading above it, since it is still the page's h1. */
+.trivia-page .section-head { margin-bottom: 10px; }
+.trivia-page .section-head h1 { font-size: clamp(1.7rem, 3.2vw, 2.3rem); }
+.trivia-page .section-head .eyebrow { font-size: 0.76rem; margin-bottom: 4px; }
 .trivia-intro {
-  margin: 0; max-width: 68ch; color: var(--ink); font-size: 1.18rem;
-  line-height: 1.55;
+  margin: 0; max-width: 68ch; color: var(--ink); font-size: 1.02rem;
+  line-height: 1.5;
 }
 noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 
 .trivia-head {
   display: flex; flex-wrap: wrap; align-items: baseline;
   justify-content: space-between; gap: 8px 18px;
-  margin: 18px 0 6px; padding-bottom: 10px;
+  margin: 14px 0 4px; padding-bottom: 8px;
   border-bottom: 1px solid var(--line);
 }
 .trivia-day {
@@ -2306,14 +2310,16 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 .trivia-score[data-neg="1"] { color: #b3261e; }
 
 .trivia-list { list-style: none; margin: 0; padding: 0; }
-.tq { margin: 0 0 30px; }
+/* Five questions to a page, so what looks like breathing room on one of them
+   is four inches of scrolling by the fifth. */
+.tq { margin: 0 0 20px; }
 .tq-q {
-  font-family: var(--serif); font-size: 1.22rem; line-height: 1.45;
-  margin: 0 0 12px; color: var(--ink);
+  font-family: var(--serif); font-size: 1.14rem; line-height: 1.4;
+  margin: 0 0 9px; color: var(--ink);
 }
 .tq-n { color: var(--ink-soft); font-weight: 700; }
 
-.tq-opts { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.tq-opts { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; }
 /* Two columns once there is room. Four options stacked on a desktop makes the
    page a long thin ribbon and pushes the note below the fold. */
 @media (min-width: 700px) { .tq-opts { grid-template-columns: 1fr 1fr; } }
@@ -2321,9 +2327,9 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 .tq-opt {
   display: flex; align-items: baseline; gap: 9px; width: 100%;
   text-align: left; cursor: pointer;
-  padding: 11px 14px; border: 1px solid var(--line); border-radius: 9px;
+  padding: 9px 13px; border: 1px solid var(--line); border-radius: 9px;
   background: var(--paper); color: var(--ink);
-  font-family: var(--sans); font-size: 0.97rem; line-height: 1.45;
+  font-family: var(--sans); font-size: 0.96rem; line-height: 1.4;
   transition: border-color 0.15s ease, background 0.15s ease;
 }
 .tq-opt:hover:not(:disabled) { border-color: var(--nav-active); background: var(--cream); }
@@ -2351,13 +2357,13 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    answer above it, and big enough to be the reward rather than a footnote —
    it is the thing the page exists to tell them. 8.6:1 on the cream panel. */
 .tq-note {
-  margin: 12px 0 0; padding: 13px 16px;
+  margin: 10px 0 0; padding: 11px 15px;
   background: var(--cream); border-left: 3px solid #14532d; border-radius: 0 6px 6px 0;
-  font-size: 1.06rem; line-height: 1.6; color: #14532d;
+  font-size: 1rem; line-height: 1.55; color: #14532d;
 }
 
 .trivia-foot {
-  margin-top: 30px; padding-top: 16px; border-top: 1px solid var(--line);
+  margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--line);
   color: var(--ink-soft); font-size: 0.95rem;
 }
 
@@ -2392,8 +2398,8 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 /* The nudge after a wrong answer, in maroon to match the option it just
    greyed out. 8.6:1 against the page. */
 .tq-nudge {
-  margin: 12px 0 0;
-  font-family: var(--serif); font-size: 1.14rem; font-weight: 700;
+  margin: 10px 0 0;
+  font-family: var(--serif); font-size: 1.06rem; font-weight: 700;
   line-height: 1.5; color: #8c1d18;
 }
 /* Two seconds where nothing responds needs to look deliberate, or it reads as
@@ -2425,16 +2431,20 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    margin on that heading would also push the page down on a reader with no
    JavaScript, who never sees the button at all. */
 .pair-launch { margin: 0 0 20px; }
+/* Bright blue, against a page that is otherwise warm the whole way down. It
+   is the one thing on the Fun page asking to be pressed, and the cool colour
+   is what separates it from the orange the nav uses for "you are here". White
+   on this blue is 4.5:1, so it clears AA at this size. */
 .pair-start {
   display: inline-block; cursor: pointer;
   padding: 12px 22px; border: 0; border-radius: 999px;
-  background: var(--nav-active); color: #fff;
+  background: #1273e6; color: #fff;
   font-family: var(--sans); font-size: 1rem; font-weight: 700;
   letter-spacing: 0.01em;
-  box-shadow: 0 6px 18px rgba(201, 74, 9, 0.22);
+  box-shadow: 0 6px 18px rgba(18, 115, 230, 0.28);
   transition: background 0.15s ease, transform 0.15s ease;
 }
-.pair-start:hover { background: var(--deep-red); }
+.pair-start:hover { background: #0d5cba; }
 .pair-start:active { transform: translateY(1px); }
 
 .pair {
@@ -2478,9 +2488,29 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   align-items: stretch; gap: 10px;
 }
 /* On a phone the box gets the smaller share. Given an equal one it sat there
-   empty and wide while "Rui Macher Kalia" wrapped to two lines beside it. */
+   empty and wide while "Rui Macher Kalia" wrapped to two lines beside it.
+   Everything else in here is bought back for the dish name: at 375px the
+   board has 299 pixels to work with, and the panel padding, the picture and
+   the empty box between them were leaving 89 of it for the words, which put
+   "Hirvi Mirchi Cha Thecha" on three lines and made one row as tall as the
+   four should be. */
 @media (max-width: 759px) {
-  .pair-row { grid-template-columns: minmax(0, 1fr) 118px; }
+  .pair { padding: 16px 14px 16px; }
+  .pair-head h2 { font-size: 1.25rem; }
+  .pair-how { font-size: 0.9rem; margin-bottom: 12px; }
+  .pair-row { grid-template-columns: minmax(0, 1fr) 96px; gap: 8px; }
+  .pair-dish {
+    gap: 9px; padding: 6px 10px 6px 6px; font-size: 0.95rem; line-height: 1.25;
+  }
+  .pair-thumb { width: 40px; height: 40px; border-radius: 6px; }
+  .pair-slot { min-height: 42px; font-size: 0.88rem; padding: 6px 6px; }
+  .pair-chip { padding: 10px 10px; font-size: 0.9rem; }
+  .pair-verdict { font-size: 1.02rem; }
+  /* Only on a phone: here the bank is under the board, so a spent one leaves
+     a blank block in the middle of the panel. On a wider screen it is a
+     column beside the rows and hiding it would shuffle them sideways at the
+     exact moment the reader is looking at their finished board. */
+  .pair-bank.is-spent { display: none; }
 }
 .pair-dish {
   display: flex; align-items: center; gap: 12px;
@@ -2587,9 +2617,18 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   text-align: center; box-shadow: 0 10px 24px rgba(27, 36, 34, 0.28);
 }
 
+/* The reply and the button that follows it share a line, the reply reading
+   from the left and the button sitting out on the right where the eye ends
+   up. Narrow enough and they stack, and the button stays right. */
+.pair-foot {
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between; gap: 10px 18px;
+}
+.pair-foot:empty { display: none; }
 .pair-verdict {
   margin: 16px 0 0; font-family: var(--serif); font-size: 1.1rem;
   font-weight: 700; line-height: 1.5; color: var(--ink);
+  flex: 1 1 16ch;
 }
 /* Maroon for a miss and dark green for a finished board, the same two colours
    the trivia below uses for a wrong answer and a right one. */
@@ -2599,7 +2638,7 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 /* Shown only once the board is solved. Small and quiet: the finished board is
    what the reader is looking at, and this waits underneath it. */
 .pair-again {
-  margin: 14px 0 0; cursor: pointer;
+  margin: 14px 0 0 auto; cursor: pointer; flex: 0 0 auto;
   border: 1px solid var(--nav-active); border-radius: 999px;
   background: var(--paper); color: var(--nav-active);
   padding: 7px 18px;
