@@ -1,90 +1,68 @@
-/* Fun facts: show five of the questions in the page, chosen by today's date.
+/* Fun facts: one question at a time, drawn at random.
  *
- * The page ships every one in the markup so it works without JavaScript and
- * so a crawler sees the lot. This hides all but today's five and turns them
- * into something you can answer.
+ * The page ships every question in the markup, so it works without JavaScript
+ * and a crawler sees the lot. This hides all but one and turns that one into
+ * something you can answer.
  *
- * Picking the five
- * ----------------
- * Deterministic from the date, never random: everyone gets the same five on
- * the same day, and a reload does not reshuffle them mid-quiz.
+ * Picking them
+ * ------------
+ * Random, and no repeat: each question drawn is removed from the pool, so a
+ * session works through the bank without ever asking twice. When the pool runs
+ * out it refills and reshuffles rather than stopping — a reader who wants to
+ * keep going keeps going, which is the whole point of a page like this.
  *
- *   day    days since the epoch, in local time
- *   slot   which group of five within the cycle
- *   cycle  which cycle we are in
- *
- * Index = (slot * 5 + i + cycle * SHIFT) mod the number of questions.
- *
- * The (slot * 5 + i) part walks the whole bank exactly once across a cycle, so
- * a cycle covers every question with none repeated. Adding cycle * SHIFT moves
- * the whole deck each cycle, and because SHIFT shares no factor with the total
- * the questions land in different groups of five every time round. Without it
- * the same five would always appear together, which gets stale faster than the
- * questions do.
+ * The old scheme picked five a day by date so that everyone saw the same five.
+ * That is the right design for a daily ritual and the wrong one for somebody
+ * who is enjoying themselves: it ran out after five and told them to come back
+ * tomorrow.
  */
 (function () {
   'use strict';
 
-  var PER_DAY = 5;
-  // Coprime with the bank size, so the per-cycle shift visits every offset
-  // before repeating. A factor of it — 10 against 100, 12 against 120 — would
-  // collapse into a handful of arrangements. 7 being prime keeps that true for
-  // any bank that is not a multiple of seven, which 140 questions would be.
-  var SHIFT = 7;
   var list = document.getElementById('trivia-list');
   if (!list) return;
 
   var all = Array.prototype.slice.call(list.querySelectorAll('.tq'));
   if (!all.length) return;
 
-  var total = all.length;
-  var days = Math.floor(total / PER_DAY);
+  var pool = [];                 // questions not yet asked this session
+  var current = null;
+  var served = 0;                // questions shown, which sets the denominator
 
-  // Local midnight, not UTC: the day should turn over when the reader's day
-  // does, not at some hour that depends on where they are.
-  var now = new Date();
-  var midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  var day = Math.floor(midnight.getTime() / 86400000);
-  var slot = ((day % days) + days) % days;
-  var cycle = Math.floor(day / days);
-
-  var todays = [];
-  for (var i = 0; i < PER_DAY; i++) {
-    var idx = (((slot * PER_DAY + i + cycle * SHIFT) % total) + total) % total;
-    todays.push(all[idx]);
-  }
-
+  // Every question is in the markup, for a crawler and for a reader with no
+  // JavaScript. With JavaScript they all go, and one comes back at a time.
   all.forEach(function (el) { el.hidden = true; });
-  todays.forEach(function (el, n) {
-    el.hidden = false;
-    var num = el.querySelector('.tq-n');
-    if (num) num.textContent = (n + 1) + '. ';
-    list.appendChild(el);              // reorder into today's sequence
-  });
 
-  var dayLine = document.getElementById('trivia-day');
-  if (dayLine) {
-    dayLine.textContent = now.toLocaleDateString(undefined, {
-      weekday: 'long', day: 'numeric', month: 'long'
-    });
+  function refill() {
+    pool = all.slice();
   }
 
-  /* --- the celebratory noise ---------------------------------------------
-   *
-   * Two sounds, synthesised rather than loaded: a rising arpeggio for a right
-   * answer and a descending womp for a wrong one. Generating them costs a few
-   * lines and no download, and every envelope fades to silence rather than
-   * stopping dead, which is what stops a short tone clicking at the edges.
-   *
-   * Sound on a web page is rude by default, so:
-   *   - it only ever plays in response to a click the reader made on purpose.
-   *     Browsers require that gesture anyway before audio may start.
-   *   - it is quiet. Peak gain 0.09.
-   *   - there is a mute button, and the choice is remembered.
-   *   - anyone who has asked their system for reduced motion gets it off to
-   *     begin with; that setting is the closest thing we have to "do not
-   *     surprise me".
-   */
+  function show() {
+    if (current) current.hidden = true;
+    if (!pool.length) refill();
+    var i = Math.floor(Math.random() * pool.length);
+    current = pool.splice(i, 1)[0];
+    current.hidden = false;
+    served++;
+    var num = current.querySelector('.tq-n');
+    if (num) num.textContent = served + '. ';
+    // A question asked twice would have its previous answer still marked, so
+    // anything the reader did to it last time comes off before it is asked
+    // again. Only reachable once the bank has been through a full pass.
+    current.classList.remove('answered', 'is-holding');
+    current.querySelectorAll('.tq-opt').forEach(function (b) {
+      b.disabled = false;
+      b.classList.remove('is-right', 'is-wrong');
+    });
+    var note = current.querySelector('.tq-note');
+    if (note) note.hidden = true;
+    var nudged = current.querySelector('.tq-nudge');
+    if (nudged) nudged.hidden = true;
+    if (nextBtn) nextBtn.hidden = true;
+  }
+
+  var nextBtn = document.getElementById('trivia-next');
+
   var Ctx = window.AudioContext || window.webkitAudioContext;
   var audio = null;
   var muted;
@@ -184,23 +162,21 @@
    * on full marks by the end of the page, which is not a score, it is a
    * participation note.
    *
-   * The total is allowed to go negative. Ten is the ceiling and minus five the
-   * floor, though you would have to work at it.
+   * Both run for the session rather than resetting per question: the
+   * denominator is two for every question asked, so 14 / 18 says nine
+   * questions in and mostly right. The total is allowed to go negative.
    */
-  var MAX = PER_DAY * 2;
+  var RIGHT = 2, WRONG = -1;
   var HOLD_MS = 2000;
-  var solved = 0, score = 0;
+  var score = 0;
   var scoreEl = document.getElementById('trivia-score');
-  var footEl = document.getElementById('trivia-foot');
 
   /* A friendly line on a wrong answer, and two seconds to read it.
    *
    * Without the pause the messages are pointless: a reader who is guessing
    * clicks straight through the next option and the line changes before their
    * eye has reached it. Two seconds is long enough to read ten words and short
-   * enough not to feel like a punishment. Only the question they are on
-   * locks — the other four stay live, since being made to wait on a question
-   * you are not looking at would be nonsense.
+   * enough not to feel like a punishment.
    *
    * The messages come from data/trivia.json by way of a JSON block in the page,
    * so the copy has one home and it is not this file.
@@ -244,12 +220,10 @@
   function scoreLine() {
     if (!scoreEl) return;
     scoreEl.hidden = false;
-    scoreEl.textContent = 'Score ' + score + ' / ' + MAX;
-    scoreEl.setAttribute('data-all', solved === PER_DAY ? 'done' : 'part');
+    scoreEl.textContent = 'Score ' + score + ' / ' + (served * RIGHT);
+    scoreEl.setAttribute('data-all', score === served * RIGHT ? 'done' : 'part');
     scoreEl.setAttribute('data-neg', score < 0 ? '1' : '0');
   }
-
-  scoreLine();                           // on screen from load, starting at zero
 
   list.addEventListener('click', function (e) {
     var btn = e.target.closest ? e.target.closest('.tq-opt') : null;
@@ -263,7 +237,7 @@
     if (chose !== correct) {
       btn.classList.add('is-wrong');
       btn.disabled = true;                 // that one is spent; the rest are not
-      score -= 1;
+      score += WRONG;
       womp();
       scoreLine();
       nudge(q);
@@ -283,10 +257,22 @@
     var note = q.querySelector('.tq-note');
     if (note) note.hidden = false;
 
-    solved++;
-    score += 2;
+    score += RIGHT;
     cheer();
     scoreLine();
-    if (solved === PER_DAY && footEl) footEl.hidden = false;
+    if (nextBtn) {
+      nextBtn.hidden = false;
+      nextBtn.focus();
+    }
   });
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function () {
+      show();
+      scoreLine();
+    });
+  }
+
+  show();                                // the first question, on load
+  scoreLine();
 })();

@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Food Trivia: Fun Facts About Indian Cooking | Khaana" />
 <meta name="twitter:description" content="Food trivia from India and beyond. Where the chilli really came from, why milk beats water on a burnt tongue, and what vindaloo is actually named after." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/home-hero.jpg" />
-<link rel="stylesheet" href="style.css?v=aec4df7d" />
+<link rel="stylesheet" href="style.css?v=2efc6d9e" />
 </head>
 <body>
 
@@ -68,12 +68,11 @@
       <div class="eyebrow">Fun facts</div>
       <h1>Food Trivia</h1>
     </div>
-    <p class="trivia-intro">Try this food trivia. Come here again tomorrow
-      for more fun facts.</p>
+    <p class="trivia-intro">Select one answer.</p>
 
     <section class="pair" id="pair-game" hidden aria-labelledby="pair-title">
       <div class="pair-head">
-        <h2 id="pair-title">Play: Match dishes to cuisine category.</h2>
+        <h2 id="pair-title">Match dishes to cuisine category</h2>
         <div class="pair-scoring">
           <p class="pair-rule">Correct +2, wrong -1</p>
           <p class="pair-meter">
@@ -100,11 +99,10 @@
     <script type="application/json" id="pair-messages">{"1": {"all": "Chef’s kiss! You matched the whole menu in one delicious move. 👨‍🍳💋", "some": "Tasty start! A few dishes are still searching for their culinary homeland. 🌍", "none": "Oops, the cuisines went to the wrong tables! Let’s reshuffle the seating. 😄"}, "2": {"all": "Second serving, total success! You know your khaana. 🍽️", "some": "Getting warmer, like a tandoor at dinner time! 🔥", "none": "Plot twist: the dishes are still culturally confused. Try again! 🥘"}, "3": {"all": "Three attempts and the menu mystery is solved! 🎉", "some": "Almost plated! Just a few flavors need directions home. 🧭", "none": "The cuisines are playing hard to get, but you’re the head chef! 😎"}, "4": {"all": "You did it! Persistence is the secret ingredient. 🏆", "some": "So close, we can almost smell victory! 👃✨", "none": "No worries, even great chefs occasionally burn the toast. 🍞"}, "5": {"all": "Finally matched! That was a full-course adventure. 🎊", "some": "The last few pairings are extra spicy! Keep going. 🌶️", "none": "These cuisines clearly ordered disguises. One more try! 🥸"}}</script>
 
     <div class="trivia-head">
-      <p class="trivia-day" id="trivia-day"></p>
       <div class="trivia-head-right">
         <div class="trivia-scoring">
           <p class="trivia-rule">Correct +2, wrong -1</p>
-          <p class="trivia-score" id="trivia-score" hidden>Score 0 / 10</p>
+          <p class="trivia-score" id="trivia-score" hidden>Score 0 / 2</p>
         </div>
         <button type="button" class="trivia-sound" id="trivia-sound"
                 aria-pressed="true">Sound on</button>
@@ -1435,8 +1433,10 @@
     </ol>
     <script type="application/json" id="trivia-nudges">["Not quite! Take another bite at it.", "That answer needed more seasoning.", "Oops! The masala led you astray.", "Close, but no samosa.", "A delicious guess, but incorrect.", "Your culinary compass slipped.", "The kitchen jury says: try again.", "That fact is still a little undercooked.", "Good guess, wrong ingredient.", "Lost points, but excellent confidence."]</script>
 
-    <p class="trivia-foot" id="trivia-foot" hidden>
-      More tomorrow. Meanwhile, <a href="cook.html">go and cook something</a>.</p>
+    <div class="trivia-foot">
+      <button type="button" class="trivia-next" id="trivia-next" hidden>Next
+        question</button>
+    </div>
 
     <noscript><p class="trivia-intro">Every question and answer is listed
       above.</p></noscript>
@@ -1495,7 +1495,7 @@
 </footer>
 
 <script src="script.js?v=cff5324b"></script>
-<script src="assets/js/trivia.js?v=8b9c058f"></script>
-<script src="assets/js/pair.js?v=13c58e8d"></script>
+<script src="assets/js/trivia.js?v=635a04d3"></script>
+<script src="assets/js/pair.js?v=337b470a"></script>
 </body>
 </html>

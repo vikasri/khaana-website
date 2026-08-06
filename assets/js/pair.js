@@ -32,7 +32,7 @@
    * right ones would give everybody 8 in the end, since the round does not
    * finish until they are all right. */
   var RIGHT = 2, WRONG = -1;
-  var BEST = ROWS * RIGHT;
+  var PER_ROUND = ROWS * RIGHT;      // eight, if a round is solved blind
   /* The board is marked the moment the fourth cuisine lands — a zero timeout
    * rather than a direct call only so the browser paints that last placement
    * before the verdict appears on top of it. The wait below is not the
@@ -87,7 +87,13 @@
   var placed = [];       // placed[row] = cuisine name, or null
   var locked = [];       // locked[row] = true once that row has been marked right
   var attempt = 1;
+  /* Score and rounds both run for as long as the reader does. A round used to
+   * wipe the slate, which made the number a report on the last four dishes
+   * rather than on the session: solve three rounds well and a bad fourth left
+   * you looking like you had never got one right. The denominator grows with
+   * the rounds instead, so 22 / 32 says what it took to get there. */
   var score = 0;
+  var rounds = 0;
   var busy = false;      // true while a mark is being shown or a new round dealt
   var selected = null;   // cuisine picked by tap or keyboard, waiting for a slot
   var timers = [];
@@ -115,7 +121,7 @@
     busy = false;
     selected = null;
     attempt = 1;
-    score = 0;
+    rounds++;
     var chosen = pick(cuisines, ROWS);
     pairs = chosen.map(function (c) {
       var entry = pick(pool[c], 1)[0];      // [name, thumbnail id or null]
@@ -232,7 +238,7 @@
 
     if (attemptEl) attemptEl.textContent = 'Attempt ' + attempt;
     if (scoreEl) {
-      scoreEl.textContent = 'Score ' + score + ' / ' + BEST;
+      scoreEl.textContent = 'Score ' + score + ' / ' + (rounds * PER_ROUND);
       scoreEl.setAttribute('data-neg', score < 0 ? '1' : '0');
     }
   }

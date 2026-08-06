@@ -3,18 +3,17 @@
 
     python3 tools/build-trivia.py
 
-Five questions a day out of the whole bank, chosen by the date, so the set
-comes round every len(questions) / 5 days and everybody looking at the page on
-the same day sees the same five.
+One question at a time, drawn at random by trivia.js, with no repeat until
+the bank is used up and then a reshuffle. There is no daily rotation and no
+end: a reader who wants to keep going keeps going.
 
-Nothing about that mechanism appears on the page. The reader gets five
-questions and an invitation to come back tomorrow; the rotation is the site's
-business, not theirs.
+Nothing about that mechanism appears on the page. The reader gets a question
+and a button for the next one.
 
 Why the questions are written into the page rather than fetched
 ---------------------------------------------------------------
 
-Every question ships in the HTML, and the script picks today's five on load.
+Every question ships in the HTML, and the script shows one of them at a time.
 That is the wrong instinct for a big dataset and the right one for this: the
 whole bank is a few tens of KB, well under one recipe photograph, and it buys
 three things a fetch would cost. The page works with no second request. The answers
@@ -122,12 +121,11 @@ def main():
       <div class="eyebrow">Fun facts</div>
       <h1>Food Trivia</h1>
     </div>
-    <p class="trivia-intro">Try this food trivia. Come here again tomorrow
-      for more fun facts.</p>
+    <p class="trivia-intro">Select one answer.</p>
 
     <section class="pair" id="pair-game" hidden aria-labelledby="pair-title">
       <div class="pair-head">
-        <h2 id="pair-title">Play: Match dishes to cuisine category.</h2>
+        <h2 id="pair-title">Match dishes to cuisine category</h2>
         <div class="pair-scoring">
           <p class="pair-rule">Correct +2, wrong -1</p>
           <p class="pair-meter">
@@ -154,11 +152,10 @@ def main():
     <script type="application/json" id="pair-messages">%s</script>
 
     <div class="trivia-head">
-      <p class="trivia-day" id="trivia-day"></p>
       <div class="trivia-head-right">
         <div class="trivia-scoring">
           <p class="trivia-rule">Correct +2, wrong -1</p>
-          <p class="trivia-score" id="trivia-score" hidden>Score 0 / 10</p>
+          <p class="trivia-score" id="trivia-score" hidden>Score 0 / 2</p>
         </div>
         <button type="button" class="trivia-sound" id="trivia-sound"
                 aria-pressed="true">Sound on</button>
@@ -170,8 +167,10 @@ def main():
     </ol>
     <script type="application/json" id="trivia-nudges">%s</script>
 
-    <p class="trivia-foot" id="trivia-foot" hidden>
-      More tomorrow. Meanwhile, <a href="cook.html">go and cook something</a>.</p>
+    <div class="trivia-foot">
+      <button type="button" class="trivia-next" id="trivia-next" hidden>Next
+        question</button>
+    </div>
 
     <noscript><p class="trivia-intro">Every question and answer is listed
       above.</p></noscript>
