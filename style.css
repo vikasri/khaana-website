@@ -2294,17 +2294,22 @@ section.trivia-section { padding-top: 24px; }
    sentence are inert, and everything focusable stays in the order it looks. */
 .trivia-page { display: flex; flex-direction: column; }
 .trivia-page > .pair { order: 1; }
-.trivia-page > .section-head,
-.trivia-page > .trivia-intro { order: 2; }
-.trivia-page > .trivia-head,
-.trivia-page > .trivia-list,
-.trivia-page > .trivia-foot,
-.trivia-page > noscript { order: 3; }
+.trivia-page > .trivia-panel { order: 2; }
 
 /* A page-opening h1 at 3.2rem was doing a job nothing here needs done: it is
    a section heading now, so it is sized like one — still larger than the
    game's heading above it, since it is still the page's h1. */
-.trivia-page .section-head { margin-bottom: 4px; }
+/* The trivia gets the same panel as the game above it: same paper, same
+   border, same radius. They are two halves of one page and were reading as a
+   card followed by loose text. */
+.trivia-panel {
+  margin: 0; padding: 14px 18px 16px;
+  background: var(--paper);
+  border: 1px solid var(--line); border-radius: var(--radius);
+}
+@media (max-width: 759px) { .trivia-panel { padding: 12px 12px 14px; } }
+
+.trivia-page .section-head { margin: 0; max-width: none; }
 .trivia-page .section-head h1 {
   font-size: clamp(1.25rem, 2vw, 1.5rem); margin-bottom: 0.15em;
 }
@@ -2315,14 +2320,14 @@ section.trivia-section { padding-top: 24px; }
 }
 noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 
-/* Top-aligned, not baseline. The right-hand block is two lines — what a
-   question is worth, then the running total — and sharing a baseline with the
-   date hung its second line below, propping the row open and pushing the first
-   question down the page. */
+/* Title and welcome line on the left, what a question is worth and the running
+   total on the right, top-aligned so the two columns start on the same line.
+   The same head the matching game has, for the same reason: the numbers belong
+   beside the thing they are counting, not on a row of their own underneath. */
 .trivia-head {
   display: flex; flex-wrap: wrap; align-items: flex-start;
   justify-content: space-between; gap: 6px 18px;
-  margin: 12px 0 2px; padding-bottom: 6px;
+  margin: 0 0 10px; padding-bottom: 8px;
   border-bottom: 1px solid var(--line);
 }
 .trivia-day {
@@ -2408,13 +2413,16 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 
 /* Centred within itself, so the sound button sits against the middle of the
    two-line score block rather than against either line of it. */
-.trivia-head-right { display: flex; align-items: center; gap: 14px; }
+.trivia-head-right { display: flex; align-items: center; gap: 14px; flex: 0 0 auto; }
 /* What a question is worth, above the running total. Small and quiet: it is a
    footnote to the score, not a second score. Left-aligned since the date came
    off the other end of this row — there is nothing to be right-aligned
    against any more, and ragged-right against the page's left margin reads as
    a wobble rather than as alignment. */
-.trivia-scoring { text-align: left; }
+.trivia-scoring { text-align: right; }
+/* Stacked on a phone, where the head wraps and the block is against the left
+   margin rather than the right edge. */
+@media (max-width: 640px) { .trivia-scoring { text-align: left; } }
 .trivia-rule {
   margin: 0; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
   line-height: 1.3; text-transform: uppercase; color: var(--ink-soft);

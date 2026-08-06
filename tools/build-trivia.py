@@ -117,11 +117,36 @@ def main():
 
 <section class="tight trivia-section">
   <div class="container trivia-page">
-    <div class="section-head">
-      <div class="eyebrow">Fun facts</div>
-      <h1>Food Trivia</h1>
-    </div>
-    <p class="trivia-intro">Select one answer.</p>
+    <section class="trivia-panel" aria-labelledby="trivia-title">
+      <div class="trivia-head">
+        <div class="section-head">
+          <div class="eyebrow">Fun facts</div>
+          <h1 id="trivia-title">Food Trivia</h1>
+          <p class="trivia-intro">Select one answer.</p>
+        </div>
+        <div class="trivia-head-right">
+          <div class="trivia-scoring">
+            <p class="trivia-rule">Correct +2, wrong -1</p>
+            <p class="trivia-score" id="trivia-score" hidden>Score 0 / 2</p>
+          </div>
+          <button type="button" class="trivia-sound" id="trivia-sound"
+                  aria-pressed="true">Sound on</button>
+        </div>
+      </div>
+
+      <ol class="trivia-list" id="trivia-list">
+%s
+      </ol>
+      <script type="application/json" id="trivia-nudges">%s</script>
+
+      <div class="trivia-foot">
+        <button type="button" class="trivia-next" id="trivia-next" hidden>Next
+          question</button>
+      </div>
+
+      <noscript><p class="trivia-intro">Every question and answer is listed
+        above.</p></noscript>
+    </section>
 
     <section class="pair" id="pair-game" hidden aria-labelledby="pair-title">
       <div class="pair-head">
@@ -151,29 +176,6 @@ def main():
     <script type="application/json" id="pair-pool">%s</script>
     <script type="application/json" id="pair-messages">%s</script>
 
-    <div class="trivia-head">
-      <div class="trivia-head-right">
-        <div class="trivia-scoring">
-          <p class="trivia-rule">Correct +2, wrong -1</p>
-          <p class="trivia-score" id="trivia-score" hidden>Score 0 / 2</p>
-        </div>
-        <button type="button" class="trivia-sound" id="trivia-sound"
-                aria-pressed="true">Sound on</button>
-      </div>
-    </div>
-
-    <ol class="trivia-list" id="trivia-list">
-%s
-    </ol>
-    <script type="application/json" id="trivia-nudges">%s</script>
-
-    <div class="trivia-foot">
-      <button type="button" class="trivia-next" id="trivia-next" hidden>Next
-        question</button>
-    </div>
-
-    <noscript><p class="trivia-intro">Every question and answer is listed
-      above.</p></noscript>
   </div>
 </section>
 
@@ -184,7 +186,7 @@ def main():
 <script src="assets/js/pair.js"></script>
 </body>
 </html>
-""" % (nav, pool_json, pair_msgs, body, nudges, foot)
+""" % (nav, body, nudges, pool_json, pair_msgs, foot)
 
     open(OUT, "w", encoding="utf-8").write(page)
     print("fun-facts.html written: %d questions, %d a day, a %d-day cycle"
