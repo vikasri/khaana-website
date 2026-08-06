@@ -488,7 +488,7 @@
 
     var applied = [];
     if (filters.diets.length) applied.push(filters.diets.map(labelForTag).join(', '));
-    if (filters.quickHealthy) applied.push('healthier, ready in 30 minutes');
+    if (filters.quickHealthy) applied.push('30 minutes healthy');
     if (filters.maxTime) applied.push('under ' + filters.maxTime + ' minutes');
     if (filters.maxKcal) applied.push('under ' + filters.maxKcal + ' kcal a serving');
 
