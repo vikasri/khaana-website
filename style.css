@@ -2267,8 +2267,8 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 .find-pick a { font-weight: 700; }
 
 /* ---------- Fun facts ---------- */
-/* Four questions a day out of sixty. All sixty are in the markup so the page
-   works without JavaScript; trivia.js hides all but today's. */
+/* Five questions a day out of the bank. All of them are in the markup so the
+   page works without JavaScript; trivia.js hides all but today's. */
 /* The welcome line, so it is sized to be read rather than skimmed past. The
    no-JavaScript fallback below the questions keeps the smaller size. */
 .trivia-intro {
@@ -2352,7 +2352,20 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    which is a readable list rather than a broken quiz. */
 @media print { .tq-opt { border-color: #bbb; } .tq-note { background: none; } }
 
-.trivia-head-right { display: flex; align-items: baseline; gap: 14px; }
+/* Centred, not baseline-aligned: the score now sits under a line saying what
+   a question is worth, and on a baseline the sound button lined up with the
+   footnote instead of the score. */
+.trivia-head-right { display: flex; align-items: center; gap: 14px; }
+/* What a question is worth, above the running total. Small and quiet: it is a
+   footnote to the score, not a second score. */
+.trivia-scoring { text-align: right; }
+/* The head stacks on a phone, so the block is no longer against the right
+   edge and ragged-right stops being alignment and starts being a wobble. */
+@media (max-width: 640px) { .trivia-scoring { text-align: left; } }
+.trivia-rule {
+  margin: 0; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--ink-soft);
+}
 .trivia-sound {
   border: 1px solid var(--line); background: var(--paper); color: var(--ink-soft);
   border-radius: 999px; padding: 3px 11px; cursor: pointer;
@@ -2386,4 +2399,164 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 .tq.answered .tq-nudge::after { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .tq-nudge::after { animation: none; transform: scaleX(0); }
+}
+
+/* ---------- Fun facts: the matching game ---------- */
+/* Four dishes down the left, an empty box beside each, and the four cuisines
+   to the right of those. pair.js builds the rows and the chips; everything
+   here is the board they land on. Hidden until the button is pressed, and the
+   button itself is hidden until the script un-hides it, so a reader without
+   JavaScript is offered nothing that would not work. */
+.pair-launch { margin: 26px 0 0; }
+.pair-start {
+  display: inline-block; cursor: pointer;
+  padding: 12px 22px; border: 0; border-radius: 999px;
+  background: var(--nav-active); color: #fff;
+  font-family: var(--sans); font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 6px 18px rgba(201, 74, 9, 0.22);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.pair-start:hover { background: var(--deep-red); }
+.pair-start:active { transform: translateY(1px); }
+
+.pair {
+  margin: 22px 0 0; padding: 20px 20px 22px;
+  background: var(--paper);
+  border: 1px solid var(--line); border-radius: var(--radius);
+}
+.pair-head {
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  justify-content: space-between; gap: 4px 18px;
+}
+.pair-head h2 { margin: 0; font-size: clamp(1.3rem, 2.4vw, 1.7rem); }
+/* Attempt count and running score, laid out like the trivia head below: the
+   rule small above, the numbers under it. */
+.pair-scoring { text-align: right; }
+.pair-rule, .pair-meter {
+  margin: 0; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.11em;
+  text-transform: uppercase; color: var(--ink-soft);
+}
+.pair-rule { font-size: 0.68rem; letter-spacing: 0.08em; }
+.pair-meter { display: flex; justify-content: flex-end; gap: 14px; }
+.pair-score { color: var(--ink); }
+.pair-score[data-neg="1"] { color: #b3261e; }
+@media (max-width: 640px) {
+  .pair-scoring { text-align: left; }
+  .pair-meter { justify-content: flex-start; }
+}
+.pair-how { margin: 6px 0 18px; font-size: 0.95rem; color: var(--ink-soft); }
+
+/* One column on a phone, where the cuisines sit under the dishes rather than
+   beside them: 3 columns in 360px would leave every box too narrow to read a
+   name like "Northeast Indian" in. */
+.pair-board { display: grid; gap: 16px; }
+@media (min-width: 760px) {
+  .pair-board { grid-template-columns: minmax(0, 1fr) auto; align-items: start; }
+}
+
+.pair-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.pair-row {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(120px, 170px);
+  align-items: stretch; gap: 10px;
+}
+/* On a phone the box gets the smaller share. Given an equal one it sat there
+   empty and wide while "Rui Macher Kalia" wrapped to two lines beside it. */
+@media (max-width: 759px) {
+  .pair-row { grid-template-columns: minmax(0, 1fr) 118px; }
+}
+.pair-dish {
+  display: flex; align-items: center;
+  padding: 11px 14px; border-radius: 9px;
+  background: var(--cream); border: 1px solid var(--line);
+  font-family: var(--serif); font-size: 1.05rem; line-height: 1.3; color: var(--ink);
+}
+
+/* The empty box. Dashed while it is waiting for something, solid once it has
+   it, so an unfilled row is obvious at a glance without any text saying so. */
+.pair-slot {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 46px; padding: 8px 10px;
+  border: 2px dashed var(--line); border-radius: 9px;
+  background: transparent; color: var(--ink);
+  font-family: var(--sans); font-size: 0.95rem; font-weight: 700;
+  text-align: center; cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.pair-slot:disabled { cursor: default; }
+.pair-slot.is-filled {
+  border-style: solid; border-color: var(--line); background: var(--paper);
+  box-shadow: 0 1px 3px rgba(27, 36, 34, 0.09);
+}
+/* Where a picked-up cuisine may go. Only the empty boxes light up. */
+.pair-slot.is-target, .pair-slot.is-over {
+  border-color: var(--nav-active); background: #fff6f0;
+}
+
+/* Marked. The same greens and reds as the trivia options below, and each
+   carries a word as well as a colour so the result does not depend on telling
+   one from the other. */
+.pair-slot.is-right {
+  border-style: solid; border-color: #2e7d4f; background: #edf7f1; color: #1c5535;
+}
+.pair-slot.is-wrong {
+  border-style: solid; border-color: #b3261e; background: #fdeeec; color: #8c1d18;
+}
+.pair-slot.is-right::after, .pair-slot.is-wrong::after {
+  margin-left: 8px; font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.pair-slot.is-right::after { content: 'matched'; color: #2e7d4f; }
+.pair-slot.is-wrong::after { content: 'no'; color: #b3261e; }
+
+/* The cuisines waiting to be placed. A placed one keeps its space rather than
+   collapsing it, so the chips still on the board do not slide out from under
+   a moving finger. */
+.pair-bank {
+  display: grid; gap: 10px; align-content: start;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+@media (min-width: 760px) {
+  .pair-bank { grid-template-columns: 170px; }
+}
+.pair-chip {
+  padding: 12px 14px; border-radius: 9px; cursor: grab;
+  border: 1px solid var(--nav-active);
+  background: var(--paper); color: var(--nav-active);
+  font-family: var(--sans); font-size: 0.95rem; font-weight: 700;
+  text-align: center; line-height: 1.3;
+  box-shadow: 0 2px 6px rgba(27, 36, 34, 0.08);
+  /* A drag has to own the gesture, or the browser scrolls the page instead of
+     moving the chip. Only the chips give it up; the rest of the board scrolls
+     normally. */
+  touch-action: none;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.pair-chip:hover:not(:disabled):not(.is-picked) { background: var(--cream); }
+/* A picked chip is white on orange, and stays that way under the cursor that
+   picked it. Left to the hover rule it went pale with white text on it. */
+.pair-chip.is-picked, .pair-chip.is-picked:hover {
+  background: var(--nav-active); color: #fff;
+  box-shadow: 0 4px 12px rgba(201, 74, 9, 0.28);
+}
+.pair-chip.is-placed { visibility: hidden; }
+.pair-chip.is-dragging { opacity: 0.35; cursor: grabbing; }
+.pair-chip:disabled { cursor: default; }
+
+/* What follows the pointer. Fixed and centred on the finger, and deaf to
+   pointer events so elementFromPoint underneath it finds the box and not the
+   thing being dragged onto it. */
+.pair-ghost {
+  position: fixed; z-index: 1200; pointer-events: none;
+  transform: translate(-50%, -50%);
+  padding: 12px 14px; border-radius: 9px;
+  border: 1px solid var(--nav-active);
+  background: var(--nav-active); color: #fff;
+  font-family: var(--sans); font-size: 0.95rem; font-weight: 700;
+  text-align: center; box-shadow: 0 10px 24px rgba(27, 36, 34, 0.28);
+}
+
+.pair-verdict {
+  margin: 16px 0 0; font-family: var(--serif); font-size: 1.1rem;
+  line-height: 1.5; color: var(--ink);
 }

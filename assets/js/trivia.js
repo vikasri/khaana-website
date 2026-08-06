@@ -1,6 +1,6 @@
-/* Fun facts: show five of the hundred questions, chosen by today's date.
+/* Fun facts: show five of the questions in the page, chosen by today's date.
  *
- * The page ships all hundred in the markup so it works without JavaScript and
+ * The page ships every one in the markup so it works without JavaScript and
  * so a crawler sees the lot. This hides all but today's five and turns them
  * into something you can answer.
  *
@@ -10,24 +10,26 @@
  * the same day, and a reload does not reshuffle them mid-quiz.
  *
  *   day    days since the epoch, in local time
- *   slot   which group of five within the twenty-day cycle
- *   cycle  which twenty-day cycle we are in
+ *   slot   which group of five within the cycle
+ *   cycle  which cycle we are in
  *
- * Index = (slot * 5 + i + cycle * SHIFT) mod 100.
+ * Index = (slot * 5 + i + cycle * SHIFT) mod the number of questions.
  *
- * The (slot * 5 + i) part walks 0..99 exactly once across a cycle, so twenty
- * days covers every question with none repeated. Adding cycle * SHIFT moves
- * the whole deck each cycle, and because SHIFT shares no factor with 100 the
- * questions land in different groups of five every time round. Without it the
- * same five would always appear together, which gets stale faster than the
+ * The (slot * 5 + i) part walks the whole bank exactly once across a cycle, so
+ * a cycle covers every question with none repeated. Adding cycle * SHIFT moves
+ * the whole deck each cycle, and because SHIFT shares no factor with the total
+ * the questions land in different groups of five every time round. Without it
+ * the same five would always appear together, which gets stale faster than the
  * questions do.
  */
 (function () {
   'use strict';
 
   var PER_DAY = 5;
-  // Coprime with 100, so the per-cycle shift visits every offset before
-  // repeating. 10 or 25 would collapse into a handful of arrangements.
+  // Coprime with the bank size, so the per-cycle shift visits every offset
+  // before repeating. A factor of it — 10 against 100, 12 against 120 — would
+  // collapse into a handful of arrangements. 7 being prime keeps that true for
+  // any bank that is not a multiple of seven, which 140 questions would be.
   var SHIFT = 7;
   var list = document.getElementById('trivia-list');
   if (!list) return;
