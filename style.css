@@ -2280,10 +2280,31 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
    page that opens on a heading would want to. */
 section.trivia-section { padding-top: 24px; }
 @media (max-width: 560px) { section.trivia-section { padding-top: 30px; } }
-/* The trivia's own title sits below the game rather than at the top of the
-   page. A page-opening h1 at 3.2rem was doing a job nothing here needs done:
-   it is a section heading now, so it is sized like one — still larger than
-   the game's heading above it, since it is still the page's h1. */
+/* The h1 is first in the markup and second on the screen.
+   
+   Written in the order it reads, the page began with the game's <h2> and only
+   reached its <h1> halfway down — an outline that says the first thing on the
+   page is a subsection of nothing. Search engines and anyone navigating by
+   headings both read the markup, so the markup is the version that has to be
+   right. The game is lifted above it here instead.
+   
+   Safe to reorder only because the two blocks that move contain no links and
+   no buttons: tab order follows the markup, so moving anything focusable
+   would leave the keyboard jumping about the page. The heading and its one
+   sentence are inert, and everything focusable stays in the order it looks. */
+.trivia-page { display: flex; flex-direction: column; }
+.trivia-page > .pair-launch,
+.trivia-page > .pair { order: 1; }
+.trivia-page > .section-head,
+.trivia-page > .trivia-intro { order: 2; }
+.trivia-page > .trivia-head,
+.trivia-page > .trivia-list,
+.trivia-page > .trivia-foot,
+.trivia-page > noscript { order: 3; }
+
+/* A page-opening h1 at 3.2rem was doing a job nothing here needs done: it is
+   a section heading now, so it is sized like one — still larger than the
+   game's heading above it, since it is still the page's h1. */
 .trivia-page .section-head { margin-bottom: 10px; }
 .trivia-page .section-head h1 { font-size: clamp(1.7rem, 3.2vw, 2.3rem); }
 .trivia-page .section-head .eyebrow { font-size: 0.76rem; margin-bottom: 4px; }

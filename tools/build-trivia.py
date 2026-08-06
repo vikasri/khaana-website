@@ -118,6 +118,13 @@ def main():
 
 <section class="tight trivia-section">
   <div class="container trivia-page">
+    <div class="section-head">
+      <div class="eyebrow">Fun facts</div>
+      <h1>Food Trivia</h1>
+    </div>
+    <p class="trivia-intro">Try this food trivia. Come here again tomorrow
+      for more fun facts.</p>
+
     <div class="pair-launch" id="pair-launch" hidden>
       <button type="button" class="pair-start" id="pair-start"
               aria-expanded="false" aria-controls="pair-game">Play: Match Dishes
@@ -151,13 +158,6 @@ def main():
     </section>
     <script type="application/json" id="pair-pool">%s</script>
     <script type="application/json" id="pair-messages">%s</script>
-
-    <div class="section-head">
-      <div class="eyebrow">Fun facts</div>
-      <h1>Food Trivia</h1>
-    </div>
-    <p class="trivia-intro">Try this food trivia. Come here again tomorrow
-      for more fun facts.</p>
 
     <div class="trivia-head">
       <p class="trivia-day" id="trivia-day"></p>
