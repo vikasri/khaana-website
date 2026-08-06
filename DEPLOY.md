@@ -11,9 +11,10 @@ problems recorded below. It is being undone rather than completed.
 
 ## What was actually true before this was written
 
-The domain's nameservers had been moved to Cloudflare, but no Cloudflare Pages
-or Workers project was ever created. So Cloudflare sat in front as a proxy and
-GitHub Pages served every request behind it. That is visible in any response:
+The domain's nameservers had been moved to Cloudflare, and the Cloudflare
+project was half-made: it existed and was connected to this repository, but it
+never served khaana.com. Cloudflare sat in front as a proxy and GitHub Pages
+served every request behind it. That is visible in any response:
 
 ```
 x-github-request-id: ...
@@ -33,6 +34,28 @@ Three things this repository contained were therefore doing nothing at all:
 All four are deleted. Believing them was worse than not having them: a recipe
 was renamed, a `_redirects` rule was added for the old URL, and the old URL
 went on returning 404 with nothing to say otherwise.
+
+## The deploy failures of 2026-08-06
+
+Three deploys in a row failed after the DNS move, and the shape was always the
+same: `build` succeeded in twelve seconds, `deploy` ran into its ten-minute
+ceiling with `Timeout reached, aborting!`, and a re-triggered run then sat in
+`queued` without starting. The site kept serving the previous build throughout,
+which is why nothing looked wrong from outside.
+
+It was not the DNS, the custom domain, the branch policy or the site's size:
+the domain passed its DNS check, `main` was on the allowed list, there were no
+approval rules, and 127 MB across 2,304 files is well inside the 1 GB limit.
+
+It was the Cloudflare Git integration. The project was still connected to this
+repository and creating its own deployments on every push — this repository had
+four deployment environments, `github-pages` plus three of Cloudflare's — and
+GitHub's publish step waited behind them until it gave up. Disconnecting the
+repository in Cloudflare fixed it on the next push, in under a minute.
+
+Worth knowing if a deploy ever hangs again: `deploy` timing out while `build`
+passes means the publish handoff, not the site. Check
+`/repos/OWNER/REPO/environments` for anything that is not `github-pages`.
 
 ## Redirects, on this host
 
