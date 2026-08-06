@@ -127,7 +127,7 @@ def main():
 
     <section class="pair" id="pair-game" hidden aria-labelledby="pair-title">
       <div class="pair-head">
-        <h2 id="pair-title">Match each dish to its cuisine</h2>
+        <h2 id="pair-title">Play: Match dishes to cuisine category.</h2>
         <div class="pair-scoring">
           <p class="pair-rule">Correct +2, wrong -1</p>
           <p class="pair-meter">
