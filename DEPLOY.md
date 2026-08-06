@@ -70,70 +70,113 @@ against, and an unchanged file keeps its URL and stays cached.
 
 ## What Cloudflare is still doing
 
-At the time of writing, the DNS is still Cloudflare's:
+At the time of writing the DNS is still Cloudflare's, and the proxy is on:
 
 ```
 nameservers   watson.ns.cloudflare.com, samara.ns.cloudflare.com
-khaana.com    A 104.21.73.236, 172.67.193.91   (Cloudflare's proxy IPs)
+khaana.com    A 104.21.73.236, 172.67.193.91          (Cloudflare, proxied)
 www           the same
-MX            route1/2/3.mx.cloudflare.net     (Cloudflare Email Routing)
+MX            route1/2/3.mx.cloudflare.net            (Email Routing)
 TXT           v=spf1 include:_spf.mx.cloudflare.net ~all
-TXT           google-site-verification=... (two of them)
+TXT           google-site-verification=K9s30Is97phCshKSdYOm1_MVQ5T098-YxV3bTOnX52E
+TXT           google-site-verification=sLusuinZWcjaFeKBhZ9JTE_Q8xh3QWdnmFiFwUkY2U4
 ```
 
-Two things there are load-bearing and one is a live bug:
+Two of those are doing something, and neither is something anyone asked for:
 
-* **Email routing is real.** Those MX records mean mail to the domain is being
-  forwarded by Cloudflare. Moving the nameservers away turns that off. Whatever
-  address is set up there stops working the moment the zone stops answering.
-* **The Google Search Console verification** is a TXT record. It has to be
-  recreated wherever the DNS ends up or search data access is lost.
-* **`www` serves the site instead of redirecting to the apex.** Both hostnames
-  answer 200 with identical content. Every page's `<link rel="canonical">`
-  points at the apex, which is most of the protection, but it is still two
-  addresses for one site.
+* **It rewrites `robots.txt` on the way out.** What a crawler fetches is not
+  what is in this repository: Cloudflare injects a managed block above it that
+  disallows GPTBot, ClaudeBot, CCBot, Google-Extended, Amazonbot,
+  Applebot-Extended, Bytespider and meta-externalagent, and adds
+  `Content-Signal: search=yes,ai-train=no,use=reference`. Ordinary search is
+  explicitly allowed, so this does not touch Google; AI answer engines are shut
+  out. It also leaves two `User-agent: *` groups in one file, and most crawlers
+  read only the first, which is Cloudflare's — so the site's own
+  `Disallow: /tools/` is being ignored.
+* **`www` answers 200 instead of redirecting.** Both hostnames serve identical
+  content. Every canonical points at the apex, which is most of the protection,
+  but it is still two addresses for one site.
 
-## Leaving Cloudflare completely
+The MX records point at Email Routing that was set up, never worked and
+forwards nothing. There is no mailbox on this domain and the feedback form
+posts to Google, so nothing depends on them.
 
-This is account work and cannot be done from this repository.
+## Leaving
 
-1. **Deal with the email first.** Find out what Cloudflare Email Routing is
-   forwarding and where. If it matters, arrange a replacement before anything
-   else moves — an email address that silently stops accepting mail is a worse
-   outcome than any of this is worth. If it forwards nothing, there is nothing
-   to protect.
-2. **Recreate the zone at the new DNS host** (GoDaddy is the registrar, so its
-   own DNS is the obvious place). Before switching, have ready:
+Checked before deciding, by resolving past Cloudflare and talking to GitHub
+Pages directly. All of it already works:
 
-   | Type | Name | Value |
-   |---|---|---|
-   | A | `@` | `185.199.108.153` |
-   | A | `@` | `185.199.109.153` |
-   | A | `@` | `185.199.110.153` |
-   | A | `@` | `185.199.111.153` |
-   | CNAME | `www` | `vikasri.github.io` |
-   | TXT | `@` | both `google-site-verification=` values |
-   | MX | `@` | whatever step 1 decided |
+```
+curl -sI https://khaana.com/     --resolve khaana.com:443:185.199.108.153
+    HTTP/2 200, server: GitHub.com
+curl -sI https://www.khaana.com/ --resolve www.khaana.com:443:185.199.108.153
+    HTTP/2 301, location: https://khaana.com/
+openssl s_client -servername khaana.com -connect 185.199.108.153:443
+    subject CN=khaana.com, SAN khaana.com + www.khaana.com, Let's Encrypt
+```
 
-   The four A records are GitHub's published Pages addresses. AAAA records
-   exist too if IPv6 matters.
-3. **Point the registrar's nameservers back**, away from Cloudflare. Allow up
-   to 24 hours, though it is usually under one.
-4. **In the repository settings**, Pages → Custom domain → `khaana.com`, and
-   tick **Enforce HTTPS** once the certificate is issued. The `CNAME` file in
-   this repository already says `khaana.com` and is what makes that stick.
-   GitHub then redirects `www` to the apex on its own, which fixes the
-   duplicate-hostname problem for free.
-5. **Confirm** with `curl -sI https://khaana.com` — no `server: cloudflare`,
-   and `x-github-request-id` still present — and re-check Search Console.
+So GitHub already holds a valid certificate for both names, already redirects
+`www` to the apex, and already serves every page. Nothing has to be built. The
+only question left is which nameservers the world is asked.
 
-## What is given up, honestly
+### Stage one: take Cloudflare out of the request path
+
+Two minutes, reversible in a click, and it is the whole benefit. In
+**Cloudflare → DNS**:
+
+| Type | Name | Value | Proxy |
+|---|---|---|---|
+| A | `@` | `185.199.108.153` | **DNS only** |
+| A | `@` | `185.199.109.153` | **DNS only** |
+| A | `@` | `185.199.110.153` | **DNS only** |
+| A | `@` | `185.199.111.153` | **DNS only** |
+| CNAME | `www` | `vikasri.github.io` | **DNS only** |
+
+Delete the Cloudflare AAAA records, or replace them with GitHub's
+(`2606:50c0:8000::153` through `:8003::153`). Grey cloud, not orange, on every
+one: proxied is what injects the robots.txt block and swallows the redirect.
+
+Then check, and do not go further until these are right:
+
+```
+curl -sI https://khaana.com | grep -i server        # GitHub.com, not cloudflare
+curl -sI https://www.khaana.com | grep -i location  # https://khaana.com/
+curl -s  https://khaana.com/robots.txt | head -3    # no Cloudflare block
+```
+
+### Stage two: move the nameservers
+
+Only after stage one is verified, because this is the slow, hard-to-watch part
+and it should carry no unknowns by the time it starts.
+
+At **GoDaddy**, build the zone before switching anything to it: the four A
+records above, the `www` CNAME, and **both** `google-site-verification` TXT
+records — those are what keep Search Console. No MX, since nothing uses it. An
+SPF record of `v=spf1 -all` is worth adding in their place: it says no mail is
+ever sent from this domain, which makes it harder to spoof.
+
+Then point the registrar's nameservers away from Cloudflare. Propagation is
+usually under an hour and can take 24. The site stays up throughout, because
+whichever nameserver a resolver asks, the answer is GitHub's addresses.
+
+### Stage three: after
+
+* **Repository → Settings → Pages**: confirm the custom domain still reads
+  `khaana.com` and **Enforce HTTPS** is ticked. The `CNAME` file here is what
+  makes it stick across deploys.
+* **Search Console**: confirm the property is still verified and resubmit
+  `sitemap.xml` if it complains.
+* **Delete the Cloudflare zone** once `dig NS khaana.com` no longer mentions
+  it. Nothing in this repository refers to Cloudflare any more.
+
+## What is given up
 
 Cloudflare's free plan would have bought real things: header control, actual
-301s, and a place to run `api/suggest.js`, which is parked because GitHub Pages
-cannot execute code. None of them were ever switched on here, so leaving costs
-nothing that is currently working — except the email routing, which is.
+301s, and somewhere to run `api/suggest.js`, which is parked because GitHub
+Pages cannot execute code. None were ever switched on, so leaving costs
+nothing that works today. It also stops something working *against* the site,
+which is the robots.txt rewrite.
 
-If any of those become necessary later, the route back is the one that was
-never finished: a Cloudflare Workers project with an assets directory. The
-files it needs are in this repository's history rather than its working tree.
+If a backend is ever needed, the route is the one that was never finished: a
+Cloudflare Workers project with an assets directory. The files are in this
+repository's history rather than its working tree.
