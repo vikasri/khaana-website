@@ -68,34 +68,26 @@ the height of the header.
 reference, so new markup can only ever be paired with the CSS it was built
 against, and an unchanged file keeps its URL and stays cached.
 
-## What Cloudflare is still doing
+## What Cloudflare was doing, before stage one
 
-At the time of writing the DNS is still Cloudflare's, and the proxy is on:
+The nameservers were Cloudflare's and the proxy was on, so every request went
+through Cloudflare to reach GitHub Pages. Two things it did unasked, both now
+gone with the proxy:
 
-```
-nameservers   watson.ns.cloudflare.com, samara.ns.cloudflare.com
-khaana.com    A 104.21.73.236, 172.67.193.91          (Cloudflare, proxied)
-www           the same
-MX            route1/2/3.mx.cloudflare.net            (Email Routing)
-TXT           v=spf1 include:_spf.mx.cloudflare.net ~all
-TXT           google-site-verification=K9s30Is97phCshKSdYOm1_MVQ5T098-YxV3bTOnX52E
-TXT           google-site-verification=sLusuinZWcjaFeKBhZ9JTE_Q8xh3QWdnmFiFwUkY2U4
-```
-
-Two of those are doing something, and neither is something anyone asked for:
-
-* **It rewrites `robots.txt` on the way out.** What a crawler fetches is not
-  what is in this repository: Cloudflare injects a managed block above it that
+* **It rewrote `robots.txt` on the way out.** What a crawler fetched was not
+  what is in this repository: Cloudflare injected a managed block above it that
   disallows GPTBot, ClaudeBot, CCBot, Google-Extended, Amazonbot,
   Applebot-Extended, Bytespider and meta-externalagent, and adds
   `Content-Signal: search=yes,ai-train=no,use=reference`. Ordinary search is
   explicitly allowed, so this does not touch Google; AI answer engines are shut
   out. It also leaves two `User-agent: *` groups in one file, and most crawlers
-  read only the first, which is Cloudflare's — so the site's own
-  `Disallow: /tools/` is being ignored.
-* **`www` answers 200 instead of redirecting.** Both hostnames serve identical
-  content. Every canonical points at the apex, which is most of the protection,
-  but it is still two addresses for one site.
+  read only the first, which was Cloudflare's — so the site's own
+  `Disallow: /tools/` was ignored. Removing the proxy also un-blocks the AI
+  crawlers, which is the intended outcome: an answer engine that cannot read
+  the site cannot send anyone to it.
+* **`www` answered 200 instead of redirecting.** Both hostnames served
+  identical content. GitHub Pages 301s it to the apex on its own, which is what
+  happens now.
 
 The MX records point at Email Routing that was set up, never worked and
 forwards nothing. There is no mailbox on this domain and the feedback form
@@ -119,10 +111,13 @@ So GitHub already holds a valid certificate for both names, already redirects
 `www` to the apex, and already serves every page. Nothing has to be built. The
 only question left is which nameservers the world is asked.
 
-### Stage one: take Cloudflare out of the request path
+### Stage one: take Cloudflare out of the request path — DONE
 
-Two minutes, reversible in a click, and it is the whole benefit. In
-**Cloudflare → DNS**:
+Verified after the change: apex and `www` both answer `server: GitHub.com`,
+`www` 301s to the apex, `robots.txt` is byte-for-byte what is in this
+repository, the Let's Encrypt certificate covers both names, all 21 cuisine
+pages and a sample of recipe pages return 200, and the Cook page still fetches
+its JSON and renders matches. What was set, in **Cloudflare → DNS**:
 
 | Type | Name | Value | Proxy |
 |---|---|---|---|
@@ -136,7 +131,7 @@ Delete the Cloudflare AAAA records, or replace them with GitHub's
 (`2606:50c0:8000::153` through `:8003::153`). Grey cloud, not orange, on every
 one: proxied is what injects the robots.txt block and swallows the redirect.
 
-Then check, and do not go further until these are right:
+The checks that confirmed it:
 
 ```
 curl -sI https://khaana.com | grep -i server        # GitHub.com, not cloudflare
@@ -144,10 +139,11 @@ curl -sI https://www.khaana.com | grep -i location  # https://khaana.com/
 curl -s  https://khaana.com/robots.txt | head -3    # no Cloudflare block
 ```
 
-### Stage two: move the nameservers
+### Stage two: move the nameservers — remaining
 
-Only after stage one is verified, because this is the slow, hard-to-watch part
-and it should carry no unknowns by the time it starts.
+The slow part, and by now it carries no unknowns: whichever nameserver a
+resolver asks, the answer is already GitHub's addresses. This only changes who
+is asked.
 
 At **GoDaddy**, build the zone before switching anything to it: the four A
 records above, the `www` CNAME, and **both** `google-site-verification` TXT
