@@ -440,11 +440,19 @@
     var eligible = scored.filter(function (s) { return s.excluded.length === 0; });
     var blocked = scored.filter(function (s) { return s.excluded.length > 0; });
 
+    /* Searching or filtering is a different question from "what can I cook
+     * with this". Someone who ticks Soups wants the soups — all of them, in a
+     * sensible order — not the four soups they happen to have the shallots
+     * for. So a query or a course filter turns the pantry off entirely: no
+     * one-fifth floor on the way in, and no pantry percentage in the sort. */
+    var browsing = !!q || filters.quickHealthy ||
+                   filters.diets.indexOf('soup') !== -1;
+
     // A dish you have under a fifth of is a shopping list, not a suggestion.
     // Only applied once the cook has ticked something — before that every score
     // is 0 and this would empty the page.
     var sparse = [];
-    if (selected.size > 0 && !q) {
+    if (selected.size > 0 && !browsing) {
       sparse = eligible.filter(function (s) { return s.pct < MIN_PCT; });
       eligible = eligible.filter(function (s) { return s.pct >= MIN_PCT; });
     }
@@ -461,6 +469,14 @@
 
     eligible.sort(function (a, b) {
       if (q && b._qs !== a._qs) return b._qs - a._qs;
+      // Browsing: quickest first, then alphabetical. Both are about the dish
+      // rather than about the kitchen it is being read in.
+      if (browsing) {
+        var ta = a.recipe.prepMinutes + a.recipe.cookMinutes;
+        var tb = b.recipe.prepMinutes + b.recipe.cookMinutes;
+        if (ta !== tb) return ta - tb;
+        return a.recipe.name.localeCompare(b.recipe.name);
+      }
       if (b.pct !== a.pct) return b.pct - a.pct;
       if (a.missingEssential.length !== b.missingEssential.length) {
         return a.missingEssential.length - b.missingEssential.length;
@@ -524,6 +540,11 @@
   });
 
   function renderResults(eligible, blocked, filters, sparse) {
+    // Same test as update()'s, recomputed rather than threaded through: a
+    // search or a course filter means the pantry read-out on each card is
+    // noise, since the pantry did not decide what is on the page.
+    var browsing = !!searchQuery() || filters.quickHealthy ||
+                   filters.diets.indexOf('soup') !== -1;
     var out = el('results');
     out.innerHTML = '';
     renderSelectedLine(filters);
@@ -548,6 +569,11 @@
         summary.textContent = total === 0
           ? 'No recipe matches \u201c' + q + '\u201d within your filters.'
           : countPhrase(drawn, total) + ' matching \u201c' + q + '\u201d.';
+      } else if (browsing) {
+        // A filtered browse is not a pantry result, so it does not claim to
+        // be one. "You can mostly make" would be a lie about a list the
+        // pantry had no part in choosing.
+        summary.textContent = countPhrase(drawn, total) + '.';
       } else if (selected.size === 0) {
         summary.textContent = countPhrase(drawn, total) +
           '. Tick what is in your kitchen to rank them by your pantry.';
@@ -582,7 +608,7 @@
 
     function draw() {
       eligible.slice(drawn, drawn + PAGE).forEach(function (s) {
-        out.insertBefore(card(s, !!q || selected.size === 0), more);
+        out.insertBefore(card(s, browsing || selected.size === 0), more);
       });
       // Cards ship with an empty heart; this fills in the ones already saved.
       if (window.KhaanaSaved) window.KhaanaSaved.paintExisting();
@@ -715,9 +741,12 @@
           ' &middot; serves ' + r.servings + '</div>' +
         '<h3><a class="match-link" href="recipes/' + esc(r.id) + '.html">' +
           esc(r.name) + '</a></h3>' +
+        // Calories and protein sit with the name rather than below the
+        // description, because they are what a reader scanning a column of
+        // cards is comparing between them.
+        nutritionRow(r) +
         '<p class="match-sub">' + esc(r.subtitle) + '</p>' +
         '<div class="diet-tags">' + cardTags(r.tags, r.tagsConditional) + '</div>' +
-        nutritionRow(r) +
         (searching ? '' :
         '<div class="match-lines">' +
           '<div class="ml have"><strong>' + have + '/' + countable + '</strong> ingredients on hand</div>' +
