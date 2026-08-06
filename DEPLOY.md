@@ -68,119 +68,41 @@ the height of the header.
 reference, so new markup can only ever be paired with the CSS it was built
 against, and an unchanged file keeps its URL and stays cached.
 
-## What Cloudflare was doing, before stage one
+## Cloudflare is gone
 
-The nameservers were Cloudflare's and the proxy was on, so every request went
-through Cloudflare to reach GitHub Pages. Two things it did unasked, both now
-gone with the proxy:
-
-* **It rewrote `robots.txt` on the way out.** What a crawler fetched was not
-  what is in this repository: Cloudflare injected a managed block above it that
-  disallows GPTBot, ClaudeBot, CCBot, Google-Extended, Amazonbot,
-  Applebot-Extended, Bytespider and meta-externalagent, and adds
-  `Content-Signal: search=yes,ai-train=no,use=reference`. Ordinary search is
-  explicitly allowed, so this does not touch Google; AI answer engines are shut
-  out. It also leaves two `User-agent: *` groups in one file, and most crawlers
-  read only the first, which was Cloudflare's — so the site's own
-  `Disallow: /tools/` was ignored. Removing the proxy also un-blocks the AI
-  crawlers, which is the intended outcome: an answer engine that cannot read
-  the site cannot send anyone to it.
-* **`www` answered 200 instead of redirecting.** Both hostnames served
-  identical content. GitHub Pages 301s it to the apex on its own, which is what
-  happens now.
-
-The MX records point at Email Routing that was set up, never worked and
-forwards nothing. There is no mailbox on this domain and the feedback form
-posts to Google, so nothing depends on them.
-
-## Leaving
-
-Checked before deciding, by resolving past Cloudflare and talking to GitHub
-Pages directly. All of it already works:
+Done on 2026-08-06. The domain is delegated to `ns27.domaincontrol.com` and
+`ns28.domaincontrol.com` at GoDaddy, and the zone is:
 
 ```
-curl -sI https://khaana.com/     --resolve khaana.com:443:185.199.108.153
-    HTTP/2 200, server: GitHub.com
-curl -sI https://www.khaana.com/ --resolve www.khaana.com:443:185.199.108.153
-    HTTP/2 301, location: https://khaana.com/
-openssl s_client -servername khaana.com -connect 185.199.108.153:443
-    subject CN=khaana.com, SAN khaana.com + www.khaana.com, Let's Encrypt
+A      @      185.199.108.153, .109.153, .110.153, .111.153
+AAAA   @      2606:50c0:8000::153 through :8003::153
+CNAME  www    vikasri.github.io
+TXT    @      google-site-verification=K9s30Is97phCshKSdYOm1_MVQ5T098-YxV3bTOnX52E
+TXT    @      google-site-verification=sLusuinZWcjaFeKBhZ9JTE_Q8xh3QWdnmFiFwUkY2U4
+TXT    @      v=spf1 -all
 ```
 
-So GitHub already holds a valid certificate for both names, already redirects
-`www` to the apex, and already serves every page. Nothing has to be built. The
-only question left is which nameservers the world is asked.
+No MX. The Cloudflare Email Routing records forwarded nothing and are not
+recreated; the SPF says no mail is ever sent from this domain, which makes it
+harder to spoof.
 
-### Stage one: take Cloudflare out of the request path — DONE
+Verified after the switch: all four public resolvers see the GoDaddy
+nameservers, every one of the 31 top-level pages and a random sample of recipe
+pages returns 200, the five runtime JSON files load, `www` and plain HTTP both
+301 to `https://khaana.com/`, the Let's Encrypt certificate covers both names,
+`robots.txt` is byte-for-byte the file in this repository with no injected
+block, and the matching game loads its thumbnails.
 
-Verified after the change: apex and `www` both answer `server: GitHub.com`,
-`www` 301s to the apex, `robots.txt` is byte-for-byte what is in this
-repository, the Let's Encrypt certificate covers both names, all 21 cuisine
-pages and a sample of recipe pages return 200, and the Cook page still fetches
-its JSON and renders matches. What was set, in **Cloudflare → DNS**:
+### What that fixed, beyond removing a dependency
 
-| Type | Name | Value | Proxy |
-|---|---|---|---|
-| A | `@` | `185.199.108.153` | **DNS only** |
-| A | `@` | `185.199.109.153` | **DNS only** |
-| A | `@` | `185.199.110.153` | **DNS only** |
-| A | `@` | `185.199.111.153` | **DNS only** |
-| CNAME | `www` | `vikasri.github.io` | **DNS only** |
+* `www` used to answer 200 with identical content. It redirects now, so the
+  site has one address instead of two.
+* `robots.txt` used to be rewritten in transit, with a managed block above the
+  site's own rules disallowing GPTBot, ClaudeBot, CCBot and the rest — in a
+  second `User-agent: *` group that most crawlers never reach, which meant the
+  site's own `Disallow` lines were ignored as well. Both problems are gone.
 
-Delete the Cloudflare AAAA records, or replace them with GitHub's
-(`2606:50c0:8000::153` through `:8003::153`). Grey cloud, not orange, on every
-one: proxied is what injects the robots.txt block and swallows the redirect.
-
-The checks that confirmed it:
-
-```
-curl -sI https://khaana.com | grep -i server        # GitHub.com, not cloudflare
-curl -sI https://www.khaana.com | grep -i location  # https://khaana.com/
-curl -s  https://khaana.com/robots.txt | head -3    # no Cloudflare block
-```
-
-### Stage two: move the nameservers — remaining
-
-The slow part, and by now it carries no unknowns: whichever nameserver a
-resolver asks, the answer is already GitHub's addresses. This only changes who
-is asked.
-
-Build the zone at **GoDaddy** before switching anything to it. Every value,
-so nothing has to be looked up twice:
-
-| Type | Name | Value |
-|---|---|---|
-| A | `@` | `185.199.108.153` |
-| A | `@` | `185.199.109.153` |
-| A | `@` | `185.199.110.153` |
-| A | `@` | `185.199.111.153` |
-| CNAME | `www` | `vikasri.github.io` |
-| TXT | `@` | `google-site-verification=K9s30Is97phCshKSdYOm1_MVQ5T098-YxV3bTOnX52E` |
-| TXT | `@` | `google-site-verification=sLusuinZWcjaFeKBhZ9JTE_Q8xh3QWdnmFiFwUkY2U4` |
-| TXT | `@` | `v=spf1 -all` |
-
-Both verification records, or a Search Console property is lost. No MX: the
-Cloudflare Email Routing records forward nothing, and the SPF above replaces
-Cloudflare's by saying no mail is ever sent from this domain, which makes it
-harder to spoof. Those two can also be cleared in the Cloudflare panel
-beforehand — three MX records deleted and the SPF edited — which retires the
-last Cloudflare service without waiting on the registrar.
-
-Then point the registrar's nameservers away from Cloudflare. Propagation is
-usually under an hour and can take 24. The site stays up throughout, because
-whichever nameserver a resolver asks, the answer is GitHub's addresses.
-
-### Stage three: after
-
-* **Repository → Settings → Pages**: confirm the custom domain still reads
-  `khaana.com` and **Enforce HTTPS** is ticked. The `CNAME` file here is what
-  makes it stick across deploys.
-* **Search Console**: confirm the property is still verified and resubmit
-  `sitemap.xml` if it complains.
-* **Delete the Cloudflare zone** once `dig NS khaana.com` no longer mentions
-  it. Nothing in this repository refers to Cloudflare any more.
-
-## What is given up
+### What is given up
 
 Cloudflare's free plan would have bought real things: header control, actual
 301s, and somewhere to run `api/suggest.js`, which is parked because GitHub
