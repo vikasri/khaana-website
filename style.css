@@ -2305,9 +2305,11 @@ section.trivia-section { padding-top: 24px; }
 /* A page-opening h1 at 3.2rem was doing a job nothing here needs done: it is
    a section heading now, so it is sized like one — still larger than the
    game's heading above it, since it is still the page's h1. */
-.trivia-page .section-head { margin-bottom: 10px; }
-.trivia-page .section-head h1 { font-size: clamp(1.7rem, 3.2vw, 2.3rem); }
-.trivia-page .section-head .eyebrow { font-size: 0.76rem; margin-bottom: 4px; }
+.trivia-page .section-head { margin-bottom: 4px; }
+.trivia-page .section-head h1 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem); margin-bottom: 0.15em;
+}
+.trivia-page .section-head .eyebrow { font-size: 0.72rem; margin-bottom: 3px; }
 .trivia-intro {
   margin: 0; max-width: 68ch; color: var(--ink); font-size: 1.02rem;
   line-height: 1.5;

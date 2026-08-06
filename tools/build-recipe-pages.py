@@ -449,12 +449,21 @@ def render(r, nav, foot):
 """
 
 
+# Pages here that no recipe owns. A renamed recipe leaves its old URL behind
+# in somebody's bookmarks and in a search index, and this host has no working
+# redirect rules — _redirects is a Cloudflare file and the site is served by
+# GitHub Pages, so the only redirect available is a page that redirects
+# itself. Same device as south-indian.html and himachali.html at the root.
+# Listed here so the sweep below does not delete them every build.
+KEEP = {"mithila-machh-posto.html"}   # -> machhak-jhor.html
+
+
 def main():
     db = json.load(open(os.path.join(ROOT, "data", "recipes.json"), encoding="utf-8"))
     nav, foot = chrome(None)
     os.makedirs(OUT, exist_ok=True)
     for f in os.listdir(OUT):
-        if f.endswith(".html"):
+        if f.endswith(".html") and f not in KEEP:
             os.remove(os.path.join(OUT, f))
     for r in db["recipes"]:
         open(os.path.join(OUT, r["id"] + ".html"), "w", encoding="utf-8").write(render(r, nav, foot))
