@@ -10,6 +10,11 @@ licence terms rather than a courtesy. It is generated from
 `assets/images/credits.json` by `tools/build-credits.py`; edit that file, not
 this one.
 
+The small square pictures in the matching game on the Fun page are not listed
+separately. Each is a centre crop of the recipe photograph of the same name,
+cut by `tools/build-pair-thumbs.py`, and is covered by that photograph's entry
+below.
+
 ## Cuisine pages (hero and gallery)
 
 | File | Subject | License | Artist | Source |
@@ -129,6 +134,7 @@ this one.
 | `recipes/awadhi-mutton-kaliya.jpg` | Mutton Curry (44786).jpg | CC BY-SA 3.0 | Gaurav Dhwaj Khadka | [link](https://commons.wikimedia.org/wiki/File:Mutton_Curry_(44786).jpg) |
 | `recipes/awadhi-paneer-korma.jpg` | Paneer Korma with Gravy.jpg | CC BY-SA 4.0 | Manish Kumar Majumdar | [link](https://commons.wikimedia.org/wiki/File:Paneer_Korma_with_Gravy.jpg) |
 | `recipes/axone-pork.jpg` | Naga Smoked Pork with Axone (Fermented Soyabeans).jpg | CC BY-SA 4.0 | Sumit Surai | [link](https://commons.wikimedia.org/wiki/File:Naga_Smoked_Pork_with_Axone_(Fermented_Soyabeans).jpg) |
+| `recipes/baati-chokha.jpg` | Litti chokha | CC BY-SA 4.0 | CIMSBSP | [link](https://commons.wikimedia.org/wiki/File:BAATI.JPG) |
 | `recipes/badanekayi-ennegayi.jpg` | Baigan Bharta from Nagpur.JPG | CC BY-SA 4.0 | Dheerajk88 | [link](https://commons.wikimedia.org/wiki/File:Baigan_Bharta_from_Nagpur.JPG) |
 | `recipes/badi-chura.jpg` | Badi Chura.jpg | CC BY-SA 4.0 | Sailesh Patnaik | [link](https://commons.wikimedia.org/wiki/File:Badi_Chura.jpg) |
 | `recipes/bagara-baingan.jpg` | Bhagare Baingan..JPG | CC0 | Miansari66 | [link](https://commons.wikimedia.org/wiki/File:Bhagare_Baingan..JPG) |

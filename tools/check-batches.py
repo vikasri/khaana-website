@@ -17,12 +17,18 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 
+from diet_rules import ALLERGEN_GROUPS, TAG_BLOCKERS
+
 DIFFICULTY = {"easy", "moderate", "advanced"}
 EQUIPMENT = {"stovetop", "kadhai", "tawa", "oven", "steamer", "blender",
              "pressure-cooker"}
-TAGS = {"vegetarian", "vegan", "gluten-free", "dairy-free", "nut-free",
-        "no-onion-garlic", "pescatarian", "healthier"}
-ALLERGENS = {"dairy", "gluten", "nuts", "fish", "soy"}
+# Taken from diet_rules.py rather than written out again here. Both lists were
+# copies once, and they drifted: derive-allergens.py added egg, sesame, mustard,
+# peanut and crustacean to the vocabulary and this gate never heard about it, so
+# it rejected a new recipe for declaring an allergen that 222 live recipes
+# already declare. A gate that is wrong about the rules is worse than no gate.
+TAGS = set(TAG_BLOCKERS) | {"healthier"}
+ALLERGENS = {name for name, _ingredients in ALLERGEN_GROUPS}
 
 
 def main():

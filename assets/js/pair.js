@@ -33,9 +33,12 @@
    * finish until they are all right. */
   var RIGHT = 2, WRONG = -1;
   var BEST = ROWS * RIGHT;
-  var CHECK_MS = 420;              // beat between the last placement and the mark
+  /* The board is marked the moment the fourth cuisine lands — a zero timeout
+   * rather than a direct call only so the browser paints that last placement
+   * before the verdict appears on top of it. The wait below is not the
+   * reader waiting to be told; it is the wrong pairs staying put long enough
+   * to be read before they go back. */
   var WRONG_MS = 1100;             // how long a wrong pair stays red before it returns
-  var NEXT_MS = 2200;              // how long the solved board is admired before it deals again
   var DRAG_SLOP = 6;               // px of movement before a press becomes a drag
 
   var launch = document.getElementById('pair-launch');
@@ -46,6 +49,7 @@
   var attemptEl = document.getElementById('pair-attempt');
   var scoreEl = document.getElementById('pair-score');
   var verdictEl = document.getElementById('pair-verdict');
+  var againBtn = document.getElementById('pair-again');
   var poolEl = document.getElementById('pair-pool');
   var msgEl = document.getElementById('pair-messages');
   if (!launch || !startBtn || !panel || !rowsEl || !bankEl || !poolEl) return;
@@ -117,7 +121,8 @@
     score = 0;
     var chosen = pick(cuisines, ROWS);
     pairs = chosen.map(function (c) {
-      return { cuisine: c, dish: pick(pool[c], 1)[0] };
+      var entry = pick(pool[c], 1)[0];      // [name, thumbnail id or null]
+      return { cuisine: c, dish: entry[0], thumb: entry[1] };
     });
     // The bank is shuffled separately, or the first cuisine in the bank would
     // always belong to the first dish and the round would give itself away.
@@ -126,7 +131,12 @@
     locked = [false, false, false, false];
     build();
     paint();
-    if (verdictEl) { verdictEl.hidden = true; verdictEl.textContent = ''; }
+    if (verdictEl) {
+      verdictEl.hidden = true;
+      verdictEl.textContent = '';
+      verdictEl.removeAttribute('data-tone');
+    }
+    if (againBtn) againBtn.hidden = true;
   }
 
   /* --- the board ---------------------------------------------------------- */
@@ -140,7 +150,27 @@
 
       var dish = document.createElement('span');
       dish.className = 'pair-dish';
-      dish.textContent = p.dish;
+      /* The photograph is decorative and carries no alt text: the dish is
+       * named in the same box, and a screen reader announcing it twice is
+       * worse than not announcing it at all. A dish the site has no picture of
+       * gets an empty square rather than a gap, so the rows stay in line. */
+      var thumb;
+      if (p.thumb) {
+        thumb = document.createElement('img');
+        thumb.className = 'pair-thumb';
+        thumb.src = 'assets/images/pair/' + p.thumb + '.jpg';
+        thumb.alt = '';
+        thumb.width = 48;
+        thumb.height = 48;
+        thumb.loading = 'lazy';
+        thumb.decoding = 'async';
+      } else {
+        thumb = document.createElement('span');
+        thumb.className = 'pair-thumb pair-thumb-none';
+        thumb.setAttribute('aria-hidden', 'true');
+      }
+      dish.appendChild(thumb);
+      dish.appendChild(document.createTextNode(p.dish));
 
       var slot = document.createElement('button');
       slot.type = 'button';
@@ -216,7 +246,7 @@
     placed[row] = cuisine;
     selected = null;
     paint();
-    if (placed.every(Boolean)) later(mark, CHECK_MS);
+    if (placed.every(Boolean)) later(mark, 0);
   }
 
   function lift(row) {
@@ -270,16 +300,27 @@
     }, reduced ? 500 : WRONG_MS);
   }
 
+  /* The line after an attempt, and its colour. A miss reads in the same maroon
+   * as a wrong trivia answer and a finished board in the same dark green as a
+   * right one, so the two games agree about what red and green mean. */
   function say(n, how) {
     if (!verdictEl) return;
     var line = messageFor(n, how);
     verdictEl.textContent = line;
     verdictEl.hidden = !line;
+    verdictEl.setAttribute('data-tone', how === 'all' ? 'win' : 'miss');
   }
 
+  /* A solved board stays solved. It used to deal the next round on a timer,
+   * which took the finished board away mid-sentence — the reader had four
+   * pairs to look at and about two seconds to do it. Now nothing moves until
+   * they ask for another. */
   function solved() {
     say(attempt, 'all');
-    later(deal, reduced ? 1200 : NEXT_MS);
+    if (againBtn) {
+      againBtn.hidden = false;
+      againBtn.focus();
+    }
   }
 
   /* --- pointer, tap and keyboard ------------------------------------------ */
@@ -384,6 +425,8 @@
 
   // The button opens the board and deals. Pressed again it deals again, so it
   // is also the way out of a round that is not going well.
+  if (againBtn) againBtn.addEventListener('click', deal);
+
   startBtn.addEventListener('click', function () {
     panel.hidden = false;
     startBtn.setAttribute('aria-expanded', 'true');

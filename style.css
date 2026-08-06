@@ -1843,7 +1843,12 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
    button's shape. It used to restate the colours here too, and being later in
    the file it quietly won, so the nav had two sources of truth for one rule. */
 .nav-cuisines-toggle { cursor: pointer; border: 0; background: none; }
-.nav-cuisines-toggle::after { content: ' \25BE'; font-size: 0.8em; }
+/* The caret. At 0.8em it read as a speck of punctuation rather than as the
+   thing you press, so it is now a shade larger than the label it follows. */
+.nav-cuisines-toggle::after {
+  content: '\25BE'; font-size: 1.15em; line-height: 1; margin-left: 5px;
+  vertical-align: -0.04em;
+}
 .nav-dropdown {
   display: none;
   /* Anchored to its right edge: the toggle sits near the end of the bar, so
@@ -1879,8 +1884,8 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
   }
   .nav-cuisines.open .nav-dropdown { display: block; }
   .nav-cuisines-toggle { display: block; width: 100%; text-align: left; }
-  .nav-cuisines-toggle::after { content: ' \25BE'; font-size: 0.8em; }
-  .nav-cuisines.open > .nav-cuisines-toggle::after { content: ' \25B4'; }
+  .nav-cuisines-toggle::after { content: '\25BE'; font-size: 1.2em; margin-left: 6px; }
+  .nav-cuisines.open > .nav-cuisines-toggle::after { content: '\25B4'; }
 }
 
 /* Recipe photographs vary from 0.45 to 2.2 in aspect ratio, and a tall
@@ -2271,15 +2276,23 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
    page works without JavaScript; trivia.js hides all but today's. */
 /* The welcome line, so it is sized to be read rather than skimmed past. The
    no-JavaScript fallback below the questions keeps the smaller size. */
+/* The page now opens on the game, so it starts closer to the header than a
+   page that opens on a heading would want to. */
+section.trivia-section { padding-top: 24px; }
+@media (max-width: 560px) { section.trivia-section { padding-top: 30px; } }
+/* The trivia's own title sits below the game rather than at the top of the
+   page, so it needs less room under it than a page-opening heading does. */
+.trivia-page .section-head { margin-bottom: 12px; }
 .trivia-intro {
-  max-width: 68ch; color: var(--ink); font-size: 1.18rem; line-height: 1.55;
+  margin: 0; max-width: 68ch; color: var(--ink); font-size: 1.18rem;
+  line-height: 1.55;
 }
 noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 
 .trivia-head {
   display: flex; flex-wrap: wrap; align-items: baseline;
   justify-content: space-between; gap: 8px 18px;
-  margin: 26px 0 6px; padding-bottom: 10px;
+  margin: 18px 0 6px; padding-bottom: 10px;
   border-bottom: 1px solid var(--line);
 }
 .trivia-day {
@@ -2380,8 +2393,8 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    greyed out. 8.6:1 against the page. */
 .tq-nudge {
   margin: 12px 0 0;
-  font-family: var(--serif); font-size: 1.14rem; line-height: 1.5;
-  color: #8c1d18;
+  font-family: var(--serif); font-size: 1.14rem; font-weight: 700;
+  line-height: 1.5; color: #8c1d18;
 }
 /* Two seconds where nothing responds needs to look deliberate, or it reads as
    a broken page. The options dim and the cursor says wait. */
@@ -2407,7 +2420,11 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    here is the board they land on. Hidden until the button is pressed, and the
    button itself is hidden until the script un-hides it, so a reader without
    JavaScript is offered nothing that would not work. */
-.pair-launch { margin: 26px 0 0; }
+/* The game opens the page and the trivia's own title follows it, so the space
+   between them belongs to the game rather than to the heading below: a top
+   margin on that heading would also push the page down on a reader with no
+   JavaScript, who never sees the button at all. */
+.pair-launch { margin: 0 0 20px; }
 .pair-start {
   display: inline-block; cursor: pointer;
   padding: 12px 22px; border: 0; border-radius: 999px;
@@ -2421,7 +2438,7 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 .pair-start:active { transform: translateY(1px); }
 
 .pair {
-  margin: 22px 0 0; padding: 20px 20px 22px;
+  margin: 0 0 30px; padding: 18px 20px 20px;
   background: var(--paper);
   border: 1px solid var(--line); border-radius: var(--radius);
 }
@@ -2445,7 +2462,7 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   .pair-scoring { text-align: left; }
   .pair-meter { justify-content: flex-start; }
 }
-.pair-how { margin: 6px 0 18px; font-size: 0.95rem; color: var(--ink-soft); }
+.pair-how { margin: 5px 0 14px; font-size: 0.95rem; color: var(--ink-soft); }
 
 /* One column on a phone, where the cuisines sit under the dishes rather than
    beside them: 3 columns in 360px would leave every box too narrow to read a
@@ -2466,11 +2483,23 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   .pair-row { grid-template-columns: minmax(0, 1fr) 118px; }
 }
 .pair-dish {
-  display: flex; align-items: center;
-  padding: 11px 14px; border-radius: 9px;
+  display: flex; align-items: center; gap: 12px;
+  padding: 8px 14px 8px 8px; border-radius: 9px;
   background: var(--cream); border: 1px solid var(--line);
   font-family: var(--serif); font-size: 1.05rem; line-height: 1.3; color: var(--ink);
 }
+
+/* The dish's photograph, cut square by build-pair-thumbs.py at twice this
+   size. Small enough to be a cue rather than a picture: it should say "you
+   have seen this" without turning the board into a gallery. */
+.pair-thumb {
+  flex: 0 0 auto; width: 48px; height: 48px; border-radius: 7px;
+  object-fit: cover; background: var(--paper);
+  border: 1px solid var(--line);
+}
+/* Seven of the dishes have no photograph in any free source. They keep the
+   square so the names stay in a line. */
+.pair-thumb-none { display: block; background: var(--paper); }
 
 /* The empty box. Dashed while it is waiting for something, solid once it has
    it, so an unfilled row is obvious at a glance without any text saying so. */
@@ -2493,21 +2522,23 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   border-color: var(--nav-active); background: #fff6f0;
 }
 
-/* Marked. The same greens and reds as the trivia options below, and each
-   carries a word as well as a colour so the result does not depend on telling
-   one from the other. */
+/* Marked. The same greens and reds as the trivia options below. A matched
+   pair says so in green and nothing else — the label spelled it out on a board
+   where the cuisine is also gone from the bank and the box has stopped
+   responding, which is three ways of saying one thing. A miss keeps its word,
+   since that one is gone in a second and needs to land. The screen-reader
+   label on the box still says "matched", where there is no colour to read. */
 .pair-slot.is-right {
   border-style: solid; border-color: #2e7d4f; background: #edf7f1; color: #1c5535;
 }
 .pair-slot.is-wrong {
   border-style: solid; border-color: #b3261e; background: #fdeeec; color: #8c1d18;
 }
-.pair-slot.is-right::after, .pair-slot.is-wrong::after {
+.pair-slot.is-wrong::after {
+  content: 'no'; color: #b3261e;
   margin-left: 8px; font-size: 0.62rem; font-weight: 700;
   letter-spacing: 0.08em; text-transform: uppercase;
 }
-.pair-slot.is-right::after { content: 'matched'; color: #2e7d4f; }
-.pair-slot.is-wrong::after { content: 'no'; color: #b3261e; }
 
 /* The cuisines waiting to be placed. A placed one keeps its space rather than
    collapsing it, so the chips still on the board do not slide out from under
@@ -2558,5 +2589,21 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 
 .pair-verdict {
   margin: 16px 0 0; font-family: var(--serif); font-size: 1.1rem;
-  line-height: 1.5; color: var(--ink);
+  font-weight: 700; line-height: 1.5; color: var(--ink);
 }
+/* Maroon for a miss and dark green for a finished board, the same two colours
+   the trivia below uses for a wrong answer and a right one. */
+.pair-verdict[data-tone="miss"] { color: #8c1d18; }
+.pair-verdict[data-tone="win"] { color: #14532d; }
+
+/* Shown only once the board is solved. Small and quiet: the finished board is
+   what the reader is looking at, and this waits underneath it. */
+.pair-again {
+  margin: 14px 0 0; cursor: pointer;
+  border: 1px solid var(--nav-active); border-radius: 999px;
+  background: var(--paper); color: var(--nav-active);
+  padding: 7px 18px;
+  font-family: var(--sans); font-size: 0.8rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+}
+.pair-again:hover { background: var(--nav-active); color: #fff; }

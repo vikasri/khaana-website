@@ -186,7 +186,11 @@ def main(write=False):
             healthy.append(r["id"])
         else:
             rejected.setdefault(why.split()[0], []).append(r["id"])
-        r["tags"] = tags
+        # Sorted, not appended. Appending put "healthier" last while every
+        # other tool leaves the list alphabetical, so a run of this script
+        # rewrote the tag order on 290 recipes and showed up as a 290-file
+        # diff that changed nothing anyone could see.
+        r["tags"] = sorted(tags)
 
     print("healthier: %d of %d (%.0f%%)" % (len(healthy), len(db["recipes"]),
                                           100.0 * len(healthy) / len(db["recipes"])))

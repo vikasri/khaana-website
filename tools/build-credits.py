@@ -17,6 +17,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG_DIR = os.path.join(ROOT, "assets", "images")
 CREDITS_JSON = os.path.join(IMG_DIR, "credits.json")
 OUT = os.path.join(ROOT, "CREDITS.md")
+# Crops of images credited elsewhere in this file. See main().
+DERIVED = "pair"
 
 HEADER = """# Image Credits
 
@@ -29,6 +31,11 @@ CC BY and CC BY-SA require attribution, so this file is part of meeting the
 licence terms rather than a courtesy. It is generated from
 `assets/images/credits.json` by `tools/build-credits.py`; edit that file, not
 this one.
+
+The small square pictures in the matching game on the Fun page are not listed
+separately. Each is a centre crop of the recipe photograph of the same name,
+cut by `tools/build-pair-thumbs.py`, and is covered by that photograph's entry
+below.
 
 """
 
@@ -149,7 +156,14 @@ def main():
         for f in files:
             if f.lower().endswith((".jpg", ".jpeg", ".png")):
                 rel = os.path.relpath(os.path.join(base, f), IMG_DIR)
-                on_disk.add(rel.replace(os.sep, "/"))
+                rel = rel.replace(os.sep, "/")
+                # assets/images/pair/ holds nothing of its own: every file
+                # there is a square crop of the recipe photograph of the same
+                # name, cut by build-pair-thumbs.py and already credited under
+                # recipes/. Listing all 240 again would treble this page with
+                # duplicate rows and make the real list harder to check.
+                if not rel.startswith(DERIVED + "/"):
+                    on_disk.add(rel)
 
     missing = sorted(f for f in on_disk if f not in by_file)
     orphan = sorted(f for f in by_file if f not in on_disk)
