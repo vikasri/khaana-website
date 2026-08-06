@@ -64,7 +64,7 @@ def question_html(n, q):
 %s
         </ul>
         <p class="tq-nudge" role="status" aria-live="polite" hidden></p>
-        <p class="tq-note" hidden>%s</p>
+        <div class="tq-after"><p class="tq-note" hidden>%s</p></div>
       </li>""" % (q["answer"], esc(q["id"]), n, esc(q["q"]), opts, esc(q["note"]))
 
 
@@ -141,10 +141,8 @@ def main():
       </ol>
       <script type="application/json" id="trivia-nudges">%s</script>
 
-      <div class="trivia-foot">
-        <button type="button" class="trivia-next" id="trivia-next" hidden>Next
-          question</button>
-      </div>
+      <button type="button" class="trivia-next" id="trivia-next" hidden>Next
+        question</button>
 
       <noscript><p class="trivia-intro">Every question and answer is listed
         above.</p></noscript>

@@ -2394,19 +2394,29 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 .tq.answered .tq-opt.is-wrong { opacity: 0.55; }
 .tq.answered .tq-opt.is-wrong::after { content: 'not this one'; }
 
-/* The fact, once they have got it right. Dark green to match the correct
-   answer above it, and big enough to be the reward rather than a footnote —
-   it is the thing the page exists to tell them. 8.6:1 on the cream panel. */
+/* The fact, once they have got it right, and the button for the next question
+   beside it. The fact used to run the full width of the panel with the button
+   stranded underneath; sized to its own text, the two make one block. */
+.tq-after {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px;
+  margin: 10px 0 0;
+}
+/* Dark green to match the correct answer above it, bold and big enough to be
+   the reward rather than a footnote — it is the thing the page exists to tell
+   them. 8.6:1 on the cream panel. */
 .tq-note {
-  margin: 10px 0 0; padding: 11px 15px;
+  /* Shrinks so the button fits beside it: the text rewraps inside a narrower
+     box rather than the button dropping to a line of its own. */
+  flex: 1 1 0; min-width: 14ch;
+  margin: 0; padding: 11px 15px; max-width: 100%;
   background: var(--cream); border-left: 3px solid #14532d; border-radius: 0 6px 6px 0;
-  font-size: 1rem; line-height: 1.55; color: #14532d;
+  font-size: 1rem; font-weight: 700; line-height: 1.55; color: #14532d;
 }
 
 /* The button for the next question, in the same shape as the matching game's
    Play next above it, since it does the same job. */
-.trivia-foot { margin-top: 16px; }
 .trivia-next {
+  flex: 0 0 auto;
   cursor: pointer;
   border: 1px solid var(--nav-active); border-radius: 999px;
   background: var(--paper); color: var(--nav-active);
@@ -2590,6 +2600,23 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 /* Where a picked-up cuisine may go. Only the empty boxes light up. */
 .pair-slot.is-target, .pair-slot.is-over {
   border-color: var(--nav-active); background: #fff6f0;
+}
+
+/* The half second between the last placement and the marking. Each box pulses
+   in turn down the row, which reads as the board looking at the four of them
+   rather than as four things happening at once. 60ms apart: enough to see the
+   order, not enough to feel like queueing. */
+.pair-rows.is-checking .pair-slot { animation: pair-check 0.5s ease both; }
+.pair-rows.is-checking .pair-row:nth-child(2) .pair-slot { animation-delay: 0.06s; }
+.pair-rows.is-checking .pair-row:nth-child(3) .pair-slot { animation-delay: 0.12s; }
+.pair-rows.is-checking .pair-row:nth-child(4) .pair-slot { animation-delay: 0.18s; }
+@keyframes pair-check {
+  0%   { transform: scale(1);    border-color: var(--line); }
+  45%  { transform: scale(1.03); border-color: var(--nav-active); }
+  100% { transform: scale(1);    border-color: var(--line); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pair-rows.is-checking .pair-slot { animation: none; }
 }
 
 /* Marked. The same greens and reds as the trivia options below. A matched

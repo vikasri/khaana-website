@@ -33,11 +33,18 @@
    * finish until they are all right. */
   var RIGHT = 2, WRONG = -1;
   var PER_ROUND = ROWS * RIGHT;      // eight, if a round is solved blind
-  /* The board is marked the moment the fourth cuisine lands — a zero timeout
-   * rather than a direct call only so the browser paints that last placement
-   * before the verdict appears on top of it. The wait below is not the
-   * reader waiting to be told; it is the wrong pairs staying put long enough
-   * to be read before they go back. */
+  /* Half a second between the last placement and the marking, with the boxes
+   * pulsing along the row while it passes. Marking on the instant was correct
+   * and felt like nothing: four pieces went down and the answer was simply
+   * already there, with no moment in which it could have gone either way. The
+   * pause is the game acknowledging the move before it judges it.
+   *
+   * Anyone who has asked for reduced motion gets neither the pulse nor the
+   * wait, since for them the wait would be a delay with nothing in it.
+   *
+   * The second wait, below, is a different thing: the wrong pairs staying put
+   * long enough to be read before they go back. */
+  var CHECK_MS = 500;              // the board thinking, before it says anything
   var WRONG_MS = 1100;             // how long a wrong pair stays red before it returns
   var DRAG_SLOP = 6;               // px of movement before a press becomes a drag
 
@@ -255,7 +262,16 @@
     placed[row] = cuisine;
     selected = null;
     paint();
-    if (placed.every(Boolean)) later(mark, 0);
+    if (placed.every(Boolean)) {
+      if (reduced) { later(mark, 0); return; }
+      busy = true;                     // nothing moves while the board thinks
+      paint();
+      rowsEl.classList.add('is-checking');
+      later(function () {
+        rowsEl.classList.remove('is-checking');
+        mark();
+      }, CHECK_MS);
+    }
   }
 
   function lift(row) {

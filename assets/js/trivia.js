@@ -260,7 +260,12 @@
     score += RIGHT;
     cheer();
     scoreLine();
+    /* The button goes to where the answer is, not to the foot of the panel.
+     * It reads as the end of this question rather than as furniture, and it
+     * shares a line with the fact so the two shrink to the same block. */
     if (nextBtn) {
+      var after = q.querySelector('.tq-after');
+      if (after) after.appendChild(nextBtn);
       nextBtn.hidden = false;
       nextBtn.focus();
     }
