@@ -16,7 +16,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://khaana.com"
 
 # Redirect stubs must stay out of the sitemap and keep pointing at their target.
-STUBS = {"south-indian.html": "tamil-nadu.html", "himachali.html": "pahari.html"}
+STUBS = {"south-indian.html": "tamil-nadu.html", "himachali.html": "pahari.html",
+         "recipe.html": "cook.html"}
 # recipe.html is a forwarder now; the static pages are the real thing.
 # feedback.html is a form: nothing on it is worth a search result, and listing
 # it in the sitemap while the page says noindex is a contradiction Search
@@ -97,8 +98,14 @@ def main():
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s\n</urlset>\n' % body)
 
+    # GitHub Pages serves the whole repository, so the build scripts and the
+    # parked API handler are reachable at /tools/ and /api/ and were being
+    # crawled as if they were pages. They are on GitHub for anyone who wants
+    # them; they are not what this site is for, and 40-odd Python files in an
+    # index dilute what is.
     open(os.path.join(ROOT, "robots.txt"), "w", encoding="utf-8").write(
-        "User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % SITE)
+        "User-agent: *\nAllow: /\nDisallow: /tools/\nDisallow: /api/\n"
+        "\nSitemap: %s/sitemap.xml\n" % SITE)
 
     print("canonical + og/twitter added to %d pages" % touched)
     print("sitemap.xml: %d urls (%d pages + %d recipes)"

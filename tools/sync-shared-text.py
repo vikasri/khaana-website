@@ -46,7 +46,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FORM = "feedback.html"
 
 # Redirect stubs: no chrome, nothing to contact us about.
-SKIP = {"south-indian.html", "himachali.html"}
+SKIP = {"south-indian.html", "himachali.html", "recipe.html"}
 
 
 def form_href(rel, up):

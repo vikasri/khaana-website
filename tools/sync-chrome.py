@@ -47,7 +47,7 @@ FOOTER_HEADS = ["Cuisines", "More", "Also", "And"]
 COMMUNITY = 4
 
 # Pages that are not part of the site chrome.
-SKIP = {"south-indian.html", "himachali.html"}   # redirect stubs
+SKIP = {"south-indian.html", "himachali.html", "recipe.html"}  # redirect stubs
 
 
 def nav_html(current):
