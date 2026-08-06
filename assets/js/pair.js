@@ -41,8 +41,6 @@
   var WRONG_MS = 1100;             // how long a wrong pair stays red before it returns
   var DRAG_SLOP = 6;               // px of movement before a press becomes a drag
 
-  var launch = document.getElementById('pair-launch');
-  var startBtn = document.getElementById('pair-start');
   var panel = document.getElementById('pair-game');
   var rowsEl = document.getElementById('pair-rows');
   var bankEl = document.getElementById('pair-bank');
@@ -52,18 +50,17 @@
   var againBtn = document.getElementById('pair-again');
   var poolEl = document.getElementById('pair-pool');
   var msgEl = document.getElementById('pair-messages');
-  if (!launch || !startBtn || !panel || !rowsEl || !bankEl || !poolEl) return;
+  if (!panel || !rowsEl || !bankEl || !poolEl) return;
 
   var pool;
   try { pool = JSON.parse(poolEl.textContent); } catch (e) { return; }
   var cuisines = Object.keys(pool || {}).filter(function (c) {
     return pool[c] && pool[c].length;
   });
-  // Without four cuisines to draw from there is no round to deal, and a button
-  // that opens an empty board is worse than no button.
+  // Without four cuisines to draw from there is no round to deal, and an empty
+  // board is worse than none: the panel stays hidden and the page is just the
+  // trivia, which is what a reader without JavaScript gets anyway.
   if (cuisines.length < ROWS) return;
-
-  launch.hidden = false;
 
   /* The line after an attempt, by attempt number and how it went. Keyed
    * "1".."5" in data/trivia.json, where "5" also covers the sixth attempt and
@@ -434,13 +431,14 @@
 
   /* --- the way in --------------------------------------------------------- */
 
-  // The button opens the board and deals. Pressed again it deals again, so it
-  // is also the way out of a round that is not going well.
   if (againBtn) againBtn.addEventListener('click', deal);
 
-  startBtn.addEventListener('click', function () {
-    panel.hidden = false;
-    startBtn.setAttribute('aria-expanded', 'true');
-    deal();
-  });
+  /* Dealt on load rather than behind a button. The button asked the reader to
+   * opt into a game that was already built and sitting there, which is a
+   * question with one sensible answer. The panel carries `hidden` in the
+   * markup and is un-hidden here, so a reader with no JavaScript still gets
+   * the trivia alone rather than an empty board. Play again deals the next
+   * round, and is also the way out of one going badly. */
+  panel.hidden = false;
+  deal();
 })();

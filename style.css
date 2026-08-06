@@ -2293,7 +2293,6 @@ section.trivia-section { padding-top: 24px; }
    would leave the keyboard jumping about the page. The heading and its one
    sentence are inert, and everything focusable stays in the order it looks. */
 .trivia-page { display: flex; flex-direction: column; }
-.trivia-page > .pair-launch,
 .trivia-page > .pair { order: 1; }
 .trivia-page > .section-head,
 .trivia-page > .trivia-intro { order: 2; }
@@ -2446,40 +2445,26 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 /* ---------- Fun facts: the matching game ---------- */
 /* Four dishes down the left, an empty box beside each, and the four cuisines
    to the right of those. pair.js builds the rows and the chips; everything
-   here is the board they land on. Hidden until the button is pressed, and the
-   button itself is hidden until the script un-hides it, so a reader without
-   JavaScript is offered nothing that would not work. */
-/* The game opens the page and the trivia's own title follows it, so the space
-   between them belongs to the game rather than to the heading below: a top
-   margin on that heading would also push the page down on a reader with no
-   JavaScript, who never sees the button at all. */
-.pair-launch { margin: 0 0 20px; }
-/* Bright blue, against a page that is otherwise warm the whole way down. It
-   is the one thing on the Fun page asking to be pressed, and the cool colour
-   is what separates it from the orange the nav uses for "you are here". White
-   on this blue is 4.5:1, so it clears AA at this size. */
-.pair-start {
-  display: inline-block; cursor: pointer;
-  padding: 12px 22px; border: 0; border-radius: 999px;
-  background: #1273e6; color: #fff;
-  font-family: var(--sans); font-size: 1rem; font-weight: 700;
-  letter-spacing: 0.01em;
-  box-shadow: 0 6px 18px rgba(18, 115, 230, 0.28);
-  transition: background 0.15s ease, transform 0.15s ease;
-}
-.pair-start:hover { background: #0d5cba; }
-.pair-start:active { transform: translateY(1px); }
-
+   here is the board they land on. The panel carries `hidden` in the markup and
+   the script un-hides it, so a reader without JavaScript gets the trivia alone
+   rather than an empty board. */
 .pair {
-  margin: 0 0 30px; padding: 18px 20px 20px;
+  margin: 0 0 22px; padding: 14px 18px 16px;
   background: var(--paper);
   border: 1px solid var(--line); border-radius: var(--radius);
 }
+/* Top-aligned, not baseline. The score block on the right is two lines, and
+   on a shared baseline its second line hung below the heading and left an
+   18px shelf under it that no margin accounted for. */
 .pair-head {
-  display: flex; flex-wrap: wrap; align-items: baseline;
-  justify-content: space-between; gap: 4px 18px;
+  display: flex; flex-wrap: wrap; align-items: flex-start;
+  justify-content: space-between; gap: 2px 18px;
 }
-.pair-head h2 { margin: 0; font-size: clamp(1.3rem, 2.4vw, 1.7rem); }
+/* The instruction line reads as part of the heading rather than as a paragraph
+   after it, so nothing separates them. */
+.pair-head h2 {
+  margin: 0; font-size: clamp(1.3rem, 2.4vw, 1.7rem); line-height: 1.15;
+}
 /* Attempt count and running score, laid out like the trivia head below: the
    rule small above, the numbers under it. */
 .pair-scoring { text-align: right; }
@@ -2495,17 +2480,17 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   .pair-scoring { text-align: left; }
   .pair-meter { justify-content: flex-start; }
 }
-.pair-how { margin: 5px 0 14px; font-size: 0.95rem; color: var(--ink-soft); }
+.pair-how { margin: 0 0 12px; font-size: 0.95rem; color: var(--ink-soft); }
 
 /* One column on a phone, where the cuisines sit under the dishes rather than
    beside them: 3 columns in 360px would leave every box too narrow to read a
    name like "Northeast Indian" in. */
-.pair-board { display: grid; gap: 16px; }
+.pair-board { display: grid; gap: 12px; }
 @media (min-width: 760px) {
   .pair-board { grid-template-columns: minmax(0, 1fr) auto; align-items: start; }
 }
 
-.pair-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.pair-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .pair-row {
   display: grid; grid-template-columns: minmax(0, 1fr) minmax(120px, 170px);
   align-items: stretch; gap: 10px;
@@ -2518,9 +2503,9 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    "Hirvi Mirchi Cha Thecha" on three lines and made one row as tall as the
    four should be. */
 @media (max-width: 759px) {
-  .pair { padding: 16px 14px 16px; }
+  .pair { padding: 12px 12px 14px; }
   .pair-head h2 { font-size: 1.25rem; }
-  .pair-how { font-size: 0.9rem; margin-bottom: 12px; }
+  .pair-how { font-size: 0.9rem; margin-bottom: 10px; }
   .pair-row { grid-template-columns: minmax(0, 1fr) 96px; gap: 8px; }
   .pair-dish {
     gap: 9px; padding: 6px 10px 6px 6px; font-size: 0.95rem; line-height: 1.25;
@@ -2597,7 +2582,7 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    collapsing it, so the chips still on the board do not slide out from under
    a moving finger. */
 .pair-bank {
-  display: grid; gap: 10px; align-content: start;
+  display: grid; gap: 8px; align-content: start;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
 }
 @media (min-width: 760px) {
@@ -2649,7 +2634,7 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 }
 .pair-foot:empty { display: none; }
 .pair-verdict {
-  margin: 16px 0 0; font-family: var(--serif); font-size: 1.1rem;
+  margin: 12px 0 0; font-family: var(--serif); font-size: 1.1rem;
   font-weight: 700; line-height: 1.5; color: var(--ink);
   flex: 1 1 16ch;
 }
@@ -2661,7 +2646,7 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 /* Shown only once the board is solved. Small and quiet: the finished board is
    what the reader is looking at, and this waits underneath it. */
 .pair-again {
-  margin: 14px 0 0 auto; cursor: pointer; flex: 0 0 auto;
+  margin: 12px 0 0 auto; cursor: pointer; flex: 0 0 auto;
   border: 1px solid var(--nav-active); border-radius: 999px;
   background: var(--paper); color: var(--nav-active);
   padding: 7px 18px;

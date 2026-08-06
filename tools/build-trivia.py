@@ -125,12 +125,6 @@ def main():
     <p class="trivia-intro">Try this food trivia. Come here again tomorrow
       for more fun facts.</p>
 
-    <div class="pair-launch" id="pair-launch" hidden>
-      <button type="button" class="pair-start" id="pair-start"
-              aria-expanded="false" aria-controls="pair-game">Play: Match Dishes
-        with Cuisines</button>
-    </div>
-
     <section class="pair" id="pair-game" hidden aria-labelledby="pair-title">
       <div class="pair-head">
         <h2 id="pair-title">Match each dish to its cuisine</h2>
