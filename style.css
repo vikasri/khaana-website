@@ -2360,11 +2360,14 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   display: flex; align-items: baseline; gap: 9px; width: 100%;
   text-align: left; cursor: pointer;
   padding: 9px 13px; border: 1px solid var(--line); border-radius: 9px;
-  background: var(--paper); color: var(--ink);
+  /* Warm, not white. These sat on a white panel as white buttons, which left a
+     thin border doing all the work of saying "this is a thing you press".
+     Hover goes a shade deeper again so it still has somewhere to go. */
+  background: #f8f1e6; color: var(--ink);
   font-family: var(--sans); font-size: 0.96rem; line-height: 1.4;
   transition: border-color 0.15s ease, background 0.15s ease;
 }
-.tq-opt:hover:not(:disabled) { border-color: var(--nav-active); background: var(--cream); }
+.tq-opt:hover:not(:disabled) { border-color: var(--nav-active); background: #f1e5d3; }
 .tq-opt:disabled { cursor: default; }
 .tq-letter { font-weight: 800; color: var(--ink-soft); flex: 0 0 auto; }
 
