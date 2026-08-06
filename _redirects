@@ -19,3 +19,9 @@
 # The old client-side recipe viewer. Nothing linked to it and every recipe now
 # has its own page, but an old bookmark should land somewhere useful.
 /recipe.html        /cook.html        301
+
+# A renamed recipe. "Mithila Machh Posto" was not a name anyone uses; the dish
+# is a Maithil fish curry and machhak jhor is what it is called. Same 301
+# reasoning as the regions above: the old URL was indexed, so it moves rather
+# than dies.
+/recipes/mithila-machh-posto.html  /recipes/machhak-jhor.html  301

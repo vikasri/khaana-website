@@ -50,10 +50,17 @@ PAIR_SKIP = {
                         "Paneer Do Pyaza", "Rabri", "Shahi Tukda",
                         "Shami Kebab", "Zarda", "Zarda Pulao"],
     "Bengali": ["Rasgulla", "Rasmalai"],
-    "Bihari": ["Aloo Parwal ki Tarkari", "Aloo ki Bhujia", "Anarsa", "Ghugni",
-               "Kadhi Bari", "Machhli ka Jhor", "Sarson Wala Aloo",
-               "Silbatte ki Chutney"],
-    "Goan": ["Patoleo", "Sanna", "Solkadhi"],
+    # Baati chokha is Purvanchal before it is Bihari and bafauri is
+    # Chhattisgarh's, and neither eastern Uttar Pradesh nor Chhattisgarh is a
+    # cuisine on this site. The recipes stay and say where they are from; the
+    # game does not ask a question whose answer is the nearest available shelf.
+    "Bihari": ["Aloo Parwal ki Tarkari", "Aloo ki Bhujia", "Anarsa",
+               "Baati Chokha", "Bafauri", "Ghugni", "Kadhi Bari",
+               "Machhli ka Jhor", "Sarson Wala Aloo", "Silbatte ki Chutney"],
+    # Goan-Portuguese, and so is the Mangalorean Catholic kitchen that is more
+    # usually credited with it. Sorpotel and chicken cafreal are Goan without
+    # the argument, and the pool has both.
+    "Goan": ["Patoleo", "Pork Indad", "Sanna", "Solkadhi"],
     "Gujarati": ["Shrikhand"],
     "Hyderabadi": ["Chicken Biryani", "Methi Murgh", "Murgh do Pyaza",
                    "Mutton Do Pyaza", "Sheer Khurma", "Tala Hua Gosht",

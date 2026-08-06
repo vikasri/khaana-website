@@ -406,6 +406,7 @@ below.
 | `recipes/macha-besara.jpg` | Macha Besara.jpg | CC BY-SA 4.0 | B.Sunita M | [link](https://commons.wikimedia.org/wiki/File:Macha_Besara.jpg) |
 | `recipes/macher-jhol.jpg` | Chingri macher jhol, cuisine of West Bengal 20200213135306.jpg | CC BY-SA 4.0 | বাক্যবাগীশ | [link](https://commons.wikimedia.org/wiki/File:Chingri_macher_jhol,_cuisine_of_West_Bengal_20200213135306.jpg) |
 | `recipes/machha-ghanta.jpg` | White Rice Dhal & Seer Fish Fry.JPG | CC BY-SA 3.0 | Nithin bolar k | [link](https://commons.wikimedia.org/wiki/File:White_Rice_Dhal_%26_Seer_Fish_Fry.JPG) |
+| `recipes/machhak-jhor.jpg` | South Indian Fish Curry with Steamed Rice-Chennai-TamilNadu-DSC0001.jpg | CC BY-SA 4.0 | Jen 0309 | [link](https://commons.wikimedia.org/wiki/File:South_Indian_Fish_Curry_with_Steamed_Rice-Chennai-TamilNadu-DSC0001.jpg) |
 | `recipes/mackerel-uddamethi.jpg` | Dal makhani.jpg | CC BY-SA 4.0 | TarnishedPath | [link](https://commons.wikimedia.org/wiki/File:Dal_makhani.jpg) |
 | `recipes/maddur-vada.jpg` | Vada Bengaluru.jpg | CC BY-SA 3.0 | Subhashish Panigrahi | [link](https://commons.wikimedia.org/wiki/File:Vada_Bengaluru.jpg) |
 | `recipes/mag-ni-dal.jpg` | Gujarati daal.jpg | Public domain | Dhaval S. Vyas | [link](https://commons.wikimedia.org/wiki/File:Gujarati_daal.jpg) |
@@ -447,7 +448,6 @@ below.
 | `recipes/mirchi-vada.jpg` | GARLIC MIRCHI VADA.jpg | CC BY-SA 4.0 | SS Khurana | [link](https://commons.wikimedia.org/wiki/File:GARLIC_MIRCHI_VADA.jpg) |
 | `recipes/mishti-doi.jpg` | Mishti Doi.jpg | CC BY 2.0 | Kirti Poddar | [link](https://commons.wikimedia.org/wiki/File:Mishti_Doi.jpg) |
 | `recipes/missi-roti.jpg` | Missi Roti Recipe (27427169530).jpg | CC BY-SA 2.0 | Soniya Goyal from Jaipur, India | [link](https://commons.wikimedia.org/wiki/File:Missi_Roti_Recipe_(27427169530).jpg) |
-| `recipes/mithila-machh-posto.jpg` | South Indian Fish Curry with Steamed Rice-Chennai-TamilNadu-DSC0001.jpg | CC BY-SA 4.0 | Jen 0309 | [link](https://commons.wikimedia.org/wiki/File:South_Indian_Fish_Curry_with_Steamed_Rice-Chennai-TamilNadu-DSC0001.jpg) |
 | `recipes/mithila-sarson-aloo.jpg` | Broccoli and Potato dish with Indian seasoning in Paulínia, 2023-10-17.jpg | CC BY-SA 4.0 | Parzeus | [link](https://commons.wikimedia.org/wiki/File:Broccoli_and_Potato_dish_with_Indian_seasoning_in_Paul%C3%ADnia,_2023-10-17.jpg) |
 | `recipes/mitho-lolo.jpg` | Yogurt and Rice aka Curd Rice.jpg | CC BY-SA 4.0 | Ananth Pattabiraman | [link](https://commons.wikimedia.org/wiki/File:Yogurt_and_Rice_aka_Curd_Rice.jpg) |
 | `recipes/mixed-vegetable-pakora.jpg` | Mixed Vegetable Pakora.JPG | CC BY-SA 4.0 | Mdsmds0 | [link](https://commons.wikimedia.org/wiki/File:Mixed_Vegetable_Pakora.JPG) |

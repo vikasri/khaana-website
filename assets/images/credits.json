@@ -3917,6 +3917,16 @@
   "note": "fetched by tools/fetch-recipe-images.py"
  },
  {
+  "file": "recipes/machhak-jhor.jpg",
+  "region": "machhak",
+  "slot": "recipe",
+  "wiki_title": "South Indian Fish Curry with Steamed Rice-Chennai-TamilNadu-DSC0001.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:South_Indian_Fish_Curry_with_Steamed_Rice-Chennai-TamilNadu-DSC0001.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Jen 0309",
+  "note": "fetched by tools/fetch-recipe-images.py"
+ },
+ {
   "file": "recipes/mackerel-uddamethi.jpg",
   "region": "Goan",
   "slot": "recipe",
@@ -4337,16 +4347,6 @@
   "license": "CC BY-SA 2.0",
   "artist": "Soniya Goyal from Jaipur, India",
   "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
- },
- {
-  "file": "recipes/mithila-machh-posto.jpg",
-  "region": "Bihari",
-  "slot": "recipe",
-  "wiki_title": "South Indian Fish Curry with Steamed Rice-Chennai-TamilNadu-DSC0001.jpg",
-  "source_url": "https://commons.wikimedia.org/wiki/File:South_Indian_Fish_Curry_with_Steamed_Rice-Chennai-TamilNadu-DSC0001.jpg",
-  "license": "CC BY-SA 4.0",
-  "artist": "Jen 0309",
-  "note": "fetched by tools/fetch-recipe-images.py"
  },
  {
   "file": "recipes/mithila-sarson-aloo.jpg",
