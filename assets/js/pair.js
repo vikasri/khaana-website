@@ -443,7 +443,7 @@
    * opt into a game that was already built and sitting there, which is a
    * question with one sensible answer. The panel carries `hidden` in the
    * markup and is un-hidden here, so a reader with no JavaScript still gets
-   * the trivia alone rather than an empty board. Play again deals the next
+   * the trivia alone rather than an empty board. Play next deals another
    * round, and is also the way out of one going badly. */
   panel.hidden = false;
   deal();

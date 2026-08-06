@@ -170,7 +170,7 @@ def main():
         <p class="pair-verdict" id="pair-verdict" role="status"
            aria-live="polite" hidden></p>
         <button type="button" class="pair-again" id="pair-again" hidden>Play
-          again</button>
+          next</button>
       </div>
     </section>
     <script type="application/json" id="pair-pool">%s</script>

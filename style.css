@@ -2395,7 +2395,7 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 }
 
 /* The button for the next question, in the same shape as the matching game's
-   Play again below it, since it does the same job. */
+   Play next above it, since it does the same job. */
 .trivia-foot { margin-top: 16px; }
 .trivia-next {
   cursor: pointer;
