@@ -6319,6 +6319,19 @@
   "note": "fetched by tools/fetch-recipe-images.py; colour-corrected"
  },
  {
+  "file": "recipes/tomato-dhaniya-shorba.jpg",
+  "region": "tomato",
+  "slot": "recipe",
+  "wiki_title": "Tomato Shorba",
+  "width": 681,
+  "height": 1024,
+  "size_bytes": 92526,
+  "source_url": "https://commons.wikimedia.org/wiki/File:Tomato_Shorba.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Kabirsabri",
+  "note": "found via Openverse; resized for web"
+ },
+ {
   "file": "recipes/tomato-khajuri-khatta.jpg",
   "region": "Odia",
   "slot": "recipe",

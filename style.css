@@ -875,6 +875,21 @@ section.tight { padding: 34px 0; }
 }
 
 .recipe-search-row { display: flex; gap: 10px; align-items: stretch; }
+
+/* The two quick filters under the search box. Sitting with the box rather
+   than down in the panel, because they are answers to questions people arrive
+   already holding — "something light I can make now", "soup" — and the panel
+   is a long scroll away on a phone. */
+.quick-filters {
+  display: flex; flex-wrap: wrap; gap: 8px 18px;
+  margin: 10px 0 0;
+}
+.quick-filters label {
+  display: inline-flex; align-items: center; gap: 7px; cursor: pointer;
+  font-size: 0.94rem; color: var(--ink);
+}
+.quick-filters input { cursor: pointer; }
+.quick-filters label:hover { color: var(--nav-active); }
 .recipe-search {
   flex: 1 1 auto;
   min-width: 0;

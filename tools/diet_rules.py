@@ -85,10 +85,15 @@ ALLIUM = {"onion", "garlic", "shallot", "spring-onion"}
 NON_VEGETARIAN = MEAT | SEAFOOD | EGG
 NON_VEGAN = NON_VEGETARIAN | DAIRY | {"honey"}
 
+# Course tags say what kind of dish it is rather than who may eat it. They ride
+# in the same list because the Cook page filters on `tags`, and a second list
+# would mean a second filter mechanism for no gain.
+COURSE = {"soup"}
+
 TAGS = {"vegetarian", "vegan", "gluten-free", "dairy-free", "nut-free",
         "egg-free", "no-onion-garlic", "pescatarian",
         # Derived by tools/tag-healthy.py from explicit thresholds.
-        "healthier"}
+        "healthier"} | COURSE
 
 # tag -> ingredients that contradict it
 TAG_BLOCKERS = {

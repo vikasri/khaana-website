@@ -645,6 +645,7 @@ below.
 | `recipes/tidali-dal.jpg` | Dal Pakwan - Sindhi Food - 5.jpg | CC BY-SA 4.0 | Urvi Yagnik | [link](https://commons.wikimedia.org/wiki/File:Dal_Pakwan_-_Sindhi_Food_-_5.jpg) |
 | `recipes/til-ki-chutney.jpg` | Coconut Chutney (Indian Cuisine).jpg | CC BY-SA 4.0 | Balurbala | [link](https://commons.wikimedia.org/wiki/File:Coconut_Chutney_(Indian_Cuisine).jpg) |
 | `recipes/tomato-chutney.jpg` | Tomato Chutney 3.jpg | CC BY-SA 4.0 | Gaurav Dhwaj Khadka | [link](https://commons.wikimedia.org/wiki/File:Tomato_Chutney_3.jpg) |
+| `recipes/tomato-dhaniya-shorba.jpg` | Tomato Shorba | CC BY-SA 4.0 | Kabirsabri | [link](https://commons.wikimedia.org/wiki/File:Tomato_Shorba.jpg) |
 | `recipes/tomato-khajuri-khatta.jpg` | Tomato chutney 2006.jpg | CC BY-SA 2.0 | Paul Goyette from Chicago, USA | [link](https://commons.wikimedia.org/wiki/File:Tomato_chutney_2006.jpg) |
 | `recipes/tomato-kut.jpg` | Spicy Anda Curry.jpg | CC BY-SA 4.0 | https://onlybestrecipes.com/egg-curry-recipeegg-curry-recipe | [link](https://commons.wikimedia.org/wiki/File:Spicy_Anda_Curry.jpg) |
 | `recipes/tomato-pappu.jpg` | Food at Indic Wikimedia Hackathon 2023 06 Tomato Pappu.jpg | CC BY 4.0 | Jnanaranjan sahu | [link](https://commons.wikimedia.org/wiki/File:Food_at_Indic_Wikimedia_Hackathon_2023_06_Tomato_Pappu.jpg) |

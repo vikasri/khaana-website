@@ -27,7 +27,9 @@ EQUIPMENT = {"stovetop", "kadhai", "tawa", "oven", "steamer", "blender",
 # peanut and crustacean to the vocabulary and this gate never heard about it, so
 # it rejected a new recipe for declaring an allergen that 222 live recipes
 # already declare. A gate that is wrong about the rules is worse than no gate.
-TAGS = set(TAG_BLOCKERS) | {"healthier"}
+# Course, not diet: what kind of dish it is rather than who can eat it.
+COURSE = {"soup"}
+TAGS = set(TAG_BLOCKERS) | {"healthier"} | COURSE
 ALLERGENS = {name for name, _ingredients in ALLERGEN_GROUPS}
 
 

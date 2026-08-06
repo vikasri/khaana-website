@@ -134,6 +134,20 @@
     });
     if (f.maxTime && total > f.maxTime) reasons.push('over ' + f.maxTime + ' min');
 
+    /* Healthier in 30 minutes, meaning half an hour of your attention. Total
+     * time rather than cooking time, because a reader with half an hour has
+     * half an hour and does not care which part of it is chopping.
+     *
+     * Soaking and resting are not counted, and six of the twenty-five want
+     * some — kosambari an hour of it. They stay in because the card prints
+     * "+ 60 soaking" beside the time either way, so the reader is told rather
+     * than protected, and because a lentil salad you start before you leave
+     * the house is exactly the kind of thing this filter should surface. */
+    if (f.quickHealthy) {
+      if (recipe.tags.indexOf('healthier') === -1) reasons.push('healthier');
+      if (total > 30) reasons.push('over 30 min');
+    }
+
     // Calories per serving. A hard filter on an estimate, so the panel says so:
     // figures marked + are floors, and a dish can scrape in that should not.
     var kc = recipe.nutrition && recipe.nutrition.kcal;
@@ -176,7 +190,8 @@
   var TAG_LABELS = {
     vegetarian: 'vegetarian', vegan: 'vegan', 'gluten-free': 'gluten-free',
     'dairy-free': 'dairy-free', 'nut-free': 'nut-free', 'egg-free': 'egg-free',
-    'no-onion-garlic': 'no onion/garlic', pescatarian: 'pescatarian'
+    'no-onion-garlic': 'no onion/garlic', pescatarian: 'pescatarian',
+    soup: 'soup', healthier: 'healthier'
   };
   function labelForTag(t) { return TAG_LABELS[t] || t; }
 
@@ -351,6 +366,7 @@
       diets: diets,
       protein: (el('f-protein') || {}).value || '',
       savedOnly: !!(el('f-saved') || {}).checked,
+      quickHealthy: !!(el('f-quick') || {}).checked,
       maxKcal: maxKcal,
       maxTime: t ? parseInt(t, 10) : null
     };
@@ -472,6 +488,7 @@
 
     var applied = [];
     if (filters.diets.length) applied.push(filters.diets.map(labelForTag).join(', '));
+    if (filters.quickHealthy) applied.push('healthier, ready in 30 minutes');
     if (filters.maxTime) applied.push('under ' + filters.maxTime + ' minutes');
     if (filters.maxKcal) applied.push('under ' + filters.maxKcal + ' kcal a serving');
 
@@ -826,6 +843,7 @@
     var kcal = (el('f-kcal') || {}).value;
     var prot = (el('f-protein') || {}).value;
     var extras = diets + (kcal ? 1 : 0) + (prot ? 1 : 0) +
+                 ((el('f-quick') || {}).checked ? 1 : 0) +
                  ((el('f-time') || {}).value ? 1 : 0);
     var bits = [];
     bits.push(n ? n + ' ingredient' + (n === 1 ? '' : 's') : 'nothing chosen yet');
@@ -867,6 +885,8 @@
     document.querySelectorAll('input[name="diet"]').forEach(function (i) {
       i.addEventListener('change', update);
     });
+    var quick = el('f-quick');
+    if (quick) quick.addEventListener('change', update);
     ['f-time', 'f-kcal', 'f-protein'].forEach(function (id) {
       var s = el(id);
       if (s) s.addEventListener('change', update);

@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Cook With What You Have | Khaana" />
 <meta name="twitter:description" content="Tell Khaana what is in your kitchen and it will suggest Indian dishes you can actually cook tonight, ranked by how much of each recipe you already have." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/home-hero.jpg" />
-<link rel="stylesheet" href="style.css?v=b0c49209" />
+<link rel="stylesheet" href="style.css?v=91fd73e9" />
 </head>
 <body>
 
@@ -86,6 +86,14 @@
                  autocomplete="off"
                  placeholder="Dish, region, ingredient, or a diet like &ldquo;vegan&rdquo;&hellip;" />
           <button type="button" id="clear-search" class="clear-search">Clear</button>
+        </div>
+        <!-- Two answers people arrive already wanting, next to the box they
+             would otherwise type them into. Soups is a plain tag filter; the
+             other is healthier, half an hour start to finish, and nothing left
+             soaking overnight first. -->
+        <div class="quick-filters">
+          <label><input type="checkbox" name="diet" value="soup" /> Soups</label>
+          <label><input type="checkbox" id="f-quick" /> Healthier in 30 minutes</label>
         </div>
       </div>
     </div>
@@ -288,6 +296,6 @@
 <script src="script.js?v=cff5324b"></script>
 <script src="assets/js/search-match.js?v=d8d857d5"></script>
 <script src="assets/js/favourites.js?v=5bc2ad3b"></script>
-<script src="assets/js/cook.js?v=afb795aa"></script>
+<script src="assets/js/cook.js?v=0168b518"></script>
 </body>
 </html>
