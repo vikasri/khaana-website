@@ -11327,7 +11327,7 @@
         }
       ],
       "prepNotes": [
-        "Marinate the mutton in the whisked yogurt with the ginger and garlic pastes for 2 hours refrigerated, then bring to room temperature before cooking.",
+        "Marinate the mutton in the whisked yogurt with the ginger and garlic pastes for 2 hours refrigerated, then bring it to room temperature for 30 minutes before cooking.",
         "Soak the cashew, melon seeds and poppy seeds together in hot water for 30 minutes so they grind to a paste with no grit.",
         "Set aside 90 minutes of unhurried stove time. Mutton korma cannot be rushed with high heat."
       ],
@@ -75985,8 +75985,8 @@
         }
       ],
       "prepNotes": [
-        "The rice sits under water for 8 to 12 hours, so start it the evening before. Soak it in the refrigerator: cooked rice left standing at room temperature is the one real risk in this dish.",
-        "The souring is the point and it goes slower cold, so give a fridge soak the full 12 hours. The traditional soak is overnight in a cool room; a warm kitchen is the case to avoid.",
+        "The rice sits under water for 8 to 12 hours, so start it the evening before. Soak it in the refrigerator: cooked rice left standing warm is the one real risk in this dish.",
+        "The souring is the point and it goes slower cold, so give a fridge soak the full 12 hours. The traditional soak is not refrigerated at all, which is the reason this needs saying.",
         "Use an earthen or glass bowl if you have one. Metal picks up a tinny edge from the sour water."
       ],
       "steps": [
@@ -102197,7 +102197,7 @@
         {
           "id": "yogurt",
           "qty": "400g, sour and well whisked",
-          "note": "the sourer the better. Leave it out of the fridge overnight",
+          "note": "the sourer the better; sharpen fresh yogurt with lemon rather than standing it out",
           "essential": true
         },
         {
