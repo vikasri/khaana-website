@@ -1292,7 +1292,11 @@ section.tight { padding: 34px 0; }
   display: inline-block; padding: 6px 0;   /* thumb-sized rows on a phone */
 }
 .collection-links a:hover { text-decoration: underline; }
-.collection-body .collection-links { max-width: 72ch; }
+/* Same measure as .section-head above it. At 72ch these sat at 668px under a
+   720px heading and beside a 1052px grid, so a collection page had three
+   different left-to-right widths and read as ragged. Two is the site's
+   pattern: prose to a readable measure, grids to the container. */
+.collection-body .collection-links { max-width: 720px; }
 
 /* The row of collection links on the home and Recipes pages. */
 .collection-band { padding-top: 8px; }
