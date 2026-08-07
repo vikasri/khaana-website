@@ -1,0 +1,39 @@
+# What GitHub Pages publishes, and what it does not.
+#
+# Pages serves the whole repository. That meant every build script in tools/
+# was downloadable at khaana.com/tools/, and data/recipes.json handed over all
+# 641 recipes -- ingredients, method, nutrition -- in a single 3.9 MB request.
+# robots.txt asked crawlers not to index them, which is not the same as not
+# serving them: anyone typing the URL got the file.
+#
+# This works by letting Jekyll build the site rather than copying the repo
+# verbatim, which is what the old .nojekyll file did. Nothing here has YAML
+# front matter, so Jekyll treats every page as a static file and copies it
+# through unchanged -- the HTML that ships is byte-for-byte what the
+# generators wrote. The only thing Jekyll is being used for is this list.
+#
+# If a Pages build ever fails after a change here, putting back an empty
+# .nojekyll file at the repo root restores the previous behaviour exactly.
+
+exclude:
+  # The build system. It stays in the repository, where it belongs, and off
+  # the web, where it was doing nothing but showing the workings.
+  - tools/
+  # Parked serverless handler for the AI suggestion tier, which is not wired
+  # up. GitHub Pages cannot execute it in any case.
+  - api/
+  # Authoring sources, not site data. The pages load recipes-index.json,
+  # search-index.json, pantry.json and trivia.json; these two are inputs to
+  # the generators and are never fetched by a browser.
+  - data/recipes.json
+  - data/nutrition.json
+  # Notes for whoever maintains this, not pages for whoever reads it.
+  - README.md
+  - DEPLOY.md
+  - CREDITS.md
+  - _config.yml
+
+# Jekyll would otherwise skip anything beginning with a dot or an underscore.
+# Nothing here needs that, and being explicit costs nothing.
+include:
+  - .well-known

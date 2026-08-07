@@ -100,9 +100,17 @@ def rewrite(path, rel, up):
 
     link = '<a href="%s">%s</a>' % (href, T.FEEDBACK_LINK)
 
+    # The whole credit line, written from one definition rather than patched.
+    # It carries the copyright notice and the Terms link now, and those have to
+    # read the same on all 660-odd pages or the notice is worth nothing.
     def credit(m):
-        inner = EXISTING_FEEDBACK_RE.sub("", m.group(2))
-        return m.group(1) + inner + " &middot; " + link + m.group(3)
+        return m.group(1) + " &middot; ".join([
+            T.COPYRIGHT,
+            '<a href="%sterms.html">Terms</a>' % up,
+            '<a href="%sabout.html">About &amp; disclaimers</a>' % up,
+            '<a href="%scredits.html">Image credits</a>' % up,
+            link,
+        ]) + m.group(3)
 
     out = CREDIT_RE.sub(credit, out, count=1)
 

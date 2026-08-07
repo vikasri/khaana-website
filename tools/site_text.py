@@ -27,6 +27,14 @@ BRAND_TAGLINE = ("The history, traditions and recipes behind India's regional "
 
 FEEDBACK_LINK = "Send feedback"
 
+# The copyright line, in the footer of every page. Deliberately narrow about
+# what it claims: the writing and the selection are ours, the photographs are
+# not. Every one of them comes from Wikimedia Commons under CC0, CC BY or
+# CC BY-SA and stays under the licence its photographer chose, so a blanket
+# "all rights reserved" over the site would be a false claim. The detail lives
+# on terms.html; this line only has to be true.
+COPYRIGHT = "&copy; 2026 Khaana"
+
 
 # ---------------------------------------------------------------------------
 # Recipe pages, all 651
