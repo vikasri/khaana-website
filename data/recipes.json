@@ -1142,7 +1142,7 @@
         }
       ],
       "prepNotes": [
-        "Rub the fish with 1/4 tsp turmeric and 1/2 tsp salt and refrigerate 20 minutes, then bring it back to room temperature before it goes into the pan.",
+        "Rub the fish with 1/4 tsp turmeric and 1/2 tsp salt and refrigerate 20 minutes, then let it stand 15 minutes before it goes into the pan.",
         "Soak the tamarind in 300ml hot water for 25 minutes and extract a thick, dark pulp.",
         "Dry-roast the fenugreek seeds until deep brown and powder them. Do this first, while the pan is still cool enough to control."
       ],
@@ -26712,7 +26712,7 @@
         }
       ],
       "prepNotes": [
-        "The batter must rest at least 6 hours, and overnight is better. This is not optional: the semolina has to swell completely or the cake bakes gritty.",
+        "The batter must rest in the refrigerator at least 6 hours, and overnight is better. This is not optional: the semolina has to swell completely or the cake bakes gritty.",
         "Bring the eggs, milk and coconut to room temperature before mixing. Cold ingredients seize the melted butter into lumps.",
         "Baath is a Christmas kuswar sweet in Goan Catholic homes, but it is baked year round. It is meant to be dense and moist, not light. Do not expect a sponge."
       ],
@@ -26727,7 +26727,7 @@
           "text": "Fold in the semolina, grated coconut, nutmeg, cardamom and salt. The batter will be thick and slightly grainy at this stage."
         },
         {
-          "text": "Cover and rest at room temperature 6 hours or overnight in the refrigerator. It will thicken considerably as the semolina drinks.",
+          "text": "Cover and refrigerate 6 hours or overnight. It will thicken considerably as the semolina drinks.",
           "tip": "If it has set too stiff to pour by morning, slacken it with 2-3 tbsp of milk, no more."
         },
         {
@@ -26792,7 +26792,7 @@
         "direction": "ok"
       },
       "inactiveMinutes": 360,
-      "inactiveLabel": "resting",
+      "inactiveLabel": "chilling",
       "doneness": [
         "egg"
       ]
@@ -38038,7 +38038,7 @@
           "text": "Marinate the chicken with yogurt, ginger, garlic, chilli powder, turmeric, garam masala, half the birista, half the herbs, lemon juice and salt. Refrigerate 4 hours."
         },
         {
-          "text": "Bring the chicken to room temperature and spread it in a heavy pot with 3 tbsp ghee and the slit chillies."
+          "text": "Bring the chicken to room temperature for 30 minutes, then spread it in a heavy pot with 3 tbsp ghee and the slit chillies."
         },
         {
           "text": "Boil the rice in well-salted water with the whole spices until 70 per cent done, then drain immediately.",
@@ -38048,7 +38048,8 @@
           "text": "Layer the rice over the raw chicken and top with the remaining birista, herbs, saffron milk and ghee."
         },
         {
-          "text": "Seal the pot with a tight lid or foil. Cook 6 minutes on high, then 35 minutes on the lowest heat."
+          "text": "Seal the pot with a tight lid or foil. Cook 6 minutes on high, then 35 minutes on the lowest heat.",
+          "tip": "Before you rest it, check the thickest piece of chicken reads 74°C / 165°F. If it does not, reseal and give it another 10 minutes on low."
         },
         {
           "text": "Rest 15 minutes before opening, then lift from the bottom so each plate gets rice and chicken.",
@@ -39320,7 +39321,7 @@
           "text": "Marinate the mutton with yogurt, ginger, garlic, chilli, turmeric, garam masala, half the birista, half the herbs, lemon juice and salt. Refrigerate 6 hours or overnight."
         },
         {
-          "text": "Bring the marinated meat to room temperature and spread it in a heavy pot with 3 tbsp ghee."
+          "text": "Bring the marinated meat to room temperature for 30 minutes, then spread it in a heavy pot with 3 tbsp ghee."
         },
         {
           "text": "Boil the rice in well-salted water with the whole spices until 70% done, then drain immediately.",
@@ -39331,7 +39332,8 @@
         },
         {
           "text": "Seal with a dough rope or tight foil. Cook on high for 5 minutes to build steam, then on the lowest heat for 45 minutes.",
-          "glossary": "dum"
+          "glossary": "dum",
+          "tip": "Before you rest it, check the meat is cooked through and tender and the juices run clear. If it is not there, reseal and give it another 10 to 15 minutes on low."
         },
         {
           "text": "Rest 15 minutes before opening. Serve with mirchi ka salan and dahi chutney."
@@ -43052,7 +43054,8 @@
       "inactiveMinutes": 20,
       "inactiveLabel": "soaking",
       "doneness": [
-        "egg"
+        "egg",
+        "egg-raw"
       ]
     },
     {
@@ -46965,7 +46968,7 @@
           "text": "Bring the water to a bare simmer with the garlic, remaining soy sauce, pepper and oil. Season."
         },
         {
-          "text": "Slide the wontons in and poach 6 minutes until they float and the wrappers turn translucent.",
+          "text": "Slide the wontons in and poach 6 minutes until they float and the wrappers turn translucent. Floating is not doneness: the filling of the largest one should reach 74°C / 165°F, or cut it open and check there is no pink left.",
           "tip": "A simmer, never a boil. A rolling boil tears them open."
         },
         {
@@ -50809,7 +50812,7 @@
       "prepNotes": [
         "Marinate the chicken in the yogurt, lemon juice, turmeric and 1 tsp salt for at least 1 hour, or overnight in the fridge.",
         "Soak the chillies and the tamarind in separate bowls of warm water for 20 minutes.",
-        "Bring the marinated chicken back to room temperature before it hits the pan, or it will steam instead of roast."
+        "Bring the marinated chicken back to room temperature for 20 minutes before it hits the pan, or it will steam instead of roast."
       ],
       "steps": [
         {
@@ -62554,7 +62557,7 @@
         }
       ],
       "prepNotes": [
-        "Bring the mutton to room temperature and pat it thoroughly dry. Wet meat steams instead of browning.",
+        "Bring the mutton to room temperature for 30 minutes and pat it thoroughly dry. Wet meat steams instead of browning.",
         "Marinate the mutton with the turmeric, half the chilli powder and 1 tsp salt for 30 minutes while you slice the shallots.",
         "Slice the shallots as thin as you can manage; they are meant to melt into the gravy, not sit in it."
       ],
@@ -69535,7 +69538,7 @@
         {
           "id": "buttermilk",
           "qty": "400ml, sour",
-          "note": "the sourness is the point; leave fresh buttermilk out overnight",
+          "note": "the sourness is the point; cultured buttermilk is already sour",
           "essential": true
         },
         {
@@ -69602,7 +69605,7 @@
       ],
       "prepNotes": [
         "Whisk the besan into the cold buttermilk before anything goes on the heat. Lumps formed in a hot pan never come out.",
-        "Sour buttermilk gives pithla its character. Leave fresh buttermilk on the counter overnight, or stir a squeeze of lemon into it.",
+        "Sour buttermilk gives pithla its character. Cultured buttermilk is sour already; fresh buttermilk needs a squeeze of lemon stirred in and used straight away. Keep it in the fridge until it goes in the pan.",
         "Have the bhakri dough ready if you are eating it the proper way; pithla waits for nobody."
       ],
       "steps": [
@@ -73203,7 +73206,7 @@
       "prepNotes": [
         "Ask for pork with a decent fat cap. Lean pork gives a thin, gritty gravy. The fat is what carries the sesame.",
         "Grind the sesame with a little water into a paste, not a dry powder, and do it before you start cooking.",
-        "Bring the pork to room temperature so it browns instead of stewing when it hits the pan."
+        "Bring the pork to room temperature for 30 minutes so it browns instead of stewing when it hits the pan."
       ],
       "steps": [
         {
@@ -74459,7 +74462,7 @@
       ],
       "prepNotes": [
         "Rub the fish with turmeric and salt and leave it 10 minutes before frying. It firms the surface so the pieces do not break in the pan.",
-        "Bring the fish to room temperature first. Cold pieces stick and tear.",
+        "Let the fish stand 15 minutes out of the fridge first. Cold pieces stick and tear.",
         "This is a thin curry, not a thick one. It should pool around the rice rather than sit on it."
       ],
       "steps": [
@@ -74547,7 +74550,9 @@
       },
       "doneness": [
         "fish"
-      ]
+      ],
+      "inactiveMinutes": 15,
+      "inactiveLabel": "resting"
     },
     {
       "id": "masor-tenga",
@@ -74841,7 +74846,7 @@
           "text": "Place a spoon of filling in each, then pleat and seal into a half-moon or a gathered purse."
         },
         {
-          "text": "Steam in a greased steamer for 10-12 minutes. The wrappers turn translucent and stop looking floury.",
+          "text": "Steam in a greased steamer for 10-12 minutes, until the wrappers turn translucent and stop looking floury. The wrapper is not the test: check the largest momo in the middle of the steamer, where the filling should reach 74°C / 165°F.",
           "tip": "Do not crowd them; they swell and stick together."
         },
         {
@@ -75974,8 +75979,8 @@
         }
       ],
       "prepNotes": [
-        "The rice has to sit under water overnight, 8 to 12 hours at room temperature. Start it the evening before.",
-        "This is a hot-weather dish and it souring is the point. But it wants a cool room, not a warm kitchen. In real heat, 8 hours is plenty.",
+        "The rice sits under water for 8 to 12 hours, so start it the evening before. Soak it in the refrigerator: cooked rice left standing at room temperature is the one real risk in this dish.",
+        "The souring is the point and it goes slower cold, so give a fridge soak the full 12 hours. The traditional soak is overnight in a cool room; a warm kitchen is the case to avoid.",
         "Use an earthen or glass bowl if you have one. Metal picks up a tinny edge from the sour water."
       ],
       "steps": [
@@ -75988,7 +75993,7 @@
           "tip": "Covering it hot traps steam and the rice sours in a stale, unpleasant way."
         },
         {
-          "text": "Pour in cold water to cover the rice by about 3cm, cover the bowl loosely and leave it overnight."
+          "text": "Pour in cold water to cover the rice by about 3cm, cover the bowl and refrigerate it overnight."
         },
         {
           "text": "Next morning the water should smell faintly sour and clean, a little like buttermilk. Pour off most of it, keeping 3-4 tbsp in the bowl.",
@@ -76050,8 +76055,8 @@
         "confidence": "good",
         "direction": "understated"
       },
-      "inactiveMinutes": 480,
-      "inactiveLabel": "resting"
+      "inactiveMinutes": 720,
+      "inactiveLabel": "soaking"
     },
     {
       "id": "sanpiau",
@@ -84058,7 +84063,7 @@
       "prepNotes": [
         "Pat the fish bone dry inside and out with kitchen paper. Any surface water and the marinade slides off and the skin steams instead of crisping.",
         "Marinate 20 minutes only. Lemon juice on a delicate river fish for longer than that starts to cure the flesh and it goes chalky.",
-        "Bring the fish to room temperature before it hits the pan."
+        "Let the fish stand 15 minutes out of the fridge before it hits the pan."
       ],
       "steps": [
         {
@@ -87062,7 +87067,7 @@
         {
           "id": "eggs",
           "qty": "4 yolks, to serve",
-          "note": "traditionally raw on the hot rice; cook them if you prefer",
+          "note": "traditionally raw on the hot rice, so pasteurised if you serve them that way; otherwise cook them",
           "essential": true
         },
         {
@@ -87103,7 +87108,7 @@
       ],
       "prepNotes": [
         "Borrowed from Iranian chelo kabab and kept alive by Bombay's Irani restaurants. The butter, the saffron rice and the yolk are all part of it.",
-        "A raw yolk on hot rice is traditional. If you would rather not, a soft-cooked yolk does the same job."
+        "A raw yolk on hot rice is traditional, and the rice does not cook it, so use pasteurised eggs for that. A soft-cooked yolk does the same job and needs no special egg."
       ],
       "steps": [
         {
@@ -87173,7 +87178,8 @@
       "inactiveLabel": "resting",
       "doneness": [
         "ground",
-        "egg"
+        "egg",
+        "egg-raw"
       ]
     },
     {
@@ -87786,7 +87792,7 @@
       ],
       "prepNotes": [
         "Soak the apricots in 200ml warm water for 30 minutes. Keep the soaking water. It goes into the gravy.",
-        "Bring the mutton to room temperature and pat it dry, or it will steam rather than brown.",
+        "Bring the mutton to room temperature for 30 minutes and pat it dry, or it will steam rather than brown.",
         "If you are making sali at home, soak the potato matchsticks in cold water 15 minutes, dry them thoroughly, then fry in batches."
       ],
       "steps": [
@@ -88099,7 +88105,8 @@
       },
       "doneness": [
         "ground",
-        "egg"
+        "egg",
+        "egg-raw"
       ]
     },
     {
@@ -90866,7 +90873,8 @@
         "direction": "understated"
       },
       "doneness": [
-        "egg"
+        "egg",
+        "egg-raw"
       ]
     },
     {
@@ -94391,7 +94399,7 @@
         }
       ],
       "prepNotes": [
-        "The chicken is cooked separately and hard, then added to the gravy at the end. Simmering raw chicken in the sauce gives a different, flatter dish.",
+        "The chicken is cooked separately over high heat until the edges char and it is just cooked through, then added to the gravy at the end. Simmering raw chicken in the sauce gives a different, flatter dish.",
         "The dish is British-Indian in origin and there is no single authentic version. What is consistent is charred tikka meeting a tomato-cream gravy."
       ],
       "steps": [
@@ -102285,7 +102293,7 @@
         }
       ],
       "prepNotes": [
-        "Leave the yogurt out of the fridge overnight so it sours properly. Fresh sweet yogurt makes a flat, milky kadhi.",
+        "Sour yogurt is what gives kadhi its tang; fresh sweet yogurt makes a flat, milky one. Use yogurt that has already gone sour, or sharpen fresh yogurt with lemon. Keep it refrigerated until you whisk it in.",
         "Whisk the yogurt and besan together until there is not a single lump before any heat touches it.",
         "Fry the pakoras while the kadhi simmers, and add them only at the end so they keep some structure."
       ],
@@ -102381,9 +102389,7 @@
         "method": "Estimated from raw ingredients using USDA FoodData Central. Cooking losses are not modelled and added salt is excluded, so sodium is not given.",
         "confidence": "good",
         "direction": "understated"
-      },
-      "inactiveMinutes": 480,
-      "inactiveLabel": "souring"
+      }
     },
     {
       "id": "rajma-chawal",
@@ -108529,7 +108535,7 @@
         }
       ],
       "prepNotes": [
-        "Leave the buttermilk out for a few hours, or overnight in a warm kitchen, to sour it properly. Rajasthani kadhi is meant to be sharp.",
+        "Rajasthani kadhi is meant to be sharp, so the buttermilk has to be properly sour. Use cultured sour buttermilk, and push it further with lemon or amchur if yours is mild. Keep it refrigerated until it goes in.",
         "Whisk the besan into a little of the buttermilk first to make a lump-free slurry, then add the rest. Dumping besan into all the liquid guarantees lumps."
       ],
       "steps": [
@@ -108613,9 +108619,7 @@
         "method": "Estimated from raw ingredients using USDA FoodData Central. Cooking losses are not modelled and added salt is excluded, so sodium is not given.",
         "confidence": "good",
         "direction": "understated"
-      },
-      "inactiveMinutes": 480,
-      "inactiveLabel": "souring"
+      }
     },
     {
       "id": "malpua",
@@ -116218,7 +116222,7 @@
         }
       ],
       "prepNotes": [
-        "Bring the mutton to room temperature and pat it dry. Cold wet meat will not brown.",
+        "Bring the mutton to room temperature for 30 minutes and pat it dry. Cold wet meat will not brown.",
         "Marinate it with the turmeric and 1 tsp salt for 30 minutes while you roast and grind the masala.",
         "Roast and grind the masala first and set it aside; once the meat is browning you will not have time."
       ],

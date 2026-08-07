@@ -85,6 +85,13 @@ DONENESS = {
                  "pearly right through.",
     "egg": "Egg dishes are done at 71°C / 160°F; a whole egg when the "
            "yolk and white are both firm.",
+    # A handful of dishes leave the yolk soft or raw on purpose, and the line
+    # above would otherwise tell a reader to cook away the thing the dish is
+    # for. Naming the egg is the fix that keeps the dish: a pasteurised egg is
+    # safe raw, and the ones that are not can simply be cooked through.
+    "egg-raw": "This one leaves the yolk soft or raw on purpose. Use "
+               "pasteurised eggs if you serve it that way, or cook the yolk "
+               "firm.",
 }
 
 DONENESS_REHEAT = "Reheat leftovers to 74°C / 165°F."

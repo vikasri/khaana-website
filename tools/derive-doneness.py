@@ -25,6 +25,7 @@ meat is ground:
     fish        63C / 145F   finfish, or opaque and flaking
     shellfish   --           prawns, crab, squid: opaque and pearly, no target
     egg         71C / 160F   egg dishes; whole eggs by firm yolk and white
+    egg-raw     --           the few that leave the yolk soft or raw on purpose
 
 Minced meat is a separate category because grinding moves surface bacteria
 through the whole mass, so the centre has to reach a temperature a whole cut
@@ -44,8 +45,21 @@ EGG = {"eggs"}
 
 MINCED = re.compile(r"\bminc\w*|\bkeema\b|\bground\b", re.I)
 
+# Dishes whose yolk is meant to stay soft or raw. Not derivable from the
+# ingredient list — every one of these has plain "eggs" in it and the intent
+# lives in the method — so it is a list, and a short one. Adding a dish here is
+# how a raw-yolk finding gets fixed: one id, not a paragraph repeated on four
+# pages. Keep it in step with the recipes; a dish that stops serving a soft
+# yolk should come out.
+RAW_YOLK = {
+    "parsi-chelo-kebab",       # raw yolk stirred into the hot rice
+    "parsi-kheema-par-eeda",   # eggs set on the kheema, yolks left wobbling
+    "parsi-tamota-par-eeda",   # the same, on tomatoes
+    "tomato-kut",              # eggs poached into the gravy, yolks soft
+}
+
 # Print order, so a mixed dish reads the same way on every page.
-ORDER = ["poultry", "ground", "whole-red", "fish", "shellfish", "egg"]
+ORDER = ["poultry", "ground", "whole-red", "fish", "shellfish", "egg", "egg-raw"]
 
 
 def categories(r):
@@ -65,6 +79,8 @@ def categories(r):
             out.add("shellfish")
         elif iid in EGG:
             out.add("egg")
+    if r["id"] in RAW_YOLK:
+        out.add("egg-raw")
     return [c for c in ORDER if c in out]
 
 
