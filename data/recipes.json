@@ -2589,7 +2589,7 @@
         },
         {
           "id": "rice",
-          "qty": "3 tbsp raw rice",
+          "qty": "3 tbsp, raw",
           "note": "just enough for crispness; more and it stops being pesarattu",
           "essential": true
         },
@@ -5595,7 +5595,7 @@
       "ingredients": [
         {
           "id": "fish",
-          "qty": "400g smoked, or any firm fish plus 1/2 tsp smoked paprika",
+          "qty": "400g, smoked; or any firm sort plus 1/2 tsp smoked paprika",
           "essential": true
         },
         {
@@ -6060,7 +6060,7 @@
         },
         {
           "id": "bread",
-          "qty": "150g crumbs, from stale bread",
+          "qty": "150g crumbs, from a stale loaf",
           "note": "dry, fine crumbs, not fresh soft ones",
           "essential": true
         },
@@ -12801,7 +12801,7 @@
       "ingredients": [
         {
           "id": "bread",
-          "qty": "8 slices of white bread, crusts cut off",
+          "qty": "8 slices, white, crusts cut off",
           "note": "day-old bread fries crisper than fresh",
           "essential": true
         },
@@ -14217,8 +14217,8 @@
           "essential": true
         },
         {
-          "id": "raw-mango",
-          "qty": "400g ripe mango, pureed",
+          "id": "mango",
+          "qty": "400g, ripe, pureed",
           "note": "ripe and sweet, despite the ingredient name",
           "essential": true
         },
@@ -15084,7 +15084,7 @@
       "ingredients": [
         {
           "id": "dried-peas",
-          "qty": "250g white peas, soaked overnight",
+          "qty": "250g, white, soaked overnight",
           "essential": true
         },
         {
@@ -19920,13 +19920,13 @@
         },
         {
           "id": "rice",
-          "qty": "60g short-grain aromatic rice",
+          "qty": "60g, short-grain aromatic",
           "note": "gobindobhog is traditional; any short-grain rice works",
           "essential": true
         },
         {
           "id": "jaggery",
-          "qty": "120g date palm jaggery, chopped",
+          "qty": "120g date palm, chopped",
           "note": "use 120g sugar instead if you cannot find it",
           "essential": true
         },
@@ -24037,7 +24037,7 @@
       "ingredients": [
         {
           "id": "dried-peas",
-          "qty": "250g white peas",
+          "qty": "250g, white",
           "essential": true
         },
         {
@@ -26445,7 +26445,7 @@
       "ingredients": [
         {
           "id": "fish",
-          "qty": "600g firm fish, in 4cm chunks",
+          "qty": "600g, firm, in 4cm chunks",
           "note": "traditionally shark or catfish; kingfish or monkfish hold up well",
           "essential": true
         },
@@ -27786,7 +27786,7 @@
         },
         {
           "id": "jaggery",
-          "qty": "500g dark palm jaggery, grated",
+          "qty": "500g dark palm, grated",
           "note": "palm, not cane. It makes the colour and the flavour",
           "essential": true
         },
@@ -30302,7 +30302,7 @@
       "ingredients": [
         {
           "id": "rice",
-          "qty": "2 cups par-boiled rice soaked 5 hours, plus 1/2 cup cooked rice",
+          "qty": "2 cups, par-boiled, soaked 5 hours, plus 1/2 cup cooked",
           "note": "idli rice is the right kind; the cooked rice helps the batter ferment and stay soft",
           "essential": true
         },
@@ -30631,7 +30631,7 @@
       "ingredients": [
         {
           "id": "pork",
-          "qty": "700g belly and shoulder in one piece, plus 200g pork liver",
+          "qty": "700g belly and shoulder in one piece, plus 200g liver",
           "note": "some fat is essential. Do not use lean loin, and do not leave out the liver",
           "essential": true
         },
@@ -31032,7 +31032,7 @@
       "ingredients": [
         {
           "id": "dried-peas",
-          "qty": "1.5 cups white peas, soaked overnight",
+          "qty": "1.5 cups, white, soaked overnight",
           "essential": true
         },
         {
@@ -35709,7 +35709,7 @@
       "ingredients": [
         {
           "id": "methi-leaves",
-          "qty": "150g, leaves picked and chopped",
+          "qty": "150g, picked and chopped",
           "essential": true
         },
         {
@@ -35949,7 +35949,7 @@
         },
         {
           "id": "methi-leaves",
-          "qty": "100g, leaves picked and finely chopped",
+          "qty": "100g, picked and finely chopped",
           "essential": true
         },
         {
@@ -38391,7 +38391,7 @@
       "ingredients": [
         {
           "id": "bread",
-          "qty": "8 slices of white sandwich bread, crusts off, halved diagonally",
+          "qty": "8 slices, white sandwich, crusts off, halved diagonally",
           "note": "day-old bread fries crisper",
           "essential": true
         },
@@ -40758,7 +40758,7 @@
         },
         {
           "id": "methi-leaves",
-          "qty": "300g, leaves picked from the stems",
+          "qty": "300g, picked from the stems",
           "essential": true
         },
         {
@@ -41895,7 +41895,7 @@
       "ingredients": [
         {
           "id": "dried-apricot",
-          "qty": "500g Hunza apricots, soaked overnight",
+          "qty": "500g Hunza, soaked overnight",
           "essential": true
         },
         {
@@ -43326,7 +43326,7 @@
       "ingredients": [
         {
           "id": "noodles",
-          "qty": "250g dried egg-free noodles",
+          "qty": "250g, dried, egg-free",
           "essential": true
         },
         {
@@ -44567,7 +44567,7 @@
       "ingredients": [
         {
           "id": "corn",
-          "qty": "300g baby corn, halved lengthways",
+          "qty": "300g baby, halved lengthways",
           "essential": true
         },
         {
@@ -45142,7 +45142,7 @@
       "ingredients": [
         {
           "id": "noodles",
-          "qty": "300g dried Hakka or egg noodles",
+          "qty": "300g, dried Hakka or egg",
           "essential": true
         },
         {
@@ -47471,7 +47471,7 @@
       "ingredients": [
         {
           "id": "bamboo-shoot",
-          "qty": "400g tender shoots, cleaned and finely chopped",
+          "qty": "400g, tender, cleaned and finely chopped",
           "note": "fresh monsoon shoots are traditional; brined shoots work if rinsed well",
           "essential": true
         },
@@ -48666,7 +48666,7 @@
       "ingredients": [
         {
           "id": "rice",
-          "qty": "1 cup raw rice, soaked 4 hours",
+          "qty": "1 cup, raw, soaked 4 hours",
           "essential": true
         },
         {
@@ -51334,8 +51334,8 @@
           "essential": true
         },
         {
-          "id": "raw-banana",
-          "qty": "3 very ripe bananas, mashed",
+          "id": "banana",
+          "qty": "3, very ripe, mashed",
           "note": "the riper and blacker the better",
           "essential": true
         },
@@ -51827,7 +51827,7 @@
       "ingredients": [
         {
           "id": "rice",
-          "qty": "1 cup raw rice",
+          "qty": "1 cup, raw",
           "note": "sona masoori or any short-grain raw rice",
           "essential": true
         },
@@ -52560,7 +52560,7 @@
       "ingredients": [
         {
           "id": "rice",
-          "qty": "1 1/2 cups short-grain raw rice, soaked 4 hours",
+          "qty": "1 1/2 cups, short-grain raw, soaked 4 hours",
           "note": "the coarse grind is what gives pundi its bite. Do not use rice flour",
           "essential": true
         },
@@ -55221,7 +55221,7 @@
         },
         {
           "id": "methi-leaves",
-          "qty": "300g, leaves picked off the stems and roughly chopped",
+          "qty": "300g, picked off the stems and roughly chopped",
           "essential": true
         },
         {
@@ -55606,7 +55606,7 @@
       "ingredients": [
         {
           "id": "radish",
-          "qty": "300g white radish, peeled and grated on the coarse side",
+          "qty": "300g, white, peeled and grated on the coarse side",
           "note": "mujh; young radish is milder",
           "essential": true
         },
@@ -55758,7 +55758,7 @@
       "ingredients": [
         {
           "id": "fish",
-          "qty": "600g firm river fish, cut into 3cm steaks",
+          "qty": "600g, firm river, cut into 3cm steaks",
           "note": "rohu or trout, bone in. The bone holds the piece together",
           "essential": true
         },
@@ -59816,7 +59816,7 @@
       "ingredients": [
         {
           "id": "fish",
-          "qty": "700g firm white fish, cut into 4cm steaks or fillets",
+          "qty": "700g, firm white, cut into 4cm steaks or fillets",
           "note": "seer, kingfish or pomfret all hold together",
           "essential": true
         },
@@ -61551,7 +61551,7 @@
       "ingredients": [
         {
           "id": "rice-flour",
-          "qty": "200g, fine roasted rice flour",
+          "qty": "200g, fine, roasted",
           "note": "the roasted kind sold as puttu podi gives the smoothest dough",
           "essential": true
         },
@@ -61868,7 +61868,7 @@
       "ingredients": [
         {
           "id": "fish",
-          "qty": "600g, 4 steaks or whole small fish, slashed",
+          "qty": "600g, 4 steaks or 4 whole small ones, slashed",
           "note": "seer, pomfret or mackerel",
           "essential": true
         },
@@ -62703,7 +62703,7 @@
       "ingredients": [
         {
           "id": "rice",
-          "qty": "250g raw rice, soaked 4 hours",
+          "qty": "250g, raw, soaked 4 hours",
           "note": "any short or medium grain works",
           "essential": true
         },
@@ -63919,7 +63919,7 @@
         },
         {
           "id": "curry-leaves",
-          "qty": "10 leaves",
+          "qty": "10",
           "essential": true
         },
         {
@@ -64459,8 +64459,8 @@
           "essential": true
         },
         {
-          "id": "raw-banana",
-          "qty": "2 ripe bananas, mashed",
+          "id": "banana",
+          "qty": "2, ripe, mashed",
           "note": "ripe, not raw, despite the ingredient name",
           "essential": true
         },
@@ -66171,7 +66171,7 @@
       "ingredients": [
         {
           "id": "poha",
-          "qty": "2 cups, thin (patal poha)",
+          "qty": "2 cups, thin (patal)",
           "note": "thick poha will not soften without cooking",
           "essential": true
         },
@@ -67778,7 +67778,7 @@
       "ingredients": [
         {
           "id": "coriander-leaves",
-          "qty": "3 large bunches (about 200g), leaves and tender stems, finely chopped",
+          "qty": "3 large bunches (about 200g), with tender stems, finely chopped",
           "essential": true
         },
         {
@@ -69914,7 +69914,7 @@
       "ingredients": [
         {
           "id": "dried-peas",
-          "qty": "250g white peas, soaked overnight",
+          "qty": "250g, white, soaked overnight",
           "essential": true
         },
         {
@@ -71425,7 +71425,7 @@
         },
         {
           "id": "butter",
-          "qty": "2 tbsp, white butter if you can get it",
+          "qty": "2 tbsp, white if you can get it",
           "note": "the traditional accompaniment",
           "essential": false
         },
@@ -73153,7 +73153,7 @@
         },
         {
           "id": "sesame",
-          "qty": "5 tbsp black sesame seeds",
+          "qty": "5 tbsp, black",
           "note": "black sesame is what gives the gravy its colour; white seeds work but the dish stays grey-brown",
           "essential": true
         },
@@ -73498,12 +73498,12 @@
       "ingredients": [
         {
           "id": "rice",
-          "qty": "200g short-grain rice, rinsed",
+          "qty": "200g, short-grain, rinsed",
           "essential": true
         },
         {
           "id": "pork",
-          "qty": "400g smoked pork or fatty belly, in 2cm cubes",
+          "qty": "400g, smoked, or fatty belly, in 2cm cubes",
           "note": "smoked pork is what makes galho taste like galho; with plain belly, add an extra dried chilli and a little more pepper",
           "essential": true
         },
@@ -74397,7 +74397,7 @@
       "ingredients": [
         {
           "id": "fish",
-          "qty": "600g rohu or any firm river fish, cut into 2cm steaks on the bone",
+          "qty": "600g rohu or another firm river variety, cut into 2cm steaks on the bone",
           "essential": true
         },
         {
@@ -74595,7 +74595,7 @@
       "ingredients": [
         {
           "id": "fish",
-          "qty": "600g rohu or any firm river fish, cut into 2cm steaks",
+          "qty": "600g rohu or another firm river variety, cut into 2cm steaks",
           "essential": true
         },
         {
@@ -75113,7 +75113,7 @@
       "ingredients": [
         {
           "id": "pork",
-          "qty": "700g smoked pork belly, in cubes",
+          "qty": "700g smoked belly, in cubes",
           "essential": true
         },
         {
@@ -75267,7 +75267,7 @@
       "ingredients": [
         {
           "id": "fish",
-          "qty": "600g firm freshwater fish, cut into 3cm pieces",
+          "qty": "600g, firm freshwater, cut into 3cm pieces",
           "essential": true
         },
         {
@@ -75610,7 +75610,7 @@
       "ingredients": [
         {
           "id": "dried-peas",
-          "qty": "200g whole dried green peas",
+          "qty": "200g, whole green",
           "essential": true
         },
         {
@@ -75777,12 +75777,12 @@
       "ingredients": [
         {
           "id": "bamboo-shoot",
-          "qty": "300g fermented bamboo shoot, very finely chopped",
+          "qty": "300g, fermented, very finely chopped",
           "essential": true
         },
         {
           "id": "pork",
-          "qty": "150g pork fat or very fatty belly, finely diced",
+          "qty": "150g fat or very fatty belly, finely diced",
           "essential": true
         },
         {
@@ -75938,7 +75938,7 @@
       "ingredients": [
         {
           "id": "rice",
-          "qty": "300g short-grain rice",
+          "qty": "300g, short-grain",
           "note": "joha or any local non-basmati; long, slender basmati stays too separate to sour properly",
           "essential": true
         },
@@ -76096,7 +76096,7 @@
       "ingredients": [
         {
           "id": "rice",
-          "qty": "200g short-grain rice, rinsed",
+          "qty": "200g, short-grain, rinsed",
           "essential": true
         },
         {
@@ -76257,7 +76257,7 @@
       "ingredients": [
         {
           "id": "rice",
-          "qty": "500g raw non-basmati rice",
+          "qty": "500g, raw, not basmati",
           "essential": true
         },
         {
@@ -77537,7 +77537,7 @@
       "ingredients": [
         {
           "id": "rice",
-          "qty": "400g raw short-grain rice",
+          "qty": "400g, raw short-grain",
           "essential": true
         },
         {
@@ -87446,7 +87446,7 @@
         },
         {
           "id": "methi-leaves",
-          "qty": "1 small bunch, leaves picked",
+          "qty": "1 small bunch, picked",
           "note": "the bitter note that defines dhansak",
           "essential": true
         },
@@ -99344,7 +99344,7 @@
       "ingredients": [
         {
           "id": "methi-leaves",
-          "qty": "2 large bunches (300g), leaves picked",
+          "qty": "2 large bunches (300g), picked",
           "essential": true
         },
         {
@@ -107449,7 +107449,7 @@
         },
         {
           "id": "methi-leaves",
-          "qty": "100g, leaves picked and finely chopped",
+          "qty": "100g, picked and finely chopped",
           "essential": true
         },
         {
@@ -112914,7 +112914,7 @@
       "ingredients": [
         {
           "id": "rice",
-          "qty": "1 cup raw rice",
+          "qty": "1 cup, raw",
           "note": "idli rice or any short-grain raw rice",
           "essential": true
         },
@@ -115431,7 +115431,7 @@
       "ingredients": [
         {
           "id": "fish",
-          "qty": "600g firm fish steaks such as seer or kingfish, 2cm thick",
+          "qty": "600g firm steaks such as seer or kingfish, 2cm thick",
           "note": "pomfret or tilapia also work",
           "essential": true
         },
@@ -116373,7 +116373,7 @@
       "ingredients": [
         {
           "id": "crab",
-          "qty": "1kg live or very fresh mud crab, cleaned and cut into halves with claws cracked",
+          "qty": "1kg, live or very fresh mud variety, cleaned and cut into halves with claws cracked",
           "essential": true
         },
         {
@@ -117626,7 +117626,7 @@
       "ingredients": [
         {
           "id": "rice",
-          "qty": "3 cups par-boiled idli rice",
+          "qty": "3 cups, par-boiled idli",
           "essential": true
         },
         {
@@ -117763,7 +117763,7 @@
       "ingredients": [
         {
           "id": "rice",
-          "qty": "1 cup raw rice",
+          "qty": "1 cup, raw",
           "note": "idli or ponni rice, soaked 3 hours",
           "essential": true
         },
@@ -118419,7 +118419,7 @@
       "ingredients": [
         {
           "id": "rice",
-          "qty": "1.5 cups idli rice, soaked 4 hours",
+          "qty": "1.5 cups idli, soaked 4 hours",
           "essential": true
         },
         {
@@ -120268,7 +120268,7 @@
       "ingredients": [
         {
           "id": "crab",
-          "qty": "3 small crabs, cleaned and quartered",
+          "qty": "3 small, cleaned and quartered",
           "note": "shells cracked; the shell carries the flavour",
           "essential": true
         },
@@ -120480,7 +120480,7 @@
       "ingredients": [
         {
           "id": "rice",
-          "qty": "150g raw rice, soaked 4 hours",
+          "qty": "150g, raw, soaked 4 hours",
           "note": "idli rice or any short grain",
           "essential": true
         },
@@ -121740,7 +121740,7 @@
       "ingredients": [
         {
           "id": "rice",
-          "qty": "1 cup raw rice",
+          "qty": "1 cup, raw",
           "essential": true
         },
         {
@@ -123235,7 +123235,7 @@
       "ingredients": [
         {
           "id": "rice",
-          "qty": "2 cups idli rice, soaked 5 hours",
+          "qty": "2 cups idli, soaked 5 hours",
           "note": "parboiled idli rice, not raw table rice",
           "essential": true
         },
@@ -123630,7 +123630,7 @@
       "ingredients": [
         {
           "id": "rice",
-          "qty": "1 cup raw rice, soaked 4 hours",
+          "qty": "1 cup, raw, soaked 4 hours",
           "note": "pacharisi or any raw short-grain rice",
           "essential": true
         },

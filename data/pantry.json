@@ -192,6 +192,10 @@
           "name": "Bamboo shoot (fermented or fresh)"
         },
         {
+          "id": "banana",
+          "name": "Banana, ripe"
+        },
+        {
           "id": "beetroot",
           "name": "Beetroot",
           "selectable": false
@@ -230,11 +234,6 @@
           "name": "Colocasia (arbi)"
         },
         {
-          "id": "corn",
-          "name": "Sweetcorn",
-          "selectable": false
-        },
-        {
           "id": "cucumber",
           "name": "Cucumber"
         },
@@ -245,6 +244,10 @@
         {
           "id": "eggplant",
           "name": "Eggplant / brinjal"
+        },
+        {
+          "id": "methi-leaves",
+          "name": "Fenugreek leaves (methi)"
         },
         {
           "id": "french-beans",
@@ -259,8 +262,8 @@
           "name": "Lotus stem (nadru/bhee)"
         },
         {
-          "id": "methi-leaves",
-          "name": "Fenugreek leaves (methi)"
+          "id": "mango",
+          "name": "Mango, ripe"
         },
         {
           "id": "mushroom",
@@ -303,10 +306,6 @@
           "name": "Raw banana / plantain"
         },
         {
-          "id": "raw-jackfruit",
-          "name": "Raw jackfruit (kathal)"
-        },
-        {
           "id": "raw-mango",
           "name": "Raw green mango",
           "selectable": false
@@ -314,6 +313,10 @@
         {
           "id": "raw-papaya",
           "name": "Raw green papaya"
+        },
+        {
+          "id": "raw-jackfruit",
+          "name": "Raw jackfruit (kathal)"
         },
         {
           "id": "ridge-gourd",
@@ -335,6 +338,11 @@
         {
           "id": "sweet-potato",
           "name": "Sweet potato"
+        },
+        {
+          "id": "corn",
+          "name": "Sweetcorn",
+          "selectable": false
         },
         {
           "id": "tomato",
