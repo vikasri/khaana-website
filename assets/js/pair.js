@@ -103,7 +103,7 @@
   var chart = window.KhaanaScoreLine;
   var finished = 0;                // boards solved, which is games played
   if (chart) chart.track('pair', 'Pairing',
-                         { step: 3.28, label: 'Chance with Elimination benchmark' });
+                         { step: 3.28, label: 'Chance with Elimination Benchmark' });
 
   /* --- the round ---------------------------------------------------------- */
 

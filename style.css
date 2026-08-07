@@ -15,6 +15,11 @@
      against an otherwise warm palette, which is what makes them stand out. */
   --azure: #1a5f8a;
   --azure-dark: #123f5d;
+  /* The benchmark line on the fun page's chart. Its own colour on purpose:
+     the trivia draws in --nav-active and the matching game in --azure, and a
+     reference line sharing either would read as a third score. Plum belongs to
+     neither game and to nothing else on the site. 6.5:1 on white. */
+  --bench: #6d4c8c;
   --line: #efe3d6;
   --shadow: 0 10px 30px rgba(232, 89, 12, 0.16);
   --radius: 14px;
@@ -2625,11 +2630,11 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    never competes with the reader's own line, and in the soft ink rather than
    the game's colour, because it belongs to neither game. */
 .sc-bench {
-  stroke: var(--ink-soft); stroke-width: 1.5; stroke-dasharray: 5 4;
-  opacity: 0.75;
+  stroke: var(--bench); stroke-width: 3; stroke-dasharray: 7 5;
+  stroke-linecap: round;
 }
 .sc-bench-label {
-  fill: var(--ink-soft); font-family: var(--sans); font-size: 12px;
+  fill: var(--bench); font-family: var(--sans); font-size: 13.5px;
   font-weight: 700;
   /* The paper behind it, so it stays readable where the score line crosses. */
   stroke: var(--paper); stroke-width: 3px; stroke-linejoin: round;
