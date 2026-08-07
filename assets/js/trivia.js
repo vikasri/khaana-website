@@ -175,9 +175,14 @@
   /* The score line under the panel, shared with the matching game. A trial
    * there is an answer here: every option pressed moves the total, so every
    * option pressed is a point. The chart is optional — the quiz works the same
-   * whether or not the script that draws it loaded. */
+   * whether or not the script that draws it loaded.
+   *
+   * The dotted benchmark on it is a quarter of a point per question solved.
+   * A reader under that line is scoring worse than guessing would. */
   var chart = window.KhaanaScoreLine;
-  if (chart) chart.track('trivia', 'Trivia');
+  var solved = 0;                  // questions got right, which is games played
+  if (chart) chart.track('trivia', 'Trivia',
+                         { step: 0.25, label: 'A blindfolded guesser' });
 
   /* A friendly line on a wrong answer, and two seconds to read it.
    *
@@ -267,9 +272,10 @@
     if (note) note.hidden = false;
 
     score += RIGHT;
+    solved++;                      // the question is over, so a game is done
     cheer();
     scoreLine();
-    if (chart) chart.point('trivia', score);
+    if (chart) { chart.point('trivia', score); chart.games('trivia', solved); }
     /* The button goes to where the answer is, not to the foot of the panel.
      * It reads as the end of this question rather than as furniture, and it
      * shares a line with the fact so the two shrink to the same block. */

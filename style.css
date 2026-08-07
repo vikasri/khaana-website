@@ -2621,6 +2621,21 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   fill: var(--ink-soft); font-family: var(--sans); font-size: 14px;
   font-weight: 700; text-anchor: middle;
 }
+/* The benchmark: what chance alone would have scored by now. Dotted so it
+   never competes with the reader's own line, and in the soft ink rather than
+   the game's colour, because it belongs to neither game. */
+.sc-bench {
+  stroke: var(--ink-soft); stroke-width: 1.5; stroke-dasharray: 5 4;
+  opacity: 0.75;
+}
+.sc-bench-label {
+  fill: var(--ink-soft); font-family: var(--sans); font-size: 12px;
+  font-weight: 700;
+  /* The paper behind it, so it stays readable where the score line crosses. */
+  stroke: var(--paper); stroke-width: 3px; stroke-linejoin: round;
+  paint-order: stroke fill;
+}
+
 .sc-line {
   fill: none; stroke: var(--sc-ink); stroke-width: 2.5;
   stroke-linejoin: round; stroke-linecap: round;

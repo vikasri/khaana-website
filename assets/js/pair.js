@@ -94,9 +94,16 @@
   /* The score line under the trivia, shared with it. A trial there is a marked
    * attempt here — the board is only worth a point when it has been judged,
    * and everything before that is a cuisine sitting in a box. Optional: the
-   * game plays the same whether or not the script drawing it loaded. */
+   * game plays the same whether or not the script drawing it loaded.
+   *
+   * The dotted benchmark on it is 3.28 a completed board, which is what
+   * chance is worth here once elimination is allowed for: wrong pairs come
+   * back to be tried again, so a guesser converges without knowing anything.
+   * Under that line is under that. */
   var chart = window.KhaanaScoreLine;
-  if (chart) chart.track('pair', 'Pairing');
+  var finished = 0;                // boards solved, which is games played
+  if (chart) chart.track('pair', 'Pairing',
+                         { step: 3.28, label: 'Chance with Elimination benchmark' });
 
   /* --- the round ---------------------------------------------------------- */
 
@@ -357,6 +364,8 @@
    * they ask for another. */
   function solved() {
     say(attempt, 'all');
+    finished++;                    // the board is done, so a game is done
+    if (chart) chart.games('pair', finished);
     // Every chip is placed, so on a phone — where the bank sits under the
     // board rather than beside it — the space it was holding open is now a
     // blank block between the last pair and the reply. Nothing is being

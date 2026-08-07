@@ -45,7 +45,11 @@
   var MIN_TRIALS = 4, MIN_SPAN = 2;   // an empty axis still spans something
   var Y_TICKS = 4, X_LABELS = 8;
 
-  var series = {};                 // key -> {label, points: [score, ...]}
+  /* key -> {label, points, bench}. bench is {step, label, n}: what one
+   * completed game is worth to a benchmark player, what to call them, and how
+   * many the reader has finished. The line sits at step * n, so it climbs at
+   * the rate the reader would have to beat to be doing better than chance. */
+  var series = {};
   var active = null;
   var drawnBox = 0;                // the box width the frame was last drawn at
 
@@ -93,6 +97,11 @@
       if (pts[i] < lo) lo = pts[i];
       if (pts[i] > hi) hi = pts[i];
     }
+    // The benchmark is part of the picture, so the axis has to reach it. Left
+    // out of this, a reader losing to it saw the line vanish off the top of
+    // the frame at the moment it mattered most.
+    var bench = s.bench && s.bench.n > 0 ? s.bench.step * s.bench.n : null;
+    if (bench !== null) { if (bench < lo) lo = bench; if (bench > hi) hi = bench; }
     // Zero is always on the axis: a line that never crosses it still means
     // something different above it than below. And the axis never spans less
     // than two, so an unplayed game is a frame with room in it rather than a
@@ -143,6 +152,18 @@
     });
     yt.textContent = 'Score';
     svg.appendChild(yt);
+
+    /* The benchmark, dotted, with its name sitting on top of it. Drawn before
+     * the score line so the reader's own line is never the one interrupted. */
+    if (bench !== null) {
+      var by = py(bench);
+      svg.appendChild(el('line', {
+        'class': 'sc-bench', x1: X0, y1: by, x2: X1, y2: by
+      }));
+      var bl = el('text', { 'class': 'sc-bench-label', x: X0 + 6, y: by - 6 });
+      bl.textContent = s.bench.label;
+      svg.appendChild(bl);
+    }
 
     // The line, then the points on top of it.
     if (pts.length > 1) {
@@ -211,8 +232,11 @@
   /* The three things a game does to the chart: say it exists, hand it a new
    * total, and claim the frame when the reader turns to it. */
   window.KhaanaScoreLine = {
-    track: function (key, label) {
-      if (!series[key]) series[key] = { label: label, points: [0] };
+    /* bench is optional: {step, label}. step is what one completed game adds
+       to the benchmark, label is what to write above the line. */
+    track: function (key, label, bench) {
+      if (!series[key]) series[key] = { label: label, points: [0], bench: null };
+      if (bench) series[key].bench = { step: bench.step, label: bench.label, n: 0 };
       if (!active) active = key;
       panel.hidden = false;
       draw();
@@ -222,6 +246,16 @@
       if (!s) return;
       s.points.push(total);
       active = key;                // scoring in a game is the loudest claim on it
+      draw();
+    },
+    /* One more completed game against the benchmark: a question solved in the
+       trivia, a board finished in the matching game. Counted separately from
+       the points, because a trial and a game are not the same thing — a trivia
+       question can take four trials to solve and is still one game. */
+    games: function (key, n) {
+      var s = series[key];
+      if (!s || !s.bench || s.bench.n === n) return;
+      s.bench.n = n;
       draw();
     },
     focus: function (key) {
