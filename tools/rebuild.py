@@ -51,6 +51,9 @@ STEPS = [
     ("build-search-index.py",    "the site search index"),
     ("build-seo.py",             "canonical tags, sitemap.xml, robots.txt"),
     ("stamp-image-dims.py",      "intrinsic width/height on every image"),
+    # Every page, including the ones the generators above have just
+    # rewritten, so a rebuild never drops the beacon off 641 recipes.
+    ("sync-analytics.py",        "the Cloudflare Web Analytics beacon"),
     ("version-assets.py",        "cache-busting stamps (must be last)"),
 ]
 
