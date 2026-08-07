@@ -168,7 +168,7 @@
    */
   var RIGHT = 2, WRONG = -1;
   var HOLD_MS = 2000;
-  var NEXT_MS = 1000;              // before Next answers to a click
+  var NEXT_MS = 1250;              // before Next answers to a click
   var score = 0;
   var scoreEl = document.getElementById('trivia-score');
 
@@ -271,8 +271,8 @@
       /* Shown at once so the layout settles, but dead for a second. It used to
        * arrive live and focused on the same frame as the answer, so anyone
        * still clicking through the options hit it before they had read the
-       * fact it sits beside, and the question was gone. A second is long
-       * enough to stop the stray click and short enough not to be a gate. */
+       * fact it sits beside, and the question was gone. Long enough to stop
+       * the stray click, short enough not to be a gate. */
       nextBtn.disabled = true;
       setTimeout(function () {
         nextBtn.disabled = false;
