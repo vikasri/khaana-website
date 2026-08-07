@@ -184,16 +184,27 @@
     return ' + ' + n + ' ' + esc(r.inactiveLabel || 'resting');
   }
 
-  // Hard constraints. These remove a recipe rather than lowering its score,
-  // because "vegan" and "I have 20 minutes" are not preferences you rank by.
+  /* Hard constraints. These remove a recipe rather than lowering its score,
+   * because "vegan" and "I have 20 minutes" are not preferences you rank by.
+   *
+   * Each reason carries whether it is a miss of kind or a miss of fit, which
+   * is what decides whether the dish is worth naming afterwards. Ticking
+   * Soups rules out 636 recipes for not being soups, and "Ariselu — soup"
+   * tells a reader nothing: they did not ask about a sweet. A soup that takes
+   * forty minutes when they asked for thirty is the opposite — the dish they
+   * wanted, missing by ten minutes, and worth saying out loud. */
+  function reason(text, kind) { return { text: text, kind: kind }; }
+
   function excludedBy(recipe, f) {
     var reasons = [];
     var total = recipe.prepMinutes + recipe.cookMinutes;
 
     f.diets.forEach(function (d) {
-      if (recipe.tags.indexOf(d) === -1) reasons.push(labelForTag(d));
+      if (recipe.tags.indexOf(d) === -1) reasons.push(reason(labelForTag(d), 'kind'));
     });
-    if (f.maxTime && total > f.maxTime) reasons.push('over ' + f.maxTime + ' min');
+    if (f.maxTime && total > f.maxTime) {
+      reasons.push(reason('over ' + f.maxTime + ' min', 'fit'));
+    }
 
     /* Healthier in 30 minutes, meaning half an hour of your attention. Total
      * time rather than cooking time, because a reader with half an hour has
@@ -205,19 +216,19 @@
      * than protected, and because a lentil salad you start before you leave
      * the house is exactly the kind of thing this filter should surface. */
     if (f.quickHealthy) {
-      if (recipe.tags.indexOf('healthier') === -1) reasons.push('healthier');
-      if (total > 30) reasons.push('over 30 min');
+      if (recipe.tags.indexOf('healthier') === -1) reasons.push(reason('healthier', 'kind'));
+      if (total > 30) reasons.push(reason('over 30 min', 'fit'));
     }
 
     // Calories per serving. A hard filter on an estimate, so the panel says so:
     // figures marked + are floors, and a dish can scrape in that should not.
     var kc = recipe.nutrition && recipe.nutrition.kcal;
     if (f.maxKcal && typeof kc === 'number' && kc > f.maxKcal) {
-      reasons.push('over ' + f.maxKcal + ' kcal');
+      reasons.push(reason('over ' + f.maxKcal + ' kcal', 'fit'));
     }
 
     if (f.savedOnly && window.KhaanaSaved && !window.KhaanaSaved.has(recipe.id)) {
-      reasons.push('not saved');
+      reasons.push(reason('not saved', 'kind'));
     }
 
     if (f.protein) {
@@ -225,7 +236,7 @@
       // a decent amount of protein does not want the high ones filtered out.
       var b = proteinBand(recipe.nutrition);
       var ok = f.protein === 'high' ? b === 'high' : (b === 'high' || b === 'medium');
-      if (!ok) reasons.push(PROTEIN_LABEL[f.protein].toLowerCase());
+      if (!ok) reasons.push(reason(PROTEIN_LABEL[f.protein].toLowerCase(), 'fit'));
     }
 
     return reasons;
@@ -728,21 +739,63 @@
     more.addEventListener('click', draw);
     draw();
 
+    renderNearMisses(blocked, q);
+  }
+
+  // How many near misses are worth naming. Ten is a glance; the list used to
+  // run to 636 rows and 17,000 pixels, which is not a footnote, it is a
+  // second page of results nobody asked for.
+  var NEAR_MISS_MAX = 10;
+
+  /* The dishes a filter took away that the reader would want back.
+   *
+   * Not every exclusion qualifies. A recipe that fails on kind — not a soup,
+   * not vegan — is simply a different dish, and listing it says only that the
+   * filter did what it was asked. What is worth surfacing is the dish that
+   * passed everything the reader asked for and then missed on a threshold:
+   * the soup that takes forty minutes, the biryani over the hour. Those are
+   * decisions the reader might make differently if they knew.
+   *
+   * Ranked by what the reader is actually doing, so the ten are the ten most
+   * likely to matter: what they searched for first, then what their pantry
+   * can nearly make, then the smallest miss. */
+  function renderNearMisses(blocked, q) {
     var bwrap = el('blocked');
     bwrap.innerHTML = '';
-    if (blocked.length) {
-      var h = document.createElement('h3');
-      h.className = 'blocked-head';
-      h.textContent = 'Ruled out by your filters (' + shown(blocked.length) + ')';
-      bwrap.appendChild(h);
-      blocked.forEach(function (s) {
-        var p = document.createElement('p');
-        p.className = 'blocked-row';
-        p.innerHTML = '<a href="recipes/' + s.recipe.id + '.html">' + esc(s.recipe.name) +
-          '</a> <span>' + esc(s.excluded.join(' / ')) + '</span>';
-        bwrap.appendChild(p);
-      });
-    }
+
+    var near = blocked.filter(function (s) {
+      return s.excluded.length && s.excluded.every(function (e) { return e.kind === 'fit'; });
+    });
+    if (!near.length) return;
+
+    if (q) near.forEach(function (s) { if (s._qs == null) s._qs = queryScore(s, q); });
+
+    near.sort(function (a, b) {
+      if (q && b._qs !== a._qs) return b._qs - a._qs;
+      if (a.excluded.length !== b.excluded.length) return a.excluded.length - b.excluded.length;
+      if (selected.size > 0 && b.pct !== a.pct) return b.pct - a.pct;
+      return (a.recipe.prepMinutes + a.recipe.cookMinutes) -
+             (b.recipe.prepMinutes + b.recipe.cookMinutes);
+    });
+
+    var picked = near.slice(0, NEAR_MISS_MAX);
+    var h = document.createElement('h3');
+    h.className = 'blocked-head';
+    // Says plainly when it is a selection rather than the whole set, because
+    // "(10)" over a trimmed list is a quiet lie about how many there are.
+    h.textContent = near.length > picked.length
+      ? 'Just missed your filters (' + picked.length + ' of ' + shown(near.length) + ')'
+      : 'Just missed your filters (' + picked.length + ')';
+    bwrap.appendChild(h);
+
+    picked.forEach(function (s) {
+      var p = document.createElement('p');
+      p.className = 'blocked-row';
+      p.innerHTML = '<a href="recipes/' + s.recipe.id + '.html">' + esc(s.recipe.name) +
+        '</a> <span>' + esc(s.excluded.map(function (e) { return e.text; }).join(' / ')) +
+        '</span>';
+      bwrap.appendChild(p);
+    });
   }
 
   /* `searching` strips the pantry read-out. Also passed when the pantry is
