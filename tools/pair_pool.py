@@ -50,12 +50,13 @@ PAIR_SKIP = {
                         "Paneer Do Pyaza", "Rabri", "Shahi Tukda",
                         "Shami Kebab", "Zarda", "Zarda Pulao"],
     "Bengali": ["Rasgulla", "Rasmalai"],
-    # Baati chokha is Purvanchal before it is Bihari and bafauri is
-    # Chhattisgarh's, and neither eastern Uttar Pradesh nor Chhattisgarh is a
-    # cuisine on this site. The recipes stay and say where they are from; the
-    # game does not ask a question whose answer is the nearest available shelf.
+    # Baati chokha is Purvanchal before it is Bihari, and eastern Uttar
+    # Pradesh is not a cuisine on this site. The recipe stays and says where it
+    # is from; the game does not ask a question whose answer is the nearest
+    # available shelf. Bafauri sat here for the same reason and has since been
+    # removed from the site for having no photograph.
     "Bihari": ["Aloo Parwal ki Tarkari", "Aloo ki Bhujia", "Anarsa",
-               "Baati Chokha", "Bafauri", "Ghugni", "Kadhi Bari",
+               "Baati Chokha", "Ghugni", "Kadhi Bari",
                "Machhli ka Jhor", "Sarson Wala Aloo", "Silbatte ki Chutney"],
     # Goan-Portuguese, and so is the Mangalorean Catholic kitchen that is more
     # usually credited with it. Sorpotel and chicken cafreal are Goan without

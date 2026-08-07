@@ -39,7 +39,6 @@ SOUPS = [
     "Nandu Rasam",              # Tamil Nadu
     "Katachi Amti",             # Maharashtrian
     "Thukpa",                   # Northeast Indian
-    "Chhurpi Soup",             # Northeast Indian
     "Gundruk ko Jhol",          # Northeast Indian
     "Chamthong",                # Northeast Indian
     "Hot and Sour Soup",        # Indo-Chinese
@@ -48,8 +47,6 @@ SOUPS = [
     "Wonton Soup",              # Indo-Chinese
     "Tomato Dhaniya Shorba",    # Awadhi/Lucknowi
     "Murgh Shorba",             # Awadhi/Lucknowi
-    "Gajar Shorba",             # Awadhi/Lucknowi
-    "Palak Shorba",             # Awadhi/Lucknowi
 ]
 
 # Say "broth" or "soup" about themselves and are not soups. Kept here so the
