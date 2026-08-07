@@ -46,6 +46,27 @@ COLLECTION_FOR_TAG = [
 QUICK_PAGE = ("quick-indian-recipes.html", "Quick Indian recipes (30 min)")
 
 
+def ing_name(i):
+    """The ingredient's printed name, singular when the quantity is one of it.
+
+    Ingredient ids are plural where the thing is normally plural — eggs, curry
+    leaves, cumin seeds — and the name is the id with the hyphens taken out. On
+    a line like "1 tsp" that reads correctly, because the quantity counts
+    spoons rather than seeds. On a bare count it does not, and eleven recipes
+    printed "1, beaten Eggs".
+
+    So the name loses its s only when the quantity is a bare one: "1", or "1,"
+    with the preparation after it. "1 tbsp" and "1 sprig" keep the plural,
+    because what is being counted there is the tablespoon.
+    """
+    name = i["id"].replace("-", " ")
+    qty = (i.get("qty") or "").strip()
+    if (qty == "1" or qty.startswith("1,")) and name.endswith("s") \
+            and not name.endswith("ss"):
+        name = name[:-1]
+    return name
+
+
 def collections_for(r):
     """The collection links for one recipe, longest-tail first."""
     tags = set(r.get("tags", []))
@@ -125,7 +146,7 @@ def schema(r, url, img):
                                   + (r.get("inactiveMinutes") or 0)),
         "recipeYield": "%s servings" % r.get("servings", 4),
         "recipeIngredient": [
-            (i.get("qty", "").strip() + " " + i["id"].replace("-", " ")).strip()
+            (i.get("qty", "").strip() + " " + ing_name(i)).strip()
             for i in r["ingredients"]
         ],
         "recipeInstructions": [
@@ -359,7 +380,7 @@ def render(r, nav, foot):
 
     ing = "\n".join(
         '        <li><span class="ing-qty">%s</span> <span class="ing-name">%s</span>%s%s</li>'
-        % (esc(i.get("qty", "")), esc(i["id"].replace("-", " ").title()),
+        % (esc(i.get("qty", "")), esc(ing_name(i).title()),
            '<span class="ing-note">%s</span>' % esc(i["note"]) if i.get("note") else "",
            '<span class="ing-opt">optional</span>' if i.get("essential") is False else "")
         for i in r["ingredients"])
