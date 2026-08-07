@@ -18,7 +18,12 @@ DAIRY = {"butter", "buttermilk", "condensed-milk", "cream", "ghee", "khoya",
 # flour; leaving them out would let a gluten-free tag through on an upma.
 GLUTEN = {"atta", "maida", "bread", "pav", "vermicelli", "dalia", "rava",
           # Soy sauce is brewed with wheat and egg noodles are wheat.
-          "noodles", "soy-sauce"}
+          "noodles", "soy-sauce",
+          # Farsan made only of besan is gluten-free, and plenty of shop
+          # mixes carry maida. Listed here because of the two ways to be
+          # wrong about a bought mixture, this is the one that costs a
+          # coeliac reader nothing.
+          "farsan"}
 
 SOY = {"soy-sauce", "tofu"}
 

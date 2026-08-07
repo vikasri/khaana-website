@@ -68734,6 +68734,12 @@
           "essential": false
         },
         {
+          "id": "farsan",
+          "qty": "150g",
+          "note": "any crisp besan mixture; sev alone will do",
+          "essential": true
+        },
+        {
           "id": "pav",
           "qty": "8",
           "essential": true

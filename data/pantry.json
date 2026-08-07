@@ -29,10 +29,6 @@
           "name": "Besan (gram flour)"
         },
         {
-          "id": "bread",
-          "name": "Sliced bread"
-        },
-        {
           "id": "cornflour",
           "name": "Cornflour (cornstarch)"
         },
@@ -42,12 +38,16 @@
           "selectable": false
         },
         {
-          "id": "jowar-flour",
-          "name": "Jowar (sorghum) flour"
+          "id": "noodles",
+          "name": "Egg or wheat noodles"
         },
         {
-          "id": "maida",
-          "name": "Plain flour (maida)"
+          "id": "farsan",
+          "name": "Farsan (crisp besan mixture)"
+        },
+        {
+          "id": "jowar-flour",
+          "name": "Jowar (sorghum) flour"
         },
         {
           "id": "maize-flour",
@@ -60,12 +60,12 @@
           "selectable": false
         },
         {
-          "id": "noodles",
-          "name": "Egg or wheat noodles"
-        },
-        {
           "id": "pav",
           "name": "Pav / soft bread rolls"
+        },
+        {
+          "id": "maida",
+          "name": "Plain flour (maida)"
         },
         {
           "id": "poha",
@@ -94,6 +94,10 @@
         {
           "id": "sattu",
           "name": "Sattu (roasted gram flour)"
+        },
+        {
+          "id": "bread",
+          "name": "Sliced bread"
         },
         {
           "id": "vermicelli",
