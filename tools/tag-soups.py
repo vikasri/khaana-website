@@ -38,7 +38,6 @@ SOUPS = [
     "Rasam",                    # Tamil Nadu
     "Nandu Rasam",              # Tamil Nadu
     "Katachi Amti",             # Maharashtrian
-    "Gujarati Kadhi",           # Gujarati
     "Thukpa",                   # Northeast Indian
     "Chhurpi Soup",             # Northeast Indian
     "Gundruk ko Jhol",          # Northeast Indian
@@ -60,6 +59,7 @@ NOT_SOUPS = {
     "Macher Jhol":  "a thin fish curry eaten with rice",
     "Tambda Rassa": "drunk alongside a Kolhapuri thali, but it is the gravy",
     "Haak":         "greens in their own liquor, served with rice",
+    "Gujarati Kadhi": "a yoghurt and gram-flour gravy, poured over rice",
 }
 
 
