@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Food Trivia: Fun Facts About Indian Cooking | Khaana" />
 <meta name="twitter:description" content="Food trivia from India and beyond. Where the chilli really came from, why milk beats water on a burnt tongue, and what vindaloo is actually named after." />
 <meta name="twitter:image" content="https://khaana.com/assets/images/home-hero.jpg" />
-<link rel="stylesheet" href="style.css?v=cd5687ad" />
+<link rel="stylesheet" href="style.css?v=6ef8a601" />
 </head>
 <body>
 
@@ -1427,6 +1427,16 @@
         above.</p></noscript>
     </section>
 
+    <section class="score-chart" id="score-chart" hidden
+             aria-labelledby="score-chart-title">
+      <h2 class="score-chart-title" id="score-chart-title">Trivia</h2>
+      <div class="score-chart-plot">
+        <svg id="score-chart-svg" viewBox="0 0 600 200" width="600" height="200"
+             role="img" aria-label="Score by trial"></svg>
+      </div>
+      <p class="sr-only" id="score-chart-read" role="status" aria-live="polite"></p>
+    </section>
+
     <section class="pair" id="pair-game" hidden aria-labelledby="pair-title">
       <div class="pair-head">
         <h2 id="pair-title">Match dishes to cuisine category</h2>
@@ -1510,8 +1520,10 @@
 </footer>
 
 <script src="script.js?v=cff5324b"></script>
-<script src="assets/js/trivia.js?v=1210a818"></script>
-<script src="assets/js/pair.js?v=10b02684"></script>
+<!-- Before the two games, which register their series with it as they start. -->
+<script src="assets/js/score-chart.js?v=e90f6c14"></script>
+<script src="assets/js/trivia.js?v=bf67a919"></script>
+<script src="assets/js/pair.js?v=b4f1b233"></script>
 <!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "62f25201991348cab07ffeb4eb59dd99"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

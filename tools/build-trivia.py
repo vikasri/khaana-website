@@ -148,6 +148,16 @@ def main():
         above.</p></noscript>
     </section>
 
+    <section class="score-chart" id="score-chart" hidden
+             aria-labelledby="score-chart-title">
+      <h2 class="score-chart-title" id="score-chart-title">Trivia</h2>
+      <div class="score-chart-plot">
+        <svg id="score-chart-svg" viewBox="0 0 600 200" width="600" height="200"
+             role="img" aria-label="Score by trial"></svg>
+      </div>
+      <p class="sr-only" id="score-chart-read" role="status" aria-live="polite"></p>
+    </section>
+
     <section class="pair" id="pair-game" hidden aria-labelledby="pair-title">
       <div class="pair-head">
         <h2 id="pair-title">Match dishes to cuisine category</h2>
@@ -182,6 +192,8 @@ def main():
 %s
 
 <script src="script.js"></script>
+<!-- Before the two games, which register their series with it as they start. -->
+<script src="assets/js/score-chart.js"></script>
 <script src="assets/js/trivia.js"></script>
 <script src="assets/js/pair.js"></script>
 </body>

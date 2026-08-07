@@ -2366,25 +2366,17 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
    page works without JavaScript; trivia.js hides all but today's. */
 /* The welcome line, so it is sized to be read rather than skimmed past. The
    no-JavaScript fallback below the questions keeps the smaller size. */
-/* The page now opens on the game, so it starts closer to the header than a
-   page that opens on a heading would want to. */
+/* The page opens on a heading now, so it wants the ordinary distance from the
+   header rather than the tighter one a page opening on a game wanted. */
 section.trivia-section { padding-top: 24px; }
 @media (max-width: 560px) { section.trivia-section { padding-top: 30px; } }
-/* The h1 is first in the markup and second on the screen.
-   
-   Written in the order it reads, the page began with the game's <h2> and only
-   reached its <h1> halfway down — an outline that says the first thing on the
-   page is a subsection of nothing. Search engines and anyone navigating by
-   headings both read the markup, so the markup is the version that has to be
-   right. The game is lifted above it here instead.
-   
-   Safe to reorder only because the two blocks that move contain no links and
-   no buttons: tab order follows the markup, so moving anything focusable
-   would leave the keyboard jumping about the page. The heading and its one
-   sentence are inert, and everything focusable stays in the order it looks. */
-.trivia-page { display: flex; flex-direction: column; }
-.trivia-page > .pair { order: 1; }
-.trivia-page > .trivia-panel { order: 2; }
+/* Trivia, then the chart, then the matching game — the order they are written
+   in. The page used to lift the game above the trivia with `order`, which
+   meant the h1 was first in the markup and second on the screen; with the
+   trivia at the top the markup and the screen agree and no reordering is
+   needed. The gap lives here rather than as a margin on each panel, so the
+   three blocks space themselves however many of them are on. */
+.trivia-page { display: flex; flex-direction: column; gap: 22px; }
 
 /* A page-opening h1 at 3.2rem was doing a job nothing here needs done: it is
    a section heading now, so it is sized like one — still larger than the
@@ -2576,6 +2568,62 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   .tq-nudge::after { animation: none; transform: scaleX(0); }
 }
 
+/* ---------- Fun facts: the score line ---------- */
+/* One frame for both games, sitting between them. score-chart.js draws the
+   whole of the SVG; everything here is the panel it sits in and the colours it
+   draws with. The panel carries `hidden` in the markup and the script un-hides
+   it, so a reader without JavaScript gets no empty axes. */
+.score-chart {
+  margin: 0; padding: 12px 18px 14px;
+  background: var(--paper);
+  border: 1px solid var(--line); border-radius: var(--radius);
+  /* The line's colour, swapped by the game in the frame. Warm for the trivia,
+     which is the page's own orange, and cool for the matching game — the same
+     two-temperature split the site already uses to tell one thing from
+     another. Both clear 4.5:1 on the paper. */
+  --sc-ink: var(--nav-active);
+}
+.score-chart[data-game="pair"] { --sc-ink: var(--azure); }
+@media (max-width: 759px) { .score-chart { padding: 10px 12px 12px; } }
+
+.score-chart-title {
+  margin: 0 0 6px; font-size: 1.05rem; line-height: 1.2; color: var(--sc-ink);
+}
+/* Capped rather than filling the panel: the frame is drawn at the width it
+   gets, and given 1050px of it the chart stops being the small one asked for.
+   The script measures this box, so the cap here is what sets the size. */
+.score-chart-plot { max-width: 640px; margin: 0 auto; }
+.score-chart-plot svg { display: block; width: 100%; height: auto; }
+
+.sc-grid { stroke: var(--line); stroke-width: 1; }
+.sc-zero { stroke: var(--ink-soft); stroke-width: 1; opacity: 0.45; }
+.sc-axis { stroke: var(--ink-soft); stroke-width: 1; opacity: 0.5; }
+.sc-tick { fill: var(--ink-soft); font-family: var(--sans); font-size: 11px; }
+.sc-tick-y { text-anchor: end; }
+.sc-tick-x { text-anchor: middle; }
+.sc-axis-name {
+  fill: var(--ink-soft); font-family: var(--sans); font-size: 11px;
+  font-weight: 700; text-anchor: middle;
+}
+.sc-line {
+  fill: none; stroke: var(--sc-ink); stroke-width: 2.5;
+  stroke-linejoin: round; stroke-linecap: round;
+}
+/* A point is hollow so the line reads through it, and coloured by which way
+   the trial went — the same green and maroon a right and a wrong answer get
+   above. The origin, which went neither way, keeps the line's own colour. */
+.sc-dot { fill: var(--paper); stroke: var(--sc-ink); stroke-width: 2; }
+.sc-up { stroke: #2e7d4f; }
+.sc-down { stroke: #b3261e; }
+/* The latest total, sitting close enough to its point to cross the line on the
+   way up. Drawn with the paper behind it — a stroke under the fill rather than
+   over it — so it stays legible wherever the line happens to run. */
+.sc-value {
+  fill: var(--ink); font-family: var(--serif); font-size: 13px; font-weight: 700;
+  stroke: var(--paper); stroke-width: 3px; stroke-linejoin: round;
+  paint-order: stroke fill;
+}
+
 /* ---------- Fun facts: the matching game ---------- */
 /* Four dishes down the left, an empty box beside each, and the four cuisines
    to the right of those. pair.js builds the rows and the chips; everything
@@ -2583,7 +2631,7 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    the script un-hides it, so a reader without JavaScript gets the trivia alone
    rather than an empty board. */
 .pair {
-  margin: 0 0 22px; padding: 14px 18px 16px;
+  margin: 0; padding: 14px 18px 16px;
   background: var(--paper);
   border: 1px solid var(--line); border-radius: var(--radius);
 }

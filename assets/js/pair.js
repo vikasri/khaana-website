@@ -91,6 +91,13 @@
   var reduced = window.matchMedia &&
                 window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* The score line under the trivia, shared with it. A trial there is a marked
+   * attempt here — the board is only worth a point when it has been judged,
+   * and everything before that is a cuisine sitting in a box. Optional: the
+   * game plays the same whether or not the script drawing it loaded. */
+  var chart = window.KhaanaScoreLine;
+  if (chart) chart.track('pair', 'Pairing');
+
   /* --- the round ---------------------------------------------------------- */
 
   var pairs = [];        // [{dish, cuisine}] in the order the rows are shown
@@ -258,6 +265,7 @@
 
   function place(row, cuisine) {
     if (busy || locked[row] || placed[row]) return;
+    if (chart) chart.focus('pair');       // a hand on this board claims the frame
     var from = rowOf(cuisine);
     if (from >= 0) {
       if (locked[from]) return;      // already matched; it stays where it is
@@ -280,6 +288,7 @@
 
   function lift(row) {
     if (busy || locked[row] || !placed[row]) return;
+    if (chart) chart.focus('pair');
     placed[row] = null;
     selected = null;
     paint();
@@ -304,6 +313,8 @@
       }
     });
     paint();
+    // One marked attempt, one point on the line — whether it went well or not.
+    if (chart) chart.point('pair', score);
 
     if (!wrong.length) {
       solved();
@@ -457,7 +468,10 @@
 
   /* --- the way in --------------------------------------------------------- */
 
-  if (againBtn) againBtn.addEventListener('click', deal);
+  if (againBtn) againBtn.addEventListener('click', function () {
+    deal();
+    if (chart) chart.focus('pair');
+  });
 
   /* Dealt on load rather than behind a button. The button asked the reader to
    * opt into a game that was already built and sitting there, which is a

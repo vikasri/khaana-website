@@ -172,6 +172,13 @@
   var score = 0;
   var scoreEl = document.getElementById('trivia-score');
 
+  /* The score line under the panel, shared with the matching game. A trial
+   * there is an answer here: every option pressed moves the total, so every
+   * option pressed is a point. The chart is optional — the quiz works the same
+   * whether or not the script that draws it loaded. */
+  var chart = window.KhaanaScoreLine;
+  if (chart) chart.track('trivia', 'Trivia');
+
   /* A friendly line on a wrong answer, and two seconds to read it.
    *
    * Without the pause the messages are pointless: a reader who is guessing
@@ -241,6 +248,7 @@
       score += WRONG;
       womp();
       scoreLine();
+      if (chart) chart.point('trivia', score);
       nudge(q);
       hold(q);
       return;
@@ -261,6 +269,7 @@
     score += RIGHT;
     cheer();
     scoreLine();
+    if (chart) chart.point('trivia', score);
     /* The button goes to where the answer is, not to the foot of the panel.
      * It reads as the end of this question rather than as furniture, and it
      * shares a line with the fact so the two shrink to the same block. */
@@ -285,6 +294,9 @@
     nextBtn.addEventListener('click', function () {
       show();
       scoreLine();
+      // Asking for another question is turning back to this game, so the
+      // shared frame comes back to it even though nothing has scored yet.
+      if (chart) chart.focus('trivia');
     });
   }
 
