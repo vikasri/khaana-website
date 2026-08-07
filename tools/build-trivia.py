@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate fun-facts.html from data/trivia.json.
+"""Generate fun.html from data/trivia.json.
 
     python3 tools/build-trivia.py
 
@@ -33,7 +33,7 @@ from pair_pool import pair_pool
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "data", "trivia.json")
 INDEX = os.path.join(ROOT, "data", "recipes-index.json")
-OUT = os.path.join(ROOT, "fun-facts.html")
+OUT = os.path.join(ROOT, "fun.html")
 PER_DAY = 5
 
 # The matching game's pool, its rules and its exclusions live in
@@ -99,13 +99,13 @@ def main():
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Food Trivia: Fun Facts About Indian Cooking | Khaana</title>
 <meta name="description" content="Food trivia from India and beyond. Where the chilli really came from, why milk beats water on a burnt tongue, and what vindaloo is actually named after." />
-<link rel="canonical" href="https://khaana.com/fun-facts.html" />
+<link rel="canonical" href="https://khaana.com/fun.html" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Khaana" />
 <meta property="og:title" content="Food Trivia | Khaana" />
 <meta property="og:description" content="Where the chilli really came from, why milk beats water on a burnt tongue, and what vindaloo is actually named after." />
-<meta property="og:url" content="https://khaana.com/fun-facts.html" />
+<meta property="og:url" content="https://khaana.com/fun.html" />
 <meta property="og:image" content="https://khaana.com/assets/images/home-hero.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 
@@ -201,7 +201,7 @@ def main():
 """ % (nav, body, nudges, pool_json, pair_msgs, foot)
 
     open(OUT, "w", encoding="utf-8").write(page)
-    print("fun-facts.html written: %d questions, %d a day, a %d-day cycle"
+    print("fun.html written: %d questions, %d a day, a %d-day cycle"
           % (len(qs), PER_DAY, days))
     shown = sum(1 for v in pool.values() for e in v if e[2])
     print("  matching game: %d dishes across %d cuisines, %d with a picture"

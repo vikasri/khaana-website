@@ -37,7 +37,10 @@
    * illegible on a phone: 11px of text in a 600-wide frame squeezed into a
    * 300px column comes out under 6px on the glass. */
   var H = 200, W_MAX = 640, W_MIN = 280;
-  var PAD_L = 46, PAD_R = 14, PAD_T = 12, PAD_B = 42;
+  /* The margins are set by the labels the stylesheet draws in them: room on
+   * the left for a two-digit negative, and enough below for a row of numbers
+   * with the axis name under it. */
+  var PAD_L = 52, PAD_R = 14, PAD_T = 12, PAD_B = 46;
   var X0 = PAD_L, Y0 = PAD_T, Y1 = H - PAD_B;
   var MIN_TRIALS = 4, MIN_SPAN = 2;   // an empty axis still spans something
   var Y_TICKS = 4, X_LABELS = 8;
@@ -115,7 +118,7 @@
         'class': v === 0 ? 'sc-zero' : 'sc-grid',
         x1: X0, y1: y, x2: X1, y2: y
       }));
-      var lab = el('text', { 'class': 'sc-tick sc-tick-y', x: X0 - 8, y: y + 4 });
+      var lab = el('text', { 'class': 'sc-tick sc-tick-y', x: X0 - 8, y: y + 5 });
       lab.textContent = String(Math.round(v));
       svg.appendChild(lab);
     }
@@ -126,7 +129,7 @@
 
     var xStep = Math.ceil(xMax / X_LABELS) || 1;
     for (i = 0; i <= xMax; i += xStep) {
-      var xl = el('text', { 'class': 'sc-tick sc-tick-x', x: px(i), y: Y1 + 17 });
+      var xl = el('text', { 'class': 'sc-tick sc-tick-x', x: px(i), y: Y1 + 20 });
       xl.textContent = String(i);
       svg.appendChild(xl);
     }
@@ -136,7 +139,7 @@
     svg.appendChild(xt);
     var yt = el('text', {
       'class': 'sc-axis-name', x: 0, y: 0,
-      transform: 'translate(13,' + ((Y0 + Y1) / 2) + ') rotate(-90)'
+      transform: 'translate(16,' + ((Y0 + Y1) / 2) + ') rotate(-90)'
     });
     yt.textContent = 'Score';
     svg.appendChild(yt);

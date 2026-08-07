@@ -2598,11 +2598,13 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 .sc-grid { stroke: var(--line); stroke-width: 1; }
 .sc-zero { stroke: var(--ink-soft); stroke-width: 1; opacity: 0.45; }
 .sc-axis { stroke: var(--ink-soft); stroke-width: 1; opacity: 0.5; }
-.sc-tick { fill: var(--ink-soft); font-family: var(--sans); font-size: 11px; }
+/* Sized to be read rather than squinted at: the frame is drawn at true pixel
+   width, so these are the sizes they arrive at on the glass. */
+.sc-tick { fill: var(--ink-soft); font-family: var(--sans); font-size: 14px; }
 .sc-tick-y { text-anchor: end; }
 .sc-tick-x { text-anchor: middle; }
 .sc-axis-name {
-  fill: var(--ink-soft); font-family: var(--sans); font-size: 11px;
+  fill: var(--ink-soft); font-family: var(--sans); font-size: 14px;
   font-weight: 700; text-anchor: middle;
 }
 .sc-line {
@@ -2619,7 +2621,7 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    way up. Drawn with the paper behind it — a stroke under the fill rather than
    over it — so it stays legible wherever the line happens to run. */
 .sc-value {
-  fill: var(--ink); font-family: var(--serif); font-size: 13px; font-weight: 700;
+  fill: var(--ink); font-family: var(--serif); font-size: 15px; font-weight: 700;
   stroke: var(--paper); stroke-width: 3px; stroke-linejoin: round;
   paint-order: stroke fill;
 }

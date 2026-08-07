@@ -28,6 +28,12 @@ OUT = os.path.join(ROOT, "data", "search-index.json")
 #                  to someone standing on it is pure noise.
 SKIP = {"recipe.html", "index.html"}
 
+# A page that forwards somewhere else is an address, not a result. Detected by
+# the redirect itself rather than by a list of names, so a stub left behind by
+# a rename is skipped the day it is written: search was offering "Moved to
+# Pahari Cuisine" as a hit, which sends a reader to a page that bounces them.
+REDIRECT_RE = re.compile(r'<meta http-equiv="refresh"', re.I)
+
 # Strip whole blocks whose text is chrome, not content.
 BLOCK_RE = re.compile(
     r"<(header|footer|nav|script|style|noscript)\b.*?</\1\s*>", re.S | re.I
@@ -57,6 +63,8 @@ def build():
         if not name.endswith(".html") or name in SKIP:
             continue
         markup = open(os.path.join(ROOT, name), encoding="utf-8").read()
+        if REDIRECT_RE.search(markup):
+            continue
 
         title = first(r"<title>(.*?)</title>", markup, name)
         title = title.split("|")[0].strip() or name

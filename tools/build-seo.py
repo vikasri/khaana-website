@@ -17,7 +17,7 @@ SITE = "https://khaana.com"
 
 # Redirect stubs must stay out of the sitemap and keep pointing at their target.
 STUBS = {"south-indian.html": "tamil-nadu.html", "himachali.html": "pahari.html",
-         "recipe.html": "cook.html"}
+         "recipe.html": "cook.html", "fun-facts.html": "fun.html"}
 # recipe.html is a forwarder now; the static pages are the real thing.
 # feedback.html is a form: nothing on it is worth a search result, and listing
 # it in the sitemap while the page says noindex is a contradiction Search

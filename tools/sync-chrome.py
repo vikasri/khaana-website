@@ -107,8 +107,8 @@ def nav_html(current):
     diet += ['          </ul>', '        </li>']
     rows += diet
 
-    rows.append('        <li><a href="fun-facts.html"%s>Fun</a></li>'
-                % (' class="active"' if current == "fun-facts.html" else ""))
+    rows.append('        <li><a href="fun.html"%s>Fun</a></li>'
+                % (' class="active"' if current == "fun.html" else ""))
     rows.append('        <li><a href="recommendations.html"%s>Recommendations</a></li>'
                 % (' class="active"' if current == "recommendations.html" else ""))
     rows.append('        <li><a href="about.html"%s>About</a></li>'
