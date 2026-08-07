@@ -12,6 +12,17 @@
   var STORAGE_KEY = 'khaana.pantry.v1';
   var SHOW = 3;
   var MIN_PCT = 20;          // same floor the Cook page uses
+  // Same shelf weights, and they have to stay the same: the strip and the Cook
+  // page show a percentage for the same recipe, and two different numbers for
+  // one dish is a bug the reader can see. Reasoning lives in cook.js.
+  var CAT_WEIGHT = {
+    protein: 2.5, pulses: 2.0, veg: 1.6, grains: 1.5, spices: 0.4
+  };
+  var ING_WEIGHT = { paneer: 2.5, tofu: 2.5 };   // filed as dairy, cooked as the main event
+  // A centre-of-the-plate ingredient the database rarely asks for is a strong
+  // signal of what the cook wants; a common one is not. Reasoning in cook.js.
+  var RARE_SHARE = 0.04, RARE_BONUS = 1.4;
+  var CENTRE_SHELVES = { protein: 1, pulses: 1, veg: 1, grains: 1 };
 
   var strip = document.getElementById('kitchen-strip');
   if (!strip) return;
@@ -36,11 +47,33 @@
     var pantry = res[0], recipes = res[1].recipes;
     var staples = pantry.staples, subs = pantry.substitutions;
 
+    var shelf = {};
+    pantry.categories.forEach(function (c) {
+      c.items.forEach(function (i) { shelf[i.id] = c.id; });
+    });
+
+    var freq = {};
+    recipes.forEach(function (r) {
+      r.ingredients.forEach(function (i) {
+        if (i.essential === false) return;
+        freq[i.id] = (freq[i.id] || 0) + 1;
+      });
+    });
+
+    function weightFor(id) {
+      var cw = ING_WEIGHT[id];
+      if (typeof cw !== 'number') cw = CAT_WEIGHT[shelf[id]];
+      if (typeof cw !== 'number') cw = 1;
+      var centre = CENTRE_SHELVES[shelf[id]] || typeof ING_WEIGHT[id] === 'number';
+      if (centre && (freq[id] || 0) < recipes.length * RARE_SHARE) cw *= RARE_BONUS;
+      return cw;
+    }
+
     function score(r) {
       var earned = 0, possible = 0;
       r.ingredients.forEach(function (ing) {
         if (staples.indexOf(ing.id) !== -1) return;      // assumed present
-        var w = ing.essential === false ? 0.35 : 1;
+        var w = (ing.essential === false ? 0.35 : 1) * weightFor(ing.id);
         possible += w;
         if (have.has(ing.id)) { earned += w; return; }
         var opts = subs[ing.id] || [];

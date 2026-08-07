@@ -34,6 +34,10 @@ STEPS = [
 
     ("build-recipe-pages.py",    "651 recipe pages"),
     ("build-cuisine-recipes.py", "recipe lists on the 21 cuisine pages"),
+    # After sync-chrome, because it copies the header out of cook.html and so
+    # needs the Collections menu already there; before the second sync-chrome,
+    # which is what marks the active link on the pages this writes.
+    ("build-collections.py",     "the 8 diet and time collection pages"),
     ("build-recommendations.py", "the curated seven"),
     ("build-pair-thumbs.py",     "thumbnails for the matching game"),
     ("build-trivia.py",          "the fun facts page"),

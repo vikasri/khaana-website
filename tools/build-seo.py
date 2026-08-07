@@ -41,6 +41,50 @@ def page_image(path, src):
     return m.group(1) if m else "assets/images/home-hero.jpg"
 
 
+def site_ld():
+    """Who the site is and how to search it, on the home page only.
+
+    The WebSite/SearchAction pair is what a search engine reads to offer a
+    search box under the site's own listing. It is declared only because the
+    endpoint is real: cook.html reads ?q= and prefills the box. Claiming one
+    that does not work is worse than claiming none.
+
+    No aggregateRating anywhere on the site, here or on the recipes. Star
+    ratings in a result listing come from real reviews by real people, and
+    there is no review system; inventing the numbers to win the stars is the
+    kind of thing that costs a site its rich results permanently.
+    """
+    return json.dumps([
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Khaana",
+            "alternateName": "Khaana — Indian regional recipes",
+            "url": SITE + "/",
+            "description": ("Recipes and food history from India's 21 regional cuisines, "
+                            "with measured ingredients, nutrition estimates and a pantry "
+                            "search that ranks dishes by what you already have."),
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": SITE + "/cook.html?q={search_term_string}",
+                },
+                "query-input": "required name=search_term_string",
+            },
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Khaana",
+            "url": SITE + "/",
+            "logo": SITE + "/assets/images/home-hero.jpg",
+            "description": ("An independent guide to the regional cuisines of India: "
+                            "history, ingredients and tested recipes."),
+        },
+    ], indent=1)
+
+
 def main():
     pages = sorted(glob.glob(os.path.join(ROOT, "*.html")))
     touched = 0
@@ -78,6 +122,15 @@ def main():
         src = re.sub(r'\n<link rel="canonical".*?(?=\n<link rel="stylesheet")', "", src, flags=re.S)
         src = re.sub(r'\n<meta (?:property="og:|name="twitter:|name="robots")[^>]*/?>', "", src)
         src = src.replace('<link rel="stylesheet"', "\n".join(block) + '\n<link rel="stylesheet"', 1)
+
+        # Site-level markup, home page only, replaced whole rather than stacked.
+        marker = '<script type="application/ld+json" data-site="1">'
+        src = re.sub(r'\n<script type="application/ld\+json" data-site="1">.*?</script>',
+                     "", src, flags=re.S)
+        if path == "index.html":
+            src = src.replace("</head>", "%s\n%s\n</script>\n</head>"
+                              % (marker, site_ld()), 1)
+
         open(full, "w", encoding="utf-8").write(src)
         touched += 1
 

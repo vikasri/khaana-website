@@ -27,6 +27,64 @@
   var COUNT_CAP = 100;
   function shown(n) { return n > COUNT_CAP ? COUNT_CAP + '+' : String(n); }
 
+  /* What a match is worth, by the pantry shelf the ingredient sits on.
+   *
+   * Counting every ingredient equally sounds fair and is not: spices are 40%
+   * of all the essential lines in the database, and the median recipe is 38%
+   * spices. A stocked masala dabba alone therefore scored 37% on the median
+   * recipe and cleared the 20% floor on 533 of the 656 — before the cook owned
+   * a single vegetable. Pork Bafat came back at 86% to a kitchen with no meat
+   * in it.
+   *
+   * So the shelves that decide whether dinner is possible are worth more than
+   * the ones that season it. Missing the chicken means a different dinner;
+   * missing the ajwain means a slightly flatter one.
+   *
+   * This reweights within a recipe rather than between recipes: pct stays
+   * earned/possible, so a dish that really is mostly spices — a chutney, a
+   * masala — is unaffected. Only mixed lists change, which is the point. */
+  var CAT_WEIGHT = {
+    protein: 2.5,   // meat, fish and eggs — names the dish, substitutes for nothing
+    pulses: 2.0,    // the dal is the centre of the plate as much as any meat
+    veg: 1.6,
+    grains: 1.5,    // no besan, no pakora
+    spices: 0.4
+    // aromatics, dairy and the sour/sweet/nut shelf stay at 1.0.
+  };
+
+  /* A few ingredients are filed by what they are made of rather than by the
+   * job they do. Paneer and tofu are catalogued as dairy, next to butter and
+   * cream, but nobody seasons a dish with paneer — it is the centre of the
+   * plate exactly as chicken is, and a cook who has it is looking for the
+   * dishes built on it. At the shelf weight of 1.0 a paneer-only pantry
+   * returned nothing at all: the top paneer dish scored under the 20% floor
+   * and was dropped.
+   *
+   * Ingredient beats shelf. Kept deliberately short — this is for ingredients
+   * a dish is named after, not a second weighting system. */
+  var ING_WEIGHT = {
+    paneer: 2.5,
+    tofu: 2.5
+  };
+
+  /* An ingredient that turns up everywhere identifies nothing. Green chilli is
+   * in 288 of the 656 recipes and onion in 260 — on the vegetable shelf by
+   * botany, but doing a spice's job in the kitchen. Lotus stem is in four
+   * recipes and jackfruit in three, and a cook who ticks one of those has said
+   * something very specific about what they want for dinner.
+   *
+   * So a centre-of-the-plate ingredient the database rarely calls for is worth
+   * more than a common one. Measured against the database rather than listed
+   * here, so it stays true as recipes are added, and applied upward only: the
+   * alternative, taxing onion and tomato, cost a beginner with four things
+   * ticked a third of their results to sharpen a case they are not in yet.
+   *
+   * Never applied to spices. A rare spice is still a seasoning — kewra water
+   * does not become the point of the dish by being unusual. */
+  var RARE_SHARE = 0.04;   // called for by under 4% of the database
+  var RARE_BONUS = 1.4;
+  var CENTRE_SHELVES = { protein: 1, pulses: 1, veg: 1, grains: 1 };
+
   var pantry = null;
   var recipes = [];
   var selected = new Set();
@@ -76,7 +134,10 @@
     counted.forEach(function (l) {
       // Essentials are weighted 1.0, optional extras 0.35: not having a
       // garnish should barely dent the score, missing the main pulse should.
-      var w = l.essential ? 1 : 0.35;
+      // Then by shelf, so the protein and the vegetables carry the score and
+      // the spice rack stops carrying it. See CAT_WEIGHT.
+      var w = (l.essential ? 1 : 0.35) * weightFor(l.id);
+      l.weight = w;
       possible += w;
       if (l.state === 'have') earned += w;
       else if (l.state === 'substitute') earned += w * (1 - (l.via.penalty || 0.2));
@@ -171,6 +232,47 @@
   }
 
   /* ---------- lookups ---------- */
+
+  // Which shelf an ingredient sits on, read from the pantry file rather than
+  // listed again here, so a new ingredient is weighted the moment it is
+  // catalogued. Every id in the database resolves; staples never reach this.
+  var CAT_CACHE = null;
+  // How many recipes call for each ingredient as an essential. Counted once,
+  // from the same index the page is about to score against.
+  var FREQ = null;
+  function buildFreq() {
+    FREQ = {};
+    recipes.forEach(function (r) {
+      r.ingredients.forEach(function (i) {
+        if (i.essential === false) return;
+        FREQ[i.id] = (FREQ[i.id] || 0) + 1;
+      });
+    });
+  }
+
+  var WEIGHT_CACHE = {};
+  function weightFor(id) {
+    if (WEIGHT_CACHE[id]) return WEIGHT_CACHE[id];
+    if (!CAT_CACHE) {
+      CAT_CACHE = {};
+      pantry.categories.forEach(function (c) {
+        c.items.forEach(function (i) { CAT_CACHE[i.id] = c.id; });
+      });
+    }
+    if (!FREQ) buildFreq();
+
+    var shelf = CAT_CACHE[id];
+    var w = typeof ING_WEIGHT[id] === 'number' ? ING_WEIGHT[id] : CAT_WEIGHT[shelf];
+    if (typeof w !== 'number') w = 1;
+    // An ING_WEIGHT entry says "this is the centre of the plate" as much as a
+    // shelf does, so paneer earns the bonus its dairy shelf would have denied.
+    var centre = CENTRE_SHELVES[shelf] || typeof ING_WEIGHT[id] === 'number';
+    if (centre && (FREQ[id] || 0) < recipes.length * RARE_SHARE) {
+      w *= RARE_BONUS;
+    }
+    WEIGHT_CACHE[id] = w;
+    return w;
+  }
 
   var NAME_CACHE = {};
   function nameFor(id) {
@@ -715,7 +817,12 @@
     // makes the whole card clickable, so pressing it opened the recipe instead
     // of showing the rest. It is a real button now, and the full list ships
     // hidden beside it rather than being fetched again.
-    var missAll = s.missingAll.map(function (l) { return esc(l.name); });
+    // Heaviest shelf first, because this list is cut off at four: a card that
+    // says "Missing: ajwain, bay leaf, clove, mace" and hides the mutton
+    // behind "+3 more" has buried the only line that matters.
+    var missAll = s.missingAll.slice().sort(function (x, y) {
+      return (y.weight || 0) - (x.weight || 0);
+    }).map(function (l) { return esc(l.name); });
     var missBits = missAll.slice(0, 4).join(', ');
     var extraMiss = missAll.length > 4
       ? '<span class="miss-rest" hidden>, ' + missAll.slice(4).join(', ') + '</span>' +
@@ -928,7 +1035,18 @@
     });
     var recipeSearch = el('recipe-search');
     if (recipeSearch) {
-      recipeSearch.addEventListener('input', update);
+      /* Every keystroke re-scores and redraws all 656 recipes. That is about
+       * 20ms on a desktop and three to five times that on the cheap Android
+       * this site is mostly read on, which is enough to make typing feel like
+       * it is dragging. Coalescing a fast typist's run of keystrokes into one
+       * render costs nothing a reader can perceive — 120ms is below the
+       * threshold where a pause reads as lag — and skips the four or five
+       * intermediate result sets nobody was going to look at. */
+      var typing = null;
+      recipeSearch.addEventListener('input', function () {
+        clearTimeout(typing);
+        typing = setTimeout(update, 120);
+      });
       recipeSearch.addEventListener('search', update);   // the native clear button
     }
     var clearSearch = el('clear-search');
@@ -938,6 +1056,18 @@
         recipeSearch.focus();
         update();
       });
+    }
+
+    /* ?q= prefills the box. A search on this page used to leave no trace in
+     * the URL, so a result could not be linked, bookmarked or sent to anyone —
+     * and the site could not honestly declare a search endpoint to a search
+     * engine, which is what puts a site-search box under a listing. */
+    if (recipeSearch && window.location.search) {
+      var m = /[?&]q=([^&]*)/.exec(window.location.search);
+      if (m) {
+        try { recipeSearch.value = decodeURIComponent(m[1].replace(/\+/g, ' ')); }
+        catch (e) { recipeSearch.value = m[1]; }
+      }
     }
 
     var search = el('pantry-search');

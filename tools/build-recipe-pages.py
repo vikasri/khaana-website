@@ -28,6 +28,32 @@ OUT = os.path.join(ROOT, "recipes")
 SITE = "https://khaana.com"
 FALLBACK_IMG = "assets/images/home-hero.jpg"
 
+# Which collection pages a recipe belongs on, by tag. Printed at the foot of
+# the page as real links: 656 recipe pages that link only upward to their own
+# region leave the collection pages depending entirely on the nav, and a page
+# nothing links to from the body of the site is a page search engines treat as
+# an afterthought. Written the way a reader would say it, since that is also
+# what someone types.
+COLLECTION_FOR_TAG = [
+    ("healthier",       "healthy-indian-recipes.html",     "Healthy Indian recipes"),
+    ("vegan",           "vegan-indian-recipes.html",       "Vegan Indian recipes"),
+    ("vegetarian",      "vegetarian-indian-recipes.html",  "Vegetarian Indian recipes"),
+    ("gluten-free",     "gluten-free-indian-recipes.html", "Gluten-free Indian recipes"),
+    ("dairy-free",      "dairy-free-indian-recipes.html",  "Dairy-free Indian recipes"),
+    ("no-onion-garlic", "no-onion-no-garlic-recipes.html", "No onion no garlic recipes"),
+    ("soup",            "indian-soup-recipes.html",        "Indian soup recipes"),
+]
+QUICK_PAGE = ("quick-indian-recipes.html", "Quick Indian recipes (30 min)")
+
+
+def collections_for(r):
+    """The collection links for one recipe, longest-tail first."""
+    tags = set(r.get("tags", []))
+    out = [(href, label) for tag, href, label in COLLECTION_FOR_TAG if tag in tags]
+    if (r.get("prepMinutes") or 0) + (r.get("cookMinutes") or 0) <= 30:
+        out.insert(0, QUICK_PAGE)
+    return out
+
 
 def esc(s):
     return html.escape(str(s if s is not None else ""), quote=True)
@@ -138,7 +164,28 @@ def schema(r, url, img):
             diets.append("https://schema.org/GlutenFreeDiet")
         if diets:
             d["suitableForDiet"] = diets
-    return json.dumps(d, ensure_ascii=False, indent=2)
+
+    # A second graph node: where this page sits. Breadcrumbs are what turn the
+    # green URL line in a result into "khaana.com > Bihari > Machhak Jhor",
+    # which is both more clickable and more legible than the path.
+    crumbs = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Khaana", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "Recipes",
+             "item": SITE + "/cook.html"},
+        ],
+    }
+    if r.get("regionPage"):
+        crumbs["itemListElement"].append(
+            {"@type": "ListItem", "position": 3, "name": r["region"],
+             "item": "%s/%s" % (SITE, r["regionPage"])})
+    crumbs["itemListElement"].append(
+        {"@type": "ListItem", "position": len(crumbs["itemListElement"]) + 1,
+         "name": r["name"], "item": "%s/recipes/%s.html" % (SITE, r["id"])})
+
+    return json.dumps([d, crumbs], ensure_ascii=False, indent=2)
 
 
 
@@ -244,11 +291,22 @@ def doneness_block(r):
 def render(r, nav, foot):
     """One recipe page.
 
-    The jump links below the allergen line are not decoration. On a phone the
-    method starts about 2,000px down and there were no anchors at all, so a
-    cook at step six scrolled back through twenty ingredients to check a
-    quantity. Sticky under the header on small screens; hidden on desktop,
-    where the ingredient column is already sticky beside the method.
+    The jump links are not decoration. On a phone the method starts about
+    2,000px down and there were no anchors at all, so a cook at step six
+    scrolled back through twenty ingredients to check a quantity. Sticky under
+    the header on small screens; hidden on desktop, where the ingredient
+    column is already sticky beside the method.
+
+    They stay a direct child of the article, after the head, because a sticky
+    element cannot escape its parent's box: moved inside .recipe-head so they
+    would sit above the photo, they scrolled away with the head and were gone
+    by the time the method started — losing the one thing they are for. The
+    phone ordering is done in CSS instead, which is why the mobile rules
+    reorder the article rather than the markup doing it.
+
+    The scope note on the allergen check moved down to the end of the
+    ingredient list: it is about that list, and it was four lines of small
+    print standing between the reader and it.
     """
     rid = r["id"]
     url = "%s/recipes/%s.html" % (SITE, rid)
@@ -324,6 +382,15 @@ def render(r, nav, foot):
     nutrition_html = nutrition_panel(r)
     doneness_html = doneness_block(r)
 
+    colls = collections_for(r)
+    collection_line = ('<p class="collection-links"><strong>More like this:</strong> '
+                       + " &middot; ".join('<a href="../%s">%s</a>' % (h, esc(l))
+                                           for h, l in colls)
+                       + (' &middot; <a href="../%s">%s recipes</a>'
+                          % (esc(r["regionPage"]), esc(r["region"]))
+                          if r.get("regionPage") else "")
+                       + '</p>') if colls or r.get("regionPage") else ""
+
     # The sixth stat, only where there is a wait to name. Leaving it off the
     # other 240 recipes keeps its presence meaningful.
     plus_stat = ('<div class="stat stat-plus"><span class="stat-label">Plus</span>'
@@ -390,6 +457,12 @@ def render(r, nav, foot):
         {photo}
       </div>
 
+      <nav class="recipe-jump" aria-label="Jump to a section">
+        <a href="#ingredients">Ingredients</a>
+        <a href="#method">Method</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+
       <div class="recipe-stats">
         <div class="stat"><span class="stat-label">Prep</span><span class="stat-value">{r.get('prepMinutes',0)} min</span></div>
         <div class="stat"><span class="stat-label">Cook</span><span class="stat-value">{r.get('cookMinutes',0)} min</span></div>
@@ -402,13 +475,6 @@ def render(r, nav, foot):
 
       {'<p class="allergen"><strong>Contains:</strong> %s</p>' % esc(allerg) if allerg
        else f'<p class="allergen none"><strong>Allergens:</strong> {T.ALLERGEN_NONE}</p>'}
-      <p class="allergen-scope">{T.ALLERGEN_SCOPE}</p>
-
-      <nav class="recipe-jump" aria-label="Jump to a section">
-        <a href="#ingredients">Ingredients</a>
-        <a href="#method">Method</a>
-        <a href="#nutrition">Nutrition</a>
-      </nav>
 
       <div class="recipe-cols">
         <div class="recipe-ing">
@@ -419,6 +485,7 @@ def render(r, nav, foot):
           </ul>
           <h3>Cookware</h3>
           <p class="equip-line">{esc(', '.join(e.replace('-', ' ') for e in r.get('equipment', [])))}</p>
+          <p class="allergen-scope">{T.ALLERGEN_SCOPE}</p>
         </div>
         <div class="recipe-method">
           {'<h2>Before you start</h2><ul class="prep-notes">%s</ul>' % notes if notes else ''}
@@ -433,6 +500,8 @@ def render(r, nav, foot):
       </div>
 
       {nutrition_html}
+
+      {collection_line}
 
       <p class="provenance">{T.PROVENANCE}
           <a href="../about.html">More in About</a>.</p>
