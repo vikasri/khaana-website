@@ -44,8 +44,12 @@
    *
    * The second wait, below, is a different thing: the wrong pairs staying put
    * long enough to be read before they go back. */
-  var CHECK_MS = 500;              // the board thinking, before it says anything
-  var WRONG_MS = 1100;             // how long a wrong pair stays red before it returns
+  /* The wait after the fourth cuisine goes down is these two, back to back:
+   * the board flashes while it thinks, then the misses sit in red before they
+   * clear. It came to 1.6 seconds, which is long enough to feel like waiting
+   * for the game rather than reading it. 0.75 and 0.75 now, 1.5 in total. */
+  var CHECK_MS = 750;              // the board thinking, before it says anything
+  var WRONG_MS = 750;              // how long a wrong pair stays red before it returns
   var DRAG_SLOP = 6;               // px of movement before a press becomes a drag
 
   var panel = document.getElementById('pair-game');
