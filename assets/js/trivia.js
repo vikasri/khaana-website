@@ -177,12 +177,16 @@
    * option pressed is a point. The chart is optional — the quiz works the same
    * whether or not the script that draws it loaded.
    *
-   * The dotted benchmark on it is a quarter of a point per question solved.
-   * A reader under that line is scoring worse than guessing would. */
+   * The dotted benchmark on it is half a point per question solved, which is
+   * what a blind guesser scores here. Four options, two for the right one and
+   * one off for each wrong one, and a wrong pick is eliminated rather than
+   * ending the question — so the guesser's wrong count is 0, 1, 2 or 3 with
+   * equal chance and the question is worth (2 + 1 + 0 - 1) / 4. A reader under
+   * that line is scoring worse than guessing would. */
   var chart = window.KhaanaScoreLine;
   var solved = 0;                  // questions got right, which is games played
   if (chart) chart.track('trivia', 'Trivia',
-                         { step: 0.25, label: 'A blindfolded guesser' });
+                         { step: 0.5, label: 'A blindfolded guesser' });
 
   /* A friendly line on a wrong answer, and two seconds to read it.
    *
