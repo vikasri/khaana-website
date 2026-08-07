@@ -40,6 +40,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "data", "recipes.json")
 OMIT_WORDS = ("omit", "leave out", "discard")
 
+# What makes a dish pescatarian rather than merely meatless.
+PESCATARIAN_YES = {"fish", "dried-fish", "prawns", "crab", "squid"}
+
 
 def parts(r):
     """essential ids, and optional ids the recipe does not tell you to drop."""
@@ -73,17 +76,37 @@ def main():
         r["allergens"] = want
 
         tags = set(r.get("tags") or [])
-        # A blocked tag comes off. egg-free goes on wherever nothing blocks it,
-        # so the new filter covers the whole catalogue rather than only the
-        # recipes someone remembered to tag.
+        # A blocked tag comes off, and an unblocked one goes on. Both
+        # directions, because for a while only egg-free went on and the rest
+        # were applied by hand: 137 recipes with no onion or garlic anywhere in
+        # them were missing the tag, so more than half of what belonged in that
+        # filter was invisible to it. A tag that is a pure function of the
+        # ingredient list should not depend on anyone remembering.
+        #
+        # pescatarian is the exception and stays manual. Its blocker is meat,
+        # so deriving it would put the tag on all 436 vegetarian dishes, and
+        # what it is used to mean here is the narrower and more useful "this
+        # has fish or seafood in it and nothing else from an animal".
         for tag, blockers in TAG_BLOCKERS.items():
+            if tag == "pescatarian":
+                continue
             blocked = bool(essential & blockers) or bool(optional & blockers)
             if blocked and tag in tags:
                 tags.discard(tag)
                 removed_t.setdefault(tag, []).append(r["id"])
-            elif tag == "egg-free" and not blocked and tag not in tags:
+            elif not blocked and tag not in tags:
                 tags.add(tag)
                 added_t.setdefault(tag, []).append(r["id"])
+
+        # Fish and seafood, and nothing else off an animal.
+        seafood = bool(everything & PESCATARIAN_YES)
+        other_meat = bool(everything & (TAG_BLOCKERS["pescatarian"] - PESCATARIAN_YES))
+        if seafood and not other_meat and "pescatarian" not in tags:
+            tags.add("pescatarian")
+            added_t.setdefault("pescatarian", []).append(r["id"])
+        elif (not seafood or other_meat) and "pescatarian" in tags:
+            tags.discard("pescatarian")
+            removed_t.setdefault("pescatarian", []).append(r["id"])
         # vegan implies vegetarian; never leave one without the other.
         if "vegan" in tags:
             tags.add("vegetarian")

@@ -44,6 +44,21 @@ def esc(s):
 # Each collection: the file, what it is called, how a recipe qualifies, and the
 # one paragraph that says what the reader is looking at. The blurbs are short
 # on purpose — a page of prose above a list of recipes is a page nobody reads.
+def headroom(r):
+    """How far inside the healthier definition a dish sits. Lower is lighter.
+
+    The four figures tools/tag-healthy.py calls "the whole dial", each divided
+    by the ceiling that tool sets for it, so a dish at half of every limit
+    comes out at 2.0 and one sitting on every limit at 4.0. The same function
+    orders the Healthier filter on the Cook page, in assets/js/cook.js.
+    """
+    n = (r.get("nutrition") or {}).get("perServing")
+    if not n:
+        return float("inf")
+    return (n["satFat"] / 7.0 + n["fat"] / 20.0
+            + n["kcal"] / 700.0 + n.get("sugars", 0) / 12.0)
+
+
 COLLECTIONS = [
     {
         "file": "healthy-indian-recipes.html",
@@ -55,6 +70,10 @@ COLLECTIONS = [
                  "serving rather than on a dish's reputation. Nothing in this list "
                  "is deep-fried."),
         "test": lambda r: "healthier" in r.get("tags", []),
+        # The lede promises a list chosen on what is in a serving, so the order
+        # has to be that too. Alphabetical opened on Aloo Gobi and buried the
+        # lightest dishes in the middle of the page.
+        "order": lambda r: headroom(r),
     },
     {
         "file": "vegan-indian-recipes.html",
@@ -353,8 +372,9 @@ def main():
 
     counts = {}
     for coll in COLLECTIONS:
+        order = coll.get("order") or (lambda r: 0)
         hits = sorted((r for r in recipes if coll["test"](r)),
-                      key=lambda r: r["name"])
+                      key=lambda r: (order(r), r["name"]))
         if not hits:
             print("  ! %-40s no recipes match" % coll["file"])
             continue

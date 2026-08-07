@@ -65,6 +65,12 @@ def main():
                 "carbs": ps["carbs"],
                 "fat": ps["fat"],
                 "satFat": ps["satFat"],
+                # Not shown on a card. It is here because the Healthier filter
+                # ranks on the same four figures tag-healthy.py sets its
+                # thresholds against, and without sugar in the index the Cook
+                # page and the healthy collection page would order the same
+                # dishes differently.
+                "sugars": ps.get("sugars", 0),
                 "fibre": ps["fibre"],
                 "confidence": n.get("confidence", "medium"),
                 "direction": n.get("direction", "ok"),

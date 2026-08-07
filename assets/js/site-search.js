@@ -7,7 +7,7 @@
 (function () {
   'use strict';
 
-  var INDEX_URL = 'data/search-index.json';
+  var INDEX_URL = 'data/search-index.json?v=8abcc55e';
   var MAX_RESULTS = 7;
 
   var input, panel, entries = null, active = -1, loading = false;

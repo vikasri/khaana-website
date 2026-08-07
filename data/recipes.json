@@ -265,6 +265,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -547,6 +548,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -683,6 +685,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -867,7 +870,8 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "pescatarian"
       ],
       "allergens": [
         "fish"
@@ -2404,6 +2408,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -2740,6 +2745,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -2878,6 +2884,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegan",
         "vegetarian"
       ],
@@ -3295,6 +3302,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -3619,7 +3627,8 @@
         "egg-free",
         "gluten-free",
         "healthier",
-        "nut-free"
+        "nut-free",
+        "pescatarian"
       ],
       "allergens": [
         "crustacean"
@@ -4441,6 +4450,7 @@
         "oven"
       ],
       "tags": [
+        "no-onion-garlic",
         "nut-free"
       ],
       "allergens": [
@@ -4590,6 +4600,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -5410,7 +5421,10 @@
         "stovetop",
         "kadhai"
       ],
-      "tags": [],
+      "tags": [
+        "no-onion-garlic",
+        "nut-free"
+      ],
       "allergens": [
         "dairy",
         "gluten",
@@ -5585,7 +5599,8 @@
       ],
       "tags": [
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "pescatarian"
       ],
       "allergens": [
         "dairy",
@@ -9010,6 +9025,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -9167,9 +9183,12 @@
         "blender"
       ],
       "tags": [
+        "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
+        "vegan",
         "vegetarian"
       ],
       "allergens": [],
@@ -9940,6 +9959,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -11454,6 +11474,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -11635,6 +11656,7 @@
         "stovetop"
       ],
       "tags": [
+        "dairy-free",
         "egg-free",
         "nut-free"
       ],
@@ -12657,6 +12679,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -13690,6 +13713,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -14046,6 +14070,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -14204,6 +14229,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -15322,6 +15348,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -16029,7 +16056,8 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "pescatarian"
       ],
       "allergens": [
         "fish",
@@ -17661,6 +17689,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -19005,6 +19034,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "pescatarian"
       ],
@@ -19345,7 +19375,8 @@
         "egg-free",
         "gluten-free",
         "healthier",
-        "nut-free"
+        "nut-free",
+        "pescatarian"
       ],
       "allergens": [
         "fish",
@@ -19717,6 +19748,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -20721,6 +20753,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -20867,6 +20900,8 @@
       ],
       "tags": [
         "egg-free",
+        "gluten-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -21427,7 +21462,9 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
-        "nut-free"
+        "no-onion-garlic",
+        "nut-free",
+        "pescatarian"
       ],
       "allergens": [
         "fish",
@@ -22169,6 +22206,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -22682,6 +22720,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -22878,6 +22917,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -23274,6 +23314,7 @@
       ],
       "tags": [
         "egg-free",
+        "gluten-free",
         "nut-free"
       ],
       "allergens": [
@@ -23483,6 +23524,9 @@
       "inactiveLabel": "marinating",
       "doneness": [
         "whole-red"
+      ],
+      "tagsConditional": [
+        "gluten-free"
       ]
     },
     {
@@ -23506,6 +23550,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -23849,6 +23894,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -25918,6 +25964,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -26084,6 +26131,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -26639,6 +26687,7 @@
         "oven"
       ],
       "tags": [
+        "no-onion-garlic",
         "nut-free"
       ],
       "allergens": [
@@ -26984,6 +27033,7 @@
         "oven"
       ],
       "tags": [
+        "no-onion-garlic",
         "nut-free"
       ],
       "allergens": [
@@ -27771,6 +27821,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegan",
         "vegetarian"
       ],
@@ -28346,7 +28397,8 @@
       "tags": [
         "dairy-free",
         "egg-free",
-        "gluten-free"
+        "gluten-free",
+        "nut-free"
       ],
       "allergens": [],
       "ingredients": [
@@ -29871,6 +29923,7 @@
         "kadhai"
       ],
       "tags": [
+        "nut-free",
         "pescatarian"
       ],
       "allergens": [
@@ -31239,6 +31292,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -32190,6 +32244,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -32439,6 +32494,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -32603,6 +32659,7 @@
       "tags": [
         "dairy-free",
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -32990,6 +33047,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -34141,6 +34199,7 @@
         "egg-free",
         "gluten-free",
         "healthier",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -34383,6 +34442,7 @@
       "tags": [
         "dairy-free",
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -34527,6 +34587,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -34735,6 +34796,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -35128,6 +35190,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -35697,6 +35760,7 @@
       "tags": [
         "dairy-free",
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -36906,6 +36970,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -37052,6 +37117,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegan",
         "vegetarian"
       ],
@@ -38381,6 +38447,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -39203,7 +39270,8 @@
       ],
       "tags": [
         "egg-free",
-        "gluten-free"
+        "gluten-free",
+        "nut-free"
       ],
       "allergens": [
         "dairy",
@@ -41886,6 +41954,9 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
+        "nut-free",
+        "vegan",
         "vegetarian"
       ],
       "allergens": [
@@ -42001,7 +42072,9 @@
       "inactiveMinutes": 480,
       "inactiveLabel": "soaking",
       "tagsConditional": [
-        "dairy-free"
+        "dairy-free",
+        "nut-free",
+        "vegan"
       ]
     },
     {
@@ -42026,6 +42099,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -42680,6 +42754,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "nut-free",
         "vegan",
         "vegetarian"
       ],
@@ -43081,6 +43156,7 @@
       ],
       "tags": [
         "egg-free",
+        "gluten-free",
         "healthier",
         "nut-free",
         "vegetarian"
@@ -44558,6 +44634,7 @@
         "dairy-free",
         "egg-free",
         "nut-free",
+        "vegan",
         "vegetarian"
       ],
       "allergens": [
@@ -45540,6 +45617,7 @@
         "healthier",
         "nut-free",
         "soup",
+        "vegan",
         "vegetarian"
       ],
       "allergens": [
@@ -46141,6 +46219,7 @@
         "dairy-free",
         "egg-free",
         "nut-free",
+        "vegan",
         "vegetarian"
       ],
       "allergens": [
@@ -46486,6 +46565,7 @@
         "dairy-free",
         "egg-free",
         "nut-free",
+        "vegan",
         "vegetarian"
       ],
       "allergens": [
@@ -48503,6 +48583,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -48657,6 +48738,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -49123,6 +49205,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -51320,6 +51403,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -51674,6 +51758,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -51958,6 +52043,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -52550,6 +52636,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -52847,6 +52934,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -56878,7 +56966,8 @@
       "tags": [
         "egg-free",
         "gluten-free",
-        "no-onion-garlic"
+        "no-onion-garlic",
+        "nut-free"
       ],
       "allergens": [
         "dairy"
@@ -57060,6 +57149,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -57431,6 +57521,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -58254,6 +58345,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -58440,6 +58532,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -58581,6 +58674,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -60025,6 +60119,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -60437,7 +60532,8 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "pescatarian"
       ],
       "allergens": [
         "fish"
@@ -60610,7 +60706,8 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
-        "nut-free"
+        "nut-free",
+        "pescatarian"
       ],
       "allergens": [
         "fish"
@@ -61116,6 +61213,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -61543,6 +61641,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -61708,8 +61807,11 @@
         "stovetop"
       ],
       "tags": [
+        "dairy-free",
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
+        "vegan",
         "vegetarian"
       ],
       "allergens": [
@@ -61830,7 +61932,9 @@
         "egg"
       ],
       "tagsConditional": [
+        "dairy-free",
         "egg-free",
+        "vegan",
         "vegetarian"
       ]
     },
@@ -62693,6 +62797,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -63213,6 +63318,7 @@
       "tags": [
         "dairy-free",
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -64054,6 +64160,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -64440,6 +64547,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -64596,8 +64704,10 @@
         "blender"
       ],
       "tags": [
+        "dairy-free",
         "egg-free",
         "gluten-free",
+        "vegan",
         "vegetarian"
       ],
       "allergens": [
@@ -64804,6 +64914,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegan",
         "vegetarian"
       ],
@@ -65022,6 +65133,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegan",
         "vegetarian"
       ],
@@ -65995,6 +66107,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -66356,6 +66469,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -67990,6 +68104,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -68868,6 +68983,7 @@
       "tags": [
         "dairy-free",
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -70257,6 +70373,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegan",
         "vegetarian"
       ],
@@ -70847,6 +70964,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -71549,6 +71667,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -71698,8 +71817,10 @@
         "kadhai"
       ],
       "tags": [
+        "dairy-free",
         "egg-free",
         "nut-free",
+        "vegan",
         "vegetarian"
       ],
       "allergens": [
@@ -74585,6 +74706,7 @@
         "egg-free",
         "gluten-free",
         "healthier",
+        "no-onion-garlic",
         "nut-free",
         "pescatarian"
       ],
@@ -75440,6 +75562,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -76248,6 +76371,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -77885,6 +78009,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -78671,6 +78796,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -78845,6 +78971,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -79436,6 +79563,8 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
+        "nut-free",
         "vegetarian"
       ],
       "allergens": [
@@ -80474,6 +80603,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -81732,6 +81862,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -84928,6 +85059,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -85599,6 +85731,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -87206,6 +87339,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -88347,7 +88481,8 @@
         "stovetop"
       ],
       "tags": [
-        "gluten-free"
+        "gluten-free",
+        "no-onion-garlic"
       ],
       "allergens": [
         "dairy",
@@ -88931,7 +89066,9 @@
       "equipment": [
         "oven"
       ],
-      "tags": [],
+      "tags": [
+        "no-onion-garlic"
+      ],
       "allergens": [
         "dairy",
         "gluten",
@@ -89083,6 +89220,7 @@
       ],
       "tags": [
         "egg-free",
+        "gluten-free",
         "nut-free"
       ],
       "allergens": [
@@ -89893,6 +90031,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -90543,6 +90682,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -91086,6 +91226,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -91862,6 +92003,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -92453,6 +92595,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -93220,6 +93363,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -93374,6 +93518,7 @@
       "tags": [
         "dairy-free",
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -94706,6 +94851,7 @@
       ],
       "tags": [
         "egg-free",
+        "nut-free",
         "vegetarian"
       ],
       "allergens": [
@@ -95076,6 +95222,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -96256,6 +96403,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -96834,6 +96982,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -97746,6 +97895,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -98322,6 +98472,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -100058,6 +100209,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -100218,6 +100370,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -101325,6 +101478,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -102646,6 +102800,7 @@
       "tags": [
         "dairy-free",
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -104637,6 +104792,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -105482,6 +105638,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -106292,6 +106449,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -107231,6 +107389,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -107427,6 +107586,7 @@
       "tags": [
         "dairy-free",
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -107818,6 +107978,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -108650,6 +108811,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -109051,6 +109213,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -110031,6 +110194,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -111866,6 +112030,7 @@
         "egg-free",
         "gluten-free",
         "healthier",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -112105,6 +112270,7 @@
       ],
       "tags": [
         "egg-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -113103,6 +113269,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -117043,6 +117210,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -117234,6 +117402,7 @@
         "egg-free",
         "gluten-free",
         "healthier",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -117618,6 +117787,7 @@
         "egg-free",
         "gluten-free",
         "healthier",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -117753,6 +117923,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -118619,6 +118790,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegan",
         "vegetarian"
       ],
@@ -119016,6 +119188,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -119624,6 +119797,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -120655,6 +120829,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [
@@ -120975,6 +121150,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegan",
         "vegetarian"
       ],
@@ -121587,6 +121763,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -122116,6 +122293,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -122272,6 +122450,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegetarian"
       ],
@@ -123622,6 +123801,7 @@
         "dairy-free",
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "nut-free",
         "vegan",
         "vegetarian"
@@ -123785,6 +123965,7 @@
       "tags": [
         "egg-free",
         "gluten-free",
+        "no-onion-garlic",
         "vegetarian"
       ],
       "allergens": [

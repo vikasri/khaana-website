@@ -62,7 +62,48 @@ def main():
             open(path, "w", encoding="utf-8").write(out)
             touched += 1
 
+    # The JSON the scripts fetch needs the same treatment, and cannot get it
+    # the same way: those URLs live inside the JavaScript, not in an href. So
+    # the hash is stamped into the script instead, and because that changes the
+    # script's own content the page's ?v= for it moves too — the bust cascades.
+    #
+    # Without this the Cook page fetched data/recipes-index.json unstamped, so
+    # a returning visitor could run today's cook.js against a cached index for
+    # as long as the CDN held it. It is the exact failure this tool exists to
+    # prevent, on the one file the page is actually about.
+    DATA = ["data/recipes-index.json", "data/pantry.json", "data/search-index.json"]
+    dstamps = {rel: digest(rel) for rel in DATA}
+    dstamps = {k: v for k, v in dstamps.items() if v}
+    scripts = [os.path.join(ROOT, p) for p in assets() if p.endswith(".js")]
+    stamped_js = 0
+    for path in scripts:
+        src = open(path, encoding="utf-8").read()
+        out = src
+        for rel, h in dstamps.items():
+            out = re.sub(r"(['\"])" + re.escape(rel) + r"(?:\?v=[0-9a-f]+)?\1",
+                         lambda m, h=h, rel=rel: m.group(1) + rel + "?v=" + h + m.group(1),
+                         out)
+        if out != src:
+            open(path, "w", encoding="utf-8").write(out)
+            stamped_js += 1
+    if stamped_js:
+        # The scripts just changed, so their own hashes are stale. Recompute
+        # and rewrite the pages a second time.
+        stamps = {rel: digest(rel) for rel in assets()}
+        stamps = {k: v for k, v in stamps.items() if v}
+        for path in pages:
+            src = open(path, encoding="utf-8").read()
+            out = src
+            for rel, h in stamps.items():
+                pat = re.compile(r'((?:href|src)=")((?:\.\./)?%s)(\?v=[0-9a-f]+)?(")'
+                                 % re.escape(rel))
+                out = pat.sub(lambda m, h=h: m.group(1) + m.group(2) + "?v=" + h + m.group(4), out)
+            if out != src:
+                open(path, "w", encoding="utf-8").write(out)
+
     print("stamped %d assets into %d pages" % (len(stamps), touched))
+    for rel, h in sorted(dstamps.items()):
+        print("   %-30s v=%s  (into %d scripts)" % (rel, h, stamped_js))
     for rel, h in sorted(stamps.items()):
         print("   %-30s v=%s" % (rel, h))
     return 0

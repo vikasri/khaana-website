@@ -140,7 +140,12 @@
     ['vegan', 'plantbased'],
     ['glutenfree', 'gluten'],
     ['dairyfree', 'dairy'],
-    ['healthier', 'healthy', 'light']
+    /* "light" is not in here. It is a texture word far more often than a
+       health word on this site — lassi is "churned until light and foaming",
+       and four of the five subtitles using it belong to dishes the healthier
+       rule refuses, rasgulla and malpua among them. Grouping it with the tag
+       put a syrup-soaked sweet among the answers to "healthy". */
+    ['healthier', 'healthy']
   ];
 
   // token -> group id. A word may sit in more than one row (khichdi, methi),
