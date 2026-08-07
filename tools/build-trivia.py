@@ -120,6 +120,8 @@ def main():
             <h1 id="trivia-title">Food Trivia</h1>
             <p class="trivia-intro">Select one answer</p>
           </div>
+          <p class="trivia-tagline">Put Your or Friend&rsquo;s and Family&rsquo;s
+            Food Knowledge to the Test</p>
         </div>
         <div class="trivia-head-right">
           <div class="trivia-scoring">

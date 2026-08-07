@@ -2408,6 +2408,17 @@ section.trivia-section { padding-top: 24px; }
 noscript .trivia-intro { display: block; margin-top: 10px; }
 noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 
+/* The line under the title. It is the invitation, so it is set in the serif
+   and a shade larger than the instruction beside the heading — but under the
+   h1 rather than beside it, because at this length it would push the score
+   block off the top row on anything narrower than a laptop. */
+.trivia-tagline {
+  margin: 6px 0 0; max-width: 46ch;
+  font-family: var(--serif); font-size: 1.06rem; line-height: 1.35;
+  color: var(--ink);
+}
+@media (max-width: 640px) { .trivia-tagline { font-size: 1rem; } }
+
 /* Title and welcome line on the left, what a question is worth and the running
    total on the right, top-aligned so the two columns start on the same line.
    The same head the matching game has, for the same reason: the numbers belong
