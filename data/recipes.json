@@ -63222,9 +63222,9 @@
       ],
       "ingredients": [
         {
-          "id": "raw-banana",
+          "id": "banana",
           "qty": "3 large, very ripe",
-          "note": "use ripe nendran plantains. Catalogued here as raw-banana",
+          "note": "ripe nendran for preference",
           "essential": true
         },
         {
@@ -98667,7 +98667,7 @@
       ],
       "ingredients": [
         {
-          "id": "raw-mango",
+          "id": "mango",
           "qty": "2 ripe, flesh only, about 350g",
           "note": "ripe and sweet, not the sour pickling kind",
           "essential": true
