@@ -17,8 +17,9 @@ Method, stated here because the site states it to readers too:
     weights for that food, so a teaspoon of turmeric is 3.0 g rather than a
     generic 5 g.
 
-  * Figures are for raw ingredients as bought. Cooking changes weight — water
-    boils off, batter absorbs oil — and none of that is modelled.
+  * Figures are for raw ingredients as bought. Where the water goes IS
+    modelled, since it decides the serving weight and the per-100 g column —
+    see the WATER ACCOUNTING block below. Other cooking losses are not.
 
   * Deep-frying oil is counted at ABSORB_FRACTION of the oil listed, not the
     whole amount, because most of it stays in the pan.
@@ -74,28 +75,72 @@ FRYING = re.compile(r"for (deep[- |]?)?fry|for frying|for (shallow|pan|deep)[- ]
 FRY_BATH_GRAMS = 100
 
 # ---------------------------------------------------------------------------
-# What happens to the water
+# WATER ACCOUNTING
 #
-# Water carries no energy, so none of this can move a per-serving figure. It
-# decides the yield, and therefore the serving weight and the per-100 g column
-# — which were wrong enough to be worth this much care: sattu sharbat, half a
-# litre of water for two glasses, was published as a 78 g serving, and
-# solkadhi as 305 kcal per 100 g, because water was dropped from the weight
-# entirely.
+# Reference notes for whoever changes this next. None of it appears on the
+# site: how the yield is worked out is our problem, and a reader picking a
+# dish to cook is not asking.
 #
-# Four fates, and a recipe can have more than one:
+# WHAT IT AFFECTS, AND WHAT IT CANNOT
+#   Water carries no energy, so nothing here can move a per-serving figure.
+#   Nutrients are divided by `servings`, never by weight. What it decides is
+#   the YIELD, and therefore two published numbers: the serving weight in the
+#   table header, and the whole per-100 g column, which is nutrients divided
+#   by that yield.
 #
-#   absorbed   Dry pulses and grains take up 2.2-3.0x their own weight and
-#              keep it. This is the largest single correction and the one with
-#              the firmest number behind it (USDA cooked-yield practice; a cup
-#              of dry lentils gives 2.5-3 cups cooked). Assuming it boils away
-#              put a serving of dal at 103 g, about four tablespoons.
-#   retained   Free liquid in a dish served wet — a shorba, a rasam, a curry
-#              with gravy. Most of it is still in the bowl.
-#   evaporated Free liquid in a dish cooked till dry: a bhuna, a dry sabzi,
-#              anything taken to the point where the oil separates.
-#   drained    Water the method throws away — blanching, boiling and straining,
-#              whey pressed out of curdled milk.
+# WHY IT EXISTS
+#   Water was originally skipped outright, on the grounds that it has no
+#   calories. It has no calories and it has weight, so the yield was the
+#   weight of the solids alone:
+#       sattu sharbat   500 ml water for two glasses -> a "78 g" serving
+#       solkadhi        600 ml water                 -> "305 kcal per 100 g"
+#       arhar ki dal    700 ml water                 -> a "103 g" serving
+#   279 of 656 recipes were affected. Counting all the water instead is wrong
+#   the other way, since a dry sabzi does not serve its water.
+#
+# THE MODEL: four fates, and a recipe can have more than one
+#
+#   1. ABSORBED — settled first, because it is the part with a published
+#      number behind it. Dry pulses and grains take up 2.2-3.0x their own
+#      weight in water and keep it; this is what a USDA cooked-yield factor
+#      measures, and it is why a cup of dry lentils gives 2.5-3 cups cooked.
+#      ABSORB_RATIO is the midpoint, 2.5. Capped at the water actually added.
+#      Ingredients that swell are listed in ABSORBENT.
+#
+#   2. RETAINED — free liquid (whatever the absorbents did not take) in a dish
+#      that is served wet: a shorba, a rasam, a curry with gravy. WET_KEEP of
+#      it is still in the bowl; the rest went up as steam. Detected by the WET
+#      pattern against name, subtitle and method.
+#
+#   3. EVAPORATED / DRIED OFF — free liquid in a dish taken to dryness. Only
+#      the absorbed water survives. Detected by DRY.
+#
+#   4. DRAINED — water the method throws away: blanching, boiling and
+#      straining, whey pressed from curdled milk. Detected by DRAINED.
+#
+#   Uncooked mixes (cookMinutes == 0, plus NEVER_BOILED) keep all of it. A
+#   lassi is water plus yoghurt in a glass and nothing leaves.
+#
+# PRECEDENCE, AND THE TRAP IN IT
+#   DRY and DRAINED both beat WET, because both state where the water ended up
+#   while "wet" is only inferred from the kind of dish. But a dryness cue only
+#   counts if it appears AFTER the last mention of water in the method. Syun
+#   Olav fries "until the oil separates" and THEN pours in hot water; read as a
+#   flat search, that cue boiled away every drop of a dish served in gravy.
+#   See water_fate().
+#
+# SANITY CHECKS WORTH RE-RUNNING AFTER ANY CHANGE
+#   arhar ki dal   ~266 g a serving   (a bowl of dal, not four tablespoons)
+#   rasam          ~237 g
+#   sattu sharbat  ~328 g             (a glass, not 78 g)
+#   hakka noodles  boiling water drained, contributes nothing
+#   a dry sabzi    keeps only what the vegetables and any pulse absorbed
+#
+# WHAT IS STILL APPROXIMATE
+#   Evaporation is not modelled from pan, flame or lid, because none of that
+#   is in the recipe data. WET_KEEP is a single flat figure standing in for it.
+#   Absorption is applied at one ratio for every pulse and grain. Neither is
+#   worth more precision than the ingredient quantities themselves carry.
 # ---------------------------------------------------------------------------
 
 # g of water held per g of dry weight. Mid-point of the published 2.2-3.0.

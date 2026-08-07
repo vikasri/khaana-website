@@ -5,8 +5,8 @@
 
 Why these exist. The Cook page can already narrow the database to vegan, to
 gluten-free, to half an hour — but it does it in JavaScript against a filter
-panel, and no filter state has a URL. So the 227 vegan recipes and the 305
-lighter ones were invisible to a search engine: there was no page to rank, no
+panel, and no filter state has a URL. So the vegan recipes and the lighter
+ones were invisible to a search engine: there was no page to rank, no
 title to match, and nothing for anyone searching "vegan Indian recipes" to
 land on. Every cuisine has a page; no diet did.
 
@@ -15,11 +15,12 @@ its own title, its own opening paragraph and CollectionPage/ItemList markup.
 They are generated from the same tags the Cook page filters on, so a page can
 never drift from what the filter would return.
 
-On wording: the site's own tag is "healthier", which is a comparative and a
-defensible one. Nobody types that. The page is titled and described in the
-words people actually search — healthy Indian recipes — while the sentence
-that makes the claim still says what the tag means, so the honest version is
-the one a reader sees.
+On wording: the site's own tag is "healthier", a comparative. Nobody types
+that, so the page is titled in the words people search — healthy Indian
+recipes — and the lede says what the selection actually did.
+
+Keep the ledes to a sentence or two about the food. No counts, no caveats
+about how the tagging works: someone here wants a list and then a recipe.
 
 Idempotent: rewrites each page whole on every run.
 """
@@ -40,39 +41,6 @@ def esc(s):
     return html.escape(str(s if s is not None else ""), quote=True)
 
 
-# Numbers quoted in the ledes are counted from the data at build time, never
-# typed into the sentence. A hand-written "145 of these use asafoetida" is
-# true on the day it is written and silently wrong after the next batch of
-# recipes, and nothing on the site would ever complain.
-WORDS = ["no", "one", "two", "three", "four", "five", "six", "seven", "eight",
-         "nine", "ten", "eleven", "twelve"]
-
-
-def spell(n):
-    """Small numbers read better as words in a sentence; large ones do not."""
-    return WORDS[n].capitalize() if n < len(WORDS) else str(n)
-
-
-def with_ing(recipes, ing):
-    return sum(1 for r in recipes
-               if any(i["id"] == ing for i in r.get("ingredients", [])))
-
-
-def region_share(recipes):
-    """Which kitchens are most and least represented, as 'n of the m'."""
-    db = json.load(open(os.path.join(ROOT, "data", "recipes.json"), encoding="utf-8"))
-    total = collections.Counter(r["region"] for r in db["recipes"])
-    here = collections.Counter(r["region"] for r in recipes)
-    # Only regions with enough recipes for a share to mean anything.
-    ranked = sorted(((here[k] / total[k], k) for k in total if total[k] >= 20),
-                    reverse=True)
-    def phrase(k):
-        return "%d of the %d %s recipes" % (here[k], total[k], k)
-    top = " and ".join([phrase(ranked[0][1]),
-                        phrase(ranked[1][1]).replace(" recipes", " ones")])
-    return {"top": top, "bottom": phrase(ranked[-1][1])}
-
-
 # Each collection: the file, what it is called, how a recipe qualifies, and the
 # one paragraph that says what the reader is looking at. The blurbs are short
 # on purpose — a page of prose above a list of recipes is a page nobody reads.
@@ -83,10 +51,9 @@ COLLECTIONS = [
         "title": "Healthy Indian Recipes: %d Lighter Dishes by Region | Khaana",
         "desc": ("%d healthy Indian recipes with the calories and protein in a serving "
                  "given for each. None of them is deep-fried."),
-        "lede": ("The lighter dishes in the database, chosen on the estimated calories and "
-                 "protein in one serving rather than on a dish's reputation. None of them is "
-                 "deep-fried. The figures are estimates worked out from the raw ingredients, "
-                 "so treat them as a guide."),
+        "lede": ("The lighter dishes here, chosen on the calories and protein in a "
+                 "serving rather than on a dish's reputation. Nothing in this list "
+                 "is deep-fried."),
         "test": lambda r: "healthier" in r.get("tags", []),
     },
     {
@@ -95,10 +62,9 @@ COLLECTIONS = [
         "title": "Vegan Indian Recipes: %d Dishes With No Dairy | Khaana",
         "desc": ("%d vegan Indian recipes with no dairy, no ghee and no honey, each one "
                  "checked against its own ingredient list."),
-        "lede": ("A large part of Indian cooking is vegan without setting out to be, "
-                 "particularly along the coast and in the east. Every recipe here has been "
-                 "checked against its own ingredient list. Where one lists ghee for brushing, "
-                 "the same line tells you to leave it out."),
+        "lede": ("A great deal of Indian cooking is vegan without setting out to "
+                 "be, especially along the coast and in the east. No dairy, no "
+                 "ghee, no honey."),
         "test": lambda r: "vegan" in r.get("tags", []),
     },
     {
@@ -107,11 +73,8 @@ COLLECTIONS = [
         "title": "Vegetarian Indian Recipes: %d Regional Dishes | Khaana",
         "desc": ("%d vegetarian Indian recipes from 21 regional cuisines, with times, "
                  "measured ingredients and nutrition estimates for every dish."),
-        "lede": ("The largest collection on the site: pulses, vegetables, paneer, rice and "
-                 "bread from all 21 regional kitchens. {eggs} of these list a beaten egg as "
-                 "an optional enrichment and say in the same line to leave it out. The rest "
-                 "contain no egg at all."),
-        "facts": lambda rs: {"eggs": spell(with_ing(rs, "eggs"))},
+        "lede": ("The largest list on the site: pulses, vegetables, paneer, rice "
+                 "and bread from all 21 regional kitchens."),
         "test": lambda r: "vegetarian" in r.get("tags", []),
     },
     {
@@ -120,12 +83,10 @@ COLLECTIONS = [
         "title": "Gluten-Free Indian Recipes: %d Dishes Without Wheat | Khaana",
         "desc": ("%d gluten-free Indian recipes built on rice, millet, lentil and gram "
                  "flours rather than wheat, checked against each dish's own ingredients."),
-        "lede": ("Much of India eats gluten-free without thinking about it. The southern and "
-                 "eastern kitchens are built on rice and lentil batters, and the dry west on "
-                 "millet and gram flour. One ingredient is worth checking: {asafoetida} of "
-                 "these recipes use asafoetida, and most commercial asafoetida is cut with "
-                 "wheat flour. Read the packet."),
-        "facts": lambda rs: {"asafoetida": with_ing(rs, "asafoetida")},
+        "lede": ("Much of India eats gluten-free without thinking about it: the "
+                 "south and east on rice and lentil batters, the dry west on millet "
+                 "and gram flour. Worth checking the asafoetida, though: most "
+                 "commercial brands are cut with wheat flour."),
         "test": lambda r: "gluten-free" in r.get("tags", []),
     },
     {
@@ -134,10 +95,9 @@ COLLECTIONS = [
         "title": "Dairy-Free Indian Recipes: %d Dishes Without Milk or Ghee | Khaana",
         "desc": ("%d dairy-free Indian recipes with no milk, yoghurt, ghee, cream or "
                  "paneer, from coastal coconut cooking to the mustard-oil kitchens."),
-        "lede": ("No milk, yoghurt, ghee, cream or paneer. Some kitchens qualify almost "
-                 "whole: {top}. The northern courts mostly do not, and only {bottom} are "
-                 "here."),
-        "facts": lambda rs: region_share(rs),
+        "lede": ("No milk, yoghurt, ghee, cream or paneer. Mostly the coastal and "
+                 "eastern kitchens, where coconut milk does the work cream does "
+                 "elsewhere."),
         "test": lambda r: "dairy-free" in r.get("tags", []),
     },
     {
@@ -146,11 +106,9 @@ COLLECTIONS = [
         "title": "Quick Indian Recipes: %d Dishes in 30 Minutes or Less | Khaana",
         "desc": ("%d quick Indian recipes you can cook in half an hour or less, counting "
                  "the prep and the cooking together."),
-        "lede": ("Half an hour or less, counting the chopping as well as the cooking. A "
-                 "soak or a rest comes first in {soaking} of them, which is time you are "
-                 "not standing in the kitchen for; where that applies it is printed beside "
-                 "the time."),
-        "facts": lambda rs: {"soaking": spell(sum(1 for r in rs if r.get("inactiveMinutes")))},
+        "lede": ("Half an hour or less, counting the chopping as well as the "
+                 "cooking. Where a dish also wants soaking or resting time, the "
+                 "card says so."),
         "test": lambda r: (r.get("prepMinutes") or 0) + (r.get("cookMinutes") or 0) <= 30,
     },
     {
@@ -162,12 +120,9 @@ COLLECTIONS = [
         # The Jain claim that used to be here was wrong and is not coming back:
         # Jain cooking excludes root vegetables, and 21 of these have potato in
         # them. Saying so on the page is more use to a reader than the label was.
-        "lede": ("Cooked without onion or garlic, the way many households eat on fast days "
-                 "and some eat all year. Asafoetida bloomed in hot fat does much of the work "
-                 "and appears in {asafoetida} of them. This is not a Jain collection: root "
-                 "vegetables are not excluded, and {potato} of these dishes contain potato."),
-        "facts": lambda rs: {"asafoetida": with_ing(rs, "asafoetida"),
-                             "potato": with_ing(rs, "potato")},
+        "lede": ("Cooked without onion or garlic, the way many households eat on "
+                 "fast days and some eat all year. Asafoetida and ginger do the "
+                 "work instead."),
         "test": lambda r: "no-onion-garlic" in r.get("tags", []),
     },
     {
@@ -176,10 +131,9 @@ COLLECTIONS = [
         "title": "Indian Soup Recipes: %d Shorbas, Rasams and Broths | Khaana",
         "desc": ("%d Indian soup recipes — shorba, rasam and broth — with times, "
                  "ingredients and nutrition estimates for each."),
-        "lede": ("Shorba from the Awadhi kitchen, rasam from Tamil Nadu, broths from the "
-                 "Northeast, and the Indo-Chinese soups served in every Indian city. Only "
-                 "the last of those is really a first course. The rest are drunk alongside "
-                 "the meal or poured over rice."),
+        "lede": ("Shorba from the Awadhi kitchen, rasam from Tamil Nadu, broths "
+                 "from the Northeast, and the Indo-Chinese soups served in every "
+                 "Indian city."),
         "test": lambda r: "soup" in r.get("tags", []),
     },
 ]
@@ -209,15 +163,11 @@ def tile(r, hidden):
 
 
 def lede_text(coll, recipes):
-    """The opening paragraph, with any counted facts filled in from the data.
-
-    A collection without a "facts" entry has no placeholders and passes
-    through. One with placeholders and no facts is a bug, and str.format
-    raises rather than shipping a page with {asafoetida} printed on it."""
-    lede = coll["lede"]
-    if "facts" not in coll:
-        return lede
-    return lede.format(**coll["facts"](recipes))
+    """The opening paragraph. No counts are interpolated: a sentence that says
+    "145 of these use asafoetida" is true the day it is written and quietly
+    wrong after the next batch of recipes, and a reader picking a dish to cook
+    was never asking."""
+    return coll["lede"]
 
 
 def share_image(recipes):

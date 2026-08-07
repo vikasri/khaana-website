@@ -76,12 +76,8 @@ PICKS = [
      "lemon, drunk in Bihar long before anyone sold protein by the tub."),
 ]
 
-INTRO = ("Chosen on two figures and no others: every one is between 190 and 340 "
-         "kcal a serving, and every one carries more protein than the median "
-         "recipe on this site. That is a narrower claim than calling them "
-         "healthy, which would need sodium, fibre and portion size, and this "
-         "site measures none of the three. No two share a regional kitchen, and "
-         "no two lean on the same thing for their protein.")
+INTRO = ("Seven worth cooking, one from each regional kitchen and no two "
+         "leaning on the same thing for their protein.")
 
 
 def esc(s):

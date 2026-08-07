@@ -262,13 +262,11 @@ def nutrition_panel(r):
         notes.append(T.NUTRITION_UNDERSTATED)
     if n.get("approximated"):
         notes.append(T.nutrition_approximated(n["approximated"]))
-    # Keyed on why the water went where it did, not on how much of it stayed.
-    # Keyed on the fraction, a dal that keeps most of its water was being told
-    # it was never cooked.
-    if n.get("waterGrams", 0) > n.get("totalGrams", 1) * 0.25:
-        note = T.NUTRITION_WATER.get(n.get("waterFate"))
-        if note:
-            notes.append(note)
+    # No note about the water. How the yield is worked out is our problem, not
+    # the reader's: they came for a list and a recipe, and a sentence under the
+    # table explaining that a simmer takes a quarter off the free liquid is a
+    # sentence about our arithmetic. The method is documented in
+    # tools/build-nutrition.py, where the next person to change it will look.
     notes.append(T.NUTRITION_SOURCE)
 
     # The weight sits under "Per serving" as a gloss on it, so it goes when the
