@@ -34,13 +34,30 @@ FATS = {"ghee", "butter", "cream", "coconut-oil", "groundnut-oil", "sesame-oil",
 SWEETS = {"sugar", "jaggery", "honey", "condensed-milk"}
 PULSES = {"chana-dal", "chickpeas", "dried-peas", "horse-gram", "kala-chana", "lobia",
           "masoor-dal", "moong-dal", "rajma", "sprouted-moth", "toor-dal", "urad-dal",
-          "whole-moong", "whole-urad"}
+          "whole-moong", "whole-urad",
+          # Gram, ground. The pantry files these two under flours because that
+          # is what they are sold as, and this set was copied from that shelf,
+          # so a dish built entirely on chickpea flour counted as having no
+          # backbone at all: pithla, zunka, khandvi, missi roti and a sattu
+          # drink were all refused the tag for containing no pulse, while
+          # being nothing but pulse.
+          "besan", "sattu"}
 LEAN = {"fish", "prawns", "crab", "squid", "chicken", "eggs", "paneer"}
 # Red meat counts as a protein backbone like any other. What matters is the
 # portion and how it is cooked, not the animal — a slow-braised mutton curry in
 # a sensible serving is not worse than the paneer dishes already allowed. The
 # per-serving cap below is what does the work.
 RED = {"mutton", "beef", "pork", "duck"}
+
+# Per serving, applied to the computed figures at the end of assess(). Set for
+# a main course rather than a side: a plate of food, not a diet plate. Move
+# these four numbers to change what the label means -- they are the whole
+# dial. At 550/25/10/15 the tagged set drops to a median of 320 kcal against
+# the database's 401, which is the gap the label is claiming.
+MAX_KCAL = 550
+MAX_FAT_G = 25
+MAX_SATFAT_G = 10
+MAX_SUGAR_G = 15
 MEAT = (LEAN | RED) - {"paneer", "eggs"}   # parens matter: | binds looser than -
 # Raw, bone-in weight. Set deliberately high: a normal Indian curry portion
 # passes, and this only catches genuinely outsized ones.
@@ -171,6 +188,34 @@ def assess(r):
 
     if not (ids & PULSES or ids & LEAN or ids & RED or len(ids & VEG) >= 2):
         return False, "no vegetable, pulse or protein backbone"
+
+    # The finished dish, not just what went into it.
+    #
+    # Every rule above this line constrains what is *added* to a recipe, and
+    # for a long time that was the whole test. It did not work. Measured
+    # against the site's own nutrition figures, the tagged set had a median of
+    # 391 kcal against 401 for the database, 18.4g of fat against 18.5, and
+    # slightly *more* saturated fat than the average recipe. Paneer Butter
+    # Masala at 48.8g of fat was tagged. So was a cake.
+    #
+    # The reason is that the added-fat rule counts ghee and oil poured in, and
+    # misses fat that arrives inside an ingredient — cream, cashew paste,
+    # coconut, paneer — while the added-sugar rule misses the sugar already in
+    # jaggery-sweet vegetables. The figures below are computed and printed on
+    # every recipe page; not consulting them here was the whole bug.
+    n = (r.get("nutrition") or {}).get("perServing")
+    if not n:
+        # No figures means no way to stand behind the claim.
+        return False, "no nutrition figures"
+    if n["kcal"] > MAX_KCAL:
+        return False, "kcal %d/serving" % n["kcal"]
+    if n["fat"] > MAX_FAT_G:
+        return False, "fat %.0fg/serving" % n["fat"]
+    if n["satFat"] > MAX_SATFAT_G:
+        return False, "satfat %.0fg/serving" % n["satFat"]
+    if n["sugars"] > MAX_SUGAR_G:
+        return False, "sugar %.0fg/serving" % n["sugars"]
+
     return True, None
 
 

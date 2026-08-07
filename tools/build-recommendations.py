@@ -105,6 +105,17 @@ def main():
               % ", ".join(weak))
         return 1
 
+    # The page is titled "Seven Healthy Indian Recipes". That claim has to
+    # survive a change to what the site means by healthy, and once it did not:
+    # a sattu drink sat here as a healthy pick while the tag rule refused it,
+    # because the rule did not recognise gram flour as a pulse. Warned rather
+    # than fatal -- the picks are curated and swapping one is an editorial
+    # decision, not something a build script should force at 3am.
+    untagged = [i for i, _, _ in PICKS if "healthier" not in by_id[i].get("tags", [])]
+    if untagged:
+        print("  ! picked as healthy but no longer carry the healthier tag: %s"
+              % ", ".join(untagged))
+
     # Diversity is the whole point of a list of seven, and it is the thing
     # that quietly rots as picks get swapped. The first draft ran three fish
     # dishes and no chicken. Checked, not remembered.
