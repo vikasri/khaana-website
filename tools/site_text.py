@@ -112,6 +112,22 @@ NUTRITION_OVERSTATED_WHEY = ("Whey poured away when the milk is curdled means "
                              "much of the weighed input is never eaten, so "
                              "the real figures are likely lower.")
 
+# What became of the cooking water, said only where there is enough of it to
+# matter. The per-serving column cannot move either way: nutrients divide by
+# servings, not by weight. Only the serving weight and the per-100 g column do.
+NUTRITION_WATER = {
+    "served wet": ("The serving weight counts the water the dish is served in, "
+                   "less what a simmer takes off."),
+    "dried off": ("The serving weight counts only the water the pulses and "
+                  "grains hold; the rest is cooked off."),
+    "drained": ("Water that is drained away is not counted in the serving "
+                "weight."),
+    "evaporated": ("The serving weight counts the water the pulses and grains "
+                   "hold; the rest is taken to boil away."),
+    "not cooked": ("Nothing here is cooked, so the serving weight counts the "
+                   "water in the glass."),
+}
+
 
 def nutrition_approximated(ingredients):
     """Named when the database had no exact match for an ingredient."""

@@ -44,14 +44,20 @@ PICKS = [
      "Half the calories here are protein, the highest ratio of anything on the "
      "site. Yogurt, spice and a very hot oven do all the work, and nothing is "
      "fried at any point."),
+    # "needs almost no fat" was wrong: the recipe griddles it in 3 tbsp of
+    # ghee and comes to 14.1 g of fat a serving. "The leanest red meat dish we
+    # have" was wrong too -- it is third of the sixty-two mutton dishes by fat,
+    # behind rissoles and dalcha.
     ("patthar-ka-gosht", "mutton",
-     "Cooked on a slab of heated stone, which sounds like a restaurant gimmick "
-     "and is in fact the reason it needs almost no fat. The leanest red meat "
-     "dish we have."),
+     "Cooked on a slab of heated stone rather than in a pan of gravy, so the "
+     "fat is the three tablespoons of ghee the griddle takes and nothing more. "
+     "Third leanest of our sixty-two mutton dishes."),
+    # The leftovers story is the usual account of the dish, not a documented
+    # one, and the page said it as fact.
     ("jalfrezi", "chicken",
-     "The leanest chicken here, and it exists because Anglo-Indian kitchens "
-     "refused to waste yesterday's roast. Chilli, onion and vinegar, and the "
-     "leftovers come back better than they went in."),
+     "The leanest chicken here. It is usually told as an Anglo-Indian way of "
+     "using up yesterday's roast, though that origin is repeated more often "
+     "than it is evidenced. Chilli, onion and vinegar."),
     ("parsi-akuri", "egg",
      "Eggs scrambled soft and slow with onion, chilli and coriander. Eighteen "
      "grams of protein and about ten minutes, which is most of the argument "
@@ -63,15 +69,19 @@ PICKS = [
      "A thin dark broth cooked down from horse gram, which carries more "
      "protein than most pulses grown anywhere. Andhra has been drinking it for "
      "centuries without the help of a marketing department."),
+    # "two centuries ahead of the supplement aisle" put a date on something
+    # nothing here can date. The protein figure is ours and can stay.
     ("namkeen-sattu-sharbat", "roasted gram",
      "Eleven grams of protein in a glass of roasted gram flour, salt and "
-     "lemon. Bihar arrived at the protein shake roughly two centuries ahead of "
-     "the supplement aisle."),
+     "lemon, drunk in Bihar long before anyone sold protein by the tub."),
 ]
 
-INTRO = ("Seven that are worth cooking, not seven that are merely low in "
-         "something. No two share a regional kitchen, and no two lean on the "
-         "same thing for their protein.")
+INTRO = ("Chosen on two figures and no others: every one is between 190 and 340 "
+         "kcal a serving, and every one carries more protein than the median "
+         "recipe on this site. That is a narrower claim than calling them "
+         "healthy, which would need sodium, fibre and portion size, and this "
+         "site measures none of the three. No two share a regional kitchen, and "
+         "no two lean on the same thing for their protein.")
 
 
 def esc(s):
@@ -150,9 +160,15 @@ def main():
                   esc(note)))
 
     nav, foot = chrome()
-    title = "Recommendations: Seven Healthy Indian Recipes Worth Cooking"
-    desc = ("Seven lighter Indian recipes from seven regional kitchens, chosen "
-            "from the dishes whose calorie and protein figures we can stand behind.")
+    # Was "Seven Healthy Indian Recipes". The picks are chosen on two numbers
+    # -- calories and protein -- and "healthy" claims a great deal more than
+    # two numbers can carry: nothing here weighs sodium, fibre balance or how
+    # realistic the portion is. The title now says what the selection actually
+    # did, and the sentence under it gives the rule so a reader can check it.
+    title = "Seven High-Protein Indian Recipes Worth Cooking"
+    desc = ("Seven Indian recipes from seven regional kitchens, each between "
+            "190 and 340 kcal a serving with protein well above the site median, "
+            "chosen from the dishes whose figures we can stand behind.")
 
     page = """<!DOCTYPE html>
 <html lang="en">
@@ -170,7 +186,7 @@ def main():
   <div class="container picks-page">
     <div class="section-head">
       <div class="eyebrow">Recommendations</div>
-      <h1>Seven healthy recipes worth cooking</h1>
+      <h1>Seven high-protein recipes worth cooking</h1>
     </div>
 
     <p class="lede">%s</p>

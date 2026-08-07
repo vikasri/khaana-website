@@ -141,7 +141,11 @@ def schema(r, url, img):
         # means; servingSize states the weight so the figures are interpretable.
         d["nutrition"] = {
             "@type": "NutritionInformation",
-            "servingSize": "%d g" % n["servingGrams"],
+            # Stated in servings where there is no defensible weight, rather
+            # than shipping a gram figure to Google that the page itself
+            # declines to print.
+            "servingSize": ("%d g" % n["servingGrams"]) if n.get("servingGrams")
+                           else "1 serving",
             "calories": "%d kcal" % ps["kcal"],
             "proteinContent": "%.1f g" % ps["protein"],
             "carbohydrateContent": "%.1f g" % ps["carbs"],
@@ -195,23 +199,28 @@ def nutrition_panel(r):
     n = r.get("nutrition")
     if not n:
         return ""
-    ps, pc = n["perServing"], n["per100g"]
+    ps = n["perServing"]
+    # Absent on a dish that is mostly water: the yield depends on how much
+    # boiled away, so there is no weight to divide by. One column then, not two.
+    pc = n.get("per100g")
     # A floor, not an estimate: unweighable ingredients count as zero.
     # No "+" on the numbers. It was honest about the two thirds of figures
     # that are floors rather than estimates, but no other recipe site marks
     # them and it read as a typo. The caveat is kept in words below the table.
     plus = ""
 
+    def cell(src, key, unit):
+        return (("%d%s kcal" % (src[key], plus)) if key == "kcal"
+                # Per 100 g carries no decimals: it is a comparison figure,
+                # and a tenth of a gram per 100 g is noise on an estimate.
+                else ("%.1f%s %s" % (src[key], plus, unit)) if src is ps
+                else ("%.0f%s %s" % (src[key], plus, unit)))
+
     def row(label, key, unit="g", cls=""):
-        return ('<tr class="%s"><th>%s</th><td>%s</td><td>%s</td></tr>'
-                % (cls,
-                   esc(label),
-                   ("%d%s kcal" % (ps[key], plus)) if key == "kcal"
-                   else ("%.1f%s %s" % (ps[key], plus, unit)),
-                   # Per 100 g carries no decimals: it is a comparison figure,
-                   # and a tenth of a gram per 100 g is noise on an estimate.
-                   ("%d%s kcal" % (pc[key], plus)) if key == "kcal"
-                   else ("%.0f%s %s" % (pc[key], plus, unit))))
+        cells = "<td>%s</td>" % cell(ps, key, unit)
+        if pc:
+            cells += "<td>%s</td>" % cell(pc, key, unit)
+        return '<tr class="%s"><th>%s</th>%s</tr>' % (cls, esc(label), cells)
 
     # The same two-part test the Cook page filter uses.
     share = (ps["protein"] * 4) / ps["kcal"] if ps["kcal"] else 0
@@ -253,20 +262,32 @@ def nutrition_panel(r):
         notes.append(T.NUTRITION_UNDERSTATED)
     if n.get("approximated"):
         notes.append(T.nutrition_approximated(n["approximated"]))
+    # Keyed on why the water went where it did, not on how much of it stayed.
+    # Keyed on the fraction, a dal that keeps most of its water was being told
+    # it was never cooked.
+    if n.get("waterGrams", 0) > n.get("totalGrams", 1) * 0.25:
+        note = T.NUTRITION_WATER.get(n.get("waterFate"))
+        if note:
+            notes.append(note)
     notes.append(T.NUTRITION_SOURCE)
+
+    # The weight sits under "Per serving" as a gloss on it, so it goes when the
+    # yield is unknown rather than being replaced by a shrug.
+    head = ('<th>Per serving<span>%d g</span></th><th>Per 100 g</th>'
+            % n["servingGrams"]) if pc else '<th>Per serving</th>'
 
     return ("""<section class="nutrition" aria-labelledby="nutrition">
         <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="%s">%s estimate</span></h2>
         <p class="nut-band" data-band="%s">%s protein: <strong>%.0f%s g</strong> a serving,
           %.0f%% of the calories</p>
         <table class="nut-table">
-          <thead><tr><th></th><th>Per serving<span>%d g</span></th><th>Per 100 g</th></tr></thead>
+          <thead><tr><th></th>%s</tr></thead>
           <tbody>%s</tbody>
         </table>
         <p class="nut-note">%s</p>
       </section>""" % (n.get("confidence", "medium"), n.get("confidence", "medium").title(),
                        band, band.title(), ps["protein"], plus, share * 100,
-                       n["servingGrams"], "".join(rows), " ".join(notes)))
+                       head, "".join(rows), " ".join(notes)))
 
 
 def doneness_block(r):
