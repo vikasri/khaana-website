@@ -34,7 +34,6 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "data", "trivia.json")
 INDEX = os.path.join(ROOT, "data", "recipes-index.json")
 OUT = os.path.join(ROOT, "fun.html")
-PER_DAY = 5
 
 # The matching game's pool, its rules and its exclusions live in
 # tools/pair_pool.py, since build-pair-thumbs.py needs the same list.
@@ -71,15 +70,11 @@ def question_html(n, q):
 def main():
     db = json.load(open(SRC, encoding="utf-8"))
     qs = db["questions"]
-    if len(qs) % PER_DAY:
-        print("  ! %d questions is not a whole number of days of %d"
-              % (len(qs), PER_DAY))
     nav, foot = chrome()
     # As data, not as script: the page hands the messages to trivia.js without
     # either of them owning a second copy of the copy.
     nudges = json.dumps(db.get("wrongMessages") or [], ensure_ascii=False)
     body = "\n".join(question_html(n + 1, q) for n, q in enumerate(qs))
-    days = len(qs) // PER_DAY
 
     # [name, thumbnail id] per dish. The id is dropped where the site has no
     # photograph, and the game draws a plain square instead of a broken one.
@@ -201,8 +196,10 @@ def main():
 """ % (nav, body, nudges, pool_json, pair_msgs, foot)
 
     open(OUT, "w", encoding="utf-8").write(page)
-    print("fun.html written: %d questions, %d a day, a %d-day cycle"
-          % (len(qs), PER_DAY, days))
+    # No day count here any more. The page draws one question at a time at
+    # random and does not repeat until the bank is spent, so "five a day" and
+    # the cycle length it implied stopped being true when that changed.
+    print("fun.html written: %d questions" % len(qs))
     shown = sum(1 for v in pool.values() for e in v if e[2])
     print("  matching game: %d dishes across %d cuisines, %d with a picture"
           % (sum(len(v) for v in pool.values()), len(pool), shown))
