@@ -49,15 +49,24 @@ LEAN = {"fish", "prawns", "crab", "squid", "chicken", "eggs", "paneer"}
 # per-serving cap below is what does the work.
 RED = {"mutton", "beef", "pork", "duck"}
 
-# Per serving, applied to the computed figures at the end of assess(). Set for
-# a main course rather than a side: a plate of food, not a diet plate. Move
-# these four numbers to change what the label means -- they are the whole
-# dial. At 550/25/10/15 the tagged set drops to a median of 320 kcal against
-# the database's 401, which is the gap the label is claiming.
-MAX_KCAL = 550
-MAX_FAT_G = 25
-MAX_SATFAT_G = 10
-MAX_SUGAR_G = 15
+# Per serving, applied to the computed figures at the end of assess().
+#
+# Fat, saturated fat and sugar do the work. Calories are a backstop and
+# nothing more, because for this food they are a bad measure of richness on
+# their own: idli is 696 kcal a serving and 1.5g of fat, a steamed cake of
+# rice and lentil that no one would call heavy, and a 550 kcal ceiling threw
+# it out while a paneer dish at 48g of fat stayed. Plain dosa, varan bhaat and
+# pesarattu were going the same way. What makes a dish here heavy is the ghee,
+# the cream and the cashew paste, so that is what these lean on, and the
+# calorie line sits high enough to catch only a genuinely enormous plate.
+#
+# Move these four to change what the label means; they are the whole dial. At
+# 700/20/7/12 the tagged set runs to a median of 307 kcal, 13.9g fat and 2.1g
+# saturated fat, against 401, 18.5 and 5.1 for the database.
+MAX_KCAL = 700
+MAX_FAT_G = 20
+MAX_SATFAT_G = 7
+MAX_SUGAR_G = 12
 MEAT = (LEAN | RED) - {"paneer", "eggs"}   # parens matter: | binds looser than -
 # Raw, bone-in weight. Set deliberately high: a normal Indian curry portion
 # passes, and this only catches genuinely outsized ones.
