@@ -2408,16 +2408,19 @@ section.trivia-section { padding-top: 24px; }
 noscript .trivia-intro { display: block; margin-top: 10px; }
 noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 
-/* The line under the title. It is the invitation, so it is set in the serif
-   and a shade larger than the instruction beside the heading — but under the
-   h1 rather than beside it, because at this length it would push the score
-   block off the top row on anything narrower than a laptop. */
+/* The page's opening line, above the first panel rather than inside it: it is
+   an invitation to the whole page, both games included, and reading it out of
+   the trivia card made it sound like an instruction for the trivia alone.
+   Serif and larger than anything else outside a heading, since it is the first
+   thing on the page and the only thing between the nav and the first card.
+   The flex gap on .trivia-page sets the distance to the panel below. */
 .trivia-tagline {
-  margin: 6px 0 0; max-width: 46ch;
-  font-family: var(--serif); font-size: 1.06rem; line-height: 1.35;
-  color: var(--ink);
+  /* Wide enough to hold the sentence on one line on a desktop. At 40ch it
+     broke after "to", which reads as two thoughts rather than one. */
+  margin: 0; max-width: 60ch;
+  font-family: var(--serif); font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+  line-height: 1.3; color: var(--ink);
 }
-@media (max-width: 640px) { .trivia-tagline { font-size: 1rem; } }
 
 /* Title and welcome line on the left, what a question is worth and the running
    total on the right, top-aligned so the two columns start on the same line.
