@@ -77,7 +77,11 @@ def nav_html(current):
     cuisine_hrefs = {h for h, _ in CUISINES}
     on_cuisine = current in cuisine_hrefs
 
-    rows = ['        <li><a href="index.html"%s>Home</a></li>'
+    # "/" and not "index.html". The two are the same file on this host, so
+    # every link to index.html was the site telling crawlers its front page
+    # lives at a second address. The canonical tag has always pointed at "/";
+    # this stops the rest of the site arguing with it.
+    rows = ['        <li><a href="/"%s>Home</a></li>'
             % (' class="active"' if current == "index.html" else ""),
             '        <li><a href="cook.html"%s>Recipes</a></li>'
             % (' class="active"' if current == "cook.html" else "")]

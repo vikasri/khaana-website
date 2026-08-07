@@ -86,9 +86,11 @@ def chrome(page_html, current="cook.html"):
     nav = re.search(r'<header class="site-header">.*?</header>', src, re.S).group(0)
     nav = nav.replace(' class="active"', '')
     foot = re.search(r'<footer class="site-footer">.*?</footer>', src, re.S).group(0)
-    # one level down, so every relative link needs ../
-    nav = re.sub(r'(href|src)="(?!https?:|#|mailto:)', r'\1="../', nav)
-    foot = re.sub(r'(href|src)="(?!https?:|#|mailto:)', r'\1="../', foot)
+    # One level down, so every relative link needs ../ — but not one that is
+    # already rooted at /, which resolves the same from any depth and would
+    # come out of here as "..//".
+    nav = re.sub(r'(href|src)="(?!https?:|#|mailto:|/)', r'\1="../', nav)
+    foot = re.sub(r'(href|src)="(?!https?:|#|mailto:|/)', r'\1="../', foot)
     return nav, foot
 
 
