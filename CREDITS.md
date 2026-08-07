@@ -461,6 +461,7 @@ below.
 | `recipes/murgh-do-pyaza.jpg` | Murg Do Pyaza.jpg | CC BY-SA 4.0 | TabassumJawed | [link](https://commons.wikimedia.org/wiki/File:Murg_Do_Pyaza.jpg) |
 | `recipes/murgh-korma.jpg` | Goat Korma, Butter Chicken, Cabbage Stir-fry with Pilau Rice and Teh Tarik - Cafe Zam Zam (608627954).jpg | CC BY-SA 2.0 | Alpha from Melbourne, Australia | [link](https://commons.wikimedia.org/wiki/File:Goat_Korma,_Butter_Chicken,_Cabbage_Stir-fry_with_Pilau_Rice_and_Teh_Tarik_-_Cafe_Zam_Zam_(608627954).jpg) |
 | `recipes/murgh-musallam.jpg` | Murgh Musallam - Musamman.jpg | CC BY-SA 4.0 | Souradepp | [link](https://commons.wikimedia.org/wiki/File:Murgh_Musallam_-_Musamman.jpg) |
+| `recipes/murgh-shorba.jpg` | Narial Murgh Shorba (Sopa de Pollo Picante con Curry y Cilantro) | CC BY 2.0 | jlastras | [link](https://www.flickr.com/photos/22662305@N04/4120499064) |
 | `recipes/muri-ghonto.jpg` | Muri ghonto -2.jpg | CC BY-SA 4.0 | Pranab Saikia | [link](https://commons.wikimedia.org/wiki/File:Muri_ghonto_-2.jpg) |
 | `recipes/murukku.jpg` | A Traditional Tamil Snack Murukku.jpg | CC BY-SA 3.0 | Thamizhpparithi Maari | [link](https://commons.wikimedia.org/wiki/File:A_Traditional_Tamil_Snack_Murukku.jpg) |
 | `recipes/mutta-roast.jpg` | Indian Omelette Odisha.jpg | CC BY-SA 4.0 | Saileshpat | [link](https://commons.wikimedia.org/wiki/File:Indian_Omelette_Odisha.jpg) |

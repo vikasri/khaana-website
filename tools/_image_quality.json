@@ -56,8 +56,8 @@
       "w": 1600,
       "h": 1200,
       "pixels": 1920000,
-      "kb": 278,
-      "sharpness": 72.6,
+      "kb": 172,
+      "sharpness": 78.8,
       "mean": 73.0,
       "contrast": 72.5,
       "saturation": 0.34
@@ -93,14 +93,14 @@
       "credit": "Yakshitha",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Neer_Dosa(_Neer_Tellavu).jpg",
-      "w": 1280,
-      "h": 2851,
-      "pixels": 3649280,
-      "kb": 599,
-      "sharpness": 727.1,
+      "w": 718,
+      "h": 1600,
+      "pixels": 1148800,
+      "kb": 156,
+      "sharpness": 959.5,
       "mean": 69.1,
-      "contrast": 84.5,
-      "saturation": 0.41
+      "contrast": 84.3,
+      "saturation": 0.43
     },
     {
       "id": "more-kuzhambu",
@@ -459,25 +459,6 @@
       "saturation": 0.47
     },
     {
-      "id": "momos",
-      "name": "Momos",
-      "region": "Northeast Indian",
-      "faults": [
-        "still dark after correction"
-      ],
-      "credit": "efk.apple",
-      "license": "CC BY-SA 4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:North_Eastern_Momos_(Macro).JPG",
-      "w": 1800,
-      "h": 1350,
-      "pixels": 2430000,
-      "kb": 367,
-      "sharpness": 205.3,
-      "mean": 82.9,
-      "contrast": 59.1,
-      "saturation": 0.31
-    },
-    {
       "id": "siddu",
       "name": "Siddu",
       "region": "Pahari",
@@ -516,6 +497,44 @@
       "saturation": 0.6
     },
     {
+      "id": "galouti-kebab",
+      "name": "Galouti Kebab",
+      "region": "Awadhi/Lucknowi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Fatimahope",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mouth_Watering_Gauloti_Kababs.jpg",
+      "w": 1600,
+      "h": 1200,
+      "pixels": 1920000,
+      "kb": 262,
+      "sharpness": 223.0,
+      "mean": 91.9,
+      "contrast": 60.4,
+      "saturation": 0.46
+    },
+    {
+      "id": "momos",
+      "name": "Momos",
+      "region": "Northeast Indian",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "efk.apple",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:North_Eastern_Momos_(Macro).JPG",
+      "w": 1600,
+      "h": 1200,
+      "pixels": 1920000,
+      "kb": 191,
+      "sharpness": 224.3,
+      "mean": 82.9,
+      "contrast": 59.1,
+      "saturation": 0.31
+    },
+    {
       "id": "sepu-vadi",
       "name": "Sepu Vadi",
       "region": "Pahari",
@@ -533,25 +552,6 @@
       "mean": 94.9,
       "contrast": 72.8,
       "saturation": 0.42
-    },
-    {
-      "id": "galouti-kebab",
-      "name": "Galouti Kebab",
-      "region": "Awadhi/Lucknowi",
-      "faults": [
-        "still dark after correction"
-      ],
-      "credit": "Fatimahope",
-      "license": "CC BY-SA 4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Mouth_Watering_Gauloti_Kababs.jpg",
-      "w": 1800,
-      "h": 1350,
-      "pixels": 2430000,
-      "kb": 539,
-      "sharpness": 256.2,
-      "mean": 92.0,
-      "contrast": 60.4,
-      "saturation": 0.46
     },
     {
       "id": "kulfi",
@@ -687,6 +687,25 @@
       "saturation": 0.39
     },
     {
+      "id": "tomato-dhaniya-shorba",
+      "name": "Tomato Dhaniya Shorba",
+      "region": "Awadhi/Lucknowi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Kabirsabri",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tomato_Shorba.jpg",
+      "w": 681,
+      "h": 1024,
+      "pixels": 697344,
+      "kb": 90,
+      "sharpness": 434.1,
+      "mean": 101.0,
+      "contrast": 71.0,
+      "saturation": 0.53
+    },
+    {
       "id": "pazham-pori",
       "name": "Pazham Pori",
       "region": "Kerala",
@@ -763,25 +782,6 @@
       "saturation": 0.91
     },
     {
-      "id": "lucknowi-biryani",
-      "name": "Lucknowi Dum Biryani",
-      "region": "Awadhi/Lucknowi",
-      "faults": [
-        "still dark after correction"
-      ],
-      "credit": "Kalesh",
-      "license": "CC BY-SA 4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Lucknowi_Mutton_Matka_Dum_Biriyani.jpg",
-      "w": 1800,
-      "h": 1013,
-      "pixels": 1823400,
-      "kb": 471,
-      "sharpness": 539.1,
-      "mean": 94.6,
-      "contrast": 59.9,
-      "saturation": 0.48
-    },
-    {
       "id": "parsi-kolmi-no-patio",
       "name": "Kolmi no Patio",
       "region": "Parsi",
@@ -820,25 +820,6 @@
       "saturation": 0.32
     },
     {
-      "id": "dal-baati-churma",
-      "name": "Dal Baati Churma",
-      "region": "Rajasthani",
-      "faults": [
-        "still dark after correction"
-      ],
-      "credit": "Niranjan.gohane",
-      "license": "CC BY-SA 4.0",
-      "source": "https://upload.wikimedia.org/wikipedia/commons/0/0b/DalBati.jpg",
-      "w": 1600,
-      "h": 1200,
-      "pixels": 1920000,
-      "kb": 455,
-      "sharpness": 627.6,
-      "mean": 74.4,
-      "contrast": 50.1,
-      "saturation": 0.54
-    },
-    {
       "id": "parsi-kheema-par-eeda",
       "name": "Kheema Par Eeda",
       "region": "Parsi",
@@ -856,6 +837,25 @@
       "mean": 82.1,
       "contrast": 62.2,
       "saturation": 0.84
+    },
+    {
+      "id": "lucknowi-biryani",
+      "name": "Lucknowi Dum Biryani",
+      "region": "Awadhi/Lucknowi",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Kalesh",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lucknowi_Mutton_Matka_Dum_Biriyani.jpg",
+      "w": 1600,
+      "h": 900,
+      "pixels": 1440000,
+      "kb": 250,
+      "sharpness": 639.5,
+      "mean": 94.6,
+      "contrast": 59.9,
+      "saturation": 0.48
     },
     {
       "id": "kolambi-bhaat",
@@ -877,6 +877,25 @@
       "saturation": 0.58
     },
     {
+      "id": "dal-baati-churma",
+      "name": "Dal Baati Churma",
+      "region": "Rajasthani",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Niranjan.gohane",
+      "license": "CC BY-SA 4.0",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/0/0b/DalBati.jpg",
+      "w": 1600,
+      "h": 1200,
+      "pixels": 1920000,
+      "kb": 303,
+      "sharpness": 660.4,
+      "mean": 74.4,
+      "contrast": 50.1,
+      "saturation": 0.54
+    },
+    {
       "id": "gahat-ki-dal",
       "name": "Gahat ki Dal",
       "region": "Pahari",
@@ -893,6 +912,25 @@
       "sharpness": 662.9,
       "mean": 91.6,
       "contrast": 73.9,
+      "saturation": 0.54
+    },
+    {
+      "id": "chilli-chicken",
+      "name": "Chilli Chicken",
+      "region": "Indo-Chinese",
+      "faults": [
+        "still dark after correction"
+      ],
+      "credit": "Gaurav Dhwaj Khadka",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chicken_Chilli_1.jpg",
+      "w": 1200,
+      "h": 1600,
+      "pixels": 1920000,
+      "kb": 267,
+      "sharpness": 675.6,
+      "mean": 98.5,
+      "contrast": 52.7,
       "saturation": 0.54
     },
     {
@@ -913,25 +951,6 @@
       "mean": 126.9,
       "contrast": 71.6,
       "saturation": 0.25
-    },
-    {
-      "id": "chilli-chicken",
-      "name": "Chilli Chicken",
-      "region": "Indo-Chinese",
-      "faults": [
-        "still dark after correction"
-      ],
-      "credit": "Gaurav Dhwaj Khadka",
-      "license": "CC BY-SA 4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Chicken_Chilli_1.jpg",
-      "w": 1280,
-      "h": 1707,
-      "pixels": 2184960,
-      "kb": 401,
-      "sharpness": 741.7,
-      "mean": 98.5,
-      "contrast": 52.8,
-      "saturation": 0.54
     },
     {
       "id": "bihari-tamatar-chokha",
@@ -1152,13 +1171,13 @@
       "credit": "Kalakki at Malayalam Wikipedia",
       "license": "CC BY-SA 2.5",
       "source": "https://commons.wikimedia.org/wiki/File:Meen_curry_2.JPG",
-      "w": 1800,
-      "h": 1350,
-      "pixels": 2430000,
-      "kb": 666,
-      "sharpness": 858.6,
+      "w": 1600,
+      "h": 1200,
+      "pixels": 1920000,
+      "kb": 329,
+      "sharpness": 869.4,
       "mean": 59.4,
-      "contrast": 51.6,
+      "contrast": 51.5,
       "saturation": 0.35
     },
     {
@@ -3299,13 +3318,13 @@
       "credit": "Goutam1962",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Tilkut_preparation_during_Sankranti_37.jpg",
-      "w": 960,
-      "h": 1707,
-      "pixels": 1638720,
-      "kb": 536,
-      "sharpness": 4559.0,
+      "w": 900,
+      "h": 1600,
+      "pixels": 1440000,
+      "kb": 381,
+      "sharpness": 4599.5,
       "mean": 139.0,
-      "contrast": 60.2,
+      "contrast": 60.0,
       "saturation": 0.22
     },
     {
@@ -3547,6 +3566,21 @@
       "id": "duck-buffath",
       "name": "Duck Buffath",
       "region": "Anglo-Indian"
+    },
+    {
+      "id": "gajar-shorba",
+      "name": "Gajar Shorba",
+      "region": "Awadhi/Lucknowi"
+    },
+    {
+      "id": "murgh-shorba",
+      "name": "Murgh Shorba",
+      "region": "Awadhi/Lucknowi"
+    },
+    {
+      "id": "palak-shorba",
+      "name": "Palak Shorba",
+      "region": "Awadhi/Lucknowi"
     },
     {
       "id": "bafauri",
@@ -3918,7 +3952,7 @@
       "src": "assets/images/tamil-nadu-g2.jpg"
     }
   ],
-  "clean": 453,
+  "clean": 454,
   "unverified_subject": [
     "adhirasam",
     "anglo-indian-pepper-water",

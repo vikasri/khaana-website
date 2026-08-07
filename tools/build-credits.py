@@ -154,7 +154,10 @@ def main():
     on_disk = set()
     for base, _, files in os.walk(IMG_DIR):
         for f in files:
-            if f.lower().endswith((".jpg", ".jpeg", ".png")):
+            # .svg included: the cuisine map is an SVG and carries a real
+            # credit row, so leaving it out of this scan reported the map
+            # every run as an entry whose file does not exist. It does.
+            if f.lower().endswith((".jpg", ".jpeg", ".png", ".svg")):
                 rel = os.path.relpath(os.path.join(base, f), IMG_DIR)
                 rel = rel.replace(os.sep, "/")
                 # assets/images/pair/ holds nothing of its own: every file
