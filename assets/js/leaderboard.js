@@ -188,7 +188,8 @@
       runs: [],                    // the last `span` games, newest last
       best: null,                  // best window this session, {s, t}
       mine: null,                  // the name submitted this session
-      asked: false,                // the name has been asked for, or waived
+      played: 0,                   // games solved this session, for the cadence
+      waivedAt: null,              // games played when the prompt was waved off
       sending: false
     };
     boards[key] = b;
@@ -300,6 +301,7 @@
     if (b.best === null) return;
     b.youEl.textContent = '';
     cells(b.youEl, '', 'You', b.best);
+
   }
 
   /* One row's four columns: place, who, how long, how much. */
@@ -382,10 +384,18 @@
     nameEl.select();
   }
 
-  function shut() {
-    if (modal && dlg.open) dlg.close();
-    else if (joinEl) joinEl.hidden = true;
+  /* Waved away, not shut out. The board it was asked about remembers how far
+   * the reader had got, and asks again after another full run's worth of
+   * games — see `dueAgain`. */
+  function waive() {
+    if (asking && !asking.mine) asking.waivedAt = asking.played;
     asking = null;
+  }
+
+  function shut() {
+    if (modal && dlg.open) { dlg.close(); return; }   // the close handler waives
+    if (joinEl) joinEl.hidden = true;
+    waive();
   }
 
   if (joinEl) {
@@ -398,6 +408,7 @@
       var b = asking;
       errEl.hidden = true;
       nameEl.value = '';
+      b.mine = raw;              // before shutting, or the close reads a waiver
       shut();
       send(b, raw);
     });
@@ -407,7 +418,8 @@
   // Esc, or the backdrop: taken as "not now". `asked` is already set, so it
   // does not come back this session however it was closed.
   if (dlg) {
-    dlg.addEventListener('close', function () { asking = null; });
+    // Esc, the backdrop, or Not now: all the same thing, and none of them final.
+    dlg.addEventListener('close', waive);
     dlg.addEventListener('click', function (e) {
       if (e.target === dlg) shut();          // the backdrop, not the card
     });
@@ -421,7 +433,6 @@
   }
 
   function ask(b) {
-    b.asked = true;
     paint(b);
     if (!joinEl) return;
     if (cheerEl) cheerEl.textContent = cheerFor(b);
@@ -447,7 +458,25 @@
 
   /* --- the sliding window -------------------------------------------------- */
 
+  /* Whether the prompt may appear.
+   *
+   * Never asked: yes. Waved away: not until another full run's worth of games
+   * has been played — ten more questions, five more rounds.
+   *
+   * Both halves of that matter. A window improving in steps beats its own best
+   * several times in a row, so asking on every improvement would interrupt the
+   * same person ten times on the way to one score. But asking once and never
+   * again meant a stray Esc ended any chance of getting on the board for the
+   * rest of the sitting, and reloading to undo it throws away the window, so
+   * one keypress cost the lot. A run apart is often enough to be no bar and
+   * rare enough to be no nuisance.
+   */
+  function dueAgain(b) {
+    return b.waivedAt === null || (b.played - b.waivedAt) >= b.span;
+  }
+
   function record(b, net, ms) {
+    b.played++;
     b.runs.push({ net: net, ms: (typeof ms === 'number' && ms >= 0) ? ms : 0 });
     if (b.runs.length > b.span) b.runs.shift();
     if (b.runs.length < b.span) return;      // no full run yet, so no score
@@ -466,7 +495,7 @@
     // of asking once. Anything else would interrupt a sliding window over and
     // over on the way to a good score.
     if (b.mine) { send(b, b.mine); paint(b); return; }
-    if (!b.asked && beats(b, b.best)) ask(b);      // ask() paints
+    if (!asking && dueAgain(b) && beats(b, b.best)) ask(b);      // ask() paints
     else paint(b);
   }
 
