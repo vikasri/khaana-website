@@ -102,8 +102,8 @@
    * Under that line is under that. */
   var chart = window.KhaanaScoreLine;
   var finished = 0;                // boards solved, which is games played
-  if (chart) chart.track('pair', 'Pairing',
-                         { step: 3.28, label: 'Guesses but Remembers' });
+  if (chart) chart.track('pair', 'Matching',
+                         { step: 3.28, label: 'Guesses+Remembers' });
 
   /* The board under the game, as in the trivia — but over five rounds rather
    * than ten questions. A round is four drags and a mark and often two or

@@ -2627,7 +2627,7 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    a 375px phone has and the label wrapped above it, which is the layout this
    replaced. At 200 they stay on one row all the way down, and the plot still
    grows to about 250 there — clear of the script's 240 floor. */
-.score-chart-plot { flex: 1 1 190px; min-width: 0; max-width: 300px; }
+.score-chart-plot { flex: 1 1 190px; min-width: 0; max-width: 340px; }
 .score-chart-plot svg { display: block; width: 100%; height: auto; }
 
 .sc-grid { stroke: var(--line); stroke-width: 1; }

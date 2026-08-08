@@ -55,7 +55,7 @@
    * sideways rather than on showing anything more — the shape of the run is
    * as readable across 300 as across 400. Height is left alone: that one is
    * score, and squashing it is what makes a plot hard to read. */
-  var H = H_WIDE, W_MAX = 300, W_MIN = 230;
+  var H = H_WIDE, W_MAX = 340, W_MIN = 230;
   /* The margins are set by the labels the stylesheet draws in them: room on
    * the left for a negative, and enough below for a row of numbers with the
    * axis name under it. Trimmed with the frame — at 150 tall the old 46px
