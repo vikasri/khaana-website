@@ -2629,13 +2629,14 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    a 375px phone has and the label wrapped above it, which is the layout this
    replaced. At 200 they stay on one row all the way down, and the plot still
    grows to about 250 there — clear of the script's 240 floor. */
-/* The cap back up to 420, matching W_MAX in the script — this is the number
-   that actually binds, so raising it there alone changed nothing. The frame now
+/* The cap back up to 500, matching W_MAX in the script — this is the number
+   that actually binds, so raising it there alone changes nothing. The frame now
    carries a line of words at each end, the benchmark's name beside its glyph
-   and the reader's total under "You", and at 340 the name was being shrunk to
-   fit rather than read. Only a ceiling: the basis is untouched, so a phone gets
-   the same picture it did. */
-.score-chart-plot { flex: 1 1 190px; min-width: 0; max-width: 420px; }
+   and the reader's total under "You", and the name is given a gutter of its own
+   to stand in rather than being set over the plot. That gutter comes out of the
+   trials, so the frame has to be wide enough to give one up. Only a ceiling:
+   the basis is untouched, so a phone gets the same picture it did. */
+.score-chart-plot { flex: 1 1 190px; min-width: 0; max-width: 500px; }
 .score-chart-plot svg { display: block; width: 100%; height: auto; }
 
 .sc-grid { stroke: var(--line); stroke-width: 1; }

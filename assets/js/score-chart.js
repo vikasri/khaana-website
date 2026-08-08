@@ -58,10 +58,15 @@
    *
    * Some of that width bought back since, because the frame now carries a line
    * of words at each end — the benchmark's name beside its glyph, the reader's
-   * total under "You" — and at 340 the benchmark's name was shrinking to fit
-   * rather than being read. This is a ceiling, not a size: the frame is still
-   * drawn at whatever its box allows, so a phone is unaffected. */
-  var H = H_WIDE, W_MAX = 420, W_MIN = 230;
+   * total under "You" — and the name is given a gutter of its own to stand in
+   * rather than the plot. That gutter comes out of the trials, so the frame has
+   * to be wide enough to give one up. This is a ceiling, not a size: the frame
+   * is still drawn at whatever its box allows, so a phone is unaffected.
+   *
+   * It has to match .score-chart-plot's max-width in the stylesheet, and that
+   * one is the one that binds — the box is measured, so a cap raised here alone
+   * changes nothing. */
+  var H = H_WIDE, W_MAX = 500, W_MIN = 230;
   /* The margins are set by the labels the stylesheet draws in them: room on
    * the left for a negative, and enough below for a row of numbers with the
    * axis name under it. Trimmed with the frame — at 150 tall the old 46px
@@ -70,6 +75,14 @@
   var X0 = PAD_L, Y0 = PAD_T, Y1 = H - PAD_B;
   var MIN_TRIALS = 4, MIN_SPAN = 2;   // an empty axis still spans something
   var Y_TICKS = 3, X_LABELS = 5;      // fewer, so a small frame is not crowded
+  /* The most of the frame's width the benchmark's name may take as a gutter to
+   * stand in. Past this the words shrink instead: the plot is the point of the
+   * picture, and a label is not worth half of it. */
+  var GUTTER_MAX = 0.42;
+  /* And the width the plot keeps whatever the words want. Below this there is
+   * no gutter at all and the name goes back inside the picture — a phone has
+   * no width to give away. */
+  var MIN_PLOT = 210;
 
   /* key -> {label, points, bench}. bench is {step, label, mark, ends}: what one
    * completed game is worth to a benchmark player, what to call them, an
@@ -154,28 +167,82 @@
     hi = Math.ceil(hi / step) * step;
     if (hi === lo) hi = lo + step;
 
-    function px(n) { return X0 + (X1 - X0) * (n / xMax); }
+    svg.textContent = '';
+
+    /* The margin the plot leaves itself on the right, and why the benchmark's
+     * name is built before anything is placed.
+     *
+     * The name belongs beside the newest mark, on its right — that is the end
+     * the benchmark has got to. But the newest mark is usually the newest
+     * trial, which is the right-hand end of the axis, so there was nothing to
+     * its right to write in and the words had to be slid back along the slope
+     * to fit. So the plot stops short: the trials are drawn across everything
+     * up to XD and the strip from there to the frame's edge is kept clear for
+     * the name. The gutter is sized to the words it has to hold, which means
+     * measuring them first — hence the text nodes here, moved to the end of the
+     * frame afterwards so they are drawn over the picture rather than under it.
+     *
+     * Only where the frame can spare it. The gutter is capped both as a share
+     * of the width and by what the plot must keep, and the name is shrunk to
+     * whatever the cap leaves — but never past 8px, below which it stops being
+     * readable. On a phone that floor is reached with the words still wider
+     * than any gutter worth having: a 250px frame gave up two thirds of itself
+     * and left a plot 98 across. So there the gutter is refused outright and
+     * the name goes back inside the picture, which is the layout below.
+     *
+     * Held even before the first game is finished, when there is no mark and no
+     * name to draw yet. The alternative is an axis that silently rescales under
+     * the reader the moment they solve something. */
+    var bm = null, bl = null, glyphW = 0, labW = 0, gutter = 0;
+    var gap = 4, lead = 7;
+    if (b) {
+      if (b.mark) {
+        bm = el('text', { 'class': 'sc-bench-mark', x: 0, y: 0 });
+        bm.textContent = b.mark;
+        svg.appendChild(bm);
+      }
+      bl = el('text', { 'class': 'sc-bench-label', x: 0, y: 0 });
+      bl.textContent = b.label;
+      svg.appendChild(bl);
+      try {
+        if (bm) glyphW = bm.getComputedTextLength();
+        labW = bl.getComputedTextLength();
+        var fixed = lead + glyphW + (bm ? gap : 0);
+        var cap = Math.min((X1 - X0) * GUTTER_MAX, (X1 - X0) - MIN_PLOT);
+        if (cap - fixed >= 40) {
+          if (labW > cap - fixed) {
+            /* Set inline, not as an attribute: the stylesheet gives this class
+             * a size, and in SVG a CSS declaration beats a presentation
+             * attribute, so set that way the shrink was silently ignored. The
+             * base is read back from the stylesheet rather than repeated. */
+            var base = parseFloat(getComputedStyle(bl).fontSize) || 13.5;
+            bl.style.fontSize = Math.max(8, base * ((cap - fixed) / labW)) + 'px';
+            labW = bl.getComputedTextLength();
+          }
+          // The floor may have held it wider than the gutter can take, in which
+          // case there is no gutter to be had at this width.
+          if (labW <= cap - fixed) gutter = fixed + labW;
+        }
+        if (!gutter) { bl.style.fontSize = ''; labW = bl.getComputedTextLength(); }
+      } catch (e) { gutter = 0; }
+    }
+    var XD = X1 - gutter;
+
+    function px(n) { return X0 + (XD - X0) * (n / xMax); }
     function py(v) { return Y1 - (Y1 - Y0) * ((v - lo) / (hi - lo)); }
 
-    svg.textContent = '';
     /* The reader's own end of the line: the running total against the point it
      * belongs to, with "You" directly over it.
      *
      * Both to the left of the point and both right-aligned, so the two share an
      * edge and read as one block naming the line rather than as a stray word
      * somewhere along it. Left rather than right because a run of any length
-     * puts that last point on the frame's right-hand edge, where there is
-     * nothing beyond it to write in.
+     * puts that last point at the end of the axis.
      *
      * Above the point normally, below it when the line has climbed far enough
      * that two lines of text above would leave the frame — which is where a
      * good run always ends up. "You" stays over the total either way: it is the
-     * label and the number is what it labels.
-     *
-     * Worked out here and drawn much further down, because the benchmark's own
-     * name is set at the other end of the same frame and the two meet at the
-     * right-hand edge. The benchmark can only keep off this block if it knows
-     * where it is going to be. */
+     * label and the number is what it labels. */
     var lastI = pts.length - 1;
     var youBox = null;
     if (lastI > 0) {
@@ -186,19 +253,16 @@
         valY: over ? yly - 8 : yly + 30,
         youY: over ? yly - 24 : yly + 14
       };
-      youBox.top = youBox.youY - 14;
-      youBox.bottom = youBox.valY + 4;
-      // Room for "You" over a signed three-figure total, which is as wide as
-      // this ever gets.
-      youBox.left = youBox.x - 46;
     }
 
-    // Horizontal rules, one per labelled value, with zero picked out.
+    /* Horizontal rules, one per labelled value, with zero picked out. They stop
+     * at XD with the plot: a rule carried on into the gutter would make that
+     * strip read as part of the picture, which is the one thing it is not. */
     for (var v = lo; v <= hi + 1e-9; v += step) {
       var y = py(v);
       svg.appendChild(el('line', {
         'class': v === 0 ? 'sc-zero' : 'sc-grid',
-        x1: X0, y1: y, x2: X1, y2: y
+        x1: X0, y1: y, x2: XD, y2: y
       }));
       var lab = el('text', { 'class': 'sc-tick sc-tick-y', x: X0 - 8, y: y + 5 });
       lab.textContent = String(Math.round(v));
@@ -207,7 +271,7 @@
 
     // The two axes themselves, so the frame closes on the left and below.
     svg.appendChild(el('line', { 'class': 'sc-axis', x1: X0, y1: Y0, x2: X0, y2: Y1 }));
-    svg.appendChild(el('line', { 'class': 'sc-axis', x1: X0, y1: Y1, x2: X1, y2: Y1 }));
+    svg.appendChild(el('line', { 'class': 'sc-axis', x1: X0, y1: Y1, x2: XD, y2: Y1 }));
 
     var xStep = Math.ceil(xMax / X_LABELS) || 1;
     for (i = 0; i <= xMax; i += xStep) {
@@ -219,7 +283,7 @@
       svg.appendChild(xl);
     }
 
-    var xt = el('text', { 'class': 'sc-axis-name', x: (X0 + X1) / 2, y: H - 3 });
+    var xt = el('text', { 'class': 'sc-axis-name', x: (X0 + XD) / 2, y: H - 3 });
     xt.textContent = 'Trials';
     svg.appendChild(xt);
     var yt = el('text', {
@@ -243,21 +307,22 @@
        * gap between two trials — at 0.45 of it a run of questions answered
        * first time left the marks a pixel apart and closed the row back into
        * the line this used to be. */
-      var half = Math.max(3, Math.min(8, (X1 - X0) / xMax * 0.35));
+      var half = Math.max(3, Math.min(8, (XD - X0) / xMax * 0.35));
       var lastX = X0, lastY = Y1;
       for (i = 0; i < ends.length; i++) {
         var mx = px(ends[i]), my = py(b.step * (i + 1));
-        // Trimmed at the frame rather than hung over it: the newest game is
-        // often the last trial, and a level sticking out past the axis reads
+        // Trimmed at the plot's edge rather than hung over it: the newest game
+        // is often the last trial, and a level sticking out past the axis reads
         // as a line that has escaped rather than as one that ends there.
         svg.appendChild(el('line', {
           'class': 'sc-bench', y1: my, y2: my,
-          x1: Math.max(X0, mx - half), x2: Math.min(X1, mx + half)
+          x1: Math.max(X0, mx - half), x2: Math.min(XD, mx + half)
         }));
         lastX = mx; lastY = my;
       }
-      /* The benchmark named at the head of its own slope, glyph first and the
-       * words to the right of it, reading as one line: 🙈 A Blind Guesser.
+      /* The benchmark named out in the gutter, level with its newest mark and
+       * to the right of it — glyph first, then the words, reading as one line:
+       * 🙈 A Blind Guesser.
        *
        * The trivia's benchmark is what a reader scores by guessing, so it gets
        * a monkey — the words say blind and the picture says the rest. It is
@@ -265,68 +330,55 @@
        * nothing to licence, and it scales with the frame. The matching game
        * gives no glyph and the line is then just the words.
        *
-       * The pair is placed as a block. The glyph wants to stand just past the
-       * newest mark, but a long run leaves that mark against the right-hand
-       * edge with nothing beyond it, so the block slides back along the slope
-       * until the words fit inside the frame. Sliding it left is safe in a way
-       * sliding it right is not: the slope climbs, so everything to the left of
-       * the newest mark is below the line the block sits on. */
-      var bm = null, glyphW = 0;
-      if (b.mark) {
-        bm = el('text', { 'class': 'sc-bench-mark', x: 0, y: 0 });
-        bm.textContent = b.mark;
-        svg.appendChild(bm);
-      }
-      var bl = el('text', { 'class': 'sc-bench-label', x: 0, y: 0 });
-      bl.textContent = b.label;
-      svg.appendChild(bl);
-
-      /* How far right the block may run. Level with the newest mark by choice,
-       * but the reader's total is squared off against their last point and both
-       * ends of the picture meet at the right-hand edge — so when the reader's
-       * line is running close to the benchmark's, the block stops short of
-       * their block instead of setting the two sets of words in the same place.
-       * Stopping short is the right way round: the words then trail back along
-       * a slope that has already been drawn, whereas the total has a point it
-       * has to stay beside. */
-      var labY = lastY + 5;
-      var limit = X1;
-      if (youBox && labY > youBox.top - 8 && labY < youBox.bottom + 8) {
-        limit = Math.max(X0 + 90, youBox.left - 8);
-      }
-
-      var gap = 4, labW = 0, avail = (limit - X0) - 6;
-      try {
-        if (bm) glyphW = bm.getComputedTextLength();
-        labW = bl.getComputedTextLength();
-        /* Shrunk to fit rather than cut. The words are whatever the game calls
-         * its benchmark and are not this file's to shorten, but the frame is a
-         * third of the width it was first drawn for. Down to 8px and no
-         * further: below that it stops being readable, and an unreadable label
-         * is worse than a tight one.
-         *
-         * Set inline, not as an attribute — the stylesheet sets a size for this
-         * class, and in SVG a CSS declaration beats a presentation attribute,
-         * so set that way the shrink was silently ignored. The base is read
-         * back from the stylesheet rather than repeated here. */
-        var want = glyphW + (bm ? gap : 0) + labW;
-        if (want > avail) {
-          var base = parseFloat(getComputedStyle(bl).fontSize) || 13.5;
-          var fits = avail - glyphW - (bm ? gap : 0);
-          bl.style.fontSize = Math.max(8, base * (fits / labW)) + 'px';
-          labW = bl.getComputedTextLength();
+       * Right of the mark and nowhere else, which is what the gutter was
+       * measured out for. It also settles the frame's other end for nothing:
+       * the reader's total is inside the plot and this is outside it, so the
+       * two blocks cannot land on each other however close the two lines run.
+       *
+       * Where the frame was too narrow to spare a gutter the words come back
+       * inside the picture, and both of those conveniences go with it: the
+       * block slides left along the slope to fit, and it has to stop short of
+       * the reader's total when the two lines are running at the same height.
+       * Sliding left is the safe direction — the slope climbs, so everything
+       * behind the newest mark is below the line the words sit on. */
+      var labY = Math.max(Y0 + 12, Math.min(Y1 - 2, lastY + 5));
+      var blockX;
+      if (gutter) {
+        blockX = Math.max(lastX + half + 3, XD + lead);
+      } else {
+        /* Measured off what the two blocks actually cover rather than a rough
+         * band around them. A loose test cost real legibility: the words were
+         * pushed clear of a total sitting four pixels below them and shrank to
+         * 8px to fit the room that left. */
+        var limit = X1;
+        if (youBox && labY + 4 > youBox.youY - 14 && labY - 13 < youBox.valY + 4) {
+          limit = Math.max(X0 + 90, youBox.x - 46 - 8);
         }
-      } catch (e) { labW = avail - glyphW - gap; }
-
-      var blockW = glyphW + (bm ? gap : 0) + labW;
-      var blockX = Math.max(X0 + 2, Math.min(lastX + half + 3, limit - blockW));
-      // Kept inside the frame top and bottom, which only bites when the slope
-      // has reached the very top of a short run.
-      labY = Math.max(Y0 + 12, Math.min(Y1 - 2, labY));
-
+        var blockW = glyphW + (bm ? gap : 0) + labW;
+        if (blockW > limit - X0 - 4) {
+          try {
+            var narrow = parseFloat(getComputedStyle(bl).fontSize) || 13.5;
+            var fits = (limit - X0 - 4) - glyphW - (bm ? gap : 0);
+            bl.style.fontSize = Math.max(8, narrow * (fits / labW)) + 'px';
+            labW = bl.getComputedTextLength();
+            blockW = glyphW + (bm ? gap : 0) + labW;
+          } catch (e) { }
+        }
+        blockX = Math.max(X0 + 2, Math.min(lastX + half + 3, limit - blockW));
+      }
       if (bm) { bm.setAttribute('x', blockX); bm.setAttribute('y', labY + 4); }
       bl.setAttribute('x', blockX + glyphW + (bm ? gap : 0));
       bl.setAttribute('y', labY);
+      // Moved to the end so they sit over the picture: they were built before
+      // it, to size the gutter they now stand in.
+      if (bm) svg.appendChild(bm);
+      svg.appendChild(bl);
+    } else if (bl) {
+      // The gutter is held from the first draw so the axis does not rescale
+      // under the reader the moment they finish something, but until then there
+      // is no mark to name and the words would be labelling nothing.
+      if (bm) svg.removeChild(bm);
+      svg.removeChild(bl);
     }
 
     // The line, then the points on top of it.
