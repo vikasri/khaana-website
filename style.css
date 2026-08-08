@@ -2371,10 +2371,12 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
    page works without JavaScript; trivia.js hides all but today's. */
 /* The welcome line, so it is sized to be read rather than skimmed past. The
    no-JavaScript fallback below the questions keeps the smaller size. */
-/* The page opens on a heading now, so it wants the ordinary distance from the
-   header rather than the tighter one a page opening on a game wanted. */
-section.trivia-section { padding-top: 24px; }
-@media (max-width: 560px) { section.trivia-section { padding-top: 30px; } }
+/* The page opens on the leaderboard, which is a strip of small print with its
+   own word over it — not a heading that wants air around it. The ordinary
+   distance from the header left it floating, so this is the least that still
+   keeps it off the nav's bottom rule. */
+section.trivia-section { padding-top: 6px; }
+@media (max-width: 560px) { section.trivia-section { padding-top: 8px; } }
 /* Trivia, then the chart, then the matching game — the order they are written
    in. The page used to lift the game above the trivia with `order`, which
    meant the h1 was first in the markup and second on the screen; with the
@@ -2627,7 +2629,13 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    a 375px phone has and the label wrapped above it, which is the layout this
    replaced. At 200 they stay on one row all the way down, and the plot still
    grows to about 250 there — clear of the script's 240 floor. */
-.score-chart-plot { flex: 1 1 190px; min-width: 0; max-width: 340px; }
+/* The cap back up to 420, matching W_MAX in the script — this is the number
+   that actually binds, so raising it there alone changed nothing. The frame now
+   carries a line of words at each end, the benchmark's name beside its glyph
+   and the reader's total under "You", and at 340 the name was being shrunk to
+   fit rather than read. Only a ceiling: the basis is untouched, so a phone gets
+   the same picture it did. */
+.score-chart-plot { flex: 1 1 190px; min-width: 0; max-width: 420px; }
 .score-chart-plot svg { display: block; width: 100%; height: auto; }
 
 .sc-grid { stroke: var(--line); stroke-width: 1; }

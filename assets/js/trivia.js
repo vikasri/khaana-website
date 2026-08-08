@@ -190,7 +190,7 @@
   var chart = window.KhaanaScoreLine;
   var solved = 0;                  // questions got right, which is games played
   if (chart) chart.track('trivia', 'Trivia',
-                         { step: 0.5, label: 'Blind Guesses',
+                         { step: 0.5, label: 'A Blind Guesser',
                            mark: '🙈' });
 
   /* The board under the panel wants a score per question rather than the
@@ -278,7 +278,7 @@
   function scoreLine() {
     if (!scoreEl) return;
     scoreEl.hidden = false;
-    scoreEl.textContent = 'Score ' + score + ' / ' + (served * RIGHT);
+    scoreEl.textContent = 'Score: ' + score + ' / ' + (served * RIGHT);
     scoreEl.setAttribute('data-all', score === served * RIGHT ? 'done' : 'part');
     scoreEl.setAttribute('data-neg', score < 0 ? '1' : '0');
   }

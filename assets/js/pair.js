@@ -103,7 +103,7 @@
   var chart = window.KhaanaScoreLine;
   var finished = 0;                // boards solved, which is games played
   if (chart) chart.track('pair', 'Matching',
-                         { step: 3.28, label: 'Guesses+Remembers' });
+                         { step: 3.28, label: 'A Guesser who Remembers' });
 
   /* The board under the game, as in the trivia — but over five rounds rather
    * than ten questions. A round is four drags and a mark and often two or
@@ -289,7 +289,7 @@
 
     if (attemptEl) attemptEl.textContent = 'Attempt ' + attempt;
     if (scoreEl) {
-      scoreEl.textContent = 'Score ' + score + ' / ' + (rounds * PER_ROUND);
+      scoreEl.textContent = 'Score: ' + score + ' / ' + (rounds * PER_ROUND);
       scoreEl.setAttribute('data-neg', score < 0 ? '1' : '0');
     }
   }
