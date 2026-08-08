@@ -113,7 +113,7 @@
    * rather than two. */
   var board = window.KhaanaBoard;
   var roundNet = 0, roundStart = 0;
-  if (board) board.track('pair', { span: 5, root: 'board-pair' });
+  if (board) board.track('pair', { span: 5, root: 'board-pair', name: 'Pairing' });
 
   /* --- the round ---------------------------------------------------------- */
 

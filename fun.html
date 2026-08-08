@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://khaana.com/assets/images/home-hero.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 
-<link rel="stylesheet" href="style.css?v=d08af8cd" />
+<link rel="stylesheet" href="style.css?v=05b2727b" />
 </head>
 <body>
 
@@ -76,6 +76,58 @@
 
 <section class="tight trivia-section">
   <div class="container trivia-page">
+    <section class="fun-boards" id="fun-boards" hidden>
+      <div class="board" id="board-trivia" data-game="trivia" hidden
+           aria-labelledby="board-trivia-title">
+        <h2 class="board-title" id="board-trivia-title"><span
+          class="board-game">Trivia</span> best scores <span
+          class="board-rule">(10 consecutive games)</span></h2>
+        <ol class="board-rows"></ol>
+        <p class="board-you" role="status" aria-live="polite" hidden></p>
+      </div>
+      <div class="board" id="board-pair" data-game="pair" hidden
+           aria-labelledby="board-pair-title">
+        <h2 class="board-title" id="board-pair-title"><span
+          class="board-game">Pairing</span> best scores <span
+          class="board-rule">(5 consecutive games)</span></h2>
+        <ol class="board-rows"></ol>
+        <p class="board-you" role="status" aria-live="polite" hidden></p>
+      </div>
+    </section>
+    <dialog class="board-prompt" id="board-prompt">
+      <div class="board-prompt-in">
+        <div class="board-sparks" aria-hidden="true">
+          <span style="--dx:0.0px; --dy:-44.0px; --d:0ms"></span>
+          <span style="--dx:21.8px; --dy:-52.7px; --d:70ms"></span>
+          <span style="--dx:49.5px; --dy:-49.5px; --d:140ms"></span>
+          <span style="--dx:40.7px; --dy:-16.8px; --d:210ms"></span>
+          <span style="--dx:57.0px; --dy:0.0px; --d:0ms"></span>
+          <span style="--dx:64.7px; --dy:26.8px; --d:70ms"></span>
+          <span style="--dx:31.1px; --dy:31.1px; --d:140ms"></span>
+          <span style="--dx:21.8px; --dy:52.7px; --d:210ms"></span>
+          <span style="--dx:0.0px; --dy:70.0px; --d:0ms"></span>
+          <span style="--dx:-16.8px; --dy:40.7px; --d:70ms"></span>
+          <span style="--dx:-40.3px; --dy:40.3px; --d:140ms"></span>
+          <span style="--dx:-64.7px; --dy:26.8px; --d:210ms"></span>
+          <span style="--dx:-44.0px; --dy:0.0px; --d:0ms"></span>
+          <span style="--dx:-52.7px; --dy:-21.8px; --d:70ms"></span>
+          <span style="--dx:-49.5px; --dy:-49.5px; --d:140ms"></span>
+          <span style="--dx:-16.8px; --dy:-40.7px; --d:210ms"></span>
+        </div>
+        <p class="board-prompt-cheer" id="board-prompt-cheer"></p>
+        <p class="board-prompt-what" id="board-prompt-what"></p>
+        <form class="board-join" id="board-join">
+          <label class="sr-only" for="board-name">Your name</label>
+          <input class="board-name-input" id="board-name" type="text"
+                 maxlength="13" autocomplete="off" spellcheck="false"
+                 placeholder="Your name" />
+          <button type="submit" class="board-add">Add me</button>
+          <button type="button" class="board-skip">Not now</button>
+          <p class="board-error" id="board-error" role="alert" hidden></p>
+        </form>
+      </div>
+    </dialog>
+
     <p class="trivia-tagline">Put Your or Friend&rsquo;s and Family&rsquo;s Food
       Knowledge to the Test</p>
 
@@ -90,7 +142,7 @@
         </div>
         <div class="trivia-head-right">
           <div class="trivia-scoring">
-            <p class="trivia-rule">Correct +2, wrong -1</p>
+            <p class="trivia-rule">Correct +2 points, wrong -1 points</p>
             <p class="trivia-score" id="trivia-score" hidden>Score 0 / 2</p>
           </div>
           <button type="button" class="trivia-sound" id="trivia-sound"
@@ -1769,49 +1821,11 @@
       <p class="sr-only" id="score-chart-read" role="status" aria-live="polite"></p>
     </section>
 
-    <section class="fun-boards" id="fun-boards" hidden>
-      <div class="board" id="board-trivia" data-game="trivia" hidden
-           aria-labelledby="board-trivia-title">
-        <h2 class="board-title" id="board-trivia-title"><span
-          class="board-game">Trivia</span> best scores <span
-          class="board-rule">(10 consecutive games)</span></h2>
-        <ol class="board-rows"></ol>
-        <p class="board-you" role="status" aria-live="polite" hidden></p>
-        <form class="board-join" hidden>
-          <label class="board-join-label" for="board-trivia-name">On the board</label>
-          <input class="board-name-input" id="board-trivia-name" type="text"
-                 maxlength="13" autocomplete="off" spellcheck="false"
-                 placeholder="Your name" />
-          <button type="submit" class="board-add">Add</button>
-          <button type="button" class="board-skip">Not now</button>
-          <p class="board-error" role="alert" hidden></p>
-        </form>
-      </div>
-      <div class="board" id="board-pair" data-game="pair" hidden
-           aria-labelledby="board-pair-title">
-        <h2 class="board-title" id="board-pair-title"><span
-          class="board-game">Pairing</span> best scores <span
-          class="board-rule">(5 consecutive games)</span></h2>
-        <ol class="board-rows"></ol>
-        <p class="board-you" role="status" aria-live="polite" hidden></p>
-        <form class="board-join" hidden>
-          <label class="board-join-label" for="board-pair-name">On the board</label>
-          <input class="board-name-input" id="board-pair-name" type="text"
-                 maxlength="13" autocomplete="off" spellcheck="false"
-                 placeholder="Your name" />
-          <button type="submit" class="board-add">Add</button>
-          <button type="button" class="board-skip">Not now</button>
-          <p class="board-error" role="alert" hidden></p>
-        </form>
-      </div>
-    </section>
-
-
     <section class="pair" id="pair-game" hidden aria-labelledby="pair-title">
       <div class="pair-head">
         <h2 id="pair-title">Match dishes to cuisine category</h2>
         <div class="pair-scoring">
-          <p class="pair-rule">Correct +2, wrong -1</p>
+          <p class="pair-rule">Correct +2 points, wrong -1 points</p>
           <p class="pair-meter">
             <span class="pair-attempt" id="pair-attempt">Attempt 1</span>
             <span class="pair-score" id="pair-score" data-neg="0">Score 0 / 8</span>
@@ -1892,9 +1906,9 @@
 <script src="script.js?v=cff5324b"></script>
 <!-- Before the two games, which register their series and their boards with
      them as they start. -->
-<script src="assets/js/score-chart.js?v=a4133e56"></script>
-<script src="assets/js/leaderboard.js?v=661d2a57"></script>
-<script src="assets/js/trivia.js?v=b4900057"></script>
-<script src="assets/js/pair.js?v=4113456f"></script>
+<script src="assets/js/score-chart.js?v=1c3ef763"></script>
+<script src="assets/js/leaderboard.js?v=b6d47742"></script>
+<script src="assets/js/trivia.js?v=5dba3457"></script>
+<script src="assets/js/pair.js?v=98bcbb73"></script>
 </body>
 </html>

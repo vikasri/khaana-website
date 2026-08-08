@@ -2597,8 +2597,13 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    whole of the SVG; everything here is the panel it sits in and the colours it
    draws with. The panel carries `hidden` in the markup and the script un-hides
    it, so a reader without JavaScript gets no empty axes. */
+/* Label beside the plot, not over it. As a heading with a full-width figure
+   under it, the chart read as the main event on a page whose main event is a
+   quiz — and readers found it confusing rather than interesting. On its side
+   it takes one short row and announces itself as an aside. */
 .score-chart {
-  margin: 0; padding: 12px 18px 14px;
+  margin: 0; padding: 10px 18px 10px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px;
   background: var(--paper);
   border: 1px solid var(--line); border-radius: var(--radius);
   /* The line's colour, swapped by the game in the frame. Warm for the trivia,
@@ -2611,12 +2616,18 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 @media (max-width: 759px) { .score-chart { padding: 10px 12px 12px; } }
 
 .score-chart-title {
-  margin: 0 0 6px; font-size: 1.05rem; line-height: 1.2; color: var(--sc-ink);
+  flex: 0 0 auto; margin: 0;
+  font-size: 0.92rem; line-height: 1.2; color: var(--sc-ink);
 }
-/* Capped rather than filling the panel: the frame is drawn at the width it
-   gets, and given 1050px of it the chart stops being the small one asked for.
-   The script measures this box, so the cap here is what sets the size. */
-.score-chart-plot { max-width: 640px; margin: 0 auto; }
+/* The script measures this box and draws at exactly its width, so the cap here
+   is what sets the size of the picture. 400 keeps it a sidelight beside its
+   label; the basis lets it drop under the label rather than be squeezed once
+   there is no longer room for both. */
+/* Basis 200, not 260: at 260 the label and the plot together wanted more than
+   a 375px phone has and the label wrapped above it, which is the layout this
+   replaced. At 200 they stay on one row all the way down, and the plot still
+   grows to about 250 there — clear of the script's 240 floor. */
+.score-chart-plot { flex: 1 1 190px; min-width: 0; max-width: 300px; }
 .score-chart-plot svg { display: block; width: 100%; height: auto; }
 
 .sc-grid { stroke: var(--line); stroke-width: 1; }
@@ -2624,11 +2635,11 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 .sc-axis { stroke: var(--ink-soft); stroke-width: 1; opacity: 0.5; }
 /* Sized to be read rather than squinted at: the frame is drawn at true pixel
    width, so these are the sizes they arrive at on the glass. */
-.sc-tick { fill: var(--ink-soft); font-family: var(--sans); font-size: 14px; }
+.sc-tick { fill: var(--ink-soft); font-family: var(--sans); font-size: 11.5px; }
 .sc-tick-y { text-anchor: end; }
 .sc-tick-x { text-anchor: middle; }
 .sc-axis-name {
-  fill: var(--ink-soft); font-family: var(--sans); font-size: 14px;
+  fill: var(--ink-soft); font-family: var(--sans); font-size: 11.5px;
   font-weight: 700; text-anchor: middle;
 }
 /* The benchmark: what chance alone would have scored by now. Dotted so it
@@ -2919,11 +2930,17 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    flex box goes on being a flex box. leaderboard.js opens a half when it has
    something to show and the panel when either half is open: no JavaScript, no
    board, and no placeholder rows before anyone has played. */
+/* A faint blue rather than the paper the other panels use. It is the first
+   thing on the page and the only one that is not a game, so it wants to read
+   as a different kind of thing at a glance — and the tint is off --azure,
+   which is already the matching game's colour here, so the page is not
+   learning a new one. Faint enough that both games' ink still clears 4.5:1
+   on it. */
 .fun-boards {
-  margin: 0; padding: 9px 18px 10px;
-  background: var(--paper);
-  border: 1px solid var(--line); border-radius: var(--radius);
-  display: flex; flex-wrap: wrap; align-items: flex-start; gap: 10px 30px;
+  margin: 0; padding: 7px 18px 7px;
+  background: #f1f7fc;
+  border: 1px solid #d9e6f1; border-radius: var(--radius);
+  display: flex; flex-wrap: wrap; align-items: flex-start; gap: 7px 30px;
 }
 .fun-boards[hidden] { display: none; }
 /* 240px before it wraps: narrower than that and a name plus a time plus a
@@ -2935,11 +2952,11 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    wrapped — a left border on a stacked column points the wrong way. */
 @media (min-width: 620px) {
   .fun-boards > .board + .board {
-    border-left: 1px solid var(--line); padding-left: 30px;
+    border-left: 1px solid #d9e6f1; padding-left: 30px;
   }
 }
 .board[data-game="pair"] { --bd-ink: var(--azure); }
-@media (max-width: 759px) { .fun-boards { padding: 8px 12px 9px; } }
+@media (max-width: 759px) { .fun-boards { padding: 6px 12px 6px; } }
 
 /* Sized like the scoring rules above the games rather than like a heading:
    it is a label on two numbers, and set as an h2 it shouted over the game it
@@ -2947,17 +2964,13 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 /* Set a step down from the games either side of it, and packed tight.
    A board is a glance, not a read: four short rows that want to sit in as
    little of the page as they can without the numbers touching. */
-.board-join-label {
-  margin: 0; font-family: var(--sans); font-size: 0.66rem; font-weight: 700;
-  letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft);
-}
 /* Sentence case, not the uppercase the other small labels use. Uppercase with
    letter-spacing is the widest way to set a string, and this one has to carry
    a game name and a rule across half a panel — set that way it took three
    lines on a phone to say what now takes one or two. */
 .board-title {
-  margin: 0 0 3px; font-family: var(--sans); font-size: 0.72rem;
-  font-weight: 400; line-height: 1.35; color: var(--ink-soft);
+  margin: 0 0 1px; font-family: var(--sans); font-size: 0.68rem;
+  font-weight: 400; line-height: 1.3; color: var(--ink-soft);
 }
 /* The game's name, which is what tells the two boards apart once they have
    wrapped to stacked and there is no longer a rule between them. Written as
@@ -2973,27 +2986,27 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 .board-rows { list-style: none; margin: 0; padding: 0; }
 .board-row {
   display: flex; align-items: baseline; gap: 9px;
-  padding: 3px 0; border-bottom: 1px solid var(--line);
+  padding: 1px 0; line-height: 1.25; border-bottom: 1px solid #dde9f3;
 }
 .board-row:last-child { border-bottom: 0; }
-.board-rank { flex: 0 0 1.2em; color: var(--ink-soft); font-size: 0.8rem; }
+.board-rank { flex: 0 0 1.1em; color: var(--ink-soft); font-size: 0.75rem; }
 /* A name is whatever the player typed, up to thirteen characters of it, so it
    is the one string on this page that can be a single unbroken run of them. */
 .board-who {
   flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere;
-  font-family: var(--serif); font-size: 0.95rem; font-weight: 700;
-  line-height: 1.35; color: var(--ink);
+  font-family: var(--serif); font-size: 0.86rem; font-weight: 700;
+  line-height: 1.25; color: var(--ink);
 }
 .board-row[data-mine="1"] .board-who { color: var(--bd-ink); }
 /* The tie-break, and set like one: quiet, beside the score rather than
    competing with it, and lined up so two of them can be compared at a
    glance. */
 .board-time {
-  flex: 0 0 auto; font-family: var(--sans); font-size: 0.76rem;
+  flex: 0 0 auto; font-family: var(--sans); font-size: 0.72rem;
   color: var(--ink-soft); font-variant-numeric: tabular-nums;
 }
 .board-score {
-  flex: 0 0 auto; font-size: 0.95rem; font-weight: 700; color: var(--bd-ink);
+  flex: 0 0 auto; font-size: 0.88rem; font-weight: 700; color: var(--bd-ink);
   font-variant-numeric: tabular-nums;
 }
 /* The player's own best, in the columns the rows use so the number lands
@@ -3001,17 +3014,97 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    and not a third place. */
 .board-you {
   display: flex; align-items: baseline; gap: 9px;
-  margin: 0; padding: 3px 0 0; border-top: 1px dashed var(--line);
+  margin: 0; padding: 1px 0 0; line-height: 1.25; border-top: 1px dashed #cfdfec;
 }
-.board-you .board-who { font-family: var(--sans); font-size: 0.86rem; color: var(--ink-soft); }
+.board-you .board-who { font-family: var(--sans); font-size: 0.78rem; color: var(--ink-soft); }
 .board-you .board-score { color: var(--ink-soft); }
 
-/* Shown once, to a player who has just displaced the second row. */
+/* ---------- The prompt ---------- */
+/* Shown once a sitting, to a player who has just displaced a standing score.
+   It was a line of small print under a panel nobody had reason to be looking
+   at, so most people would have earned a place and never noticed. This is the
+   only thing on the page that asks for anything typed, and the only moment
+   worth stopping for. */
+.board-prompt {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--paper); color: var(--ink);
+  padding: 0; max-width: 22rem; width: calc(100% - 32px);
+  box-shadow: 0 18px 50px rgba(27, 36, 34, 0.28);
+  --bd-ink: var(--nav-active);
+}
+.board-prompt[data-game="pair"] { --bd-ink: var(--azure); }
+.board-prompt::backdrop { background: rgba(27, 36, 34, 0.45); }
+.board-prompt-in { padding: 20px 22px 18px; text-align: center; }
+
+.board-prompt-cheer {
+  margin: 0 0 2px; font-family: var(--serif);
+  font-size: 1.32rem; font-weight: 700; line-height: 1.25; color: var(--bd-ink);
+}
+.board-prompt-what {
+  margin: 0 0 12px; font-family: var(--sans); font-size: 0.78rem;
+  font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* The burst. Sixteen spans thrown out from a point above the heading, each
+   given its direction, distance and delay by build-trivia.py, so the whole
+   animation is this one rule and no script runs it. */
+.board-sparks { position: relative; height: 0; }
+.board-sparks span {
+  position: absolute; left: 50%; top: 4px;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--bd-ink); opacity: 0;
+}
+.board-sparks span:nth-child(3n) { background: var(--gold); }
+.board-sparks span:nth-child(3n + 2) { background: var(--saffron); }
+.board-prompt[open] .board-sparks span {
+  animation: board-spark 780ms var(--d) cubic-bezier(0.16, 0.84, 0.44, 1) both;
+}
+@keyframes board-spark {
+  0%   { transform: translate(-50%, 0) scale(0.3); opacity: 1; }
+  65%  { opacity: 1; }
+  100% { transform: translate(calc(-50% + var(--dx)), var(--dy)) scale(1);
+         opacity: 0; }
+}
+/* The form waits for the burst, so the congratulation lands before the page
+   asks for anything. `both` holds it back during the delay — and if animations
+   are off entirely the rule never applies and the form is simply there, which
+   is the right way for this to fail. */
+.board-prompt[open] .board-join { animation: board-ask 320ms 620ms both; }
+@keyframes board-ask {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: none; }
+}
+/* Asked for no motion: no burst, no wait, just the question. */
+@media (prefers-reduced-motion: reduce) {
+  .board-prompt[open] .board-sparks span,
+  .board-prompt[open] .board-join { animation: none; }
+  .board-sparks { display: none; }
+}
+
 .board-join {
   display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px;
+  justify-content: center;
+}
+/* In the dialog the controls are the point, so they are sized to be the point:
+   the field on its own line at reading size, the button under it. The same
+   elements go back to the board's own small scale in the fallback below, which
+   is the size everything on that panel is. */
+.board-prompt .board-name-input {
+  flex: 1 1 100%; max-width: none; text-align: center;
+  font-size: 1.15rem; padding: 11px 16px;
+}
+.board-prompt .board-add {
+  flex: 1 1 100%; font-size: 0.92rem; padding: 11px 26px;
+}
+.board-prompt .board-skip { flex: 1 1 100%; font-size: 0.82rem; padding: 2px; }
+.board-prompt .board-error { text-align: center; }
+
+/* Back under its board, on a browser with no dialog to put it in. */
+.board > .board-join {
+  justify-content: flex-start;
   margin-top: 7px; padding-top: 7px; border-top: 1px solid var(--line);
 }
-.board-join-label { color: var(--bd-ink); }
 .board-name-input {
   flex: 1 1 9ch; min-width: 0; max-width: 18ch;
   border: 1px solid var(--line); border-radius: 999px;

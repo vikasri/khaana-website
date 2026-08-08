@@ -1,4 +1,4 @@
-/* Fun facts: the best-ten board, and the matching game's best-five.
+/* Fun facts: the shared boards under the chart.
  *
  * What a score is
  * ---------------
@@ -15,132 +15,49 @@
  * declared over. A block of ten with a scoring beat at the end would have put
  * back the "come back tomorrow" pause the trivia was rewritten to remove.
  *
- * Why two rows and not one
- * ------------------------
- * One is a record; two is a board. The second row is the bar a new player has
- * to clear, and it is the number this file compares against, so it belongs on
- * screen. Two is also all that is stored: a score that cannot displace the
- * second row is not written anywhere.
+ * Ties break on the clock: same score, quicker wins. That is not decoration.
+ * Ten questions answered clean is twenty and there is no twenty-one, so
+ * without a second key a perfect run could never be beaten and the board would
+ * close the first time somebody had a good afternoon.
  *
  * Where it lives
  * --------------
- * localStorage, on the one device, like favourites.js. There is no server
- * behind this site and no account, so a name typed here is seen by whoever is
- * holding the phone and by nobody else. That is the whole design and not a
- * limitation of it: the tagline asks you to test your family, and this is a
- * board your family passes around.
+ * On the server now, not in this browser. Everyone playing anywhere is on the
+ * same board, which is the whole point of it and is why the page has to ask
+ * for it rather than remember it. The API is a small Cloudflare Worker in
+ * front of a D1 table; the site itself is still static files on GitHub Pages
+ * and has not moved.
  *
- * The name is asked for once a session, the first time a player displaces the
- * second row, and never again — after that their row climbs on its own as
- * their best improves. Asking on every improvement would interrupt a sliding
- * window several times a sitting.
+ * Everything here is written so the games do not care whether that works. No
+ * network, slow network, Worker down: the quiz and the matching game play
+ * exactly as they do now and the board simply is not there. Nothing waits on a
+ * fetch and nothing is blocked by one failing.
+ *
+ * Your own best still comes from this session and is shown whether or not it
+ * is good enough for the board. On a board of two that matters more, not less:
+ * almost nobody is on it, and without their own number a player would have
+ * nothing to read but two strangers' scores.
  */
 (function () {
   'use strict';
 
-  var KEY = 'khaana-fun-board';
-  var KEEP = 2;                    // rows stored, and rows shown
+  var API = 'https://khaana-board.vikasri.workers.dev';
+  /* Three, and it must match TOP_N in the Worker. The last row on screen is
+   * the bar — it is what `beats` compares a finished run against — so a page
+   * expecting more rows than the server sends would read a full board as one
+   * with a free slot and prompt people who had not earned it. Every run is
+   * still stored server-side; this is the display and the threshold, not a
+   * limit on what is kept. */
+  var KEEP = 3;
   var MAX_NAME = 13;               // and the maxlength in tools/build-trivia.py
-
-  /* --- what is on the board ------------------------------------------------ */
-
-  /* Seasons, ended by hand.
-   *
-   * A board that is never cleared stops being a competition — two good runs in
-   * its first week and everyone after them is playing for third place, which
-   * does not exist — so it gets cleared. When is a decision, not a rule: this
-   * board runs until somebody ends it.
-   *
-   * Ending one
-   * ----------
-   * Change TAG to anything it has not been before — "2", "diwali", a date —
-   * and deploy. Every stored board carries the old stamp, none of them match
-   * the new one, and the next visit anyone makes starts them empty. That is
-   * the whole of a site-wide reset: one string, one push.
-   *
-   * To clear a single device rather than all of them, in that browser's
-   * console:
-   *
-   *     localStorage.removeItem('khaana-fun-board')
-   *
-   * Handing it to the calendar instead
-   * ----------------------------------
-   * PERIOD is the switch, and it is off. Set it to 'month' or 'quarter' and
-   * the date joins the stamp, so every board clears itself on the 1st without
-   * anyone touching the file again.
-   *
-   * It ships off on purpose. A calendar rule fires on a date nobody chose,
-   * possibly mid-week with somebody halfway through a run, and once it is in
-   * the reader's browser it cannot be called back. A reset that happens only
-   * when it is asked for is the one that can be timed. The switch is here so
-   * that changing your mind is one word rather than a rewrite.
-   */
-  var TAG = '1';
-  var PERIOD = null;               // null | 'month' | 'quarter'
-
-  function season() {
-    if (!PERIOD) return TAG;
-    var d = new Date(), m = d.getMonth();
-    return TAG + ':' + d.getFullYear() + '-' +
-           (PERIOD === 'quarter' ? 'q' + (Math.floor(m / 3) + 1) : (m + 1));
-  }
-
-  function readAll() {
-    try {
-      var raw = localStorage.getItem(KEY);
-      var all = raw ? JSON.parse(raw) : null;
-      if (!all || typeof all !== 'object') return {};
-      if (all.season !== season()) {
-        localStorage.removeItem(KEY);      // last month's board, so no board
-        return {};
-      }
-      return all;
-    } catch (e) {
-      return {};                   // storage blocked or corrupt; play without it
-    }
-  }
-
-  /* Trusting nothing that comes back out: this is the one input to the page
-   * that a previous version of this file wrote, and a half-written or
-   * hand-edited value should cost a board rather than the game under it. */
-  function entriesFor(all, key) {
-    var list = all[key];
-    if (Object.prototype.toString.call(list) !== '[object Array]') return [];
-    var out = [];
-    for (var i = 0; i < list.length && out.length < KEEP; i++) {
-      var e = list[i];
-      if (!e || typeof e.n !== 'string' || typeof e.s !== 'number') continue;
-      if (!isFinite(e.s)) continue;
-      out.push({ n: e.n.slice(0, MAX_NAME), s: Math.round(e.s), t: time(e.t) });
-    }
-    return out;
-  }
-
-  /* A run with no usable time loses every tie, which is the safe way round: a
-   * row written by some earlier version of this file should not outrank a
-   * timed one on a technicality. A day, so it is still a number in storage. */
-  var SLOW = 86400000;
-  function time(v) {
-    return (typeof v === 'number' && isFinite(v) && v >= 0) ? Math.round(v) : SLOW;
-  }
-
-  function save(key, entries) {
-    var all = readAll();
-    all.season = season();
-    all[key] = entries.map(function (e) { return { n: e.n, s: e.s, t: e.t }; });
-    try { localStorage.setItem(KEY, JSON.stringify(all)); }
-    catch (e) { /* not remembering it is survivable */ }
-  }
 
   /* --- names ---------------------------------------------------------------
    *
-   * A name never leaves the device, so this is not moderation — there is
-   * nobody downstream to protect. It is there so that a board the family looks
-   * at cannot be scrawled on by whoever had the phone last.
-   *
-   * Which is also its limit, and worth being honest about: everything here
-   * runs in the browser, so anyone willing to open the console can write what
-   * they like into storage. It stops the typing, not the determined.
+   * The server runs this same check and its answer is the one that counts:
+   * anything can post to a public endpoint, so a rule that only exists in the
+   * browser is not a rule. This copy is here to refuse a name instantly rather
+   * than after a round trip, and the two lists are kept identical on purpose —
+   * if you edit one, edit worker/src/index.js too.
    *
    * Three passes, each narrower than the last, because the wide one is what
    * generates false positives. The flattened name is scanned for the words in
@@ -232,6 +149,26 @@
     return true;
   }
 
+  /* --- comparing runs ------------------------------------------------------ */
+
+  /* Score first, then the clock, and strictly better both ways — equal on both
+   * is not better, so an incumbent is never displaced by being matched. */
+  function better(run, than) {
+    if (!than) return true;
+    if (run.s !== than.s) return run.s > than.s;
+    return run.t < than.t;
+  }
+
+  /* Whole seconds under a minute, m:ss over it. Tenths would suggest the clock
+   * is doing more than breaking ties, and it is not. */
+  function clock(ms) {
+    var s = Math.round(ms / 1000);
+    if (s < 60) return s + 's';
+    var m = Math.floor(s / 60);
+    s -= m * 60;
+    return m + ':' + (s < 10 ? '0' : '') + s;
+  }
+
   /* --- one board ----------------------------------------------------------- */
 
   var boards = {};
@@ -242,76 +179,125 @@
     var b = {
       key: key,
       span: cfg.span,
+      name: cfg.name,
       root: root,
       rowsEl: root.querySelector('.board-rows'),
-      joinEl: root.querySelector('.board-join'),
-      nameEl: root.querySelector('.board-name-input'),
-      errEl: root.querySelector('.board-error'),
       youEl: root.querySelector('.board-you'),
-      entries: entriesFor(readAll(), key),
+      rows: [],                    // the board as the server last gave it
+      got: false,                  // whether that has ever arrived
       runs: [],                    // the last `span` games, newest last
       best: null,                  // best window this session, {s, t}
-      mine: null,                  // this player's row, once they have named it
-      asked: false                 // the name has been asked for, once, or waived
+      mine: null,                  // the name submitted this session
+      asked: false,                // the name has been asked for, or waived
+      sending: false
     };
     boards[key] = b;
-    wire(b);
     paint(b);
+    pull(b);
     return b;
   }
 
-  /* Score first, then the clock.
+  /* --- talking to the board ------------------------------------------------
    *
-   * Time is the tie-break rather than a score of its own: a run is judged on
-   * what it got right, and only two runs that got the same amount right are
-   * separated by how long they took. It also keeps the board open. Ten
-   * questions answered clean is twenty and there is no twenty-one, so without
-   * a second key a perfect run could never be displaced and the board would
-   * close the first time somebody had a good afternoon.
-   *
-   * Strictly better, both ways: equal on both is not better, so an incumbent
-   * is never moved by being matched.
+   * Every call is wrapped so a failure is a board that does not appear rather
+   * than a game that does not work. There is no retry loop and no spinner: the
+   * reader came here to answer questions about samosas, and a page that nags
+   * about its own network is worse than one that quietly has no board.
    */
-  function better(run, than) {
-    if (!than) return true;
-    if (run.s !== than.s) return run.s > than.s;
-    return run.t < than.t;
+  function pull(b) {
+    if (!window.fetch) return;
+    fetch(API + '/top?game=' + encodeURIComponent(b.key), { mode: 'cors' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (!data || !data.rows) return;
+        b.rows = clean(data.rows);
+        b.got = true;
+        paint(b);
+      })
+      .catch(function () { /* no board is survivable; the games are not */ });
   }
 
-  /* The bar to get on: the second row, or nothing at all while there are fewer
-   * than two rows. An empty slot takes any run, which is what seeds a new
-   * device — the first two sittings are on the board whatever they did, and
-   * the third is the first that has to earn it. */
+  /* Nothing off the network is trusted into the DOM unchecked, even from our
+   * own Worker: a bad row should cost a row, not the page. */
+  function clean(rows) {
+    var out = [];
+    for (var i = 0; i < rows.length && out.length < KEEP; i++) {
+      var e = rows[i];
+      if (!e || typeof e.n !== 'string') continue;
+      if (typeof e.s !== 'number' || !isFinite(e.s)) continue;
+      if (typeof e.t !== 'number' || !isFinite(e.t) || e.t < 0) continue;
+      out.push({ n: e.n.slice(0, MAX_NAME), s: Math.round(e.s), t: Math.round(e.t) });
+    }
+    return out;
+  }
+
+  /* One request at a time, and the last word wins.
+   *
+   * A sliding window improves in steps: once the good games start landing,
+   * every one of them beats the window before it, so ten in a row can each ask
+   * to be sent while the first request is still in the air. Dropping those was
+   * the obvious guard and the wrong one — it published the first improvement
+   * and threw away the nine better ones after it, so a run finishing at 33s
+   * went up as 46s.
+   *
+   * So a request arriving mid-flight is remembered rather than dropped, and
+   * fires again when the line is clear, reading b.best as it is by then. The
+   * server keeps the best run per name, so an overtaken one landing late
+   * cannot demote anybody.
+   */
+  function send(b, name) {
+    if (!window.fetch || !b.best) return;
+    b.mine = name;
+    if (b.sending) { b.pending = true; return; }
+    b.sending = true;
+    b.pending = false;
+
+    var done = function (data) {
+      b.sending = false;
+      if (data && data.rows) {
+        b.rows = clean(data.rows);
+        b.got = true;
+        paint(b);
+      }
+      if (b.pending) send(b, b.mine);        // something better arrived meanwhile
+    };
+
+    fetch(API + '/score', {
+      method: 'POST',
+      mode: 'cors',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ game: b.key, name: name, score: b.best.s, ms: b.best.t })
+    })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(done)
+      .catch(function () { done(null); });
+  }
+
+  /* The bar to clear: the last row on a full board, and nothing at all while
+   * the board has room. An empty slot takes any run, which is what seeds a new
+   * season — the first ten runs are on it whatever they scored, and the
+   * eleventh is the first that has to earn it.
+   *
+   * A board that has not arrived yet has no bar, so nobody is prompted against
+   * a standard that might not be real. */
   function beats(b, run) {
-    return b.entries.length < KEEP || better(run, b.entries[KEEP - 1]);
+    if (!b.got) return false;
+    return b.rows.length < KEEP || better(run, b.rows[KEEP - 1]);
   }
 
-  /* Whole seconds under a minute, m:ss over it. Tenths would suggest the
-   * clock is doing more than breaking ties, and it is not. */
-  function clock(ms) {
-    if (ms >= SLOW) return '';
-    var s = Math.round(ms / 1000);
-    if (s < 60) return s + 's';
-    var m = Math.floor(s / 60);
-    s -= m * 60;
-    return m + ':' + (s < 10 ? '0' : '') + s;
-  }
+  /* --- drawing ------------------------------------------------------------- */
 
   /* The player's own best, once they have a full run behind them.
    *
    * Shown whether or not it is good enough for the board, and that is the
    * point: a window of ten only exists after the tenth game, so before it
    * there is nothing to say, and after it a player who is nowhere near the
-   * second row still gets to watch their own number move. Without this the
+   * last row still gets to watch their own number move. Without this a shared
    * board is a wall to everyone who is not on it. */
   function paintYou(b) {
     if (!b.youEl) return;
     b.youEl.hidden = b.best === null;
     if (b.best === null) return;
-    /* Laid out in the same three columns as the rows above it, and for a
-     * reason beyond neatness: written as a sentence it read "Your best 10",
-     * where the 10 is the score and the title above already says ten games.
-     * In the score column there is nothing to misread. */
     b.youEl.textContent = '';
     cells(b.youEl, '', 'You', b.best);
   }
@@ -350,83 +336,118 @@
   }
 
   function paint(b) {
-    var show = b.entries.length > 0 || b.best !== null ||
-               (b.joinEl && !b.joinEl.hidden);
-    b.root.hidden = !show;
+    b.root.hidden = !(b.rows.length > 0 || b.best !== null);
     paintPanel();
     paintYou(b);
     if (!b.rowsEl) return;
     b.rowsEl.textContent = '';
-    b.entries.forEach(function (e, i) {
+    b.rows.forEach(function (e, i) {
       var li = document.createElement('li');
       li.className = 'board-row';
-      if (b.mine === e) li.setAttribute('data-mine', '1');
+      // Their own row, if they have named one this session. Names are not
+      // accounts, so this is "the name you just used" and nothing stronger.
+      if (b.mine && e.n === b.mine) li.setAttribute('data-mine', '1');
       cells(li, (i + 1) + '.', e.n, e);
       b.rowsEl.appendChild(li);
     });
   }
 
-  /* Score down, clock up, and stable — so a run that matches the one above it
-   * on both keys stays below it. Same rule as `better`, applied after the
-   * fact: an incumbent is never moved by being matched. */
-  function order(b) {
-    b.entries.sort(function (x, y) { return x.s === y.s ? x.t - y.t : y.s - x.s; });
-    b.entries = b.entries.slice(0, KEEP);
+  /* --- the prompt ----------------------------------------------------------
+   *
+   * One dialog, shared. Getting on the board is the one thing on this page
+   * worth interrupting for and it used to be a line of small print under a
+   * panel nobody was looking at, so most people would have earned a place and
+   * never known. It fires at most once a sitting, per game, and only to
+   * somebody who has just beaten the bottom of a board that actually arrived.
+   *
+   * The form lives inside the dialog. A browser with no showModal gets it
+   * moved back into the board it belongs to and shown there, which is where it
+   * used to be — worse, but not nothing.
+   */
+  var dlg = document.getElementById('board-prompt');
+  var joinEl = document.getElementById('board-join');
+  var nameEl = document.getElementById('board-name');
+  var errEl = document.getElementById('board-error');
+  var cheerEl = document.getElementById('board-prompt-cheer');
+  var whatEl = document.getElementById('board-prompt-what');
+  var asking = null;               // the board being asked about, while open
+  var modal = !!(dlg && dlg.showModal);
+
+  function fail(why) {
+    if (!errEl) return;
+    errEl.textContent = why;
+    errEl.hidden = false;
+    nameEl.focus();
+    nameEl.select();
   }
 
-  function place(b, name) {
-    var entry = { n: name, s: b.best.s, t: b.best.t };
-    b.mine = entry;
-    b.entries.push(entry);
-    order(b);
-    // Trimming can drop the row just added, if the board was full of better
-    // scores. It cannot here — nothing is placed unless it beat the second
-    // row — but a dropped row must not go on being written to.
-    if (b.entries.indexOf(entry) < 0) b.mine = null;
-    save(b.key, b.entries);
-    paint(b);
+  function shut() {
+    if (modal && dlg.open) dlg.close();
+    else if (joinEl) joinEl.hidden = true;
+    asking = null;
   }
 
-  function wire(b) {
-    if (!b.joinEl) return;
-    b.joinEl.addEventListener('submit', function (e) {
+  if (joinEl) {
+    joinEl.addEventListener('submit', function (e) {
       e.preventDefault();
-      var raw = (b.nameEl.value || '').replace(/\s+/g, ' ').trim().slice(0, MAX_NAME);
-      if (!raw || !letters(raw)) return fail(b, 'Enter a name.');
-      if (!decent(raw)) return fail(b, 'Pick another name.');
-      b.errEl.hidden = true;
-      b.joinEl.hidden = true;
-      b.nameEl.value = '';
-      place(b, raw);
+      if (!asking) return;
+      var raw = (nameEl.value || '').replace(/\s+/g, ' ').trim().slice(0, MAX_NAME);
+      if (!raw || !letters(raw)) return fail('Enter a name.');
+      if (!decent(raw)) return fail('Pick another name.');
+      var b = asking;
+      errEl.hidden = true;
+      nameEl.value = '';
+      shut();
+      send(b, raw);
     });
-    var skip = b.joinEl.querySelector('.board-skip');
-    if (skip) {
-      skip.addEventListener('click', function () {
-        b.joinEl.hidden = true;    // asked already, so it does not come back
-        paint(b);
-      });
-    }
+    var skip = joinEl.querySelector('.board-skip');
+    if (skip) skip.addEventListener('click', shut);
+  }
+  // Esc, or the backdrop: taken as "not now". `asked` is already set, so it
+  // does not come back this session however it was closed.
+  if (dlg) {
+    dlg.addEventListener('close', function () { asking = null; });
+    dlg.addEventListener('click', function (e) {
+      if (e.target === dlg) shut();          // the backdrop, not the card
+    });
   }
 
-  function fail(b, why) {
-    if (!b.errEl) return;
-    b.errEl.textContent = why;
-    b.errEl.hidden = false;
-    b.nameEl.focus();
-    b.nameEl.select();
+  /* Top of the board reads differently from merely on it, and the difference
+   * is worth a word: one is a record and the other is a place in a list. */
+  function cheerFor(b) {
+    var top = !b.rows.length || better(b.best, b.rows[0]);
+    return top ? '🏆 Top of the board!' : '🎉 You are on the board!';
   }
 
   function ask(b) {
-    if (!b.joinEl) return;
     b.asked = true;
-    b.joinEl.hidden = false;
     paint(b);
+    if (!joinEl) return;
+    if (cheerEl) cheerEl.textContent = cheerFor(b);
+    if (whatEl) {
+      whatEl.textContent = b.name + ' — ' + b.best.s + ' in ' + clock(b.best.t);
+    }
+    if (errEl) errEl.hidden = true;
+    if (nameEl) nameEl.value = '';
+    asking = b;
+    if (modal) {
+      dlg.setAttribute('data-game', b.key);
+      dlg.showModal();
+      /* Focused after the burst rather than with it. The form is held back by
+       * a CSS delay so the fireworks land first, and pulling focus into
+       * something still fading in scrolls some browsers to it mid-animation. */
+      setTimeout(function () { if (dlg.open && nameEl) nameEl.focus(); }, 700);
+    } else {
+      b.root.appendChild(joinEl);            // no dialog: back under the board
+      joinEl.hidden = false;
+      paint(b);
+    }
   }
 
   /* --- the sliding window -------------------------------------------------- */
 
   function record(b, net, ms) {
-    b.runs.push({ net: net, ms: time(ms) });
+    b.runs.push({ net: net, ms: (typeof ms === 'number' && ms >= 0) ? ms : 0 });
     if (b.runs.length > b.span) b.runs.shift();
     if (b.runs.length < b.span) return;      // no full run yet, so no score
 
@@ -440,18 +461,10 @@
     if (!better(run, b.best)) return;
     b.best = run;
 
-    if (b.mine) {
-      // Already named this session: the row climbs quietly, which is the point
-      // of asking once. It can overtake the row above it, hence the re-sort.
-      if (better(b.best, b.mine)) {
-        b.mine.s = b.best.s;
-        b.mine.t = b.best.t;
-        order(b);
-        save(b.key, b.entries);
-      }
-      paint(b);
-      return;
-    }
+    // Already named this session: the run goes up quietly, which is the point
+    // of asking once. Anything else would interrupt a sliding window over and
+    // over on the way to a good score.
+    if (b.mine) { send(b, b.mine); paint(b); return; }
     if (!b.asked && beats(b, b.best)) ask(b);      // ask() paints
     else paint(b);
   }
@@ -459,13 +472,13 @@
   /* --- what the games call ------------------------------------------------- */
 
   window.KhaanaBoard = {
-    /* key, and {span, root}: how many consecutive games make a score, and the
-     * id of the section to draw it in. */
+    /* key, and {span, root, name}: how many consecutive games make a score,
+     * the id of the section to draw it in, and what to call the game. */
     track: function (key, cfg) {
       if (!boards[key]) make(key, cfg);
     },
-    /* One solved game: what it was worth net of the misses on the way, and
-     * how long it took in milliseconds. */
+    /* One solved game, and what it was worth net of the misses on the way,
+     * with how long it took in milliseconds. */
     game: function (key, net, ms) {
       var b = boards[key];
       if (b && typeof net === 'number' && isFinite(net)) record(b, net, ms);

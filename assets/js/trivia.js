@@ -170,7 +170,7 @@
    */
   var RIGHT = 2, WRONG = -1;
   var HOLD_MS = 2000;
-  var NEXT_MS = 1250;              // before Next answers to a click
+  var NEXT_MS = 800;               // before Next answers to a click
   var score = 0;
   var scoreEl = document.getElementById('trivia-score');
 
@@ -203,7 +203,7 @@
    * that is not a game. */
   var board = window.KhaanaBoard;
   var qNet = 0, qStart = 0;
-  if (board) board.track('trivia', { span: 10, root: 'board-trivia' });
+  if (board) board.track('trivia', { span: 10, root: 'board-trivia', name: 'Trivia' });
 
   /* A friendly line on a wrong answer, and two seconds to read it.
    *

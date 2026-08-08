@@ -25,7 +25,7 @@ The trade is that the answers are visible to anyone who opens the page source.
 For a bar-trivia page about where the samosa came from, that is not a threat
 model.
 """
-import html, json, os, re, sys
+import html, json, math, os, re, sys
 
 import site_text as T
 from pair_pool import pair_pool
@@ -56,14 +56,14 @@ NAME_MAX = 13          # and MAX_NAME in assets/js/leaderboard.js, which enforce
 
 
 def board_half(game, name, span):
-    """One game's high-score board: two rows and the prompt that fills them.
+    """One game's high-score board. leaderboard.js fills it from the server.
 
     The game's name leads the title. Side by side the two boards are told
     apart by their colour, which is no use to anyone who cannot see it and no
-    use at all once they wrap to stacked on a phone — at that point "best
-    scores for 10" and "best scores for 5" are the only difference, and a
-    reader has to know the rules to work out which is which. The name is
-    written the same way the chart above writes it: Trivia and Pairing.
+    use at all once they wrap to stacked on a phone — at that point "(10
+    consecutive games)" and "(5 consecutive games)" are the only difference,
+    and a reader has to know the rules to work out which is which. The name is
+    written the same way the chart below writes it: Trivia and Pairing.
     """
     return """      <div class="board" id="board-{g}" data-game="{g}" hidden
            aria-labelledby="board-{g}-title">
@@ -72,27 +72,81 @@ def board_half(game, name, span):
           class="board-rule">({span} consecutive games)</span></h2>
         <ol class="board-rows"></ol>
         <p class="board-you" role="status" aria-live="polite" hidden></p>
-        <form class="board-join" hidden>
-          <label class="board-join-label" for="board-{g}-name">On the board</label>
-          <input class="board-name-input" id="board-{g}-name" type="text"
-                 maxlength="{cap}" autocomplete="off" spellcheck="false"
-                 placeholder="Your name" />
-          <button type="submit" class="board-add">Add</button>
-          <button type="button" class="board-skip">Not now</button>
-          <p class="board-error" role="alert" hidden></p>
-        </form>
       </div>
 """.format(g=game, name=esc(name), span=span, cap=NAME_MAX)
 
 
-def boards_html():
-    """Both boards in one panel under the chart, side by side.
+def sparks(n=16):
+    """The burst over the dialog: spans thrown outward by CSS.
 
-    They were a panel each, one under its own game, which read well and cost
-    two full-width blocks of a page that already has a quiz, a chart and a
-    matching game stacked down it. Two boards of two rows are narrow things:
-    side by side they take one block instead of three, and the reader can see
-    both without scrolling between them.
+    Every particle's direction, distance and delay is worked out here and
+    handed to the stylesheet as custom properties, so the animation stays one
+    keyframe rule and the page ships no code to run it. Three distances and
+    four delays off the index give it the unevenness a real one has without
+    anything random, which matters because a build that changes on every run
+    is a build nobody can diff.
+    """
+    out = ['        <div class="board-sparks" aria-hidden="true">']
+    for i in range(n):
+        ang = math.radians(360.0 / n * i - 90)
+        far = 44 + (i % 3) * 13
+        out.append('          <span style="--dx:%.1fpx; --dy:%.1fpx; --d:%dms"></span>'
+                   % (math.cos(ang) * far, math.sin(ang) * far, (i % 4) * 70))
+    out.append('        </div>')
+    return "\n".join(out)
+
+
+def prompt_html():
+    """The dialog that asks for a name, shared by both boards.
+
+    Getting on the board is the one moment in the page worth interrupting for,
+    and it used to be a line of small print under a panel the reader had no
+    reason to be looking at. Most people would have earned a place and never
+    known. A modal is the right size for it: it happens at most once a sitting,
+    only to somebody who has just beaten a standing score, and it is the only
+    point where the page needs something typed.
+
+    One dialog rather than one per board, because only one can be open. Which
+    game it belongs to is written into it when it opens.
+
+    It carries the form, so a browser without <dialog> is not left with nothing
+    to submit: leaderboard.js moves this form back into the board it belongs to
+    and shows it there instead.
+    """
+    return """    <dialog class="board-prompt" id="board-prompt">
+      <div class="board-prompt-in">
+{sparks}
+        <p class="board-prompt-cheer" id="board-prompt-cheer"></p>
+        <p class="board-prompt-what" id="board-prompt-what"></p>
+        <form class="board-join" id="board-join">
+          <label class="sr-only" for="board-name">Your name</label>
+          <input class="board-name-input" id="board-name" type="text"
+                 maxlength="{cap}" autocomplete="off" spellcheck="false"
+                 placeholder="Your name" />
+          <button type="submit" class="board-add">Add me</button>
+          <button type="button" class="board-skip">Not now</button>
+          <p class="board-error" id="board-error" role="alert" hidden></p>
+        </form>
+      </div>
+    </dialog>
+""".format(sparks=sparks(), cap=NAME_MAX)
+
+
+def boards_html():
+    """Both boards in one panel at the top of the page, side by side.
+
+    It sat under the chart while the board was per-device, because a board kept
+    in one browser is empty for everyone arriving for the first time and the
+    best position on the page should not be held for something usually not
+    there. A shared board is never empty once anybody has played, so the
+    argument went with the architecture: it is now the first thing on the page,
+    which is where a score to beat belongs.
+
+    They were also a panel each, one under its own game, which read well and
+    cost two full-width blocks of a page that already stacks a quiz, a chart
+    and a matching game down it. A board of three rows is a narrow thing: side
+    by side they take one block instead of two, and both are readable without
+    scrolling between them.
 
     Everything ships carrying `hidden` — the halves and the panel around them.
     leaderboard.js opens a half when it has something to show and the panel
@@ -101,7 +155,8 @@ def boards_html():
     """
     return """    <section class="fun-boards" id="fun-boards" hidden>
 %s%s    </section>
-""" % (board_half("trivia", "Trivia", 10), board_half("pair", "Pairing", 5))
+%s""" % (board_half("trivia", "Trivia", 10), board_half("pair", "Pairing", 5),
+         prompt_html())
 
 
 def question_html(n, q):
@@ -164,6 +219,7 @@ def main():
 
 <section class="tight trivia-section">
   <div class="container trivia-page">
+%s
     <p class="trivia-tagline">Put Your or Friend&rsquo;s and Family&rsquo;s Food
       Knowledge to the Test</p>
 
@@ -178,7 +234,7 @@ def main():
         </div>
         <div class="trivia-head-right">
           <div class="trivia-scoring">
-            <p class="trivia-rule">Correct +2, wrong -1</p>
+            <p class="trivia-rule">Correct +2 points, wrong -1 points</p>
             <p class="trivia-score" id="trivia-score" hidden>Score 0 / 2</p>
           </div>
           <button type="button" class="trivia-sound" id="trivia-sound"
@@ -208,13 +264,11 @@ def main():
       <p class="sr-only" id="score-chart-read" role="status" aria-live="polite"></p>
     </section>
 
-%s
-
     <section class="pair" id="pair-game" hidden aria-labelledby="pair-title">
       <div class="pair-head">
         <h2 id="pair-title">Match dishes to cuisine category</h2>
         <div class="pair-scoring">
-          <p class="pair-rule">Correct +2, wrong -1</p>
+          <p class="pair-rule">Correct +2 points, wrong -1 points</p>
           <p class="pair-meter">
             <span class="pair-attempt" id="pair-attempt">Attempt 1</span>
             <span class="pair-score" id="pair-score" data-neg="0">Score 0 / 8</span>
@@ -252,7 +306,7 @@ def main():
 <script src="assets/js/pair.js"></script>
 </body>
 </html>
-""" % (nav, body, nudges, boards_html(), pool_json, pair_msgs, foot)
+""" % (nav, boards_html(), body, nudges, pool_json, pair_msgs, foot)
 
     open(OUT, "w", encoding="utf-8").write(page)
     # No day count here any more. The page draws one question at a time at

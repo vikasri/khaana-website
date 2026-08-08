@@ -31,25 +31,39 @@
 
   var NS = 'http://www.w3.org/2000/svg';
 
-  /* The frame is redrawn at the width it is actually being shown at, so one
+  /* Deliberately small, and drawn at the width it is actually shown at, so one
    * unit here is one pixel there. Fixing the viewBox and letting the
    * stylesheet scale it would have been less code and it made the axis labels
    * illegible on a phone: 11px of text in a 600-wide frame squeezed into a
-   * 300px column comes out under 6px on the glass. */
-  /* Shorter on a narrow box. The frame is drawn at true pixel size, so on a
-   * phone a fixed 200 is 200 of the roughly 700 the reader has, spent on a
-   * plot that is mostly empty air above a line near the bottom. The margins
-   * below do not shrink with it — they hold text — so the picture loses the
-   * slack rather than the labels losing room. */
-  var H_WIDE = 200, H_NARROW = 168, NARROW = 420;
-  var H = H_WIDE, W_MAX = 640, W_MIN = 280;
+   * 300px column comes out under 6px on the glass.
+   *
+   * This started as the page's centrepiece and it is not one: readers have
+   * said the plot confuses them, and a running score against trial number is
+   * genuinely more than most people came here for. It is now a sidelight — a
+   * small frame with its label beside it rather than a full-width figure with
+   * a heading over it. Anyone who wants to read it still can, and anyone who
+   * does not is no longer looking at 640 by 200 of it before they reach the
+   * next question.
+   *
+   * Shorter again on a narrow box. The frame is drawn at true pixel size, so
+   * on a phone every pixel here is one the reader has to scroll past. The
+   * margins do not shrink with it — they hold the axis labels — so the
+   * picture loses the slack rather than the text losing room. */
+  var H_WIDE = 150, H_NARROW = 132, NARROW = 420;
+  /* Narrower again, at the same height. The x axis is trials and they keep
+   * coming, so width is the axis that was being spent on stretching a line
+   * sideways rather than on showing anything more — the shape of the run is
+   * as readable across 300 as across 400. Height is left alone: that one is
+   * score, and squashing it is what makes a plot hard to read. */
+  var H = H_WIDE, W_MAX = 300, W_MIN = 230;
   /* The margins are set by the labels the stylesheet draws in them: room on
-   * the left for a two-digit negative, and enough below for a row of numbers
-   * with the axis name under it. */
-  var PAD_L = 52, PAD_R = 14, PAD_T = 12, PAD_B = 46;
+   * the left for a negative, and enough below for a row of numbers with the
+   * axis name under it. Trimmed with the frame — at 150 tall the old 46px
+   * bottom margin was a third of the whole picture. */
+  var PAD_L = 38, PAD_R = 12, PAD_T = 10, PAD_B = 34;
   var X0 = PAD_L, Y0 = PAD_T, Y1 = H - PAD_B;
   var MIN_TRIALS = 4, MIN_SPAN = 2;   // an empty axis still spans something
-  var Y_TICKS = 4, X_LABELS = 8;
+  var Y_TICKS = 3, X_LABELS = 5;      // fewer, so a small frame is not crowded
 
   /* key -> {label, points, bench}. bench is {step, label, n}: what one
    * completed game is worth to a benchmark player, what to call them, and how
@@ -147,12 +161,15 @@
 
     var xStep = Math.ceil(xMax / X_LABELS) || 1;
     for (i = 0; i <= xMax; i += xStep) {
-      var xl = el('text', { 'class': 'sc-tick sc-tick-x', x: px(i), y: Y1 + 20 });
+      /* 15 below the axis, not 20. At the old full height there was room for
+       * both this row and the axis name under it; at 132 the two were 8px
+       * apart and "Trials" was printed through the tick that sat above it. */
+      var xl = el('text', { 'class': 'sc-tick sc-tick-x', x: px(i), y: Y1 + 15 });
       xl.textContent = String(i);
       svg.appendChild(xl);
     }
 
-    var xt = el('text', { 'class': 'sc-axis-name', x: (X0 + X1) / 2, y: H - 6 });
+    var xt = el('text', { 'class': 'sc-axis-name', x: (X0 + X1) / 2, y: H - 3 });
     xt.textContent = 'Trials';
     svg.appendChild(xt);
     var yt = el('text', {
