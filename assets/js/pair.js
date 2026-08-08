@@ -113,7 +113,21 @@
    * rather than two. */
   var board = window.KhaanaBoard;
   var roundNet = 0, roundStart = 0;
-  if (board) board.track('pair', { span: 5, root: 'board-pair', name: 'Pairing' });
+  if (board) board.track('pair', { span: 5, root: 'board-pair', name: 'Matching' });
+
+  /* The clock starts when the reader does, as in the trivia. A round dealt
+   * into an unattended tab would otherwise charge the wait to whoever came
+   * back to it. Every round after the first is dealt by a press of Play next,
+   * so for those this changes nothing. */
+  var live = false;
+  function began() {
+    live = true;
+    if (!roundStart) roundStart = Date.now();
+  }
+  ['pointerdown', 'pointermove', 'keydown', 'touchstart', 'scroll']
+    .forEach(function (ev) {
+      window.addEventListener(ev, began, { once: true, passive: true });
+    });
 
   /* --- the round ---------------------------------------------------------- */
 
@@ -158,7 +172,7 @@
     attempt = 1;
     rounds++;
     roundNet = 0;                  // a new round, so a new game for the board
-    roundStart = Date.now();       // and its clock starts when it is dealt
+    roundStart = live ? Date.now() : 0;   // and its clock when the reader moves
     var chosen = pick(cuisines, ROWS);
     pairs = chosen.map(function (c) {
       var entry = pick(pool[c], 1)[0];      // [name, thumbnail id or null]
@@ -380,7 +394,7 @@
     say(attempt, 'all');
     finished++;                    // the board is done, so a game is done
     if (chart) chart.games('pair', finished);
-    if (board) board.game('pair', roundNet, Date.now() - roundStart);
+    if (board) board.game('pair', roundNet, roundStart ? Date.now() - roundStart : 0);
     // Every chip is placed, so on a phone — where the bank sits under the
     // board rather than beside it — the space it was holding open is now a
     // blank block between the last pair and the reply. Nothing is being

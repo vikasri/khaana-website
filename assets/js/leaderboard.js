@@ -322,17 +322,18 @@
     row.appendChild(d);
   }
 
-  /* The panel holding both boards. Open while either half is, so the frame
-   * arrives with the first board rather than sitting empty beside a game
-   * nobody has played yet. */
+  /* The heading and the box it titles, hidden and shown together. Open while
+   * either half is, so the frame arrives with the first board rather than
+   * sitting empty beside a game nobody has played yet — and so the word
+   * "Leaderboard" is never left standing over nothing. */
   function paintPanel() {
-    var panel = document.getElementById('fun-boards');
-    if (!panel) return;
+    var wrap = document.getElementById('fun-boards-wrap');
+    if (!wrap) return;
     var open = false;
     for (var k in boards) {
       if (boards.hasOwnProperty(k) && !boards[k].root.hidden) open = true;
     }
-    panel.hidden = !open;
+    wrap.hidden = !open;
   }
 
   function paint(b) {

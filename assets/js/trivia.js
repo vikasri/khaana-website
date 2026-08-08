@@ -50,7 +50,9 @@
     // anything the reader did to it last time comes off before it is asked
     // again. Only reachable once the bank has been through a full pass.
     qNet = 0;                      // a new question, so a new game for the board
-    qStart = Date.now();           // and its clock starts when it is put up
+    // Its clock starts now if the reader is already here, and at their first
+    // move if they are not — which is only ever the question drawn on load.
+    qStart = live ? Date.now() : 0;
     current.classList.remove('answered', 'is-holding');
     current.querySelectorAll('.tq-opt').forEach(function (b) {
       b.disabled = false;
@@ -205,6 +207,28 @@
   var qNet = 0, qStart = 0;
   if (board) board.track('trivia', { span: 10, root: 'board-trivia', name: 'Trivia' });
 
+  /* The clock starts when the reader does, not when the page does.
+   *
+   * A question's clock used to start the moment it was put up, which is right
+   * for every question but the first: that one goes up on load, so a page
+   * opened and left while somebody made tea charged the whole pot to their
+   * first answer. Every later question is put up by a press of Next a second
+   * earlier, so for those the two moments are the same.
+   *
+   * `live` turns true on the first sign of a person — a key, a touch, a moved
+   * pointer, a scroll — and from then on nothing here changes. Movement counts
+   * as well as pressing, so a reader who reads the question and then reaches
+   * for an answer is timed from reaching, not from the click that ends it. */
+  var live = false;
+  function began() {
+    live = true;
+    if (!qStart) qStart = Date.now();
+  }
+  ['pointerdown', 'pointermove', 'keydown', 'touchstart', 'scroll']
+    .forEach(function (ev) {
+      window.addEventListener(ev, began, { once: true, passive: true });
+    });
+
   /* A friendly line on a wrong answer, and two seconds to read it.
    *
    * Without the pause the messages are pointless: a reader who is guessing
@@ -299,7 +323,7 @@
     cheer();
     scoreLine();
     if (chart) { chart.point('trivia', score); chart.games('trivia', solved); }
-    if (board) board.game('trivia', qNet, Date.now() - qStart);
+    if (board) board.game('trivia', qNet, qStart ? Date.now() - qStart : 0);
     /* The button goes to where the answer is, not to the foot of the panel.
      * It reads as the end of this question rather than as furniture, and it
      * shares a line with the fact so the two shrink to the same block. */

@@ -63,7 +63,7 @@ def board_half(game, name, span):
     use at all once they wrap to stacked on a phone — at that point "(10
     consecutive games)" and "(5 consecutive games)" are the only difference,
     and a reader has to know the rules to work out which is which. The name is
-    written the same way the chart below writes it: Trivia and Pairing.
+    written the same way the chart below writes it: Trivia and Matching.
     """
     return """      <div class="board" id="board-{g}" data-game="{g}" hidden
            aria-labelledby="board-{g}-title">
@@ -148,14 +148,22 @@ def boards_html():
     by side they take one block instead of two, and both are readable without
     scrolling between them.
 
-    Everything ships carrying `hidden` — the halves and the panel around them.
-    leaderboard.js opens a half when it has something to show and the panel
-    when either half is open, so a page with no boards yet has no empty frame
-    on it, and neither does one with JavaScript off.
+    The heading sits outside the box rather than in it, so it reads as a title
+    for the thing rather than a fourth label inside a panel that already has
+    two. It is wrapped with the box so the two hide together — a heading over
+    nothing is worse than no heading.
+
+    The wrapper and the halves ship carrying `hidden`. leaderboard.js opens a
+    half when it has something to show and the wrapper when either half is
+    open, so a page with no boards yet has no empty frame on it, and neither
+    does one with JavaScript off.
     """
-    return """    <section class="fun-boards" id="fun-boards" hidden>
-%s%s    </section>
-%s""" % (board_half("trivia", "Trivia", 10), board_half("pair", "Pairing", 5),
+    return """    <div class="fun-boards-wrap" id="fun-boards-wrap" hidden>
+      <h2 class="fun-boards-title">Leaderboard</h2>
+      <section class="fun-boards" id="fun-boards">
+%s%s      </section>
+    </div>
+%s""" % (board_half("trivia", "Trivia", 10), board_half("pair", "Matching", 5),
          prompt_html())
 
 

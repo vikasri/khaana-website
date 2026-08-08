@@ -2655,7 +2655,7 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 /* Named like the benchmark is, in the game's own colour, with the paper behind
    it so it stays readable where it crosses a gridline or the line itself. */
 .sc-you {
-  fill: var(--sc-ink); font-family: var(--sans); font-size: 11.5px;
+  fill: var(--sc-ink); font-family: var(--sans); font-size: 14px;
   font-weight: 700;
   stroke: var(--paper); stroke-width: 3px; stroke-linejoin: round;
   paint-order: stroke fill;
@@ -2927,6 +2927,20 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 .pair-again:hover { background: var(--nav-active); color: #fff; }
 
 /* ---------- The high-score boards ---------- */
+/* The heading sits above the box and outside it, with a small gap so the two
+   read as a title and its contents rather than one stacked block. Larger than
+   anything inside the box, which is all small print by design: the panel is a
+   glance, and this is the word that says what you are glancing at. */
+.fun-boards-wrap { margin: 0; }
+.fun-boards-wrap[hidden] { display: none; }
+.fun-boards-title {
+  margin: 0 0 7px; font-family: var(--sans); font-size: 0.95rem;
+  font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-soft);
+}
+@media (max-width: 759px) {
+  .fun-boards-title { font-size: 0.88rem; margin-bottom: 6px; }
+}
 /* Both of them in one panel under the chart, side by side. Two boards of two
    rows are narrow things, and given a block each they took three full-width
    bands of a page that already stacks a quiz, a chart and a matching game.
@@ -2957,7 +2971,13 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 /* 240px before it wraps: narrower than that and a name plus a time plus a
    score stop fitting on one line, which is the point at which two columns are
    costing more than the vertical space they save. */
-.fun-boards > .board { flex: 1 1 240px; min-width: 0; --bd-ink: var(--nav-active); }
+/* --deep-red for the trivia half here, rather than the --nav-active the rest
+   of the page uses for it. On this tinted panel that orange reaches only
+   4.35:1, under the 4.5 bold text at this size needs, and the panel is tinted
+   rather than white precisely so it stands apart — so the ink gives way
+   instead of the background. --deep-red is the same family, two shades down,
+   and clears it. */
+.fun-boards > .board { flex: 1 1 240px; min-width: 0; --bd-ink: var(--deep-red); }
 .fun-boards > .board[hidden] { display: none; }
 /* A rule between them while they are side by side, and nothing once they have
    wrapped — a left border on a stacked column points the wrong way. */

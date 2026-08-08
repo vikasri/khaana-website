@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://khaana.com/assets/images/home-hero.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 
-<link rel="stylesheet" href="style.css?v=1e1b3546" />
+<link rel="stylesheet" href="style.css?v=32f73d0f" />
 </head>
 <body>
 
@@ -76,7 +76,9 @@
 
 <section class="tight trivia-section">
   <div class="container trivia-page">
-    <section class="fun-boards" id="fun-boards" hidden>
+    <div class="fun-boards-wrap" id="fun-boards-wrap" hidden>
+      <h2 class="fun-boards-title">Leaderboard</h2>
+      <section class="fun-boards" id="fun-boards">
       <div class="board" id="board-trivia" data-game="trivia" hidden
            aria-labelledby="board-trivia-title">
         <h2 class="board-title" id="board-trivia-title"><span
@@ -88,12 +90,13 @@
       <div class="board" id="board-pair" data-game="pair" hidden
            aria-labelledby="board-pair-title">
         <h2 class="board-title" id="board-pair-title"><span
-          class="board-game">Pairing</span> best scores <span
+          class="board-game">Matching</span> best scores <span
           class="board-rule">(5 consecutive games)</span></h2>
         <ol class="board-rows"></ol>
         <p class="board-you" role="status" aria-live="polite" hidden></p>
       </div>
-    </section>
+      </section>
+    </div>
     <dialog class="board-prompt" id="board-prompt">
       <div class="board-prompt-in">
         <div class="board-sparks" aria-hidden="true">
@@ -1907,8 +1910,8 @@
 <!-- Before the two games, which register their series and their boards with
      them as they start. -->
 <script src="assets/js/score-chart.js?v=eeb712a0"></script>
-<script src="assets/js/leaderboard.js?v=b6d47742"></script>
-<script src="assets/js/trivia.js?v=2441b1bd"></script>
-<script src="assets/js/pair.js?v=41e396a8"></script>
+<script src="assets/js/leaderboard.js?v=4dd6ec83"></script>
+<script src="assets/js/trivia.js?v=6510dc9d"></script>
+<script src="assets/js/pair.js?v=a744affd"></script>
 </body>
 </html>
