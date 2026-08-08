@@ -142,6 +142,7 @@
     function py(v) { return Y1 - (Y1 - Y0) * ((v - lo) / (hi - lo)); }
 
     svg.textContent = '';
+    var benchEnds = X0;              // right edge of the benchmark's label
 
     // Horizontal rules, one per labelled value, with zero picked out.
     for (var v = lo; v <= hi + 1e-9; v += step) {
@@ -189,6 +190,9 @@
       var bl = el('text', { 'class': 'sc-bench-label', x: X0 + 6, y: by - 6 });
       bl.textContent = s.bench.label;
       svg.appendChild(bl);
+      // Measured once it is in the document, so the reader's own label below
+      // can be placed past it instead of through it.
+      try { benchEnds = X0 + 6 + bl.getComputedTextLength(); } catch (e) { }
       /* A glyph riding the far end of the line, if the game gave one. The
        * trivia's benchmark is what a reader scores by guessing, so it gets a
        * monkey — the label says blindfolded and the picture says the rest. It
@@ -209,6 +213,37 @@
       var d = [];
       for (i = 0; i < pts.length; i++) d.push(px(i) + ',' + py(pts[i]));
       svg.appendChild(el('polyline', { 'class': 'sc-line', points: d.join(' ') }));
+    }
+
+    /* The reader's own line, named.
+     *
+     * The benchmark beside it has carried a label since it was drawn, and an
+     * unlabelled line next to a labelled one reads as though the labelled one
+     * is the subject — which is backwards here. It goes over the middle of the
+     * run rather than either end: the right end already has the running total
+     * beside it and the left is where the benchmark's own label sits. */
+    if (pts.length > 2) {
+      /* Start at the middle and walk right until the label is clear of the
+       * benchmark's. Put at the midpoint flat, it landed inside "A blindfolded
+       * guesser" and the frame read "A blindfolded Youesser". Never past the
+       * second-to-last point, because the running total is already sitting at
+       * the end of the line. */
+      var mid = Math.floor((pts.length - 1) / 2);
+      while (mid < pts.length - 2 && px(mid) < benchEnds + 14) mid++;
+      var midY = py(pts[mid]);
+      /* Above the line normally. Below it if the walk ran out of room and the
+       * benchmark's label is still under this one — a long benchmark label can
+       * span the whole of a 250px frame, and there is then nowhere to the right
+       * to go. Below also when the line is near the top of the frame and above
+       * would put the word outside the picture. */
+      var crowded = px(mid) < benchEnds + 14;
+      var above = midY - 8 >= Y0 + 4 && !crowded;
+      var you = el('text', {
+        'class': 'sc-you', x: px(mid), 'text-anchor': 'middle',
+        y: above ? midY - 8 : midY + 16
+      });
+      you.textContent = 'You';
+      svg.appendChild(you);
     }
 
     for (i = 0; i < pts.length; i++) {

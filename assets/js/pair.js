@@ -103,7 +103,7 @@
   var chart = window.KhaanaScoreLine;
   var finished = 0;                // boards solved, which is games played
   if (chart) chart.track('pair', 'Pairing',
-                         { step: 3.28, label: 'Chance with Elimination Benchmark' });
+                         { step: 3.28, label: 'Guesser who retries' });
 
   /* The board under the game, as in the trivia — but over five rounds rather
    * than ten questions. A round is four drags and a mark and often two or

@@ -188,7 +188,7 @@
   var chart = window.KhaanaScoreLine;
   var solved = 0;                  // questions got right, which is games played
   if (chart) chart.track('trivia', 'Trivia',
-                         { step: 0.5, label: 'A blindfolded guesser',
+                         { step: 0.5, label: 'Blindfolded guesser',
                            mark: '🙈' });
 
   /* The board under the panel wants a score per question rather than the
