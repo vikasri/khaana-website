@@ -57,9 +57,9 @@
    * score, and squashing it is what makes a plot hard to read.
    *
    * Some of that width bought back since, because the frame now carries a line
-   * of words at each end — the benchmark's name beside its glyph, the reader's
-   * total under "You" — and the name is given a gutter of its own to stand in
-   * rather than the plot. That gutter comes out of the trials, so the frame has
+   * of words at each end — the benchmark's key, the reader's total under "You"
+   * — and the key is given a gutter of its own to stand in rather than the
+   * plot. That gutter comes out of the trials, so the frame has
    * to be wide enough to give one up. This is a ceiling, not a size: the frame
    * is still drawn at whatever its box allows, so a phone is unaffected.
    *
@@ -84,16 +84,17 @@
    * no width to give away. */
   var MIN_PLOT = 210;
 
-  /* key -> {label, points, bench}. bench is {step, label, mark, ends}: what one
-   * completed game is worth to a benchmark player, what to call them, an
-   * optional glyph, and the trial each of the reader's finished games ended on.
+  /* key -> {label, points, bench}. bench is {step, label, ends}: what one
+   * completed game is worth to a benchmark player, what to call them, and the
+   * trial each of the reader's finished games ended on.
    *
    * A benchmark player only has a score at those moments. They earn a game's
    * worth per game, not a fraction of one per trial, so a line drawn across
    * every trial was claiming a standing for them on trials where they have
-   * none — and worse, it climbed in steps that landed nowhere near the reader's
-   * own. It is a short flat mark at step * k on the trial the reader's kth game
-   * ended: where chance stood at the moment the reader stood there too. */
+   * none. What is drawn instead is a point at step * k on the trial the
+   * reader's kth game ended — where chance stood at the moment the reader stood
+   * there too — with a thin dotted line through them. The line is the
+   * benchmark; the points only say where it was pinned. */
   var series = {};
   var active = null;
   var drawnBox = 0;                // the box width the frame was last drawn at
@@ -193,21 +194,19 @@
      * Held even before the first game is finished, when there is no mark and no
      * name to draw yet. The alternative is an axis that silently rescales under
      * the reader the moment they solve something. */
-    var bm = null, bl = null, glyphW = 0, labW = 0, gutter = 0;
-    var gap = 4, lead = 7;
+    var bl = null, labW = 0, gutter = 0;
+    /* lead is the clear space between the plot's edge and the key. Wider than
+     * it looks like it needs to be: at 7 the sample sat close enough to the end
+     * of the real line, and near enough its height, to read as the line simply
+     * carrying on into the margin. */
+    var gap = 4, lead = 18, SWATCH = 16;
     if (b) {
-      if (b.mark) {
-        bm = el('text', { 'class': 'sc-bench-mark', x: 0, y: 0 });
-        bm.textContent = b.mark;
-        svg.appendChild(bm);
-      }
       bl = el('text', { 'class': 'sc-bench-label', x: 0, y: 0 });
       bl.textContent = b.label;
       svg.appendChild(bl);
       try {
-        if (bm) glyphW = bm.getComputedTextLength();
         labW = bl.getComputedTextLength();
-        var fixed = lead + glyphW + (bm ? gap : 0);
+        var fixed = lead + SWATCH + gap;
         var cap = Math.min((X1 - X0) * GUTTER_MAX, (X1 - X0) - MIN_PLOT);
         if (cap - fixed >= 40) {
           if (labW > cap - fixed) {
@@ -219,9 +218,15 @@
             bl.style.fontSize = Math.max(8, base * ((cap - fixed) / labW)) + 'px';
             labW = bl.getComputedTextLength();
           }
-          // The floor may have held it wider than the gutter can take, in which
-          // case there is no gutter to be had at this width.
-          if (labW <= cap - fixed) gutter = fixed + labW;
+          /* Judged on what the plot is left with, not on whether the words came
+           * in under the cap. A string's advance width does not scale to the
+           * pixel with its font size — shrunk to fit 151, "A Guesser who
+           * Remembers" measured back 151.6 — and a strict test against the cap
+           * read that as "does not fit" and threw away a gutter the frame had
+           * ample room for. The cap is what the words are shrunk towards; the
+           * plot's minimum is the thing that actually has to hold. */
+          gutter = fixed + labW;
+          if ((X1 - X0) - gutter < MIN_PLOT) gutter = 0;
         }
         if (!gutter) { bl.style.fontSize = ''; labW = bl.getComputedTextLength(); }
       } catch (e) { gutter = 0; }
@@ -293,58 +298,70 @@
     yt.textContent = 'Score';
     svg.appendChild(yt);
 
-    /* The benchmark: one short flat mark per game the reader has finished, at
-     * what chance would have been worth by then — half a point a solved
-     * question in the trivia, 3.28 a completed board in the matching game. Each
-     * is a step up on the last, so the row of them slopes across the frame at
-     * the rate the reader has to beat, and the gaps between them are the trials
-     * spent inside a game, where the benchmark has nothing to say.
+    /* The benchmark: a small point per game the reader has finished, at what
+     * chance would have been worth by then — half a point a solved question in
+     * the trivia, 3.28 a completed board in the matching game — joined by a
+     * thin line.
+     *
+     * Points, because those are the only moments the benchmark has a score at
+     * all: it earns a game's worth per game, not a fraction of one per trial.
+     * A line across every trial claimed a standing for it on trials where it
+     * has none, and a row of flat marks with nothing between them made the
+     * reader work out the slope for themselves. Joined up, the thing the frame
+     * is actually about — the rate the reader has to beat — is a line they can
+     * see, and the points still say where it was really measured.
+     *
+     * From the origin, because nought games is nought score, and starting there
+     * puts the benchmark's line and the reader's on the same footing.
      *
      * Drawn before the score line so the reader's own line is never the one
      * interrupted. */
     if (ends.length) {
-      /* Wide enough to read as a level rather than a dot, and well short of the
-       * gap between two trials — at 0.45 of it a run of questions answered
-       * first time left the marks a pixel apart and closed the row back into
-       * the line this used to be. */
-      var half = Math.max(3, Math.min(8, (XD - X0) / xMax * 0.35));
       var lastX = X0, lastY = Y1;
+      var bpts = [px(0) + ',' + py(0)];
       for (i = 0; i < ends.length; i++) {
         var mx = px(ends[i]), my = py(b.step * (i + 1));
-        // Trimmed at the plot's edge rather than hung over it: the newest game
-        // is often the last trial, and a level sticking out past the axis reads
-        // as a line that has escaped rather than as one that ends there.
-        svg.appendChild(el('line', {
-          'class': 'sc-bench', y1: my, y2: my,
-          x1: Math.max(X0, mx - half), x2: Math.min(XD, mx + half)
-        }));
+        bpts.push(mx + ',' + my);
         lastX = mx; lastY = my;
       }
-      /* The benchmark named out in the gutter, level with its newest mark and
-       * to the right of it — glyph first, then the words, reading as one line:
-       * 🙈 A Blind Guesser.
+      svg.appendChild(el('polyline', {
+        'class': 'sc-bench', points: bpts.join(' ')
+      }));
+      /* Where the line was actually measured, and no more than that. The dotted
+       * line is the benchmark; these say which trials it was pinned to. Small
+       * enough to be read as marks on it rather than as a second set of scores
+       * beside the reader's own — the origin gets none at all, being a shared
+       * starting point rather than a game. */
+      for (i = 0; i < ends.length; i++) {
+        svg.appendChild(el('circle', {
+          'class': 'sc-bench-dot', r: 1.5,
+          cx: px(ends[i]), cy: py(b.step * (i + 1))
+        }));
+      }
+      /* The benchmark keyed out in the gutter, level with its newest point and
+       * to the right of it: a sample of its own line with a point on it, then
+       * the words.
        *
-       * The trivia's benchmark is what a reader scores by guessing, so it gets
-       * a monkey — the words say blind and the picture says the rest. It is
-       * drawn as text rather than an image so there is no file to fetch,
-       * nothing to licence, and it scales with the frame. The matching game
-       * gives no glyph and the line is then just the words.
+       * A key rather than a caption, because the words on their own left the
+       * reader to work out which of the two lines they belonged to. The sample
+       * is drawn from the same classes as the real thing, so it cannot drift
+       * out of step with what is in the plot.
        *
-       * Right of the mark and nowhere else, which is what the gutter was
+       * Right of the point and nowhere else, which is what the gutter was
        * measured out for. It also settles the frame's other end for nothing:
        * the reader's total is inside the plot and this is outside it, so the
        * two blocks cannot land on each other however close the two lines run.
        *
-       * Where the frame was too narrow to spare a gutter the words come back
-       * inside the picture, and both of those conveniences go with it: the
-       * block slides left along the slope to fit, and it has to stop short of
-       * the reader's total when the two lines are running at the same height.
+       * Where the frame was too narrow to spare a gutter the row comes back
+       * inside the picture, and both of those conveniences go with it: it
+       * slides left along the slope to fit, and it has to stop short of the
+       * reader's total when the two lines are running at the same height.
        * Sliding left is the safe direction — the slope climbs, so everything
-       * behind the newest mark is below the line the words sit on. */
+       * behind the newest point is below the line the row sits on. */
       var labY = Math.max(Y0 + 12, Math.min(Y1 - 2, lastY + 5));
       var blockX;
       if (gutter) {
-        blockX = Math.max(lastX + half + 3, XD + lead);
+        blockX = Math.max(lastX + 6, XD + lead);
       } else {
         /* Measured off what the two blocks actually cover rather than a rough
          * band around them. A loose test cost real legibility: the words were
@@ -354,30 +371,40 @@
         if (youBox && labY + 4 > youBox.youY - 14 && labY - 13 < youBox.valY + 4) {
           limit = Math.max(X0 + 90, youBox.x - 46 - 8);
         }
-        var blockW = glyphW + (bm ? gap : 0) + labW;
+        var fixedW = SWATCH + gap;
+        var blockW = fixedW + labW;
         if (blockW > limit - X0 - 4) {
           try {
             var narrow = parseFloat(getComputedStyle(bl).fontSize) || 13.5;
-            var fits = (limit - X0 - 4) - glyphW - (bm ? gap : 0);
+            var fits = (limit - X0 - 4) - fixedW;
             bl.style.fontSize = Math.max(8, narrow * (fits / labW)) + 'px';
             labW = bl.getComputedTextLength();
-            blockW = glyphW + (bm ? gap : 0) + labW;
+            blockW = fixedW + labW;
           } catch (e) { }
         }
-        blockX = Math.max(X0 + 2, Math.min(lastX + half + 3, limit - blockW));
+        blockX = Math.max(X0 + 2, Math.min(lastX + 6, limit - blockW));
       }
-      if (bm) { bm.setAttribute('x', blockX); bm.setAttribute('y', labY + 4); }
-      bl.setAttribute('x', blockX + glyphW + (bm ? gap : 0));
+
+      // The sample: a short run of the line with one of its points on it,
+      // sitting on the words' own baseline less a little, so the row reads as
+      // one line rather than as a rule above some text.
+      var swY = labY - 4;
+      svg.appendChild(el('polyline', {
+        'class': 'sc-bench',
+        points: blockX + ',' + swY + ' ' + (blockX + SWATCH) + ',' + swY
+      }));
+      svg.appendChild(el('circle', {
+        'class': 'sc-bench-dot', r: 1.5, cx: blockX + SWATCH / 2, cy: swY
+      }));
+      bl.setAttribute('x', blockX + SWATCH + gap);
       bl.setAttribute('y', labY);
-      // Moved to the end so they sit over the picture: they were built before
-      // it, to size the gutter they now stand in.
-      if (bm) svg.appendChild(bm);
+      // Moved to the end so it sits over the picture: it was built before it,
+      // to size the gutter it now stands in.
       svg.appendChild(bl);
     } else if (bl) {
       // The gutter is held from the first draw so the axis does not rescale
       // under the reader the moment they finish something, but until then there
-      // is no mark to name and the words would be labelling nothing.
-      if (bm) svg.removeChild(bm);
+      // is no line to key and the words would be labelling nothing.
       svg.removeChild(bl);
     }
 
@@ -447,13 +474,12 @@
   /* The three things a game does to the chart: say it exists, hand it a new
    * total, and claim the frame when the reader turns to it. */
   window.KhaanaScoreLine = {
-    /* bench is optional: {step, label, mark}. step is what one completed game
-       adds to the benchmark, label is what to write above the first of its
-       marks, and mark is an optional glyph to stand on the newest one. */
+    /* bench is optional: {step, label}. step is what one completed game adds
+       to the benchmark and label is what to call it in the key. */
     track: function (key, label, bench) {
       if (!series[key]) series[key] = { label: label, points: [0], bench: null };
       if (bench) series[key].bench = { step: bench.step, label: bench.label,
-                                       mark: bench.mark || null, ends: [] };
+                                       ends: [] };
       if (!active) active = key;
       panel.hidden = false;
       draw();

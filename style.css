@@ -2652,14 +2652,22 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   font-weight: 700; text-anchor: middle;
 }
 /* The benchmark: what chance alone would have scored by the end of each game
-   the reader has finished. One short flat mark per game rather than a line
-   across every trial, so it climbs as a row of levels rather than pretending
-   to a standing on the trials in between. In the soft ink rather than the
-   game's colour, because it belongs to neither game.
-   Solid, where the long line was dotted — a dash a dozen pixels wide broken
-   into fives reads as two specks rather than as a level. Kept thinner than the
-   reader's own line at 2.5: it is a reference, not a competitor. */
-.sc-bench { stroke: var(--bench); stroke-width: 2; stroke-linecap: round; }
+   the reader has finished. A small point per game with a thin line through
+   them, so the rate the reader has to beat is a slope they can see while the
+   points still say where it was actually measured. In the soft ink rather than
+   the game's colour, because it belongs to neither game.
+   The dotted line is the benchmark. The points are only where it was measured
+   — one per completed game — and they are kept small enough to read as marks on
+   the line rather than as a series of their own competing with the reader's
+   own hollow circles.
+   Thin, and thinner than the reader's line at 2.5: it is a reference, not a
+   competitor. Dotted for the same reason, and because a solid thin line at this
+   weight is easy to mistake for a second score. */
+.sc-bench {
+  fill: none; stroke: var(--bench); stroke-width: 1.25;
+  stroke-dasharray: 3 3; stroke-linejoin: round; stroke-linecap: round;
+}
+.sc-bench-dot { fill: var(--bench); stroke: none; opacity: 0.75; }
 /* Named like the benchmark is, in the game's own colour, with the paper behind
    it so it stays readable where it crosses a gridline or the line itself. */
 .sc-you {
@@ -2675,11 +2683,6 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   stroke: var(--paper); stroke-width: 3px; stroke-linejoin: round;
   paint-order: stroke fill;
 }
-/* The guesser, sitting on the end of their own line. No outline behind this
-   one: an emoji is drawn in its own colours and a 3px paper stroke around it
-   reads as a smudge rather than as a halo. */
-.sc-bench-mark { font-size: 18px; }
-
 .sc-line {
   fill: none; stroke: var(--sc-ink); stroke-width: 2.5;
   stroke-linejoin: round; stroke-linecap: round;

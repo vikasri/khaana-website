@@ -190,8 +190,7 @@
   var chart = window.KhaanaScoreLine;
   var solved = 0;                  // questions got right, which is games played
   if (chart) chart.track('trivia', 'Trivia',
-                         { step: 0.5, label: 'A Blind Guesser',
-                           mark: '🙈' });
+                         { step: 0.5, label: 'A Blind Guesser' });
 
   /* The board under the panel wants a score per question rather than the
    * running total: it sums the last ten of them and keeps the best that sum
