@@ -2900,22 +2900,41 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 .pair-again:hover { background: var(--nav-active); color: #fff; }
 
 /* ---------- The high-score boards ---------- */
-/* One under each game, in the same frame as the chart that sits between them,
-   so the page reads as a run of panels rather than two games and a stray list.
+/* Both of them in one panel under the chart, side by side. Two boards of two
+   rows are narrow things, and given a block each they took three full-width
+   bands of a page that already stacks a quiz, a chart and a matching game.
+   Beside each other they take one, and both are readable without scrolling
+   between them.
+
    Warm for the trivia and cool for the matching game, the same split the chart
    line already uses to say which game is being talked about.
 
-   Both ship carrying `hidden`. leaderboard.js un-hides one when it has a row
-   to show or a full run to report, so nothing here is ever an empty box: no
-   JavaScript, no board, and no placeholder rows before anyone has played. */
-.board {
+   Everything here ships carrying `hidden` — the halves and the panel around
+   them — so the `display` rules have to yield to it explicitly, or a hidden
+   flex box goes on being a flex box. leaderboard.js opens a half when it has
+   something to show and the panel when either half is open: no JavaScript, no
+   board, and no placeholder rows before anyone has played. */
+.fun-boards {
   margin: 0; padding: 12px 18px 14px;
   background: var(--paper);
   border: 1px solid var(--line); border-radius: var(--radius);
-  --bd-ink: var(--nav-active);
+  display: flex; flex-wrap: wrap; align-items: flex-start; gap: 14px 30px;
+}
+.fun-boards[hidden] { display: none; }
+/* 240px before it wraps: narrower than that and a name plus a time plus a
+   score stop fitting on one line, which is the point at which two columns are
+   costing more than the vertical space they save. */
+.fun-boards > .board { flex: 1 1 240px; min-width: 0; --bd-ink: var(--nav-active); }
+.fun-boards > .board[hidden] { display: none; }
+/* A rule between them while they are side by side, and nothing once they have
+   wrapped — a left border on a stacked column points the wrong way. */
+@media (min-width: 620px) {
+  .fun-boards > .board + .board {
+    border-left: 1px solid var(--line); padding-left: 30px;
+  }
 }
 .board[data-game="pair"] { --bd-ink: var(--azure); }
-@media (max-width: 759px) { .board { padding: 10px 12px 12px; } }
+@media (max-width: 759px) { .fun-boards { padding: 10px 12px 12px; } }
 
 /* Sized like the scoring rules above the games rather than like a heading:
    it is a label on two numbers, and set as an h2 it shouted over the game it

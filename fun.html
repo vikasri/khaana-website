@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://khaana.com/assets/images/home-hero.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 
-<link rel="stylesheet" href="style.css?v=c4b91cf2" />
+<link rel="stylesheet" href="style.css?v=e56a3d4e" />
 </head>
 <body>
 
@@ -1759,24 +1759,6 @@
         above.</p></noscript>
     </section>
 
-    <section class="board" id="board-trivia" data-game="trivia" hidden
-             aria-labelledby="board-trivia-title">
-      <h2 class="board-title" id="board-trivia-title">Best scores for 10
-        consecutive games</h2>
-      <ol class="board-rows"></ol>
-      <p class="board-you" role="status" aria-live="polite" hidden></p>
-      <form class="board-join" hidden>
-        <label class="board-join-label" for="board-trivia-name">On the board</label>
-        <input class="board-name-input" id="board-trivia-name" type="text"
-               maxlength="16" autocomplete="off" spellcheck="false"
-               placeholder="Your name" />
-        <button type="submit" class="board-add">Add</button>
-        <button type="button" class="board-skip">Not now</button>
-        <p class="board-error" role="alert" hidden></p>
-      </form>
-    </section>
-
-
     <section class="score-chart" id="score-chart" hidden
              aria-labelledby="score-chart-title">
       <h2 class="score-chart-title" id="score-chart-title">Trivia</h2>
@@ -1786,6 +1768,42 @@
       </div>
       <p class="sr-only" id="score-chart-read" role="status" aria-live="polite"></p>
     </section>
+
+    <section class="fun-boards" id="fun-boards" hidden>
+      <div class="board" id="board-trivia" data-game="trivia" hidden
+           aria-labelledby="board-trivia-title">
+        <h2 class="board-title" id="board-trivia-title">Best scores for 10
+          consecutive games</h2>
+        <ol class="board-rows"></ol>
+        <p class="board-you" role="status" aria-live="polite" hidden></p>
+        <form class="board-join" hidden>
+          <label class="board-join-label" for="board-trivia-name">On the board</label>
+          <input class="board-name-input" id="board-trivia-name" type="text"
+                 maxlength="13" autocomplete="off" spellcheck="false"
+                 placeholder="Your name" />
+          <button type="submit" class="board-add">Add</button>
+          <button type="button" class="board-skip">Not now</button>
+          <p class="board-error" role="alert" hidden></p>
+        </form>
+      </div>
+      <div class="board" id="board-pair" data-game="pair" hidden
+           aria-labelledby="board-pair-title">
+        <h2 class="board-title" id="board-pair-title">Best scores for 5
+          consecutive games</h2>
+        <ol class="board-rows"></ol>
+        <p class="board-you" role="status" aria-live="polite" hidden></p>
+        <form class="board-join" hidden>
+          <label class="board-join-label" for="board-pair-name">On the board</label>
+          <input class="board-name-input" id="board-pair-name" type="text"
+                 maxlength="13" autocomplete="off" spellcheck="false"
+                 placeholder="Your name" />
+          <button type="submit" class="board-add">Add</button>
+          <button type="button" class="board-skip">Not now</button>
+          <p class="board-error" role="alert" hidden></p>
+        </form>
+      </div>
+    </section>
+
 
     <section class="pair" id="pair-game" hidden aria-labelledby="pair-title">
       <div class="pair-head">
@@ -1811,23 +1829,6 @@
         <button type="button" class="pair-again" id="pair-again" hidden>Play
           next</button>
       </div>
-    </section>
-
-    <section class="board" id="board-pair" data-game="pair" hidden
-             aria-labelledby="board-pair-title">
-      <h2 class="board-title" id="board-pair-title">Best scores for 5
-        consecutive games</h2>
-      <ol class="board-rows"></ol>
-      <p class="board-you" role="status" aria-live="polite" hidden></p>
-      <form class="board-join" hidden>
-        <label class="board-join-label" for="board-pair-name">On the board</label>
-        <input class="board-name-input" id="board-pair-name" type="text"
-               maxlength="16" autocomplete="off" spellcheck="false"
-               placeholder="Your name" />
-        <button type="submit" class="board-add">Add</button>
-        <button type="button" class="board-skip">Not now</button>
-        <p class="board-error" role="alert" hidden></p>
-      </form>
     </section>
 
     <script type="application/json" id="pair-pool">{"Andhra":[["Ariselu","ariselu"],["Avakaya","avakaya"],["Bobbatlu","bobbatlu"],["Chepala Pulusu","chepala-pulusu"],["Gongura Pachadi","gongura-pachadi"],["Kodi Vepudu","kodi-vepudu"],["Natu Kodi Pulusu","natu-kodi-pulusu"],["Perugu Vada","perugu-vada"],["Pootharekulu","pootharekulu"],["Punugulu","punugulu"],["Royyala Iguru","royyala-iguru"],["Tomato Pappu","tomato-pappu"]],"Anglo-Indian":[["Ball Curry","anglo-indian-ball-curry"],["Country Captain Chicken","country-captain-chicken"],["Dak Bungalow Curry","dak-bungalow-curry"],["Devilled Kidneys","devilled-kidneys"],["Jalfrezi","jalfrezi"],["Kedgeree","kedgeree"],["Mulligatawny Soup","mulligatawny-soup"],["Pepper Water","anglo-indian-pepper-water"],["Railway Mutton Curry","railway-mutton-curry"]],"Awadhi/Lucknowi":[["Aloo ki Tehri","aloo-ki-tehri"],["Dahi ke Kebab","dahi-ke-kebab"],["Galouti Kebab","galouti-kebab"],["Kakori Kebab","kakori-kebab"],["Murgh Shorba","murgh-shorba"],["Muzaffar","muzaffar"],["Nargisi Kofta","nargisi-kofta"],["Sheermal","sheermal"],["Tomato Dhaniya Shorba","tomato-dhaniya-shorba"],["Ulte Tawe Ka Paratha","ulte-tawe-ka-paratha"],["Warqi Paratha","warqi-paratha"]],"Bengali":[["Aam Doi","aam-doi"],["Begun Bhaja","begun-bhaja"],["Chingri Bhapa","chingri-bhapa"],["Cholar Dal","cholar-dal"],["Doi Maach","doi-maach"],["Kathi Roll","kathi-roll"],["Kosha Mangsho","kosha-mangsho"],["Lau Ghonto","lau-ghonto"],["Mishti Doi","mishti-doi"],["Patishapta","patishapta"],["Potoler Dorma","potoler-dorma"],["Sandesh","sandesh"]],"Bihari":[["Baingan Chokha","baingan-chokha"],["Champaran Ahuna Mutton","champaran-ahuna-mutton"],["Dahi Chura Gud","dahi-chura-gud"],["Dal Pitha","dal-pitha"],["Dhuska","dhuska"],["Litti Chokha","litti-chokha"],["Machhak Jhor","machhak-jhor"],["Namkeen Sattu Sharbat","namkeen-sattu-sharbat"],["Sattu ka Paratha","sattu-paratha"],["Tamatar Chokha","bihari-tamatar-chokha"],["Thekua","thekua"],["Tilkut","tilkut"]],"Goan":[["Alsande Tonak","alsande-tonak"],["Ambot Tik","ambot-tik"],["Batata Song","batata-song"],["Bebinca","bebinca"],["Chicken Xacuti","chicken-xacuti"],["Fish Caldine","fish-caldine"],["Kismur","kismur"],["Mackerel Uddamethi","mackerel-uddamethi"],["Prawn Balchao","prawn-balchao"],["Prawn Rissois","prawn-rissois"],["Sorpotel","sorpotel"],["Sungtachi Kodi","sungtachi-kodi"]],"Gujarati":[["Bajra no Rotlo","bajra-no-rotlo"],["Batata nu Shaak","batata-nu-shaak"],["Dabeli","dabeli"],["Doodhpak","doodhpak"],["Ghughra","ghughra"],["Handvo","handvo"],["Khaman","khaman"],["Khandvi","khandvi"],["Mag ni Dal","mag-ni-dal"],["Methi Thepla","methi-thepla"],["Ringan no Olo","ringan-no-olo"],["Sukhdi","sukhdi"]],"Hyderabadi":[["Bagara Baingan","bagara-baingan"],["Bagara Khana","bagara-rice"],["Dalcha","dalcha"],["Double ka Meetha","double-ka-meetha"],["Haleem","haleem"],["Khatti Dal","khatti-dal"],["Khichdi Ka Khatta","khichdi-ka-khatta"],["Lukhmi","lukhmi"],["Mirchi ka Salan","mirchi-ka-salan"],["Patthar Ka Gosht","patthar-ka-gosht"],["Qubani ka Meetha","qubani-ka-meetha"],["Shikampuri Kebab","shikampuri-kebab"]],"Indo-Chinese":[["American Chopsuey","american-chopsuey"],["Chicken Lollipop","chicken-lollipop"],["Chicken Manchurian","chicken-manchurian"],["Chilli Chicken","chilli-chicken"],["Chilli Tofu","chilli-tofu"],["Crispy Chilli Baby Corn","crispy-chilli-baby-corn"],["Dragon Chicken","dragon-chicken"],["Gobi Manchurian","gobi-manchurian"],["Honey Chilli Potato","honey-chilli-potato"],["Manchow Soup","manchow-soup"],["Schezwan Fried Rice","schezwan-fried-rice"],["Triple Schezwan Rice","triple-schezwan-rice"]],"Karnataka":[["Akki Rotti","akki-rotti"],["Baimbale Curry","baimbale-curry"],["Chekke Curry","chekke-curry"],["Halbai","halbai"],["Kadambuttu","kadambuttu"],["Kesari Bath","kesari-bath"],["Kori Rotti","kori-rotti"],["Kundapur Chicken Ghee Roast","chicken-ghee-roast"],["Mangalore Buns","mangalore-buns"],["Mysore Pak","mysore-pak"],["Pandi Curry","pandi-curry"],["Ragi Mudde","ragi-mudde"]],"Kashmiri":[["Aab Gosht","aab-gosht"],["Al Yakhni","al-yakhni"],["Choek Wangun","choek-wangun"],["Haak","haak"],["Methi Maaz","methi-maaz"],["Mujh Chetin","mujh-chetin"],["Mutton Yakhni","mutton-yakhni"],["Nadru Monje","nadru-monje"],["Rista","rista"],["Roth","roth"],["Shufta","shufta"],["Tabak Maaz","tabak-maaz"]],"Kerala":[["Ada Pradhaman","ada-pradhaman"],["Avial","avial"],["Cheera Thoran","cheera-thoran"],["Duck Mappas","duck-mappas"],["Kadala Curry","kadala-curry"],["Karimeen Pollichathu","karimeen-pollichathu"],["Kozhukatta","kozhukatta"],["Mutta Roast","mutta-roast"],["Nadan Mutton Curry","nadan-mutton-curry"],["Parippu Curry","parippu-curry"],["Pulissery","pulissery"],["Sambharam","sambharam"]],"Maharashtrian":[["Alu Vadi","alu-vadi"],["Batata Bhaji","batata-bhaji"],["Bombil Fry","bombil-fry"],["Hirvi Mirchi Cha Thecha","thecha"],["Katachi Amti","katachi-amti"],["Kolhapuri Chicken Rassa","kolhapuri-chicken"],["Matki Usal","matki-usal"],["Pav Bhaji","pav-bhaji"],["Ragda Pattice","ragda-pattice"],["Sabudana Vada","sabudana-vada"],["Tambda Rassa","kolhapuri-tambda-rassa"],["Vada Pav","vada-pav"]],"Northeast Indian":[["Aloo Pitika","aloo-pitika"],["Axone Pork","axone-pork"],["Chamthong","chamthong"],["Doh Neiiong","doh-neiiong"],["Galho","galho"],["Hanhor Mangkho","hanhor-mangkho"],["Kinema","kinema-curry"],["Masor Tenga","masor-tenga"],["Naga Smoked Pork with Bamboo Shoot","naga-smoked-pork"],["Omita Khar","omita-khar"],["Pika Pila","pika-pila"],["Sanpiau","sanpiau"]],"Odia":[["Aloo Potala Rasa","aloo-potala-rasa"],["Badi Chura","badi-chura"],["Chakuli Pitha","chakuli-pitha"],["Chhena Poda","chhena-poda"],["Chungdi Malai","chungdi-malai"],["Dahi Pakhala","dahi-pakhala"],["Ghanta Tarkari","ghanta-tarkari"],["Macha Besara","macha-besara"],["Mahura","mahura"],["Rasabali","rasabali"],["Saja Pakhala","saja-pakhala"],["Santula","santula"]],"Pahari":[["Aloo ke Gutke","aloo-ke-gutke"],["Arsa","arsa"],["Bhatt Ki Churkani","bhatt-ki-churkani"],["Chana Madra","chana-madra"],["Jhangora ki Kheer","jhangora-ki-kheer"],["Kaddu Ka Khatta","kaddu-ka-khatta"],["Khatta Meat","khatta-meat"],["Kullu Trout","kullu-trout"],["Mandua ki Roti","mandua-ki-roti"],["Patrode","patrode-pahadi"],["Sepu Vadi","sepu-vadi"],["Thechwani","thechwani"]],"Parsi":[["Akoori on Toast","parsi-akoori-toast"],["Akuri","parsi-akuri"],["Bhida Par Eeda","parsi-bhida-par-eeda"],["Dhansak","parsi-dhansak"],["Kheema Par Eeda","parsi-kheema-par-eeda"],["Kolmi no Patio","parsi-kolmi-no-patio"],["Machhi No Saas","parsi-machhi-no-saas"],["Mawa Cake","parsi-mawa-cake"],["Papeta Ma Gosht","parsi-papeta-ma-gosht"],["Papeta par Eeda","parsi-papeta-par-eeda"],["Ravo","parsi-ravo"],["Salli Marghi","parsi-salli-marghi"]],"Punjabi":[["Amritsari Fish","amritsari-fish"],["Amritsari Kulcha","amritsari-kulcha"],["Butter Chicken","butter-chicken"],["Chicken Tikka","chicken-tikka"],["Chole Bhature","chole-bhature"],["Dal Makhani","dal-makhani"],["Mah Di Dal","mah-di-dal"],["Makki di Roti","makki-di-roti"],["Pindi Chana","pindi-chana"],["Pindi Chole","pindi-chole"],["Rajma Chawal","rajma-chawal"],["Sarson ka Saag","sarson-ka-saag"]],"Rajasthani":[["Bajre ki Raab","bajre-ki-raab"],["Dal Baati Churma","dal-baati-churma"],["Gatte ki Sabzi","gatte-ki-sabzi"],["Govind Gatte","govind-gatte"],["Junglee Maas","junglee-maas"],["Ker Sangri","ker-sangri"],["Laal Maas","laal-maas"],["Lehsun ki Chutney","lehsun-ki-chutney"],["Mawa Kachori","mawa-kachori"],["Methi Bajra Puri","methi-bajra-puri"],["Panchmel Dal","panchmel-dal"],["Pyaaz Kachori","pyaaz-kachori"]],"Sindhi":[["Aloo Tuk","aloo-tuk"],["Bhee Patata","bhee-patata"],["Bhee ji Bhaji","bhee-ji-bhaji"],["Dal Pakwan","dal-pakwan"],["Koki","koki"],["Mitho Lolo","mitho-lolo"],["Sai Bhaji","sai-bhaji"],["Sanna Pakora","sanna-pakora"],["Seyal Bhaji","seyal-bhaji"],["Seyal Gosht","seyal-gosht"],["Tidali Dal","tidali-dal"]],"Tamil Nadu":[["Adai","adai"],["Beans Poriyal","beans-poriyal"],["Cabbage Poriyal","cabbage-poriyal"],["Chettinad Kara Kuzhambu","chettinad-kara-kuzhambu"],["Chettinad Meen Varuval","chettinad-meen-varuval"],["Chettinad Pepper Chicken","chettinad-pepper-chicken"],["Kandarappam","kandarappam"],["Kuzhi Paniyaram","chettinad-kuzhi-paniyaram"],["Mutton Chukka Varuval","chettinad-mutton-chukka"],["Paal Paniyaram","paal-paniyaram"],["Seedai","seedai"],["Thengai Sadam","thengai-sadam"]]}</script>
@@ -1891,7 +1892,7 @@
 <!-- Before the two games, which register their series and their boards with
      them as they start. -->
 <script src="assets/js/score-chart.js?v=a101ed8f"></script>
-<script src="assets/js/leaderboard.js?v=66e7fe28"></script>
+<script src="assets/js/leaderboard.js?v=661d2a57"></script>
 <script src="assets/js/trivia.js?v=b4900057"></script>
 <script src="assets/js/pair.js?v=4113456f"></script>
 </body>

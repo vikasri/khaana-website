@@ -52,32 +52,47 @@ def chrome():
     return nav, foot
 
 
-def board_html(game, span):
-    """The high-score board under a game.
+NAME_MAX = 13          # and MAX_NAME in assets/js/leaderboard.js, which enforces it
 
-    Two rows, hidden until there is something to put in them. leaderboard.js
-    fills it: the rows, the player's own best once they have a full run, and
-    the one-per-session prompt for a name. Nothing is written here that the
-    reader would see before they had earned it, so the section ships empty and
-    carrying `hidden`, the way the chart and the matching game do.
+
+def board_half(game, span):
+    """One game's high-score board: two rows and the prompt that fills them."""
+    return """      <div class="board" id="board-%s" data-game="%s" hidden
+           aria-labelledby="board-%s-title">
+        <h2 class="board-title" id="board-%s-title">Best scores for %d
+          consecutive games</h2>
+        <ol class="board-rows"></ol>
+        <p class="board-you" role="status" aria-live="polite" hidden></p>
+        <form class="board-join" hidden>
+          <label class="board-join-label" for="board-%s-name">On the board</label>
+          <input class="board-name-input" id="board-%s-name" type="text"
+                 maxlength="%d" autocomplete="off" spellcheck="false"
+                 placeholder="Your name" />
+          <button type="submit" class="board-add">Add</button>
+          <button type="button" class="board-skip">Not now</button>
+          <p class="board-error" role="alert" hidden></p>
+        </form>
+      </div>
+""" % (game, game, game, game, span, game, game, NAME_MAX)
+
+
+def boards_html():
+    """Both boards in one panel under the chart, side by side.
+
+    They were a panel each, one under its own game, which read well and cost
+    two full-width blocks of a page that already has a quiz, a chart and a
+    matching game stacked down it. Two boards of two rows are narrow things:
+    side by side they take one block instead of three, and the reader can see
+    both without scrolling between them.
+
+    Everything ships carrying `hidden` — the halves and the panel around them.
+    leaderboard.js opens a half when it has something to show and the panel
+    when either half is open, so a page with no boards yet has no empty frame
+    on it, and neither does one with JavaScript off.
     """
-    return """    <section class="board" id="board-%s" data-game="%s" hidden
-             aria-labelledby="board-%s-title">
-      <h2 class="board-title" id="board-%s-title">Best scores for %d
-        consecutive games</h2>
-      <ol class="board-rows"></ol>
-      <p class="board-you" role="status" aria-live="polite" hidden></p>
-      <form class="board-join" hidden>
-        <label class="board-join-label" for="board-%s-name">On the board</label>
-        <input class="board-name-input" id="board-%s-name" type="text"
-               maxlength="16" autocomplete="off" spellcheck="false"
-               placeholder="Your name" />
-        <button type="submit" class="board-add">Add</button>
-        <button type="button" class="board-skip">Not now</button>
-        <p class="board-error" role="alert" hidden></p>
-      </form>
-    </section>
-""" % (game, game, game, game, span, game, game)
+    return """    <section class="fun-boards" id="fun-boards" hidden>
+%s%s    </section>
+""" % (board_half("trivia", 10), board_half("pair", 5))
 
 
 def question_html(n, q):
@@ -174,8 +189,6 @@ def main():
         above.</p></noscript>
     </section>
 
-%s
-
     <section class="score-chart" id="score-chart" hidden
              aria-labelledby="score-chart-title">
       <h2 class="score-chart-title" id="score-chart-title">Trivia</h2>
@@ -185,6 +198,8 @@ def main():
       </div>
       <p class="sr-only" id="score-chart-read" role="status" aria-live="polite"></p>
     </section>
+
+%s
 
     <section class="pair" id="pair-game" hidden aria-labelledby="pair-title">
       <div class="pair-head">
@@ -212,7 +227,6 @@ def main():
       </div>
     </section>
 
-%s
     <script type="application/json" id="pair-pool">%s</script>
     <script type="application/json" id="pair-messages">%s</script>
 
@@ -230,8 +244,7 @@ def main():
 <script src="assets/js/pair.js"></script>
 </body>
 </html>
-""" % (nav, body, nudges, board_html("trivia", 10), board_html("pair", 5),
-       pool_json, pair_msgs, foot)
+""" % (nav, body, nudges, boards_html(), pool_json, pair_msgs, foot)
 
     open(OUT, "w", encoding="utf-8").write(page)
     # No day count here any more. The page draws one question at a time at

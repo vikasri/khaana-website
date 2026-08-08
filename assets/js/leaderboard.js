@@ -40,7 +40,7 @@
 
   var KEY = 'khaana-fun-board';
   var KEEP = 2;                    // rows stored, and rows shown
-  var MAX_NAME = 16;
+  var MAX_NAME = 13;               // and the maxlength in tools/build-trivia.py
 
   /* --- what is on the board ------------------------------------------------ */
 
@@ -336,10 +336,24 @@
     row.appendChild(d);
   }
 
+  /* The panel holding both boards. Open while either half is, so the frame
+   * arrives with the first board rather than sitting empty beside a game
+   * nobody has played yet. */
+  function paintPanel() {
+    var panel = document.getElementById('fun-boards');
+    if (!panel) return;
+    var open = false;
+    for (var k in boards) {
+      if (boards.hasOwnProperty(k) && !boards[k].root.hidden) open = true;
+    }
+    panel.hidden = !open;
+  }
+
   function paint(b) {
     var show = b.entries.length > 0 || b.best !== null ||
                (b.joinEl && !b.joinEl.hidden);
     b.root.hidden = !show;
+    paintPanel();
     paintYou(b);
     if (!b.rowsEl) return;
     b.rowsEl.textContent = '';
