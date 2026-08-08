@@ -1965,18 +1965,6 @@
       "note": "Akuri is a moist Parsi egg preparation cooked gently with ingredients such as onion, chilli, coriander, and spices."
     },
     {
-      "id": "bebinca-layers",
-      "q": "What makes bebinca unusual among layered cakes?",
-      "options": [
-        "It is cooked entirely by steaming",
-        "It contains no flour",
-        "Each layer is baked before the next",
-        "It must be buried overnight"
-      ],
-      "answer": 2,
-      "note": "A Goan bebinca is built patiently: a thin layer of batter is baked, then another is poured over it and baked, creating its striped cross-section."
-    },
-    {
       "id": "sorpotel-vinegar",
       "q": "The sharpness in Goan sorpotel traditionally comes mainly from what?",
       "options": [
@@ -2047,18 +2035,6 @@
       ],
       "answer": 0,
       "note": "Cooked finger-millet flour is beaten into smooth, dense balls. Small portions are dipped in a gravy or sambar and swallowed with minimal chewing."
-    },
-    {
-      "id": "appam-rim",
-      "q": "What creates an appam's characteristic crisp rim and soft centre?",
-      "options": [
-        "Two separate doughs baked together",
-        "A thin fermented batter in a curved pan",
-        "A coating of bread crumbs",
-        "Pressure-frying"
-      ],
-      "answer": 1,
-      "note": "The fermented rice batter is swirled around an appachatti. A thin film climbs the sides and crisps while a thicker pool remains soft in the centre."
     },
     {
       "id": "puttu-steamed",
@@ -2181,18 +2157,6 @@
       "note": "The Hyderabadi aubergine dish typically uses a roasted peanut-sesame-coconut base, balanced with spices and a souring ingredient."
     },
     {
-      "id": "haleem-texture",
-      "q": "What gives haleem its unusually smooth, stretchy body?",
-      "options": [
-        "Hours of cooking, then pounding",
-        "Raw papaya alone",
-        "A large quantity of cornflour",
-        "Freezing and reheating"
-      ],
-      "answer": 0,
-      "note": "Grains, lentils, and meat are cooked for hours and worked until they merge into a cohesive paste; the texture is created by both time and mechanical mixing."
-    },
-    {
       "id": "double-ka-meetha-bread",
       "q": "Despite its name, the Hyderabadi dessert double ka meetha is made from what?",
       "options": [
@@ -2215,18 +2179,6 @@
       ],
       "answer": 2,
       "note": "Dalma combines dal with vegetables in one pot and is seasoned without relying on the onion-tomato gravy common elsewhere."
-    },
-    {
-      "id": "chhena-poda-bake",
-      "q": "What is distinctive about chhena poda?",
-      "options": [
-        "Milk is frozen and shaved",
-        "Cheese is smoked over tea leaves",
-        "Curds are sun-dried for a month",
-        "Fresh cheese is baked to a caramel crust"
-      ],
-      "answer": 3,
-      "note": "The Odia sweet bakes sweetened chhena until it develops a dark caramelised crust—its name literally points to roasted or burnt cheese."
     },
     {
       "id": "pakhala-water",
@@ -2253,30 +2205,6 @@
       "note": "Posto means poppy seed. Ground white poppy seeds produce the pale, nutty paste used with potatoes and other vegetables."
     },
     {
-      "id": "shukto-bitter",
-      "q": "Why is shukto usually served near the beginning of a Bengali meal?",
-      "options": [
-        "It is always the sweetest dish",
-        "It must be eaten before it cools",
-        "Its bitterness opens the appetite",
-        "It contains raw seafood"
-      ],
-      "answer": 2,
-      "note": "Shukto is a mild, often bitter vegetable preparation traditionally placed early in the meal, where its bitterness contrasts with the richer courses that follow."
-    },
-    {
-      "id": "kosha-meaning",
-      "q": "What does 'kosha' signal in kosha mangsho?",
-      "options": [
-        "Cooking without any spices",
-        "Serving the meat raw",
-        "Boiling the meat in plain water",
-        "Slow cooking until the gravy clings"
-      ],
-      "answer": 3,
-      "note": "Kosha refers to patient cooking and reduction: the meat and masala are worked until the sauce becomes dark, concentrated, and close-clinging."
-    },
-    {
       "id": "luchi-flour",
       "q": "How does a Bengali luchi differ most clearly from a typical puri?",
       "options": [
@@ -2301,30 +2229,6 @@
       "note": "The crisp wheat-and-jaggery sweet is a central prasad during Chhath, particularly in Bihar, Jharkhand, and adjoining regions."
     },
     {
-      "id": "khaja-layers",
-      "q": "What gives khaja its flaky structure?",
-      "options": [
-        "Whipped egg whites",
-        "Puffed millet grains",
-        "Layers of folded, fried dough",
-        "Frozen buttercream"
-      ],
-      "answer": 2,
-      "note": "Khaja is built from folded or layered dough, fried so the layers separate, and then sweetened with syrup."
-    },
-    {
-      "id": "siddu-what",
-      "q": "Himachali siddu is what kind of food?",
-      "options": [
-        "A raw radish salad",
-        "A dried meat sausage",
-        "A rice-and-milk pudding",
-        "A steamed, stuffed wheat bread"
-      ],
-      "answer": 3,
-      "note": "Siddu is a yeast-fermented wheat bread, usually stuffed and steamed, then served warm with ghee, dal, or a savoury accompaniment."
-    },
-    {
       "id": "madra-yogurt",
       "q": "In Himachali madra, legumes are cooked in a gravy based primarily on what?",
       "options": [
@@ -2335,18 +2239,6 @@
       ],
       "answer": 0,
       "note": "Madra uses yogurt as the body of its spiced gravy, often with chickpeas or another legume, and demands careful heat control to keep it smooth."
-    },
-    {
-      "id": "nadru-lotus",
-      "q": "Kashmiri nadru is which part of the lotus plant?",
-      "options": [
-        "The flower petal",
-        "The rhizome, or lotus root",
-        "The seed's outer shell",
-        "The floating leaf"
-      ],
-      "answer": 1,
-      "note": "Nadru is the crisp, hole-patterned lotus rhizome widely called lotus stem or lotus root and used in curries, fritters, and yogurt gravies."
     },
     {
       "id": "kahwa-green-tea",
@@ -2383,18 +2275,6 @@
       ],
       "answer": 0,
       "note": "Eromba is mashed from boiled vegetables, chillies, and fermented fish, producing a pungent accompaniment rather than a smooth restaurant-style curry."
-    },
-    {
-      "id": "khar-alkali",
-      "q": "Assamese khar gets its defining alkalinity traditionally from what?",
-      "options": [
-        "Fresh lime juice",
-        "Ash water from banana peel",
-        "Whey from set yogurt",
-        "Coarse sea salt alone"
-      ],
-      "answer": 1,
-      "note": "Traditional khar uses an alkaline liquid filtered through the ash of sun-dried banana peels or related plant matter, giving the dish its distinctive character."
     },
     {
       "id": "dohneiiong-sesame",
@@ -2443,6 +2323,126 @@
       ],
       "answer": 1,
       "note": "Masor tenga is a light, tangy fish curry. Tomato, elephant apple, lemon, or another souring ingredient provides brightness rather than a heavy gravy."
+    },
+    {
+      "id": "bebinca-layers",
+      "q": "What makes bebinca unusual among layered cakes?",
+      "options": [
+        "It is cooked entirely by steaming",
+        "It contains no flour at all",
+        "Each layer is baked before the next",
+        "It must be buried overnight in hot sand"
+      ],
+      "answer": 2,
+      "note": "A Goan bebinca is built patiently: a thin layer of batter is baked, then another is poured over it and baked, creating its striped cross-section."
+    },
+    {
+      "id": "appam-rim",
+      "q": "What creates an appam's characteristic crisp rim and soft centre?",
+      "options": [
+        "Two separate doughs baked one on the other",
+        "A thin batter swirled in a curved pan",
+        "A coating of fine bread crumbs",
+        "Pressure-frying in a sealed pan"
+      ],
+      "answer": 1,
+      "note": "The fermented rice batter is swirled around an appachatti. A thin film climbs the sides and crisps while a thicker pool remains soft in the centre."
+    },
+    {
+      "id": "haleem-texture",
+      "q": "What gives haleem its unusually smooth, stretchy body?",
+      "options": [
+        "Hours of cooking, then pounding",
+        "Raw papaya, added at the end",
+        "A large quantity of cornflour",
+        "Freezing and reheating overnight"
+      ],
+      "answer": 0,
+      "note": "Grains, lentils and meat are cooked for hours and worked until they merge into a cohesive paste. The texture comes from both the time and the pounding."
+    },
+    {
+      "id": "chhena-poda-bake",
+      "q": "What is distinctive about chhena poda?",
+      "options": [
+        "Milk is frozen and then shaved",
+        "Cheese is smoked over tea leaves",
+        "Curds are sun-dried for a month",
+        "Fresh cheese is baked to a crust"
+      ],
+      "answer": 3,
+      "note": "The Odia sweet bakes sweetened chhena until it develops a dark caramelised crust. Its name points to roasted, or burnt, cheese."
+    },
+    {
+      "id": "shukto-bitter",
+      "q": "Why is shukto usually served near the beginning of a Bengali meal?",
+      "options": [
+        "It is always the sweetest dish",
+        "It must be eaten before it cools down",
+        "Its bitterness opens the appetite",
+        "It spoils if left until later"
+      ],
+      "answer": 2,
+      "note": "Shukto is a mild, often bitter vegetable preparation traditionally placed early in the meal, where its bitterness contrasts with the richer courses after it."
+    },
+    {
+      "id": "kosha-meaning",
+      "q": "What does 'kosha' signal in kosha mangsho?",
+      "options": [
+        "Cooking without any spices whatsoever",
+        "Serving the meat raw and sliced",
+        "Slow cooking until the gravy clings",
+        "Boiling the meat in plain water"
+      ],
+      "answer": 2,
+      "note": "Kosha refers to patient cooking and reduction: the meat and masala are worked until the sauce becomes dark, concentrated and close-clinging."
+    },
+    {
+      "id": "khaja-layers",
+      "q": "What gives khaja its flaky structure?",
+      "options": [
+        "Whipped egg whites folded in",
+        "Layers of folded, fried dough",
+        "Puffed millet grains pressed together",
+        "A frozen buttercream centre"
+      ],
+      "answer": 1,
+      "note": "Khaja is built from folded or layered dough, fried so the layers separate, and then sweetened with syrup."
+    },
+    {
+      "id": "siddu-what",
+      "q": "Himachali siddu is what kind of food?",
+      "options": [
+        "A raw radish salad with mustard",
+        "A dried meat sausage, cured hard",
+        "A steamed, stuffed wheat bread",
+        "A rice-and-milk pudding with nuts"
+      ],
+      "answer": 2,
+      "note": "Siddu is a yeast-fermented wheat bread, usually stuffed and steamed, then served warm with ghee, dal or a savoury accompaniment."
+    },
+    {
+      "id": "nadru-lotus",
+      "q": "Kashmiri nadru is which part of the lotus plant?",
+      "options": [
+        "The flower petal, dried and ground",
+        "The rhizome, known as lotus root",
+        "The seed's hard outer shell",
+        "The floating leaf, rolled up"
+      ],
+      "answer": 1,
+      "note": "Nadru is the crisp, hole-patterned lotus rhizome, widely called lotus stem or lotus root, and used in curries, fritters and yogurt gravies."
+    },
+    {
+      "id": "khar-alkali",
+      "q": "Assamese khar gets its defining alkalinity traditionally from what?",
+      "options": [
+        "Fresh lime juice, squeezed in",
+        "Ash water from dried banana peel",
+        "Whey drained from set yogurt",
+        "Coarse sea salt, and nothing else"
+      ],
+      "answer": 1,
+      "note": "Traditional khar uses an alkaline liquid filtered through the ash of sun-dried banana peels or related plant matter, which gives the dish its character."
     }
   ]
 }
