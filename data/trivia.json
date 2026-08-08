@@ -1,7 +1,7 @@
 {
   "_comment": "Food trivia for the Fun Facts page. trivia.js draws them one at a time at random, never repeating until the bank is used up. Edit here and run tools/build-trivia.py. Keep every claim checkable: this is a page people will repeat at dinner, and a wrong fact travels further than a right one.",
   "version": "2.6.0",
-  "updated": "2026-08-07",
+  "updated": "2026-08-08",
   "_wrongMessages_comment": "Shown one at a time, at random, when a reader picks a wrong answer. Edit here and run tools/build-trivia.py. Keep them light: the reader has just got something wrong and is about to try again.",
   "wrongMessages": [
     "Not quite! Take another bite at it.",
@@ -1843,6 +1843,606 @@
       ],
       "answer": 3,
       "note": "Thirty-six is the number people name, cooked by a team under a vasta waza and eaten four to a plate. Most of them are meat, and the order they arrive in is not negotiable."
+    },
+    {
+      "id": "sarson-leaves",
+      "q": "Sarson da saag is built primarily around which leaves?",
+      "options": [
+        "Mustard greens",
+        "Fenugreek leaves",
+        "Spinach only",
+        "Curry leaves"
+      ],
+      "answer": 0,
+      "note": "Sarson means mustard. The Punjabi dish may include spinach or bathua for balance, but mustard greens provide its defining flavour and identity."
+    },
+    {
+      "id": "baati-desert",
+      "q": "Why were baati-style breads well suited to Rajasthan's desert conditions?",
+      "options": [
+        "They required ice-cold fermentation",
+        "They could be baked with little water and kept well",
+        "They were always eaten raw",
+        "They used fresh coconut instead of grain"
+      ],
+      "answer": 1,
+      "note": "The firm wheat rounds need relatively little water, can be baked in embers, and travel better than soft breads—useful qualities in an arid region."
+    },
+    {
+      "id": "laal-maas-colour",
+      "q": "What gives traditional laal maas its famous red colour?",
+      "options": [
+        "Beetroot",
+        "Tomato purée",
+        "Mathania red chillies",
+        "Saffron"
+      ],
+      "answer": 2,
+      "note": "Rajasthani Mathania chillies are prized for deep colour and a distinctive heat. Tomato-heavy versions are later adaptations."
+    },
+    {
+      "id": "ker-sangri-desert",
+      "q": "Ker sangri combines two ingredients adapted to what landscape?",
+      "options": [
+        "A tidal mangrove",
+        "A high-altitude glacier",
+        "A tropical rainforest",
+        "The Thar Desert"
+      ],
+      "answer": 3,
+      "note": "Ker berries and sangri pods come from hardy desert plants. They are commonly dried, then rehydrated and cooked into a tangy Rajasthani preparation."
+    },
+    {
+      "id": "gatte-flour",
+      "q": "The 'gatte' in gatte ki sabzi are made chiefly from what?",
+      "options": [
+        "Gram flour",
+        "Rice flour",
+        "Mashed potato",
+        "Ground millet"
+      ],
+      "answer": 0,
+      "note": "Gatte are seasoned cylinders of besan, or gram flour, that are boiled, sliced, and finished in a spiced gravy."
+    },
+    {
+      "id": "undhiyu-name",
+      "q": "In the name undhiyu, what does the word point to?",
+      "options": [
+        "Seven compulsory vegetables",
+        "An upside-down cooking method",
+        "A wedding feast",
+        "A sweet-and-sour spice blend"
+      ],
+      "answer": 1,
+      "note": "The name is linked to the Gujarati word for upside down, recalling the older method of cooking the winter vegetables in an inverted earthen pot."
+    },
+    {
+      "id": "patra-leaves",
+      "q": "Patra is made by rolling spiced gram-flour paste inside which leaves?",
+      "options": [
+        "Banana leaves",
+        "Mustard leaves",
+        "Colocasia leaves",
+        "Betel leaves"
+      ],
+      "answer": 2,
+      "note": "Patra uses colocasia, also called taro or arbi, leaves. The rolls are steamed, sliced, and often tempered or lightly fried."
+    },
+    {
+      "id": "handvo-what",
+      "q": "What is handvo?",
+      "options": [
+        "A milk sweet filled with nuts",
+        "A deep-fried wheat bread",
+        "A raw mango pickle",
+        "A savoury fermented rice-and-lentil cake"
+      ],
+      "answer": 3,
+      "note": "Gujarati handvo is a savoury cake made from a fermented rice-and-lentil batter, often with bottle gourd, and finished with a seeded tempering."
+    },
+    {
+      "id": "dhansak-lentils",
+      "q": "Parsi dhansak characteristically brings together meat with what?",
+      "options": [
+        "Lentils and vegetables",
+        "Fruit and cream",
+        "Rice noodles and vinegar",
+        "Fish and coconut milk"
+      ],
+      "answer": 0,
+      "note": "Dhansak cooks meat with a mixture of lentils, vegetables, and spices, producing a thick, complex stew commonly served with browned rice."
+    },
+    {
+      "id": "akuri-what",
+      "q": "What is akuri?",
+      "options": [
+        "A Sindhi flatbread",
+        "Parsi-style softly scrambled eggs",
+        "A Kashmiri turnip curry",
+        "A Goan rice cake"
+      ],
+      "answer": 1,
+      "note": "Akuri is a moist Parsi egg preparation cooked gently with ingredients such as onion, chilli, coriander, and spices."
+    },
+    {
+      "id": "bebinca-layers",
+      "q": "What makes bebinca unusual among layered cakes?",
+      "options": [
+        "It is cooked entirely by steaming",
+        "It contains no flour",
+        "Each layer is baked before the next",
+        "It must be buried overnight"
+      ],
+      "answer": 2,
+      "note": "A Goan bebinca is built patiently: a thin layer of batter is baked, then another is poured over it and baked, creating its striped cross-section."
+    },
+    {
+      "id": "sorpotel-vinegar",
+      "q": "The sharpness in Goan sorpotel traditionally comes mainly from what?",
+      "options": [
+        "Tamarind leaves",
+        "Raw mango",
+        "Yogurt",
+        "Vinegar"
+      ],
+      "answer": 3,
+      "note": "Vinegar is central to sorpotel's tang and preservation, reflecting the strong Portuguese influence on Goan meat cookery."
+    },
+    {
+      "id": "xacuti-coconut",
+      "q": "Which ingredient forms the roasted body of many Goan xacuti masalas?",
+      "options": [
+        "Coconut",
+        "Fresh paneer",
+        "Puffed rice",
+        "Mustard greens"
+      ],
+      "answer": 0,
+      "note": "Xacuti typically uses roasted coconut with a layered mixture of spices, giving the curry its nutty depth and thick texture."
+    },
+    {
+      "id": "neer-dosa-name",
+      "q": "Why is neer dosa called 'neer' dosa?",
+      "options": [
+        "It is cooked under water",
+        "Its rice batter is unusually thin and watery",
+        "It is served only during monsoon",
+        "It contains coconut water instead of rice"
+      ],
+      "answer": 1,
+      "note": "Neer means water in Kannada and Tulu. The unfermented rice batter is diluted until very fluid, producing a delicate, lacy dosa."
+    },
+    {
+      "id": "bisi-bele-name",
+      "q": "Bisi bele bath literally describes what?",
+      "options": [
+        "Cold curd rice",
+        "Sweet coconut bread",
+        "Hot lentil rice",
+        "Spiced fried fish"
+      ],
+      "answer": 2,
+      "note": "In Kannada, bisi means hot, bele means lentil, and bath refers to a rice preparation: essentially a hot lentil-rice dish."
+    },
+    {
+      "id": "kori-rotti-base",
+      "q": "Kori rotti pairs a chicken curry with what distinctive base?",
+      "options": [
+        "Steamed millet balls",
+        "Layered wheat bread",
+        "Puffed lotus seeds",
+        "Crisp rice wafers"
+      ],
+      "answer": 3,
+      "note": "The coastal Karnataka dish is served over very thin, crisp rice wafers, which soften as they absorb the coconut-rich chicken gravy."
+    },
+    {
+      "id": "ragi-mudde-form",
+      "q": "Ragi mudde is traditionally eaten in what form?",
+      "options": [
+        "A compact finger-millet ball",
+        "A thin fermented pancake",
+        "A steamed leaf parcel",
+        "A sweet fried spiral"
+      ],
+      "answer": 0,
+      "note": "Cooked finger-millet flour is beaten into smooth, dense balls. Small portions are dipped in a gravy or sambar and swallowed with minimal chewing."
+    },
+    {
+      "id": "appam-rim",
+      "q": "What creates an appam's characteristic crisp rim and soft centre?",
+      "options": [
+        "Two separate doughs baked together",
+        "A thin fermented batter in a curved pan",
+        "A coating of bread crumbs",
+        "Pressure-frying"
+      ],
+      "answer": 1,
+      "note": "The fermented rice batter is swirled around an appachatti. A thin film climbs the sides and crisps while a thicker pool remains soft in the centre."
+    },
+    {
+      "id": "puttu-steamed",
+      "q": "How is puttu traditionally cooked?",
+      "options": [
+        "Deep-fried as rings",
+        "Baked on a hot stone",
+        "Steamed in a cylinder with layers of coconut",
+        "Simmered directly in coconut milk"
+      ],
+      "answer": 2,
+      "note": "Moistened rice flour and grated coconut are layered in a cylindrical mould and steamed, giving puttu its crumbly, column-like form."
+    },
+    {
+      "id": "sadya-leaf",
+      "q": "On a Kerala sadya, food is traditionally served on which surface?",
+      "options": [
+        "A steel tiffin lid",
+        "A clay roof tile",
+        "A woven bamboo tray",
+        "A banana leaf"
+      ],
+      "answer": 3,
+      "note": "The feast is arranged on a banana leaf, with the placement and sequence of dishes following local convention."
+    },
+    {
+      "id": "pollichathu-parcel",
+      "q": "Meen pollichathu protects and perfumes fish by cooking it inside what?",
+      "options": [
+        "A banana-leaf parcel",
+        "A salt crust",
+        "A hollow coconut",
+        "A wheat-dough shell"
+      ],
+      "answer": 0,
+      "note": "In this Kerala technique, spiced fish is wrapped in banana leaf and cooked, trapping moisture while the heated leaf contributes aroma."
+    },
+    {
+      "id": "ada-pradhaman-ada",
+      "q": "The 'ada' in ada pradhaman refers to what?",
+      "options": [
+        "Roasted chickpeas",
+        "Rice flakes or sheets",
+        "Banana flowers",
+        "Milk curds"
+      ],
+      "answer": 1,
+      "note": "Ada are small rice-flour pieces. They are simmered with jaggery and coconut milk to make the Kerala payasam known as ada pradhaman."
+    },
+    {
+      "id": "jigarthanda-drink",
+      "q": "Madurai's jigarthanda is best described as what?",
+      "options": [
+        "A fiery mutton pickle",
+        "A steamed rice dumpling",
+        "A cooling milk-based drink",
+        "A pepper broth"
+      ],
+      "answer": 2,
+      "note": "Jigarthanda is a chilled Madurai drink commonly assembled from milk, reduced milk, syrup, and a softening gum or seed-based ingredient."
+    },
+    {
+      "id": "gongura-roselle",
+      "q": "Gongura gets its signature sourness from the leaves of which plant?",
+      "options": [
+        "Coriander",
+        "Curry tree",
+        "Fenugreek",
+        "Roselle"
+      ],
+      "answer": 3,
+      "note": "Gongura is roselle leaf. Its natural tartness makes it valuable in Andhra and Telangana pickles, dals, and meat dishes."
+    },
+    {
+      "id": "pesarattu-pulse",
+      "q": "Pesarattu batter is based mainly on which pulse?",
+      "options": [
+        "Whole green gram",
+        "Black chickpea",
+        "Pigeon pea",
+        "Kidney bean"
+      ],
+      "answer": 0,
+      "note": "Andhra pesarattu is made from soaked and ground whole green gram, or mung, usually without the rice-and-urad combination used for dosa."
+    },
+    {
+      "id": "pulihora-tamarind",
+      "q": "What supplies the defining sour note in pulihora?",
+      "options": [
+        "Pomegranate molasses",
+        "Tamarind",
+        "Kokum only",
+        "Fermented milk"
+      ],
+      "answer": 1,
+      "note": "Pulihora is seasoned rice whose principal souring agent is tamarind, balanced with chillies, turmeric, and a nutty tempering."
+    },
+    {
+      "id": "pootharekulu-paper",
+      "q": "Why is the Andhra sweet pootharekulu sometimes called 'paper sweet'?",
+      "options": [
+        "It is wrapped in newspaper",
+        "It is folded into an envelope",
+        "It uses wafer-thin rice-starch sheets",
+        "It was invented for scribes"
+      ],
+      "answer": 2,
+      "note": "Its name evokes a coated sheet: nearly translucent rice-starch layers are folded with sugar and ghee, creating a paper-like sweet."
+    },
+    {
+      "id": "bagara-baingan-base",
+      "q": "Bagara baingan's sauce commonly gets richness from which combination?",
+      "options": [
+        "Cream, cheese, and butter",
+        "Cashew, apple, and saffron",
+        "Egg, flour, and milk",
+        "Peanut, sesame, and coconut"
+      ],
+      "answer": 3,
+      "note": "The Hyderabadi aubergine dish typically uses a roasted peanut-sesame-coconut base, balanced with spices and a souring ingredient."
+    },
+    {
+      "id": "haleem-texture",
+      "q": "What gives haleem its unusually smooth, stretchy body?",
+      "options": [
+        "Hours of cooking, then pounding",
+        "Raw papaya alone",
+        "A large quantity of cornflour",
+        "Freezing and reheating"
+      ],
+      "answer": 0,
+      "note": "Grains, lentils, and meat are cooked for hours and worked until they merge into a cohesive paste; the texture is created by both time and mechanical mixing."
+    },
+    {
+      "id": "double-ka-meetha-bread",
+      "q": "Despite its name, the Hyderabadi dessert double ka meetha is made from what?",
+      "options": [
+        "Two kinds of mango",
+        "Bread",
+        "Double cream",
+        "Twice-cooked rice"
+      ],
+      "answer": 1,
+      "note": "It is a bread dessert: fried or toasted slices are soaked with sweetened milk or syrup. The name is linked to double roti, a term for bread."
+    },
+    {
+      "id": "dalma-vegetables",
+      "q": "In Odisha's dalma, lentils are cooked together with what?",
+      "options": [
+        "Minced lamb",
+        "Rice noodles",
+        "Mixed vegetables",
+        "Fresh cheese"
+      ],
+      "answer": 2,
+      "note": "Dalma combines dal with vegetables in one pot and is seasoned without relying on the onion-tomato gravy common elsewhere."
+    },
+    {
+      "id": "chhena-poda-bake",
+      "q": "What is distinctive about chhena poda?",
+      "options": [
+        "Milk is frozen and shaved",
+        "Cheese is smoked over tea leaves",
+        "Curds are sun-dried for a month",
+        "Fresh cheese is baked to a caramel crust"
+      ],
+      "answer": 3,
+      "note": "The Odia sweet bakes sweetened chhena until it develops a dark caramelised crust—its name literally points to roasted or burnt cheese."
+    },
+    {
+      "id": "pakhala-water",
+      "q": "Pakhala is centred on cooked rice served with what?",
+      "options": [
+        "Seasoned or fermented water",
+        "Molten ghee only",
+        "A dry spice powder",
+        "Whipped cream"
+      ],
+      "answer": 0,
+      "note": "Pakhala places cooked rice in water, often lightly fermented and seasoned, making it especially refreshing in Odisha's hot weather."
+    },
+    {
+      "id": "posto-seed",
+      "q": "A Bengali posto preparation is dominated by which seed?",
+      "options": [
+        "Flaxseed",
+        "Poppy seed",
+        "Watermelon seed",
+        "Celery seed"
+      ],
+      "answer": 1,
+      "note": "Posto means poppy seed. Ground white poppy seeds produce the pale, nutty paste used with potatoes and other vegetables."
+    },
+    {
+      "id": "shukto-bitter",
+      "q": "Why is shukto usually served near the beginning of a Bengali meal?",
+      "options": [
+        "It is always the sweetest dish",
+        "It must be eaten before it cools",
+        "Its bitterness opens the appetite",
+        "It contains raw seafood"
+      ],
+      "answer": 2,
+      "note": "Shukto is a mild, often bitter vegetable preparation traditionally placed early in the meal, where its bitterness contrasts with the richer courses that follow."
+    },
+    {
+      "id": "kosha-meaning",
+      "q": "What does 'kosha' signal in kosha mangsho?",
+      "options": [
+        "Cooking without any spices",
+        "Serving the meat raw",
+        "Boiling the meat in plain water",
+        "Slow cooking until the gravy clings"
+      ],
+      "answer": 3,
+      "note": "Kosha refers to patient cooking and reduction: the meat and masala are worked until the sauce becomes dark, concentrated, and close-clinging."
+    },
+    {
+      "id": "luchi-flour",
+      "q": "How does a Bengali luchi differ most clearly from a typical puri?",
+      "options": [
+        "Luchi is usually made with refined flour",
+        "Luchi is always stuffed with lentils",
+        "Luchi is steamed rather than fried",
+        "Luchi contains no grain"
+      ],
+      "answer": 0,
+      "note": "Luchi is generally made from maida, or refined wheat flour, whereas puri is more commonly made from whole-wheat atta."
+    },
+    {
+      "id": "thekua-chhath",
+      "q": "Thekua is especially associated with offerings during which festival?",
+      "options": [
+        "Onam",
+        "Chhath",
+        "Baisakhi",
+        "Navroz"
+      ],
+      "answer": 1,
+      "note": "The crisp wheat-and-jaggery sweet is a central prasad during Chhath, particularly in Bihar, Jharkhand, and adjoining regions."
+    },
+    {
+      "id": "khaja-layers",
+      "q": "What gives khaja its flaky structure?",
+      "options": [
+        "Whipped egg whites",
+        "Puffed millet grains",
+        "Layers of folded, fried dough",
+        "Frozen buttercream"
+      ],
+      "answer": 2,
+      "note": "Khaja is built from folded or layered dough, fried so the layers separate, and then sweetened with syrup."
+    },
+    {
+      "id": "siddu-what",
+      "q": "Himachali siddu is what kind of food?",
+      "options": [
+        "A raw radish salad",
+        "A dried meat sausage",
+        "A rice-and-milk pudding",
+        "A steamed, stuffed wheat bread"
+      ],
+      "answer": 3,
+      "note": "Siddu is a yeast-fermented wheat bread, usually stuffed and steamed, then served warm with ghee, dal, or a savoury accompaniment."
+    },
+    {
+      "id": "madra-yogurt",
+      "q": "In Himachali madra, legumes are cooked in a gravy based primarily on what?",
+      "options": [
+        "Yogurt",
+        "Tomato juice",
+        "Coconut water",
+        "Mustard oil alone"
+      ],
+      "answer": 0,
+      "note": "Madra uses yogurt as the body of its spiced gravy, often with chickpeas or another legume, and demands careful heat control to keep it smooth."
+    },
+    {
+      "id": "nadru-lotus",
+      "q": "Kashmiri nadru is which part of the lotus plant?",
+      "options": [
+        "The flower petal",
+        "The rhizome, or lotus root",
+        "The seed's outer shell",
+        "The floating leaf"
+      ],
+      "answer": 1,
+      "note": "Nadru is the crisp, hole-patterned lotus rhizome widely called lotus stem or lotus root and used in curries, fritters, and yogurt gravies."
+    },
+    {
+      "id": "kahwa-green-tea",
+      "q": "Kashmiri kahwa is traditionally based on which tea?",
+      "options": [
+        "Strong black tea with milk",
+        "Fermented brick tea",
+        "Green tea",
+        "Roasted barley tea"
+      ],
+      "answer": 2,
+      "note": "Kahwa is a fragrant green-tea infusion commonly brewed with spices and sometimes saffron, then garnished with nuts."
+    },
+    {
+      "id": "axone-soybean",
+      "q": "Axone, used in Naga cooking, is made by fermenting what?",
+      "options": [
+        "Bamboo leaves",
+        "Buffalo milk",
+        "Black rice",
+        "Soybeans"
+      ],
+      "answer": 3,
+      "note": "Axone, also written akhuni, is fermented soybean. Its powerful aroma and savoury depth season vegetables, meat, and chutneys."
+    },
+    {
+      "id": "eromba-fish",
+      "q": "Manipuri eromba commonly combines boiled vegetables with what intensely flavoured ingredient?",
+      "options": [
+        "Fermented fish",
+        "Blue cheese",
+        "Coffee pulp",
+        "Rose water"
+      ],
+      "answer": 0,
+      "note": "Eromba is mashed from boiled vegetables, chillies, and fermented fish, producing a pungent accompaniment rather than a smooth restaurant-style curry."
+    },
+    {
+      "id": "khar-alkali",
+      "q": "Assamese khar gets its defining alkalinity traditionally from what?",
+      "options": [
+        "Fresh lime juice",
+        "Ash water from banana peel",
+        "Whey from set yogurt",
+        "Coarse sea salt alone"
+      ],
+      "answer": 1,
+      "note": "Traditional khar uses an alkaline liquid filtered through the ash of sun-dried banana peels or related plant matter, giving the dish its distinctive character."
+    },
+    {
+      "id": "dohneiiong-sesame",
+      "q": "What colours and flavours Meghalaya's dohneiiong?",
+      "options": [
+        "Saffron",
+        "Beetroot",
+        "Black sesame",
+        "Green cardamom"
+      ],
+      "answer": 2,
+      "note": "Dohneiiong is a Khasi pork preparation whose roasted black-sesame paste gives the gravy its dark colour and nutty depth."
+    },
+    {
+      "id": "jadoh-rice-meat",
+      "q": "Jadoh, a Khasi speciality, is based on which pairing?",
+      "options": [
+        "Millet and yogurt",
+        "Fish and noodles",
+        "Corn and cheese",
+        "Rice and meat"
+      ],
+      "answer": 3,
+      "note": "Jadoh cooks rice with meat—classically pork—so the grain absorbs the meat's fat and seasoning."
+    },
+    {
+      "id": "tungrymbai-soybean",
+      "q": "Tungrymbai, from Meghalaya, is made chiefly from what?",
+      "options": [
+        "Fermented soybeans",
+        "Dried apricots",
+        "Lotus seeds",
+        "Smoked tea leaves"
+      ],
+      "answer": 0,
+      "note": "Tungrymbai is a fermented-soybean preparation, often cooked with aromatics and sometimes pork, valued for its deep savoury flavour."
+    },
+    {
+      "id": "masor-tenga-sour",
+      "q": "What is unusual about Assamese tenga compared with many rich Indian fish curries?",
+      "options": [
+        "It contains no liquid",
+        "It is deliberately light and sour",
+        "It is sweetened with condensed milk",
+        "It is thickened with cheese"
+      ],
+      "answer": 1,
+      "note": "Masor tenga is a light, tangy fish curry. Tomato, elephant apple, lemon, or another souring ingredient provides brightness rather than a heavy gravy."
     }
   ]
 }
