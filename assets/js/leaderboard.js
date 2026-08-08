@@ -343,16 +343,36 @@
     paintPanel();
     paintYou(b);
     if (!b.rowsEl) return;
+    /* All three places, always — the taken ones and the free ones.
+     *
+     * The board used to be as long as it had entries, so a game with one score
+     * on it looked like a board with one place. An empty second and third row
+     * say what is actually true: there are three places and two of them are
+     * going spare, which is an invitation rather than a wall. It also stops the
+     * panel changing height as the season fills up. */
     b.rowsEl.textContent = '';
-    b.rows.forEach(function (e, i) {
+    for (var i = 0; i < KEEP; i++) {
       var li = document.createElement('li');
       li.className = 'board-row';
-      // Their own row, if they have named one this session. Names are not
-      // accounts, so this is "the name you just used" and nothing stronger.
-      if (b.mine && e.n === b.mine) li.setAttribute('data-mine', '1');
-      cells(li, (i + 1) + '.', e.n, e);
+      var e = b.rows[i];
+      if (e) {
+        // Their own row, if they have named one this session. Names are not
+        // accounts, so this is "the name you just used" and nothing stronger.
+        if (b.mine && e.n === b.mine) li.setAttribute('data-mine', '1');
+        cells(li, (i + 1) + '.', e.n, e);
+      } else {
+        li.setAttribute('data-open', '1');
+        var rank = document.createElement('span');
+        rank.className = 'board-rank';
+        rank.textContent = (i + 1) + '.';
+        var open = document.createElement('span');
+        open.className = 'board-who board-open';
+        open.textContent = 'Open';
+        li.appendChild(rank);
+        li.appendChild(open);
+      }
       b.rowsEl.appendChild(li);
-    });
+    }
   }
 
   /* --- the prompt ----------------------------------------------------------

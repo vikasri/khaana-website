@@ -3029,6 +3029,12 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   line-height: 1.25; color: var(--ink);
 }
 .board-row[data-mine="1"] .board-who { color: var(--bd-ink); }
+/* A place nobody has taken. Set lighter and not in the serif the names use, so
+   the eye reads the filled rows first and this as the gap it is. */
+.board-open {
+  font-family: var(--sans) !important; font-weight: 400;
+  font-size: 0.78rem; color: var(--ink-soft); opacity: 0.75;
+}
 /* The tie-break, and set like one: quiet, beside the score rather than
    competing with it, and lined up so two of them can be compared at a
    glance. */
