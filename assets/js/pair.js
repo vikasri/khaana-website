@@ -96,7 +96,7 @@
    * and everything before that is a cuisine sitting in a box. Optional: the
    * game plays the same whether or not the script drawing it loaded.
    *
-   * The dotted benchmark on it is 3.28 a completed board, which is what
+   * The benchmark marked on it is 3.28 a completed board, which is what
    * chance is worth here once elimination is allowed for: wrong pairs come
    * back to be tried again, so a guesser converges without knowing anything.
    * Under that line is under that. */

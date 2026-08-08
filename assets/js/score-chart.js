@@ -65,10 +65,16 @@
   var MIN_TRIALS = 4, MIN_SPAN = 2;   // an empty axis still spans something
   var Y_TICKS = 3, X_LABELS = 5;      // fewer, so a small frame is not crowded
 
-  /* key -> {label, points, bench}. bench is {step, label, n}: what one
-   * completed game is worth to a benchmark player, what to call them, and how
-   * many the reader has finished. The line sits at step * n, so it climbs at
-   * the rate the reader would have to beat to be doing better than chance. */
+  /* key -> {label, points, bench}. bench is {step, label, mark, ends}: what one
+   * completed game is worth to a benchmark player, what to call them, an
+   * optional glyph, and the trial each of the reader's finished games ended on.
+   *
+   * A benchmark player only has a score at those moments. They earn a game's
+   * worth per game, not a fraction of one per trial, so a line drawn across
+   * every trial was claiming a standing for them on trials where they have
+   * none — and worse, it climbed in steps that landed nowhere near the reader's
+   * own. It is a short flat mark at step * k on the trial the reader's kth game
+   * ended: where chance stood at the moment the reader stood there too. */
   var series = {};
   var active = null;
   var drawnBox = 0;                // the box width the frame was last drawn at
@@ -120,11 +126,15 @@
       if (pts[i] < lo) lo = pts[i];
       if (pts[i] > hi) hi = pts[i];
     }
-    // The benchmark is part of the picture, so the axis has to reach it. Left
-    // out of this, a reader losing to it saw the line vanish off the top of
-    // the frame at the moment it mattered most.
-    var bench = s.bench && s.bench.n > 0 ? s.bench.step * s.bench.n : null;
-    if (bench !== null) { if (bench < lo) lo = bench; if (bench > hi) hi = bench; }
+    /* Every benchmark mark is part of the picture, so the axis has to reach
+     * them. Left out of this, a reader losing to the benchmark saw it vanish
+     * off the top of the frame at the moment it mattered most. */
+    var b = s.bench, ends = (b && b.ends) || [];
+    for (i = 0; i < ends.length; i++) {
+      var bv = b.step * (i + 1);
+      if (bv < lo) lo = bv;
+      if (bv > hi) hi = bv;
+    }
     // Zero is always on the axis: a line that never crosses it still means
     // something different above it than below. And the axis never spans less
     // than two, so an unplayed game is a frame with room in it rather than a
@@ -142,7 +152,9 @@
     function py(v) { return Y1 - (Y1 - Y0) * ((v - lo) / (hi - lo)); }
 
     svg.textContent = '';
-    var benchEnds = X0;              // right edge of the benchmark's label
+    // Where the benchmark's name ended up, so the reader's own label can keep
+    // out of it: {x1, x2, y}, or null until it has been drawn and measured.
+    var benchBox = null;
 
     // Horizontal rules, one per labelled value, with zero picked out.
     for (var v = lo; v <= hi + 1e-9; v += step) {
@@ -180,15 +192,65 @@
     yt.textContent = 'Score';
     svg.appendChild(yt);
 
-    /* The benchmark, dotted, with its name sitting on top of it. Drawn before
-     * the score line so the reader's own line is never the one interrupted. */
-    if (bench !== null) {
-      var by = py(bench);
-      svg.appendChild(el('line', {
-        'class': 'sc-bench', x1: X0, y1: by, x2: X1, y2: by
-      }));
-      var bl = el('text', { 'class': 'sc-bench-label', x: X0 + 6, y: by - 6 });
-      bl.textContent = s.bench.label;
+    /* The benchmark: one short flat mark per game the reader has finished, at
+     * what chance would have been worth by then — half a point a solved
+     * question in the trivia, 3.28 a completed board in the matching game. Each
+     * is a step up on the last, so the row of them slopes across the frame at
+     * the rate the reader has to beat, and the gaps between them are the trials
+     * spent inside a game, where the benchmark has nothing to say.
+     *
+     * Drawn before the score line so the reader's own line is never the one
+     * interrupted. */
+    if (ends.length) {
+      /* Wide enough to read as a level rather than a dot, and well short of the
+       * gap between two trials — at 0.45 of it a run of questions answered
+       * first time left the marks a pixel apart and closed the row back into
+       * the line this used to be. */
+      var half = Math.max(3, Math.min(8, (X1 - X0) / xMax * 0.35));
+      var lastX = X0, lastY = Y1;
+      for (i = 0; i < ends.length; i++) {
+        var mx = px(ends[i]), my = py(b.step * (i + 1));
+        // Trimmed at the frame rather than hung over it: the newest game is
+        // often the last trial, and a level sticking out past the axis reads
+        // as a line that has escaped rather than as one that ends there.
+        svg.appendChild(el('line', {
+          'class': 'sc-bench', y1: my, y2: my,
+          x1: Math.max(X0, mx - half), x2: Math.min(X1, mx + half)
+        }));
+        lastX = mx; lastY = my;
+      }
+      /* The glyph is placed before the name is, because the name has to end
+       * short of it. Both belong to the head of the slope and the glyph is the
+       * one with nowhere else to go — a monkey shunted left lands on the game
+       * before last, where the words can simply stop sooner. */
+      var mkX = 0, mkY = 0, mkAt = 'start', mkLeft = X1;
+      if (b.mark) {
+        mkX = lastX + half + 3; mkY = lastY + 6;
+        /* Up onto the mark rather than back along the row, once the slope has
+         * reached the right-hand edge — which is where a long run always leaves
+         * it, and on a phone is most of them. */
+        if (mkX > X1 - 18) {
+          mkX = Math.min(X1, lastX + half); mkY = lastY - 6; mkAt = 'end';
+          mkLeft = mkX - 20;             // an emoji is about that wide at 18px
+        }
+      }
+
+      /* Named once, trailing back from the newest mark. Set over the first one
+       * instead — the low end of the slope, where the frame is emptiest — the
+       * words ran straight through every mark that came after it. Behind the
+       * head of the slope there is nothing but the trials the benchmark has
+       * already passed. Below the mark when the slope has reached the top of
+       * the frame and above would put the words outside it. */
+      var labY = lastY - 8 < Y0 + 10 ? lastY + 16 : lastY - 8;
+      var labX = Math.min(lastX - half - 5, mkLeft - 4), labAt = 'end';
+      var room = labX - X0 - 2;
+      // Too early in the run for anything to trail: back to the left edge,
+      // where a first mark two trials in leaves no room behind it.
+      if (room < 70) { labX = X0 + 6; labAt = 'start'; room = (X1 - X0) - 56; }
+      var bl = el('text', {
+        'class': 'sc-bench-label', x: labX, y: labY, 'text-anchor': labAt
+      });
+      bl.textContent = b.label;
       svg.appendChild(bl);
       /* Shrunk to fit rather than cut.
        *
@@ -201,7 +263,6 @@
        * being readable, and an unreadable label is worse than a wrapped
        * layout. */
       try {
-        var room = (X1 - X0) - 56;
         var wide = bl.getComputedTextLength();
         if (wide > room) {
           /* Inline, not an attribute: the stylesheet sets a size for this
@@ -214,19 +275,24 @@
           bl.style.fontSize = Math.max(8, base * (room / wide)) + 'px';
           wide = bl.getComputedTextLength();
         }
-        benchEnds = X0 + 6 + wide;
+        benchBox = {
+          x1: labAt === 'end' ? labX - wide : labX,
+          x2: labAt === 'end' ? labX : labX + wide,
+          y: labY
+        };
       } catch (e) { }
-      /* A glyph riding the far end of the line, if the game gave one. The
-       * trivia's benchmark is what a reader scores by guessing, so it gets a
-       * monkey — the label says blindfolded and the picture says the rest. It
-       * sits at the right end because the left is where the label already is,
-       * and it is drawn as text rather than an image so there is no file to
-       * fetch, nothing to licence, and it scales with the frame. */
-      if (s.bench.mark) {
+      /* A glyph standing on the newest mark, if the game gave one. The trivia's
+       * benchmark is what a reader scores by guessing, so it gets a monkey —
+       * the label says blind and the picture says the rest. It sits at
+       * the top of the slope because that is where the benchmark has got to,
+       * and beside the mark rather than over it so it does not cover the level
+       * it is standing on. Drawn as text rather than an image so there is no
+       * file to fetch, nothing to licence, and it scales with the frame. */
+      if (b.mark) {
         var bm = el('text', {
-          'class': 'sc-bench-mark', x: X1 - 3, y: by - 5, 'text-anchor': 'end'
+          'class': 'sc-bench-mark', x: mkX, y: mkY, 'text-anchor': mkAt
         });
-        bm.textContent = s.bench.mark;
+        bm.textContent = b.mark;
         svg.appendChild(bm);
       }
     }
@@ -244,22 +310,35 @@
      * unlabelled line next to a labelled one reads as though the labelled one
      * is the subject — which is backwards here. It goes over the middle of the
      * run rather than either end: the right end already has the running total
-     * beside it and the left is where the benchmark's own label sits. */
+     * beside it. */
     if (pts.length > 2) {
       /* Start at the middle and walk right until the label is clear of the
        * benchmark's. Put at the midpoint flat, it landed inside "A blindfolded
        * guesser" and the frame read "A blindfolded Youesser". Never past the
        * second-to-last point, because the running total is already sitting at
-       * the end of the line. */
+       * the end of the line.
+       *
+       * Both directions are checked, not just across. The benchmark's name used
+       * to sit at whatever height the benchmark did and the two labels were
+       * kept apart by column alone, which was safe and far too cautious: with
+       * the name now trailing the head of the slope, a horizontal test would
+       * push "You" to the end of the run to avoid words half the frame below
+       * it. */
+      var clash = function (at) {
+        if (!benchBox) return false;
+        var x = px(at), y = py(pts[at]);
+        return x + 20 > benchBox.x1 && x - 20 < benchBox.x2 &&
+               Math.abs(y - benchBox.y) < 18;
+      };
       var mid = Math.floor((pts.length - 1) / 2);
-      while (mid < pts.length - 2 && px(mid) < benchEnds + 14) mid++;
+      while (mid < pts.length - 2 && clash(mid)) mid++;
       var midY = py(pts[mid]);
       /* Above the line normally. Below it if the walk ran out of room and the
        * benchmark's label is still under this one — a long benchmark label can
        * span the whole of a 250px frame, and there is then nowhere to the right
        * to go. Below also when the line is near the top of the frame and above
        * would put the word outside the picture. */
-      var crowded = px(mid) < benchEnds + 14;
+      var crowded = clash(mid);
       var above = midY - 8 >= Y0 + 4 && !crowded;
       var you = el('text', {
         'class': 'sc-you', x: px(mid), 'text-anchor': 'middle',
@@ -330,12 +409,12 @@
    * total, and claim the frame when the reader turns to it. */
   window.KhaanaScoreLine = {
     /* bench is optional: {step, label, mark}. step is what one completed game
-       adds to the benchmark, label is what to write above the line, and mark
-       is an optional glyph to sit on its far end. */
+       adds to the benchmark, label is what to write above the first of its
+       marks, and mark is an optional glyph to stand on the newest one. */
     track: function (key, label, bench) {
       if (!series[key]) series[key] = { label: label, points: [0], bench: null };
       if (bench) series[key].bench = { step: bench.step, label: bench.label,
-                                       mark: bench.mark || null, n: 0 };
+                                       mark: bench.mark || null, ends: [] };
       if (!active) active = key;
       panel.hidden = false;
       draw();
@@ -350,11 +429,18 @@
     /* One more completed game against the benchmark: a question solved in the
        trivia, a board finished in the matching game. Counted separately from
        the points, because a trial and a game are not the same thing — a trivia
-       question can take four trials to solve and is still one game. */
+       question can take four trials to solve and is still one game.
+
+       The trial it landed on is what gets kept, not just the count: the
+       benchmark is drawn where the reader's games ended, so the chart needs to
+       know where those were. Both games score the trial before they report the
+       game, so the newest point is the one the game ended on. */
     games: function (key, n) {
       var s = series[key];
-      if (!s || !s.bench || s.bench.n === n) return;
-      s.bench.n = n;
+      if (!s || !s.bench || s.bench.ends.length === n) return;
+      var ends = s.bench.ends, at = s.points.length - 1;
+      while (ends.length < n) ends.push(at);
+      if (ends.length > n) ends.length = n;      // a game count that went back
       draw();
     },
     focus: function (key) {

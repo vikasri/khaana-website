@@ -11,9 +11,14 @@
  *
  * So the window slides. Every solved game pushes its own net onto a queue of
  * ten (five for the matching game), the queue is summed, and the highest that
- * sum ever reaches is the score. Nothing stops, nothing resets, no round is
- * declared over. A block of ten with a scoring beat at the end would have put
- * back the "come back tomorrow" pause the trivia was rewritten to remove.
+ * sum ever reaches is the score. No round is declared over and no scoring beat
+ * falls at the end of a block of ten — that would have put back the "come back
+ * tomorrow" pause the trivia was rewritten to remove.
+ *
+ * The one thing that does end a run is walking away from it. Five minutes with
+ * no game finished and the part-built queue is dropped, because consecutive has
+ * to mean consecutive in one sitting or it means nothing at all. Best scores
+ * already made are untouched.
  *
  * Ties break on the clock: same score, quicker wins. That is not decoration.
  * Ten questions answered clean is twenty and there is no twenty-one, so
@@ -50,6 +55,18 @@
    * limit on what is kept. */
   var KEEP = 3;
   var MAX_NAME = 13;               // and the maxlength in tools/build-trivia.py
+  /* How long a part-finished run survives with nothing happening to it.
+   *
+   * "Ten consecutive games" has to mean ten in one sitting, or it means very
+   * little: a tab left open all day would let somebody answer their four best
+   * questions in the morning, come back after dinner, and have the queue treat
+   * the two halves as one run. Five minutes is well past reading the fact under
+   * a solved question and well short of leaving the desk.
+   *
+   * Only the part-finished queue goes. A score already made this session is
+   * made, and the clock a run is timed on is still the sum of the games
+   * themselves — waiting is not being measured, it is only being ended. */
+  var IDLE_MS = 5 * 60 * 1000;
 
   /* --- names ---------------------------------------------------------------
    *
@@ -190,6 +207,7 @@
       mine: null,                  // the name submitted this session
       played: 0,                   // games solved this session, for the cadence
       waivedAt: null,              // games played when the prompt was waved off
+      seen: 0,                     // when the last game landed, for IDLE_MS
       sending: false
     };
     boards[key] = b;
@@ -497,6 +515,13 @@
 
   function record(b, net, ms) {
     b.played++;
+    /* Checked as the game lands rather than on a timer. Nothing on the page
+     * shows the queue filling, so there is nothing to take away at the moment
+     * it lapses — the only thing that ever reads it is the next game, and by
+     * then the gap is there to be measured. */
+    var now = Date.now();
+    if (b.seen && now - b.seen > IDLE_MS) b.runs = [];
+    b.seen = now;
     b.runs.push({ net: net, ms: (typeof ms === 'number' && ms >= 0) ? ms : 0 });
     if (b.runs.length > b.span) b.runs.shift();
     if (b.runs.length < b.span) return;      // no full run yet, so no score

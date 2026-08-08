@@ -2642,16 +2642,15 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   fill: var(--ink-soft); font-family: var(--sans); font-size: 11.5px;
   font-weight: 700; text-anchor: middle;
 }
-/* The benchmark: what chance alone would have scored by now. Dotted so it
-   never competes with the reader's own line, and in the soft ink rather than
-   the game's colour, because it belongs to neither game. */
-/* Thin, and thinner than the reader's own line at 2.5. It is a reference, not
-   a competitor: at 3 it was the heaviest thing in a frame that is supposed to
-   be about the line crossing it. */
-.sc-bench {
-  stroke: var(--bench); stroke-width: 1.5; stroke-dasharray: 5 4;
-  stroke-linecap: round;
-}
+/* The benchmark: what chance alone would have scored by the end of each game
+   the reader has finished. One short flat mark per game rather than a line
+   across every trial, so it climbs as a row of levels rather than pretending
+   to a standing on the trials in between. In the soft ink rather than the
+   game's colour, because it belongs to neither game.
+   Solid, where the long line was dotted — a dash a dozen pixels wide broken
+   into fives reads as two specks rather than as a level. Kept thinner than the
+   reader's own line at 2.5: it is a reference, not a competitor. */
+.sc-bench { stroke: var(--bench); stroke-width: 2; stroke-linecap: round; }
 /* Named like the benchmark is, in the game's own colour, with the paper behind
    it so it stays readable where it crosses a gridline or the line itself. */
 .sc-you {
