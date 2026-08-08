@@ -66,7 +66,7 @@
    * It has to match .score-chart-plot's max-width in the stylesheet, and that
    * one is the one that binds — the box is measured, so a cap raised here alone
    * changes nothing. */
-  var H = H_WIDE, W_MAX = 500, W_MIN = 230;
+  var H = H_WIDE, W_MAX = 560, W_MIN = 230;
   /* The margins are set by the labels the stylesheet draws in them: room on
    * the left for a negative, and enough below for a row of numbers with the
    * axis name under it. Trimmed with the frame — at 150 tall the old 46px
@@ -78,7 +78,7 @@
   /* The most of the frame's width the benchmark's name may take as a gutter to
    * stand in. Past this the words shrink instead: the plot is the point of the
    * picture, and a label is not worth half of it. */
-  var GUTTER_MAX = 0.42;
+  var GUTTER_MAX = 0.5;
   /* And the width the plot keeps whatever the words want. Below this there is
    * no gutter at all and the name goes back inside the picture — a phone has
    * no width to give away. */
@@ -236,27 +236,44 @@
     function px(n) { return X0 + (XD - X0) * (n / xMax); }
     function py(v) { return Y1 - (Y1 - Y0) * ((v - lo) / (hi - lo)); }
 
-    /* The reader's own end of the line: the running total against the point it
-     * belongs to, with "You" directly over it.
+    /* The reader's own end of the line: "You" and the running total on one
+     * line, level with the last point and running back from it.
      *
-     * Both to the left of the point and both right-aligned, so the two share an
-     * edge and read as one block naming the line rather than as a stray word
-     * somewhere along it. Left rather than right because a run of any length
-     * puts that last point at the end of the axis.
+     * Level with it, so the row reads off the point it belongs to at a glance
+     * rather than being something floating above it. To the left, because a run
+     * of any length puts that point at the end of the axis with nothing beyond
+     * it. And on one line, with the number nearest the point: the two were
+     * stacked, and stacked they wanted two lines of headroom that a good run —
+     * which is exactly when a reader looks — does not leave.
      *
-     * Above the point normally, below it when the line has climbed far enough
-     * that two lines of text above would leave the frame — which is where a
-     * good run always ends up. "You" stays over the total either way: it is the
-     * label and the number is what it labels. */
+     * Built here and set down after the line, so the row goes over it: the
+     * words come back along the run and the incoming segment passes under them.
+     * The stylesheet puts paper behind both, which is what makes that legible.
+     * Measured here too, because the benchmark's key has to keep off this row
+     * when the frame is too narrow for a gutter. */
     var lastI = pts.length - 1;
-    var youBox = null;
+    var youBox = null, youEl = null, valEl = null;
     if (lastI > 0) {
       var ylx = px(lastI), yly = py(pts[lastI]);
-      var over = yly - 26 >= Y0 + 4;
+      var rowY = Math.max(Y0 + 12, Math.min(Y1 - 3, yly + 5));
+      valEl = el('text', {
+        'class': 'sc-value', x: ylx - 10, y: rowY, 'text-anchor': 'end'
+      });
+      valEl.textContent = (pts[lastI] > 0 ? '+' : '') + pts[lastI];
+      svg.appendChild(valEl);
+      var valW = 30;
+      try { valW = valEl.getComputedTextLength(); } catch (e) { }
+      youEl = el('text', {
+        'class': 'sc-you', x: ylx - 10 - valW - 6, y: rowY, 'text-anchor': 'end'
+      });
+      youEl.textContent = 'You';
+      svg.appendChild(youEl);
+      var youW = 26;
+      try { youW = youEl.getComputedTextLength(); } catch (e) { }
       youBox = {
-        x: ylx - 10,                   // the shared right edge of both lines
-        valY: over ? yly - 8 : yly + 30,
-        youY: over ? yly - 24 : yly + 14
+        y: rowY,
+        right: ylx - 10,
+        left: ylx - 10 - valW - 6 - youW
       };
     }
 
@@ -363,13 +380,19 @@
       if (gutter) {
         blockX = Math.max(lastX + 6, XD + lead);
       } else {
-        /* Measured off what the two blocks actually cover rather than a rough
-         * band around them. A loose test cost real legibility: the words were
-         * pushed clear of a total sitting four pixels below them and shrank to
-         * 8px to fit the room that left. */
+        /* Both rows want the same line, and one of them has to give.
+         *
+         * The key steps off it rather than squeezing past, because width is the
+         * thing the words are short of and the reader's row already owns the
+         * right-hand end of it — made to fit beside "You +18" on a phone, "No
+         * Knowledge Probability Score" bottomed out at its 8px floor and still
+         * ran under the row. A line's worth of height is far cheaper to find.
+         * Only where there is no height either does it go back to squeezing. */
         var limit = X1;
-        if (youBox && labY + 4 > youBox.youY - 14 && labY - 13 < youBox.valY + 4) {
-          limit = Math.max(X0 + 90, youBox.x - 46 - 8);
+        if (youBox && Math.abs(labY - youBox.y) < 17) {
+          if (youBox.y - 19 >= Y0 + 12) labY = youBox.y - 19;
+          else if (youBox.y + 19 <= Y1 - 3) labY = youBox.y + 19;
+          else limit = Math.max(X0 + 90, youBox.left - 8);
         }
         var fixedW = SWATCH + gap;
         var blockW = fixedW + labW;
@@ -427,21 +450,11 @@
       }));
     }
 
-    // The reader's block, laid out at the top of the draw and set down here so
-    // it goes over the line rather than under it.
+    /* The reader's row, built and measured at the top of the draw and moved to
+     * the end here: appendChild on a node already in the frame relocates it, so
+     * this is the same two elements going over the line rather than under it. */
     var last = lastI;
-    if (youBox) {
-      var you = el('text', {
-        'class': 'sc-you', x: youBox.x, y: youBox.youY, 'text-anchor': 'end'
-      });
-      you.textContent = 'You';
-      svg.appendChild(you);
-      var val = el('text', {
-        'class': 'sc-value', x: youBox.x, y: youBox.valY, 'text-anchor': 'end'
-      });
-      val.textContent = (pts[last] > 0 ? '+' : '') + pts[last];
-      svg.appendChild(val);
-    }
+    if (youEl) { svg.appendChild(youEl); svg.appendChild(valEl); }
 
     var read = s.label + ': ' + pts[last] + ' after ' + last +
                (last === 1 ? ' trial' : ' trials');
