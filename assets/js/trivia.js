@@ -49,6 +49,8 @@
     // A question asked twice would have its previous answer still marked, so
     // anything the reader did to it last time comes off before it is asked
     // again. Only reachable once the bank has been through a full pass.
+    qNet = 0;                      // a new question, so a new game for the board
+    qStart = Date.now();           // and its clock starts when it is put up
     current.classList.remove('answered', 'is-holding');
     current.querySelectorAll('.tq-opt').forEach(function (b) {
       b.disabled = false;
@@ -186,7 +188,22 @@
   var chart = window.KhaanaScoreLine;
   var solved = 0;                  // questions got right, which is games played
   if (chart) chart.track('trivia', 'Trivia',
-                         { step: 0.5, label: 'A blindfolded guesser' });
+                         { step: 0.5, label: 'A blindfolded guesser',
+                           mark: '🙈' });
+
+  /* The board under the panel wants a score per question rather than the
+   * running total: it sums the last ten of them and keeps the best that sum
+   * ever reaches. So this is the one question's worth — two, less a point for
+   * every wrong press on the way to it — and it resets when a question does.
+   * Optional, like the chart: no board script, no board, same quiz.
+   *
+   * The clock runs from the question going up to it being solved, and stops
+   * there. The pause afterwards is the reader reading the fact and deciding to
+   * press Next, and timing that would put a stopwatch on the part of the page
+   * that is not a game. */
+  var board = window.KhaanaBoard;
+  var qNet = 0, qStart = 0;
+  if (board) board.track('trivia', { span: 10, root: 'board-trivia' });
 
   /* A friendly line on a wrong answer, and two seconds to read it.
    *
@@ -255,6 +272,7 @@
       btn.classList.add('is-wrong');
       btn.disabled = true;                 // that one is spent; the rest are not
       score += WRONG;
+      qNet += WRONG;
       womp();
       scoreLine();
       if (chart) chart.point('trivia', score);
@@ -276,10 +294,12 @@
     if (note) note.hidden = false;
 
     score += RIGHT;
+    qNet += RIGHT;
     solved++;                      // the question is over, so a game is done
     cheer();
     scoreLine();
     if (chart) { chart.point('trivia', score); chart.games('trivia', solved); }
+    if (board) board.game('trivia', qNet, Date.now() - qStart);
     /* The button goes to where the answer is, not to the foot of the panel.
      * It reads as the end of this question rather than as furniture, and it
      * shares a line with the fact so the two shrink to the same block. */

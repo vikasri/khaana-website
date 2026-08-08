@@ -52,6 +52,34 @@ def chrome():
     return nav, foot
 
 
+def board_html(game, span):
+    """The high-score board under a game.
+
+    Two rows, hidden until there is something to put in them. leaderboard.js
+    fills it: the rows, the player's own best once they have a full run, and
+    the one-per-session prompt for a name. Nothing is written here that the
+    reader would see before they had earned it, so the section ships empty and
+    carrying `hidden`, the way the chart and the matching game do.
+    """
+    return """    <section class="board" id="board-%s" data-game="%s" hidden
+             aria-labelledby="board-%s-title">
+      <h2 class="board-title" id="board-%s-title">Best scores for %d
+        consecutive games</h2>
+      <ol class="board-rows"></ol>
+      <p class="board-you" role="status" aria-live="polite" hidden></p>
+      <form class="board-join" hidden>
+        <label class="board-join-label" for="board-%s-name">On the board</label>
+        <input class="board-name-input" id="board-%s-name" type="text"
+               maxlength="16" autocomplete="off" spellcheck="false"
+               placeholder="Your name" />
+        <button type="submit" class="board-add">Add</button>
+        <button type="button" class="board-skip">Not now</button>
+        <p class="board-error" role="alert" hidden></p>
+      </form>
+    </section>
+""" % (game, game, game, game, span, game, game)
+
+
 def question_html(n, q):
     opts = "\n".join(
         '            <li><button type="button" class="tq-opt" data-i="%d">'
@@ -146,6 +174,8 @@ def main():
         above.</p></noscript>
     </section>
 
+%s
+
     <section class="score-chart" id="score-chart" hidden
              aria-labelledby="score-chart-title">
       <h2 class="score-chart-title" id="score-chart-title">Trivia</h2>
@@ -181,6 +211,8 @@ def main():
           next</button>
       </div>
     </section>
+
+%s
     <script type="application/json" id="pair-pool">%s</script>
     <script type="application/json" id="pair-messages">%s</script>
 
@@ -190,13 +222,16 @@ def main():
 %s
 
 <script src="script.js"></script>
-<!-- Before the two games, which register their series with it as they start. -->
+<!-- Before the two games, which register their series and their boards with
+     them as they start. -->
 <script src="assets/js/score-chart.js"></script>
+<script src="assets/js/leaderboard.js"></script>
 <script src="assets/js/trivia.js"></script>
 <script src="assets/js/pair.js"></script>
 </body>
 </html>
-""" % (nav, body, nudges, pool_json, pair_msgs, foot)
+""" % (nav, body, nudges, board_html("trivia", 10), board_html("pair", 5),
+       pool_json, pair_msgs, foot)
 
     open(OUT, "w", encoding="utf-8").write(page)
     # No day count here any more. The page draws one question at a time at

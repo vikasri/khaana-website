@@ -2640,6 +2640,10 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   stroke: var(--paper); stroke-width: 3px; stroke-linejoin: round;
   paint-order: stroke fill;
 }
+/* The guesser, sitting on the end of their own line. No outline behind this
+   one: an emoji is drawn in its own colours and a 3px paper stroke around it
+   reads as a smudge rather than as a halo. */
+.sc-bench-mark { font-size: 18px; }
 
 .sc-line {
   fill: none; stroke: var(--sc-ink); stroke-width: 2.5;
@@ -2894,3 +2898,102 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   letter-spacing: 0.06em; text-transform: uppercase;
 }
 .pair-again:hover { background: var(--nav-active); color: #fff; }
+
+/* ---------- The high-score boards ---------- */
+/* One under each game, in the same frame as the chart that sits between them,
+   so the page reads as a run of panels rather than two games and a stray list.
+   Warm for the trivia and cool for the matching game, the same split the chart
+   line already uses to say which game is being talked about.
+
+   Both ship carrying `hidden`. leaderboard.js un-hides one when it has a row
+   to show or a full run to report, so nothing here is ever an empty box: no
+   JavaScript, no board, and no placeholder rows before anyone has played. */
+.board {
+  margin: 0; padding: 12px 18px 14px;
+  background: var(--paper);
+  border: 1px solid var(--line); border-radius: var(--radius);
+  --bd-ink: var(--nav-active);
+}
+.board[data-game="pair"] { --bd-ink: var(--azure); }
+@media (max-width: 759px) { .board { padding: 10px 12px 12px; } }
+
+/* Sized like the scoring rules above the games rather than like a heading:
+   it is a label on two numbers, and set as an h2 it shouted over the game it
+   belongs to. */
+.board-title, .board-join-label {
+  margin: 0; font-family: var(--sans); font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.11em; text-transform: uppercase; color: var(--ink-soft);
+}
+.board-title { margin-bottom: 6px; }
+
+.board-rows { list-style: none; margin: 0; padding: 0; }
+.board-row {
+  display: flex; align-items: baseline; gap: 10px;
+  padding: 6px 0; border-bottom: 1px solid var(--line);
+}
+.board-row:last-child { border-bottom: 0; }
+.board-rank { flex: 0 0 1.3em; color: var(--ink-soft); font-size: 0.9rem; }
+/* A name is whatever the player typed, up to sixteen characters of it, so it
+   is the one string on this page that can be a single unbroken run of them. */
+.board-who {
+  flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere;
+  font-family: var(--serif); font-size: 1.05rem; font-weight: 700;
+  color: var(--ink);
+}
+.board-row[data-mine="1"] .board-who { color: var(--bd-ink); }
+/* The tie-break, and set like one: quiet, beside the score rather than
+   competing with it, and lined up so two of them can be compared at a
+   glance. */
+.board-time {
+  flex: 0 0 auto; font-family: var(--sans); font-size: 0.85rem;
+  color: var(--ink-soft); font-variant-numeric: tabular-nums;
+}
+.board-score {
+  flex: 0 0 auto; font-size: 1.05rem; font-weight: 700; color: var(--bd-ink);
+  font-variant-numeric: tabular-nums;
+}
+/* The player's own best, in the columns the rows use so the number lands
+   under the numbers. Dashed above it: it is a reading of the run in progress
+   and not a third place. */
+.board-you {
+  display: flex; align-items: baseline; gap: 10px;
+  margin: 0; padding: 6px 0 0; border-top: 1px dashed var(--line);
+}
+.board-you .board-who { font-family: var(--sans); font-size: 0.95rem; color: var(--ink-soft); }
+.board-you .board-score { color: var(--ink-soft); }
+
+/* Shown once, to a player who has just displaced the second row. */
+.board-join {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px;
+  margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line);
+}
+.board-join-label { color: var(--bd-ink); }
+.board-name-input {
+  flex: 1 1 9ch; min-width: 0; max-width: 20ch;
+  border: 1px solid var(--line); border-radius: 999px;
+  background: var(--cream); color: var(--ink);
+  padding: 7px 14px; font-family: var(--sans); font-size: 0.95rem;
+}
+.board-name-input:focus-visible {
+  outline: 2px solid var(--bd-ink); outline-offset: 1px;
+}
+.board-add, .board-skip {
+  cursor: pointer; flex: 0 0 auto; border-radius: 999px;
+  padding: 7px 16px; font-family: var(--sans); font-size: 0.8rem;
+  font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.board-add {
+  border: 1px solid var(--bd-ink); background: var(--paper); color: var(--bd-ink);
+}
+.board-add:hover { background: var(--bd-ink); color: #fff; }
+/* Quieter than the button beside it: declining is a way out, not a choice
+   being offered on equal terms with joining. */
+.board-skip {
+  border: 1px solid transparent; background: none; color: var(--ink-soft);
+}
+.board-skip:hover { color: var(--ink); text-decoration: underline; }
+/* Its own line, so a refused name does not shove the buttons around. */
+.board-error {
+  flex: 1 1 100%; margin: 0; color: #b3261e;
+  font-size: 0.85rem; font-weight: 700;
+}

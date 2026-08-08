@@ -163,6 +163,19 @@
       var bl = el('text', { 'class': 'sc-bench-label', x: X0 + 6, y: by - 6 });
       bl.textContent = s.bench.label;
       svg.appendChild(bl);
+      /* A glyph riding the far end of the line, if the game gave one. The
+       * trivia's benchmark is what a reader scores by guessing, so it gets a
+       * monkey — the label says blindfolded and the picture says the rest. It
+       * sits at the right end because the left is where the label already is,
+       * and it is drawn as text rather than an image so there is no file to
+       * fetch, nothing to licence, and it scales with the frame. */
+      if (s.bench.mark) {
+        var bm = el('text', {
+          'class': 'sc-bench-mark', x: X1 - 3, y: by - 5, 'text-anchor': 'end'
+        });
+        bm.textContent = s.bench.mark;
+        svg.appendChild(bm);
+      }
     }
 
     // The line, then the points on top of it.
@@ -232,11 +245,13 @@
   /* The three things a game does to the chart: say it exists, hand it a new
    * total, and claim the frame when the reader turns to it. */
   window.KhaanaScoreLine = {
-    /* bench is optional: {step, label}. step is what one completed game adds
-       to the benchmark, label is what to write above the line. */
+    /* bench is optional: {step, label, mark}. step is what one completed game
+       adds to the benchmark, label is what to write above the line, and mark
+       is an optional glyph to sit on its far end. */
     track: function (key, label, bench) {
       if (!series[key]) series[key] = { label: label, points: [0], bench: null };
-      if (bench) series[key].bench = { step: bench.step, label: bench.label, n: 0 };
+      if (bench) series[key].bench = { step: bench.step, label: bench.label,
+                                       mark: bench.mark || null, n: 0 };
       if (!active) active = key;
       panel.hidden = false;
       draw();

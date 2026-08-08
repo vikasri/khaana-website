@@ -105,6 +105,16 @@
   if (chart) chart.track('pair', 'Pairing',
                          { step: 3.28, label: 'Chance with Elimination Benchmark' });
 
+  /* The board under the game, as in the trivia — but over five rounds rather
+   * than ten questions. A round is four drags and a mark and often two or
+   * three attempts, so five of them is about the sitting ten questions is;
+   * ten rounds would put the first score forty minutes of clicking away. The
+   * spread is wider anyway, since a round is worth eight less a point a miss
+   * rather than two. */
+  var board = window.KhaanaBoard;
+  var roundNet = 0, roundStart = 0;
+  if (board) board.track('pair', { span: 5, root: 'board-pair' });
+
   /* --- the round ---------------------------------------------------------- */
 
   var pairs = [];        // [{dish, cuisine}] in the order the rows are shown
@@ -147,6 +157,8 @@
     selected = null;
     attempt = 1;
     rounds++;
+    roundNet = 0;                  // a new round, so a new game for the board
+    roundStart = Date.now();       // and its clock starts when it is dealt
     var chosen = pick(cuisines, ROWS);
     pairs = chosen.map(function (c) {
       var entry = pick(pool[c], 1)[0];      // [name, thumbnail id or null]
@@ -312,10 +324,12 @@
       if (placed[i] === p.cuisine) {
         locked[i] = true;
         score += RIGHT;
+        roundNet += RIGHT;
         slots[i].classList.add('is-right');
       } else {
         wrong.push(i);
         score += WRONG;
+        roundNet += WRONG;
         slots[i].classList.add('is-wrong');
       }
     });
@@ -366,6 +380,7 @@
     say(attempt, 'all');
     finished++;                    // the board is done, so a game is done
     if (chart) chart.games('pair', finished);
+    if (board) board.game('pair', roundNet, Date.now() - roundStart);
     // Every chip is placed, so on a phone — where the bank sits under the
     // board rather than beside it — the space it was holding open is now a
     // blank block between the last pair and the reply. Nothing is being
