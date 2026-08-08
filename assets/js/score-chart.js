@@ -190,9 +190,32 @@
       var bl = el('text', { 'class': 'sc-bench-label', x: X0 + 6, y: by - 6 });
       bl.textContent = s.bench.label;
       svg.appendChild(bl);
-      // Measured once it is in the document, so the reader's own label below
-      // can be placed past it instead of through it.
-      try { benchEnds = X0 + 6 + bl.getComputedTextLength(); } catch (e) { }
+      /* Shrunk to fit rather than cut.
+       *
+       * The label is whatever the game calls its benchmark and the words are
+       * not this file's to shorten, but the frame is now a third of the width
+       * it was drawn for: "Chance with Elimination Benchmark" at full size
+       * runs past the right-hand edge and straight under the running total.
+       * So it is measured and scaled down until it fits, leaving room at the
+       * end for that total. Down to 8px and no further — below that it stops
+       * being readable, and an unreadable label is worse than a wrapped
+       * layout. */
+      try {
+        var room = (X1 - X0) - 56;
+        var wide = bl.getComputedTextLength();
+        if (wide > room) {
+          /* Inline, not an attribute: the stylesheet sets a size for this
+           * class, and in SVG a CSS declaration beats a presentation
+           * attribute — set that way the shrink was silently ignored and the
+           * label went on running under the total. The base is read from the
+           * stylesheet rather than repeated here, so changing it there does
+           * not quietly break the arithmetic. */
+          var base = parseFloat(getComputedStyle(bl).fontSize) || 13.5;
+          bl.style.fontSize = Math.max(8, base * (room / wide)) + 'px';
+          wide = bl.getComputedTextLength();
+        }
+        benchEnds = X0 + 6 + wide;
+      } catch (e) { }
       /* A glyph riding the far end of the line, if the game gave one. The
        * trivia's benchmark is what a reader scores by guessing, so it gets a
        * monkey — the label says blindfolded and the picture says the rest. It
