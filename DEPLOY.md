@@ -91,9 +91,10 @@ the height of the header.
 reference, so new markup can only ever be paired with the CSS it was built
 against, and an unchanged file keeps its URL and stays cached.
 
-## Cloudflare is gone
+## Cloudflare is not in front of this site
 
-Done on 2026-08-06. The domain is delegated to `ns27.domaincontrol.com` and
+Done on 2026-08-06. Read the next section too: there *is* Cloudflare in the
+picture again, but not here and not in the path of any page. The domain is delegated to `ns27.domaincontrol.com` and
 `ns28.domaincontrol.com` at GoDaddy, and the zone is:
 
 ```
@@ -132,6 +133,52 @@ Cloudflare's free plan would have bought real things: header control, actual
 Pages cannot execute code. None were ever switched on, so leaving costs
 nothing that works today. It also stops something working *against* the site,
 which is the robots.txt rewrite.
+
+## The leaderboard runs on a Cloudflare Worker
+
+Added 2026-08-08, and the reason the heading above is worded the way it is.
+The fun page's high-score boards are shared by everyone, which a static host
+cannot do: GitHub Pages serves files and cannot take a write. So one endpoint
+exists that can.
+
+```
+API      https://khaana-board.vikasri.workers.dev
+routes   GET  /top?game=trivia|pair      the board
+         POST /score                     one finished run
+storage  Cloudflare D1, database "khaana-board"
+source   ~/Documents/Claude_Work/KhaanaBoard  (its own repository)
+caller   assets/js/leaderboard.js, on fun.html only
+```
+
+Four things to be clear about, because the last Cloudflare entanglement cost
+three days of failed deploys:
+
+* **It is not a Pages project and is not connected to this repository.** It is
+  a standalone Worker, deployed by hand with `npx wrangler deploy` from its own
+  directory. Nothing about it runs on push. The deployment-environment trap
+  described above cannot recur through it.
+* **It is not in front of any page.** No proxying, no DNS change; the zone is
+  still delegated to GoDaddy and khaana.com still answers from GitHub Pages.
+* **The site does not depend on it.** `leaderboard.js` treats every call as
+  optional: no network, slow network or Worker down leaves both games playing
+  exactly as they do and the board simply absent. Nothing waits on a fetch.
+* **Its source is not in this repository**, deliberately — GitHub Pages serves
+  the whole repository, and a Worker's `node_modules` has no business being
+  published at khaana.com.
+
+### Why it is on workers.dev and not api.khaana.com
+
+Because a Worker custom domain requires the zone to be in the Cloudflare
+account, and this domain's nameservers are at GoDaddy. Pointing
+`api.khaana.com` at it would mean delegating khaana.com back to Cloudflare,
+which is the thing the section above records undoing. The uglier hostname is
+the cheaper price.
+
+### Operating it
+
+Season reset, and removing a row, are documented in that repository's README.
+Both are single authenticated requests; neither needs this repository or a
+site deploy.
 
 If a backend is ever needed, the route is the one that was never finished: a
 Cloudflare Workers project with an assets directory. The files are in this
