@@ -2381,7 +2381,12 @@ section.trivia-section { padding-top: 24px; }
    trivia at the top the markup and the screen agree and no reordering is
    needed. The gap lives here rather than as a margin on each panel, so the
    three blocks space themselves however many of them are on. */
-.trivia-page { display: flex; flex-direction: column; gap: 22px; }
+/* 16 rather than 22. Every panel here is bordered and on paper against a
+   cream page, so they are already told apart by their edges — the gap only has
+   to keep them from touching, and five blocks down a phone screen were paying
+   22px each for separation they already had. */
+.trivia-page { display: flex; flex-direction: column; gap: 16px; }
+@media (max-width: 759px) { .trivia-page { gap: 12px; } }
 
 /* A page-opening h1 at 3.2rem was doing a job nothing here needs done: it is
    a section heading now, so it is sized like one — still larger than the
@@ -2394,7 +2399,7 @@ section.trivia-section { padding-top: 24px; }
   background: var(--paper);
   border: 1px solid var(--line); border-radius: var(--radius);
 }
-@media (max-width: 759px) { .trivia-panel { padding: 12px 12px 14px; } }
+@media (max-width: 759px) { .trivia-panel { padding: 10px 12px 11px; } }
 
 .trivia-page .section-head { margin: 0; max-width: none; }
 .trivia-page .section-head h1 {
@@ -2433,8 +2438,8 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    beside the thing they are counting, not on a row of their own underneath. */
 .trivia-head {
   display: flex; flex-wrap: wrap; align-items: flex-start;
-  justify-content: space-between; gap: 6px 18px;
-  margin: 0 0 10px; padding-bottom: 8px;
+  justify-content: space-between; gap: 4px 18px;
+  margin: 0 0 8px; padding-bottom: 6px;
   border-bottom: 1px solid var(--line);
 }
 .trivia-day {
@@ -2702,7 +2707,7 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   .pair-scoring { text-align: left; }
   .pair-meter { justify-content: flex-start; }
 }
-.pair-how { margin: 0 0 12px; font-size: 0.95rem; color: var(--ink-soft); }
+.pair-how { margin: 0 0 8px; font-size: 0.9rem; color: var(--ink-soft); }
 
 /* One column on a phone, where the cuisines sit under the dishes rather than
    beside them: 3 columns in 360px would leave every box too narrow to read a
@@ -2725,7 +2730,7 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    "Hirvi Mirchi Cha Thecha" on three lines and made one row as tall as the
    four should be. */
 @media (max-width: 759px) {
-  .pair { padding: 12px 12px 14px; }
+  .pair { padding: 10px 12px 11px; }
   .pair-head h2 { font-size: 1.25rem; }
   .pair-how { font-size: 0.9rem; margin-bottom: 10px; }
   .pair-row { grid-template-columns: minmax(0, 1fr) 96px; gap: 8px; }
@@ -2915,10 +2920,10 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    something to show and the panel when either half is open: no JavaScript, no
    board, and no placeholder rows before anyone has played. */
 .fun-boards {
-  margin: 0; padding: 12px 18px 14px;
+  margin: 0; padding: 9px 18px 10px;
   background: var(--paper);
   border: 1px solid var(--line); border-radius: var(--radius);
-  display: flex; flex-wrap: wrap; align-items: flex-start; gap: 14px 30px;
+  display: flex; flex-wrap: wrap; align-items: flex-start; gap: 10px 30px;
 }
 .fun-boards[hidden] { display: none; }
 /* 240px before it wraps: narrower than that and a name plus a time plus a
@@ -2934,64 +2939,84 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   }
 }
 .board[data-game="pair"] { --bd-ink: var(--azure); }
-@media (max-width: 759px) { .fun-boards { padding: 10px 12px 12px; } }
+@media (max-width: 759px) { .fun-boards { padding: 8px 12px 9px; } }
 
 /* Sized like the scoring rules above the games rather than like a heading:
    it is a label on two numbers, and set as an h2 it shouted over the game it
    belongs to. */
-.board-title, .board-join-label {
-  margin: 0; font-family: var(--sans); font-size: 0.72rem; font-weight: 700;
-  letter-spacing: 0.11em; text-transform: uppercase; color: var(--ink-soft);
+/* Set a step down from the games either side of it, and packed tight.
+   A board is a glance, not a read: four short rows that want to sit in as
+   little of the page as they can without the numbers touching. */
+.board-join-label {
+  margin: 0; font-family: var(--sans); font-size: 0.66rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft);
 }
-.board-title { margin-bottom: 6px; }
+/* Sentence case, not the uppercase the other small labels use. Uppercase with
+   letter-spacing is the widest way to set a string, and this one has to carry
+   a game name and a rule across half a panel — set that way it took three
+   lines on a phone to say what now takes one or two. */
+.board-title {
+  margin: 0 0 3px; font-family: var(--sans); font-size: 0.72rem;
+  font-weight: 400; line-height: 1.35; color: var(--ink-soft);
+}
+/* The game's name, which is what tells the two boards apart once they have
+   wrapped to stacked and there is no longer a rule between them. Written as
+   the chart above writes it, and in the same colour the chart draws it. */
+.board-game {
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em;
+  color: var(--bd-ink);
+}
+/* The rule, in brackets after the name of the thing: what a score is, for
+   anyone who wants to know, without standing in front of whose it is. */
+.board-rule { white-space: nowrap; font-size: 0.94em; }
 
 .board-rows { list-style: none; margin: 0; padding: 0; }
 .board-row {
-  display: flex; align-items: baseline; gap: 10px;
-  padding: 6px 0; border-bottom: 1px solid var(--line);
+  display: flex; align-items: baseline; gap: 9px;
+  padding: 3px 0; border-bottom: 1px solid var(--line);
 }
 .board-row:last-child { border-bottom: 0; }
-.board-rank { flex: 0 0 1.3em; color: var(--ink-soft); font-size: 0.9rem; }
-/* A name is whatever the player typed, up to sixteen characters of it, so it
+.board-rank { flex: 0 0 1.2em; color: var(--ink-soft); font-size: 0.8rem; }
+/* A name is whatever the player typed, up to thirteen characters of it, so it
    is the one string on this page that can be a single unbroken run of them. */
 .board-who {
   flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere;
-  font-family: var(--serif); font-size: 1.05rem; font-weight: 700;
-  color: var(--ink);
+  font-family: var(--serif); font-size: 0.95rem; font-weight: 700;
+  line-height: 1.35; color: var(--ink);
 }
 .board-row[data-mine="1"] .board-who { color: var(--bd-ink); }
 /* The tie-break, and set like one: quiet, beside the score rather than
    competing with it, and lined up so two of them can be compared at a
    glance. */
 .board-time {
-  flex: 0 0 auto; font-family: var(--sans); font-size: 0.85rem;
+  flex: 0 0 auto; font-family: var(--sans); font-size: 0.76rem;
   color: var(--ink-soft); font-variant-numeric: tabular-nums;
 }
 .board-score {
-  flex: 0 0 auto; font-size: 1.05rem; font-weight: 700; color: var(--bd-ink);
+  flex: 0 0 auto; font-size: 0.95rem; font-weight: 700; color: var(--bd-ink);
   font-variant-numeric: tabular-nums;
 }
 /* The player's own best, in the columns the rows use so the number lands
    under the numbers. Dashed above it: it is a reading of the run in progress
    and not a third place. */
 .board-you {
-  display: flex; align-items: baseline; gap: 10px;
-  margin: 0; padding: 6px 0 0; border-top: 1px dashed var(--line);
+  display: flex; align-items: baseline; gap: 9px;
+  margin: 0; padding: 3px 0 0; border-top: 1px dashed var(--line);
 }
-.board-you .board-who { font-family: var(--sans); font-size: 0.95rem; color: var(--ink-soft); }
+.board-you .board-who { font-family: var(--sans); font-size: 0.86rem; color: var(--ink-soft); }
 .board-you .board-score { color: var(--ink-soft); }
 
 /* Shown once, to a player who has just displaced the second row. */
 .board-join {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px;
-  margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px;
+  margin-top: 7px; padding-top: 7px; border-top: 1px solid var(--line);
 }
 .board-join-label { color: var(--bd-ink); }
 .board-name-input {
-  flex: 1 1 9ch; min-width: 0; max-width: 20ch;
+  flex: 1 1 9ch; min-width: 0; max-width: 18ch;
   border: 1px solid var(--line); border-radius: 999px;
   background: var(--cream); color: var(--ink);
-  padding: 7px 14px; font-family: var(--sans); font-size: 0.95rem;
+  padding: 5px 12px; font-family: var(--sans); font-size: 0.9rem;
 }
 .board-name-input:focus-visible {
   outline: 2px solid var(--bd-ink); outline-offset: 1px;

@@ -36,7 +36,13 @@
    * stylesheet scale it would have been less code and it made the axis labels
    * illegible on a phone: 11px of text in a 600-wide frame squeezed into a
    * 300px column comes out under 6px on the glass. */
-  var H = 200, W_MAX = 640, W_MIN = 280;
+  /* Shorter on a narrow box. The frame is drawn at true pixel size, so on a
+   * phone a fixed 200 is 200 of the roughly 700 the reader has, spent on a
+   * plot that is mostly empty air above a line near the bottom. The margins
+   * below do not shrink with it — they hold text — so the picture loses the
+   * slack rather than the labels losing room. */
+  var H_WIDE = 200, H_NARROW = 168, NARROW = 420;
+  var H = H_WIDE, W_MAX = 640, W_MIN = 280;
   /* The margins are set by the labels the stylesheet draws in them: room on
    * the left for a two-digit negative, and enough below for a row of numbers
    * with the axis name under it. */
@@ -83,6 +89,9 @@
     drawnBox = box;
     var W = Math.max(W_MIN, Math.min(W_MAX, box));
     var X1 = W - PAD_R;
+    // Set before anything is placed: every y below is measured off Y1.
+    H = box < NARROW ? H_NARROW : H_WIDE;
+    Y1 = H - PAD_B;
     svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
     svg.setAttribute('width', W);
     svg.setAttribute('height', H);

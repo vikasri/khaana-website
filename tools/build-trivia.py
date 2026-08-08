@@ -55,25 +55,34 @@ def chrome():
 NAME_MAX = 13          # and MAX_NAME in assets/js/leaderboard.js, which enforces it
 
 
-def board_half(game, span):
-    """One game's high-score board: two rows and the prompt that fills them."""
-    return """      <div class="board" id="board-%s" data-game="%s" hidden
-           aria-labelledby="board-%s-title">
-        <h2 class="board-title" id="board-%s-title">Best scores for %d
-          consecutive games</h2>
+def board_half(game, name, span):
+    """One game's high-score board: two rows and the prompt that fills them.
+
+    The game's name leads the title. Side by side the two boards are told
+    apart by their colour, which is no use to anyone who cannot see it and no
+    use at all once they wrap to stacked on a phone — at that point "best
+    scores for 10" and "best scores for 5" are the only difference, and a
+    reader has to know the rules to work out which is which. The name is
+    written the same way the chart above writes it: Trivia and Pairing.
+    """
+    return """      <div class="board" id="board-{g}" data-game="{g}" hidden
+           aria-labelledby="board-{g}-title">
+        <h2 class="board-title" id="board-{g}-title"><span
+          class="board-game">{name}</span> best scores <span
+          class="board-rule">({span} consecutive games)</span></h2>
         <ol class="board-rows"></ol>
         <p class="board-you" role="status" aria-live="polite" hidden></p>
         <form class="board-join" hidden>
-          <label class="board-join-label" for="board-%s-name">On the board</label>
-          <input class="board-name-input" id="board-%s-name" type="text"
-                 maxlength="%d" autocomplete="off" spellcheck="false"
+          <label class="board-join-label" for="board-{g}-name">On the board</label>
+          <input class="board-name-input" id="board-{g}-name" type="text"
+                 maxlength="{cap}" autocomplete="off" spellcheck="false"
                  placeholder="Your name" />
           <button type="submit" class="board-add">Add</button>
           <button type="button" class="board-skip">Not now</button>
           <p class="board-error" role="alert" hidden></p>
         </form>
       </div>
-""" % (game, game, game, game, span, game, game, NAME_MAX)
+""".format(g=game, name=esc(name), span=span, cap=NAME_MAX)
 
 
 def boards_html():
@@ -92,7 +101,7 @@ def boards_html():
     """
     return """    <section class="fun-boards" id="fun-boards" hidden>
 %s%s    </section>
-""" % (board_half("trivia", 10), board_half("pair", 5))
+""" % (board_half("trivia", "Trivia", 10), board_half("pair", "Pairing", 5))
 
 
 def question_html(n, q):
@@ -212,8 +221,7 @@ def main():
           </p>
         </div>
       </div>
-      <p class="pair-how">Drag a cuisine onto the box beside a dish, or tap the
-        cuisine and then the box.</p>
+      <p class="pair-how">Drag a cuisine to a box, or tap one then the other.</p>
       <div class="pair-board">
         <ol class="pair-rows" id="pair-rows"></ol>
         <div class="pair-bank" id="pair-bank" role="group"
