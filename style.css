@@ -2937,6 +2937,26 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 }
 .pair-again:hover { background: var(--nav-active); color: #fff; }
 
+/* No waiting to see whether a tap was the first half of a double-tap.
+ *
+ * Safari holds a tap for about a third of a second before letting it become a
+ * click, in case a second one follows and means "zoom". `width=device-width`
+ * is enough for Chrome to drop that wait and is not enough for Safari, which
+ * wants the element to say it will never be zoomed into. So the games' own
+ * controls say it: every one of them is a discrete press where a double-tap
+ * means nothing.
+ *
+ * It is why "Play next" felt broken on a phone. The button appears the moment
+ * the board is solved, which reads as ready — and then ignored the first press
+ * for a third of a second. Long enough to feel like a dead button, short
+ * enough that pressing again seemed to fix it.
+ *
+ * `manipulation`, not `none`: this keeps scrolling and panning over the
+ * controls, and only gives up double-tap zoom. The chips above are the one
+ * exception and stay `none`, because a drag has to own the whole gesture. */
+.pair-again, .pair-slot,
+.trivia-next, .tq-opt, .trivia-sound { touch-action: manipulation; }
+
 /* ---------- The high-score boards ---------- */
 /* The heading sits above the box and outside it, with a small gap so the two
    read as a title and its contents rather than one stacked block. Larger than
