@@ -47,13 +47,14 @@
   'use strict';
 
   var API = 'https://khaana-board.vikasri.workers.dev';
-  /* Three, and it must match TOP_N in the Worker. The last row on screen is
+  /* Five, and it must match TOP_N in the Worker. The last row on screen is
    * the bar — it is what `beats` compares a finished run against — so a page
    * expecting more rows than the server sends would read a full board as one
-   * with a free slot and prompt people who had not earned it. Every run is
-   * still stored server-side; this is the display and the threshold, not a
-   * limit on what is kept. */
-  var KEEP = 3;
+   * with a free slot and prompt people who had not earned it. That is why the
+   * Worker goes out first and the site second. Every run is still stored
+   * server-side; this is the display and the threshold, not a limit on what
+   * is kept. */
+  var KEEP = 5;
   var MAX_NAME = 13;               // and the maxlength in tools/build-trivia.py
   /* How long a part-finished run survives with nothing happening to it.
    *
@@ -361,13 +362,13 @@
     paintPanel();
     paintYou(b);
     if (!b.rowsEl) return;
-    /* All three places, always — the taken ones and the free ones.
+    /* Every place, always — the taken ones and the free ones.
      *
      * The board used to be as long as it had entries, so a game with one score
-     * on it looked like a board with one place. An empty second and third row
-     * say what is actually true: there are three places and two of them are
-     * going spare, which is an invitation rather than a wall. It also stops the
-     * panel changing height as the season fills up. */
+     * on it looked like a board with one place. The empty rows say what is
+     * actually true: there are five places and some of them are going spare,
+     * which is an invitation rather than a wall. It also stops the panel
+     * changing height as the season fills up. */
     b.rowsEl.textContent = '';
     for (var i = 0; i < KEEP; i++) {
       var li = document.createElement('li');
