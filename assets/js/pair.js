@@ -402,7 +402,18 @@
     bankEl.classList.add('is-spent');
     if (againBtn) {
       againBtn.hidden = false;
-      againBtn.focus();
+      /* Focused so a keyboard lands on the one thing there is to do next, but
+       * without the scroll that normally comes with it.
+       *
+       * Three things happen in this one frame: the bank above the button stops
+       * being displayed, so everything under it jumps up; the button appears;
+       * and focusing it asks the browser to bring it into view. On a phone that
+       * last one is a scroll, and iOS spends the next tap stopping the scroll
+       * rather than pressing what is under it — which is the button taking two
+       * presses. preventScroll keeps the focus and drops the scroll; a browser
+       * too old to know the option ignores it and behaves as before. */
+      try { againBtn.focus({ preventScroll: true }); }
+      catch (e) { againBtn.focus(); }
     }
   }
 

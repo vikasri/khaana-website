@@ -338,7 +338,11 @@
       nextBtn.disabled = true;
       setTimeout(function () {
         nextBtn.disabled = false;
-        nextBtn.focus();
+        // Focused for the keyboard, but without the scroll that comes with it:
+        // on a phone that scroll costs the reader their next tap, which iOS
+        // spends stopping it. Same reason as the matching game's Play next.
+        try { nextBtn.focus({ preventScroll: true }); }
+        catch (e) { nextBtn.focus(); }
       }, NEXT_MS);
     }
   });
