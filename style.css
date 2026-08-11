@@ -2363,13 +2363,37 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
 /* The third way in, under the ingredient button and the search box. Both of
    those need the visitor to already know what they want; this one does not,
    so it sits below both rather than competing with either. */
+/* The line that tells an undecided visitor where to go, and beside it the way
+   into the games. Centred, the sentence had the row to itself; a second thing
+   on the same row wants both of them anchored, so the words take the left and
+   the button the right. They stack, in that order, once the row is too narrow
+   to hold the pair. */
 .find-pick {
   margin: 26px 0 0;
-  text-align: center;
-  font-size: 0.98rem;
-  color: var(--ink-soft);
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between; gap: 10px 18px;
 }
-.find-pick a { font-weight: 700; }
+.find-pick-line {
+  margin: 0; font-size: 0.98rem; color: var(--ink-soft);
+}
+.find-pick-line a { font-weight: 700; }
+/* Small and outlined, not filled: it is an aside on a page about recipes, and
+   a solid button here would out-shout the two routes above it. */
+.find-pick-games {
+  flex: 0 0 auto;
+  border: 1px solid var(--nav-active); border-radius: 999px;
+  padding: 6px 15px; touch-action: manipulation;
+  font-family: var(--sans); font-size: 0.76rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--nav-active); text-decoration: none;
+  white-space: nowrap;
+}
+@media (hover: hover) {
+  .find-pick-games:hover { background: var(--nav-active); color: #fff; }
+}
+@media (max-width: 560px) {
+  .find-pick-games { white-space: normal; }
+}
 
 /* ---------- Fun facts ---------- */
 /* Five questions a day out of the bank. All of them are in the markup so the
