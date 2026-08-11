@@ -17,8 +17,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG_DIR = os.path.join(ROOT, "assets", "images")
 CREDITS_JSON = os.path.join(IMG_DIR, "credits.json")
 OUT = os.path.join(ROOT, "CREDITS.md")
-# Crops of images credited elsewhere in this file. See main().
-DERIVED = "pair"
+# Directories of crops of images credited elsewhere in this file. See main().
+DERIVED = ("pair", "tiles", "cards")
 
 HEADER = """# Image Credits
 
@@ -32,10 +32,10 @@ licence terms rather than a courtesy. It is generated from
 `assets/images/credits.json` by `tools/build-credits.py`; edit that file, not
 this one.
 
-The small square pictures in the matching game on the Fun page are not listed
-separately. Each is a centre crop of the recipe photograph of the same name,
-cut by `tools/build-pair-thumbs.py`, and is covered by that photograph's entry
-below.
+The small square pictures — in the matching game on the Fun page, and beside
+each recipe in the cuisine and collection lists — are not listed separately.
+Each is a centre crop of the recipe photograph of the same name, and is covered
+by that photograph's entry below.
 
 """
 
@@ -160,12 +160,12 @@ def main():
             if f.lower().endswith((".jpg", ".jpeg", ".png", ".svg")):
                 rel = os.path.relpath(os.path.join(base, f), IMG_DIR)
                 rel = rel.replace(os.sep, "/")
-                # assets/images/pair/ holds nothing of its own: every file
-                # there is a square crop of the recipe photograph of the same
-                # name, cut by build-pair-thumbs.py and already credited under
-                # recipes/. Listing all 240 again would treble this page with
-                # duplicate rows and make the real list harder to check.
-                if not rel.startswith(DERIVED + "/"):
+                # pair/, tiles/ and cards/ hold nothing of their own: every
+                # file in them is a smaller crop of the photograph of the same
+                # name, cut by the three build-*-thumbs.py tools and already
+                # credited under recipes/ or at the top level. Listing those
+                # 900 again would bury the real list in duplicate rows.
+                if not rel.startswith(tuple(d + "/" for d in DERIVED)):
                     on_disk.add(rel)
 
     missing = sorted(f for f in on_disk if f not in by_file)

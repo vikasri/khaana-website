@@ -69,8 +69,21 @@ def esc(s):
     return html.escape(str(s if s is not None else ""), quote=True)
 
 
+def thumb_src(r):
+    """The 148px square cut by tools/build-tile-thumbs.py, or the photograph.
+
+    A tile shows the picture 74 pixels wide. The full-size file is made for a
+    recipe page and averages 150 KB, which is about twenty-five times what a
+    square this size can show. Falls back to the original where no thumbnail
+    has been cut yet, so a photograph added between builds still appears.
+    """
+    src = r["image"]["src"]
+    cut = os.path.join("assets", "images", "tiles", r["id"] + ".jpg")
+    return cut.replace(os.sep, "/") if os.path.exists(os.path.join(ROOT, cut)) else src
+
+
 def tile(r, hidden):
-    thumb = ('<img src="%s" alt="%s" loading="lazy" />' % (esc(r["image"]["src"]), esc(r["image"]["alt"]))
+    thumb = ('<img src="%s" alt="%s" loading="lazy" />' % (esc(thumb_src(r)), esc(r["image"]["alt"]))
              if r.get("image") else
              '<span class="tile-noimg" aria-hidden="true">%s</span>' % esc(r["name"][:1]))
     mins = (r.get("prepMinutes") or 0) + (r.get("cookMinutes") or 0)

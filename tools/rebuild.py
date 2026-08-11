@@ -33,6 +33,10 @@ STEPS = [
     ("sync-shared-text.py",      "shared copy on the root pages"),
 
     ("build-recipe-pages.py",    "651 recipe pages"),
+    # Before the two generators below, which point their tiles at whatever
+    # thumbnails exist and fall back to the full photograph where none does.
+    ("build-tile-thumbs.py",     "74px tile thumbnails"),
+    ("build-card-thumbs.py",     "the home page's 21 cuisine-card pictures"),
     ("build-cuisine-recipes.py", "recipe lists on the 21 cuisine pages"),
     # After sync-chrome, because it copies the header out of cook.html and so
     # needs the Collections menu already there; before the second sync-chrome,

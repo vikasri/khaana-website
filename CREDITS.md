@@ -10,10 +10,10 @@ licence terms rather than a courtesy. It is generated from
 `assets/images/credits.json` by `tools/build-credits.py`; edit that file, not
 this one.
 
-The small square pictures in the matching game on the Fun page are not listed
-separately. Each is a centre crop of the recipe photograph of the same name,
-cut by `tools/build-pair-thumbs.py`, and is covered by that photograph's entry
-below.
+The small square pictures — in the matching game on the Fun page, and beside
+each recipe in the cuisine and collection lists — are not listed separately.
+Each is a centre crop of the recipe photograph of the same name, and is covered
+by that photograph's entry below.
 
 ## Cuisine pages (hero and gallery)
 

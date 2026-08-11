@@ -167,9 +167,22 @@ def chrome():
     return nav, foot
 
 
+def thumb_src(r):
+    """The 148px square cut by tools/build-tile-thumbs.py, or the photograph.
+
+    The gluten-free page lists 524 tiles. At full size that is about 80 MB of
+    photograph to fill 74-pixel squares; at thumbnail size it is nearer 3.
+    Falls back to the original where no thumbnail has been cut yet, so a
+    photograph added between builds still appears.
+    """
+    src = r["image"]["src"]
+    cut = os.path.join("assets", "images", "tiles", r["id"] + ".jpg")
+    return cut.replace(os.sep, "/") if os.path.exists(os.path.join(ROOT, cut)) else src
+
+
 def tile(r, hidden):
     thumb = ('<img src="%s" alt="%s" loading="lazy" />'
-             % (esc(r["image"]["src"]), esc(r["image"]["alt"])) if r.get("image") else
+             % (esc(thumb_src(r)), esc(r["image"]["alt"])) if r.get("image") else
              '<span class="tile-noimg" aria-hidden="true">%s</span>' % esc(r["name"][:1]))
     mins = (r.get("prepMinutes") or 0) + (r.get("cookMinutes") or 0)
     wait = (" + %s" % esc(r["inactiveLabel"]) if r.get("inactiveMinutes") else "")
