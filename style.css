@@ -3016,11 +3016,13 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 /* The number in front of each game's name. Three panels down one page read as
    three separate things until they are counted; numbered, they read as a set
    and as an order to play them in.
-   Set as a label rather than as part of the title: same colour, so the line
-   holds together, but smaller and spaced out so the eye takes "Game 2" and
-   "Food Trivia" as two pieces of information rather than one long heading. */
+   Set at the same size as the name it introduces, so the two read as one line
+   rather than as a caption with a title after it. Still upper case, which is
+   what keeps them distinguishable now that size no longer does — and the
+   letter-spacing comes back to 0.04em, since the 0.1em that opened up a 12px
+   label is far too much air at twenty. */
 .game-n {
-  font-size: 0.62em; font-weight: 700; letter-spacing: 0.1em;
+  font-size: 1em; font-weight: 700; letter-spacing: 0.04em;
   text-transform: uppercase; white-space: nowrap;
 }
 
