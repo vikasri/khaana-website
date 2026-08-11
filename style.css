@@ -2481,7 +2481,9 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   font-family: var(--sans); font-size: 0.96rem; line-height: 1.4;
   transition: border-color 0.15s ease, background 0.15s ease;
 }
-.tq-opt:hover:not(:disabled) { border-color: var(--nav-active); background: #f1e5d3; }
+@media (hover: hover) {
+  .tq-opt:hover:not(:disabled) { border-color: var(--nav-active); background: #f1e5d3; }
+}
 .tq-opt:disabled { cursor: default; }
 .tq-letter { font-weight: 800; color: var(--ink-soft); flex: 0 0 auto; }
 
@@ -2532,12 +2534,16 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   font-family: var(--sans); font-size: 0.8rem; font-weight: 700;
   letter-spacing: 0.06em; text-transform: uppercase;
 }
-.trivia-next:hover { background: var(--nav-active); color: #fff; }
+@media (hover: hover) {
+  .trivia-next:hover { background: var(--nav-active); color: #fff; }
+}
 /* Dead for its first second, so it has to look it. Without this the button
    arrives looking ready, ignores the click, and reads as broken rather than
    as waiting. Hover is suppressed for the same reason. */
 .trivia-next:disabled { opacity: 0.45; cursor: default; }
-.trivia-next:disabled:hover { background: var(--paper); color: var(--nav-active); }
+@media (hover: hover) {
+  .trivia-next:disabled:hover { background: var(--paper); color: var(--nav-active); }
+}
 
 /* Without JavaScript every question is visible with its answer already shown,
    which is a readable list rather than a broken quiz. */
@@ -2565,7 +2571,9 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   font-family: var(--sans); font-size: 0.7rem; font-weight: 700;
   letter-spacing: 0.08em; text-transform: uppercase;
 }
-.trivia-sound:hover { border-color: var(--nav-active); color: var(--nav-active); }
+@media (hover: hover) {
+  .trivia-sound:hover { border-color: var(--nav-active); color: var(--nav-active); }
+}
 .trivia-sound[aria-pressed="false"] { color: var(--ink-soft); opacity: 0.75; }
 
 /* The line shown after a wrong answer, while the options are briefly locked. */
@@ -2883,12 +2891,20 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   touch-action: none;
   transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
-.pair-chip:hover:not(:disabled):not(.is-picked) { background: var(--cream); }
+@media (hover: hover) {
+  .pair-chip:hover:not(:disabled):not(.is-picked) { background: var(--cream); }
+}
 /* A picked chip is white on orange, and stays that way under the cursor that
    picked it. Left to the hover rule it went pale with white text on it. */
-.pair-chip.is-picked, .pair-chip.is-picked:hover {
+.pair-chip.is-picked {
   background: var(--nav-active); color: #fff;
   box-shadow: 0 4px 12px rgba(201, 74, 9, 0.28);
+}
+@media (hover: hover) {
+  .pair-chip.is-picked:hover {
+    background: var(--nav-active); color: #fff;
+    box-shadow: 0 4px 12px rgba(201, 74, 9, 0.28);
+  }
 }
 .pair-chip.is-placed { visibility: hidden; }
 .pair-chip.is-dragging { opacity: 0.35; cursor: grabbing; }
@@ -2935,7 +2951,13 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   font-family: var(--sans); font-size: 0.8rem; font-weight: 700;
   letter-spacing: 0.06em; text-transform: uppercase;
 }
-.pair-again:hover { background: var(--nav-active); color: #fff; }
+/* Behind a hover query, because a phone has no cursor and iOS hands the state
+   out on the first tap instead: the button sat there unfilled, took one press
+   to turn orange and a second to actually go. Guarded, a touch never gets the
+   state at all and the first press is the one that counts. */
+@media (hover: hover) {
+  .pair-again:hover { background: var(--nav-active); color: #fff; }
+}
 
 /* No waiting to see whether a tap was the first half of a double-tap.
  *
@@ -3190,13 +3212,17 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 .board-add {
   border: 1px solid var(--bd-ink); background: var(--paper); color: var(--bd-ink);
 }
-.board-add:hover { background: var(--bd-ink); color: #fff; }
+@media (hover: hover) {
+  .board-add:hover { background: var(--bd-ink); color: #fff; }
+}
 /* Quieter than the button beside it: declining is a way out, not a choice
    being offered on equal terms with joining. */
 .board-skip {
   border: 1px solid transparent; background: none; color: var(--ink-soft);
 }
-.board-skip:hover { color: var(--ink); text-decoration: underline; }
+@media (hover: hover) {
+  .board-skip:hover { color: var(--ink); text-decoration: underline; }
+}
 /* Its own line, so a refused name does not shove the buttons around. */
 .board-error {
   flex: 1 1 100%; margin: 0; color: #b3261e;
