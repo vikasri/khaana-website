@@ -144,9 +144,14 @@ def boards_html():
 
     They were also a panel each, one under its own game, which read well and
     cost two full-width blocks of a page that already stacks a quiz, a chart
-    and a matching game down it. A board of three rows is a narrow thing: side
+    and a matching game down it. A board of five rows is a narrow thing: side
     by side they take one block instead of two, and both are readable without
     scrolling between them.
+
+    Matching first, then the trivia, which is the order the games themselves
+    run down the page. A board reads as belonging to whichever game it sits
+    nearest, so the two orders have to agree or the panel quietly says the
+    wrong thing about whose score is whose.
 
     The heading sits outside the box rather than in it, so it reads as a title
     for the thing rather than a fourth label inside a panel that already has
@@ -163,7 +168,7 @@ def boards_html():
       <section class="fun-boards" id="fun-boards">
 %s%s      </section>
     </div>
-%s""" % (board_half("trivia", "Trivia", 10), board_half("pair", "Matching", 5),
+%s""" % (board_half("pair", "Matching", 5), board_half("trivia", "Trivia", 10),
          prompt_html())
 
 
@@ -231,6 +236,41 @@ def main():
     <p class="trivia-tagline">Put Your or Friend&rsquo;s and Family&rsquo;s Food
       Knowledge to the Test</p>
 
+    <section class="pair" id="pair-game" hidden aria-labelledby="pair-title">
+      <div class="pair-head">
+        <h2 id="pair-title">Match Dishes to Cuisine Category</h2>
+        <div class="pair-scoring">
+          <p class="pair-rule">Correct +2 points, wrong -1 point</p>
+          <p class="pair-meter">
+            <span class="pair-attempt" id="pair-attempt">Attempt 1</span>
+            <span class="pair-score" id="pair-score" data-neg="0">Score: 0 / 8</span>
+          </p>
+        </div>
+      </div>
+      <p class="pair-how">Drag a cuisine to a box, or tap one then the other.</p>
+      <div class="pair-board">
+        <ol class="pair-rows" id="pair-rows"></ol>
+        <div class="pair-bank" id="pair-bank" role="group"
+             aria-label="Cuisines to place"></div>
+      </div>
+      <div class="pair-foot">
+        <p class="pair-verdict" id="pair-verdict" role="status"
+           aria-live="polite" hidden></p>
+        <button type="button" class="pair-again" id="pair-again" hidden>Play
+          next</button>
+      </div>
+    </section>
+
+    <section class="score-chart" id="score-chart" hidden
+             aria-labelledby="score-chart-title">
+      <h2 class="score-chart-title" id="score-chart-title">Trivia</h2>
+      <div class="score-chart-plot">
+        <svg id="score-chart-svg" viewBox="0 0 600 200" width="600" height="200"
+             role="img" aria-label="Score by trial"></svg>
+      </div>
+      <p class="sr-only" id="score-chart-read" role="status" aria-live="polite"></p>
+    </section>
+
     <section class="trivia-panel" aria-labelledby="trivia-title">
       <div class="trivia-head">
         <div class="section-head">
@@ -260,41 +300,6 @@ def main():
 
       <noscript><p class="trivia-intro">Every question and answer is listed
         above.</p></noscript>
-    </section>
-
-    <section class="score-chart" id="score-chart" hidden
-             aria-labelledby="score-chart-title">
-      <h2 class="score-chart-title" id="score-chart-title">Trivia</h2>
-      <div class="score-chart-plot">
-        <svg id="score-chart-svg" viewBox="0 0 600 200" width="600" height="200"
-             role="img" aria-label="Score by trial"></svg>
-      </div>
-      <p class="sr-only" id="score-chart-read" role="status" aria-live="polite"></p>
-    </section>
-
-    <section class="pair" id="pair-game" hidden aria-labelledby="pair-title">
-      <div class="pair-head">
-        <h2 id="pair-title">Match Dishes to Cuisine Category</h2>
-        <div class="pair-scoring">
-          <p class="pair-rule">Correct +2 points, wrong -1 point</p>
-          <p class="pair-meter">
-            <span class="pair-attempt" id="pair-attempt">Attempt 1</span>
-            <span class="pair-score" id="pair-score" data-neg="0">Score: 0 / 8</span>
-          </p>
-        </div>
-      </div>
-      <p class="pair-how">Drag a cuisine to a box, or tap one then the other.</p>
-      <div class="pair-board">
-        <ol class="pair-rows" id="pair-rows"></ol>
-        <div class="pair-bank" id="pair-bank" role="group"
-             aria-label="Cuisines to place"></div>
-      </div>
-      <div class="pair-foot">
-        <p class="pair-verdict" id="pair-verdict" role="status"
-           aria-live="polite" hidden></p>
-        <button type="button" class="pair-again" id="pair-again" hidden>Play
-          next</button>
-      </div>
     </section>
 
     <section class="region" id="region-game" hidden

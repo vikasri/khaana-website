@@ -2406,12 +2406,10 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
    keeps it off the nav's bottom rule. */
 section.trivia-section { padding-top: 6px; }
 @media (max-width: 560px) { section.trivia-section { padding-top: 8px; } }
-/* Trivia, then the chart, then the matching game — the order they are written
-   in. The page used to lift the game above the trivia with `order`, which
-   meant the h1 was first in the markup and second on the screen; with the
-   trivia at the top the markup and the screen agree and no reordering is
-   needed. The gap lives here rather than as a margin on each panel, so the
-   three blocks space themselves however many of them are on. */
+/* The matching game, then the chart, then the trivia — the order they are
+   written in. The page used to reorder itself with flex `order`, which meant
+   the markup and the screen disagreed and a keyboard walked the page in a
+   sequence nobody could see. Whatever the order is, it is the markup's. */
 /* 16 rather than 22. Every panel here is bordered and on paper against a
    cream page, so they are already told apart by their edges — the gap only has
    to keep them from touching, and five blocks down a phone screen were paying

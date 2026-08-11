@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://khaana.com/assets/images/home-hero.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 
-<link rel="stylesheet" href="style.css?v=a4b8104c" />
+<link rel="stylesheet" href="style.css?v=388a01fa" />
 </head>
 <body>
 
@@ -79,19 +79,19 @@
     <div class="fun-boards-wrap" id="fun-boards-wrap" hidden>
       <h2 class="fun-boards-title">Leaderboard</h2>
       <section class="fun-boards" id="fun-boards">
-      <div class="board" id="board-trivia" data-game="trivia" hidden
-           aria-labelledby="board-trivia-title">
-        <h2 class="board-title" id="board-trivia-title"><span
-          class="board-game">Trivia</span> best scores <span
-          class="board-rule">(10 consecutive games)</span></h2>
-        <ol class="board-rows"></ol>
-        <p class="board-you" role="status" aria-live="polite" hidden></p>
-      </div>
       <div class="board" id="board-pair" data-game="pair" hidden
            aria-labelledby="board-pair-title">
         <h2 class="board-title" id="board-pair-title"><span
           class="board-game">Matching</span> best scores <span
           class="board-rule">(5 consecutive games)</span></h2>
+        <ol class="board-rows"></ol>
+        <p class="board-you" role="status" aria-live="polite" hidden></p>
+      </div>
+      <div class="board" id="board-trivia" data-game="trivia" hidden
+           aria-labelledby="board-trivia-title">
+        <h2 class="board-title" id="board-trivia-title"><span
+          class="board-game">Trivia</span> best scores <span
+          class="board-rule">(10 consecutive games)</span></h2>
         <ol class="board-rows"></ol>
         <p class="board-you" role="status" aria-live="polite" hidden></p>
       </div>
@@ -133,6 +133,41 @@
 
     <p class="trivia-tagline">Put Your or Friend&rsquo;s and Family&rsquo;s Food
       Knowledge to the Test</p>
+
+    <section class="pair" id="pair-game" hidden aria-labelledby="pair-title">
+      <div class="pair-head">
+        <h2 id="pair-title">Match Dishes to Cuisine Category</h2>
+        <div class="pair-scoring">
+          <p class="pair-rule">Correct +2 points, wrong -1 point</p>
+          <p class="pair-meter">
+            <span class="pair-attempt" id="pair-attempt">Attempt 1</span>
+            <span class="pair-score" id="pair-score" data-neg="0">Score: 0 / 8</span>
+          </p>
+        </div>
+      </div>
+      <p class="pair-how">Drag a cuisine to a box, or tap one then the other.</p>
+      <div class="pair-board">
+        <ol class="pair-rows" id="pair-rows"></ol>
+        <div class="pair-bank" id="pair-bank" role="group"
+             aria-label="Cuisines to place"></div>
+      </div>
+      <div class="pair-foot">
+        <p class="pair-verdict" id="pair-verdict" role="status"
+           aria-live="polite" hidden></p>
+        <button type="button" class="pair-again" id="pair-again" hidden>Play
+          next</button>
+      </div>
+    </section>
+
+    <section class="score-chart" id="score-chart" hidden
+             aria-labelledby="score-chart-title">
+      <h2 class="score-chart-title" id="score-chart-title">Trivia</h2>
+      <div class="score-chart-plot">
+        <svg id="score-chart-svg" viewBox="0 0 600 200" width="600" height="200"
+             role="img" aria-label="Score by trial"></svg>
+      </div>
+      <p class="sr-only" id="score-chart-read" role="status" aria-live="polite"></p>
+    </section>
 
     <section class="trivia-panel" aria-labelledby="trivia-title">
       <div class="trivia-head">
@@ -2362,41 +2397,6 @@
 
       <noscript><p class="trivia-intro">Every question and answer is listed
         above.</p></noscript>
-    </section>
-
-    <section class="score-chart" id="score-chart" hidden
-             aria-labelledby="score-chart-title">
-      <h2 class="score-chart-title" id="score-chart-title">Trivia</h2>
-      <div class="score-chart-plot">
-        <svg id="score-chart-svg" viewBox="0 0 600 200" width="600" height="200"
-             role="img" aria-label="Score by trial"></svg>
-      </div>
-      <p class="sr-only" id="score-chart-read" role="status" aria-live="polite"></p>
-    </section>
-
-    <section class="pair" id="pair-game" hidden aria-labelledby="pair-title">
-      <div class="pair-head">
-        <h2 id="pair-title">Match Dishes to Cuisine Category</h2>
-        <div class="pair-scoring">
-          <p class="pair-rule">Correct +2 points, wrong -1 point</p>
-          <p class="pair-meter">
-            <span class="pair-attempt" id="pair-attempt">Attempt 1</span>
-            <span class="pair-score" id="pair-score" data-neg="0">Score: 0 / 8</span>
-          </p>
-        </div>
-      </div>
-      <p class="pair-how">Drag a cuisine to a box, or tap one then the other.</p>
-      <div class="pair-board">
-        <ol class="pair-rows" id="pair-rows"></ol>
-        <div class="pair-bank" id="pair-bank" role="group"
-             aria-label="Cuisines to place"></div>
-      </div>
-      <div class="pair-foot">
-        <p class="pair-verdict" id="pair-verdict" role="status"
-           aria-live="polite" hidden></p>
-        <button type="button" class="pair-again" id="pair-again" hidden>Play
-          next</button>
-      </div>
     </section>
 
     <section class="region" id="region-game" hidden
