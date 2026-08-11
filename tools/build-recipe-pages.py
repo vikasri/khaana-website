@@ -374,11 +374,41 @@ def render(r, nav, foot):
     # masala and would tell nobody anything.
     wait = (" plus %s %s," % (human_duration(inactive), r.get("inactiveLabel", "resting"))
             if inactive else "")
-    desc = "%s. %s %s %s recipe: %d minutes active,%s serves %s, with measured " \
-           "ingredients, substitutions and storage notes." % (
-               r["name"], (r.get("subtitle") or "").capitalize().rstrip(".") + ".",
-               article, region, active, wait, r.get("servings", 4))
-    desc = re.sub(r"\s+", " ", desc)[:300]
+    # Google shows roughly 160 characters of a description and drops the rest.
+    # These used to run to a median of 213, and the two things that pushed them
+    # over were the two things worth least: the dish name, which the <title>
+    # beside it already says, and a closing "with measured ingredients,
+    # substitutions and storage notes" that was identical on all 641 pages and
+    # fell off the end of every one of them. What is left is the sentence that
+    # tells the dishes apart, then the facts a cook decides on.
+    facts = "%s %s recipe: %d minutes active,%s serves %s." % (
+        article, region, active, wait, r.get("servings", 4))
+    sub = (r.get("subtitle") or "").strip().rstrip(".")
+    if sub:
+        sub = sub[0].upper() + sub[1:]
+    # A subtitle that will not fit is cut back to a whole clause, never to a
+    # word: trimming "without onion or garlic" to "without onion or" reads as
+    # a bug. When there is no comma to cut at, the sentence stays whole and the
+    # description runs a little long -- five of them do, by 13 characters at
+    # worst. A tail Google truncates costs nothing; a broken phrase it shows
+    # costs a click.
+    budget = 160 - len(facts) - 2
+    if len(sub) > budget:
+        head = sub[:budget]
+        if "," in head:
+            clause = head[:head.rfind(",")].rstrip(" ,;:-—")
+            if len(clause) >= 40:
+                sub = clause
+    desc = re.sub(r"\s+", " ", "%s. %s" % (sub, facts) if sub else facts)
+
+    # "Rogan Josh recipe" only finds the people who already know the name.
+    # The region is the other half of how a dish gets searched for, it is the
+    # word the rest of the page is organised around, and og:title has carried
+    # it since those tags went in -- the <title> was the odd one out. Dishes
+    # whose name already contains the region ("Andhra Kodi Kura") would read
+    # "Andhra Kodi Kura, Andhra recipe", so they keep the shorter form.
+    title = ("%s recipe" % r["name"] if region.lower() in r["name"].lower()
+             else "%s, %s recipe" % (r["name"], region))
 
     ing = "\n".join(
         '        <li><span class="ing-qty">%s</span> <span class="ing-name">%s</span>%s%s</li>'
@@ -459,18 +489,18 @@ def render(r, nav, foot):
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>{esc(r['name'])} recipe | Khaana</title>
+<title>{esc(title)} | Khaana</title>
 <meta name="description" content="{esc(desc)}" />
 <link rel="canonical" href="{url}" />
 
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Khaana" />
-<meta property="og:title" content="{esc(r['name'])}, {esc(r['region'])} recipe" />
+<meta property="og:title" content="{esc(title)}" />
 <meta property="og:description" content="{esc(desc)}" />
 <meta property="og:url" content="{url}" />
 <meta property="og:image" content="{img_abs}" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="{esc(r['name'])}, {esc(r['region'])} recipe" />
+<meta name="twitter:title" content="{esc(title)}" />
 <meta name="twitter:description" content="{esc(desc)}" />
 <meta name="twitter:image" content="{img_abs}" />
 

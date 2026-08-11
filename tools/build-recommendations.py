@@ -162,9 +162,12 @@ def main():
     # realistic the portion is. The title now says what the selection actually
     # did, and the sentence under it gives the rule so a reader can check it.
     title = "Seven High-Protein Indian Recipes Worth Cooking"
+    # Under 160 characters, which is about where Google stops showing one.
+    # The clause about standing behind the figures was the part being cut, and
+    # it is the page's own argument -- so it moves into the page, where it is
+    # read, instead of a search result, where it was not.
     desc = ("Seven Indian recipes from seven regional kitchens, each between "
-            "190 and 340 kcal a serving with protein well above the site median, "
-            "chosen from the dishes whose figures we can stand behind.")
+            "190 and 340 kcal a serving, with protein well above the site median.")
 
     page = """<!DOCTYPE html>
 <html lang="en">

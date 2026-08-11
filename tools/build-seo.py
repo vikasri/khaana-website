@@ -106,7 +106,11 @@ def main():
         block = ['<link rel="canonical" href="%s" />' % canon]
         if path in NOINDEX:
             block.append('<meta name="robots" content="noindex, follow" />')
-        block += [
+        # A redirect stub is four lines and a meta refresh. It has no
+        # description to mirror and no image to preview, so og tags on it would
+        # say nothing; the canonical and the noindex above are the whole job.
+        is_stub = '<link rel="stylesheet"' not in src
+        block += [] if is_stub else [
             '<meta property="og:type" content="website" />',
             '<meta property="og:site_name" content="Khaana" />',
             '<meta property="og:title" content="%s" />' % html.escape(title, quote=True),
@@ -118,10 +122,21 @@ def main():
             '<meta name="twitter:description" content="%s" />' % html.escape(desc, quote=True),
             '<meta name="twitter:image" content="%s" />' % img,
         ]
-        # replace any previous run's block rather than stacking duplicates
-        src = re.sub(r'\n<link rel="canonical".*?(?=\n<link rel="stylesheet")', "", src, flags=re.S)
+        # Replace any previous run's block rather than stacking duplicates.
+        # This used to anchor on the stylesheet link that follows the canonical
+        # -- both to find the old block and to place the new one. The four
+        # redirect stubs have no stylesheet, so on exactly the pages NOINDEX
+        # exists to cover, the replace matched nothing and dropped the whole
+        # block on the floor without a word. south-indian.html, himachali.html,
+        # fun-facts.html and recipe.html were left indexable, competing with the
+        # pages they forward to. Both steps below stand on their own tags now.
+        src = re.sub(r'\n<link rel="canonical"[^>]*/?>', "", src)
         src = re.sub(r'\n<meta (?:property="og:|name="twitter:|name="robots")[^>]*/?>', "", src)
-        src = src.replace('<link rel="stylesheet"', "\n".join(block) + '\n<link rel="stylesheet"', 1)
+        joined = "\n".join(block)
+        if is_stub:
+            src = src.replace("</head>", joined + "\n</head>", 1)
+        else:
+            src = src.replace('<link rel="stylesheet"', joined + '\n<link rel="stylesheet"', 1)
 
         # Site-level markup, home page only, replaced whole rather than stacked.
         marker = '<script type="application/ld+json" data-site="1">'
@@ -135,18 +150,26 @@ def main():
         touched += 1
 
     # ---- sitemap ----
+    # <priority> and <changefreq> are read by nobody: Google ignores both
+    # outright, and a 0.6 next to a 0.8 never once decided what got crawled.
+    # <lastmod> it does read, and that is the one worth having -- but only if
+    # it is true. It cannot be here. version-assets.py stamps a content hash
+    # into every page on every rebuild, so a change to style.css gives all 677
+    # files a new commit date without a word of any of them having changed.
+    # A lastmod that says "everything changed" every time is the case Google
+    # names as the reason it starts ignoring the field. So: loc alone, which
+    # is all a sitemap has to be.
     db = json.load(open(os.path.join(ROOT, "data", "recipes.json"), encoding="utf-8"))
-    urls = [(SITE + "/", "1.0")]
+    urls = [SITE + "/"]
     for full in pages:
         p = os.path.basename(full)
         if p in NOINDEX or p == "index.html":
             continue
-        urls.append(("%s/%s" % (SITE, p), "0.8"))
+        urls.append("%s/%s" % (SITE, p))
     for r in db["recipes"]:
-        urls.append(("%s/recipes/%s.html" % (SITE, r["id"]), "0.6"))
+        urls.append("%s/recipes/%s.html" % (SITE, r["id"]))
 
-    body = "\n".join(
-        '  <url><loc>%s</loc><priority>%s</priority></url>' % (u, pr) for u, pr in urls)
+    body = "\n".join('  <url><loc>%s</loc></url>' % u for u in urls)
     open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s\n</urlset>\n' % body)
