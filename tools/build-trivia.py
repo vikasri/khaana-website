@@ -243,7 +243,7 @@ def main():
         <div class="trivia-head-right">
           <div class="trivia-scoring">
             <p class="trivia-rule">Correct +2 points, wrong -1 point</p>
-            <p class="trivia-score" id="trivia-score" hidden>Score 0 / 2</p>
+            <p class="trivia-score" id="trivia-score" hidden>Score: 0 / 2</p>
           </div>
           <button type="button" class="trivia-sound" id="trivia-sound"
                   aria-pressed="true">Sound on</button>
@@ -274,12 +274,12 @@ def main():
 
     <section class="pair" id="pair-game" hidden aria-labelledby="pair-title">
       <div class="pair-head">
-        <h2 id="pair-title">Match dishes to cuisine category</h2>
+        <h2 id="pair-title">Match Dishes to Cuisine Category</h2>
         <div class="pair-scoring">
           <p class="pair-rule">Correct +2 points, wrong -1 point</p>
           <p class="pair-meter">
             <span class="pair-attempt" id="pair-attempt">Attempt 1</span>
-            <span class="pair-score" id="pair-score" data-neg="0">Score 0 / 8</span>
+            <span class="pair-score" id="pair-score" data-neg="0">Score: 0 / 8</span>
           </p>
         </div>
       </div>
