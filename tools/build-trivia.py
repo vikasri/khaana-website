@@ -310,7 +310,7 @@ def main():
         </div>
       </div>
       <p class="region-how">Drag a cuisine onto its zone, or tap one then the
-        other. Place all five, then mark them.</p>
+        other.</p>
       <div class="region-board">
         <div class="region-map" id="region-map" role="group"
              aria-label="Map of India with the cuisine zones left unnamed"></div>
@@ -320,8 +320,6 @@ def main():
       <div class="region-foot">
         <p class="region-verdict" id="region-verdict" role="status"
            aria-live="polite" hidden></p>
-        <button type="button" class="region-mark" id="region-mark" hidden>Mark
-          these five</button>
       </div>
     </section>
 

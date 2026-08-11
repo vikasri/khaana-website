@@ -3067,6 +3067,11 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   fill: #2e7d4f !important; fill-opacity: 0.34 !important;
   stroke: #2e7d4f !important; cursor: default;
 }
+/* Given, not got. Settled the same way and quiet about it. */
+.region-zone.is-given {
+  fill: #8fa39d !important; fill-opacity: 0.42 !important;
+  stroke: #6d817b !important;
+}
 /* Drawn into the map, so it scales with the shape it names. The paper behind
    the fill keeps it legible over a state border. */
 .region-label {
@@ -3075,6 +3080,10 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   stroke-linejoin: round; pointer-events: none;
 }
 .region-label.is-set { fill: var(--nav-active); }
+/* The two that were shown rather than earned. Neither the orange of a name
+   still in play nor the green of one the reader got right — those two colours
+   have to keep meaning what they mean. */
+.region-label.is-given { fill: var(--ink-soft); }
 .region-label.is-right { fill: #1c5535; }
 .region-label.is-wrong { fill: #8c1d18; }
 
@@ -3112,6 +3121,10 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 /* Down on the map already. Still in the bank, because it can be taken back
    until the five are marked, but set quiet so the eye reads what is left. */
 .region-chip.is-placed { opacity: 0.45; }
+/* Put somewhere wrong at least once. Dashed, where every other chip is a solid
+   outline: it is the same name coming round again and worth knowing before it
+   is placed a second time the same way. */
+.region-chip.is-missed { border-style: dashed; border-width: 2px; }
 .region-chip.is-dragging { opacity: 0.35; cursor: grabbing; }
 .region-chip:disabled { cursor: default; }
 
@@ -3134,18 +3147,6 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 }
 .region-verdict[data-tone="miss"] { color: #8c1d18; }
 .region-verdict[data-tone="win"] { color: #14532d; }
-.region-mark {
-  margin-left: auto; cursor: pointer; flex: 0 0 auto;
-  border: 1px solid var(--nav-active); border-radius: 999px;
-  background: var(--paper); color: var(--nav-active);
-  padding: 7px 18px; touch-action: manipulation;
-  font-family: var(--sans); font-size: 0.8rem; font-weight: 700;
-  letter-spacing: 0.06em; text-transform: uppercase;
-}
-@media (hover: hover) {
-  .region-mark:hover { background: var(--nav-active); color: #fff; }
-}
-
 /* ---------- The high-score boards ---------- */
 /* The heading sits above the box and outside it, with a small gap so the two
    read as a title and its contents rather than one stacked block. Larger than

@@ -17,7 +17,8 @@
  *
  * How a round works
  * -----------------
- * Five names at a time. Place all five and mark them: the ones that landed
+ * Two zones are named for you at the start and the other fifteen are played,
+ * five names at a time. Place all five and mark them: the ones that landed
  * right stay where they are and are done with, the ones that did not come back
  * to the bank, and the bank is topped up from what is left until it is five
  * again. So the five are never five fresh names — they are whatever is still
@@ -34,6 +35,12 @@
 
   var MAP = 'assets/images/india-cuisine-zones.svg';
   var HAND = 5;                    // names in the bank at once
+  /* Two zones start named, and are not part of the game. Seventeen unlabelled
+   * shapes and a list of names is a puzzle with no way in — nothing on the map
+   * says how big a zone is meant to be against the state under it, or that a
+   * zone is a region rather than a state. These two are the worked example: one
+   * small and coastal, one up in the hills. The other fifteen are the game. */
+  var GIVEN = ['Goan', 'Pahari'];
   var RIGHT = 2, WRONG = -1;
   var DRAG_SLOP = 6;               // px before a press becomes a drag
   /* Cropped to the country. The file's own box is 381 -820 2319 2160, which
@@ -50,7 +57,6 @@
   var scoreEl = document.getElementById('region-score');
   var leftEl = document.getElementById('region-left');
   var verdictEl = document.getElementById('region-verdict');
-  var markBtn = document.getElementById('region-mark');
   if (!panel || !mapEl || !bankEl || !window.fetch) return;
 
   var reduced = window.matchMedia &&
@@ -61,6 +67,7 @@
   var pool = [];         // cuisines not yet placed correctly, unshuffled order
   var hand = [];         // the five in the bank
   var placed = {};       // cuisine -> the zone name it has been dropped on
+  var missed = {};       // cuisine -> true once it has been put somewhere wrong
   var score = 0;
   var busy = false;
   var selected = null;
@@ -202,6 +209,9 @@
       var on = placed[name];
       if (on) b.classList.add('is-placed');
       if (selected === name) b.classList.add('is-picked');
+      // Been wrong at least once. Marked so a reader coming back to a bank of
+      // five knows which of them they have already missed.
+      if (missed[name]) b.classList.add('is-missed');
       b.setAttribute('aria-pressed', selected === name ? 'true' : 'false');
       b.disabled = busy;
       bankEl.appendChild(b);
@@ -210,23 +220,23 @@
     for (var name in zones) {
       if (!zones.hasOwnProperty(name)) continue;
       var z = zones[name];
-      z.path.classList.toggle('is-done', !!z.done);
+      z.path.classList.toggle('is-done', !!z.done && !z.given);
+      z.path.classList.toggle('is-given', !!z.given);
       z.path.classList.toggle('is-taken', takenBy(name) !== null);
     }
 
-    var all = Object.keys(zones).length;
-    var done = Object.keys(zones).filter(function (k) { return zones[k].done; }).length;
+    /* Counted over the fifteen that are in play, not the seventeen on the map.
+     * "2 of 17" before a name has been touched reads as credit for the two that
+     * were given away. */
+    var mine = Object.keys(zones).filter(function (k) { return !zones[k].given; });
+    var done = mine.filter(function (k) { return zones[k].done; }).length;
     if (leftEl) {
-      leftEl.textContent = done === all ? 'All ' + all + ' placed'
-                                        : done + ' of ' + all + ' placed';
+      leftEl.textContent = done === mine.length ? 'All ' + mine.length + ' placed'
+                                                : done + ' of ' + mine.length + ' placed';
     }
     if (scoreEl) {
       scoreEl.textContent = 'Score: ' + score;
       scoreEl.setAttribute('data-neg', score < 0 ? '1' : '0');
-    }
-    if (markBtn) {
-      var ready = hand.length > 0 && hand.every(function (n) { return placed[n]; });
-      markBtn.hidden = !ready || busy;
     }
   }
 
@@ -256,6 +266,11 @@
     label(zone, cuisine, 'set');
     selected = null;
     paint();
+    /* The fifth one down is the answer. There was a button here and it was a
+     * step that asked nothing: by the time all five are placed the reader has
+     * already decided, and pressing a second control to hear about it only
+     * delays the part they are waiting for. */
+    if (hand.every(function (n) { return placed[n]; })) mark();
   }
 
   function lift(cuisine) {
@@ -285,6 +300,7 @@
       } else {
         wrong++;
         score += WRONG;
+        missed[name] = true;
         // Shown in the wrong place for a moment, so the miss is legible as a
         // miss rather than as the name simply vanishing.
         label(on, name, 'wrong');
@@ -312,7 +328,6 @@
       verdictEl.hidden = false;
       verdictEl.setAttribute('data-tone', 'win');
     }
-    if (markBtn) markBtn.hidden = true;
   }
 
   function say(right, wrong) {
@@ -431,28 +446,27 @@
     place(name, selected);
   });
 
-  if (markBtn) {
-    var pressed = false;
-    markBtn.addEventListener('pointerdown', function () { pressed = true; });
-    markBtn.addEventListener('click', function (e) {
-      // As in the matching game: the button appears the moment the fifth name
-      // goes down, so it will not take a press it did not see begin on itself.
-      if (!pressed && e.detail !== 0) return;
-      pressed = false;
-      mark();
-    });
-  }
-
   /* --- the way in --------------------------------------------------------- */
 
   fetch(MAP).then(function (r) {
     return r.ok ? r.text() : Promise.reject();
   }).then(function (text) {
     if (!buildMap(text)) return;
-    pool = shuffle(Object.keys(zones));
-    refill();
     panel.hidden = false;
     measure();
+    /* The two shown ones are settled before anything is dealt: named on the
+     * map, out of the pool, and worth nothing — they were not answered, so
+     * scoring them would be handing over four points for reading. */
+    GIVEN.forEach(function (name) {
+      if (!zones[name]) return;
+      zones[name].done = true;
+      zones[name].given = true;
+      label(name, name, 'given');
+    });
+    pool = shuffle(Object.keys(zones).filter(function (n) {
+      return !zones[n].given;
+    }));
+    refill();
     paint();
   }).catch(function () {
     /* No map, no game. The page is the two above it, which is what a reader
