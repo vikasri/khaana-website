@@ -55,25 +55,30 @@ def chrome():
 NAME_MAX = 13          # and MAX_NAME in assets/js/leaderboard.js, which enforces it
 
 
-def board_half(game, name, span):
+def board_half(game, name, span, unit):
     """One game's high-score board. leaderboard.js fills it from the server.
 
     The game's name leads the title. Side by side the two boards are told
     apart by their colour, which is no use to anyone who cannot see it and no
     use at all once they wrap to stacked on a phone — at that point "(10
-    consecutive games)" and "(5 consecutive games)" are the only difference,
-    and a reader has to know the rules to work out which is which. The name is
-    written the same way the chart below writes it: Trivia and Matching.
+    consecutive questions)" and "(5 consecutive games)" are the only
+    difference, and a reader has to know the rules to work out which is which.
+    The name is written the same way the chart below writes it: Trivia and
+    Matching.
+
+    The unit is per board because the two count different things. A trivia run
+    is ten questions inside one sitting; a matching run is five games played
+    end to end. Both said "games" and only one of them meant it.
     """
     return """      <div class="board" id="board-{g}" data-game="{g}" hidden
            aria-labelledby="board-{g}-title">
         <h2 class="board-title" id="board-{g}-title"><span
           class="board-game">{name}</span> best scores <span
-          class="board-rule">({span} consecutive games)</span></h2>
+          class="board-rule">({span} consecutive {unit})</span></h2>
         <ol class="board-rows"></ol>
         <p class="board-you" role="status" aria-live="polite" hidden></p>
       </div>
-""".format(g=game, name=esc(name), span=span, cap=NAME_MAX)
+""".format(g=game, name=esc(name), span=span, unit=unit, cap=NAME_MAX)
 
 
 def sparks(n=16):
@@ -168,7 +173,8 @@ def boards_html():
       <section class="fun-boards" id="fun-boards">
 %s%s      </section>
     </div>
-%s""" % (board_half("pair", "Matching", 5), board_half("trivia", "Trivia", 10),
+%s""" % (board_half("pair", "Matching", 5, "games"),
+         board_half("trivia", "Trivia", 10, "questions"),
          prompt_html())
 
 

@@ -58,7 +58,7 @@
   var MAX_NAME = 13;               // and the maxlength in tools/build-trivia.py
   /* How long a part-finished run survives with nothing happening to it.
    *
-   * "Ten consecutive games" has to mean ten in one sitting, or it means very
+   * "Ten consecutive questions" has to mean ten in one sitting, or it means very
    * little: a tab left open all day would let somebody answer their four best
    * questions in the morning, come back after dinner, and have the queue treat
    * the two halves as one run. Five minutes is well past reading the fact under
