@@ -3013,6 +3013,17 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 .pair-again, .pair-slot,
 .trivia-next, .tq-opt, .trivia-sound { touch-action: manipulation; }
 
+/* The number in front of each game's name. Three panels down one page read as
+   three separate things until they are counted; numbered, they read as a set
+   and as an order to play them in.
+   Set as a label rather than as part of the title: same colour, so the line
+   holds together, but smaller and spaced out so the eye takes "Game 2" and
+   "Food Trivia" as two pieces of information rather than one long heading. */
+.game-n {
+  font-size: 0.62em; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; white-space: nowrap;
+}
+
 /* ---------- Place the cuisines on the map ---------- */
 /* The third game, and the only one that is not a list. The same panel the two
    above it use, so the page reads as three of a kind. */

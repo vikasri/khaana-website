@@ -238,7 +238,8 @@ def main():
 
     <section class="pair" id="pair-game" hidden aria-labelledby="pair-title">
       <div class="pair-head">
-        <h2 id="pair-title">Match Dishes to Cuisine Category</h2>
+        <h2 id="pair-title"><span class="game-n">Game 1:</span> Match Dishes to
+          Cuisine Category</h2>
         <div class="pair-scoring">
           <p class="pair-rule">Correct +2 points, wrong -1 point</p>
           <p class="pair-meter">
@@ -276,7 +277,7 @@ def main():
         <div class="section-head">
           <div class="eyebrow">Fun facts</div>
           <div class="trivia-title-row">
-            <h1 id="trivia-title">Food Trivia</h1>
+            <h1 id="trivia-title"><span class="game-n">Game 2:</span> Food Trivia</h1>
             <p class="trivia-intro">Select one answer</p>
           </div>
         </div>
@@ -305,7 +306,8 @@ def main():
     <section class="region" id="region-game" hidden
              aria-labelledby="region-title">
       <div class="region-head">
-        <h2 id="region-title">Place the Cuisines on the Map</h2>
+        <h2 id="region-title"><span class="game-n">Game 3:</span> Place the Cuisines
+          on the Map</h2>
         <div class="region-scoring">
           <p class="region-rule">Correct +2 points, wrong -1 point</p>
           <p class="region-meter">
