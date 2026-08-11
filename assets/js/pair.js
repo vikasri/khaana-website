@@ -33,22 +33,17 @@
    * finish until they are all right. */
   var RIGHT = 2, WRONG = -1;
   var PER_ROUND = ROWS * RIGHT;      // eight, if a round is solved blind
-  /* Half a second between the last placement and the marking, with the boxes
-   * pulsing along the row while it passes. Marking on the instant was correct
-   * and felt like nothing: four pieces went down and the answer was simply
-   * already there, with no moment in which it could have gone either way. The
-   * pause is the game acknowledging the move before it judges it.
+  /* There used to be three quarters of a second here before the board would
+   * say anything, with the boxes pulsing along the row while it passed — the
+   * game acknowledging the move before judging it. It read well. It also put a
+   * timer, a class going on and off, and a keyframe animation over four
+   * transformed boxes into the same instant as the reply appearing and the chip
+   * bank leaving the layout, and on an iPhone "Play next" was taking two
+   * presses. The pause was the cheapest of those to give up, so the board marks
+   * the moment the fourth cuisine goes down.
    *
-   * Anyone who has asked for reduced motion gets neither the pulse nor the
-   * wait, since for them the wait would be a delay with nothing in it.
-   *
-   * The second wait, below, is a different thing: the wrong pairs staying put
-   * long enough to be read before they go back. */
-  /* The wait after the fourth cuisine goes down is these two, back to back:
-   * the board flashes while it thinks, then the misses sit in red before they
-   * clear. It came to 1.6 seconds, which is long enough to feel like waiting
-   * for the game rather than reading it. 0.75 and 0.75 now, 1.5 in total. */
-  var CHECK_MS = 750;              // the board thinking, before it says anything
+   * The wait below is a different thing and stays: the wrong pairs holding
+   * still long enough to be read before they go back. */
   var WRONG_MS = 750;              // how long a wrong pair stays red before it returns
   var DRAG_SLOP = 6;               // px of movement before a press becomes a drag
 
@@ -307,16 +302,16 @@
     placed[row] = cuisine;
     selected = null;
     paint();
-    if (placed.every(Boolean)) {
-      if (reduced) { later(mark, 0); return; }
-      busy = true;                     // nothing moves while the board thinks
-      paint();
-      rowsEl.classList.add('is-checking');
-      later(function () {
-        rowsEl.classList.remove('is-checking');
-        mark();
-      }, CHECK_MS);
-    }
+    /* Marked the moment the fourth cuisine goes down.
+     *
+     * There used to be three quarters of a second here with the boxes pulsing,
+     * so the board looked like it was thinking before it judged. It read well
+     * and it put a timer, a class going on and off, and a keyframe animation on
+     * four transformed boxes into the same instant as the reply appearing and
+     * the chip bank being taken out of the layout — and on an iPhone, "Play
+     * next" was taking two presses. Whether all that churn is what iOS was
+     * choking on is not proven, but the pause was the least of it to lose. */
+    if (placed.every(Boolean)) mark();
   }
 
   function lift(row) {
@@ -402,18 +397,17 @@
     bankEl.classList.add('is-spent');
     if (againBtn) {
       againBtn.hidden = false;
-      /* Focused so a keyboard lands on the one thing there is to do next, but
-       * without the scroll that normally comes with it.
-       *
-       * Three things happen in this one frame: the bank above the button stops
-       * being displayed, so everything under it jumps up; the button appears;
-       * and focusing it asks the browser to bring it into view. On a phone that
-       * last one is a scroll, and iOS spends the next tap stopping the scroll
-       * rather than pressing what is under it — which is the button taking two
-       * presses. preventScroll keeps the focus and drops the scroll; a browser
-       * too old to know the option ignores it and behaves as before. */
-      try { againBtn.focus({ preventScroll: true }); }
-      catch (e) { againBtn.focus(); }
+      /* Focused only where there is a cursor, which in practice means where
+       * there is a keyboard — it is there so Tab lands on the one thing left to
+       * do. A touch does not need it and on a phone it was the last thing this
+       * button did that a finger could feel: focusing an element asks the
+       * browser to bring it into view, and iOS spends a tap stopping a scroll
+       * rather than pressing what is under it. preventScroll stays as a second
+       * guard for anything that reports a cursor and still scrolls. */
+      if (!window.matchMedia || window.matchMedia('(hover: hover)').matches) {
+        try { againBtn.focus({ preventScroll: true }); }
+        catch (e) { againBtn.focus(); }
+      }
     }
   }
 
@@ -517,10 +511,28 @@
 
   /* --- the way in --------------------------------------------------------- */
 
-  if (againBtn) againBtn.addEventListener('click', function () {
-    deal();
-    if (chart) chart.focus('pair');
-  });
+  /* The button will not take a press it did not see begin on itself.
+   *
+   * It now appears in the same tick as the tap that finished the board, and a
+   * touch dispatches its click after that tap has ended — against whatever is
+   * under the finger by then, which on a phone can be this button, sitting in
+   * the space the chip bank has just given up. That would deal a fresh round
+   * off the tap that solved the last one. The trivia guards the same hazard by
+   * staying dead for 800ms, which is a delay a reader can feel; this waits for
+   * a pointerdown of its own instead, so a deliberate press is never slowed.
+   *
+   * A keyboard sends a click with no pointer and no coordinates, which is what
+   * detail 0 means, and that is always genuine. */
+  if (againBtn) {
+    var pressed = false;
+    againBtn.addEventListener('pointerdown', function () { pressed = true; });
+    againBtn.addEventListener('click', function (e) {
+      if (!pressed && e.detail !== 0) return;    // the solving tap, passing through
+      pressed = false;
+      deal();
+      if (chart) chart.focus('pair');
+    });
+  }
 
   /* Dealt on load rather than behind a button. The button asked the reader to
    * opt into a game that was already built and sitting there, which is a

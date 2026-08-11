@@ -2831,24 +2831,10 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   border-color: var(--nav-active); background: #fff6f0;
 }
 
-/* The half second between the last placement and the marking. Each box pulses
-   in turn down the row, which reads as the board looking at the four of them
-   rather than as four things happening at once. 60ms apart: enough to see the
-   order, not enough to feel like queueing. */
-/* Matches CHECK_MS in pair.js: the class comes off when the timer fires,
-   so an animation longer than the timer is cut off mid-flash. */
-.pair-rows.is-checking .pair-slot { animation: pair-check 0.75s ease both; }
-.pair-rows.is-checking .pair-row:nth-child(2) .pair-slot { animation-delay: 0.06s; }
-.pair-rows.is-checking .pair-row:nth-child(3) .pair-slot { animation-delay: 0.12s; }
-.pair-rows.is-checking .pair-row:nth-child(4) .pair-slot { animation-delay: 0.18s; }
-@keyframes pair-check {
-  0%   { transform: scale(1);    border-color: var(--line); }
-  45%  { transform: scale(1.03); border-color: var(--nav-active); }
-  100% { transform: scale(1);    border-color: var(--line); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .pair-rows.is-checking .pair-slot { animation: none; }
-}
+/* The pulse down the row that used to fill the half second before the board
+   marked is gone with the pause itself — the board now judges the moment the
+   fourth cuisine goes down, so there is no interval left to animate. Its
+   keyframes went with it rather than sitting here unreferenced. */
 
 /* Marked. The same greens and reds as the trivia options below. A matched
    pair says so in green and nothing else — the label spelled it out on a board
