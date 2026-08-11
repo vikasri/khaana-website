@@ -297,6 +297,34 @@ def main():
       </div>
     </section>
 
+    <section class="region" id="region-game" hidden
+             aria-labelledby="region-title">
+      <div class="region-head">
+        <h2 id="region-title">Place the Cuisines on the Map</h2>
+        <div class="region-scoring">
+          <p class="region-rule">Correct +2 points, wrong -1 point</p>
+          <p class="region-meter">
+            <span class="region-left" id="region-left"></span>
+            <span class="region-score" id="region-score" data-neg="0">Score: 0</span>
+          </p>
+        </div>
+      </div>
+      <p class="region-how">Drag a cuisine onto its zone, or tap one then the
+        other. Place all five, then mark them.</p>
+      <div class="region-board">
+        <div class="region-map" id="region-map" role="group"
+             aria-label="Map of India with the cuisine zones left unnamed"></div>
+        <div class="region-bank" id="region-bank" role="group"
+             aria-label="Cuisines to place"></div>
+      </div>
+      <div class="region-foot">
+        <p class="region-verdict" id="region-verdict" role="status"
+           aria-live="polite" hidden></p>
+        <button type="button" class="region-mark" id="region-mark" hidden>Mark
+          these five</button>
+      </div>
+    </section>
+
     <script type="application/json" id="pair-pool">%s</script>
     <script type="application/json" id="pair-messages">%s</script>
 
@@ -312,6 +340,7 @@ def main():
 <script src="assets/js/leaderboard.js"></script>
 <script src="assets/js/trivia.js"></script>
 <script src="assets/js/pair.js"></script>
+<script src="assets/js/region.js"></script>
 </body>
 </html>
 """ % (nav, boards_html(), body, nudges, pool_json, pair_msgs, foot)
