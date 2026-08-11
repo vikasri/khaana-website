@@ -338,7 +338,8 @@
   function done() {
     sound('fanfare');
     if (verdictEl) {
-      verdictEl.textContent = 'That is the whole map. Final score ' + score + '.';
+      verdictEl.textContent =
+        'Yay, you got the entire map right! Final score ' + score + '.';
       verdictEl.hidden = false;
       verdictEl.setAttribute('data-tone', 'win');
     }
