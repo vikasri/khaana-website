@@ -334,6 +334,7 @@ def main():
 <script src="script.js"></script>
 <!-- Before the two games, which register their series and their boards with
      them as they start. -->
+<script src="assets/js/sound.js"></script>
 <script src="assets/js/score-chart.js"></script>
 <script src="assets/js/leaderboard.js"></script>
 <script src="assets/js/trivia.js"></script>

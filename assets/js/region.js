@@ -59,6 +59,12 @@
   var verdictEl = document.getElementById('region-verdict');
   if (!panel || !mapEl || !bankEl || !window.fetch) return;
 
+  /* Shared with the trivia and behind its one mute switch, so a reader who
+   * turned the sound off up there is not shouted at down here. Optional like
+   * everything else: no script, no noise, same game. */
+  var Sound = window.KhaanaSound;
+  function sound(what) { if (Sound && Sound[what]) Sound[what](); }
+
   var reduced = window.matchMedia &&
                 window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -265,6 +271,7 @@
     clearLabel(zone);
     label(zone, cuisine, 'set');
     selected = null;
+    sound('tick');
     paint();
     /* The fifth one down is the answer. There was a button here and it was a
      * step that asked nothing: by the time all five are placed the reader has
@@ -277,6 +284,7 @@
     if (busy || !placed[cuisine]) return;
     clearLabel(placed[cuisine]);
     delete placed[cuisine];
+    sound('undo');
     paint();
   }
 
@@ -308,6 +316,11 @@
     });
 
     say(right, wrong);
+    /* One noise for the set of five, not one per name. Five cheers on top of
+     * each other is a chord nobody wrote, and the reader is being told about
+     * the round rather than about each of its parts. A miss anywhere in the
+     * five is what they need to hear. */
+    sound(wrong ? 'womp' : 'cheer');
     paint();
 
     later(function () {
@@ -323,6 +336,7 @@
   }
 
   function done() {
+    sound('fanfare');
     if (verdictEl) {
       verdictEl.textContent = 'That is the whole map. Final score ' + score + '.';
       verdictEl.hidden = false;

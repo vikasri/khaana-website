@@ -67,90 +67,29 @@
 
   var nextBtn = document.getElementById('trivia-next');
 
-  var Ctx = window.AudioContext || window.webkitAudioContext;
-  var audio = null;
-  var muted;
-  try {
-    muted = localStorage.getItem('khaana-trivia-sound') === 'off';
-    if (localStorage.getItem('khaana-trivia-sound') === null) {
-      muted = window.matchMedia &&
-              window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    }
-  } catch (e) {
-    muted = false;                       // storage blocked; sound on, not broken
-  }
-
-  function ready() {
-    if (muted || !Ctx) return null;
-    try {
-      if (!audio) audio = new Ctx();
-      if (audio.state === 'suspended') audio.resume();
-      return audio;
-    } catch (e) { return null; }
-  }
-
-  /* A short blip. hz may be a number, or [from, to] to slide between them. */
-  function blip(a, at, hz, dur, type, peak) {
-    var osc = a.createOscillator();
-    var gain = a.createGain();
-    osc.type = type;
-    if (hz.length) {
-      osc.frequency.setValueAtTime(hz[0], at);
-      osc.frequency.exponentialRampToValueAtTime(hz[1], at + dur);
-    } else {
-      osc.frequency.value = hz;
-    }
-    gain.gain.setValueAtTime(0.0001, at);
-    gain.gain.exponentialRampToValueAtTime(peak, at + 0.012);
-    gain.gain.exponentialRampToValueAtTime(0.0001, at + dur);
-    osc.connect(gain).connect(a.destination);
-    osc.start(at);
-    osc.stop(at + dur + 0.02);
-  }
-
-  /* Right: a quick major arpeggio that jumps an octave at the end. Triangle
-   * rather than sine, which is the difference between a lift chime and
-   * something with a bit of arcade in it. */
-  function cheer() {
-    var a = ready();
-    if (!a) return;
-    try {
-      var t0 = a.currentTime;
-      [1046.5, 1318.5, 1568.0, 2093.0].forEach(function (hz, n) {
-        blip(a, t0 + n * 0.07, hz, n === 3 ? 0.34 : 0.16, 'triangle', 0.085);
-      });
-    } catch (e) { /* no audio is not a broken quiz */ }
-  }
-
-  /* Wrong: the two-note descending womp. A sawtooth sliding down a minor
-   * third, twice, each landing lower than the last. Comic rather than harsh —
-   * it should read as "ah, no" and not as an error dialog. */
-  function womp() {
-    var a = ready();
-    if (!a) return;
-    try {
-      var t0 = a.currentTime;
-      blip(a, t0, [311.1, 261.6], 0.20, 'sawtooth', 0.055);
-      blip(a, t0 + 0.19, [261.6, 174.6], 0.38, 'sawtooth', 0.055);
-    } catch (e) { /* as above */ }
-  }
+  /* The noises live in sound.js now, shared with the map game and behind one
+   * mute. These two names stay so the call sites below read as they did, and so
+   * a page served without that script is a quiet quiz rather than a broken one.
+   */
+  var Sound = window.KhaanaSound;
+  function cheer() { if (Sound) Sound.cheer(); }
+  function womp() { if (Sound) Sound.womp(); }
 
   var soundBtn = document.getElementById('trivia-sound');
   function paintSound() {
-    if (!soundBtn) return;
-    soundBtn.setAttribute('aria-pressed', muted ? 'false' : 'true');
-    soundBtn.textContent = muted ? 'Sound off' : 'Sound on';
+    if (!soundBtn || !Sound) return;
+    var off = Sound.muted();
+    soundBtn.setAttribute('aria-pressed', off ? 'false' : 'true');
+    soundBtn.textContent = off ? 'Sound off' : 'Sound on';
   }
   if (soundBtn) {
-    if (!Ctx) soundBtn.hidden = true;    // nothing to toggle
-    paintSound();
-    soundBtn.addEventListener('click', function () {
-      muted = !muted;
-      try { localStorage.setItem('khaana-trivia-sound', muted ? 'off' : 'on'); }
-      catch (e) { /* not remembering it is survivable */ }
+    // Nothing to toggle: no Web Audio, or no script to drive it.
+    if (!Sound || !Sound.available) soundBtn.hidden = true;
+    else {
       paintSound();
-      if (!muted) cheer();               // so you hear what you just turned on
-    });
+      Sound.onChange(paintSound);
+      soundBtn.addEventListener('click', function () { Sound.toggle(); });
+    }
   }
 
   /* Keep guessing until you get it.
