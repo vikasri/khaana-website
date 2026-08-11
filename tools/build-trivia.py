@@ -247,7 +247,7 @@ def main():
         <h2 id="pair-title"><span class="game-n">Game 1:</span> Match Dishes to
           Cuisine Category</h2>
         <div class="pair-scoring">
-          <p class="pair-rule">Correct +2 points, wrong -1 point</p>
+          <p class="pair-rule">Correct: +2 points, wrong: -1 point</p>
           <p class="pair-meter">
             <span class="pair-attempt" id="pair-attempt">Attempt 1</span>
             <span class="pair-score" id="pair-score" data-neg="0">Score: 0 / 8</span>
@@ -289,7 +289,7 @@ def main():
         </div>
         <div class="trivia-head-right">
           <div class="trivia-scoring">
-            <p class="trivia-rule">Correct +2 points, wrong -1 point</p>
+            <p class="trivia-rule">Correct: +2 points, wrong: -1 point</p>
             <p class="trivia-score" id="trivia-score" hidden>Score: 0 / 2</p>
           </div>
           <button type="button" class="trivia-sound" id="trivia-sound"
@@ -315,7 +315,7 @@ def main():
         <h2 id="region-title"><span class="game-n">Game 3:</span> Place the Cuisines
           on the Map</h2>
         <div class="region-scoring">
-          <p class="region-rule">Correct +2 points, wrong -1 point</p>
+          <p class="region-rule">Correct: +2 points, wrong: -1 point</p>
           <p class="region-meter">
             <span class="region-left" id="region-left"></span>
             <span class="region-score" id="region-score" data-neg="0">Score: 0</span>

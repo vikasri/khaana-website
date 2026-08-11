@@ -369,29 +369,37 @@
        * the reader's total is inside the plot and this is outside it, so the
        * two blocks cannot land on each other however close the two lines run.
        *
-       * Where the frame was too narrow to spare a gutter the row comes back
-       * inside the picture, and both of those conveniences go with it: it
-       * slides left along the slope to fit, and it has to stop short of the
-       * reader's total when the two lines are running at the same height.
-       * Sliding left is the safe direction — the slope climbs, so everything
-       * behind the newest point is below the line the row sits on. */
+       * Where the frame is too narrow to spare a gutter — a phone — the row
+       * comes back inside the picture and goes to the bottom right corner
+       * instead of following the line. Level with the benchmark's newest point
+       * it ran straight through the middle of the plot, over the reader's own
+       * line and into "You +11", which is the one place on a small frame where
+       * something is always drawn. The corner under the benchmark is the
+       * emptiest part of the picture: the benchmark climbs away from it from
+       * the origin, and the reader's line has to be at its worst to come near.
+       * Right-aligned to the plot edge, so it reads as a caption in the corner
+       * rather than as a label that has drifted off the line it belongs to. */
       var labY = Math.max(Y0 + 12, Math.min(Y1 - 2, lastY + 5));
       var blockX;
       if (gutter) {
         blockX = Math.max(lastX + 6, XD + lead);
       } else {
+        /* Clear of the axis rather than sitting on it. At Y1 - 4 the words ran
+         * along the axis line with the origin point in them; the reader's line
+         * leaves the corner at score 0, so the bottom of the plot is only empty
+         * a little way up. */
+        labY = Y1 - 9;
         /* Both rows want the same line, and one of them has to give.
          *
          * The key steps off it rather than squeezing past, because width is the
          * thing the words are short of and the reader's row already owns the
-         * right-hand end of it — made to fit beside "You +18" on a phone, "No
-         * Knowledge Probability Score" bottomed out at its 8px floor and still
-         * ran under the row. A line's worth of height is far cheaper to find.
-         * Only where there is no height either does it go back to squeezing. */
+         * right-hand end of it: squeezed in beside "You +18" on a phone a name
+         * bottoms out at its 8px floor and still runs under the row. A line's
+         * worth of height is far cheaper to find. Upwards is the only way off
+         * the floor. Only where there is no height either does it squeeze. */
         var limit = X1;
         if (youBox && Math.abs(labY - youBox.y) < 17) {
           if (youBox.y - 19 >= Y0 + 12) labY = youBox.y - 19;
-          else if (youBox.y + 19 <= Y1 - 3) labY = youBox.y + 19;
           else limit = Math.max(X0 + 90, youBox.left - 8);
         }
         var fixedW = SWATCH + gap;
@@ -405,7 +413,7 @@
             blockW = fixedW + labW;
           } catch (e) { }
         }
-        blockX = Math.max(X0 + 2, Math.min(lastX + 6, limit - blockW));
+        blockX = Math.max(X0 + 2, limit - blockW);
       }
 
       // The sample: a short run of the line with one of its points on it,

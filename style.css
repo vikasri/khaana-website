@@ -2377,19 +2377,29 @@ section.home-find.tight { padding-top: 26px; padding-bottom: 22px; }
   margin: 0; font-size: 0.98rem; color: var(--ink-soft);
 }
 .find-pick-line a { font-weight: 700; }
-/* Small and outlined, not filled: it is an aside on a page about recipes, and
-   a solid button here would out-shout the two routes above it. */
+/* Filled, and a size up from the outline it used to be. The games are a
+   reason to come back rather than an aside, and an outlined chip at 0.76rem
+   read as a footnote to the two routes above it.
+   White on --nav-active is 4.70:1, which clears the 4.5 this text needs at
+   any size — the letters are small caps and stay under the large-text
+   threshold even after the bump, so the full bar applies. Hover can no longer
+   fill what is already filled, so it goes a shade down the same family to
+   --deep-red, which is 5.82:1 and the move the rest of the site makes when
+   this orange runs out of room. */
 .find-pick-games {
   flex: 0 0 auto;
   border: 1px solid var(--nav-active); border-radius: 999px;
-  padding: 6px 15px; touch-action: manipulation;
-  font-family: var(--sans); font-size: 0.76rem; font-weight: 700;
+  background: var(--nav-active);
+  padding: 9px 20px; touch-action: manipulation;
+  font-family: var(--sans); font-size: 0.85rem; font-weight: 700;
   letter-spacing: 0.06em; text-transform: uppercase;
-  color: var(--nav-active); text-decoration: none;
+  color: #fff; text-decoration: none;
   white-space: nowrap;
 }
 @media (hover: hover) {
-  .find-pick-games:hover { background: var(--nav-active); color: #fff; }
+  .find-pick-games:hover {
+    background: var(--deep-red); border-color: var(--deep-red); color: #fff;
+  }
 }
 @media (max-width: 560px) {
   .find-pick-games { white-space: normal; }
@@ -2644,7 +2654,7 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
   display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px;
   background: var(--sc-paper);
   border: 1px solid var(--line); border-radius: var(--radius);
-  /* A light green for the whole strip, title and frame together, rather than
+  /* A pale rose for the whole strip, title and frame together, rather than
      the paper the panels either side of it use. It is the one band on the page
      that is a reading of the games rather than a game, and the change of
      ground says so without a heading.
@@ -2653,19 +2663,20 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
      the fill so they stay legible where the line crosses them, and the score
      points are hollow for the same reason. Left as --paper those would be
      white haloes and white centres on a coloured field.
-     This particular green is the lightest that keeps every ink in the frame
-     over 4.5:1. The one that decides it is the dark green a gaining trial is
-     marked in, which lands at 4.62 — green on green, and the closest thing
-     here to a clash, but the field is pale enough and the stroke heavy enough
-     that the point still reads. */
-  --sc-paper: #f0f7ec;
+     How dark it can go is set by one ink: the dark green a gaining trial is
+     marked in, which lands at 4.55:1 here against a 4.5 floor. Everything else
+     in the frame has room to spare — the soft ink at 5.65, the line at 5.25,
+     the benchmark at 6.18. Any deeper a pink takes the green under, and that
+     green is not free to change: it is the colour a right answer is marked in
+     further up the page. */
+  --sc-paper: #ffeff7;
   /* The line's colour, swapped by the game in the frame. Warm for the trivia
      and cool for the matching game — the same two-temperature split the site
      already uses to tell one thing from another.
      --deep-red for the warm one, not the --nav-active the trivia uses
      everywhere else: that orange clears 4.5:1 on white with almost nothing to
-     spare, and on this green it falls to 4.30. Same family, two shades down,
-     5.33 here. The leaderboard gave way in the same place for the same
+     spare, and on this pink it falls to 4.24. Same family, two shades down,
+     5.25 here. The leaderboard gave way in the same place for the same
      reason. */
   --sc-ink: var(--deep-red);
 }
@@ -3086,11 +3097,16 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 }
 
 /* A zone with nothing on it yet. The published map fills each one in its own
-   colour, which on this game would be seventeen hints — they are all one
-   neutral wash here, and only what the reader has done to them changes that. */
+   colour, which on this game would be seventeen hints — they are all one wash
+   here, and only what the reader has done to them changes that.
+   Pink, and the same pink throughout: a wash light enough to read a placed
+   name over, with the dash it inherits from the map picked out a good deal
+   darker so the outline of an unclaimed zone is legible on its own. The dash
+   pattern itself is the map's — stroke-dasharray lives on the paths — so only
+   the two colours are set here. */
 .region-zone {
-  fill: #cfd8d4 !important; fill-opacity: 0.55 !important;
-  stroke: #8fa39d !important; cursor: pointer;
+  fill: #f2b8ce !important; fill-opacity: 0.45 !important;
+  stroke: #b03a68 !important; cursor: pointer;
   transition: fill-opacity 0.15s ease;
 }
 .region-zone.is-over, .region-zone.is-taken {
