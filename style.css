@@ -2994,38 +2994,39 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    flex box goes on being a flex box. leaderboard.js opens a half when it has
    something to show and the panel when either half is open: no JavaScript, no
    board, and no placeholder rows before anyone has played. */
-/* A faint blue rather than the paper the other panels use. It is the first
-   thing on the page and the only one that is not a game, so it wants to read
-   as a different kind of thing at a glance — and the tint is off --azure,
-   which is already the matching game's colour here, so the page is not
-   learning a new one. Faint enough that both games' ink still clears 4.5:1
-   on it. */
+/* Filled, where every other panel on the page is paper or a faint tint. It is
+   the first thing on the page and the only one that is not a game, and a solid
+   block of colour says that before a word of it is read.
+
+   The dark pink is picked to carry white: 7.56:1 for the names and the scores,
+   and still 5.1:1 for the quiet columns set at 78% of it, so the whole panel
+   clears 4.5 with room to spare. Everything inside it is therefore white or a
+   wash of white, and the borders that used to be pale blue lines are white at
+   low opacity — a light rule on a dark ground rather than a dark one. */
 .fun-boards {
   margin: 0; padding: 7px 18px 7px;
-  background: #f1f7fc;
-  border: 1px solid #d9e6f1; border-radius: var(--radius);
+  background: #a3164d;
+  border: 1px solid #a3164d; border-radius: var(--radius);
   display: flex; flex-wrap: wrap; align-items: flex-start; gap: 7px 30px;
 }
 .fun-boards[hidden] { display: none; }
 /* 240px before it wraps: narrower than that and a name plus a time plus a
    score stop fitting on one line, which is the point at which two columns are
    costing more than the vertical space they save. */
-/* --deep-red for the trivia half here, rather than the --nav-active the rest
-   of the page uses for it. On this tinted panel that orange reaches only
-   4.35:1, under the 4.5 bold text at this size needs, and the panel is tinted
-   rather than white precisely so it stands apart — so the ink gives way
-   instead of the background. --deep-red is the same family, two shades down,
-   and clears it. */
-.fun-boards > .board { flex: 1 1 240px; min-width: 0; --bd-ink: var(--deep-red); }
+/* White, where this used to be --deep-red for the trivia half and --azure for
+   the matching one. Neither survives a dark ground, and the warm/cool split
+   that told the two boards apart at a glance goes with them — what is left to
+   tell them apart is the word, which each title already carries in capitals.
+   On a panel this saturated a second and third ink would be noise anyway. */
+.fun-boards > .board { flex: 1 1 240px; min-width: 0; --bd-ink: #ffffff; }
 .fun-boards > .board[hidden] { display: none; }
 /* A rule between them while they are side by side, and nothing once they have
    wrapped — a left border on a stacked column points the wrong way. */
 @media (min-width: 620px) {
   .fun-boards > .board + .board {
-    border-left: 1px solid #d9e6f1; padding-left: 30px;
+    border-left: 1px solid rgba(255, 255, 255, 0.22); padding-left: 30px;
   }
 }
-.board[data-game="pair"] { --bd-ink: var(--azure); }
 @media (max-width: 759px) { .fun-boards { padding: 6px 12px 6px; } }
 
 /* Sized like the scoring rules above the games rather than like a heading:
@@ -3040,7 +3041,7 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    lines on a phone to say what now takes one or two. */
 .board-title {
   margin: 0 0 1px; font-family: var(--sans); font-size: 0.68rem;
-  font-weight: 400; line-height: 1.3; color: var(--ink-soft);
+  font-weight: 400; line-height: 1.3; color: rgba(255, 255, 255, 0.78);
 }
 /* The game's name, which is what tells the two boards apart once they have
    wrapped to stacked and there is no longer a rule between them. Written as
@@ -3056,30 +3057,34 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
 .board-rows { list-style: none; margin: 0; padding: 0; }
 .board-row {
   display: flex; align-items: baseline; gap: 9px;
-  padding: 1px 0; line-height: 1.25; border-bottom: 1px solid #dde9f3;
+  padding: 1px 0; line-height: 1.25;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 .board-row:last-child { border-bottom: 0; }
-.board-rank { flex: 0 0 1.1em; color: var(--ink-soft); font-size: 0.75rem; }
+.board-rank { flex: 0 0 1.1em; color: rgba(255, 255, 255, 0.78); font-size: 0.75rem; }
 /* A name is whatever the player typed, up to thirteen characters of it, so it
    is the one string on this page that can be a single unbroken run of them. */
 .board-who {
   flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere;
   font-family: var(--serif); font-size: 0.86rem; font-weight: 700;
-  line-height: 1.25; color: var(--ink);
+  line-height: 1.25; color: #ffffff;
 }
-.board-row[data-mine="1"] .board-who { color: var(--bd-ink); }
+/* Your own row was picked out in the game's ink, which is now the same white
+   every other name is set in. A pale pink stands in: still 5.5:1 on the panel,
+   and the only warm thing among the whites. */
+.board-row[data-mine="1"] .board-who { color: #ffd0e0; }
 /* A place nobody has taken. Set lighter and not in the serif the names use, so
    the eye reads the filled rows first and this as the gap it is. */
 .board-open {
   font-family: var(--sans) !important; font-weight: 400;
-  font-size: 0.78rem; color: var(--ink-soft); opacity: 0.75;
+  font-size: 0.78rem; color: rgba(255, 255, 255, 0.78);
 }
 /* The tie-break, and set like one: quiet, beside the score rather than
    competing with it, and lined up so two of them can be compared at a
    glance. */
 .board-time {
   flex: 0 0 auto; font-family: var(--sans); font-size: 0.72rem;
-  color: var(--ink-soft); font-variant-numeric: tabular-nums;
+  color: rgba(255, 255, 255, 0.78); font-variant-numeric: tabular-nums;
 }
 .board-score {
   flex: 0 0 auto; font-size: 0.88rem; font-weight: 700; color: var(--bd-ink);
@@ -3090,10 +3095,13 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    and not a third place. */
 .board-you {
   display: flex; align-items: baseline; gap: 9px;
-  margin: 0; padding: 1px 0 0; line-height: 1.25; border-top: 1px dashed #cfdfec;
+  margin: 0; padding: 1px 0 0; line-height: 1.25;
+  border-top: 1px dashed rgba(255, 255, 255, 0.35);
 }
-.board-you .board-who { font-family: var(--sans); font-size: 0.78rem; color: var(--ink-soft); }
-.board-you .board-score { color: var(--ink-soft); }
+.board-you .board-who {
+  font-family: var(--sans); font-size: 0.78rem; color: rgba(255, 255, 255, 0.78);
+}
+.board-you .board-score { color: rgba(255, 255, 255, 0.78); }
 
 /* ---------- The prompt ---------- */
 /* Shown once a sitting, to a player who has just displaced a standing score.
