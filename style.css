@@ -3017,13 +3017,14 @@ noscript .trivia-intro { font-size: 0.97rem; color: var(--ink-soft); }
    three separate things until they are counted; numbered, they read as a set
    and as an order to play them in.
    Set at the same size as the name it introduces, so the two read as one line
-   rather than as a caption with a title after it. Still upper case, which is
-   what keeps them distinguishable now that size no longer does — and the
-   letter-spacing comes back to 0.04em, since the 0.1em that opened up a 12px
-   label is far too much air at twenty. */
+   rather than as a caption with a title after it. Upper case and in the body
+   ink rather than the blue the name is set in — with size no longer telling
+   the two halves apart, the case and the colour are what do it.
+   Letter-spacing 0.04em, since the 0.1em that opened up a 12px label is far
+   too much air at twenty. */
 .game-n {
   font-size: 1em; font-weight: 700; letter-spacing: 0.04em;
-  text-transform: uppercase; white-space: nowrap;
+  text-transform: uppercase; white-space: nowrap; color: var(--ink);
 }
 
 /* ---------- Place the cuisines on the map ---------- */
