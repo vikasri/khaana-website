@@ -42,7 +42,7 @@
 
   Promise.all([
     fetch('data/pantry.json?v=48f0f84c').then(function (r) { return r.json(); }),
-    fetch('data/recipes-index.json?v=71c63520').then(function (r) { return r.json(); })
+    fetch('data/recipes-index.json?v=85cfd50e').then(function (r) { return r.json(); })
   ]).then(function (res) {
     var pantry = res[0], recipes = res[1].recipes;
     var staples = pantry.staples, subs = pantry.substitutions;

@@ -6674,19 +6674,6 @@
   "note": "rotated upright"
  },
  {
-  "file": "recipes/neem-tulsi-shot.jpg",
-  "region": "Wellness",
-  "slot": "recipe",
-  "wiki_title": "Neem Leaf, Licorice, Crampbark Tea",
-  "width": 1000,
-  "height": 750,
-  "size_bytes": 151973,
-  "source_url": "https://live.staticflickr.com/3104/2566944093_770918d7eb_b.jpg",
-  "license": "CC BY-SA 2.0",
-  "artist": "avlxyz",
-  "note": "via Openverse (Flickr)"
- },
- {
   "file": "recipes/chukandar-adrak-shot.jpg",
   "region": "Wellness",
   "slot": "recipe",
@@ -6748,5 +6735,18 @@
   "license": "CC BY-SA 4.0",
   "artist": "Salil Kumar Mukherjee",
   "note": "the gourd, not the pressed juice"
+ },
+ {
+  "file": "recipes/neem-tulsi-shot.jpg",
+  "region": "Wellness",
+  "slot": "recipe",
+  "wiki_title": "A view of Neem leaves in Kanjamalai, Salem.JPG",
+  "width": 1000,
+  "height": 750,
+  "size_bytes": 187614,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/A_view_of_Neem_leaves_in_Kanjamalai%2C_Salem.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "license": "CC BY-SA 3.0",
+  "artist": "Thamizhpparithi Maari",
+  "note": "the leaves, not the pressed drink"
  }
 ]
