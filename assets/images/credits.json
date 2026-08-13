@@ -6664,12 +6664,13 @@
   "region": "Wellness",
   "slot": "recipe",
   "wiki_title": "Miluoge Sea-buckthorn juice (1).jpg",
-  "width": 1000,
-  "height": 750,
+  "width": 750,
+  "height": 1000,
   "size_bytes": 103299,
   "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Miluoge_Sea-buckthorn_juice_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
   "license": "CC BY 2.0",
-  "artist": "François Nguyen"
+  "artist": "François Nguyen",
+  "note": "rotated upright"
  },
  {
   "file": "recipes/neem-tulsi-shot.jpg",
