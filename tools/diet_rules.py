@@ -93,7 +93,9 @@ NON_VEGAN = NON_VEGETARIAN | DAIRY | {"honey"}
 # Course tags say what kind of dish it is rather than who may eat it. They ride
 # in the same list because the Cook page filters on `tags`, and a second list
 # would mean a second filter mechanism for no gain.
-COURSE = {"soup"}
+# A course is what the dish is, not what is in it: the Cook page offers each
+# as a chip beside the search box, and each has a collection page of its own.
+COURSE = {"soup", "wellness-shot"}
 
 TAGS = {"vegetarian", "vegan", "gluten-free", "dairy-free", "nut-free",
         "egg-free", "no-onion-garlic", "pescatarian",

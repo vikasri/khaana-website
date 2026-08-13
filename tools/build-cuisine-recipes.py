@@ -40,6 +40,10 @@ ROW_LIMIT = 12
 # Chinese"), which is the part that keeps the results on-cuisine: where the
 # specific term matches nothing, Maps still has a real category to fall back
 # to, so the worst case is a nearby Indian restaurant rather than a taqueria.
+# Not every region is a cuisine. Wellness shots are a course, listed on
+# their own collection page, and there is nowhere to go and eat one.
+NOT_A_CUISINE = {"Wellness"}
+
 SEARCH = {
     "Andhra":           "Andhra Indian restaurant",
     "Anglo-Indian":     "Anglo Indian restaurant",
@@ -150,13 +154,14 @@ def main():
     by_page = {}
     for r in db:
         page = r.get("regionPage")
-        if page:
+        if page and r["region"] not in NOT_A_CUISINE:
             by_page.setdefault(page, []).append(r)
 
     # A region with no phrase, or one that forgot the Indian anchor, would ship
     # the bug this table exists to fix. Refuse to write anything rather than
     # let one page quietly send readers to the nearest sandwich shop.
-    regions = sorted({r["region"] for r in db if r.get("regionPage")})
+    regions = sorted({r["region"] for r in db
+                      if r.get("regionPage") and r["region"] not in NOT_A_CUISINE})
     bad = [x for x in regions if "indian" not in SEARCH.get(x, "").lower()]
     if bad:
         print("  ! no anchored Maps query for: %s" % ", ".join(bad))

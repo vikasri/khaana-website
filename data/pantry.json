@@ -184,6 +184,10 @@
           "name": "Amaranth greens (chaulai)"
         },
         {
+          "id": "amla",
+          "name": "Amla (Indian gooseberry)"
+        },
+        {
           "id": "ash-gourd",
           "name": "Ash gourd (petha)"
         },
@@ -349,6 +353,10 @@
           "name": "Tomato"
         },
         {
+          "id": "wheatgrass",
+          "name": "Wheatgrass"
+        },
+        {
           "id": "yam",
           "name": "Yam (suran)"
         }
@@ -382,6 +390,14 @@
         {
           "id": "mint",
           "name": "Mint"
+        },
+        {
+          "id": "neem",
+          "name": "Neem leaves"
+        },
+        {
+          "id": "tulsi",
+          "name": "Tulsi (holy basil)"
         }
       ]
     },
@@ -729,6 +745,10 @@
           "name": "Melon seeds (magaz)"
         },
         {
+          "id": "orange",
+          "name": "Orange"
+        },
+        {
           "id": "peanut",
           "name": "Peanuts"
         },
@@ -751,6 +771,10 @@
         {
           "id": "rose-water",
           "name": "Rose water"
+        },
+        {
+          "id": "sea-buckthorn",
+          "name": "Sea buckthorn (leh berry)"
         },
         {
           "id": "sesame",

@@ -155,6 +155,17 @@ COLLECTIONS = [
                  "Indian city."),
         "test": lambda r: "soup" in r.get("tags", []),
     },
+    {
+        "file": "wellness-shots.html",
+        "h1": "Wellness Shots",
+        "title": "Wellness Shots: %d Indian Juice and Kadha Recipes | Khaana",
+        "desc": ("%d wellness shot recipes — amla, haldi, tulsi, karela and neem — "
+                 "measured, with what each one actually tastes like."),
+        "lede": ("Short, strong and drunk in one go. Amla and haldi from the "
+                 "Ayurvedic cupboard, sea buckthorn from Ladakh, and the bitter "
+                 "two — karela and neem — that nobody drinks for pleasure."),
+        "test": lambda r: "wellness-shot" in r.get("tags", []),
+    },
 ]
 
 
