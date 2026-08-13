@@ -6628,12 +6628,13 @@
   "region": "Wellness",
   "slot": "recipe",
   "wiki_title": "Chef select - Ginger shot (Lidl), Winschoten (2022) 01.jpg",
-  "width": 1000,
-  "height": 1778,
-  "size_bytes": 184063,
+  "width": 439,
+  "height": 500,
+  "size_bytes": 46905,
   "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Chef_select_-_Ginger_shot_%28Lidl%29%2C_Winschoten_%282022%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
   "license": "CC BY-SA 4.0",
-  "artist": "Donald Trung Quoc Don (Chữ Hán: 徵國單) - Wikimedia Commons - © CC BY-SA 4.0 International.(Want to use this image?)Original publication 📤: --Donald Trung 『徵國單』 (No Fake News 💬) (WikiProject Numismatics 💴) (Articles 📚) 23:38, 8 January 2023 (UTC)"
+  "artist": "Donald Trung Quoc Don (Chữ Hán: 徵國單) - Wikimedia Commons - © CC BY-SA 4.0 International.(Want to use this image?)Original publication 📤: --Donald Trung 『徵國單』 (No Fake News 💬) (WikiProject Numismatics 💴) (Articles 📚) 23:38, 8 January 2023 (UTC)",
+  "note": "cropped to the bottle"
  },
  {
   "file": "recipes/tulsi-adrak-kadha.jpg",
@@ -6724,18 +6725,6 @@
   "artist": "Gems Keerthiga"
  },
  {
-  "file": "recipes/karela-shot.jpg",
-  "region": "Wellness",
-  "slot": "recipe",
-  "wiki_title": "Taipei-Jus de Margose.20190304.jpg",
-  "width": 1000,
-  "height": 1671,
-  "size_bytes": 265455,
-  "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Taipei-Jus_de_Margose.20190304.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-  "license": "CC BY-SA 4.0",
-  "artist": "Popolon"
- },
- {
   "file": "recipes/kheera-pudina-shot.jpg",
   "region": "Wellness",
   "slot": "recipe",
@@ -6746,5 +6735,18 @@
   "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Jal_Jeera.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
   "license": "CC0",
   "artist": "Miansari66"
+ },
+ {
+  "file": "recipes/karela-shot.jpg",
+  "region": "Wellness",
+  "slot": "recipe",
+  "wiki_title": "Bitter gourd (Momordica charantia).jpg",
+  "width": 1000,
+  "height": 998,
+  "size_bytes": 189269,
+  "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Bitter_gourd_%28Momordica_charantia%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "license": "CC BY-SA 4.0",
+  "artist": "Salil Kumar Mukherjee",
+  "note": "the gourd, not the pressed juice"
  }
 ]
