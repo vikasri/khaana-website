@@ -297,8 +297,21 @@ def nutrition_panel(r):
     head = ('<th>Per serving<span>%d g</span></th><th>Per 100 g</th>'
             % n["servingGrams"]) if pc else '<th>Per serving</th>'
 
+    # The table holds the same two numbers, but a table is a shape a reader
+    # has to parse and a sentence is not. Someone who came here wanting the
+    # calorie count gets it in the first line of the section, named, before
+    # any of the macros.
+    if pc:
+        answer = ('One serving of %s (%d g) is about <strong>%d calories</strong>, '
+                  'or %d calories per 100 g.'
+                  % (esc(r["name"]), n["servingGrams"], ps["kcal"], pc["kcal"]))
+    else:
+        answer = ('One serving of %s is about <strong>%d calories</strong>.'
+                  % (esc(r["name"]), ps["kcal"]))
+
     return ("""<section class="nutrition" aria-labelledby="nutrition">
         <h2 id="nutrition">Nutrition <span class="nut-conf" data-c="%s">%s estimate</span></h2>
+        <p class="nut-answer">%s</p>
         <p class="nut-band" data-band="%s">%s protein: <strong>%.0f%s g</strong> a serving,
           %.0f%% of the calories</p>
         <table class="nut-table">
@@ -307,7 +320,7 @@ def nutrition_panel(r):
         </table>
         <p class="nut-note">%s</p>
       </section>""" % (n.get("confidence", "medium"), n.get("confidence", "medium").title(),
-                       band, band.title(), ps["protein"], plus, share * 100,
+                       answer, band, band.title(), ps["protein"], plus, share * 100,
                        head, "".join(rows), " ".join(notes)))
 
 
@@ -470,6 +483,14 @@ def render(r, nav, foot):
                  % (human_duration(inactive), esc(r.get("inactiveLabel", "resting")))
                  if inactive else "")
 
+    # In the strip with the times rather than only in the table at the foot of
+    # the page. It is the one nutrition figure most people are after, and they
+    # should not have to scroll past the method to find it.
+    _n = r.get("nutrition") or {}
+    kcal_stat = ('<div class="stat"><span class="stat-label">Per serving</span>'
+                 '<span class="stat-value">%d kcal</span></div>'
+                 % _n["perServing"]["kcal"] if _n.get("perServing") else "")
+
     # And a line telling the reader when to start, for waits long enough that
     # finding out at step one is finding out too late.
     ahead = ""
@@ -542,11 +563,12 @@ def render(r, nav, foot):
         {plus_stat}
         <div class="stat"><span class="stat-label">Serves</span><span class="stat-value">{esc(r.get('servings',4))}</span></div>
         <div class="stat"><span class="stat-label">Difficulty</span><span class="stat-value">{esc(r.get('difficulty',''))}</span></div>
+        {kcal_stat}
       </div>
       {ahead}
 
-      {'<p class="allergen"><strong>Contains:</strong> %s</p>' % esc(allerg) if allerg
-       else f'<p class="allergen none"><strong>Allergens:</strong> {T.ALLERGEN_NONE}</p>'}
+      {'<p class="allergen"><strong>Allergens in %s:</strong> %s.</p>' % (esc(r["name"]), esc(allerg)) if allerg
+       else f'<p class="allergen none"><strong>Allergens in {esc(r["name"])}:</strong> {T.ALLERGEN_NONE}.</p>'}
 
       <div class="recipe-cols">
         <div class="recipe-ing">
@@ -557,6 +579,7 @@ def render(r, nav, foot):
           </ul>
           <h3>Cookware</h3>
           <p class="equip-line">{esc(', '.join(e.replace('-', ' ') for e in r.get('equipment', [])))}</p>
+          <p class="gloss-link"><a href="../indian-food-names-in-english.html">Ingredient names in English &rarr;</a></p>
           <p class="allergen-scope">{T.ALLERGEN_SCOPE}</p>
         </div>
         <div class="recipe-method">

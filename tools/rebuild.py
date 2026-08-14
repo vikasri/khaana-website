@@ -42,6 +42,7 @@ STEPS = [
     # needs the Collections menu already there; before the second sync-chrome,
     # which is what marks the active link on the pages this writes.
     ("build-collections.py",     "the 8 diet and time collection pages"),
+    ("build-glossary.py",        "the Indian-names-in-English glossary"),
     ("build-recommendations.py", "the curated seven"),
     ("build-pair-thumbs.py",     "thumbnails for the matching game"),
     ("build-trivia.py",          "the fun facts page"),
