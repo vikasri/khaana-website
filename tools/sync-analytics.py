@@ -31,7 +31,7 @@ END = "<!-- End Cloudflare Web Analytics -->"
 
 # Public by design: it identifies the site to Cloudflare and ships in the HTML
 # of every page. It is not a secret and does not need hiding.
-TOKEN = "62f25201991348cab07ffeb4eb59dd99"
+TOKEN = "b3478246f7b847bd967fb047c13f6c15"
 
 SNIPPET = (
     '%s<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" '
